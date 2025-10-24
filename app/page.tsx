@@ -236,9 +236,9 @@ export default function Home() {
                   {screenshot.caption}
                 </p>
 
-                {/* App Store button on first screenshot (left-aligned) */}
+                {/* App Store button on first screenshot (right-aligned) */}
                 {index === 0 && (
-                  <div className="flex flex-col items-center md:items-start gap-4 mt-8">
+                  <div className="flex flex-col items-center md:items-end gap-4 mt-8">
                     <motion.button
                       onClick={() => setShowComingSoon(true)}
                       className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
