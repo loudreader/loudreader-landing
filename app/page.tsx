@@ -214,34 +214,6 @@ export default function Home() {
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Thoughtful details at every turn - from your library shelf to your bedtime story. Everything designed to feel natural, private, and effortless.
           </p>
-
-          {/* CTA Button after Inside the App */}
-          <div className="flex flex-col items-center gap-4 mt-12">
-            <motion.button
-              onClick={() => setShowComingSoon(true)}
-              className="inline-flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-white px-10 py-4 rounded-xl font-medium shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="relative z-10">Get LoudReader</span>
-              {/* Shimmer effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-            </motion.button>
-
-            <AnimatePresence>
-              {showComingSoon && (
-                <motion.p
-                  className="text-gray-600 text-lg font-medium"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  Coming Soon!
-                </motion.p>
-              )}
-            </AnimatePresence>
-          </div>
         </motion.section>
 
         {/* Screenshot Panels - Alternating Layout with enhanced animations */}
@@ -288,6 +260,40 @@ export default function Home() {
             </motion.div>
           </section>
         ))}
+
+        {/* CTA Button after screenshots */}
+        <section className="w-full py-20 md:py-24 px-6 bg-white">
+          <div className="flex flex-col items-center gap-4">
+            <motion.button
+              onClick={() => setShowComingSoon(true)}
+              className="inline-flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-white px-10 py-4 rounded-xl font-medium shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="relative z-10">Get LoudReader</span>
+              {/* Shimmer effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+            </motion.button>
+
+            <AnimatePresence>
+              {showComingSoon && (
+                <motion.p
+                  className="text-gray-600 text-lg font-medium"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  Coming Soon!
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </div>
+        </section>
 
         {/* Enhanced Footer */}
         <footer className="w-full bg-gradient-to-b from-gray-50 to-gray-100 border-t border-gray-200 py-16 px-6">
