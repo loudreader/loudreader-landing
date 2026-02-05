@@ -12,17 +12,17 @@ export default function Home() {
     {
       src: "/screen1.png",
       alt: "Your library, your way",
-      caption: "Your entire library - organized, readable, and always with you.",
+      caption: "Your entire library - organized, listenable, and always with you.",
     },
     {
       src: "/screen2.png",
       alt: "Thousands of classics for free",
-      caption: "Discover thousands of free classics ready to read or listen to.",
+      caption: "Thousands of free classics from Project Gutenberg, ready to listen.",
     },
     {
       src: "/screen3.png",
       alt: "Read and listen without a hassle",
-      caption: "Switch seamlessly between reading and listening - even offline.",
+      caption: "Follow along word by word as you listen - works completely offline.",
     },
   ];
 
@@ -61,10 +61,10 @@ export default function Home() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-700 mb-4 max-w-2xl mx-auto leading-relaxed">
-              Turn your books into stories that speak. All offline, all yours.
+              Turn any book into a natural-sounding audiobook. All offline, all yours.
             </p>
             <p className="text-base md:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-              Read with your eyes or your ears, at your pace, in your space. Import your own titles or rediscover timeless classics.
+              Follow along word by word, or just listen - at your pace, in your space. Import EPUBs and PDFs, or explore free classics.
             </p>
 
             {/* App Store style button */}
@@ -134,17 +134,17 @@ export default function Home() {
               {[
                 {
                   title: "Offline by design",
-                  description: "No servers, no limits, no connection required. LoudReader uses your iPhone's own chip to read aloud - fast, private, and always ready, wherever you are.",
+                  description: "No servers, no limits, no connection required. LoudReader uses on-device AI to create natural narration - fast, private, and always ready, wherever you are.",
                   gradient: "from-blue-50 to-indigo-50"
                 },
                 {
                   title: "Your books, your rules",
-                  description: "Import your own e-books or explore free classics. Your library stays truly yours - never locked, never shared, always on your device.",
+                  description: "Import EPUBs or PDFs, or explore thousands of free classics. Your library stays truly yours - never locked, never shared, always on your device.",
                   gradient: "from-purple-50 to-pink-50"
                 },
                 {
-                  title: "Made for calm",
-                  description: "An elegant space that disappears while you read. Natural voices, sleep timer, light and dark modes - everything designed to help you relax into your story.",
+                  title: "Made for focus",
+                  description: "Word-by-word highlighting keeps you engaged. Multiple natural voices, adjustable speed, sleep timer, and notes - everything designed to help you absorb your story.",
                   gradient: "from-amber-50 to-orange-50"
                 }
               ].map((feature, index) => (
@@ -191,7 +191,7 @@ export default function Home() {
             Inside the App
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Thoughtful details at every turn - from your library shelf to your bedtime story. Everything designed to feel natural, private, and effortless.
+            Word highlighting, natural AI voices, and smart caching - from your library shelf to your bedtime story. Everything designed to feel natural, private, and effortless.
           </p>
         </motion.section>
 
@@ -317,7 +317,15 @@ export default function Home() {
         {/* Enhanced Footer */}
         <footer className="w-full bg-gradient-to-b from-gray-50 to-gray-100 border-t border-gray-200 py-16 px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col items-center gap-4 text-center">
+            <div className="flex flex-col items-center gap-6 text-center">
+              <div className="flex items-center gap-6 text-sm text-gray-600">
+                <a href="/terms" className="hover:text-gray-900 transition-colors">
+                  Terms of Use
+                </a>
+                <a href="/privacy" className="hover:text-gray-900 transition-colors">
+                  Privacy Policy
+                </a>
+              </div>
               <div className="flex items-center gap-3">
                 <Image
                   src="/logo.png"
