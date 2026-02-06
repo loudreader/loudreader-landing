@@ -80,7 +80,7 @@ export default function SupportPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Does the app work offline?</h3>
                   <p>
-                    Yes! Once a book is imported and audio is cached, you can read and listen completely offline. All processing happens on your device.
+                    Yes! LoudReader works entirely offline. All text-to-speech processing happens on your device in real time — no internet connection is needed to read or listen to your books.
                   </p>
                 </div>
 
