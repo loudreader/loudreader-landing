@@ -73,7 +73,7 @@ export default function SupportPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Which voices are available?</h3>
                   <p>
-                    LoudReader uses Apple&apos;s on-device text-to-speech voices, including high-quality neural voices. You can download additional voices in your device&apos;s Settings &gt; Accessibility &gt; Spoken Content &gt; Voices.
+                    LoudReader offers a male and a female voice. The female voice is available on the free plan, while both voices are available with a subscription. Currently only English is supported, but we&apos;re working on adding more languages.
                   </p>
                 </div>
 
