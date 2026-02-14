@@ -73,7 +73,7 @@ export default function SupportPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Which voices are available?</h3>
                   <p>
-                    LoudReader offers a male and a female voice. The female voice is available on the free plan, while both voices are available with a subscription. Currently only English is supported, but we&apos;re working on adding more languages.
+                    LoudReader offers multiple natural-sounding AI voices. Free users get the default voice at standard speed. Premium subscribers unlock all available voices and adjustable playback speed from 0.3x to 3.0x. Currently only English is supported, but we&apos;re working on adding more languages.
                   </p>
                 </div>
 

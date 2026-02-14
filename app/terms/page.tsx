@@ -92,10 +92,9 @@ export default function TermsPage() {
                 Without a subscription, you may use LoudReader with the following limitations:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>One book in your library</li>
-                <li>Access to the first two chapters of each book</li>
-                <li>One voice option</li>
-                <li>Standard playback speed (1.0x)</li>
+                <li>Up to 3 books in your library</li>
+                <li>Access to about 50% of each book (one boosted book up to 70%)</li>
+                <li>Default voice and standard playback speed (1.0x)</li>
               </ul>
             </section>
 
