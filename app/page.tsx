@@ -56,23 +56,23 @@ function AppStoreButton({ onClick }: { onClick?: () => void }) {
 
 const featureShowcase = [
   {
-    headline: "Your library, always listening",
+    headline: "Never buy an audiobook again",
     description:
-      "Import your own EPUBs and PDFs, or browse thousands of free classics. Every book becomes an audiobook — organized, beautiful, and always on your device.",
+      "Drop in any book you own and listen to it instantly. No credits, no monthly fees, no waiting lists. If you have the file, you have the audiobook.",
     image: "/iphone-library.png",
     alt: "LoudReader library view",
   },
   {
-    headline: "Thousands of classics, zero cost",
+    headline: "Read the world's greatest books for free",
     description:
-      "The entire Project Gutenberg catalog at your fingertips. From Jane Austen to Jules Verne — download, listen, and keep forever. No subscription required.",
+      "Thousands of classics are already waiting for you — from Jane Austen to Jules Verne. Browse, download, and start listening in seconds. No account needed.",
     image: "/iphone-gutenberg.png",
     alt: "Project Gutenberg browser",
   },
   {
-    headline: "Follow every word",
+    headline: "Stay focused without trying",
     description:
-      "Word-by-word highlighting keeps you engaged as you listen. Adjust speed, choose your voice, set a sleep timer — your reading experience, your rules.",
+      "Each word lights up as it's spoken, so your eyes and ears stay in sync. You'll absorb more, get distracted less, and actually finish that book.",
     image: "/iphone-reader.png",
     alt: "Reader with playback controls",
   },
@@ -85,8 +85,8 @@ const featureGrid = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12 20.5h.01" />
       </svg>
     ),
-    title: "Offline AI voices",
-    description: "Natural narration powered entirely on-device. No internet needed, ever.",
+    title: "Listen anywhere",
+    description: "On a plane, in the subway, off the grid. No Wi-Fi needed — everything runs on your device.",
   },
   {
     icon: (
@@ -94,8 +94,8 @@ const featureGrid = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
       </svg>
     ),
-    title: "Word-by-word highlighting",
-    description: "Follow along visually as each word is spoken. Stay focused, absorb more.",
+    title: "Read and listen at once",
+    description: "Words highlight in real time as they're spoken. Your brain gets both signals — you remember more.",
   },
   {
     icon: (
@@ -103,8 +103,8 @@ const featureGrid = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
       </svg>
     ),
-    title: "Import EPUB & PDF",
-    description: "Bring your own books. Drop in any EPUB or PDF and start listening.",
+    title: "Your books, instantly",
+    description: "Already have EPUBs or PDFs? Drop them in and start listening. No conversion, no waiting.",
   },
   {
     icon: (
@@ -112,8 +112,8 @@ const featureGrid = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
       </svg>
     ),
-    title: "Sleep timer",
-    description: "Drift off to your favorite book. Set a timer and let LoudReader do the rest.",
+    title: "Fall asleep to a good book",
+    description: "Set a sleep timer and drift off. LoudReader stops when you do — and picks up where you left off.",
   },
   {
     icon: (
@@ -121,8 +121,8 @@ const featureGrid = [
         <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
       </svg>
     ),
-    title: "Notes & highlights",
-    description: "Mark passages, add notes, and build your personal reading archive.",
+    title: "Remember what matters",
+    description: "Highlight passages, jot down thoughts, and build a personal archive of ideas from every book.",
   },
   {
     icon: (
@@ -130,8 +130,8 @@ const featureGrid = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5 14.25 2.25 12 10.5h8.25L10.5 21.75 12.75 13.5H3.75Z" />
       </svg>
     ),
-    title: "Adjustable speed",
-    description: "From 0.5x to 4x. Listen at the pace that works for you.",
+    title: "Go at your own speed",
+    description: "Speed up to blaze through, slow down to savor. From 0.5x to 4x — you set the pace.",
   },
 ];
 
@@ -173,8 +173,8 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-500 max-w-xl mx-auto mb-12 animate-fade-in-up animation-delay-200 leading-relaxed">
-              Turn any book into a natural-sounding audiobook with on-device AI.
-              Completely offline. Completely private.
+              Any book you own becomes an audiobook — instantly, on your device.
+              No internet. No subscription. Just press play.
             </p>
 
             <div className="flex flex-col items-center gap-5 animate-fade-in-up animation-delay-400">
@@ -258,7 +258,7 @@ export default function Home() {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 text-center mb-16">
-              Everything you need to listen
+              Built around how you actually read
             </h2>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -297,7 +297,7 @@ export default function Home() {
               Start listening
             </h2>
             <p className="text-lg text-gray-500 mb-10 max-w-lg mx-auto">
-              Your next favorite book is waiting. Import it, tap play, and let your device do the reading.
+              That book you&apos;ve been meaning to finish? Import it, tap play, and finally get through it.
             </p>
 
             <div className="flex flex-col items-center gap-5">
@@ -325,18 +325,21 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="flex items-center gap-6 text-sm text-gray-400">
+            <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 text-sm text-gray-400">
+              <a href="/faq" className="hover:text-gray-900 transition-colors">
+                FAQ
+              </a>
+              <a href="/releases" className="hover:text-gray-900 transition-colors">
+                Release Notes
+              </a>
+              <a href="/support" className="hover:text-gray-900 transition-colors">
+                Support
+              </a>
               <a href="/terms" className="hover:text-gray-900 transition-colors">
                 Terms
               </a>
               <a href="/privacy" className="hover:text-gray-900 transition-colors">
                 Privacy
-              </a>
-              <a href="/support" className="hover:text-gray-900 transition-colors">
-                Support
-              </a>
-              <a href="mailto:hello@loudreader.com" className="hover:text-gray-900 transition-colors">
-                Contact
               </a>
             </div>
           </div>
