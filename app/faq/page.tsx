@@ -28,7 +28,7 @@ const faqs = [
     questions: [
       {
         q: "How does the text-to-speech work?",
-        a: "LoudReader runs its own AI voice model directly on your device to generate natural-sounding narration in real time. Nothing is sent to the cloud — it all happens locally on your iPhone or iPad.",
+        a: "LoudReader uses an advanced AI voice model that runs directly on your device to generate natural-sounding narration in real time. Nothing is sent to the cloud — it all happens locally on your iPhone or iPad.",
       },
       {
         q: "Can I read and listen at the same time?",
