@@ -58,7 +58,7 @@ const featureShowcase = [
   {
     headline: "Never buy an audiobook again",
     description:
-      "Drop in any book you own and listen to it instantly. No credits, no monthly fees, no waiting lists. If you have the file, you have the audiobook.",
+      "Drop in any book you own and listen to it instantly. No credits, no waiting lists, no per-book purchases. If you have the file, you have the audiobook.",
     image: "/iphone-library.png",
     alt: "LoudReader library view",
   },
@@ -174,7 +174,7 @@ export default function Home() {
 
             <p className="text-lg md:text-xl text-gray-500 max-w-xl mx-auto mb-12 animate-fade-in-up animation-delay-200 leading-relaxed">
               Any book you own becomes an audiobook — instantly, on your device.
-              No internet. No subscription. Just press play.
+              No internet needed. No account required. Just press play.
             </p>
 
             <div className="flex flex-col items-center gap-5 animate-fade-in-up animation-delay-400">
