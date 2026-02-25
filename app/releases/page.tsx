@@ -30,7 +30,7 @@ export default function ReleasesPage() {
         <div className="max-w-4xl mx-auto">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/logo2.png"
               alt="LoudReader Logo"
               width={64}
               height={64}
@@ -83,7 +83,7 @@ export default function ReleasesPage() {
       <footer className="w-full border-t border-gray-200 py-12 px-6 bg-white mt-auto">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="LoudReader" width={32} height={32} className="opacity-80" />
+            <Image src="/logo2.png" alt="LoudReader" width={32} height={32} className="opacity-80" />
             <span className="text-gray-400 text-sm">
               &copy; {new Date().getFullYear()} LoudReader
             </span>

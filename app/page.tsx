@@ -157,7 +157,7 @@ export default function Home() {
           <div className="relative z-10 text-center max-w-4xl mx-auto">
             <div className="animate-float mb-10">
               <Image
-                src="/logo.png"
+                src="/logo2.png"
                 alt="LoudReader Logo"
                 width={140}
                 height={140}
@@ -314,7 +314,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/logo2.png"
                 alt="LoudReader"
                 width={32}
                 height={32}

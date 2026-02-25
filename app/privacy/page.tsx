@@ -17,7 +17,7 @@ export default function PrivacyPage() {
         <div className="max-w-4xl mx-auto">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/logo2.png"
               alt="LoudReader Logo"
               width={80}
               height={80}
@@ -206,7 +206,7 @@ export default function PrivacyPage() {
             </div>
             <div className="flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/logo2.png"
                 alt="LoudReader"
                 width={32}
                 height={32}
