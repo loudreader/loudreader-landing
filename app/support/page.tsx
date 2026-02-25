@@ -80,7 +80,7 @@ export default function SupportPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Does the app work offline?</h3>
                   <p>
-                    Yes! LoudReader works entirely offline. All text-to-speech processing happens on your device in real time — no internet connection is needed to read or listen to your books.
+                    Yes! LoudReader works entirely offline. All text-to-speech processing happens on your device in real time - no internet connection is needed to read or listen to your books.
                   </p>
                 </div>
 

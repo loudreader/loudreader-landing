@@ -27,18 +27,14 @@ function useInView(threshold = 0.15) {
   return { ref, isVisible };
 }
 
-const appStoreUrl = "#"; // Replace with actual App Store URL when available
+const appStoreUrl = "https://apps.apple.com/app/loudreader/id6758149478";
 
-function AppStoreButton({ onClick }: { onClick?: () => void }) {
+function AppStoreButton() {
   return (
     <motion.a
       href={appStoreUrl}
-      onClick={(e) => {
-        if (appStoreUrl === "#") {
-          e.preventDefault();
-          onClick?.();
-        }
-      }}
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
@@ -65,7 +61,7 @@ const featureShowcase = [
   {
     headline: "Read the world's greatest books for free",
     description:
-      "Thousands of classics are already waiting for you — from Jane Austen to Jules Verne. Browse, download, and start listening in seconds. No account needed.",
+      "Thousands of classics are already waiting for you - from Jane Austen to Jules Verne. Browse, download, and start listening in seconds. No account needed.",
     image: "/iphone-gutenberg.png",
     alt: "Project Gutenberg browser",
   },
@@ -86,7 +82,7 @@ const featureGrid = [
       </svg>
     ),
     title: "Listen anywhere",
-    description: "On a plane, in the subway, off the grid. No Wi-Fi needed — everything runs on your device.",
+    description: "On a plane, in the subway, off the grid. No Wi-Fi needed - everything runs on your device.",
   },
   {
     icon: (
@@ -95,7 +91,7 @@ const featureGrid = [
       </svg>
     ),
     title: "Read and listen at once",
-    description: "Words highlight in real time as they're spoken. Your brain gets both signals — you remember more.",
+    description: "Words highlight in real time as they're spoken. Your brain gets both signals - you remember more.",
   },
   {
     icon: (
@@ -113,7 +109,7 @@ const featureGrid = [
       </svg>
     ),
     title: "Fall asleep to a good book",
-    description: "Set a sleep timer and drift off. LoudReader stops when you do — and picks up where you left off.",
+    description: "Set a sleep timer and drift off. LoudReader stops when you do - and picks up where you left off.",
   },
   {
     icon: (
@@ -131,13 +127,13 @@ const featureGrid = [
       </svg>
     ),
     title: "Go at your own speed",
-    description: "Speed up to blaze through, slow down to savor. From 0.5x to 4x — you set the pace.",
+    description: "Speed up to blaze through, slow down to savor. From 0.5x to 4x - you set the pace.",
   },
 ];
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [showComingSoon, setShowComingSoon] = useState(false);
+
 
   const section1 = useInView();
   const section2 = useInView();
@@ -159,8 +155,8 @@ export default function Home() {
               <Image
                 src="/logo2.png"
                 alt="LoudReader Logo"
-                width={140}
-                height={140}
+                width={200}
+                height={200}
                 className="mx-auto drop-shadow-xl"
                 priority
               />
@@ -173,24 +169,12 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-500 max-w-xl mx-auto mb-12 animate-fade-in-up animation-delay-200 leading-relaxed">
-              Any book you own becomes an audiobook — instantly, on your device.
+              Any book you own becomes an audiobook - instantly, on your device.
               No internet needed. No account required. Just press play.
             </p>
 
             <div className="flex flex-col items-center gap-5 animate-fade-in-up animation-delay-400">
-              <AppStoreButton onClick={() => setShowComingSoon(true)} />
-              <AnimatePresence>
-                {showComingSoon && (
-                  <motion.p
-                    className="text-gray-500 text-base font-medium"
-                    initial={{ opacity: 0, y: -8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
-                  >
-                    Coming Soon!
-                  </motion.p>
-                )}
-              </AnimatePresence>
+              <AppStoreButton />
               <p className="text-sm text-gray-400 tracking-wide">
                 Free to try &middot; Completely offline &middot; Private by design
               </p>
@@ -301,7 +285,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col items-center gap-5">
-              <AppStoreButton onClick={() => setShowComingSoon(true)} />
+              <AppStoreButton />
               <p className="text-sm text-gray-400 tracking-wide">
                 Free to try &middot; Completely offline &middot; Private by design
               </p>

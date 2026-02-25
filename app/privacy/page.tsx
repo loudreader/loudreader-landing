@@ -69,12 +69,12 @@ export default function PrivacyPage() {
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">On-Device Processing</h3>
               <p>
-                All text-to-speech processing happens entirely on your device using an on-device AI voice model. Your books are never sent to any server. The voice synthesis runs locally on your iPhone or iPad — no internet connection required.
+                All text-to-speech processing happens entirely on your device using an on-device AI voice model. Your books are never sent to any server. The voice synthesis runs locally on your iPhone or iPad - no internet connection required.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Local Storage</h3>
               <p>
-                All your data — including imported books, notes, highlights, reading progress, and cached audio — is stored locally on your device. This data is not accessible to us or any third party.
+                All your data - including imported books, notes, highlights, reading progress, and cached audio - is stored locally on your device. This data is not accessible to us or any third party.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Project Gutenberg</h3>

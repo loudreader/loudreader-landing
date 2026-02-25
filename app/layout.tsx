@@ -16,8 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "LoudReader — Read. Listen. Understand.",
-  description: "Read your own EPUBs and listen to them in natural voice — or explore thousands of free classics from Project Gutenberg.",
+  title: "LoudReader - Read. Listen. Understand.",
+  description: "Read your own EPUBs and listen to them in natural voice - or explore thousands of free classics from Project Gutenberg.",
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },

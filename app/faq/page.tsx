@@ -15,11 +15,11 @@ const faqs = [
       },
       {
         q: "Where do the free books come from?",
-        a: "LoudReader includes the entire Project Gutenberg catalog — over 70,000 public domain titles. Browse by genre, search by author, and download anything that catches your eye. It's all free and always will be.",
+        a: "LoudReader includes the entire Project Gutenberg catalog - over 70,000 public domain titles. Browse by genre, search by author, and download anything that catches your eye. It's all free and always will be.",
       },
       {
         q: "Do I need an account to use the app?",
-        a: "No. LoudReader works right out of the box — no sign-up, no login, no profile. Just open the app and start reading.",
+        a: "No. LoudReader works right out of the box - no sign-up, no login, no profile. Just open the app and start reading.",
       },
     ],
   },
@@ -28,7 +28,7 @@ const faqs = [
     questions: [
       {
         q: "How does the text-to-speech work?",
-        a: "LoudReader uses an advanced AI voice model that runs directly on your device to generate natural-sounding narration in real time. Nothing is sent to the cloud — it all happens locally on your iPhone or iPad.",
+        a: "LoudReader uses an advanced AI voice model that runs directly on your device to generate natural-sounding narration in real time. Nothing is sent to the cloud - it all happens locally on your iPhone or iPad.",
       },
       {
         q: "Can I read and listen at the same time?",
@@ -36,7 +36,7 @@ const faqs = [
       },
       {
         q: "Which voices are available?",
-        a: "Free users get the default voice at standard speed. Premium unlocks all available voices and adjustable playback speed from 0.3x to 3.0x. Currently English only — more languages are coming.",
+        a: "Free users get the default voice at standard speed. Premium unlocks all available voices and adjustable playback speed from 0.3x to 3.0x. Currently English only - more languages are coming.",
       },
       {
         q: "Does it work without internet?",
@@ -57,7 +57,7 @@ const faqs = [
       },
       {
         q: "How do I manage or cancel my subscription?",
-        a: "Go to Settings → Your Name → Subscriptions on your device. Apple handles all billing — you can upgrade, downgrade, or cancel anytime.",
+        a: "Go to Settings → Your Name → Subscriptions on your device. Apple handles all billing - you can upgrade, downgrade, or cancel anytime.",
       },
       {
         q: "How do I request a refund?",
@@ -74,7 +74,7 @@ const faqs = [
       },
       {
         q: "Does the app phone home?",
-        a: "No. The only network requests are when you browse or download free books from Project Gutenberg. Everything else — reading, listening, notes — is fully offline.",
+        a: "No. The only network requests are when you browse or download free books from Project Gutenberg. Everything else - reading, listening, notes - is fully offline.",
       },
     ],
   },

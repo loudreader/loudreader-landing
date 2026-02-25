@@ -17,7 +17,7 @@ const releases = [
       "Notes and highlights to remember what matters",
       "Adjustable playback speed (0.3x – 3.0x) with Premium",
       "Multiple AI voices with Premium",
-      "Works 100% offline — no internet required",
+      "Works 100% offline - no internet required",
     ],
   },
 ];
