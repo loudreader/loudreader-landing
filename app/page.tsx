@@ -4,6 +4,15 @@ import Image from "next/image";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from "framer-motion";
 
+/* ─── Touch detection ─── */
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
+  return isMobile;
+}
+
 /* ─── Scroll reveal ─── */
 function useReveal(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -98,6 +107,7 @@ function Phone({
   }, [mouseX, mouseY]);
 
   const [hovered, setHovered] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <motion.div
@@ -122,8 +132,8 @@ function Phone({
           alt={alt}
           width={393}
           height={852}
-          className="w-full h-auto cursor-pointer block"
-          onClick={() => onClick?.()}
+          className={`w-full h-auto block ${!isMobile && onClick ? "cursor-pointer" : ""}`}
+          onClick={() => { if (!isMobile) onClick?.(); }}
           quality={90}
         />
         {/* Hover image crossfade */}
@@ -133,7 +143,7 @@ function Phone({
             alt={alt}
             width={393}
             height={852}
-            className="w-full h-auto cursor-pointer absolute inset-0 block"
+            className={`w-full h-auto absolute inset-0 block ${!isMobile && onClick ? "cursor-pointer" : ""}`}
             style={{
               opacity: hovered ? 1 : 0,
               transition: "opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
