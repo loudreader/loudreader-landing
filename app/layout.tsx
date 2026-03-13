@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "LoudReader - Every book is an audiobook.",
+  title: "LoudReader - Every text is an audiobook.",
   description: "Beautiful AI voices read your books aloud with word-by-word highlighting. Import any EPUB or PDF, or browse 70,000+ free classics. Completely offline and private.",
   icons: {
     icon: [
