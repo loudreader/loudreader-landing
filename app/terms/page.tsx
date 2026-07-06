@@ -60,16 +60,17 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Subscription Terms</h2>
               <p className="mb-4">
-                LoudReader offers premium features through auto-renewable subscriptions:
+                LoudReader offers premium features through auto-renewable subscriptions, or as a one-time Lifetime purchase:
               </p>
               <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li><strong>Monthly Subscription:</strong> $4.99 USD per month</li>
-                <li><strong>Annual Subscription:</strong> $39.99 USD per year</li>
+                <li><strong>Monthly Subscription:</strong> $7.99 USD per month</li>
+                <li><strong>Annual Subscription:</strong> $49.99 USD per year</li>
+                <li><strong>Lifetime:</strong> $199.99 USD, one-time — a non-consumable purchase that unlocks Premium permanently and does not renew</li>
               </ul>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Free Trial</h3>
               <p>
-                New subscribers are eligible for a 1-month free trial. The free trial provides full access to all premium features. After the trial period ends, your subscription will automatically renew at the regular subscription price unless cancelled.
+                New subscribers are eligible for a 1-month free trial. The free trial provides full access to all premium features. After the trial period ends, your subscription will automatically renew at the regular subscription price unless cancelled. The Lifetime purchase is a single payment and is not part of the free-trial or auto-renewal terms.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Billing</h3>
@@ -89,12 +90,13 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Free Features</h2>
               <p>
-                Without a subscription, you may use LoudReader with the following limitations:
+                Without a subscription, you may use LoudReader with the following included at no cost:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Up to 3 books in your library</li>
-                <li>Access to about 50% of each book (one boosted book up to 70%)</li>
-                <li>Default voice and standard playback speed (1.0x)</li>
+                <li>Unlimited listening — every book playable cover to cover</li>
+                <li>An unlimited library — import as many books as you like</li>
+                <li>Every voice free for your first 8 hours of listening; the default voice thereafter</li>
+                <li>Standard playback speed (1.0x)</li>
               </ul>
             </section>
 
@@ -104,10 +106,10 @@ export default function TermsPage() {
                 With an active subscription, you gain access to:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Unlimited books in your library</li>
-                <li>Full access to all chapters</li>
-                <li>All available voices</li>
+                <li>All available voices, kept unlocked after the free 8-hour trial</li>
                 <li>Adjustable playback speed (0.3x to 3.0x)</li>
+                <li>Sleep timer</li>
+                <li>Ambient soundscapes</li>
                 <li>Notes and highlights</li>
                 <li>Reading style customization</li>
                 <li>Background audio precaching</li>

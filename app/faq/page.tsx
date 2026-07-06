@@ -36,7 +36,7 @@ const faqs = [
       },
       {
         q: "Which voices are available?",
-        a: "Free users get the default voice at standard speed. Premium unlocks all available voices and adjustable playback speed from 0.3x to 3.0x. Currently English only - more languages are coming.",
+        a: "Every voice is free to try for your first 8 hours of listening. After that, free users keep the default voice, while Premium keeps all voices unlocked for good — plus adjustable playback speed from 0.3x to 3.0x. Currently English only - more languages are coming.",
       },
       {
         q: "Does it work without internet?",
@@ -49,11 +49,11 @@ const faqs = [
     questions: [
       {
         q: "What do I get for free?",
-        a: "Everything you need to get started: import your own books, browse the full Project Gutenberg library, listen with the default voice, and use word-by-word highlighting. Free, forever.",
+        a: "A lot. Unlimited listening on every book cover to cover, an unlimited library, word-by-word highlighting, the full Project Gutenberg catalog, 100+ curated classics, and every voice free for your first 8 hours. No account, no time limit. Free, forever.",
       },
       {
         q: "What does Premium add?",
-        a: "Premium unlocks all AI voices, adjustable playback speed (0.3x–3.0x), sleep timer, and notes & highlights. It's a subscription managed through Apple.",
+        a: "Premium keeps all AI voices unlocked after the free trial, and adds adjustable playback speed (0.3x–3.0x), a sleep timer, ambient soundscapes, and notes & highlights. Available monthly, yearly, or as a one-time Lifetime purchase through Apple.",
       },
       {
         q: "How do I manage or cancel my subscription?",

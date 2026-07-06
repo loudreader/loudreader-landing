@@ -5,6 +5,19 @@ import Link from "next/link";
 
 const releases = [
   {
+    version: "1.1",
+    date: "July 2026",
+    title: "Free, forever",
+    changes: [
+      "Unlimited listening — every book now plays cover to cover, free",
+      "Unlimited library — import as many books as you like",
+      "Every voice free for your first 8 hours of listening",
+      "New one-time Lifetime purchase option",
+      "Faster, more natural on-device narration",
+      "A cleaner, books-first home screen",
+    ],
+  },
+  {
     version: "1.0",
     date: "February 2026",
     title: "Hello, world",

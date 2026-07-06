@@ -61,18 +61,16 @@ const blurMap: Record<string, string> = {
   "/screen-reader-dark-hero.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAClUlEQVR4nD2SS0scQRSF6+ck8TH9rO6ufr9nph3tnoyOjBMfSYxBx+DCjTthXDgBSTa6FESIAXUhuFH8Cf6jxDqhKyGLj1P31OVCnVuEMcY9z+Ou68I0TaiqKqCUgrk2WOBwM2AvxLIYZ8zmlsWgaRSqqkPT/qIbBnSTcs3UOXEcF57nw3E86LoBWVYEkiSjIUmYbUhoyBJInjfR6cyj01lAluUIgghBEML3A7iuD8ZsmCYD2dvbw+HhIcbjI+zv72Nrawubm5sYjUbY3d3F2to6ms02yOnpKW5ubvD4+Ijr62tcXFzg/PwcVz+v8OPqCpPJV6yuroNcXl7i6ekJz8/Povnu7g63t7d4eHjA/f09vn37jsFgCHJwcIDJZIKzszOcnJzg+PgYR0dHwhuPx9jZGaEoOiBVVWF5eRnD4RD9fh+9Xg/dbldoWVbigZZlgziOgzps3/eE1rVt27BtBsuyQKkhMiV1FHEcI80ypGmKNK01E3UUxbBtVyyBNLMEnaKJ7kLxn+qflp0W8iSCZzOQ5W6BjUGF7Y1FfF7r4dNq9z/vByWWFnK0Eg9kpVdgc1jhy4dFjDZ62FnvCrbXKnxcmUe/zFFkPshiVeBdv8THd2/F5I1B+U8rrCzOo5zLkSUBSJYmaLdydObamGs3/1K0BO1WE0kSw/N9kDAMEYYRwihGUGucIIxTUcdxgiiKUPeQ+mfUUGrCjnIEC31Bfa69+s4wLBBZ1qEoFI1ZGYabwm0vCQw3Q2NWgaoaXJY1TqamJExPy3jzagY69eHHJfykAjVDvHk9i5kZhU9PS5yoKuWKSrksqaCyAUdlAlM1uSJrXFXpi6Jov4lpWi+6bvB6TbpCwXQTlm6CasLjuk5/U2r8+gNDsqevBfbM/AAAAABJRU5ErkJggg==",
   "/screen-library-light.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPklEQVR4nG3Sa28TORTGcX906PehILYSQjTdZkGl6aQgKrRNSptLO5lL5uLxfYY2+a9mlq72BS9+smSfYx3rsTBa0lvc3fDH2zccHLzk4OULjo7ecvtjhqwLim2KcFbRy9KYy+kFrw9fcXj4ii+XEcnmAdVUVGWOMM7SWEdeKe7uN3y/nnM9m5EkMY2ssUahlURY52ispzIBaTuM7whtR9e2tG0gBIf3FlEpS954UukpdEBZj3WeEDxt2w4NXRsQ0dryaemI7t1Q7KzFWotzFu8dbeibHOLi3vJx4egbkspgtUKpBq0VxmicNThnEOOrBe+/Ljm9WrJKCqqqpCwL6qpCNg3Gmn9njM7HXJx/5DI6J88z6rqikRKt1DCCH2YNiMnZn0w+j5lGZ2TbjFrWNEpiTH/T84MCYnw24uRsxOnklGW+JpEZuSlJXcHKblibmNRmiHF0wvHkmA/RiL+TObflimXzwEwtuKivmFZXzOQt4q/pKSfRiNHlCdfpDXfVitWvwuj/hT+WM+bLa27Wc7ImozQFpS3J7ZZYbwZbkyO803j/O4bW2/+I4A299lno9Ydm2H8mWq9/Fdjf6CN0dH2Es+8R98s52zxBNZKmqYdvJWVFnqfkWUpeZIjPn517z7euE+GGN1ppGKbQxSSlJkg1xHJOlKeL4/RHfvk6J4wekthSNpdKeUiqSJCHebMiyDHG3WJDn+ZBr+7jDdnvczz2heySEMMTYr+Lp6Yln3eMO/3M/6J727Ha7wX6/5x/7yDFGYezHFAAAAABJRU5ErkJggg==",
   "/screen-reader-huckfinn.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvklEQVR4nGWSW2sUQRCF+ycLgij+Ex8kgUgU3/MWJJBNlIgJ2Z1Lz6Vv0z333Sj+gCNVvZNN4sOhp6lvTp+qbhFsBluv8ePqHCfHH/D2zSu8f/caXz8f4/72Cq3L4U0KMYQKbSORJze4+HaG008f8eX0CN9X53AqwW60mHsNMQ8WU6fgbY4yv8XdrxXu765h1Qbb0eDvQ4s/uxZiNzlsR4vtoLEbDR5mFzVZdqP679lDEDC2FXpfoG8kOlbB+64puEaMmLqai41OOXRU9qjOSxAjpq5ikIDgMtAUnqoPJeZeQZA1Oy7gE9ibjCMwOLQl2iZHo5NY3AP0I6ljsCbHkodK4CFjypkbAhu5gBWDTiexyGuy3ycMUh9iCCUCgSoWndpE6QNIZjweCuxtyvnoOJ6AjQ2RER/NYChigR4AA/njfggltoOCmPo96HLO+nIdGNQ0nvh6lpuhNWZNDs3Q0fTHoevYjK1Ja/6m2khdLzfDbiaD06T0uSPdNc+xkRxe1iV+SoMbqZGWBbxO2PEZ2NoMaa1xmbe4zAPWpUIwKdf+c0xrhVXmWZuqjuDiyO/RS56fMwWUrljWxBe1ZPwHeMgWhPRCNy8AAAAASUVORK5CYII=",
-  "/screen-reader-dark.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoklEQVR4nG2SyY7bMBBE+Sm+JaORLZMUF3ExRW2HAQJkgMn/f0oF3Ro5FpBDgTL1VF0sU+ScMY4jUkq43W64XC6srut47/F4IIQAEUJEShm0SqnQNO94e2uglMYwBMSY4L2HcM5jGCKD9GyMRd9bfh6GwLLWQXg/MERf5vxAKZVFzzFmNrHWQ+w5CmqtrGmaUOvE68jZ8w7SD9pc1xXLsrDmeeZ1miZ2pqmilPIECThEIDnTeMr9BLdtO7kejvtoB0E9UbbdkVwqZ6aRKdHYwC2cwGmaUcp+AGqB2qCDaG3+gXsmqqacQOf+Ax4HoWzzTDVV/si574xU0WstyzJzlHVdGY4xnjMSdAAkaoLciTmNPsCjqu0VfC381enQE6T7SDC5jmPFWCfU7//7aIEYQT2RjHEIdUX59cUKdeM96+i9g5Cyh1IG3VXCpgXp4w/L5RX3m4LSFlJqiLa9o20lmh8trC0o82+U+RPGjWh+XnG9SrTvHYSSPbS2UHcDrwdkk5BMgu8HKGn4HU0VlMP0FkY7+N4hmQGx97DaQivDF4Ku2V8wS3d+Si+TPAAAAABJRU5ErkJggg==",
+  "/screen-reader-dark.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAABpklEQVR4nE2R22pTURCG57R2Ds2OIUhFUJAiCLXQa99L36Iv471P4Av0yjMaL6Q1aZqd7DUHWXth6FwsFsz/z3wzg2dnryIckeBBRIRqZhYhIndAxJTSMd33WSQRkTRNMjNEbNsZIlbzZnPn7kQsk0ky593usOt2zAwApubh0+mImeR02Z6/eHyzvkckZiJi1Wyqy8Xs+tsfmY7k2Wn7/MkiwmtjdyNigPj6+69sdv319zUiRngJ88prpuvtQbadfloVEIiAIgphVlUz63slImySEAIRJmEmJEJmGo0aomEbZtY0DTObWX0RkQdOAQAiUlV3Z+aIGDhKlNEBQFWPu5SBqyqIiB7KB2CrXETFWRSIqKrHyjhERJR0GQlARBDx+K9VS7qeofqYOefs7iIFuaBUVUriHm4mTPS/SxksIvb7g1mEG49PwsO2d7WSmclmc991N2U5uX/z7soCPl695dQAwHjcCLMsl9NHi8XPz19uP7wPgElqXr4+X/1a5Zzx4uKy6w4eMSd5WpbNPzxvXbG65/OTtp3lrMR8SyTCo/0hmUm5D/4D8FMMuLP0HS0AAAAASUVORK5CYII=",
   "/screen-reader-quote.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAAACXBIWXMAABYlAAAWJQFJUiTwAAABbElEQVR4nFVRi27jIBDko9JLWgLsE1jjuE4TqZXa+//fOAFppBuNkM3AsLPraq3btu37bmZ5oNba3lfbWr4UR0S11nVdzawMmJm1RWsGQef9GZFKKarKzEQkIswcUzq9vbnj8RRCJKKp4UBKyXt//HNyIQREVFUZ4AEiAoAQokNEEck5P0+IiKpOpy4zs4jMfwBARCJKKYUQ/pNhAH+fP5/PPdg0n55z1ZECAJyIlFKWZTGzudr4KKUwc7+tqvUXzwYgYoyjclUZ+x3zFe7OKcTgAICZtQd7kHtuflTOhFnFaplcrNqgSjdwVmRr9b63277e9/V+XW97u+/tsuSi9JT77oPvnRfLRdHVLOtSrtuytXpZ8uTW6lJEhRxAb2EvFSkCRsA0+vYoDQBopMTacP+k6xfWFSCNiU15DCCVFT5+8PY32RbjTFOeIyFEsk1uP/zxnUrz3ocQvPf99pxSAkzIPqTj6fVwOLwM/AOxnrARGsGFbQAAAABJRU5ErkJggg==",
   "/screen-voices-premium.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAAACXBIWXMAABYlAAAWJQFJUiTwAAABPklEQVR4nHWRi04CMRBF+yFGAii7sG3nPdNd4v//lmlBFKM3TdPkdF530uFwmIb2+/3L0O51d5zejvP7fj6m0+l0GZrn+fZvmqbzcjnny5TPKedchwAQkRAJoD8BsSIkJhYWYTG1GDIzHRLR5BJN1iaba6h2IKIsInLD2la7bv4R1kSUiEf+XoiIk2prdt2iY2YBwFKgFAAgIklkodGibWaOKKXAspScoSKTeCJ19eaxmjoS/4nXER1EP6KBka1ji7WtV/f2wMtSRnlMKPfkqo7Iz5gSSY+OdjWLv7CamKuHiCIyANYKtcJ9bnbTFt6amjHLzRMAJOrWDRyu4Sx3druJmFkSm1tbY+220Ji7lFpKrbX/e9iyqToA5Vx/tdZt8fY/Fgu1YJZa7/v4Ts5qaq7mj7afFtoX/yXmpyMin5XHfa7OD7UPAAAAAElFTkSuQmCC",
   "/screen-library-dark.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCklEQVR4nHWS227cIBBA+Y88JNn1DQwYML7sZh0lqZRL01xUbdpGafv/f3Eq2LRqH/pwhBkdD8wMYhgGNpsNMUaapuHo6ChTVRXTNLHb7ViWBZGEcRyzqLWmLMtM22pSknmeMyLEgTDMuGHGhgGlLVJpjLE45wmhz4jO91mw/XTAR4z1GNPRtgatExbR9SMmzuh+g3Ipo0Mqg5QtdS2RUqGURkx3nxk/faW/fkL3Uw6mTGltGpV/SHsxfdwzPb4Sb56xcc5FpONUq1EqSYf7iu3dA9uHPdu7J/p5R9d5tOlo3o9OWZMsetcSvCH2Hh9iFqXUFGXNalVQljVNIxGhk/iuJQRL5z2666ilYl2UnJ6uKdYldd0gri4sF1cd5x88ZnI0QVPYhjJIqo1GnlnUZBFfXiMvbwNP3yf8dURdeqqdprl2tPsRu58xtxHx7W3g5cfI888Jl8QrT7UYmhuPTuLLjLmLiPv7yP3jwO3zTH85YM8jcrLUs6FeDPK8Q206xLJxLNvAcjbg+3AoRinWZcXpak1RvBezGx3LFFg2A32IGONy79ZF9d6eKvdTTNExRc8YA855PIXU4DSVw5zbPCkRQsD7hP9r/ZfkiL7v+T8hk8XfQ0/pjXUYFw7YDpNiJr1HjSiKiqqq86WrWlJKncnfKVbVJEccH59ycrI6sCo5WdcHVsWfeHJ+AVRwV6nvIwiuAAAAAElFTkSuQmCC",
   "/screen-settings-premium.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAAACXBIWXMAABYlAAAWJQFJUiTwAAABgElEQVR4nGVSi2ojMQz0hxyBNCnZdjfWy5JsrzfJXiD9/z861kmh9IbBIMYWmpHD4XAYhuF0Ou33+z8du93ucDoeh/e3j2MYhmEcx2maPjs+OsbzNMbpM44BAYiIO1IHP0thYgrqrubJXM1yzu5ZVVPaqGpB66K1iVeSRCSEhMhACUUpPeXSZU6ABIDbSQKckFPw2rw2zZUl4beMJMRKoiHnUnI1c0KKEWIEAOzDCbMEzc3nq9WLlybqzClGRGSmLrPPqVykXtvtPi/XUmYA2t73BkG8ar1YWy/3x3JbW1uYBZGo3whi1crsdaltyaWqGgn7UuralvUaWKvlOZfZ1Ig4niEy5r+tfd3Wr3sgLepzrkvOVUTjGScEv83z47o+7iGpq2Xzomov64iUREzVLKi5eY866XOojUCE22oCaxbNnLyHypur1wq77ygFUolSIvsEaYp0PkNPphsDdhCPkqN4JI1bAwT4lkmMRLGTRImF6PUhmDkkkd/8gfCz+B//AEVMg61fohJzAAAAABJRU5ErkJggg==",
   "/screen-reader-soundscape.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB0klEQVR4nFWQ226jMBCG/TTdtkGEgG2Mjc82NgQIJM1htcnebN7/GVaQ3vTTaKSZX3MEMcZxHKdpatu2aRrvfYyxPwzdYd8MEWhtnPNNE4yxWhutjdHWem+8U04DShnnQkrFuahrzhhnrGaspowRWoGyJFVFl5iy1deE0BIThEqEMOCca62dc3bFrEgpKWUIl+ClhRD8ilsxxtS1IIQusrX2ldJaK6W01lLKqmIQ4h+yWtGLrBirMSbAGOOce138au+9t9YKIUtSgdfgruviStOEEIJzXgj5Xe29b9vW+8ZaJ+XSnnNRVbQo4PfmMUZrnRCKC8VqSQjLsiJNM6C1staGEKy1nEsuVEXrktAsy7Ns9+Pu5f++UdpwoSDEBURAqaXa+2aZvbxkWds7a5SUgoMuuGmIl+NwnveXxfrrsb9fxuvczX0DTmO4zd3j3P85D4/rYbHL+O/34e95f5sjGIKZOnfs7OV6uj+f9+fzevv66t3c2c5LUBPCKaUYa9/F0yOeHjb0FJesqlCBwGaz3Wyy97ekQIKbiZsJYvX+K9kk2cdHCvIc5jnKd5AUhKOaFRRlKE2y7TZP0x3AuIQQQ1gSRHjJqqLcpbvPzyRJ0u02+w/rcac0RmJi7wAAAABJRU5ErkJggg==",
   "/screen-reading-style.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAAACXBIWXMAABYlAAAWJQFJUiTwAAABs0lEQVR4nG2R7W5aMQyGz72vcAbsMtYBoqhcR9eiUdbewjjKl51PO8lBUw6V+qfWq/zIE/u1na7vZ6vV4sdqufjez+d38/ld388Wy75fzmaLb91ms97vHw6Hx4fddr2+36zvd7vt42G/329/bX52x+PL6/n17e3v6XR8fn56eX46nY7v7+fz+c/x+LvTxiCCtRZBKyW0EtZCij74dtM5ZxEBANojRGvRORtjoBSZYmctKiWHYRBCKKW01kopAPDeM6WGpZT/phiGyzBcLpeLEAIRUoqdswjNVUoplBRyklbSWojRN4xgAMzNMqV4E03qnEPEhr13TKmWfFPJnDl1FkFKMQwDIjLT9Tper2Mdx1wKMbfiRisphbVIlGqt4ziWOnIukSYMYIzR3lmiVKbKnDMRh0StOBgNYGLwzFQyN+PJmYhatkVwzqYUc+Zb9mdrAEZJqZQKwTdW63VsUWvJmTs/mX9skbmUMtGGS+a2VKO1MSaEUHKuteE6jqUU5ikbwCBAaK19ZH8OFnz7a2cxxsBMeeqcc023wWJwwdvgbQyOUmCKmRNzSpRiih0lTylM5xf6DxsqXNbfF5dpAAAAAElFTkSuQmCC",
-  "/screen-home.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB1ElEQVR4nIWS207WQBRG++jC+4AGeQoVrwGjFwba/u2cz9MCy8xUMcELL77JZGft8x680zT9+H7Px6sPnJ+fcX72juvrK77d36LVynKaGGKwNM3TAzdfPvH+8oLLywu+3nzm8eHnb3BkyMmTc8A7wzg+cnt319X+1qhu10ow1JLYtsK+V3Ip+HQol8pWCzlHgncMB7R1+RARyna1/741+94dhhRD90opYp1DSIWQGuc8pWS2rVJLZtBaopRAiBUpV7SSWKMJodWeOlRyYhBKMS8Lj9PEPI0oJYnBU2vpKV9BZS2LVEynhXmakFIQQ+gp9317hQcTC9IGplUxjiPzPGOMoZTC09NTh1v0wcWEcQGhDOu6IoTAWktKbWwtYu1NDS4VtAuc/hfROoc2BiFl79wYTYzh32akkpxWwbysLOuKtYaUAqVBtfS0pSQGoyXzKjkJjTR/ZxdTIuXca+1g2+OqLat2b8BMyqXDHaw1o31Cuox0zbulrPiYCakQUqYxQyvU+tBHZNwRMeeMCxEfEiHGI2J7mtH6pnYgDUz4EPoFvYLtBl1sERI+RnI61K6qXVT799R124n1UK7HcI8Z1r7vPzsf9mco+6Ftf+7beKuXlxd+AanXR+JXHH5UAAAAAElFTkSuQmCC",
-  "/screen-news.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAACTUlEQVR4nF2S6U7bQBhF/eZteZb+KaViS1oBKt2gbAEExCEhAbHUSbyN7fE6dsKpZlKqqj+uLY2O73z3frakjEhlxN3tkM2NNZaWXrP05hWt1jqjYZ9IBPjeFEtDWRoznTp0OkesrCyz8v4dp51jJuMnY5LEIZZ+xNHiq4f7O2y7y3XPZuw8kSYxZZFR5KkGBWEYGEmZUJYFda1oasWsqanrCqVKrCiRTHyB4wlckRJlClnOjNJqTlo2FJXCSrICNy6YxCXTROGlDUE2x8/mhPkckddkpcKK0wwvyfFkiZtUeFLhyRpXKnypCGSJzAssP4zM1RM/whcJIpaIJDWK0wyZ5RRFgXU3GjLoDxj0b3DGEwLfJQg8hAhIdbgiQ1Ul1t3NNb2rK3pdG8eZEIYhQoTEcUye5wbSDVij3hn21Tl295JfzgTPdfF9HyEEWZZRVRVNU2PZF4d0TvY5OzvBGY+JhCBJEgMppRadavDi4pTDkxOOT895csYEQWCuTvRWygKltKPC+vp9nw/rn1jd3MK+HuB5Lp7nmVmlTCiK3Lhan78dsLKxxVp7h17/hjDQ6wyJIvEPWGHt7X1hs7VKq71O1+4ynU5x/wSKIh0oXdRz/LPNTvstu1vLDAc9M6N21IHyPKMqy8VP0e/u0Tn4yNnRDo/3t6YWrZfkJpB2PDz6wfZ2m93dbUajkXFbzBj9Bc2Mtw8Ol4N77OEjU39Rcpqm5q13XOnN6B7dIOJhHPAwCQnjBfCiBVgxm82wmvkzZTM3Us3cHP6v5+dnfgMEci+xKSG30QAAAABJRU5ErkJggg==",
-  "/screen-campaign.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAACDUlEQVR4nE2S2U4cMRBF/R8gMdOr2263e9q9zQYMy4AgLIqIEkXKW/7/F05UDpA8HJXbvr5V5Wo1DAPzPBNCoNSak5MTTk9PKcqScRzZ7Xbs93uUfEzTRN/3eO+x1kZk/WEiqP2052o+cDVdsglrgu8ZVyOX4zm362sO8wHRqON85HnzyOv6kUO4YPQz+7DnefvA94uvvOyeuJ2PqLvhnrf1Kz+3b9y0B4Ie2Lgt33Yv/L75xY/zbzzOX1Dnq0uO4ZaH/o5NvcGXHcEMHPtrXjdPPEz3XIYDqrWBYHvGeoyxqwPB9Ux+YnJT3GtNh9KlpcxNpDYNrQ+sfKA2niLV5KmmyCtUlhckSUaaZlhbE7o+Yo2L+8tlRpYVqDwvoihLM0xl8I2naVqqypKlcpZTFBqlTY1QmZrGOZxzGGPJ8zK6ibAsNapqOqzvcG2gbVc416C1iYLFIv0nbPoJ30+s+omuC59pxVFEEuWiGtdb+nGm60eaxkdHaUrEWlcx1rVDDdOaMIx0oY+pBe9b6rrBmDoia+W7nqbtcH4V0/r3KIKyrCKVsaiyqikljalxdRNTi0ieRGqUNxSxkjr+YmIt1rq4zrKc5TKNMXb9IRJEJMV/uCVJigwkOkr7hbbk2qKljLL6fBoZoTjGESZJTpJrlmnJ8v3wf2S8EtXZImGRFJFl/AnSTxZytkg4O1vyBwubUf7VvJaxAAAAAElFTkSuQmCC",
-  "/screen-saved-articles.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAACGElEQVR4nF2SS0/cMBhF/dMp/wdaIXbtsl20FFS1FSAoA8yQSZyHX3FiJ/M4lT3QRRdXipXj+z2uRe80SYuHO87OPnB8fMTxuyPOz8/4c3+LVg1NXSIGb0mqyoLL7994f3rC6ekJV5cXrIsV1nR0rUTE4Amjx1pNUbxwc3vL7+tbFsuCqtUo41BaI6Y4ErPCQdOEDzPKT7R9pHMDxvUJDMQwEsJIDIEQIy7MyH7Di9mwtulCQCS3YRxxQ8AmjREzTNT9TOVmahcxfkRo1VK3LWvZ8FxrVm1PaSLSRSobkTbk8qKua4pK8lRUPKw7nqSlUAOtHdCpv97jvEe8FAVPz0vuHxbcPa5YrEqKWqGNwboe13v6YUCk0ZtOIZuWpm3pug5jDL7vGYaBcTxIKGMyWNUNUtY0TYNSCucc3nvGIe35FWyVpu10LpeA/tVt+N8xg0pjjM1QcjqAyfEN1G/gofk3aBxTCCEHEcKAcH2fI7LO03t/6GscmWJks5mZpphhkSBlXQ7fWPtviOQ2TxMp4uyotMpTdp1CK4XWGmttXs+h/OHRiJufFyzub1gun6iqilrKDKdL6VyWa5paIj5/OuPX1VceH/4g6zpLG5urFEXBarlkLEvE5ZeP3F3/oCxWdNpSK4f2EeM8UkpSxMlZJEB3bd5XmLf4accw7wnTNg/0tiax2+3YbrdZ02bHOO+z0nf6l7Tf7/kLpDs94/qoDDMAAAAASUVORK5CYII=",
-  "/screen-timecapsule.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABxklEQVR4nGWS2Y7TMBhG/eTAy8DMFTA8xKjcAkKDAEHbmThxvO9Z2g/ZSaNWXHzyRU7Ov9hEK46SXz+f8PDxPd68flXz6eEDfjx9h+AduvYFxGgBayReng/Y7R5xf/cO93dv8Xn3iOfjX5TvUjAQZTSMcxBS4njY49vXLzXH4x5GS8ToEbwFEUqjFxKMCwgh0PcMnPew1mDICdM41JNIbcC4RMt4BTlfTusshmHANE0YxwFEKQXGGCilYF2HnhUjhzEaOaUKDUMG4VKjZQxN09SyxijE4JFiQE5xTQDZ9xZ/KMfvY4O2pdBKVmgYUu0t54hUwMMFPFBQ2kAIDucsYgiIMdSfUoognQ7olEcnLbTWcNYieI8Y45ZqbFUAlRa013VapWRdjd/gxbqCDk0FOaSUMOYWjNEvpVvpQPlirKA1COEavBiFXY0FFNBa1YFCGajGF9DX0sVYbEtpfQX6K1CsoCiggCnTO7fZKlhWU3psL8at/MV6Y7Rr6fL2VlCpZad1qDKMXtZDudl6LFmMbtljuRmfMnTIMCHDhXRzI/VWYkTOGWScZ8TxhDSekce5vr+bjGM9yXQ6I09LhumEeZ7/y/l8xj+mLUFa0SMmTgAAAABJRU5ErkJggg==",
+  "/screen-home.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAAB9ElEQVR4nH1STWsTURS9933MTCZTG5pgxRChCF1ZuhFc2YX0x7j1B7jzb4h/wKUiFAU3pQVpoUJTUqvUJKYmzUfn483Xm/eezGRTETyryzv33cM952Kaivl87jiO67rGGKgQx/FgMGy372OSREVRkApLDgC0UkEYcs4JItbcOqMUsSRMBUKpbXGtFEuEOD85eLD12CD3HFqvsaoJUtv2ajm5Hg7fvHo5uxoKfyyzGJEgEqnp632YRAQnv0cnR0dPnu5QyjjnAFCKIPoJuCzH8XiklEqTtNlq2Y5jtMYSIKXSSFkQiuHI51wns24qFt5a58f3c2+lsbm1c3x4wJKcH38drHoy/vlx7/PBs93dL4f7d5ve8xcPL7qnrHfWfbf3dnOjc3l60e2Nm+1Ba60xmV5/eP+p/63HwpsrK59hvvpoe9upe+3Oxq/BJbuzMg1u+vMAIxHFGRgZaW2M0YyxWq1GKaOUZFnKlKFhYTVYJqUkhCmlLcuuNjQAholgCiJcIL23vk4pBQBVZIVMq+UR41gsUt6w89w4NtMIUBhiocy0ZZGcSSkzEeVoxVmqrcpRqZjn5GlkuRyFCMoEKqnKUSzLKj4EZLdj/hf/4wCAlfYDKA0ElyMrKWOQ3DqP/kyHaemLMSbLMt/3lzUuz+/v3+XLcuofeWwbA7czL28AAAAASUVORK5CYII=",
+  "/screen-home-dark.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAACEUlEQVR4nD2STU8UQRCGu7qre3pmdgb2CxdcI0FjwMSAErwIiYnxFxjv3v0X/jzPJlyMQU0AgZ1dYXdmdrq7yuyE+Byrk/p43obDw8M8z5umqesaAESLtXY0Gl1dXSEAVFVFRP/fhBBN0xRFwczIzFVZKVRtnYUAAPDeV1WptUGQMH68+fP3hEFKKV05d8uamHWSo5jLTho/2RnGRmXWGKDYRgDASr/7/CXujmBv77l3SwZEhb4F2iVM1lWhxuFwoFqms7+ucSDFarwQxE53Ovhsd/fg1fHF+Zltfgy66fdfBSqOkzzKHjWLO3yw+dSmY20mdxdXp6cziSY0ZW89Pnn/uiwsfPj4yZvY1bdn375ScArl26Odyz8XyfqLh/0E9vdfEpHzPokNMy/mt/1u7pyrlpzEGgMFL9BGklkSUSfr3UzvQgir8wRIIdHkA2ahlELUUipmEQJ5H1ZS++uZRg/J4Ob6OrTm09RKmRARIuLNZArxWphfMsbknFj1QeErRqtdLSWAXcUm40gbRK11bAwRGQVEjErJZjGz1pCvtV45Y/ZZllKgKLGYr3WaZVOWVRvlfaYhBCIiJvnmZH9za2CjNEnSKIqNiYtitrExOj4+6fWGcHR0UM6rIIxgquuKWRBRv9/P82wyKWA83hZM+dZ2fVu4ci6EiFqm0+nKhJQghFpcnzPffzfnnPceEYUQ/wCkWw/5jRS8JgAAAABJRU5ErkJggg==",
+  "/screen-campaign.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAABzUlEQVR4nEWSTW8TMRCGZ8Zje7Ok2W2ighIJUYUD5/4C/v+JMwIOFAqFpPnoZjeOvwbtLoj3ZI81r+aZ1+hcu91uy0EwSES6tnv48bBcrrBpDjFGYwwSnbtORMqyFBHvvdaavfcggAIS0/PxWUQmtgAkow0p4qf7Y/v19LKaftl///Dt4820fv/uLgTat+f6dsaGjalmTTgFTNZaZNpfTqvqFWqtFDO/YBG1KqvbyRv7eXpTX79dvvYupM7lieDjz1/Jg9XaBaeIREApZUifvVcG8Hxuma2AeHfp2jalfFVdGWtBIEbPRMSsvPfOX3bHfU5ZW22M0VqLRB5XwcyziTHLlVIKEZVSf+sppeAdIiGCIhTJ0tsGEck5MQB1QTX7RxEIIczn8+l0iogAEKOQi/Rpo6yxzFzXdVEUIqIGAQCemiMRAVIvREAQ6XMBwJwib7abU9Os12tAlXL/MobWtyJi07kucm5/hxAHS8o5LxYLJD1wo5SGWF97HwCEB/XQvTkwSjQIQH0EKcaUYu+dEwBkSUykkNRutxuJq6oqimIE8/7CI34xKQlhKEoIwwcZVtQPmXO+f0qNy+PZOXc8HHLurzgypAz/uv9TAcAfccElLYw8qioAAAAASUVORK5CYII=",
 };
 
 /* ─── Interactive Phone with tilt + hover crossfade ─── */
@@ -259,7 +257,16 @@ export default function Home() {
           <div className="relative z-10 max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20 py-20">
             <div className="flex-1 text-center lg:text-left">
               <div className="animate-fade-in-up">
-                <Image src="/logo2.png" alt="LoudReader" width={56} height={56} className="mx-auto lg:mx-0 mb-8 drop-shadow-md" priority />
+                <Image src="/logo2.png" alt="LoudReader" width={56} height={56} className="mx-auto lg:mx-0 mb-6 drop-shadow-md" priority />
+              </div>
+              <div className="animate-fade-in-up mb-6 flex justify-center lg:justify-start">
+                <span className="inline-flex items-center gap-2 rounded-full bg-loudBlue/10 border border-loudBlue/20 px-3.5 py-1.5 text-[13px] font-semibold tracking-wide text-loudBlue">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-loudBlue opacity-60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-loudBlue" />
+                  </span>
+                  Free forever &middot; No limits &middot; No quotas
+                </span>
               </div>
               <h1
                 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter leading-[0.95] mb-6 transition-colors duration-[1200ms]"
@@ -271,7 +278,7 @@ export default function Home() {
                 className="animate-fade-in-up delay-200 text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-10 leading-relaxed transition-colors duration-[1200ms]"
                 style={{ color: heroDimmed ? "rgba(255,255,255,0.5)" : "#9ca3af" }}
               >
-                Beautiful AI voices read your books aloud, with every word highlighted in sync. Fully private, completely offline.
+                Natural AI voices read any book aloud, every word highlighted in sync. Listen as much as you want &mdash; no limits, no quotas, no account. Fully private, completely offline.
               </p>
               <div className="animate-fade-in-up delay-300 flex flex-col items-center lg:items-start gap-4">
                 <AppStoreButton dark={heroDimmed} />
@@ -279,7 +286,7 @@ export default function Home() {
                   className="text-[13px] tracking-wide transition-colors duration-[1200ms]"
                   style={{ color: heroDimmed ? "rgba(255,255,255,0.3)" : "#9ca3af" }}
                 >
-                  Your first book is on us &middot; Offline &middot; Private
+                  Unlimited listening, free &middot; Offline &middot; Private
                 </p>
               </div>
             </div>
@@ -419,18 +426,16 @@ export default function Home() {
           <div ref={s5.ref} className={`${reveal(s5)} max-w-6xl mx-auto px-6 py-24 md:py-36`}>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-5 leading-[1.05]">
-                Something new, every day.
+                Never short of<br />something to read.
               </h2>
               <p className="text-lg text-gray-500 max-w-lg mx-auto leading-relaxed">
-                Daily news. Wikipedia&apos;s article of the day. Over 100 free curated classics through reading campaigns. Save articles from the web.
+                Over 100 hand-picked classics, grouped into themed reading campaigns. Pull to shuffle the shelf and find your next book. All free, all offline.
               </p>
             </div>
             <div className="flex justify-center items-end gap-3 md:gap-5">
-              <Phone src="/screen-home.png" alt="Home tab" size="sm" light className="hidden lg:block opacity-50 -rotate-2 translate-y-4" delay={0.2} tilt={false} onClick={() => setLightbox("/screen-home.png")} />
-              <Phone src="/screen-news.png" alt="News briefing" size="sm" light className="opacity-70 -rotate-1" delay={0.1} tilt={false} onClick={() => setLightbox("/screen-news.png")} />
+              <Phone src="/screen-home-dark.png" alt="Home with classics shelf" size="sm" light className="opacity-70 -rotate-1" delay={0.1} tilt={false} onClick={() => setLightbox("/screen-home-dark.png")} />
               <Phone src="/screen-campaign.png" alt="Reading campaign" delay={0} onClick={() => setLightbox("/screen-campaign.png")} />
-              <Phone src="/screen-saved-articles.png" alt="Saved articles" size="sm" light className="opacity-70 rotate-1" delay={0.1} tilt={false} onClick={() => setLightbox("/screen-saved-articles.png")} />
-              <Phone src="/screen-timecapsule.png" alt="Time Capsule" size="sm" light className="hidden lg:block opacity-50 rotate-2 translate-y-4" delay={0.2} tilt={false} onClick={() => setLightbox("/screen-timecapsule.png")} />
+              <Phone src="/screen-home.png" alt="Home tab" size="sm" light className="opacity-70 rotate-1" delay={0.1} tilt={false} onClick={() => setLightbox("/screen-home.png")} />
             </div>
           </div>
         </section>
@@ -467,10 +472,10 @@ export default function Home() {
         <section className="w-full bg-[#f7f5f2] overflow-hidden" style={{ contentVisibility: "auto" }}>
           <div className="max-w-4xl mx-auto px-6 py-24 md:py-32">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 text-center mb-4">
-              Start free. Go further.
+              Free forever. Go further.
             </h2>
             <p className="text-lg text-gray-400 text-center mb-16 max-w-md mx-auto">
-              Your first book is completely free, cover to cover. No time limits.
+              Every book, cover to cover, with no time limit &mdash; free, always. Upgrade only when you want more.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -479,12 +484,11 @@ export default function Home() {
                 <p className="text-2xl font-bold text-gray-900 mt-2 mb-1">$0</p>
                 <p className="text-sm text-gray-400 mb-6">No account needed</p>
                 <ul className="space-y-3 text-[15px] text-gray-500">
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>First book fully unlocked</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Up to 5 books in your library</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Two AI voices included</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Daily news, Wikipedia, Time Capsule</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited listening, cover to cover</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited library &mdash; import all you like</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Every voice free for your first 8 hours</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>100+ curated classics via Campaigns</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Night mode, sleep timer, chapters</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Night mode, chapters, background play</span></li>
                 </ul>
               </div>
 
@@ -493,15 +497,15 @@ export default function Home() {
                   <span className="text-[11px] font-medium text-loudBlue bg-loudBlue/10 px-2.5 py-1 rounded-full">Recommended</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Premium</h3>
-                <p className="text-2xl font-bold text-gray-900 mt-2 mb-1">$5.99<span className="text-sm font-normal text-gray-400">/month</span></p>
-                <p className="text-sm text-gray-400 mb-6">First month free. Cancel anytime.</p>
+                <p className="text-2xl font-bold text-gray-900 mt-2 mb-1">$7.99<span className="text-sm font-normal text-gray-400">/month</span></p>
+                <p className="text-sm text-gray-400 mb-1">First month free. Cancel anytime.</p>
+                <p className="text-[13px] text-gray-400 mb-6">or $49.99/year &middot; $199.99 once, yours for life</p>
                 <ul className="space-y-3 text-[15px] text-gray-500">
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Every book, cover to cover</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited library</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>All 8 premium voices</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>All 8 AI voices, for good</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Variable speed (0.3x to 3.0x)</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Notes, highlights, reading styles</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited articles and imports</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Sleep timer to drift off to</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Ambient soundscapes</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Notes, highlights &amp; reading styles</span></li>
                 </ul>
               </div>
             </div>
@@ -520,7 +524,7 @@ export default function Home() {
             <div className="flex flex-col items-center gap-4">
               <AppStoreButton dark />
               <p className="text-[13px] text-gray-600 tracking-wide">
-                Free to try &middot; Offline &middot; Private
+                Free forever &middot; Offline &middot; Private
               </p>
             </div>
           </div>

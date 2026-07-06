@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "LoudReader - Every text is an audiobook.",
-  description: "Beautiful AI voices read your books aloud with word-by-word highlighting. Import any EPUB or PDF, or browse 70,000+ free classics. Completely offline and private.",
+  description: "Natural AI voices read any book aloud with word-by-word highlighting. Unlimited listening, free — no limits, no quotas, no account. Import any EPUB or PDF, or browse 70,000+ free classics. Completely offline and private.",
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
