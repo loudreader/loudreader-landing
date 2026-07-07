@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 
-const CODE = "FREEMONTH";
+const CODE = "TWOWEEKS";
 const APP_ID = "6758149478";
 const REDEEM_URL = `https://apps.apple.com/redeem?ctx=offercodes&id=${APP_ID}&code=${CODE}`;
 const APP_STORE_URL = `https://apps.apple.com/app/loudreader/id${APP_ID}`;
@@ -75,11 +75,11 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
         </span>
 
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter leading-[1.02] text-gray-900 mb-4">
-          A free month of<br />LoudReader Premium
+          2 weeks of<br />LoudReader Premium, free
         </h1>
         <p className="text-[15px] md:text-base text-gray-400 leading-relaxed max-w-sm mb-8">
-          Listen to any book, PDF, or article in natural AI voices — every voice,
-          any speed, sleep timer and more. Fully offline and private.
+          Every voice, any speed, sleep timer and more — free for two weeks.
+          Listen to any book in natural AI voices, fully offline and private.
         </p>
 
         {/* Code card */}
@@ -93,7 +93,7 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
             aria-label="Reveal and copy code"
           >
             <span className="font-mono text-2xl font-bold tracking-[0.2em] text-gray-900 transition-colors group-hover:text-loudBlue">
-              {revealed ? CODE : "FREE••••"}
+              {revealed ? CODE : "TWO•••••"}
             </span>
             <svg
               className="w-4 h-4 text-gray-300 group-hover:text-loudBlue transition-colors"
@@ -107,7 +107,7 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
             </svg>
           </button>
           <p className="mt-3 text-[13px] font-medium text-loudBlue">
-            {copied ? "Copied to clipboard" : "Active for the next 2 weeks"}
+            {copied ? "Copied to clipboard" : "Unlocks 2 weeks of Premium"}
           </p>
         </div>
 
@@ -118,7 +118,7 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
             onClick={() => track("redeem_click")}
             className="w-full inline-flex items-center justify-center px-7 py-4 rounded-[14px] bg-loudBlue text-white text-lg font-semibold shadow-lg shadow-loudBlue/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] mb-3"
           >
-            Redeem free month
+            Redeem 2 weeks free
           </a>
         ) : (
           <div className="w-full rounded-2xl border border-gray-200 bg-white p-6 flex flex-col items-center mb-3">
@@ -128,7 +128,7 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
               </div>
             )}
             <p className="mt-4 text-sm text-gray-500 leading-relaxed max-w-[16rem]">
-              Scan with your iPhone camera to redeem your free month.
+              Scan with your iPhone camera to redeem your 2 weeks free.
             </p>
           </div>
         )}
@@ -153,7 +153,7 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
           {[
             { n: "1", t: "Get the app" },
             { n: "2", t: "Tap Redeem" },
-            { n: "3", t: "Free month" },
+            { n: "3", t: "2 weeks free" },
           ].map((s) => (
             <div key={s.n} className="flex flex-col items-center gap-2">
               <span className="flex items-center justify-center w-7 h-7 rounded-full bg-loudBlue/10 text-loudBlue text-sm font-semibold">
@@ -165,7 +165,7 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
         </div>
 
         <p className="mt-10 text-[12px] text-gray-400">
-          New subscribers get 1 month free, then $7.99/month. Cancel anytime.
+          New subscribers get 2 weeks free, then $7.99/month. Cancel anytime.
         </p>
         <div className="mt-3 flex items-center gap-5 text-[12px] text-gray-400">
           <a href="/terms" className="hover:text-gray-900 transition-colors">Terms</a>
