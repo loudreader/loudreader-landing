@@ -74,8 +74,10 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
           You&apos;ve been invited
         </span>
 
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter leading-[1.02] text-gray-900 mb-4">
-          2 weeks of<br />LoudReader Premium, free
+        <h1 className="text-[1.9rem] sm:text-[2.35rem] font-bold tracking-tight leading-[1.12] text-gray-900 mb-4">
+          2 weeks of<br />
+          LoudReader Premium,<br />
+          <span className="text-loudBlue">free.</span>
         </h1>
         <p className="text-[15px] md:text-base text-gray-400 leading-relaxed max-w-sm mb-8">
           Every voice, any speed, sleep timer and more — free for two weeks.
