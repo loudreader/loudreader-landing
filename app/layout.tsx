@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import Script from "next/script";
+import Analytics from "@/components/analytics/Analytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,9 +15,25 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+const siteUrl = "https://loudreader.io";
+
 export const metadata: Metadata = {
-  title: "LoudReader - Every text is an audiobook.",
-  description: "Natural AI voices read any book aloud with word-by-word highlighting. Unlimited listening, free — no limits, no quotas, no account. Import any EPUB or PDF, or browse 70,000+ free classics. Completely offline and private.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "LoudReader - Every text is an audiobook.",
+    template: "%s · LoudReader",
+  },
+  description: "Natural AI voices read any book aloud with word-by-word highlighting. Unlimited listening, free. No limits, no quotas, no account. Import any EPUB or PDF, or browse 70,000+ free classics. Completely offline and private.",
+  applicationName: "LoudReader",
+  openGraph: {
+    type: "website",
+    siteName: "LoudReader",
+    title: "LoudReader - Every text is an audiobook.",
+    description: "Natural AI voices read any book aloud with word-by-word highlighting. Unlimited listening, free. No limits, no quotas, no account. Completely offline and private.",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -35,6 +51,12 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
 };
 
+// GA4 measurement ID. NEXT_PUBLIC_ vars are inlined at build time. When the
+// var is absent (local dev, preview without env), the <Analytics /> island is
+// not rendered and zero analytics code ships. Consent gating + event contract
+// live in components/analytics/Analytics.tsx and docs/analytics-events.md.
+const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,24 +64,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-P42728TYFY"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-P42728TYFY');
-          `}
-        </Script>
-      </head>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
         {children}
+        {gaId ? <Analytics gaId={gaId} /> : null}
       </body>
     </html>
   );

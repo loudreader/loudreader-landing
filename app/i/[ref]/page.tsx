@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import InviteView from "./InviteView";
 
 export const metadata: Metadata = {
-  title: "Your free month · LoudReader",
-  description: "Redeem a free month of LoudReader Premium — listen to any book in natural AI voices.",
+  title: "2 weeks of Premium, free",
+  description: "Redeem 2 free weeks of LoudReader Premium — listen to any book in natural AI voices.",
   // Personal invite links: keep them out of search.
   robots: { index: false, follow: false },
 };

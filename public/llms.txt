@@ -1,0 +1,29 @@
+# LoudReader
+
+> LoudReader is a text-to-speech reader for iPhone, iPad, and Mac that turns any EPUB, PDF, or Project Gutenberg classic into an audiobook with natural offline voices. It is fully on-device and private, your library never leaves your device. Native Mac and iPhone apps, not a web wrapper.
+
+Key facts:
+
+- Free to download with unlimited listening on every book, cover to cover. No account, no sign-up.
+- Premium includes all 8 AI voices, playback speed (0.3x to 3.0x), sleep timer, soundscapes, and notes: $7.99/month, $49.99/year, or $199.99 one-time lifetime purchase.
+- All text-to-speech runs on-device; the app works 100% offline. The only network requests are Project Gutenberg book downloads.
+- 70,000+ free public-domain books from Project Gutenberg built in, plus 100+ curated classics in themed reading campaigns.
+- Word-by-word highlighting synced to the narration.
+- Currently English only. Requires iOS 18.0+ / iPadOS 18.0+ / macOS 15.0+ (Apple Silicon).
+- App Store: https://apps.apple.com/app/loudreader/id6758149478
+- Made by solo developer Jeremi Podlasek.
+
+## Pages
+
+- [Home](https://loudreader.io/): product overview, screenshots, pricing
+- [FAQ](https://loudreader.io/faq): importing books, voices, offline use, Premium, privacy
+- [Speechify alternative for Mac](https://loudreader.io/speechify-alternative-for-mac): honest LoudReader vs Speechify comparison for Mac users
+- [Blog](https://loudreader.io/blog): practical listening guides written by the developer
+- [Release Notes](https://loudreader.io/releases): version history
+- [Support](https://loudreader.io/support): help and contact
+- [Privacy Policy](https://loudreader.io/privacy): no data collection, on-device processing
+- [Terms of Use](https://loudreader.io/terms)
+
+## Contact
+
+- Email: jeremi@loudreader.io

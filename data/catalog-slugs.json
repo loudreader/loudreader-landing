@@ -1,0 +1,602 @@
+[
+  {
+    "gutenberg_id": 2701,
+    "slug": "moby-dick",
+    "title": "Moby Dick; Or, The Whale",
+    "author": "Herman Melville"
+  },
+  {
+    "gutenberg_id": 1342,
+    "slug": "pride-and-prejudice",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen"
+  },
+  {
+    "gutenberg_id": 1513,
+    "slug": "romeo-and-juliet",
+    "title": "Romeo and Juliet",
+    "author": "William Shakespeare"
+  },
+  {
+    "gutenberg_id": 2641,
+    "slug": "a-room-with-a-view",
+    "title": "A Room with a View",
+    "author": "E. M. Forster"
+  },
+  {
+    "gutenberg_id": 2554,
+    "slug": "crime-and-punishment",
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoyevsky"
+  },
+  {
+    "gutenberg_id": 11,
+    "slug": "alices-adventures-in-wonderland",
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll"
+  },
+  {
+    "gutenberg_id": 1184,
+    "slug": "the-count-of-monte-cristo",
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas"
+  },
+  {
+    "gutenberg_id": 145,
+    "slug": "middlemarch",
+    "title": "Middlemarch",
+    "author": "George Eliot"
+  },
+  {
+    "gutenberg_id": 84,
+    "slug": "frankenstein",
+    "title": "Frankenstein; or, the Modern Prometheus",
+    "author": "Mary Wollstonecraft Shelley"
+  },
+  {
+    "gutenberg_id": 67979,
+    "slug": "the-blue-castle",
+    "title": "The Blue Castle",
+    "author": "L. M. Montgomery"
+  },
+  {
+    "gutenberg_id": 100,
+    "slug": "the-complete-works-of-william-shakespeare",
+    "title": "The Complete Works of William Shakespeare",
+    "author": "William Shakespeare"
+  },
+  {
+    "gutenberg_id": 1661,
+    "slug": "the-adventures-of-sherlock-holmes",
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle"
+  },
+  {
+    "gutenberg_id": 1260,
+    "slug": "jane-eyre",
+    "title": "Jane Eyre: An Autobiography",
+    "author": "Charlotte Brontë"
+  },
+  {
+    "gutenberg_id": 3268,
+    "slug": "the-mysteries-of-udolpho",
+    "title": "The Mysteries of Udolpho",
+    "author": "Ann Radcliffe"
+  },
+  {
+    "gutenberg_id": 345,
+    "slug": "dracula",
+    "title": "Dracula",
+    "author": "Bram Stoker"
+  },
+  {
+    "gutenberg_id": 37106,
+    "slug": "little-women",
+    "title": "Little Women; Or, Meg, Jo, Beth, and Amy",
+    "author": "Louisa May Alcott"
+  },
+  {
+    "gutenberg_id": 2465,
+    "slug": "carmen",
+    "title": "Carmen",
+    "author": "Prosper Mérimée"
+  },
+  {
+    "gutenberg_id": 43,
+    "slug": "the-strange-case-of-dr-jekyll-and-mr-hyde",
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+    "author": "Robert Louis Stevenson"
+  },
+  {
+    "gutenberg_id": 1259,
+    "slug": "twenty-years-after",
+    "title": "Twenty Years After",
+    "author": "Alexandre Dumas"
+  },
+  {
+    "gutenberg_id": 8492,
+    "slug": "the-king-in-yellow",
+    "title": "The King in Yellow",
+    "author": "Robert W. Chambers"
+  },
+  {
+    "gutenberg_id": 2680,
+    "slug": "meditations",
+    "title": "Meditations",
+    "author": "Marcus Aurelius"
+  },
+  {
+    "gutenberg_id": 65238,
+    "slug": "the-secret-of-chimneys",
+    "title": "The Secret of Chimneys",
+    "author": "Agatha Christie"
+  },
+  {
+    "gutenberg_id": 21839,
+    "slug": "sense-and-sensibility",
+    "title": "Sense and Sensibility",
+    "author": "Jane Austen"
+  },
+  {
+    "gutenberg_id": 6133,
+    "slug": "the-extraordinary-adventures-of-arsene-lupin",
+    "title": "The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar",
+    "author": "Maurice Leblanc"
+  },
+  {
+    "gutenberg_id": 3011,
+    "slug": "the-lady-of-the-lake",
+    "title": "The Lady of the Lake",
+    "author": "Walter Scott"
+  },
+  {
+    "gutenberg_id": 3296,
+    "slug": "the-confessions-of-st-augustine",
+    "title": "The Confessions of St. Augustine",
+    "author": "Saint Augustine of Hippo"
+  },
+  {
+    "gutenberg_id": 1695,
+    "slug": "the-man-who-was-thursday",
+    "title": "The Man Who Was Thursday: A Nightmare",
+    "author": "G. K. Chesterton"
+  },
+  {
+    "gutenberg_id": 28054,
+    "slug": "the-brothers-karamazov",
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoyevsky"
+  },
+  {
+    "gutenberg_id": 16389,
+    "slug": "the-enchanted-april",
+    "title": "The Enchanted April",
+    "author": "Elizabeth von Arnim"
+  },
+  {
+    "gutenberg_id": 831,
+    "slug": "four-arthurian-romances",
+    "title": "Four Arthurian Romances",
+    "author": "Chrétien de Troyes"
+  },
+  {
+    "gutenberg_id": 601,
+    "slug": "the-monk",
+    "title": "The Monk: A Romance",
+    "author": "M. G. Lewis"
+  },
+  {
+    "gutenberg_id": 74,
+    "slug": "the-adventures-of-tom-sawyer",
+    "title": "The Adventures of Tom Sawyer",
+    "author": "Mark Twain"
+  },
+  {
+    "gutenberg_id": 72,
+    "slug": "thuvia-maid-of-mars",
+    "title": "Thuvia, Maid of Mars",
+    "author": "Edgar Rice Burroughs"
+  },
+  {
+    "gutenberg_id": 64317,
+    "slug": "the-great-gatsby",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald"
+  },
+  {
+    "gutenberg_id": 394,
+    "slug": "cranford",
+    "title": "Cranford",
+    "author": "Elizabeth Gaskell"
+  },
+  {
+    "gutenberg_id": 6761,
+    "slug": "the-adventures-of-ferdinand-count-fathom",
+    "title": "The Adventures of Ferdinand Count Fathom",
+    "author": "Tobias Smollett"
+  },
+  {
+    "gutenberg_id": 2160,
+    "slug": "the-expedition-of-humphry-clinker",
+    "title": "The Expedition of Humphry Clinker",
+    "author": "Tobias Smollett"
+  },
+  {
+    "gutenberg_id": 59828,
+    "slug": "the-string-of-pearls",
+    "title": "The String of Pearls; Or, The Barber of Fleet Street. A Domestic Romance",
+    "author": "Thomas Peckett Prest and James Malcolm Rymer"
+  },
+  {
+    "gutenberg_id": 20203,
+    "slug": "autobiography-of-benjamin-franklin",
+    "title": "Autobiography of Benjamin Franklin",
+    "author": "Benjamin Franklin"
+  },
+  {
+    "gutenberg_id": 468,
+    "slug": "manon-lescaut",
+    "title": "Manon Lescaut",
+    "author": "Abbé Prévost"
+  },
+  {
+    "gutenberg_id": 6593,
+    "slug": "history-of-tom-jones-a-foundling",
+    "title": "History of Tom Jones, a Foundling",
+    "author": "Henry Fielding"
+  },
+  {
+    "gutenberg_id": 4085,
+    "slug": "the-adventures-of-roderick-random",
+    "title": "The Adventures of Roderick Random",
+    "author": "Tobias Smollett"
+  },
+  {
+    "gutenberg_id": 75201,
+    "slug": "a-farewell-to-arms",
+    "title": "A Farewell to Arms",
+    "author": "Ernest Hemingway"
+  },
+  {
+    "gutenberg_id": 245,
+    "slug": "life-on-the-mississippi",
+    "title": "Life on the Mississippi",
+    "author": "Mark Twain"
+  },
+  {
+    "gutenberg_id": 564,
+    "slug": "the-mystery-of-edwin-drood",
+    "title": "The Mystery of Edwin Drood",
+    "author": "Charles Dickens"
+  },
+  {
+    "gutenberg_id": 244,
+    "slug": "a-study-in-scarlet",
+    "title": "A Study in Scarlet",
+    "author": "Arthur Conan Doyle"
+  },
+  {
+    "gutenberg_id": 2852,
+    "slug": "the-hound-of-the-baskervilles",
+    "title": "The Hound of the Baskervilles",
+    "author": "Arthur Conan Doyle"
+  },
+  {
+    "gutenberg_id": 768,
+    "slug": "wuthering-heights",
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë"
+  },
+  {
+    "gutenberg_id": 23,
+    "slug": "narrative-of-the-life-of-frederick-douglass",
+    "title": "Narrative of the Life of Frederick Douglass, an American Slave",
+    "author": "Frederick Douglass"
+  },
+  {
+    "gutenberg_id": 2527,
+    "slug": "the-sorrows-of-young-werther",
+    "title": "The Sorrows of Young Werther",
+    "author": "Johann Wolfgang von Goethe"
+  },
+  {
+    "gutenberg_id": 1727,
+    "slug": "the-odyssey",
+    "title": "The Odyssey",
+    "author": "Homer"
+  },
+  {
+    "gutenberg_id": 6400,
+    "slug": "the-lives-of-the-twelve-caesars",
+    "title": "The Lives of the Twelve Caesars",
+    "author": "Suetonius"
+  },
+  {
+    "gutenberg_id": 76,
+    "slug": "adventures-of-huckleberry-finn",
+    "title": "Adventures of Huckleberry Finn",
+    "author": "Mark Twain"
+  },
+  {
+    "gutenberg_id": 103,
+    "slug": "around-the-world-in-eighty-days",
+    "title": "Around the World in Eighty Days",
+    "author": "Jules Verne"
+  },
+  {
+    "gutenberg_id": 18857,
+    "slug": "a-journey-to-the-centre-of-the-earth",
+    "title": "A Journey to the Centre of the Earth",
+    "author": "Jules Verne"
+  },
+  {
+    "gutenberg_id": 393,
+    "slug": "the-blue-lagoon",
+    "title": "The Blue Lagoon: A Romance",
+    "author": "H. De Vere Stacpoole"
+  },
+  {
+    "gutenberg_id": 76178,
+    "slug": "i-am-a-woman",
+    "title": "I Am a Woman",
+    "author": "Ann Bannon"
+  },
+  {
+    "gutenberg_id": 209,
+    "slug": "the-turn-of-the-screw",
+    "title": "The Turn of the Screw",
+    "author": "Henry James"
+  },
+  {
+    "gutenberg_id": 589,
+    "slug": "catriona",
+    "title": "Catriona",
+    "author": "Robert Louis Stevenson"
+  },
+  {
+    "gutenberg_id": 17460,
+    "slug": "lorna-doone",
+    "title": "Lorna Doone: A Romance of Exmoor",
+    "author": "R. D. Blackmore"
+  },
+  {
+    "gutenberg_id": 55,
+    "slug": "the-wonderful-wizard-of-oz",
+    "title": "The Wonderful Wizard of Oz",
+    "author": "L. Frank Baum"
+  },
+  {
+    "gutenberg_id": 7452,
+    "slug": "autobiography-of-a-yogi",
+    "title": "Autobiography of a Yogi",
+    "author": "Paramahansa Yogananda"
+  },
+  {
+    "gutenberg_id": 14244,
+    "slug": "the-romance-of-tristan-and-iseult",
+    "title": "The Romance of Tristan and Iseult",
+    "author": "Joseph Bédier"
+  },
+  {
+    "gutenberg_id": 2002,
+    "slug": "sonnets-from-the-portuguese",
+    "title": "Sonnets from the Portuguese",
+    "author": "Elizabeth Barrett Browning"
+  },
+  {
+    "gutenberg_id": 120,
+    "slug": "treasure-island",
+    "title": "Treasure Island",
+    "author": "Robert Louis Stevenson"
+  },
+  {
+    "gutenberg_id": 2097,
+    "slug": "the-sign-of-the-four",
+    "title": "The Sign of the Four",
+    "author": "Arthur Conan Doyle"
+  },
+  {
+    "gutenberg_id": 1514,
+    "slug": "a-midsummer-nights-dream",
+    "title": "A Midsummer Night's Dream",
+    "author": "William Shakespeare"
+  },
+  {
+    "gutenberg_id": 1523,
+    "slug": "as-you-like-it",
+    "title": "As You Like It",
+    "author": "William Shakespeare"
+  },
+  {
+    "gutenberg_id": 3922,
+    "slug": "the-red-lily",
+    "title": "The Red Lily",
+    "author": "Anatole France"
+  },
+  {
+    "gutenberg_id": 70854,
+    "slug": "the-countess-of-pembrokes-arcadia",
+    "title": "The Countess of Pembroke's Arcadia",
+    "author": "Philip Sidney"
+  },
+  {
+    "gutenberg_id": 15399,
+    "slug": "the-interesting-narrative-of-the-life-of-olaudah-equiano",
+    "title": "The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African: Written By Himself",
+    "author": "Olaudah Equiano"
+  },
+  {
+    "gutenberg_id": 1608,
+    "slug": "camille-la-dame-aux-camelias",
+    "title": "Camille (La Dame aux Camélias)",
+    "author": "Alexandre Dumas fils"
+  },
+  {
+    "gutenberg_id": 2825,
+    "slug": "undine",
+    "title": "Undine",
+    "author": "Friedrich de la Motte Fouqué"
+  },
+  {
+    "gutenberg_id": 7524,
+    "slug": "the-germany-and-the-agricola-of-tacitus",
+    "title": "The Germany and the Agricola of Tacitus",
+    "author": "Tacitus"
+  },
+  {
+    "gutenberg_id": 11030,
+    "slug": "incidents-in-the-life-of-a-slave-girl",
+    "title": "Incidents in the Life of a Slave Girl, Written by Herself",
+    "author": "Harriet A. Jacobs"
+  },
+  {
+    "gutenberg_id": 4200,
+    "slug": "the-diary-of-samuel-pepys",
+    "title": "The Diary of Samuel Pepys",
+    "author": "Samuel Pepys"
+  },
+  {
+    "gutenberg_id": 921,
+    "slug": "de-profundis",
+    "title": "De Profundis",
+    "author": "Oscar Wilde"
+  },
+  {
+    "gutenberg_id": 2591,
+    "slug": "grimms-fairy-tales",
+    "title": "Grimms' Fairy Tales",
+    "author": "Jacob Grimm and Wilhelm Grimm"
+  },
+  {
+    "gutenberg_id": 10148,
+    "slug": "the-merry-adventures-of-robin-hood",
+    "title": "The Merry Adventures of Robin Hood",
+    "author": "Howard Pyle"
+  },
+  {
+    "gutenberg_id": 69087,
+    "slug": "the-murder-of-roger-ackroyd",
+    "title": "The Murder of Roger Ackroyd",
+    "author": "Agatha Christie"
+  },
+  {
+    "gutenberg_id": 1212,
+    "slug": "love-and-freindship",
+    "title": "Love and Freindship",
+    "author": "Jane Austen"
+  },
+  {
+    "gutenberg_id": 583,
+    "slug": "the-woman-in-white",
+    "title": "The Woman in White",
+    "author": "Wilkie Collins"
+  },
+  {
+    "gutenberg_id": 863,
+    "slug": "the-mysterious-affair-at-styles",
+    "title": "The Mysterious Affair at Styles",
+    "author": "Agatha Christie"
+  },
+  {
+    "gutenberg_id": 224,
+    "slug": "a-pair-of-blue-eyes",
+    "title": "A Pair of Blue Eyes",
+    "author": "Thomas Hardy"
+  },
+  {
+    "gutenberg_id": 6081,
+    "slug": "biographia-literaria",
+    "title": "Biographia Literaria",
+    "author": "Samuel Taylor Coleridge"
+  },
+  {
+    "gutenberg_id": 17157,
+    "slug": "gullivers-travels",
+    "title": "Gulliver's Travels into Several Remote Regions of the World",
+    "author": "Jonathan Swift"
+  },
+  {
+    "gutenberg_id": 834,
+    "slug": "the-memoirs-of-sherlock-holmes",
+    "title": "The Memoirs of Sherlock Holmes",
+    "author": "Arthur Conan Doyle"
+  },
+  {
+    "gutenberg_id": 108,
+    "slug": "the-return-of-sherlock-holmes",
+    "title": "The Return of Sherlock Holmes",
+    "author": "Arthur Conan Doyle"
+  },
+  {
+    "gutenberg_id": 98,
+    "slug": "a-tale-of-two-cities",
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens"
+  },
+  {
+    "gutenberg_id": 175,
+    "slug": "the-phantom-of-the-opera",
+    "title": "The Phantom of the Opera",
+    "author": "Gaston Leroux"
+  },
+  {
+    "gutenberg_id": 16,
+    "slug": "peter-pan",
+    "title": "Peter Pan: Peter and Wendy",
+    "author": "J. M. Barrie"
+  },
+  {
+    "gutenberg_id": 2162,
+    "slug": "anarchism-and-other-essays",
+    "title": "Anarchism and Other Essays",
+    "author": "Emma Goldman"
+  },
+  {
+    "gutenberg_id": 8954,
+    "slug": "lady-audleys-secret",
+    "title": "Lady Audley's Secret",
+    "author": "M. E. Braddon"
+  },
+  {
+    "gutenberg_id": 2600,
+    "slug": "war-and-peace",
+    "title": "War and Peace",
+    "author": "Leo Tolstoy"
+  },
+  {
+    "gutenberg_id": 10002,
+    "slug": "the-house-on-the-borderland",
+    "title": "The House on the Borderland",
+    "author": "William Hope Hodgson"
+  },
+  {
+    "gutenberg_id": 174,
+    "slug": "the-picture-of-dorian-gray",
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde"
+  },
+  {
+    "gutenberg_id": 3289,
+    "slug": "the-valley-of-fear",
+    "title": "The Valley of Fear",
+    "author": "Arthur Conan Doyle"
+  },
+  {
+    "gutenberg_id": 204,
+    "slug": "the-innocence-of-father-brown",
+    "title": "The Innocence of Father Brown",
+    "author": "G. K. Chesterton"
+  },
+  {
+    "gutenberg_id": 155,
+    "slug": "the-moonstone",
+    "title": "The Moonstone",
+    "author": "Wilkie Collins"
+  },
+  {
+    "gutenberg_id": 7735,
+    "slug": "paul-clifford",
+    "title": "Paul Clifford",
+    "author": "Edward Bulwer-Lytton"
+  }
+]

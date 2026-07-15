@@ -116,6 +116,7 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
         {isIOS ? (
           <a
             href={REDEEM_URL}
+            data-store-source="invite-redeem"
             onClick={() => track("redeem_click")}
             className="w-full inline-flex items-center justify-center px-7 py-4 rounded-[14px] bg-loudBlue text-white text-lg font-semibold shadow-lg shadow-loudBlue/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] mb-3"
           >
@@ -139,6 +140,7 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
           href={APP_STORE_URL}
           target="_blank"
           rel="noopener noreferrer"
+          data-store-source="invite-download"
           onClick={() => track("download_click")}
           className="w-full inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-[14px] bg-black text-white shadow-lg shadow-black/20 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
         >
