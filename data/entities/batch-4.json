@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "adventures-of-huckleberry-finn",
+    "gutenberg_id": 76,
+    "author_name": "Mark Twain",
+    "author_qid": "Q7245",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mark_Twain",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q7245",
+    "work_qid": "Q215410",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q215410"
+  },
+  {
+    "slug": "around-the-world-in-eighty-days",
+    "gutenberg_id": 103,
+    "author_name": "Jules Verne",
+    "author_qid": "Q33977",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jules_Verne",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q33977",
+    "work_qid": "Q1219561",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1219561"
+  },
+  {
+    "slug": "a-journey-to-the-centre-of-the-earth",
+    "gutenberg_id": 18857,
+    "author_name": "Jules Verne",
+    "author_qid": "Q33977",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jules_Verne",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q33977",
+    "work_qid": "Q219457",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Journey_to_the_Centre_of_the_Earth",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q219457"
+  },
+  {
+    "slug": "the-blue-lagoon",
+    "gutenberg_id": 393,
+    "author_name": "H. De Vere Stacpoole",
+    "author_qid": "Q1392055",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Henry_de_Vere_Stacpoole",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1392055",
+    "work_qid": "Q3822730",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Blue_Lagoon_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3822730"
+  },
+  {
+    "slug": "i-am-a-woman",
+    "gutenberg_id": 76178,
+    "author_name": "Ann Bannon",
+    "author_qid": "Q443235",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Ann_Bannon",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q443235",
+    "work_qid": "Q11682786",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/I_Am_a_Woman",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q11682786"
+  },
+  {
+    "slug": "the-turn-of-the-screw",
+    "gutenberg_id": 209,
+    "author_name": "Henry James",
+    "author_qid": "Q170509",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Henry_James",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q170509",
+    "work_qid": "Q625923",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Turn_of_the_Screw",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q625923"
+  },
+  {
+    "slug": "catriona",
+    "gutenberg_id": 589,
+    "author_name": "Robert Louis Stevenson",
+    "author_qid": "Q1512",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1512",
+    "work_qid": "Q2277829",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Catriona_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2277829"
+  },
+  {
+    "slug": "lorna-doone",
+    "gutenberg_id": 17460,
+    "author_name": "R. D. Blackmore",
+    "author_qid": "Q3316148",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/R._D._Blackmore",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q3316148",
+    "work_qid": "Q3400981",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Lorna_Doone",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3400981"
+  },
+  {
+    "slug": "the-wonderful-wizard-of-oz",
+    "gutenberg_id": 55,
+    "author_name": "L. Frank Baum",
+    "author_qid": "Q207544",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/L._Frank_Baum",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q207544",
+    "work_qid": "Q130295",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Wonderful_Wizard_of_Oz",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q130295"
+  },
+  {
+    "slug": "autobiography-of-a-yogi",
+    "gutenberg_id": 7452,
+    "author_name": "Paramahansa Yogananda",
+    "author_qid": "Q312549",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Paramahansa_Yogananda",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q312549",
+    "work_qid": "Q784092",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Autobiography_of_a_Yogi",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q784092"
+  },
+  {
+    "slug": "the-romance-of-tristan-and-iseult",
+    "gutenberg_id": 14244,
+    "author_name": "Joseph Bédier",
+    "author_qid": "Q380842",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Joseph_Bédier",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q380842",
+    "work_qid": "Q3795621",
+    "work_wikipedia": null,
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3795621"
+  },
+  {
+    "slug": "sonnets-from-the-portuguese",
+    "gutenberg_id": 2002,
+    "author_name": "Elizabeth Barrett Browning",
+    "author_qid": "Q228494",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Barrett_Browning",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q228494",
+    "work_qid": "Q945069",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Sonnets_from_the_Portuguese",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q945069"
+  },
+  {
+    "slug": "treasure-island",
+    "gutenberg_id": 120,
+    "author_name": "Robert Louis Stevenson",
+    "author_qid": "Q1512",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1512",
+    "work_qid": "Q185118",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Treasure_Island",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q185118"
+  }
+]

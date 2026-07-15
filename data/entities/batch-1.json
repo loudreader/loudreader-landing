@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "the-mysteries-of-udolpho",
+    "gutenberg_id": 3268,
+    "author_name": "Ann Radcliffe",
+    "author_qid": "Q231944",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Ann_Radcliffe",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q231944",
+    "work_qid": "Q2600909",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Mysteries_of_Udolpho",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2600909"
+  },
+  {
+    "slug": "dracula",
+    "gutenberg_id": 345,
+    "author_name": "Bram Stoker",
+    "author_qid": "Q36184",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Bram_Stoker",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q36184",
+    "work_qid": "Q41542",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Dracula",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q41542"
+  },
+  {
+    "slug": "little-women",
+    "gutenberg_id": 37106,
+    "author_name": "Louisa May Alcott",
+    "author_qid": "Q185696",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Louisa_May_Alcott",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q185696",
+    "work_qid": "Q523076",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Little_Women",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q523076"
+  },
+  {
+    "slug": "carmen",
+    "gutenberg_id": 2465,
+    "author_name": "Prosper Mérimée",
+    "author_qid": "Q160333",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Prosper_M%C3%A9rim%C3%A9e",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q160333",
+    "work_qid": "Q674832",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Carmen_(novella)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q674832"
+  },
+  {
+    "slug": "the-strange-case-of-dr-jekyll-and-mr-hyde",
+    "gutenberg_id": 43,
+    "author_name": "Robert Louis Stevenson",
+    "author_qid": "Q1512",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1512",
+    "work_qid": "Q217352",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q217352"
+  },
+  {
+    "slug": "twenty-years-after",
+    "gutenberg_id": 1259,
+    "author_name": "Alexandre Dumas",
+    "author_qid": "Q38337",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Alexandre_Dumas",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q38337",
+    "work_qid": "Q1639633",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Twenty_Years_After",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1639633"
+  },
+  {
+    "slug": "the-king-in-yellow",
+    "gutenberg_id": 8492,
+    "author_name": "Robert W. Chambers",
+    "author_qid": "Q1349144",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Robert_W._Chambers",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1349144",
+    "work_qid": "Q1195112",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_King_in_Yellow",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1195112"
+  },
+  {
+    "slug": "meditations",
+    "gutenberg_id": 2680,
+    "author_name": "Marcus Aurelius",
+    "author_qid": "Q1430",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Marcus_Aurelius",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1430",
+    "work_qid": "Q1152283",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Meditations",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1152283"
+  },
+  {
+    "slug": "the-secret-of-chimneys",
+    "gutenberg_id": 65238,
+    "author_name": "Agatha Christie",
+    "author_qid": "Q35064",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Agatha_Christie",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35064",
+    "work_qid": "Q174654",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Secret_of_Chimneys",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q174654"
+  },
+  {
+    "slug": "sense-and-sensibility",
+    "gutenberg_id": 21839,
+    "author_name": "Jane Austen",
+    "author_qid": "Q36322",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jane_Austen",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q36322",
+    "work_qid": "Q274744",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Sense_and_Sensibility",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q274744"
+  },
+  {
+    "slug": "the-extraordinary-adventures-of-arsene-lupin",
+    "gutenberg_id": 6133,
+    "author_name": "Maurice Leblanc",
+    "author_qid": "Q314993",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Maurice_Leblanc",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q314993",
+    "work_qid": "Q82442",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Ars%C3%A8ne_Lupin,_Gentleman_Burglar",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q82442"
+  },
+  {
+    "slug": "the-lady-of-the-lake",
+    "gutenberg_id": 3011,
+    "author_name": "Walter Scott",
+    "author_qid": "Q79025",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Walter_Scott",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q79025",
+    "work_qid": "Q2456670",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Lady_of_the_Lake_(poem)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2456670"
+  },
+  {
+    "slug": "the-confessions-of-st-augustine",
+    "gutenberg_id": 3296,
+    "author_name": "Saint Augustine of Hippo",
+    "author_qid": "Q8018",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Augustine_of_Hippo",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q8018",
+    "work_qid": "Q372941",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Confessions_(Augustine)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q372941"
+  }
+]

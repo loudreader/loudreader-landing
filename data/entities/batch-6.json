@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "the-merry-adventures-of-robin-hood",
+    "gutenberg_id": 10148,
+    "author_name": "Howard Pyle",
+    "author_qid": "Q525713",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Howard_Pyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q525713",
+    "work_qid": "Q7751092",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Merry_Adventures_of_Robin_Hood",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7751092"
+  },
+  {
+    "slug": "the-murder-of-roger-ackroyd",
+    "gutenberg_id": 69087,
+    "author_name": "Agatha Christie",
+    "author_qid": "Q35064",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Agatha_Christie",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35064",
+    "work_qid": "Q224078",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q224078"
+  },
+  {
+    "slug": "love-and-freindship",
+    "gutenberg_id": 1212,
+    "author_name": "Jane Austen",
+    "author_qid": "Q36322",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jane_Austen",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q36322",
+    "work_qid": "Q2104534",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Love_and_Freindship",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2104534"
+  },
+  {
+    "slug": "the-woman-in-white",
+    "gutenberg_id": 583,
+    "author_name": "Wilkie Collins",
+    "author_qid": "Q210740",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Wilkie_Collins",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q210740",
+    "work_qid": "Q1212672",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Woman_in_White_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1212672"
+  },
+  {
+    "slug": "the-mysterious-affair-at-styles",
+    "gutenberg_id": 863,
+    "author_name": "Agatha Christie",
+    "author_qid": "Q35064",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Agatha_Christie",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35064",
+    "work_qid": "Q472228",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Mysterious_Affair_at_Styles",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q472228"
+  },
+  {
+    "slug": "a-pair-of-blue-eyes",
+    "gutenberg_id": 224,
+    "author_name": "Thomas Hardy",
+    "author_qid": "Q132805",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Thomas_Hardy",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q132805",
+    "work_qid": "Q2931240",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Pair_of_Blue_Eyes",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2931240"
+  },
+  {
+    "slug": "biographia-literaria",
+    "gutenberg_id": 6081,
+    "author_name": "Samuel Taylor Coleridge",
+    "author_qid": "Q82409",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q82409",
+    "work_qid": "Q803863",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Biographia_Literaria",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q803863"
+  },
+  {
+    "slug": "gullivers-travels",
+    "gutenberg_id": 17157,
+    "author_name": "Jonathan Swift",
+    "author_qid": "Q41166",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jonathan_Swift",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q41166",
+    "work_qid": "Q181488",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Gulliver%27s_Travels",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q181488"
+  },
+  {
+    "slug": "the-memoirs-of-sherlock-holmes",
+    "gutenberg_id": 834,
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q860831",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Memoirs_of_Sherlock_Holmes",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q860831"
+  },
+  {
+    "slug": "the-return-of-sherlock-holmes",
+    "gutenberg_id": 108,
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q725752",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Return_of_Sherlock_Holmes",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q725752"
+  },
+  {
+    "slug": "a-tale-of-two-cities",
+    "gutenberg_id": 98,
+    "author_name": "Charles Dickens",
+    "author_qid": "Q5686",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Charles_Dickens",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q5686",
+    "work_qid": "Q308918",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q308918"
+  },
+  {
+    "slug": "the-phantom-of-the-opera",
+    "gutenberg_id": 175,
+    "author_name": "Gaston Leroux",
+    "author_qid": "Q298827",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Gaston_Leroux",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q298827",
+    "work_qid": "Q272506",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Phantom_of_the_Opera_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q272506"
+  },
+  {
+    "slug": "peter-pan",
+    "gutenberg_id": 16,
+    "author_name": "J. M. Barrie",
+    "author_qid": "Q81796",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/J._M._Barrie",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q81796",
+    "work_qid": "Q3435337",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Peter_Pan_(play_and_novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3435337"
+  }
+]

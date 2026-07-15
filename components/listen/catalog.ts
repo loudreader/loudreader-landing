@@ -1,4 +1,5 @@
 import rawCatalog from "@/data/gutenberg-catalog.json";
+import rawEntities from "@/data/book-entities.json";
 
 /**
  * Data access + derived data for the /listen programmatic catalog
@@ -49,6 +50,33 @@ export function getBook(slug: string): CatalogBook | undefined {
 
 export function gutenbergUrl(book: CatalogBook): string {
   return `https://www.gutenberg.org/ebooks/${book.gutenberg_id}`;
+}
+
+/* ------------------------------------------------------------------ */
+/* Verified entity links (Wikidata / Wikipedia)                        */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Wikidata/Wikipedia links for a book and its author, keyed by slug in
+ * data/book-entities.json (built by scripts/merge-entities.mjs). Every URL/QID
+ * here is VERIFIED against Wikidata; any field that could not be verified is
+ * null. The page layer must treat null as "omit" and NEVER emit a guessed
+ * entity into JSON-LD or a visible link.
+ */
+export type BookEntity = {
+  author_name: string | null;
+  author_qid: string | null;
+  author_wikipedia: string | null;
+  author_wikidata: string | null;
+  work_qid: string | null;
+  work_wikipedia: string | null;
+  work_wikidata: string | null;
+};
+
+const ENTITIES = rawEntities as Record<string, BookEntity>;
+
+export function getBookEntity(slug: string): BookEntity | undefined {
+  return ENTITIES[slug];
 }
 
 /* ------------------------------------------------------------------ */
@@ -269,6 +297,21 @@ export function relatedBooks(book: CatalogBook, count = 5): CatalogBook[] {
     )
     .slice(0, count)
     .map((entry) => entry.candidate);
+}
+
+/**
+ * Other books in the catalog by the exact same author string (excludes the
+ * given book), most-downloaded first. Powers the "More by <author>" internal
+ * linking block. Empty when the author has no other catalog titles.
+ */
+export function booksByAuthor(book: CatalogBook): CatalogBook[] {
+  return CATALOG.filter(
+    (candidate) =>
+      candidate.slug !== book.slug && candidate.author === book.author
+  ).sort(
+    (a, b) =>
+      b.download_count - a.download_count || a.slug.localeCompare(b.slug)
+  );
 }
 
 /* ------------------------------------------------------------------ */

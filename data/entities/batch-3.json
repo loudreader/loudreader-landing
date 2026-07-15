@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "manon-lescaut",
+    "gutenberg_id": 468,
+    "author_name": "Abbé Prévost",
+    "author_qid": "Q311480",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Abb%C3%A9_Pr%C3%A9vost",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q311480",
+    "work_qid": "Q1141032",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Manon_Lescaut",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1141032"
+  },
+  {
+    "slug": "history-of-tom-jones-a-foundling",
+    "gutenberg_id": 6593,
+    "author_name": "Henry Fielding",
+    "author_qid": "Q34190",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Henry_Fielding",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q34190",
+    "work_qid": "Q248096",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_History_of_Tom_Jones,_a_Foundling",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q248096"
+  },
+  {
+    "slug": "the-adventures-of-roderick-random",
+    "gutenberg_id": 4085,
+    "author_name": "Tobias Smollett",
+    "author_qid": "Q356283",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Tobias_Smollett",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q356283",
+    "work_qid": "Q7712626",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Adventures_of_Roderick_Random",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7712626"
+  },
+  {
+    "slug": "a-farewell-to-arms",
+    "gutenberg_id": 75201,
+    "author_name": "Ernest Hemingway",
+    "author_qid": "Q23434",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Ernest_Hemingway",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q23434",
+    "work_qid": "Q235795",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Farewell_to_Arms",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q235795"
+  },
+  {
+    "slug": "life-on-the-mississippi",
+    "gutenberg_id": 245,
+    "author_name": "Mark Twain",
+    "author_qid": "Q7245",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mark_Twain",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q7245",
+    "work_qid": "Q1131648",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Life_on_the_Mississippi",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1131648"
+  },
+  {
+    "slug": "the-mystery-of-edwin-drood",
+    "gutenberg_id": 564,
+    "author_name": "Charles Dickens",
+    "author_qid": "Q5686",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Charles_Dickens",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q5686",
+    "work_qid": "Q1168105",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Mystery_of_Edwin_Drood",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1168105"
+  },
+  {
+    "slug": "a-study-in-scarlet",
+    "gutenberg_id": 244,
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q223131",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Study_in_Scarlet",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q223131"
+  },
+  {
+    "slug": "the-hound-of-the-baskervilles",
+    "gutenberg_id": 2852,
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q45192",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q45192"
+  },
+  {
+    "slug": "wuthering-heights",
+    "gutenberg_id": 768,
+    "author_name": "Emily Brontë",
+    "author_qid": "Q80137",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q80137",
+    "work_qid": "Q202975",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Wuthering_Heights",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q202975"
+  },
+  {
+    "slug": "narrative-of-the-life-of-frederick-douglass",
+    "gutenberg_id": 23,
+    "author_name": "Frederick Douglass",
+    "author_qid": "Q215562",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Frederick_Douglass",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q215562",
+    "work_qid": "Q2904743",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Narrative_of_the_Life_of_Frederick_Douglass",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2904743"
+  },
+  {
+    "slug": "the-sorrows-of-young-werther",
+    "gutenberg_id": 2527,
+    "author_name": "Johann Wolfgang von Goethe",
+    "author_qid": "Q5879",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q5879",
+    "work_qid": "Q151883",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Sorrows_of_Young_Werther",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q151883"
+  },
+  {
+    "slug": "the-odyssey",
+    "gutenberg_id": 1727,
+    "author_name": "Homer",
+    "author_qid": "Q6691",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Homer",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q6691",
+    "work_qid": "Q35160",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Odyssey",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q35160"
+  },
+  {
+    "slug": "the-lives-of-the-twelve-caesars",
+    "gutenberg_id": 6400,
+    "author_name": "Suetonius",
+    "author_qid": "Q10133",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Suetonius",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q10133",
+    "work_qid": "Q1229963",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Twelve_Caesars",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1229963"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "anarchism-and-other-essays",
+    "gutenberg_id": 2162,
+    "author_name": "Emma Goldman",
+    "author_qid": "Q79969",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Emma_Goldman",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q79969",
+    "work_qid": "Q4751627",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Anarchism_and_Other_Essays",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q4751627"
+  },
+  {
+    "slug": "lady-audleys-secret",
+    "gutenberg_id": 8954,
+    "author_name": "M. E. Braddon",
+    "author_qid": "Q437184",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mary_Elizabeth_Braddon",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q437184",
+    "work_qid": "Q2738351",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Lady_Audley%27s_Secret",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2738351"
+  },
+  {
+    "slug": "war-and-peace",
+    "gutenberg_id": 2600,
+    "author_name": "Leo Tolstoy",
+    "author_qid": "Q7243",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Leo_Tolstoy",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q7243",
+    "work_qid": "Q161531",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/War_and_Peace",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q161531"
+  },
+  {
+    "slug": "the-house-on-the-borderland",
+    "gutenberg_id": 10002,
+    "author_name": "William Hope Hodgson",
+    "author_qid": "Q919277",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Hope_Hodgson",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q919277",
+    "work_qid": "Q740473",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_House_on_the_Borderland",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q740473"
+  },
+  {
+    "slug": "the-picture-of-dorian-gray",
+    "gutenberg_id": 174,
+    "author_name": "Oscar Wilde",
+    "author_qid": "Q30875",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Oscar_Wilde",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q30875",
+    "work_qid": "Q82464",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q82464"
+  },
+  {
+    "slug": "the-valley-of-fear",
+    "gutenberg_id": 3289,
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q863438",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Valley_of_Fear",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q863438"
+  },
+  {
+    "slug": "the-innocence-of-father-brown",
+    "gutenberg_id": 204,
+    "author_name": "G. K. Chesterton",
+    "author_qid": "Q183167",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/G._K._Chesterton",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q183167",
+    "work_qid": "Q73837",
+    "work_wikipedia": null,
+    "work_wikidata": "https://www.wikidata.org/wiki/Q73837"
+  },
+  {
+    "slug": "the-moonstone",
+    "gutenberg_id": 155,
+    "author_name": "Wilkie Collins",
+    "author_qid": "Q210740",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Wilkie_Collins",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q210740",
+    "work_qid": "Q2362563",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Moonstone",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2362563"
+  },
+  {
+    "slug": "paul-clifford",
+    "gutenberg_id": 7735,
+    "author_name": "Edward Bulwer-Lytton",
+    "author_qid": "Q318462",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Edward_Bulwer-Lytton",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q318462",
+    "work_qid": "Q7149872",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Paul_Clifford",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7149872"
+  }
+]

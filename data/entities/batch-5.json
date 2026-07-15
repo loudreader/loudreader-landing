@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "the-sign-of-the-four",
+    "gutenberg_id": 2097,
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q500688",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Sign_of_the_Four",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q500688"
+  },
+  {
+    "slug": "a-midsummer-nights-dream",
+    "gutenberg_id": 1514,
+    "author_name": "William Shakespeare",
+    "author_qid": "Q692",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Shakespeare",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q692",
+    "work_qid": "Q104871",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Midsummer_Night%27s_Dream",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q104871"
+  },
+  {
+    "slug": "as-you-like-it",
+    "gutenberg_id": 1523,
+    "author_name": "William Shakespeare",
+    "author_qid": "Q692",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Shakespeare",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q692",
+    "work_qid": "Q237572",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/As_You_Like_It",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q237572"
+  },
+  {
+    "slug": "the-red-lily",
+    "gutenberg_id": 3922,
+    "author_name": "Anatole France",
+    "author_qid": "Q42443",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Anatole_France",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q42443",
+    "work_qid": "Q3224130",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Red_Lily_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3224130"
+  },
+  {
+    "slug": "the-countess-of-pembrokes-arcadia",
+    "gutenberg_id": 70854,
+    "author_name": "Philip Sidney",
+    "author_qid": "Q315509",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Philip_Sidney",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q315509",
+    "work_qid": "Q4069405",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Countess_of_Pembroke%27s_Arcadia",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q4069405"
+  },
+  {
+    "slug": "the-interesting-narrative-of-the-life-of-olaudah-equiano",
+    "gutenberg_id": 15399,
+    "author_name": "Olaudah Equiano",
+    "author_qid": "Q379887",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Olaudah_Equiano",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q379887",
+    "work_qid": "Q7742270",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Interesting_Narrative_of_the_Life_of_Olaudah_Equiano",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7742270"
+  },
+  {
+    "slug": "camille-la-dame-aux-camelias",
+    "gutenberg_id": 1608,
+    "author_name": "Alexandre Dumas fils",
+    "author_qid": "Q169150",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Alexandre_Dumas_fils",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q169150",
+    "work_qid": "Q898795",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Lady_of_the_Camellias",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q898795"
+  },
+  {
+    "slug": "undine",
+    "gutenberg_id": 2825,
+    "author_name": "Friedrich de la Motte Fouqué",
+    "author_qid": "Q77371",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Friedrich_de_la_Motte_Fouqu%C3%A9",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q77371",
+    "work_qid": "Q664813",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Undine_(novella)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q664813"
+  },
+  {
+    "slug": "the-germany-and-the-agricola-of-tacitus",
+    "gutenberg_id": 7524,
+    "author_name": "Tacitus",
+    "author_qid": "Q2161",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Tacitus",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q2161",
+    "work_qid": null,
+    "work_wikipedia": null,
+    "work_wikidata": null
+  },
+  {
+    "slug": "incidents-in-the-life-of-a-slave-girl",
+    "gutenberg_id": 11030,
+    "author_name": "Harriet A. Jacobs",
+    "author_qid": "Q944063",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Harriet_Jacobs",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q944063",
+    "work_qid": "Q6014663",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Incidents_in_the_Life_of_a_Slave_Girl",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q6014663"
+  },
+  {
+    "slug": "the-diary-of-samuel-pepys",
+    "gutenberg_id": 4200,
+    "author_name": "Samuel Pepys",
+    "author_qid": "Q106143",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Samuel_Pepys",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q106143",
+    "work_qid": "Q19081630",
+    "work_wikipedia": null,
+    "work_wikidata": "https://www.wikidata.org/wiki/Q19081630"
+  },
+  {
+    "slug": "de-profundis",
+    "gutenberg_id": 921,
+    "author_name": "Oscar Wilde",
+    "author_qid": "Q30875",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Oscar_Wilde",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q30875",
+    "work_qid": "Q1249459",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/De_Profundis_(letter)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1249459"
+  },
+  {
+    "slug": "grimms-fairy-tales",
+    "gutenberg_id": 2591,
+    "author_name": "Jacob Grimm and Wilhelm Grimm",
+    "author_qid": "Q6701",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jacob_Grimm",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q6701",
+    "work_qid": "Q163027",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Grimms%27_Fairy_Tales",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q163027"
+  }
+]

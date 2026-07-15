@@ -1,0 +1,902 @@
+{
+  "a-farewell-to-arms": {
+    "author_name": "Ernest Hemingway",
+    "author_qid": "Q23434",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Ernest_Hemingway",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q23434",
+    "work_qid": "Q235795",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Farewell_to_Arms",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q235795"
+  },
+  "a-journey-to-the-centre-of-the-earth": {
+    "author_name": "Jules Verne",
+    "author_qid": "Q33977",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jules_Verne",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q33977",
+    "work_qid": "Q219457",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Journey_to_the_Centre_of_the_Earth",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q219457"
+  },
+  "a-midsummer-nights-dream": {
+    "author_name": "William Shakespeare",
+    "author_qid": "Q692",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Shakespeare",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q692",
+    "work_qid": "Q104871",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Midsummer_Night%27s_Dream",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q104871"
+  },
+  "a-pair-of-blue-eyes": {
+    "author_name": "Thomas Hardy",
+    "author_qid": "Q132805",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Thomas_Hardy",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q132805",
+    "work_qid": "Q2931240",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Pair_of_Blue_Eyes",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2931240"
+  },
+  "a-room-with-a-view": {
+    "author_name": "E. M. Forster",
+    "author_qid": "Q189119",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/E._M._Forster",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q189119",
+    "work_qid": "Q120288",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Room_with_a_View",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q120288"
+  },
+  "a-study-in-scarlet": {
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q223131",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Study_in_Scarlet",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q223131"
+  },
+  "a-tale-of-two-cities": {
+    "author_name": "Charles Dickens",
+    "author_qid": "Q5686",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Charles_Dickens",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q5686",
+    "work_qid": "Q308918",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q308918"
+  },
+  "adventures-of-huckleberry-finn": {
+    "author_name": "Mark Twain",
+    "author_qid": "Q7245",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mark_Twain",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q7245",
+    "work_qid": "Q215410",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q215410"
+  },
+  "alices-adventures-in-wonderland": {
+    "author_name": "Lewis Carroll",
+    "author_qid": "Q38082",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Lewis_Carroll",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q38082",
+    "work_qid": "Q92640",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q92640"
+  },
+  "anarchism-and-other-essays": {
+    "author_name": "Emma Goldman",
+    "author_qid": "Q79969",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Emma_Goldman",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q79969",
+    "work_qid": "Q4751627",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Anarchism_and_Other_Essays",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q4751627"
+  },
+  "around-the-world-in-eighty-days": {
+    "author_name": "Jules Verne",
+    "author_qid": "Q33977",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jules_Verne",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q33977",
+    "work_qid": "Q1219561",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1219561"
+  },
+  "as-you-like-it": {
+    "author_name": "William Shakespeare",
+    "author_qid": "Q692",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Shakespeare",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q692",
+    "work_qid": "Q237572",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/As_You_Like_It",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q237572"
+  },
+  "autobiography-of-a-yogi": {
+    "author_name": "Paramahansa Yogananda",
+    "author_qid": "Q312549",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Paramahansa_Yogananda",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q312549",
+    "work_qid": "Q784092",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Autobiography_of_a_Yogi",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q784092"
+  },
+  "autobiography-of-benjamin-franklin": {
+    "author_name": "Benjamin Franklin",
+    "author_qid": "Q34969",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Benjamin_Franklin",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q34969",
+    "work_qid": "Q7714957",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Autobiography_of_Benjamin_Franklin",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7714957"
+  },
+  "biographia-literaria": {
+    "author_name": "Samuel Taylor Coleridge",
+    "author_qid": "Q82409",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Samuel_Taylor_Coleridge",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q82409",
+    "work_qid": "Q803863",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Biographia_Literaria",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q803863"
+  },
+  "camille-la-dame-aux-camelias": {
+    "author_name": "Alexandre Dumas fils",
+    "author_qid": "Q169150",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Alexandre_Dumas_fils",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q169150",
+    "work_qid": "Q898795",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Lady_of_the_Camellias",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q898795"
+  },
+  "carmen": {
+    "author_name": "Prosper Mérimée",
+    "author_qid": "Q160333",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Prosper_M%C3%A9rim%C3%A9e",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q160333",
+    "work_qid": "Q674832",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Carmen_(novella)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q674832"
+  },
+  "catriona": {
+    "author_name": "Robert Louis Stevenson",
+    "author_qid": "Q1512",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1512",
+    "work_qid": "Q2277829",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Catriona_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2277829"
+  },
+  "cranford": {
+    "author_name": "Elizabeth Gaskell",
+    "author_qid": "Q229226",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Gaskell",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q229226",
+    "work_qid": "Q265100",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Cranford_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q265100"
+  },
+  "crime-and-punishment": {
+    "author_name": "Fyodor Dostoyevsky",
+    "author_qid": "Q991",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Fyodor_Dostoevsky",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q991",
+    "work_qid": "Q165318",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Crime_and_Punishment",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q165318"
+  },
+  "de-profundis": {
+    "author_name": "Oscar Wilde",
+    "author_qid": "Q30875",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Oscar_Wilde",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q30875",
+    "work_qid": "Q1249459",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/De_Profundis_(letter)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1249459"
+  },
+  "dracula": {
+    "author_name": "Bram Stoker",
+    "author_qid": "Q36184",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Bram_Stoker",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q36184",
+    "work_qid": "Q41542",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Dracula",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q41542"
+  },
+  "four-arthurian-romances": {
+    "author_name": "Chrétien de Troyes",
+    "author_qid": "Q4302",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Chr%C3%A9tien_de_Troyes",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q4302",
+    "work_qid": null,
+    "work_wikipedia": null,
+    "work_wikidata": null
+  },
+  "frankenstein": {
+    "author_name": "Mary Wollstonecraft Shelley",
+    "author_qid": "Q47152",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mary_Shelley",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q47152",
+    "work_qid": "Q150827",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Frankenstein",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q150827"
+  },
+  "grimms-fairy-tales": {
+    "author_name": "Jacob Grimm and Wilhelm Grimm",
+    "author_qid": "Q6701",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jacob_Grimm",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q6701",
+    "work_qid": "Q163027",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Grimms%27_Fairy_Tales",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q163027"
+  },
+  "gullivers-travels": {
+    "author_name": "Jonathan Swift",
+    "author_qid": "Q41166",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jonathan_Swift",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q41166",
+    "work_qid": "Q181488",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Gulliver%27s_Travels",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q181488"
+  },
+  "history-of-tom-jones-a-foundling": {
+    "author_name": "Henry Fielding",
+    "author_qid": "Q34190",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Henry_Fielding",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q34190",
+    "work_qid": "Q248096",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_History_of_Tom_Jones,_a_Foundling",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q248096"
+  },
+  "i-am-a-woman": {
+    "author_name": "Ann Bannon",
+    "author_qid": "Q443235",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Ann_Bannon",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q443235",
+    "work_qid": "Q11682786",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/I_Am_a_Woman",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q11682786"
+  },
+  "incidents-in-the-life-of-a-slave-girl": {
+    "author_name": "Harriet A. Jacobs",
+    "author_qid": "Q944063",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Harriet_Jacobs",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q944063",
+    "work_qid": "Q6014663",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Incidents_in_the_Life_of_a_Slave_Girl",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q6014663"
+  },
+  "jane-eyre": {
+    "author_name": "Charlotte Brontë",
+    "author_qid": "Q127332",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q127332",
+    "work_qid": "Q182961",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Jane_Eyre",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q182961"
+  },
+  "lady-audleys-secret": {
+    "author_name": "M. E. Braddon",
+    "author_qid": "Q437184",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mary_Elizabeth_Braddon",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q437184",
+    "work_qid": "Q2738351",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Lady_Audley%27s_Secret",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2738351"
+  },
+  "life-on-the-mississippi": {
+    "author_name": "Mark Twain",
+    "author_qid": "Q7245",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mark_Twain",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q7245",
+    "work_qid": "Q1131648",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Life_on_the_Mississippi",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1131648"
+  },
+  "little-women": {
+    "author_name": "Louisa May Alcott",
+    "author_qid": "Q185696",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Louisa_May_Alcott",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q185696",
+    "work_qid": "Q523076",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Little_Women",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q523076"
+  },
+  "lorna-doone": {
+    "author_name": "R. D. Blackmore",
+    "author_qid": "Q3316148",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/R._D._Blackmore",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q3316148",
+    "work_qid": "Q3400981",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Lorna_Doone",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3400981"
+  },
+  "love-and-freindship": {
+    "author_name": "Jane Austen",
+    "author_qid": "Q36322",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jane_Austen",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q36322",
+    "work_qid": "Q2104534",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Love_and_Freindship",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2104534"
+  },
+  "manon-lescaut": {
+    "author_name": "Abbé Prévost",
+    "author_qid": "Q311480",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Abb%C3%A9_Pr%C3%A9vost",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q311480",
+    "work_qid": "Q1141032",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Manon_Lescaut",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1141032"
+  },
+  "meditations": {
+    "author_name": "Marcus Aurelius",
+    "author_qid": "Q1430",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Marcus_Aurelius",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1430",
+    "work_qid": "Q1152283",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Meditations",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1152283"
+  },
+  "middlemarch": {
+    "author_name": "George Eliot",
+    "author_qid": "Q131333",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/George_Eliot",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q131333",
+    "work_qid": "Q313129",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Middlemarch",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q313129"
+  },
+  "moby-dick": {
+    "author_name": "Herman Melville",
+    "author_qid": "Q4985",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Herman_Melville",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q4985",
+    "work_qid": "Q174596",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Moby-Dick",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q174596"
+  },
+  "narrative-of-the-life-of-frederick-douglass": {
+    "author_name": "Frederick Douglass",
+    "author_qid": "Q215562",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Frederick_Douglass",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q215562",
+    "work_qid": "Q2904743",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Narrative_of_the_Life_of_Frederick_Douglass",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2904743"
+  },
+  "paul-clifford": {
+    "author_name": "Edward Bulwer-Lytton",
+    "author_qid": "Q318462",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Edward_Bulwer-Lytton",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q318462",
+    "work_qid": "Q7149872",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Paul_Clifford",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7149872"
+  },
+  "peter-pan": {
+    "author_name": "J. M. Barrie",
+    "author_qid": "Q81796",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/J._M._Barrie",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q81796",
+    "work_qid": "Q3435337",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Peter_Pan_(play_and_novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3435337"
+  },
+  "pride-and-prejudice": {
+    "author_name": "Jane Austen",
+    "author_qid": "Q36322",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jane_Austen",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q36322",
+    "work_qid": "Q170583",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q170583"
+  },
+  "romeo-and-juliet": {
+    "author_name": "William Shakespeare",
+    "author_qid": "Q692",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Shakespeare",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q692",
+    "work_qid": "Q83186",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Romeo_and_Juliet",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q83186"
+  },
+  "sense-and-sensibility": {
+    "author_name": "Jane Austen",
+    "author_qid": "Q36322",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jane_Austen",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q36322",
+    "work_qid": "Q274744",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Sense_and_Sensibility",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q274744"
+  },
+  "sonnets-from-the-portuguese": {
+    "author_name": "Elizabeth Barrett Browning",
+    "author_qid": "Q228494",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Barrett_Browning",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q228494",
+    "work_qid": "Q945069",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Sonnets_from_the_Portuguese",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q945069"
+  },
+  "the-adventures-of-ferdinand-count-fathom": {
+    "author_name": "Tobias Smollett",
+    "author_qid": "Q356283",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Tobias_Smollett",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q356283",
+    "work_qid": "Q16385022",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Adventures_of_Ferdinand,_Count_Fathom",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q16385022"
+  },
+  "the-adventures-of-roderick-random": {
+    "author_name": "Tobias Smollett",
+    "author_qid": "Q356283",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Tobias_Smollett",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q356283",
+    "work_qid": "Q7712626",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Adventures_of_Roderick_Random",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7712626"
+  },
+  "the-adventures-of-sherlock-holmes": {
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q392147",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Adventures_of_Sherlock_Holmes",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q392147"
+  },
+  "the-adventures-of-tom-sawyer": {
+    "author_name": "Mark Twain",
+    "author_qid": "Q7245",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mark_Twain",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q7245",
+    "work_qid": "Q326914",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Adventures_of_Tom_Sawyer",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q326914"
+  },
+  "the-blue-castle": {
+    "author_name": "L. M. Montgomery",
+    "author_qid": "Q273034",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Lucy_Maud_Montgomery",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q273034",
+    "work_qid": "Q7718738",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Blue_Castle",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7718738"
+  },
+  "the-blue-lagoon": {
+    "author_name": "H. De Vere Stacpoole",
+    "author_qid": "Q1392055",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Henry_de_Vere_Stacpoole",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1392055",
+    "work_qid": "Q3822730",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Blue_Lagoon_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3822730"
+  },
+  "the-brothers-karamazov": {
+    "author_name": "Fyodor Dostoyevsky",
+    "author_qid": "Q991",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Fyodor_Dostoevsky",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q991",
+    "work_qid": "Q183157",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Brothers_Karamazov",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q183157"
+  },
+  "the-complete-works-of-william-shakespeare": {
+    "author_name": "William Shakespeare",
+    "author_qid": "Q692",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Shakespeare",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q692",
+    "work_qid": null,
+    "work_wikipedia": null,
+    "work_wikidata": null
+  },
+  "the-confessions-of-st-augustine": {
+    "author_name": "Saint Augustine of Hippo",
+    "author_qid": "Q8018",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Augustine_of_Hippo",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q8018",
+    "work_qid": "Q372941",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Confessions_(Augustine)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q372941"
+  },
+  "the-count-of-monte-cristo": {
+    "author_name": "Alexandre Dumas",
+    "author_qid": "Q38337",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Alexandre_Dumas",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q38337",
+    "work_qid": "Q191838",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q191838"
+  },
+  "the-countess-of-pembrokes-arcadia": {
+    "author_name": "Philip Sidney",
+    "author_qid": "Q315509",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Philip_Sidney",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q315509",
+    "work_qid": "Q4069405",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Countess_of_Pembroke%27s_Arcadia",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q4069405"
+  },
+  "the-diary-of-samuel-pepys": {
+    "author_name": "Samuel Pepys",
+    "author_qid": "Q106143",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Samuel_Pepys",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q106143",
+    "work_qid": "Q19081630",
+    "work_wikipedia": null,
+    "work_wikidata": "https://www.wikidata.org/wiki/Q19081630"
+  },
+  "the-enchanted-april": {
+    "author_name": "Elizabeth von Arnim",
+    "author_qid": "Q76189",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_von_Arnim",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q76189",
+    "work_qid": "Q18187988",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Enchanted_April",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q18187988"
+  },
+  "the-expedition-of-humphry-clinker": {
+    "author_name": "Tobias Smollett",
+    "author_qid": "Q356283",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Tobias_Smollett",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q356283",
+    "work_qid": "Q3203413",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Expedition_of_Humphry_Clinker",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3203413"
+  },
+  "the-extraordinary-adventures-of-arsene-lupin": {
+    "author_name": "Maurice Leblanc",
+    "author_qid": "Q314993",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Maurice_Leblanc",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q314993",
+    "work_qid": "Q82442",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Ars%C3%A8ne_Lupin,_Gentleman_Burglar",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q82442"
+  },
+  "the-germany-and-the-agricola-of-tacitus": {
+    "author_name": "Tacitus",
+    "author_qid": "Q2161",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Tacitus",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q2161",
+    "work_qid": null,
+    "work_wikipedia": null,
+    "work_wikidata": null
+  },
+  "the-great-gatsby": {
+    "author_name": "F. Scott Fitzgerald",
+    "author_qid": "Q93354",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/F._Scott_Fitzgerald",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q93354",
+    "work_qid": "Q214371",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Great_Gatsby",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q214371"
+  },
+  "the-hound-of-the-baskervilles": {
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q45192",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q45192"
+  },
+  "the-house-on-the-borderland": {
+    "author_name": "William Hope Hodgson",
+    "author_qid": "Q919277",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Hope_Hodgson",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q919277",
+    "work_qid": "Q740473",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_House_on_the_Borderland",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q740473"
+  },
+  "the-innocence-of-father-brown": {
+    "author_name": "G. K. Chesterton",
+    "author_qid": "Q183167",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/G._K._Chesterton",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q183167",
+    "work_qid": "Q73837",
+    "work_wikipedia": null,
+    "work_wikidata": "https://www.wikidata.org/wiki/Q73837"
+  },
+  "the-interesting-narrative-of-the-life-of-olaudah-equiano": {
+    "author_name": "Olaudah Equiano",
+    "author_qid": "Q379887",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Olaudah_Equiano",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q379887",
+    "work_qid": "Q7742270",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Interesting_Narrative_of_the_Life_of_Olaudah_Equiano",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7742270"
+  },
+  "the-king-in-yellow": {
+    "author_name": "Robert W. Chambers",
+    "author_qid": "Q1349144",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Robert_W._Chambers",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1349144",
+    "work_qid": "Q1195112",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_King_in_Yellow",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1195112"
+  },
+  "the-lady-of-the-lake": {
+    "author_name": "Walter Scott",
+    "author_qid": "Q79025",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Walter_Scott",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q79025",
+    "work_qid": "Q2456670",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Lady_of_the_Lake_(poem)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2456670"
+  },
+  "the-lives-of-the-twelve-caesars": {
+    "author_name": "Suetonius",
+    "author_qid": "Q10133",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Suetonius",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q10133",
+    "work_qid": "Q1229963",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Twelve_Caesars",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1229963"
+  },
+  "the-man-who-was-thursday": {
+    "author_name": "G. K. Chesterton",
+    "author_qid": "Q183167",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/G._K._Chesterton",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q183167",
+    "work_qid": "Q959816",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Man_Who_Was_Thursday",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q959816"
+  },
+  "the-memoirs-of-sherlock-holmes": {
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q860831",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Memoirs_of_Sherlock_Holmes",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q860831"
+  },
+  "the-merry-adventures-of-robin-hood": {
+    "author_name": "Howard Pyle",
+    "author_qid": "Q525713",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Howard_Pyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q525713",
+    "work_qid": "Q7751092",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Merry_Adventures_of_Robin_Hood",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7751092"
+  },
+  "the-monk": {
+    "author_name": "M. G. Lewis",
+    "author_qid": "Q121060",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Matthew_Gregory_Lewis",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q121060",
+    "work_qid": "Q2659564",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Monk",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2659564"
+  },
+  "the-moonstone": {
+    "author_name": "Wilkie Collins",
+    "author_qid": "Q210740",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Wilkie_Collins",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q210740",
+    "work_qid": "Q2362563",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Moonstone",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2362563"
+  },
+  "the-murder-of-roger-ackroyd": {
+    "author_name": "Agatha Christie",
+    "author_qid": "Q35064",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Agatha_Christie",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35064",
+    "work_qid": "Q224078",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q224078"
+  },
+  "the-mysteries-of-udolpho": {
+    "author_name": "Ann Radcliffe",
+    "author_qid": "Q231944",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Ann_Radcliffe",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q231944",
+    "work_qid": "Q2600909",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Mysteries_of_Udolpho",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2600909"
+  },
+  "the-mysterious-affair-at-styles": {
+    "author_name": "Agatha Christie",
+    "author_qid": "Q35064",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Agatha_Christie",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35064",
+    "work_qid": "Q472228",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Mysterious_Affair_at_Styles",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q472228"
+  },
+  "the-mystery-of-edwin-drood": {
+    "author_name": "Charles Dickens",
+    "author_qid": "Q5686",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Charles_Dickens",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q5686",
+    "work_qid": "Q1168105",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Mystery_of_Edwin_Drood",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1168105"
+  },
+  "the-odyssey": {
+    "author_name": "Homer",
+    "author_qid": "Q6691",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Homer",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q6691",
+    "work_qid": "Q35160",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Odyssey",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q35160"
+  },
+  "the-phantom-of-the-opera": {
+    "author_name": "Gaston Leroux",
+    "author_qid": "Q298827",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Gaston_Leroux",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q298827",
+    "work_qid": "Q272506",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Phantom_of_the_Opera_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q272506"
+  },
+  "the-picture-of-dorian-gray": {
+    "author_name": "Oscar Wilde",
+    "author_qid": "Q30875",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Oscar_Wilde",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q30875",
+    "work_qid": "Q82464",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q82464"
+  },
+  "the-red-lily": {
+    "author_name": "Anatole France",
+    "author_qid": "Q42443",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Anatole_France",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q42443",
+    "work_qid": "Q3224130",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Red_Lily_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3224130"
+  },
+  "the-return-of-sherlock-holmes": {
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q725752",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Return_of_Sherlock_Holmes",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q725752"
+  },
+  "the-romance-of-tristan-and-iseult": {
+    "author_name": "Joseph Bédier",
+    "author_qid": "Q380842",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Joseph_Bédier",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q380842",
+    "work_qid": "Q3795621",
+    "work_wikipedia": null,
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3795621"
+  },
+  "the-secret-of-chimneys": {
+    "author_name": "Agatha Christie",
+    "author_qid": "Q35064",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Agatha_Christie",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35064",
+    "work_qid": "Q174654",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Secret_of_Chimneys",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q174654"
+  },
+  "the-sign-of-the-four": {
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q500688",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Sign_of_the_Four",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q500688"
+  },
+  "the-sorrows-of-young-werther": {
+    "author_name": "Johann Wolfgang von Goethe",
+    "author_qid": "Q5879",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q5879",
+    "work_qid": "Q151883",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Sorrows_of_Young_Werther",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q151883"
+  },
+  "the-strange-case-of-dr-jekyll-and-mr-hyde": {
+    "author_name": "Robert Louis Stevenson",
+    "author_qid": "Q1512",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1512",
+    "work_qid": "Q217352",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q217352"
+  },
+  "the-string-of-pearls": {
+    "author_name": "Thomas Peckett Prest and James Malcolm Rymer",
+    "author_qid": null,
+    "author_wikipedia": null,
+    "author_wikidata": null,
+    "work_qid": "Q7767037",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_String_of_Pearls",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7767037"
+  },
+  "the-turn-of-the-screw": {
+    "author_name": "Henry James",
+    "author_qid": "Q170509",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Henry_James",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q170509",
+    "work_qid": "Q625923",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Turn_of_the_Screw",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q625923"
+  },
+  "the-valley-of-fear": {
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q863438",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Valley_of_Fear",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q863438"
+  },
+  "the-woman-in-white": {
+    "author_name": "Wilkie Collins",
+    "author_qid": "Q210740",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Wilkie_Collins",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q210740",
+    "work_qid": "Q1212672",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Woman_in_White_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1212672"
+  },
+  "the-wonderful-wizard-of-oz": {
+    "author_name": "L. Frank Baum",
+    "author_qid": "Q207544",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/L._Frank_Baum",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q207544",
+    "work_qid": "Q130295",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Wonderful_Wizard_of_Oz",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q130295"
+  },
+  "thuvia-maid-of-mars": {
+    "author_name": "Edgar Rice Burroughs",
+    "author_qid": "Q148234",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Edgar_Rice_Burroughs",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q148234",
+    "work_qid": "Q1927788",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Thuvia,_Maid_of_Mars",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1927788"
+  },
+  "treasure-island": {
+    "author_name": "Robert Louis Stevenson",
+    "author_qid": "Q1512",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q1512",
+    "work_qid": "Q185118",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Treasure_Island",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q185118"
+  },
+  "twenty-years-after": {
+    "author_name": "Alexandre Dumas",
+    "author_qid": "Q38337",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Alexandre_Dumas",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q38337",
+    "work_qid": "Q1639633",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Twenty_Years_After",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1639633"
+  },
+  "undine": {
+    "author_name": "Friedrich de la Motte Fouqué",
+    "author_qid": "Q77371",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Friedrich_de_la_Motte_Fouqu%C3%A9",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q77371",
+    "work_qid": "Q664813",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Undine_(novella)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q664813"
+  },
+  "war-and-peace": {
+    "author_name": "Leo Tolstoy",
+    "author_qid": "Q7243",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Leo_Tolstoy",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q7243",
+    "work_qid": "Q161531",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/War_and_Peace",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q161531"
+  },
+  "wuthering-heights": {
+    "author_name": "Emily Brontë",
+    "author_qid": "Q80137",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q80137",
+    "work_qid": "Q202975",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Wuthering_Heights",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q202975"
+  }
+}

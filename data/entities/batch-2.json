@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "the-man-who-was-thursday",
+    "gutenberg_id": 1695,
+    "author_name": "G. K. Chesterton",
+    "author_qid": "Q183167",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/G._K._Chesterton",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q183167",
+    "work_qid": "Q959816",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Man_Who_Was_Thursday",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q959816"
+  },
+  {
+    "slug": "the-brothers-karamazov",
+    "gutenberg_id": 28054,
+    "author_name": "Fyodor Dostoyevsky",
+    "author_qid": "Q991",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Fyodor_Dostoevsky",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q991",
+    "work_qid": "Q183157",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Brothers_Karamazov",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q183157"
+  },
+  {
+    "slug": "the-enchanted-april",
+    "gutenberg_id": 16389,
+    "author_name": "Elizabeth von Arnim",
+    "author_qid": "Q76189",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_von_Arnim",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q76189",
+    "work_qid": "Q18187988",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Enchanted_April",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q18187988"
+  },
+  {
+    "slug": "four-arthurian-romances",
+    "gutenberg_id": 831,
+    "author_name": "Chrétien de Troyes",
+    "author_qid": "Q4302",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Chr%C3%A9tien_de_Troyes",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q4302",
+    "work_qid": null,
+    "work_wikipedia": null,
+    "work_wikidata": null
+  },
+  {
+    "slug": "the-monk",
+    "gutenberg_id": 601,
+    "author_name": "M. G. Lewis",
+    "author_qid": "Q121060",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Matthew_Gregory_Lewis",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q121060",
+    "work_qid": "Q2659564",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Monk",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q2659564"
+  },
+  {
+    "slug": "the-adventures-of-tom-sawyer",
+    "gutenberg_id": 74,
+    "author_name": "Mark Twain",
+    "author_qid": "Q7245",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mark_Twain",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q7245",
+    "work_qid": "Q326914",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Adventures_of_Tom_Sawyer",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q326914"
+  },
+  {
+    "slug": "thuvia-maid-of-mars",
+    "gutenberg_id": 72,
+    "author_name": "Edgar Rice Burroughs",
+    "author_qid": "Q148234",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Edgar_Rice_Burroughs",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q148234",
+    "work_qid": "Q1927788",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Thuvia,_Maid_of_Mars",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q1927788"
+  },
+  {
+    "slug": "the-great-gatsby",
+    "gutenberg_id": 64317,
+    "author_name": "F. Scott Fitzgerald",
+    "author_qid": "Q93354",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/F._Scott_Fitzgerald",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q93354",
+    "work_qid": "Q214371",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Great_Gatsby",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q214371"
+  },
+  {
+    "slug": "cranford",
+    "gutenberg_id": 394,
+    "author_name": "Elizabeth Gaskell",
+    "author_qid": "Q229226",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Gaskell",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q229226",
+    "work_qid": "Q265100",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Cranford_(novel)",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q265100"
+  },
+  {
+    "slug": "the-adventures-of-ferdinand-count-fathom",
+    "gutenberg_id": 6761,
+    "author_name": "Tobias Smollett",
+    "author_qid": "Q356283",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Tobias_Smollett",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q356283",
+    "work_qid": "Q16385022",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Adventures_of_Ferdinand,_Count_Fathom",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q16385022"
+  },
+  {
+    "slug": "the-expedition-of-humphry-clinker",
+    "gutenberg_id": 2160,
+    "author_name": "Tobias Smollett",
+    "author_qid": "Q356283",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Tobias_Smollett",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q356283",
+    "work_qid": "Q3203413",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Expedition_of_Humphry_Clinker",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q3203413"
+  },
+  {
+    "slug": "the-string-of-pearls",
+    "gutenberg_id": 59828,
+    "author_name": "Thomas Peckett Prest and James Malcolm Rymer",
+    "author_qid": null,
+    "author_wikipedia": null,
+    "author_wikidata": null,
+    "work_qid": "Q7767037",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_String_of_Pearls",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7767037"
+  },
+  {
+    "slug": "autobiography-of-benjamin-franklin",
+    "gutenberg_id": 20203,
+    "author_name": "Benjamin Franklin",
+    "author_qid": "Q34969",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Benjamin_Franklin",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q34969",
+    "work_qid": "Q7714957",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Autobiography_of_Benjamin_Franklin",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7714957"
+  }
+]

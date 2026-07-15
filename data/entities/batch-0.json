@@ -1,0 +1,145 @@
+[
+  {
+    "slug": "moby-dick",
+    "gutenberg_id": 2701,
+    "author_name": "Herman Melville",
+    "author_qid": "Q4985",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Herman_Melville",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q4985",
+    "work_qid": "Q174596",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Moby-Dick",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q174596"
+  },
+  {
+    "slug": "pride-and-prejudice",
+    "gutenberg_id": 1342,
+    "author_name": "Jane Austen",
+    "author_qid": "Q36322",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Jane_Austen",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q36322",
+    "work_qid": "Q170583",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q170583"
+  },
+  {
+    "slug": "romeo-and-juliet",
+    "gutenberg_id": 1513,
+    "author_name": "William Shakespeare",
+    "author_qid": "Q692",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Shakespeare",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q692",
+    "work_qid": "Q83186",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Romeo_and_Juliet",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q83186"
+  },
+  {
+    "slug": "a-room-with-a-view",
+    "gutenberg_id": 2641,
+    "author_name": "E. M. Forster",
+    "author_qid": "Q189119",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/E._M._Forster",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q189119",
+    "work_qid": "Q120288",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/A_Room_with_a_View",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q120288"
+  },
+  {
+    "slug": "crime-and-punishment",
+    "gutenberg_id": 2554,
+    "author_name": "Fyodor Dostoyevsky",
+    "author_qid": "Q991",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Fyodor_Dostoevsky",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q991",
+    "work_qid": "Q165318",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Crime_and_Punishment",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q165318"
+  },
+  {
+    "slug": "alices-adventures-in-wonderland",
+    "gutenberg_id": 11,
+    "author_name": "Lewis Carroll",
+    "author_qid": "Q38082",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Lewis_Carroll",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q38082",
+    "work_qid": "Q92640",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q92640"
+  },
+  {
+    "slug": "the-count-of-monte-cristo",
+    "gutenberg_id": 1184,
+    "author_name": "Alexandre Dumas",
+    "author_qid": "Q38337",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Alexandre_Dumas",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q38337",
+    "work_qid": "Q191838",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q191838"
+  },
+  {
+    "slug": "middlemarch",
+    "gutenberg_id": 145,
+    "author_name": "George Eliot",
+    "author_qid": "Q131333",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/George_Eliot",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q131333",
+    "work_qid": "Q313129",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Middlemarch",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q313129"
+  },
+  {
+    "slug": "frankenstein",
+    "gutenberg_id": 84,
+    "author_name": "Mary Wollstonecraft Shelley",
+    "author_qid": "Q47152",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Mary_Shelley",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q47152",
+    "work_qid": "Q150827",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Frankenstein",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q150827"
+  },
+  {
+    "slug": "the-blue-castle",
+    "gutenberg_id": 67979,
+    "author_name": "L. M. Montgomery",
+    "author_qid": "Q273034",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Lucy_Maud_Montgomery",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q273034",
+    "work_qid": "Q7718738",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Blue_Castle",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q7718738"
+  },
+  {
+    "slug": "the-complete-works-of-william-shakespeare",
+    "gutenberg_id": 100,
+    "author_name": "William Shakespeare",
+    "author_qid": "Q692",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/William_Shakespeare",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q692",
+    "work_qid": null,
+    "work_wikipedia": null,
+    "work_wikidata": null
+  },
+  {
+    "slug": "the-adventures-of-sherlock-holmes",
+    "gutenberg_id": 1661,
+    "author_name": "Arthur Conan Doyle",
+    "author_qid": "Q35610",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Arthur_Conan_Doyle",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q35610",
+    "work_qid": "Q392147",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/The_Adventures_of_Sherlock_Holmes",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q392147"
+  },
+  {
+    "slug": "jane-eyre",
+    "gutenberg_id": 1260,
+    "author_name": "Charlotte Brontë",
+    "author_qid": "Q127332",
+    "author_wikipedia": "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB",
+    "author_wikidata": "https://www.wikidata.org/wiki/Q127332",
+    "work_qid": "Q182961",
+    "work_wikipedia": "https://en.wikipedia.org/wiki/Jane_Eyre",
+    "work_wikidata": "https://www.wikidata.org/wiki/Q182961"
+  }
+]

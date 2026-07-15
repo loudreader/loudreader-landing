@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import StoreCta from "@/components/money/StoreCta";
+import BookCover from "@/components/listen/BookCover";
 import { APP_NAME, SITE_URL } from "@/components/money/site";
 import {
   formatListeningTime,
@@ -97,18 +98,24 @@ export default function ListenIndexPage() {
               <li key={book.slug}>
                 <Link
                   href={`/listen/${book.slug}`}
-                  className="block h-full rounded-2xl border border-gray-200/70 p-5 hover:border-loudBlue/40 hover:bg-loudBlue/[0.03] transition-colors"
+                  className="flex h-full gap-4 rounded-2xl border border-gray-200/70 p-5 hover:border-loudBlue/40 hover:bg-loudBlue/[0.03] transition-colors"
                 >
-                  <p className="font-semibold text-gray-900 leading-snug">
-                    {book.title}
-                  </p>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {book.author} &middot;{" "}
-                    {formatListeningTime(book.listening_hours)}
-                  </p>
-                  <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-                    {book.hook}
-                  </p>
+                  <BookCover
+                    book={book}
+                    className="w-16 shrink-0 rounded-md shadow-sm"
+                  />
+                  <div>
+                    <p className="font-semibold text-gray-900 leading-snug">
+                      {book.title}
+                    </p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      {book.author} &middot;{" "}
+                      {formatListeningTime(book.listening_hours)}
+                    </p>
+                    <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                      {book.hook}
+                    </p>
+                  </div>
                 </Link>
               </li>
             ))}
