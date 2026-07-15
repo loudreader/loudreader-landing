@@ -35,7 +35,24 @@ export default function StoreCta({
   icon?: "apple" | "play";
 }) {
   return (
-    <section className="rounded-2xl bg-gray-50/70 border border-gray-200/70 p-8 md:p-10 text-center">
+    <section className="relative rounded-2xl bg-gray-50/70 border border-gray-200/70 p-8 md:p-10 text-center">
+      {/*
+        Whole-card click target: clicking anywhere on the CTA opens the App
+        Store, not just the button (bigger tap target = more store clicks).
+        It is a stretched absolute link over the card; the visible button and
+        the QR sit above it via z-index so they stay independently usable, and
+        it is aria-hidden + not focusable so the visible button remains the one
+        accessible link (no duplicate tab stop / screen-reader announcement).
+      */}
+      <a
+        href={APP_STORE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-store-source={source}
+        aria-hidden="true"
+        tabIndex={-1}
+        className="absolute inset-0 z-[1] rounded-2xl"
+      />
       <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-2">
         {headline}
       </h2>
@@ -45,7 +62,7 @@ export default function StoreCta({
         target="_blank"
         rel="noopener noreferrer"
         data-store-source={source}
-        className="inline-flex items-center gap-3 px-7 py-3.5 rounded-[14px] bg-black text-white shadow-lg shadow-black/20 transition-all duration-200 hover:scale-[1.03] active:scale-[0.97]"
+        className="relative z-[2] inline-flex items-center gap-3 px-7 py-3.5 rounded-[14px] bg-black text-white shadow-lg shadow-black/20 transition-all duration-200 hover:scale-[1.03] active:scale-[0.97]"
       >
         {icon === "play" ? (
           <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -61,7 +78,9 @@ export default function StoreCta({
           <span className="text-lg font-semibold leading-tight tracking-tight">App Store</span>
         </span>
       </a>
-      <QrFallback url={APP_STORE_URL} />
+      <div className="relative z-[2]">
+        <QrFallback url={APP_STORE_URL} />
+      </div>
       <p className="text-xs text-gray-400 mt-5">
         Free download for Mac and iPhone &middot; works on iPad too
       </p>
