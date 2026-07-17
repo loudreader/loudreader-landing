@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
+import { track as gaTrack } from "@/components/analytics/Analytics";
 
 const CODE = "TWOWEEKS";
 const APP_ID = "6758149478";
@@ -36,11 +37,9 @@ export default function InviteView({ inviteRef }: { inviteRef: string }) {
   }, []);
 
   function track(event: string) {
-    (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.(
-      "event",
-      event,
-      { ref: inviteRef, code: CODE }
-    );
+    // Buffered helper: survives firing from the mount effect, which runs
+    // before the Analytics island boots gtag (see components/analytics).
+    gaTrack(event, { ref: inviteRef, code: CODE });
   }
 
   function revealAndCopy() {

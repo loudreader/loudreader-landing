@@ -57,6 +57,26 @@ declare global {
 
 let gaLoaded = false;
 
+// Events fired before gtag exists (e.g. a page's mount effect runs before this
+// island's effect boots gtag, even with consent already stored). Queued locally
+// and flushed by loadGa AFTER the config command, so gtag.js replays them with
+// a configured destination and granted consent. Never granted → never sent.
+const pendingEvents: [string, Record<string, unknown>][] = [];
+
+/**
+ * Fire a GA4 event now, or queue it until consent boots gtag. The ONLY way
+ * page components should send events; calling window.gtag directly from a
+ * mount effect silently drops the event (child effects run before this
+ * island defines the stub).
+ */
+export function track(event: string, params: Record<string, unknown> = {}) {
+  if (window.gtag) {
+    window.gtag("event", event, params);
+  } else {
+    pendingEvents.push([event, params]);
+  }
+}
+
 /** Boot gtag with Consent Mode v2 and inject the GA4 script. Idempotent. */
 function loadGa(gaId: string) {
   if (gaLoaded) return;
@@ -88,6 +108,13 @@ function loadGa(gaId: string) {
     allow_google_signals: false,
     allow_ad_personalization_signals: false,
   });
+
+  // Flush events that fired before boot. Must stay after the config push:
+  // gtag.js replays the queue in order, and events queued before any config
+  // have no destination and are dropped.
+  for (const [event, params] of pendingEvents.splice(0)) {
+    gtag("event", event, params);
+  }
 
   const script = document.createElement("script");
   script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaId)}`;

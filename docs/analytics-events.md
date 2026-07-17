@@ -47,6 +47,13 @@ consenting population; absolute visit counts undercount reality.
 
 Notes:
 
+- **Page components must send events through the exported `track()` helper in
+  `Analytics.tsx`, never `window.gtag` directly.** The helper buffers events
+  fired before gtag boots (a page's mount effect runs before the island's
+  effect, so mount-time `window.gtag?.()` calls silently no-op — this killed
+  `invite_view` entirely until 2026-07-17) and flushes them after
+  `gtag('config', …)` once consent is granted. Buffered events from visitors
+  who never grant consent are never sent, so the consent gate holds.
 - `send_page_view: false` is set in `gtag('config', …)`; page views are sent
   manually so App Router client navigations are counted exactly once.
   **GA4 Enhanced Measurement's "Page changes based on browser history events"
