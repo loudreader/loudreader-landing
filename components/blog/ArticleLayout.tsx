@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import Link from "next/link";
 
 import LastUpdated from "@/components/money/LastUpdated";
@@ -35,6 +36,14 @@ export default function ArticleLayout({
   >;
   children: React.ReactNode;
 }) {
+  // Scheduled-rollout gate: an article whose publishedAt is in the future is a
+  // held draft. Return 404 for its direct URL until its date passes (a rebuild
+  // then reveals it). getAllArticles() already keeps held articles out of the
+  // /blog listing, sitemap, and "Keep reading" links; this closes the last path
+  // (someone hitting the URL directly), so held == truly invisible.
+  const buildToday = new Date().toISOString().slice(0, 10);
+  if (meta.publishedAt > buildToday) notFound();
+
   const url = `${SITE_URL}/blog/${meta.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
