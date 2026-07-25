@@ -28,9 +28,9 @@
  * - store_click sent by a single delegated click listener for ANY anchor
  *               whose href points at apps.apple.com, covers every App Store
  *               badge/CTA site-wide, including pages that never imported
- *               this file. Params: `source` (from the nearest
+ *               this file. Params: `cta_source` (from the nearest
  *               data-store-source attribute, fallback "inline") and
- *               `page_path`. De-duplicated per (path, source) per session
+ *               `page_path`. De-duplicated per (path, cta_source) per session
  *               via sessionStorage so repeat clicks / remounts can't poison
  *               per-page CTR, the site's #1 KPI.
  *
@@ -166,13 +166,18 @@ export default function Analytics({ gaId }: { gaId: string }) {
       if (!anchor || !window.gtag) return;
 
       const path = window.location.pathname;
-      const source =
+      // NOTE: this is sent as `cta_source`, NOT `source`. `source` is a GA4
+      // RESERVED traffic-source parameter: sending it on an event overrides the
+      // session's real source, so CTA labels (e.g. "listen-book-top") showed up
+      // as traffic sources and buried the true referrer (google / chatgpt.com).
+      // Never rename this back to `source`.
+      const ctaSource =
         anchor
           .closest("[data-store-source]")
           ?.getAttribute("data-store-source") || "inline";
 
-      // Session de-dup per (page, source): first click counts, repeats don't.
-      const guardKey = `${CLICK_GUARD_PREFIX}${path}:${source}`;
+      // Session de-dup per (page, cta): first click counts, repeats don't.
+      const guardKey = `${CLICK_GUARD_PREFIX}${path}:${ctaSource}`;
       try {
         if (sessionStorage.getItem(guardKey)) return;
         sessionStorage.setItem(guardKey, "1");
@@ -182,7 +187,7 @@ export default function Analytics({ gaId }: { gaId: string }) {
       }
 
       window.gtag("event", "store_click", {
-        source,
+        cta_source: ctaSource,
         page_path: path,
       });
     }

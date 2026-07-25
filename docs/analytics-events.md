@@ -39,7 +39,7 @@ consenting population; absolute visit counts undercount reality.
 | Event | Fired by | When | Parameters |
 |---|---|---|---|
 | `page_view` | `Analytics.tsx` (manual) | Every App Router pathname change, plus once when GA boots (initial load or the moment consent is granted) | `page_path`, `page_location`, `page_title` |
-| `store_click` | `Analytics.tsx` (site-wide delegated click listener) | Any click on any `<a>` whose href contains `apps.apple.com` — every App Store badge/CTA on every page, incl. the invite page's redeem link | `source`, `page_path` |
+| `store_click` | `Analytics.tsx` (site-wide delegated click listener) | Any click on any `<a>` whose href contains `apps.apple.com` — every App Store badge/CTA on every page, incl. the invite page's redeem link | `cta_source`, `page_path` |
 | `invite_view` | `app/i/[ref]/InviteView.tsx` | Invite page mounted | `ref`, `code` |
 | `code_reveal` | `InviteView.tsx` | Visitor reveals/copies the offer code | `ref`, `code` |
 | `redeem_click` | `InviteView.tsx` | Click on the redeem link (iOS visitors) | `ref`, `code` |
@@ -67,12 +67,12 @@ Notes:
 
 ### `store_click` details (the #1 KPI feeder)
 
-- **`source`** comes from the nearest `data-store-source` attribute on or
+- **`cta_source`** comes from the nearest `data-store-source` attribute on or
   above the anchor; fallback is `inline` (bare App Store links inside body
   copy). Current values — treat as a frozen reporting contract, add new ones
   but never rename:
 
-  | source | Where |
+  | cta_source | Where |
   |---|---|
   | `home-hero` | Home page hero badge (`app/HomeClient.tsx`) |
   | `home-cta-footer` | Home page bottom "Start listening." badge |
@@ -93,7 +93,7 @@ Notes:
 ## Dimensions / GA4 setup (one-time, manual — see margent/MANUAL_CHECKLIST.md)
 
 - Custom dimensions (event-scoped) to register in GA4 Admin → Custom
-  definitions: `source`, `page_path` (for non-default reports), `ref`, `code`.
+  definitions: `cta_source`, `page_path` (for non-default reports), `ref`, `code`. NOTE: must NOT be called `source` — that is a GA4 reserved traffic-source parameter and would overwrite session attribution.
 - Mark `store_click` as a **key event** (GA4's conversion).
 - Per-page store-click CTR = `store_click` count / `page_view` count per
   `page_path`. This ratio is the ranking metric for deciding which pages get
@@ -106,7 +106,7 @@ Web CTR only measures intent up to the Apple hand-off. Once a week
 (Europe/Warsaw time, pick a fixed weekday so weeks are comparable):
 
 1. In GA4 (Reports → Engagement → Events, or the GA4 MCP), pull the last full
-   Mon–Sun week: total `store_click`, split by `page_path` and `source`.
+   Mon–Sun week: total `store_click`, split by `page_path` and `cta_source`.
 2. In App Store Connect → Analytics → Metrics, same date range: **product
    page views**, **total downloads** (first-time + redownloads shown
    separately), and conversion rate. Source type "App referrer" / web referrer
