@@ -1,6 +1,6 @@
 // FACT PROVENANCE. Every app-behavior claim verified on 2026-11-01 against
 // the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Voice selection: 8 AI voices, all free for first 8 hours, 1 free
+//   - Voice selection: 23 studio narrators in 10 languages, all free for first 8 hours, 1 free
 //     thereafter, all 8 on Premium (site.ts PRICING).
 //   - Speed 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed).
 //   - Sleep timer + soundscapes: Premium (PaywallReason.sleepTimer,
@@ -28,7 +28,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I slow the voice down?",
-    a: "Yes. Speed control from 0.3x to 3.0x is a Premium feature in LoudReader; the free tier plays at normal speed. Slower speeds, like 0.8x or 0.9x, give you more time to absorb each sentence and are common for readers adjusting to listening instead of reading. You can try all 8 AI voices free for the first 8 hours to find one you like at your preferred speed.",
+    a: "Yes. Speed control from 0.3x to 3.0x is a Premium feature in LoudReader; the free tier plays at normal speed. Slower speeds, like 0.8x or 0.9x, give you more time to absorb each sentence and are common for readers adjusting to listening instead of reading. You can try all 23 studio narrators free for the first 8 hours to find one you like at your preferred speed.",
   },
   {
     q: "What can I listen to?",

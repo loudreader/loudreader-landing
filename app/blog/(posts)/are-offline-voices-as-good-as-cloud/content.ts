@@ -7,7 +7,7 @@
 //   - Privacy: on-device TTS means text never leaves the device. Structural
 //     privacy, not policy-based. LoudReader enforces offline in code (see
 //     on-device-text-to-speech-explained provenance).
-//   - LoudReader: 8 natural offline voices, English-only, Apple Silicon required
+//   - LoudReader: 23 natural offline voices across 10 languages, Apple Silicon required
 //     for Mac, iOS 18+ for iPhone (site.ts). Free tier = unlimited listening.
 //   - No fabricated study claims, testimonials, or statistics.
 // Claims you may NOT make: that on-device has "matched" cloud quality, specific
@@ -22,7 +22,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What does cloud TTS do better than on-device?",
-    a: "Two things. Expressiveness: the largest cloud models still produce slightly more natural prosody, especially for emotional or varied content. Variety: cloud services can host hundreds of voices in dozens of languages because they live on a server with no storage limits. An on-device app ships a curated set. LoudReader has 8 natural offline voices, English-only. If you need a specific accent, language, or celebrity-style voice, cloud TTS genuinely serves you better.",
+    a: "Two things. Expressiveness: the largest cloud models still produce slightly more natural prosody, especially for emotional or varied content. Variety: cloud services can host hundreds of voices in dozens of languages because they live on a server with no storage limits. An on-device app ships a curated set. LoudReader has 23 natural offline voices across 10 languages. If you need a specific accent, language, or celebrity-style voice, cloud TTS genuinely serves you better.",
   },
   {
     q: "What does on-device TTS do better than cloud?",
@@ -38,6 +38,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I try offline voices without paying?",
-    a: "Yes. LoudReader's free tier gives you one voice with unlimited listening, fully on-device and private, your library never leaves your device. You can test how natural an offline voice sounds on your own books with no time limit and no word quota. If you want all 8 voices, speed control, sleep timer, and soundscapes, those are part of LoudReader Premium.",
+    a: "Yes. LoudReader's free tier gives you one voice with unlimited listening, fully on-device and private, your library never leaves your device. You can test how natural an offline voice sounds on your own books with no time limit and no word quota. If you want all 23 studio narrators, speed control, sleep timer, and soundscapes, those are part of LoudReader Premium.",
   },
 ];

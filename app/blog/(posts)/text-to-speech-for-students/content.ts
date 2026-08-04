@@ -8,7 +8,7 @@
 //   - Free tier unlimited listening, no word quota: SubscriptionAccess.swift
 //     (baseFreeFraction = 1.0) + site.ts PRICING.
 //   - Voice trial: all voices free for the first 8 listening hours, then one
-//     free voice. Premium = all 8 voices.
+//     free voice. Premium = all 23 studio narrators.
 //   - Background playback / lock screen: Info.plist UIBackgroundModes = ["audio"];
 //     MPRemoteCommandCenter in PlayerService.swift.
 //   - EPUB/PDF import + 70,000+ Gutenberg: verified in-app.

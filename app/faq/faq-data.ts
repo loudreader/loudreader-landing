@@ -31,11 +31,19 @@ export const faqs = [
       },
       {
         q: "Which voices are available?",
-        a: "Every voice is free to try for your first 8 hours of listening. After that, free users keep the default voice, while Premium keeps every voice, plus adjustable playback speed from 0.3x to 3.0x. It's English only for now, with more languages coming.",
+        a: "23 studio narrators across 10 languages: 11 in English, 4 in Spanish, and one each in German, French, Italian, Dutch, Polish, Portuguese, Swedish, and Danish. Every one of them runs on your device. The picker stays short by only showing narrators for languages you actually read - a Polish narrator appears once there's a Polish book in your library. Every voice is free to try for your first 8 hours of listening. After that, free users keep one natural offline voice, while Premium keeps all 23, plus adjustable playback speed from 0.3x to 3.0x.",
+      },
+      {
+        q: "Can LoudReader read books in languages other than English?",
+        a: "Yes. Ten languages have their own narrator, recorded in that language rather than an English voice putting on an accent: English, Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish, and Danish. English has the deepest roster with 11 voices. Everything is generated on your device, in every language.",
+      },
+      {
+        q: "Can I use my own voice?",
+        a: "Yes, and it never leaves your phone. Voice Studio asks you to read one short paragraph aloud - about thirty seconds - and builds a narrator from that recording. The audio, the model, and the finished voice all stay on the device. Delete the voice and the files go with it. Voice cloning is part of Premium.",
       },
       {
         q: "Does it work without internet?",
-        a: "100%. All text-to-speech processing happens on your device in real time. You can listen on a plane, in the subway, or anywhere with zero connectivity.",
+        a: "100%. All text-to-speech processing happens on your device in real time, in every language and with your own cloned voices too. You can listen on a plane, in the subway, or anywhere with zero connectivity.",
       },
     ],
   },
@@ -48,7 +56,7 @@ export const faqs = [
       },
       {
         q: "What does Premium add?",
-        a: "Premium keeps all AI voices after the free trial, and adds adjustable playback speed (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes & highlights. Available monthly, yearly, or as a one-time Lifetime purchase through Apple.",
+        a: "Premium keeps all 23 studio narrators after the free trial, adds on-device voice cloning, and adds adjustable playback speed (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes & highlights. Available monthly, yearly, or as a one-time Lifetime purchase through Apple.",
       },
       {
         q: "How do I manage or cancel my subscription?",

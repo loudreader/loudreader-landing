@@ -67,7 +67,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices & languages",
     cells: [
-      "8 natural offline voices, English only for now",
+      "23 natural offline voices across 10 languages",
       "Generally far more voices and languages, a real cloud advantage",
     ],
   },
@@ -99,10 +99,10 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does on-device text to speech sound robotic?",
-    a: "Not anymore. LoudReader runs a modern neural TTS engine with 8 natural offline voices, and every voice is free to try for your first 8 hours, so you can judge with your own ears before paying anything.",
+    a: "Not anymore. LoudReader runs a modern neural TTS engine with 23 natural offline voices across 10 languages, and every voice is free to try for your first 8 hours, so you can judge with your own ears before paying anything.",
   },
   {
     q: "What do I give up by avoiding cloud TTS?",
-    a: "Breadth. Cloud services generally offer more voices and languages (LoudReader is English-only for now) and run on any hardware, while LoudReader needs an Apple Silicon Mac or a recent iPhone. If those trade-offs matter more to you than privacy, a cloud service is the rational choice.",
+    a: "Breadth. Cloud services generally offer more voices and more languages — LoudReader covers 10 — and they run on any hardware, while LoudReader needs an Apple Silicon Mac or a recent iPhone. If those trade-offs matter more to you than privacy, a cloud service is the rational choice.",
   },
 ];

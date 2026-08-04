@@ -169,7 +169,7 @@ export default function TextToSpeechDyslexiaArticle() {
           anyone&apos;s telemetry.
         </p>
         <p>
-          The honest limits: English only today; playback-speed control
+          The honest limits: ten languages today, not thirty; playback-speed control
           (0.3x to 3.0x) is a Premium feature, as are the extra voices after
           the 8-hour all-voices trial; and scanned PDFs without a text layer
           can&apos;t be read. If those are dealbreakers, the alternatives

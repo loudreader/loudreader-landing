@@ -15,7 +15,7 @@
 //     by ContinuousReaderView.
 //   - Playback speed 0.3x to 3.0x is Premium, and the free tier plays at
 //     normal speed: components/money/site.ts PRICING (single source of truth).
-//   - Voices are English-only today: consistent with the vetted claim on
+//   - Voices cover 10 languages (11 English narrators of 23): consistent with
 //     app/(seo)/private-text-to-speech-no-cloud.
 //   - LoudReader has NO pronunciation-scoring or speech-recording feature.
 //     The article states this as an honest concession, not a capability.

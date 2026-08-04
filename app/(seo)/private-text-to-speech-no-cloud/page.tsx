@@ -177,8 +177,8 @@ export default function PrivateTextToSpeechNoCloudPage() {
           <li>
             <strong>Languages and voice variety.</strong> Cloud services
             generally offer dozens of languages and huge voice catalogs.
-            LoudReader has 8 natural offline voices and is English-only for
-            now (more languages are coming).
+            LoudReader has 23 natural offline narrators across 10 languages,
+            plus any voice you clone from your own on the device.
           </li>
           <li>
             <strong>Hardware.</strong> Running a neural engine locally takes

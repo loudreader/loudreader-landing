@@ -87,13 +87,20 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "8 natural offline voices",
+      "23 natural offline voices across 10 languages",
       "1,000+ voices, including licensed \"Iconic\" celebrity voices and custom voices you design",
     ],
   },
   {
+    label: "Voice cloning",
+    cells: [
+      "On device. Read one paragraph aloud, about thirty seconds, and the narrator is built on your phone. The recording is never uploaded.",
+      "In the cloud. Your recording is uploaded and the voice lives on ElevenLabs' servers.",
+    ],
+  },
+  {
     label: "Languages",
-    cells: ["English only (more coming)", "30+ languages"],
+    cells: ["10 languages, each with a native narrator", "30+ languages"],
   },
   {
     label: "Platforms",

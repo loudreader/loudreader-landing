@@ -34,7 +34,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does LoudReader have a sleep timer?",
-    a: "Yes. 15, 30, or 60 minutes, set right from the player. When it runs out, playback pauses and your place is kept. The sleep timer is part of LoudReader Premium ($7.99/month, $49.99/year, or $199.99 once), alongside all 8 AI voices, speed control, ambient soundscapes, and notes & highlights.",
+    a: "Yes. 15, 30, or 60 minutes, set right from the player. When it runs out, playback pauses and your place is kept. The sleep timer is part of LoudReader Premium ($7.99/month, $49.99/year, or $199.99 once), alongside all 23 studio narrators, speed control, ambient soundscapes, and notes & highlights.",
   },
   {
     q: "What are ambient soundscapes in LoudReader?",

@@ -31,8 +31,9 @@ export default function TextToSpeechForEslLearnersArticle() {
           The free tier covers unlimited listening with no word quota.
           Word-by-word highlighting is free. Speed control from 0.3x to 3.0x
           is Premium, and slower speeds are genuinely useful for language
-          learning. All 8 voices are free to try for 8 hours. One honest
-          note: voices are English only. No multilingual support.
+          learning. All 23 studio narrators are free to try for 8 hours. One honest
+          note: English is where the roster is deepest — 11 of the 23
+          narrators — so you have plenty of accents to shadow.
         </p>
       </Tldr>
 

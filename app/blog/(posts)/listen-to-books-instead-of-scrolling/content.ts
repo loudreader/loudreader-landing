@@ -34,6 +34,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What if I want to highlight something while listening?",
-    a: "In LoudReader, notes and highlights are a Premium feature. The free tier gives you unlimited listening and word-by-word highlighting so you can follow along, but marking passages requires Premium. The full set of Premium features includes all 8 voices, speed control (0.3x to 3.0x), sleep timer, soundscapes, and notes.",
+    a: "In LoudReader, notes and highlights are a Premium feature. The free tier gives you unlimited listening and word-by-word highlighting so you can follow along, but marking passages requires Premium. The full set of Premium features includes all 23 studio narrators, speed control (0.3x to 3.0x), sleep timer, soundscapes, and notes.",
   },
 ];

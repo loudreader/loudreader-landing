@@ -154,8 +154,8 @@ export default function EasyEnglishBooksArticle() {
           every book above is a search away. Download once, then listen fully
           offline. Everything is fully on-device and private, your library
           never leaves your device, and the voices are natural offline
-          voices, English-only today, which for learning English is precisely
-          what you want. How the free catalog works, and what else is in it,
+          voices, with eleven English narrators to choose between, which for
+          learning English is precisely what you want. How the free catalog works, and what else is in it,
           is covered in{" "}
           <Link
             href="/blog/project-gutenberg-audiobooks"

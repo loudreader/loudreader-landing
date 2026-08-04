@@ -166,7 +166,7 @@ export default function VoiceDreamReaderAlternativePage() {
           listening on every book cover to cover, an unlimited library,
           word-by-word highlighting, the full Project Gutenberg catalog, and
           every voice free for your first 8 hours (after that you keep the
-          default voice). Premium adds all 8 AI voices plus playback speed
+          default voice). Premium adds all 23 studio narrators plus playback speed
           (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes &amp;
           highlights. That's $7.99/month, $49.99/year, or $199.99 once, yours
           for life. Year for year, that's $30 less than Voice Dream&apos;s

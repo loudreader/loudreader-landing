@@ -34,6 +34,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is the free tier actually enough to read more books?",
-    a: "Yes. The free tier includes unlimited listening on every book, cover to cover. No word quota, no time limit, no account required. One natural offline voice. You can finish as many books as you want for free. Premium adds all 8 voices, speed control (0.3x to 3.0x), sleep timer, soundscapes, and notes.",
+    a: "Yes. The free tier includes unlimited listening on every book, cover to cover. No word quota, no time limit, no account required. One natural offline voice. You can finish as many books as you want for free. Premium adds all 23 studio narrators, speed control (0.3x to 3.0x), sleep timer, soundscapes, and notes.",
   },
 ];

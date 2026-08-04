@@ -124,7 +124,7 @@ export default function ReadingEnglishBooksNonNativeArticle() {
           each word as it's spoken, so your ears and eyes stay locked on the
           same line, and tapping any sentence plays it again. Everything is
           fully on-device and private, your library never leaves your device,
-          and the voices are English-only today, which for this purpose is
+          and eleven of the twenty-three narrators are English, which for this purpose is
           the point. On the free tier listening is unlimited with no word
           quota, and slowing the narration down (0.3x to 3.0x) is part of
           Premium, stated honestly.

@@ -156,8 +156,8 @@ export default function OnDeviceTextToSpeechExplainedArticle() {
             <strong className="text-gray-900">Voice variety.</strong> A cloud
             service can host thousands of voices in dozens of languages
             because they all live server-side. An on-device app ships a
-            curated set. LoudReader offers 8 natural offline voices, and its
-            voices are English-only today. If you need Mandarin or a celebrity
+            curated set. LoudReader offers 23 natural offline narrators
+            across 10 languages. If you need Mandarin or a celebrity
             soundalike, the cloud genuinely serves you better.
           </li>
           <li>

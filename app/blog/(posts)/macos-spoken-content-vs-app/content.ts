@@ -30,7 +30,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does LoudReader use the same voices as macOS Spoken Content?",
-    a: "No. LoudReader includes its own neural voices optimized for long-form reading. These run on the Mac's Neural Engine and are not the same voices as the system accessibility voices. macOS Spoken Content can use Apple's downloaded neural voices (Samantha, Daniel, etc.), but you get one voice globally. LoudReader gives you eight voices and lets you switch per book.",
+    a: "No. LoudReader includes its own neural voices optimized for long-form reading. These run on the Mac's Neural Engine and are not the same voices as the system accessibility voices. macOS Spoken Content can use Apple's downloaded neural voices (Samantha, Daniel, etc.), but you get one voice globally. LoudReader gives you 23 studio narrators and lets you switch per book.",
   },
   {
     q: "When should I use Spoken Content instead of LoudReader?",

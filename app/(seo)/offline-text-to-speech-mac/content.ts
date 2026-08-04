@@ -51,7 +51,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "8 natural offline voices, modern neural TTS generated on your Mac",
+      "23 natural offline voices across 10 languages, modern neural TTS generated on your Mac",
       "System voices, with more downloadable in Accessibility settings",
     ],
   },
@@ -111,7 +111,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does offline text to speech on Mac cost anything?",
-    a: "The macOS Spoken Content feature is free with every Mac. LoudReader's free tier includes unlimited listening on every book cover to cover with no word quota and no account; Premium (all 8 AI voices, playback speed 0.3x to 3.0x, sleep timer, soundscapes, notes) is $7.99/month, $49.99/year, or $199.99 once.",
+    a: "The macOS Spoken Content feature is free with every Mac. LoudReader's free tier includes unlimited listening on every book cover to cover with no word quota and no account; Premium (all 23 studio narrators, playback speed 0.3x to 3.0x, sleep timer, soundscapes, notes) is $7.99/month, $49.99/year, or $199.99 once.",
   },
   {
     q: "Why choose offline TTS over a cloud service like Speechify?",

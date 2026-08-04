@@ -192,8 +192,8 @@ export default function BestLocalAiAppsMacArticle() {
         <p>
           Peak capability and variety, honestly stated. A model that fits on
           your Mac cannot match the largest cloud models on raw intelligence,
-          voice selection, or language coverage. LoudReader&apos;s voices,
-          for instance, are English-only today. What you get back: your
+          voice selection, or language coverage. LoudReader&apos;s narrators,
+          for instance, cover ten languages, not sixty. What you get back: your
           documents, recordings, and library stay yours; everything works on
           a plane; and nobody can meter, mine, or lose your data, because
           they never had it. For well-defined jobs (transcribe this,

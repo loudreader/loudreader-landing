@@ -108,6 +108,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is word highlighting a paid feature in LoudReader?",
-    a: "No. Word-by-word highlighting is free on every book, and free listening is unlimited with no word quota. Premium ($7.99/month, $49.99/year, or $199.99 lifetime) adds all 8 voices, playback speed control, sleep timer, ambient soundscapes, and notes.",
+    a: "No. Word-by-word highlighting is free on every book, and free listening is unlimited with no word quota. Premium ($7.99/month, $49.99/year, or $199.99 lifetime) adds all 23 studio narrators, playback speed control, sleep timer, ambient soundscapes, and notes.",
   },
 ];

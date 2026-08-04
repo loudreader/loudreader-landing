@@ -173,7 +173,7 @@ export default function ListenToPdfIphonePage() {
           default voice.
         </p>
         <p>
-          Premium adds all 8 AI voices plus playback speed (0.3x to 3.0x), a
+          Premium adds all 23 studio narrators plus playback speed (0.3x to 3.0x), a
           sleep timer, ambient soundscapes, and notes &amp; highlights, for
           $7.99/month, $49.99/year, or $199.99 once (lifetime). All billing
           goes through Apple. Full breakdown in the{" "}

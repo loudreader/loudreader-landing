@@ -103,7 +103,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "8 natural offline voices",
+      "23 natural offline voices across 10 languages",
       "The system voices installed on your Mac",
       "1000+ cloud voices (Speechify: 60+ languages)",
     ],

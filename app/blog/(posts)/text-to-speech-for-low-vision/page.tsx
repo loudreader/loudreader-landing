@@ -28,7 +28,7 @@ export default function TextToSpeechForLowVisionArticle() {
           highlighting each word as it goes. It is fully on-device and
           private, your library never leaves your device. No account, no
           uploads, no cloud. The free tier gives unlimited listening on every
-          book with no word quota. All 8 voices are free to try for the first
+          book with no word quota. All 23 studio narrators are free to try for the first
           8 hours. It is a reading tool for books, not a replacement for
           VoiceOver or dedicated assistive technology. If you need a screen
           reader, your device already has one built in. If you want to listen
@@ -137,7 +137,7 @@ export default function TextToSpeechForLowVisionArticle() {
           </li>
           <li>
             <strong className="text-gray-900">Voice selection.</strong>{" "}
-            Pick the clearest voice for extended listening. All 8 AI voices
+            Pick the clearest voice for extended listening. All 23 studio narrators
             are free to try for the first 8 hours. After that, one voice
             stays free and Premium includes the rest.
           </li>

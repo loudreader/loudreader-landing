@@ -131,7 +131,7 @@ export default function TextToSpeechForWritersArticle() {
           </li>
           <li>
             Pick a neutral voice. Natural offline voices are clearer and less
-            distracting than robotic TTS. You can try all 8 voices free for
+            distracting than robotic TTS. You can try all 23 studio narrators free for
             the first 8 hours.
           </li>
           <li>
@@ -179,7 +179,7 @@ export default function TextToSpeechForWritersArticle() {
           <Link href="/" className="text-loudBlue hover:underline">
             LoudReader
           </Link>
-          , all 8 AI voices are free to try for the first 8 listening hours.
+          , all 23 studio narrators are free to try for the first 8 listening hours.
           Speed control from 0.3x to 3.0x is a Premium feature; the free tier
           plays at normal speed.
         </p>

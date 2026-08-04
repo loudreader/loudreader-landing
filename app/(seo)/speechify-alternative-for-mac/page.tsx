@@ -113,13 +113,14 @@ export default function SpeechifyAlternativeForMacPage() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Languages.</strong> Speechify offers 60+ languages;
-            LoudReader is currently English only (more are coming).
+            <strong>Languages.</strong> Speechify offers 60+ languages.
+            LoudReader covers 10, each with a narrator recorded in that
+            language rather than an English voice with an accent.
           </li>
           <li>
             <strong>Voice variety.</strong> 1000+ voices on Speechify Premium,
-            including celebrity voices, versus LoudReader&apos;s 8 natural
-            offline voices.
+            including celebrity voices, versus LoudReader&apos;s 23 natural
+            offline voices across 10 languages.
           </li>
           <li>
             <strong>Platform breadth.</strong> Speechify runs on Android,
@@ -153,7 +154,7 @@ export default function SpeechifyAlternativeForMacPage() {
           listening on every book cover to cover, an unlimited library,
           word-by-word highlighting, the full Project Gutenberg catalog, and
           every voice free for your first 8 hours (after that you keep the
-          default voice). Premium adds all 8 AI voices plus playback speed
+          default voice). Premium adds all 23 studio narrators plus playback speed
           (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes &amp;
           highlights. That's $7.99/month, $49.99/year, or $199.99 once, yours
           for life. All billing goes through Apple.

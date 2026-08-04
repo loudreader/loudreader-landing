@@ -15,7 +15,7 @@
 //     Enhanced Typesetting titles).
 //   - LoudReader claims: components/money/site.ts + app/faq/faq-data.ts
 //     (pricing, free tier, 70,000+ Gutenberg catalog, word-by-word
-//     highlighting, English-only voices today) and the app source
+//     highlighting, narrators in 10 languages) and the app source
 //     (background audio: UIBackgroundModes "audio" in Info.plist;
 //     lock-screen controls: MPRemoteCommandCenter in PlayerService.swift).
 // Claims you may NOT make until verified: CarPlay support, any specific
@@ -43,6 +43,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does the free version of LoudReader limit how much it reads?",
-    a: "No. The free tier is unlimited listening on every book, cover to cover, with no word quota, no monthly cap, and no account. Every voice is free for your first 8 hours of listening. After that, free users keep the default voice, and Premium keeps all 8 AI voices plus speed control, a sleep timer, soundscapes, and notes & highlights.",
+    a: "No. The free tier is unlimited listening on every book, cover to cover, with no word quota, no monthly cap, and no account. Every voice is free for your first 8 hours of listening. After that, free users keep the default voice, and Premium keeps all 23 studio narrators plus speed control, a sleep timer, soundscapes, and notes & highlights.",
   },
 ];

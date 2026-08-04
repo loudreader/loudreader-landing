@@ -35,6 +35,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does the voice quality matter for tired eyes?",
-    a: "Yes. A harsh or robotic voice is grating when you are already fatigued. LoudReader uses natural offline voices that are smoother and less straining to listen to for long periods. You can try all 8 voices free for the first 8 hours and pick the gentlest one. This matters more than you would think after a long screen day.",
+    a: "Yes. A harsh or robotic voice is grating when you are already fatigued. LoudReader uses natural offline voices that are smoother and less straining to listen to for long periods. You can try all 23 studio narrators free for the first 8 hours and pick the gentlest one. This matters more than you would think after a long screen day.",
   },
 ];

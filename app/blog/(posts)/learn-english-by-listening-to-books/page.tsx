@@ -30,8 +30,9 @@ export default function LearnEnglishByListeningToBooksArticle() {
           free Project Gutenberg classics built in as unlimited practice
           material, and its natural offline voices run on native Mac and
           iPhone apps with no account, no upload, and offline playback. One
-          honest note: LoudReader&apos;s voices are English-only today, which
-          for this goal is exactly what you want.
+          honest note on the voices: English is the deepest part of the
+          roster, 11 narrators of the 23, which for this goal is exactly what
+          you want.
         </p>
       </Tldr>
 

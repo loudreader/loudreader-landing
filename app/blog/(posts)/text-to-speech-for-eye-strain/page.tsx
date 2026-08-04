@@ -157,7 +157,7 @@ export default function TextToSpeechForEyeStrainArticle() {
         <p>
           Comfort matters more than speed when you are already fatigued. Pick
           the clearest, most natural-sounding voice you can find. LoudReader
-          offers 8 AI voices, all free to try for the first 8 listening hours.
+          offers 23 studio narrators across 10 languages, all free to try for the first 8 listening hours.
           A voice that sounds slightly robotic or harsh is grating when your
           senses are already worn out.
         </p>

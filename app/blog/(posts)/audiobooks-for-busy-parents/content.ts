@@ -9,7 +9,7 @@
 //   - Word-by-word highlighting: free (ReaderStylesheet.swift).
 //   - EPUB/PDF import + 70,000+ Gutenberg: verified in-app.
 //   - Free tier unlimited listening: SubscriptionAccess.swift.
-//   - Voice selection: 8 AI voices, all free for first 8 hours, 1 free
+//   - Voice selection: 23 studio narrators in 10 languages, all free for first 8 hours, 1 free
 //     thereafter, all 8 on Premium.
 // NO claims about: parenting advice, child development, audiobook efficacy
 // for children, or sleep training. The article is about fitting adult reading

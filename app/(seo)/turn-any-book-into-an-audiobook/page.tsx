@@ -86,7 +86,7 @@ export default function TurnAnyBookIntoAnAudiobookPage() {
           That&apos;s the whole process. The book behaves like an audiobook
           from then on: playback continues with the screen locked on iPhone,
           your position is saved automatically, and on Premium you can switch
-          among all 8 voices and adjust speed from 0.3x to 3.0x.
+          among all 23 studio narrators and adjust speed from 0.3x to 3.0x.
         </p>
       </QuestionSection>
 
@@ -186,7 +186,7 @@ export default function TurnAnyBookIntoAnAudiobookPage() {
           book, cover to cover, with no word quota, an unlimited library,
           word-by-word highlighting, and the full Project Gutenberg catalog.
           Every voice is free for your first 8 hours; after that, free users
-          keep the default voice. Premium adds all 8 AI voices, playback speed
+          keep the default voice. Premium adds all 23 studio narrators, playback speed
           (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes
           &amp; highlights for $7.99/month, $49.99/year, or $199.99 once,
           yours for life. Details in the{" "}

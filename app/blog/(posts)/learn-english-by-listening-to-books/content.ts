@@ -21,9 +21,9 @@
 //   - Speed range 0.3x-3.0x: TTSPreferences.swift:14-15 (minRate 0.3,
 //     maxRate 3.0). Speed control is a Premium feature; the free tier plays
 //     at normal speed (site.ts PRICING).
-//   - Voices are English-only today: consistent with the app's voice
+//   - Voices cover 10 languages (11 English narrators of 23): consistent with the app's voice
 //     catalog (Kokoro/Kitten English voices) and the phrasing already used
-//     on money pages ("English only (more coming)").
+//     on money pages ("10 languages, each with a native narrator").
 //   - 70,000+ free Project Gutenberg classics built in: phrasing consistent
 //     with app/(seo)/turn-any-book-into-an-audiobook (count Gutenberg
 //     publishes on gutenberg.org).
@@ -52,6 +52,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Are there free English books I can practice with?",
-    a: "Yes. LoudReader has 70,000+ free Project Gutenberg classics built in, and the free tier is unlimited listening with no word quota and no account. Everything runs on your device, so practice works offline too. One honest note: LoudReader's voices are English-only today, which for learning English is exactly what you need.",
+    a: "Yes. LoudReader has 70,000+ free Project Gutenberg classics built in, and the free tier is unlimited listening with no word quota and no account. Everything runs on your device, so practice works offline too. One honest note on the voices: English is the deepest part of the roster, 11 narrators of the 23, which for learning English is exactly what you need.",
   },
 ];

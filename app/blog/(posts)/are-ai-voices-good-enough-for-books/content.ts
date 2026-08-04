@@ -5,7 +5,7 @@
 //     fiction with dialogue and emotional range, human narration still has an
 //     edge in expressiveness. This is an honest assessment of the current state
 //     of the technology; no fabricated benchmarks or comparisons.
-//   - LoudReader voices: 8 natural offline voices, English-only, Apple Silicon
+//   - LoudReader voices: 23 natural offline voices across 10 languages, Apple Silicon
 //     Neural Engine (site.ts, app source). Voices run fully on-device.
 //   - No fabricated study claims, testimonials, or statistics.
 //   - No claim that AI voices have "matched" human narration quality.
@@ -33,6 +33,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How many AI voices does LoudReader offer?",
-    a: "LoudReader Premium includes 8 natural offline voices. They run entirely on your device using Apple Silicon's Neural Engine, so they work with no internet connection. The free tier includes one voice with unlimited listening, which is plenty to decide if AI narration works for you before paying for variety.",
+    a: "LoudReader Premium includes 23 natural offline voices across 10 languages. They run entirely on your device using Apple Silicon's Neural Engine, so they work with no internet connection. The free tier includes one voice with unlimited listening, which is plenty to decide if AI narration works for you before paying for variety.",
   },
 ];

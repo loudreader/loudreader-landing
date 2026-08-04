@@ -104,7 +104,7 @@ export default function AreAiVoicesGoodEnoughForBooksArticle() {
         </p>
         <p>
           But for book-length listening, the practical difference is small.
-          LoudReader's 8 natural offline voices run on Apple Silicon's Neural
+          LoudReader's 23 natural offline voices across 10 languages run on Apple Silicon's Neural
           Engine and generate speech that is natural enough to disappear into a
           book for hours. The full comparison is in{" "}
           <Link
@@ -166,7 +166,7 @@ export default function AreAiVoicesGoodEnoughForBooksArticle() {
 
       <StoreCta
         headline="Hear what modern AI narration sounds like"
-        subline="8 natural offline voices, one free with unlimited listening. Import a book and decide for yourself."
+        subline="23 natural offline voices across 10 languages, one free with unlimited listening. Import a book and decide for yourself."
       />
     </ArticleLayout>
   );

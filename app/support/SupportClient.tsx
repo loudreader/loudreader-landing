@@ -73,7 +73,14 @@ export default function SupportPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Which voices are available?</h3>
                   <p>
-                    LoudReader offers eight natural-sounding AI voices. Every voice is free to try for your first 8 hours of listening — after that, free users keep the default voice, while Premium keeps them all unlocked plus adjustable playback speed from 0.3x to 3.0x. Currently only English is supported, but we&apos;re working on adding more languages.
+                    LoudReader offers 23 studio narrators across 10 languages — 11 in English, 4 in Spanish, and one each in German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish. Narrators for a language appear once you have a book in that language, which keeps the picker short. Every voice is free to try for your first 8 hours of listening — after that, free users keep one natural offline voice, while Premium keeps all 23 unlocked plus adjustable playback speed from 0.3x to 3.0x.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I make a narrator out of my own voice?</h3>
+                  <p>
+                    Yes. Voice Studio asks you to read one short paragraph aloud — about thirty seconds — and builds a narrator from that recording. The audio, the model and the finished voice stay on your device; deleting the voice deletes the files. Voice cloning is part of Premium.
                   </p>
                 </div>
 

@@ -30,7 +30,7 @@ export default function TextToSpeechForSeniorsArticle() {
           private, your library never leaves your device. The free tier gives
           unlimited listening with no account and no word quota. There are
           70,000+ free classics built in, and you can import books you
-          already own. Speed control (0.3x to 3.0x) and all 8 AI voices are
+          already own. Speed control (0.3x to 3.0x) and all 23 studio narrators are
           Premium features; the free tier plays at normal speed with one
           voice after an 8-hour trial of all voices. It is not a screen
           reader, and it does not claim to be. It is a way to keep reading
@@ -161,7 +161,7 @@ export default function TextToSpeechForSeniorsArticle() {
           and smooth for extended listening.
         </p>
         <p>
-          You can try all 8 voices free for the first 8 hours of listening.
+          You can try all 23 studio narrators free for the first 8 hours of listening.
           After that, one voice remains free, and Premium includes all 8. This
           trial period lets you find the voice that sounds best to you at the
           speed you prefer. Some voices are brighter, some are warmer, and

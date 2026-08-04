@@ -24,7 +24,7 @@
 //         vetted "minimal network surface" claim on the private-TTS page;
 //         Gutenberg fetches via ProjectGutenbergService.swift.
 //   - Honest concessions included: on-device trade-offs (fewer voices,
-//     English-only today, modern-hardware requirement) from the private-TTS
+//     modern-hardware requirement) from the private-TTS
 //     money page and site.ts REQUIREMENTS.
 // Claims you may NOT make: that any named app retains/trains on user
 // documents (unverified per-vendor), malware statistics, breach statistics.

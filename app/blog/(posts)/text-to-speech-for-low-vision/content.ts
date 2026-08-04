@@ -6,7 +6,7 @@
 //   - Natural offline voices: Apple speech synthesis, all processing local.
 //   - Word-by-word highlighting: free (ReaderStylesheet.swift).
 //   - Speed 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed).
-//   - Voice selection: 8 AI voices, all free for first 8 hours, 1 free
+//   - Voice selection: 23 studio narrators in 10 languages, all free for first 8 hours, 1 free
 //     thereafter. Premium includes all 8 (site.ts PRICING).
 //   - Free tier unlimited listening, no account: SubscriptionAccess.swift.
 // NO claims about: accessibility certification, WCAG compliance, VoiceOver
@@ -35,6 +35,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How do I pick the clearest voice?",
-    a: "LoudReader offers 8 AI voices. All voices are free to try for the first 8 listening hours; after that, one voice remains free and Premium includes all 8. Try them at the speed you read and pick the one that fatigues you least. Clarity matters more than personality for extended listening sessions.",
+    a: "LoudReader offers 23 studio narrators across 10 languages. All of them are free to try for the first 8 listening hours; after that, one voice remains free and Premium keeps all 23. Try them at the speed you read and pick the one that fatigues you least. Clarity matters more than personality for extended listening sessions.",
   },
 ];

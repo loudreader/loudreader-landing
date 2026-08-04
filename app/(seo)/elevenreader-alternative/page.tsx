@@ -118,12 +118,12 @@ export default function ElevenReaderAlternativePage() {
           <li>
             <strong>Voice variety.</strong> 1,000+ voices, including licensed
             &quot;Iconic&quot; celebrity voices and custom voices you can
-            design from a text prompt. LoudReader offers 8 natural offline
+            design from a text prompt. LoudReader offers 23 natural offline
             voices.
           </li>
           <li>
-            <strong>Languages.</strong> ElevenReader supports 30+ languages;
-            LoudReader is currently English only (more are coming).
+            <strong>Languages.</strong> ElevenReader supports 30+ languages.
+            LoudReader covers 10, each with its own native narrator.
           </li>
           <li>
             <strong>Audiobook store.</strong> Ultra includes access to a
@@ -161,7 +161,7 @@ export default function ElevenReaderAlternativePage() {
           listening on every book cover to cover, an unlimited library,
           word-by-word highlighting, the full Project Gutenberg catalog, and
           every voice free for your first 8 hours (after that you keep the
-          default voice). Premium adds all 8 AI voices plus playback speed
+          default voice). Premium adds all 23 studio narrators plus playback speed
           (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes &amp;
           highlights. That's $7.99/month, $49.99/year, or $199.99 once, yours
           for life. All billing goes through Apple.

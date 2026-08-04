@@ -18,7 +18,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What is the catch with LoudReader's free tier?",
-    a: "The free tier gives you one natural voice. Premium adds all 8 AI voices, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, and notes and highlights. The free tier covers full books, cover to cover, with no word cap, forever.",
+    a: "The free tier gives you one natural voice. Premium adds all 23 studio narrators, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, and notes and highlights. The free tier covers full books, cover to cover, with no word cap, forever.",
   },
   {
     q: "Can I use Apple Spoken Content for full books?",

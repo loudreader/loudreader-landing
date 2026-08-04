@@ -5,8 +5,9 @@
 //     following highlighted text) is the core feature for ESL learners.
 //   - Speed 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed). Slow speeds
 //     (below 1.0x) are particularly relevant for language learners.
-//   - Natural offline voices: Apple speech synthesis, all local. English only
-//     at this time. NO claims about multilingual voice support.
+//   - Natural offline voices: all local. 23 studio narrators across 10
+//     languages, 11 of them English (site.ts VOICES). Non-English narrators
+//     surface once a book in that language is in the library.
 //   - 70,000+ Gutenberg books: includes many accessible English classics.
 //   - Free tier unlimited listening: SubscriptionAccess.swift.
 //   - Notes & highlights: Premium.
@@ -39,6 +40,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Will the voice sound natural enough?",
-    a: "Modern AI voices are quite good. LoudReader uses high-quality neural voices that sound closer to a human narrator than the robotic TTS of a decade ago. You can try all 8 voices free for the first 8 listening hours and pick the one that is clearest and most pleasant for long sessions.",
+    a: "Modern AI voices are quite good. LoudReader uses high-quality neural voices that sound closer to a human narrator than the robotic TTS of a decade ago. You can try all 23 studio narrators free for the first 8 listening hours and pick the one that is clearest and most pleasant for long sessions.",
   },
 ];

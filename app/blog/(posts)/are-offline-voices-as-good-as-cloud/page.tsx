@@ -75,9 +75,10 @@ export default function AreOfflineVoicesAsGoodAsCloudArticle() {
           <li>
             <strong className="text-gray-900">Voice variety.</strong> Cloud
             services can host hundreds of voices in dozens of languages because
-            storage is effectively unlimited server-side. LoudReader ships 8
-            natural offline voices, English-only. If you need Mandarin, French,
-            or a specific accent, the cloud genuinely serves you better.
+            storage is effectively unlimited server-side. LoudReader ships 23
+            natural offline narrators across 10 languages. If you need Mandarin,
+            Hindi, or a specific regional accent, the cloud genuinely serves you
+            better.
           </li>
         </ul>
         <p>

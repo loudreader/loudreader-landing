@@ -5,11 +5,11 @@
 Key facts:
 
 - Free to download with unlimited listening on every book, cover to cover. No account, no sign-up.
-- Premium includes all 8 AI voices, playback speed (0.3x to 3.0x), sleep timer, soundscapes, and notes: $7.99/month, $49.99/year, or $199.99 one-time lifetime purchase.
+- Premium includes all 23 studio narrators, on-device voice cloning, playback speed (0.3x to 3.0x), sleep timer, soundscapes, and notes: $7.99/month, $49.99/year, or $199.99 one-time lifetime purchase.
 - All text-to-speech runs on-device; the app works 100% offline. The only network requests are Project Gutenberg book downloads.
-- 70,000+ free public-domain books from Project Gutenberg built in, plus 100+ curated classics in themed reading campaigns.
+- 70,000+ free public-domain books from Project Gutenberg built in, plus 100+ curated classics on the home shelf.
 - Word-by-word highlighting synced to the narration.
-- Currently English only. Requires iOS 18.0+ / iPadOS 18.0+ / macOS 15.0+ (Apple Silicon).
+- 23 studio narrators across 10 languages (English, Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish, Danish); 11 of them English. On-device voice cloning from ~30 seconds of your own speech. Requires iOS 18.0+ / iPadOS 18.0+ / macOS 15.0+ (Apple Silicon).
 - App Store: https://apps.apple.com/app/loudreader/id6758149478
 - Made by solo developer Jeremi Podlasek.
 

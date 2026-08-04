@@ -43,6 +43,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is there a monthly listening limit on the free plan?",
-    a: "No. LoudReader's free tier is unlimited listening on every book, cover to cover, with no word quota, no monthly cap, no credits, and no account. Premium adds all 8 AI voices, playback speed control, a sleep timer, ambient soundscapes, and notes & highlights.",
+    a: "No. LoudReader's free tier is unlimited listening on every book, cover to cover, with no word quota, no monthly cap, no credits, and no account. Premium adds all 23 studio narrators, playback speed control, a sleep timer, ambient soundscapes, and notes & highlights.",
   },
 ];

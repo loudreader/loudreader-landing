@@ -28,7 +28,7 @@ export default function BestAudiobookAppForClassicsArticle() {
           by natural offline voices. It is fully on-device and private,
           your library never leaves your device, and the free tier gives
           you {PRICING.free} That covers every Gutenberg classic with no
-          word cap. Premium adds all 8 AI voices, playback speed (0.3x to
+          word cap. Premium adds all 23 studio narrators, playback speed (0.3x to
           3.0x), sleep timer, ambient soundscapes, and notes and highlights
           for {PRICING.premiumMonthly} or {PRICING.premiumYearly}.{" "}
           <strong>Commercial audiobooks</strong> from Audible or Apple Books

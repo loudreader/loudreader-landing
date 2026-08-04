@@ -21,7 +21,7 @@
 //     of truth, synced with the App Store listing). Free tier is unlimited
 //     listening with no word quota; playback speed (0.3x to 3.0x) is Premium.
 // Claims deliberately NOT made: OCR of scanned pages, DOCX/PPT import,
-// annotation/flashcard features, multi-language voices (English only).
+// annotation/flashcard features, multi-language voices (10 languages).
 
 import type { Faq } from "@/components/money/FaqSection";
 
@@ -40,7 +40,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does LoudReader cost anything for students?",
-    a: "The core is free. That's unlimited listening on every book or document, cover to cover, with no word quota and no account. Premium is optional and adds all 8 AI voices, playback speed control, a sleep timer, ambient soundscapes, and notes & highlights.",
+    a: "The core is free. That's unlimited listening on every book or document, cover to cover, with no word quota and no account. Premium is optional and adds all 23 studio narrators, playback speed control, a sleep timer, ambient soundscapes, and notes & highlights.",
   },
   {
     q: "Can I listen to a chapter again offline before an exam?",

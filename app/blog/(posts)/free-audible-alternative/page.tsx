@@ -160,7 +160,7 @@ export default function FreeAudibleAlternativeArticle() {
               Some LoudReader features are Premium.
             </strong>{" "}
             The free tier is unlimited listening with the default voice
-            (every voice is free for your first 8 hours). All 8 AI voices,
+            (every voice is free for your first 8 hours). All 23 studio narrators,
             playback speed control, the sleep timer, ambient soundscapes, and
             notes &amp; highlights are Premium. Details are on the{" "}
             <Link href="/faq" className="text-loudBlue hover:underline">

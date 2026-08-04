@@ -16,7 +16,7 @@
 //     ProjectGutenbergBrowserView.swift.
 //   - Free tier = unlimited listening, no word quota; playback speed
 //     (0.3x to 3.0x) is Premium: components/money/site.ts PRICING.
-//   - Voices are English-only today: consistent with the vetted claim on
+//   - Voices cover 10 languages (11 English narrators of 23): consistent with
 //     app/(seo)/private-text-to-speech-no-cloud.
 // Claims you may NOT make until verified: any CEFR/Lexile mapping, any
 // claim that listening-while-reading is proven to improve outcomes (the

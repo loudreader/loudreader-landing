@@ -61,7 +61,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "8 natural offline voices with word-by-word highlighting",
+      "23 natural offline voices across 10 languages, with word-by-word highlighting",
       "System voices; optional highlighting while speaking",
     ],
   },

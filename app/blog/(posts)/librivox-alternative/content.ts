@@ -15,8 +15,8 @@
 //     and https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/index.html
 //   - LoudReader claims: components/money/site.ts + app/faq/faq-data.ts
 //     (70,000+ Gutenberg catalog built in, free unlimited listening,
-//     word-by-word highlighting, natural offline voices, English-only
-//     today, Premium = all 8 voices/speed/sleep timer/soundscapes/notes).
+//     word-by-word highlighting, natural offline voices, 10 languages
+//     today, Premium = all 23 studio narrators/speed/sleep timer/soundscapes/notes).
 //   - LoudReader does NOT export audio files. Narration is generated live
 //     on-device (no MP3 download). Stated as an honest concession; LibriVox
 //     is recommended when downloadable files are the requirement.
@@ -80,7 +80,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Price",
     cells: [
-      "Free, unlimited listening; Premium adds all 8 voices, speed, sleep timer",
+      "Free, unlimited listening; Premium adds all 23 studio narrators, speed, sleep timer",
       "Free, public domain",
       "Free",
     ],
@@ -102,7 +102,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is LoudReader really free for Project Gutenberg classics?",
-    a: "Yes. The entire Project Gutenberg catalog, over 70,000 titles, is built into LoudReader, and the free tier is unlimited listening on every book, cover to cover. No credits, no word quota, no account. Premium adds all 8 AI voices, speed control, a sleep timer, soundscapes, and notes & highlights.",
+    a: "Yes. The entire Project Gutenberg catalog, over 70,000 titles, is built into LoudReader, and the free tier is unlimited listening on every book, cover to cover. No credits, no word quota, no account. Premium adds all 23 studio narrators, speed control, a sleep timer, soundscapes, and notes & highlights.",
   },
   {
     q: "Are AI voices better than LibriVox volunteer narrators?",

@@ -94,14 +94,14 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "8 natural offline voices",
+      "23 natural offline voices across 10 languages",
       "1000+ voices on Premium, including celebrity voices",
     ],
   },
   {
     label: "Languages",
     cells: [
-      "English only (more coming)",
+      "10 languages, each with a native narrator",
       "60+ languages (the Mac app currently supports English US/UK)",
     ],
   },

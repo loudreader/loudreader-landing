@@ -5,7 +5,7 @@
 // FACT PROVENANCE, checked on 2026-07-14:
 //   - LoudReader product claims verified against components/money/site.ts,
 //     the App Store listing, and app/faq/faq-data.ts in this repo (pricing,
-//     free tier, 8 voices, word-by-word highlighting, Project Gutenberg
+//     free tier, 23 studio narrators, word-by-word highlighting, Project Gutenberg
 //     catalog, EPUB/PDF import, iOS 18+/macOS 15+ Apple Silicon).
 //   - DRM claim: LoudReader imports standard EPUB and PDF files. It has no
 //     DRM-decryption capability (app source: BookImportService.swift), so
@@ -98,7 +98,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is it free to turn a book into an audiobook this way?",
-    a: "Yes. The free tier includes unlimited listening on every book, cover to cover, with no word quota and no account, plus 70,000+ free Project Gutenberg classics built in. Premium adds all 8 AI voices, playback speed (0.3x to 3.0x), a sleep timer, soundscapes, and notes & highlights for $7.99/month, $49.99/year, or $199.99 once.",
+    a: "Yes. The free tier includes unlimited listening on every book, cover to cover, with no word quota and no account, plus 70,000+ free Project Gutenberg classics built in. Premium adds all 23 studio narrators, playback speed (0.3x to 3.0x), a sleep timer, soundscapes, and notes & highlights for $7.99/month, $49.99/year, or $199.99 once.",
   },
   {
     q: "How long does a book take to listen to?",

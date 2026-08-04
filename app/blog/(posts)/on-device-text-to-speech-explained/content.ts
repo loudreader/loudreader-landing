@@ -17,7 +17,7 @@
 //     never download at runtime; that is enforced in code, not just policy.
 //   - Apple Silicon requirement: components/money/site.ts REQUIREMENTS
 //     ("iOS 18.0+, iPadOS 18.0+, macOS 15.0+ (Apple Silicon)").
-//   - "8 natural offline voices" and English-only: components/money/site.ts
+//   - Voice count and language spread: components/money/site.ts (VOICES)
 //     PRICING and existing money pages (consistent phrasing).
 // Claims you may NOT make: any specific latency/RTF benchmark numbers, any
 // claim that on-device quality has "matched" cloud quality (say "narrowed"),
@@ -36,7 +36,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What are the trade-offs of on-device TTS?",
-    a: "Three honest ones. Size: the voice models must ship with the app or be downloaded once, so the app is bigger than a thin cloud client. Variety: a cloud service can host thousands of voices in dozens of languages, while an on-device app ships a curated set. LoudReader has 8 natural offline voices, English-only today. Hardware: you need a recent chip with ML acceleration. In exchange you get speech with zero network dependency and total privacy.",
+    a: "Three honest ones. Size: the voice models must ship with the app or be downloaded once, so the app is bigger than a thin cloud client. Variety: a cloud service can host thousands of voices in dozens of languages, while an on-device app ships a curated set. LoudReader has 23 natural offline voices across 10 languages. Hardware: you need a recent chip with ML acceleration. In exchange you get speech with zero network dependency and total privacy.",
   },
   {
     q: "Why does on-device TTS need Apple Silicon on a Mac?",

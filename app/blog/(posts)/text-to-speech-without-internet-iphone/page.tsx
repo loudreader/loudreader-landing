@@ -179,7 +179,7 @@ export default function TextToSpeechWithoutInternetIphoneArticle() {
       <QuestionSection question="What are the honest limits?">
         <p>
           No offline app should pretend otherwise, so: LoudReader&apos;s voices
-          are English-only today, and it reads DRM-free files, so it cannot
+          cover ten languages rather than sixty, and it reads DRM-free files, so it cannot
           read books locked to another store&apos;s app. The free tier gives
           you unlimited listening on every book, cover to cover, with no word
           quota; playback speed control (0.3x to 3.0x) is part of Premium.

@@ -34,6 +34,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is the free voice good enough for cleaning background listening?",
-    a: "The free voice in LoudReader is a natural offline voice, not a robotic old-style TTS. It sounds good enough to follow a story while you vacuum, fold laundry, or scrub dishes. If you want more vocal variety, Premium unlocks all 8 voices.",
+    a: "The free voice in LoudReader is a natural offline voice, not a robotic old-style TTS. It sounds good enough to follow a story while you vacuum, fold laundry, or scrub dishes. If you want more vocal variety, Premium unlocks all 23 studio narrators.",
   },
 ];

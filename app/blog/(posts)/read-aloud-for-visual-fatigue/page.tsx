@@ -174,7 +174,7 @@ export default function ReadAloudForVisualFatigueArticle() {
         </p>
         <p>
           LoudReader uses natural offline voices that are closer to a human
-          narrator than older synthetic speech. You can try all 8 voices free
+          narrator than older synthetic speech. You can try all 23 studio narrators free
           for the first 8 hours of listening. Take the time to find the one
           that feels gentlest to your ears. This choice matters more at 10 PM
           than it does at 10 AM.

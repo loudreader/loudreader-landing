@@ -106,7 +106,7 @@ export default function BestOfflineTextToSpeechAppArticle() {
           the box. You do not need to shop for voices or configure
           anything. Pick a voice, press play. The free tier gives you one
           natural voice and unlimited listening on every book with no word
-          quota. Premium adds all 8 AI voices, playback speed (0.3x to
+          quota. Premium adds all 23 studio narrators, playback speed (0.3x to
           3.0x), sleep timer, ambient soundscapes, and notes and highlights
           for {PRICING.premiumMonthly} or {PRICING.premiumYearly}. A{" "}
           {PRICING.premiumLifetime} option also exists.

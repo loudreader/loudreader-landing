@@ -54,7 +54,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is LoudReader's word highlighting free?",
-    a: "Yes. Word-by-word highlighting works on every book on the free tier, and free listening is unlimited: whole books, cover to cover, with no word quota. What is paid: Premium adds all 8 voices, playback speed control, sleep timer, soundscapes, and notes. After an 8-hour all-voices trial, free users keep one natural offline voice.",
+    a: "Yes. Word-by-word highlighting works on every book on the free tier, and free listening is unlimited: whole books, cover to cover, with no word quota. What is paid: Premium adds all 23 studio narrators, playback speed control, sleep timer, soundscapes, and notes. After an 8-hour all-voices trial, free users keep one natural offline voice.",
   },
   {
     q: "What reading speed should a dyslexic student start with?",

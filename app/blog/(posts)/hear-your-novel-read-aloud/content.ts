@@ -42,7 +42,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I switch voices between listening passes?",
-    a: "Yes, with Premium. LoudReader Premium gives you all 8 AI voices and you can switch at any time, mid-book included. A fresh voice on the second pass makes familiar prose sound new again, which is the point. The free tier includes one voice with unlimited listening.",
+    a: "Yes, with Premium. LoudReader Premium gives you all 23 studio narrators and you can switch at any time, mid-book included. A fresh voice on the second pass makes familiar prose sound new again, which is the point. The free tier includes one voice with unlimited listening.",
   },
   {
     q: "Does the voice handle dialogue and punctuation well?",

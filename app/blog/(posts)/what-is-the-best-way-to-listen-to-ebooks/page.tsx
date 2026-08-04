@@ -111,7 +111,7 @@ export default function WhatIsTheBestWayToListenToEbooksArticle() {
           70,000+ free Project Gutenberg classics, and press play. Natural
           offline voices run fully on-device and private, your library never
           leaves your device. The free tier gives you unlimited listening with
-          one voice. Speed control from 0.3x to 3.0x, all 8 voices, sleep
+          one voice. Speed control from 0.3x to 3.0x, all 23 studio narrators, sleep
           timer, soundscapes, and notes are part of {PRICING.premiumMonthly}{" "}
           Premium.
         </p>

@@ -93,7 +93,7 @@ export default function BestReadAloudAppMacArticle() {
           neural voices that run on the Mac's Neural Engine. The free tier
           includes unlimited listening with a standard voice. Premium
           ({PRICING.premiumMonthly}, {PRICING.premiumYearly}, or{" "}
-          {PRICING.premiumLifetime}) adds all eight voices, speed control from
+          {PRICING.premiumLifetime}) adds all 23 studio narrators, speed control from
           0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes and
           highlights.
         </p>

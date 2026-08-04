@@ -10,7 +10,7 @@
 //   - Background playback / lock screen: Info.plist UIBackgroundModes = ["audio"];
 //     MPRemoteCommandCenter in PlayerService.swift.
 //   - Speed control 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed).
-//   - Voice selection: 8 AI voices, all free for first 8 hours, 1 voice
+//   - Voice selection: 23 studio narrators in 10 languages, all free for first 8 hours, 1 voice
 //     remains free, all 8 on Premium (site.ts PRICING).
 // NO claims about: legal-specific certifications, bar association endorsements,
 // compliance with specific privacy regulations (HIPAA, GDPR). LoudReader is

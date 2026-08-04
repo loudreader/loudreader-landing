@@ -168,7 +168,8 @@ export default function AreTextToSpeechAppsSafeArticle() {
             private text to speech with no cloud
           </Link>
           , and the honest trade-offs are real: fewer voices than the cloud
-          suites, English-only today, and it needs modern Apple hardware. If
+          suites, ten languages rather than sixty, and it needs modern Apple
+          hardware. If
           what you read is sensitive, that trade is the whole decision. And
           if you routinely listen to confidential material, the workflow in{" "}
           <Link

@@ -33,7 +33,7 @@ export default function NaturalSoundingTextToSpeechAppsArticle() {
           leaving your device. It is fully on-device and private, your
           library never leaves your device. The free tier gives you one
           natural voice and unlimited listening; Premium at{" "}
-          {PRICING.premiumMonthly} adds all 8 voices and speed from 0.3x to
+          {PRICING.premiumMonthly} adds all 23 studio narrators and speed from 0.3x to
           3.0x.
         </p>
       </Tldr>

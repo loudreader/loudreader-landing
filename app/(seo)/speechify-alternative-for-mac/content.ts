@@ -77,14 +77,21 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "8 natural offline voices",
+      "23 natural offline voices across 10 languages",
       "1000+ voices on Premium, including celebrity voices",
+    ],
+  },
+  {
+    label: "Voice cloning",
+    cells: [
+      "On device. About thirty seconds of your own speech, processed on your phone, never uploaded.",
+      "In the cloud. Your recording is uploaded and processed on their servers.",
     ],
   },
   {
     label: "Languages",
     cells: [
-      "English only (more coming)",
+      "10 languages, each with a native narrator",
       "60+ languages (the Mac app currently supports English US/UK)",
     ],
   },

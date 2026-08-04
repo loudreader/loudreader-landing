@@ -81,13 +81,13 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "8 natural offline voices (modern neural TTS)",
+      "23 natural offline voices across 10 languages (modern neural TTS)",
       "200+ premium voices in 30 languages, from classic TTS vendors such as Acapela",
     ],
   },
   {
     label: "Languages",
-    cells: ["English only (more coming)", "30 languages"],
+    cells: ["10 languages, each with a native narrator", "30 languages"],
   },
   {
     label: "Formats",

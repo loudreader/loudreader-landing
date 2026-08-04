@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "LoudReader - Every text is an audiobook.",
     template: "%s · LoudReader",
   },
-  description: "Natural AI voices read any book aloud with word-by-word highlighting. Unlimited listening, free. No limits, no quotas, no account. Import any EPUB or PDF, or browse 70,000+ free classics. Completely offline and private.",
+  description: "23 natural AI narrators in 10 languages read any book aloud with word-by-word highlighting — or clone your own voice on device. Unlimited listening, free. No quotas, no account. Import any EPUB or PDF, or browse 70,000+ free classics. Completely offline and private.",
   applicationName: "LoudReader",
   openGraph: {
     type: "website",

@@ -33,6 +33,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does the free tier actually let me listen to whole books?",
-    a: "Yes. LoudReader's free tier is unlimited listening on every book, cover to cover. No word quota, no time limit, no account required. Premium adds all 8 voices, speed control (0.3x to 3.0x), sleep timer, soundscapes, and notes.",
+    a: "Yes. LoudReader's free tier is unlimited listening on every book, cover to cover. No word quota, no time limit, no account required. Premium adds all 23 studio narrators, speed control (0.3x to 3.0x), sleep timer, soundscapes, and notes.",
   },
 ];

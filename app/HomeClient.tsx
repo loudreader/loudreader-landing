@@ -74,7 +74,6 @@ const blurMap: Record<string, string> = {
   "/screen-reading-style.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAAACXBIWXMAABYlAAAWJQFJUiTwAAABs0lEQVR4nG2R7W5aMQyGz72vcAbsMtYBoqhcR9eiUdbewjjKl51PO8lBUw6V+qfWq/zIE/u1na7vZ6vV4sdqufjez+d38/ld388Wy75fzmaLb91ms97vHw6Hx4fddr2+36zvd7vt42G/329/bX52x+PL6/n17e3v6XR8fn56eX46nY7v7+fz+c/x+LvTxiCCtRZBKyW0EtZCij74dtM5ZxEBANojRGvRORtjoBSZYmctKiWHYRBCKKW01kopAPDeM6WGpZT/phiGyzBcLpeLEAIRUoqdswjNVUoplBRyklbSWojRN4xgAMzNMqV4E03qnEPEhr13TKmWfFPJnDl1FkFKMQwDIjLT9Tper2Mdx1wKMbfiRisphbVIlGqt4ziWOnIukSYMYIzR3lmiVKbKnDMRh0StOBgNYGLwzFQyN+PJmYhatkVwzqYUc+Zb9mdrAEZJqZQKwTdW63VsUWvJmTs/mX9skbmUMtGGS+a2VKO1MSaEUHKuteE6jqUU5ikbwCBAaK19ZH8OFnz7a2cxxsBMeeqcc023wWJwwdvgbQyOUmCKmRNzSpRiih0lTylM5xf6DxsqXNbfF5dpAAAAAElFTkSuQmCC",
   "/screen-home.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAAB9ElEQVR4nH1STWsTURS9933MTCZTG5pgxRChCF1ZuhFc2YX0x7j1B7jzb4h/wKUiFAU3pQVpoUJTUqvUJKYmzUfn483Xm/eezGRTETyryzv33cM952Kaivl87jiO67rGGKgQx/FgMGy372OSREVRkApLDgC0UkEYcs4JItbcOqMUsSRMBUKpbXGtFEuEOD85eLD12CD3HFqvsaoJUtv2ajm5Hg7fvHo5uxoKfyyzGJEgEqnp632YRAQnv0cnR0dPnu5QyjjnAFCKIPoJuCzH8XiklEqTtNlq2Y5jtMYSIKXSSFkQiuHI51wns24qFt5a58f3c2+lsbm1c3x4wJKcH38drHoy/vlx7/PBs93dL4f7d5ve8xcPL7qnrHfWfbf3dnOjc3l60e2Nm+1Ba60xmV5/eP+p/63HwpsrK59hvvpoe9upe+3Oxq/BJbuzMg1u+vMAIxHFGRgZaW2M0YyxWq1GKaOUZFnKlKFhYTVYJqUkhCmlLcuuNjQAholgCiJcIL23vk4pBQBVZIVMq+UR41gsUt6w89w4NtMIUBhiocy0ZZGcSSkzEeVoxVmqrcpRqZjn5GlkuRyFCMoEKqnKUSzLKj4EZLdj/hf/4wCAlfYDKA0ElyMrKWOQ3DqP/kyHaemLMSbLMt/3lzUuz+/v3+XLcuofeWwbA7czL28AAAAASUVORK5CYII=",
   "/screen-home-dark.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAACEUlEQVR4nD2STU8UQRCGu7qre3pmdgb2CxdcI0FjwMSAErwIiYnxFxjv3v0X/jzPJlyMQU0AgZ1dYXdmdrq7yuyE+Byrk/p43obDw8M8z5umqesaAESLtXY0Gl1dXSEAVFVFRP/fhBBN0xRFwczIzFVZKVRtnYUAAPDeV1WptUGQMH68+fP3hEFKKV05d8uamHWSo5jLTho/2RnGRmXWGKDYRgDASr/7/CXujmBv77l3SwZEhb4F2iVM1lWhxuFwoFqms7+ucSDFarwQxE53Ovhsd/fg1fHF+Zltfgy66fdfBSqOkzzKHjWLO3yw+dSmY20mdxdXp6cziSY0ZW89Pnn/uiwsfPj4yZvY1bdn375ScArl26Odyz8XyfqLh/0E9vdfEpHzPokNMy/mt/1u7pyrlpzEGgMFL9BGklkSUSfr3UzvQgir8wRIIdHkA2ahlELUUipmEQJ5H1ZS++uZRg/J4Ob6OrTm09RKmRARIuLNZArxWphfMsbknFj1QeErRqtdLSWAXcUm40gbRK11bAwRGQVEjErJZjGz1pCvtV45Y/ZZllKgKLGYr3WaZVOWVRvlfaYhBCIiJvnmZH9za2CjNEnSKIqNiYtitrExOj4+6fWGcHR0UM6rIIxgquuKWRBRv9/P82wyKWA83hZM+dZ2fVu4ci6EiFqm0+nKhJQghFpcnzPffzfnnPceEYUQ/wCkWw/5jRS8JgAAAABJRU5ErkJggg==",
-  "/screen-campaign.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAIAAAB2RJoKAAABzUlEQVR4nEWSTW8TMRCGZ8Zje7Ok2W2ighIJUYUD5/4C/v+JMwIOFAqFpPnoZjeOvwbtLoj3ZI81r+aZ1+hcu91uy0EwSES6tnv48bBcrrBpDjFGYwwSnbtORMqyFBHvvdaavfcggAIS0/PxWUQmtgAkow0p4qf7Y/v19LKaftl///Dt4820fv/uLgTat+f6dsaGjalmTTgFTNZaZNpfTqvqFWqtFDO/YBG1KqvbyRv7eXpTX79dvvYupM7lieDjz1/Jg9XaBaeIREApZUifvVcG8Hxuma2AeHfp2jalfFVdGWtBIEbPRMSsvPfOX3bHfU5ZW22M0VqLRB5XwcyziTHLlVIKEZVSf+sppeAdIiGCIhTJ0tsGEck5MQB1QTX7RxEIIczn8+l0iogAEKOQi/Rpo6yxzFzXdVEUIqIGAQCemiMRAVIvREAQ6XMBwJwib7abU9Os12tAlXL/MobWtyJi07kucm5/hxAHS8o5LxYLJD1wo5SGWF97HwCEB/XQvTkwSjQIQH0EKcaUYu+dEwBkSUykkNRutxuJq6oqimIE8/7CI34xKQlhKEoIwwcZVtQPmXO+f0qNy+PZOXc8HHLurzgypAz/uv9TAcAfccElLYw8qioAAAAASUVORK5CYII=",
 };
 
 /* ─── Interactive Phone with tilt + hover crossfade ─── */
@@ -234,6 +233,7 @@ export default function Home() {
   const s6 = useReveal();
   const s7 = useReveal();
   const s8 = useReveal();
+  const s9 = useReveal();
 
   const reveal = (r: { ref: React.RefObject<HTMLDivElement | null>; visible: boolean }) =>
     `section-reveal ${r.visible ? "visible" : "not-visible"}`;
@@ -375,12 +375,35 @@ export default function Home() {
                 Voices worth<br />listening to.
               </h2>
               <p className="text-lg text-gray-400 leading-relaxed max-w-md mx-auto lg:mx-0 mb-3">
-                Eight distinct AI voices. All running entirely on your device.
+                23 studio narrators across 10 languages. Eleven of them in English. All running entirely on your device.
+              </p>
+              <p className="text-lg text-gray-400 leading-relaxed max-w-md mx-auto lg:mx-0 mb-3">
+                Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish books get a narrator who actually speaks the language — not an English voice with an accent. They appear in the picker once you have a book in that language.
               </p>
               <p className="text-sm text-gray-500 max-w-md mx-auto lg:mx-0">
                 No internet. No data leaves your phone.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* ══════════ VOICE CLONING ══════════ */}
+        <section className="w-full bg-white overflow-hidden" style={{ contentVisibility: "auto" }}>
+          <div ref={s9.ref} className={`${reveal(s9)} max-w-3xl mx-auto px-6 py-24 md:py-32 text-center`}>
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gray-900/5 mb-8">
+              <svg className="w-8 h-8 text-gray-700" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+              </svg>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.05]">
+              Or read it<br />in your own voice.
+            </h2>
+            <p className="text-lg text-gray-400 leading-relaxed max-w-xl mx-auto mb-4">
+              Read one paragraph aloud — about thirty seconds — and LoudReader builds a narrator out of it. Then any book in your library can be read in that voice.
+            </p>
+            <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto font-medium">
+              The recording never leaves your phone. Neither does the voice. Delete it and the files go with it.
+            </p>
           </div>
         </section>
 
@@ -433,13 +456,13 @@ export default function Home() {
                 Never short of<br />something to read.
               </h2>
               <p className="text-lg text-gray-500 max-w-lg mx-auto leading-relaxed">
-                Over 100 hand-picked classics, grouped into themed reading campaigns. Pull to shuffle the shelf and find your next book. All free, all offline.
+                Over 100 hand-picked classics sit on the home shelf. Pull down to shuffle it and deal a new hand, or hit Surprise Me and start listening to something you never would have picked. All free, all offline.
               </p>
             </div>
             <div className="flex justify-center items-end gap-3 md:gap-5">
               <Phone src="/screen-home-dark.png" alt="Home with classics shelf" size="sm" light className="opacity-70 -rotate-1" delay={0.1} tilt={false} onClick={() => setLightbox("/screen-home-dark.png")} />
-              <Phone src="/screen-campaign.png" alt="Reading campaign" delay={0} onClick={() => setLightbox("/screen-campaign.png")} />
-              <Phone src="/screen-home.png" alt="Home tab" size="sm" light className="opacity-70 rotate-1" delay={0.1} tilt={false} onClick={() => setLightbox("/screen-home.png")} />
+              <Phone src="/screen-home.png" alt="Home tab" delay={0} onClick={() => setLightbox("/screen-home.png")} />
+              <Phone src="/screen-library-light.png" alt="Library" size="sm" light className="opacity-70 rotate-1" delay={0.1} tilt={false} onClick={() => setLightbox("/screen-library-light.png")} />
             </div>
           </div>
         </section>
@@ -491,7 +514,7 @@ export default function Home() {
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited listening, cover to cover</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited library, import all you like</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Every voice free for your first 8 hours</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>100+ curated classics via Campaigns</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>100+ curated classics, plus all of Project Gutenberg</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Night mode, chapters, background play</span></li>
                 </ul>
               </div>
@@ -505,7 +528,8 @@ export default function Home() {
                 <p className="text-sm text-gray-400 mb-1">First month free. Cancel anytime.</p>
                 <p className="text-[13px] text-gray-400 mb-6">or $49.99/year &middot; $199.99 once, yours for life</p>
                 <ul className="space-y-3 text-[15px] text-gray-500">
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>All 8 AI voices, for good</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>All 23 studio narrators, 10 languages, for good</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Clone your own voice, on device</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Variable speed (0.3x to 3.0x)</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Sleep timer to drift off to</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Ambient soundscapes</span></li>
