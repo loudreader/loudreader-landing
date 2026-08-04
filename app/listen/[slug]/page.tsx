@@ -4,6 +4,8 @@ import Link from "next/link";
 import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import StoreCta from "@/components/money/StoreCta";
 import BookCover from "@/components/listen/BookCover";
+import SamplePlayer from "@/components/listen/SamplePlayer";
+import { bookSample } from "@/data/audio-samples";
 import { APP_NAME, SITE_URL } from "@/components/money/site";
 import {
   booksByAuthor,
@@ -66,6 +68,9 @@ export default async function ListenBookPage({
   const entity = getBookEntity(book.slug);
   const pageUrl = `${SITE_URL}/listen/${book.slug}`;
   const paragraphs = book.synopsis.split(/\n\n+/);
+  // Only five of the hundred books have a rendered sample so far; the block
+  // simply does not appear for the rest rather than promising silence.
+  const sample = bookSample(book.slug);
 
   /*
    * Verified entity links only. Every URL below was checked against Wikidata
@@ -113,6 +118,20 @@ export default async function ListenBookPage({
     url: pageUrl,
     // Project Gutenberg source plus the work's own verified Wikipedia/Wikidata.
     sameAs: [gutenbergUrl(book), ...workSameAs],
+    // The rendered opening, when one exists. A real file with a real duration
+    // — never emitted for a book whose sample has not been rendered.
+    ...(sample
+      ? {
+          audio: {
+            "@type": "AudioObject",
+            name: `${book.title} — opening, read aloud`,
+            contentUrl: `${SITE_URL}${sample.file}`,
+            encodingFormat: "audio/mpeg",
+            duration: `PT${Math.round(sample.seconds)}S`,
+            isAccessibleForFree: true,
+          },
+        }
+      : {}),
   };
 
   const breadcrumbJsonLd = {
@@ -208,6 +227,14 @@ export default async function ListenBookPage({
           </div>
         </div>
       </header>
+
+      {sample ? (
+        <SamplePlayer
+          src={sample.file}
+          title={book.title}
+          seconds={sample.seconds}
+        />
+      ) : null}
 
       <section className="rounded-2xl border border-gray-200/70 bg-gray-50/70 p-6 md:p-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
         <div>

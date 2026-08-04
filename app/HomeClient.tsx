@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useRef, useState, useEffect, useCallback } from "react";
 
+import NarratorPlayer from "@/components/listen/NarratorPlayer";
+
 /* ─── Touch detection ─── */
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -383,6 +385,7 @@ export default function Home() {
               <p className="text-sm text-gray-500 max-w-md mx-auto lg:mx-0">
                 No internet. No data leaves your phone.
               </p>
+              <NarratorPlayer />
             </div>
           </div>
         </section>
