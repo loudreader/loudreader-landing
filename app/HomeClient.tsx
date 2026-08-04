@@ -528,7 +528,7 @@ export default function Home() {
                 <p className="text-sm text-gray-400 mb-1">First month free. Cancel anytime.</p>
                 <p className="text-[13px] text-gray-400 mb-6">or $49.99/year &middot; $199.99 once, yours for life</p>
                 <ul className="space-y-3 text-[15px] text-gray-500">
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>All 23 studio narrators, 10 languages, for good</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>All 23 studio narrators, 10 languages</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Clone your own voice, on device</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Variable speed (0.3x to 3.0x)</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Sleep timer to drift off to</span></li>
