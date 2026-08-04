@@ -22,8 +22,11 @@ export const DIFFERENTIATORS = {
 
 /**
  * The voice roster, read out of the shipping app rather than remembered.
- * Source of truth: LoudReader/Engines/ChatterboxVoice.swift (roster + language
- * map) and KittenVoice.swift (free tier). Audited 2026-08-04 against 1.06.
+ * Source of truth: the studio voice enum in the app (roster + language map)
+ * and the free-tier voice enum. Audited 2026-08-04 against 1.06.
+ *
+ * Engine and model names are deliberately absent from this repo: nothing that
+ * ships to a reader should name the models behind the voices.
  *
  * Counting rule: 23 = 11 English + 4 Spanish + one each for German, French,
  * Italian, Dutch, Polish, Portuguese and Danish/Swedish. Two QA references

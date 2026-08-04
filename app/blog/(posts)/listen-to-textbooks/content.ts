@@ -9,8 +9,8 @@
 //     (highlightWord(for:) driven by the speech engine's word-boundary
 //     callbacks; wordHighlightWillChange publisher consumed by
 //     ContinuousReaderView.swift).
-//   - Offline playback: TTS voices run on-device (CoreMLKokoroTTSEngine /
-//     Kitten engines in the app source); no network needed for narration.
+//   - Offline playback: TTS voices run on-device (the Core ML synthesis
+//     engines in the app source); no network needed for narration.
 //   - Background playback with the screen locked: Info.plist declares
 //     UIBackgroundModes = ["audio"]; lock-screen controls via
 //     MPRemoteCommandCenter in PlayerService.swift.

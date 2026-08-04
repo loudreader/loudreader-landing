@@ -7,11 +7,10 @@
 //     higher-quality versions offered as downloads in Settings), with no
 //     per-voice or per-iOS-version specifics that could go stale.
 //   - LoudReader voices ship INSIDE the app, no post-install voice download:
-//     LoudReader/Engines/KokoroAneModelSeeder.swift (app-bundled model set is
-//     copied into the local cache; `DownloadUtils.enforceOffline = true` so
-//     the TTS engine can never touch the network) and
-//     LoudReader/Engines/KittenSynthesisBackend.swift (free-tier voice models
-//     loaded from Bundle.main).
+//     the model seeder copies the app-bundled model set into the local cache
+//     with `DownloadUtils.enforceOffline = true`, so the TTS engine can never
+//     touch the network, and the free-tier synthesis backend loads its voice
+//     models from Bundle.main.
 //   - Background playback with the screen locked + lock-screen controls:
 //     LoudReader/Info.plist (UIBackgroundModes = ["audio"]) and
 //     LoudReader/PlayerService.swift (MPRemoteCommandCenter: play, pause,

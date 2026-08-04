@@ -22,7 +22,7 @@ shipped, so publishing today would make the site wrong in the other direction.
 
 ## The verified roster
 
-`LoudReader/Engines/ChatterboxVoice.swift`:
+Read out of the studio voice enum in the app repo:
 
 - **English — 11**: James, Nora, Clara, Emma, Alice, Grace, Ivy, Oliver, Henry,
   Arthur, Hugo
@@ -34,11 +34,14 @@ shipped, so publishing today would make the site wrong in the other direction.
 `David` and `Golden` exist in the enum as QA references, are filtered by
 `isInternal`, and are **not** counted.
 
+**Engine and model names never appear on the site.** Not in copy, not in
+JSON-LD, not in source-note comments. This branch also strips the ones that had
+accumulated in blog source notes. A reader hears voices, not model names.
+
 Two facts that the copy has to respect, both from the same file:
 
 1. **Studio narrators are Premium-only.** `availableVoices(isPremium:)` returns
-   `[]` for a free user. The free tier is Kitten (`rio`/`stella`), one voice
-   kept after the 8-hour trial.
+   `[]` for a free user. The free tier keeps one voice after the 8-hour trial.
 2. **The picker is lazy by language.** A Polish narrator appears once a Polish
    book is in the library. So "23 narrators" is true of the roster, not of what
    any one user sees in a list — the copy says so wherever it could mislead.
@@ -109,7 +112,8 @@ checked in the browser for the new strings.
 ## Before this goes live
 
 1. **Ship 1.06 first.** These claims describe a build that is not in the App
-   Store. Merging this branch before the release lands makes the site wrong.
+   Store — as of 2026-08-04 the release is expected within the week. Merging
+   this branch before it lands makes the site wrong in the other direction.
    The order is: App Store release → merge `voices-23-copy` → deploy.
 2. **Screenshots are stale and now contradict the copy.**
    `public/screen-voices-premium.png` shows the old picker sitting directly

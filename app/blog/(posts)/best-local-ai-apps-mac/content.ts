@@ -17,9 +17,9 @@
 //     paid tier. Downloading models requires a connection.
 //   - LoudReader claims verified against the app source (LoudReader_mac repo):
 //     voice models bundled in-app and executed locally via Core ML on the
-//     Apple Neural Engine (Engines/KokoroAneModelSeeder.swift with
-//     DownloadUtils.enforceOffline = true; Engines/KittenSynthesisBackend.swift
-//     loads from Bundle.main), and components/money/site.ts (pricing,
+//     Apple Neural Engine (the model seeder sets
+//     DownloadUtils.enforceOffline = true; the synthesis backends load from
+//     Bundle.main), and components/money/site.ts (pricing,
 //     requirements, differentiators).
 //   - "Why Apple Silicon" reasoning: ML accelerator (Neural Engine) + unified
 //     memory are Apple's published architecture; no benchmark numbers are

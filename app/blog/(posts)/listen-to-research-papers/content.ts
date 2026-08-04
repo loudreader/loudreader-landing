@@ -15,9 +15,9 @@
 //         aloud as text. Equations are either skipped (when they are images,
 //         since figures are extracted separately, see extractFigures) or read
 //         as garbled symbols (when they are glyph text). Stated honestly.
-//   - Offline/on-device playback, bundled voices: KokoroAneModelSeeder.swift
-//     (bundled models, DownloadUtils.enforceOffline = true),
-//     KittenSynthesisBackend.swift (Bundle.main). Background audio plus lock
+//   - Offline/on-device playback, bundled voices: the model seeder ships
+//     bundled models with DownloadUtils.enforceOffline = true, and the
+//     synthesis backends load from Bundle.main. Background audio plus lock
 //     screen: Info.plist UIBackgroundModes and PlayerService.swift.
 //   - Reader follows the sentence being read on screen:
 //     ContinuousReaderController.swift (reader follows the read sentence,

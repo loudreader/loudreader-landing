@@ -11,10 +11,10 @@
 //     numbers.
 //   - LoudReader as the working example: voice models are BUNDLED in the app
 //     and executed locally via Core ML with the Apple Neural Engine.
-//     LoudReader/Engines/KokoroAneModelSeeder.swift (bundled model set,
-//     `DownloadUtils.enforceOffline = true`, ANE model directory) and
-//     LoudReader/Engines/KokoroAneSynthesisBackend.swift. The engine can
-//     never download at runtime; that is enforced in code, not just policy.
+//     The model seeder ships a bundled model set with
+//     `DownloadUtils.enforceOffline = true` into the ANE model directory, and
+//     the synthesis backend reads from there. The engine can never download at
+//     runtime; that is enforced in code, not just policy.
 //   - Apple Silicon requirement: components/money/site.ts REQUIREMENTS
 //     ("iOS 18.0+, iPadOS 18.0+, macOS 15.0+ (Apple Silicon)").
 //   - Voice count and language spread: components/money/site.ts (VOICES)

@@ -22,7 +22,7 @@
 //     maxRate 3.0). Speed control is a Premium feature; the free tier plays
 //     at normal speed (site.ts PRICING).
 //   - Voices cover 10 languages (11 English narrators of 23): consistent with the app's voice
-//     catalog (Kokoro/Kitten English voices) and the phrasing already used
+//     catalog and the phrasing already used
 //     on money pages ("10 languages, each with a native narrator").
 //   - 70,000+ free Project Gutenberg classics built in: phrasing consistent
 //     with app/(seo)/turn-any-book-into-an-audiobook (count Gutenberg
