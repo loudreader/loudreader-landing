@@ -68,8 +68,8 @@ export default async function ListenBookPage({
   const entity = getBookEntity(book.slug);
   const pageUrl = `${SITE_URL}/listen/${book.slug}`;
   const paragraphs = book.synopsis.split(/\n\n+/);
-  // Only five of the hundred books have a rendered sample so far; the block
-  // simply does not appear for the rest rather than promising silence.
+  // Every catalog book has a rendered sample; the block appears for all of
+  // them and is only absent if a slug is ever missing from BOOK_SAMPLES.
   const sample = bookSample(book.slug);
 
   /*

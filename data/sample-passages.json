@@ -1,0 +1,802 @@
+[
+  {
+    "slug": "moby-dick",
+    "gutenberg_id": 2701,
+    "title": "Moby Dick; Or, The Whale",
+    "author": "Herman Melville",
+    "text": "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation.",
+    "words": 56
+  },
+  {
+    "slug": "pride-and-prejudice",
+    "gutenberg_id": 1342,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "text": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.",
+    "words": 71
+  },
+  {
+    "slug": "romeo-and-juliet",
+    "gutenberg_id": 1513,
+    "title": "Romeo and Juliet",
+    "author": "William Shakespeare",
+    "text": "Two households, both alike in dignity, in fair Verona, where we lay our scene, from ancient grudge break to new mutiny, where civil blood makes civil hands unclean. From forth the fatal loins of these two foes a pair of star-crossed lovers take their life; whose misadventured piteous overthrows doth with their death bury their parents' strife. The fearful passage of their death-marked love, and the continuance of their parents' rage, which, but their children's end, nought could remove, is now the two hours' traffic of our stage.",
+    "words": 88
+  },
+  {
+    "slug": "a-room-with-a-view",
+    "gutenberg_id": 2641,
+    "title": "A Room with a View",
+    "author": "E. M. Forster",
+    "text": "“The Signora had no business to do it,” said Miss Bartlett, “no business at all. She promised us south rooms with a view close together, instead of which here are north rooms, looking into a courtyard, and a long way apart. Oh, Lucy!”",
+    "words": 43
+  },
+  {
+    "slug": "crime-and-punishment",
+    "gutenberg_id": 2554,
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoyevsky",
+    "text": "On an exceptionally hot evening early in July a young man came out of the garret in which he lodged in S. Place and walked slowly, as though in hesitation, towards K. bridge. He had successfully avoided meeting his landlady on the staircase. His garret was under the roof of a high, five-storied house and was more like a cupboard than a room. The landlady who provided him with garret, dinners, and attendance, lived on the floor below, and every time he went out he was obliged to pass her kitchen, the door of which invariably stood open.",
+    "words": 98
+  },
+  {
+    "slug": "alices-adventures-in-wonderland",
+    "gutenberg_id": 11,
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll",
+    "text": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, “and what is the use of a book,” thought Alice “without pictures or conversations?”",
+    "words": 57
+  },
+  {
+    "slug": "the-count-of-monte-cristo",
+    "gutenberg_id": 1184,
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "text": "On the 24th of February, 1815, the look-out at Notre-Dame de la Garde signalled the three-master, the Pharaon, from Smyrna, Trieste, and Naples. As usual, a pilot put off immediately, and rounding the Château d'If, got on board the vessel between Cape Morgiou and Rion island. Immediately, and according to custom, the ramparts of Fort Saint-Jean were covered with spectators; it is always an event at Marseilles for a ship to come into port.",
+    "words": 74
+  },
+  {
+    "slug": "middlemarch",
+    "gutenberg_id": 145,
+    "title": "Middlemarch",
+    "author": "George Eliot",
+    "text": "Miss Brooke had that kind of beauty which seems to be thrown into relief by poor dress. Her hand and wrist were so finely formed that she could wear sleeves not less bare of style than those in which the Blessed Virgin appeared to Italian painters; and her profile as well as her stature and bearing seemed to gain the more dignity from her plain garments, which by the side of provincial fashion gave her the impressiveness of a fine quotation from the Bible,—or from one of our elder poets,—in a paragraph of to-day's newspaper.",
+    "words": 95
+  },
+  {
+    "slug": "frankenstein",
+    "gutenberg_id": 84,
+    "title": "Frankenstein; or, the Modern Prometheus",
+    "author": "Mary Wollstonecraft Shelley",
+    "text": "You will rejoice to hear that no disaster has accompanied the commencement of an enterprise which you have regarded with such evil forebodings. I arrived here yesterday, and my first task is to assure my dear sister of my welfare and increasing confidence in the success of my undertaking. I am already far north of London, and as I walk in the streets of Petersburgh, I feel a cold northern breeze play upon my cheeks, which braces my nerves and fills me with delight.",
+    "words": 84
+  },
+  {
+    "slug": "the-blue-castle",
+    "gutenberg_id": 67979,
+    "title": "The Blue Castle",
+    "author": "L. M. Montgomery",
+    "text": "If it had not rained on a certain May morning Valancy Stirling’s whole life would have been entirely different. She would have gone, with the rest of her clan, to Aunt Wellington’s engagement picnic and Dr. Trent would have gone to Montreal. But it did rain and you shall hear what happened to her because of it.",
+    "words": 57
+  },
+  {
+    "slug": "the-complete-works-of-william-shakespeare",
+    "gutenberg_id": 100,
+    "title": "The Complete Works of William Shakespeare",
+    "author": "William Shakespeare",
+    "text": "From fairest creatures we desire increase, that thereby beauty's rose might never die, but as the riper should by time decease, his tender heir might bear his memory: but thou contracted to thine own bright eyes, feed'st thy light's flame with self-substantial fuel, making a famine where abundance lies, thyself thy foe, to thy sweet self too cruel. Thou that art now the world's fresh ornament, and only herald to the gaudy spring, within thine own bud buriest thy content, and, tender churl, mak'st waste in niggarding.",
+    "words": 87
+  },
+  {
+    "slug": "the-adventures-of-sherlock-holmes",
+    "gutenberg_id": 1661,
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "text": "To Sherlock Holmes she is always _the_ woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position.",
+    "words": 91
+  },
+  {
+    "slug": "jane-eyre",
+    "gutenberg_id": 1260,
+    "title": "Jane Eyre: An Autobiography",
+    "author": "Charlotte Brontë",
+    "text": "There was no possibility of taking a walk that day. We had been wandering, indeed, in the leafless shrubbery an hour in the morning; but since dinner (Mrs. Reed, when there was no company, dined early) the cold winter wind had brought with it clouds so sombre, and a rain so penetrating, that further outdoor exercise was now out of the question.",
+    "words": 62
+  },
+  {
+    "slug": "the-mysteries-of-udolpho",
+    "gutenberg_id": 3268,
+    "title": "The Mysteries of Udolpho",
+    "author": "Ann Radcliffe",
+    "text": "On the pleasant banks of the Garonne, in the province of Gascony, stood, in the year 1584, the château of Monsieur St. Aubert. From its windows were seen the pastoral landscapes of Guienne and Gascony stretching along the river, gay with luxuriant woods and vine, and plantations of olives. To the south, the view was bounded by the majestic Pyrenees, whose summits, veiled in clouds, or exhibiting awful forms, seen, and lost again, as the partial vapours rolled along, were sometimes barren, and gleamed through the blue tinge of air.",
+    "words": 90
+  },
+  {
+    "slug": "dracula",
+    "gutenberg_id": 345,
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "text": "_3 May. Bistritz._--Left Munich at 8:35 P. M., on 1st May, arriving at Vienna early next morning; should have arrived at 6:46, but train was an hour late. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the little I could walk through the streets. I feared to go very far from the station, as we had arrived late and would start as near the correct time as possible.",
+    "words": 77
+  },
+  {
+    "slug": "little-women",
+    "gutenberg_id": 37106,
+    "title": "Little Women; Or, Meg, Jo, Beth, and Amy",
+    "author": "Louisa May Alcott",
+    "text": "“Christmas won't be Christmas without any presents,” grumbled Jo, lying on the rug. “It's so dreadful to be poor!” sighed Meg, looking down at her old dress. “I don't think it's fair for some girls to have plenty of pretty things, and other girls nothing at all,” added little Amy, with an injured sniff. “We've got father and mother and each other,” said Beth contentedly, from her corner.",
+    "words": 68
+  },
+  {
+    "slug": "carmen",
+    "gutenberg_id": 2465,
+    "title": "Carmen",
+    "author": "Prosper Mérimée",
+    "text": "I had always suspected the geographical authorities did not know what they were talking about when they located the battlefield of Munda in the county of the Bastuli-Poeni, close to the modern Monda, some two leagues north of Marbella.",
+    "words": 39
+  },
+  {
+    "slug": "the-strange-case-of-dr-jekyll-and-mr-hyde",
+    "gutenberg_id": 43,
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+    "author": "Robert Louis Stevenson",
+    "text": "Mr. Utterson the lawyer was a man of a rugged countenance that was never lighted by a smile; cold, scanty and embarrassed in discourse; backward in sentiment; lean, long, dusty, dreary and yet somehow lovable. At friendly meetings, and when the wine was to his taste, something eminently human beaconed from his eye; something indeed which never found its way into his talk, but which spoke not only in these silent symbols of the after-dinner face, but more often and loudly in the acts of his life.",
+    "words": 87
+  },
+  {
+    "slug": "twenty-years-after",
+    "gutenberg_id": 1259,
+    "title": "Twenty Years After",
+    "author": "Alexandre Dumas",
+    "text": "In a splendid chamber of the Palais Royal, formerly styled the Palais Cardinal, a man was sitting in deep reverie, his head supported on his hands, leaning over a gilt and inlaid table which was covered with letters and papers. Behind this figure glowed a vast fireplace alive with leaping flames; great logs of oak blazed and crackled on the polished brass andirons whose flicker shone upon the superb habiliments of the lonely tenant of the room, which was illumined grandly by twin candelabra rich with wax-lights.",
+    "words": 87
+  },
+  {
+    "slug": "the-king-in-yellow",
+    "gutenberg_id": 8492,
+    "title": "The King in Yellow",
+    "author": "Robert W. Chambers",
+    "text": "Towards the end of the year 1920 the Government of the United States had practically completed the programme, adopted during the last months of President Winthrop's administration. The country was apparently tranquil. Everybody knows how the Tariff and Labour questions were settled. The war with Germany, incident on that country's seizure of the Samoan Islands, had left no visible scars upon the republic, and the temporary occupation of Norfolk by the invading army had been forgotten in the joy over repeated naval victories.",
+    "words": 83
+  },
+  {
+    "slug": "meditations",
+    "gutenberg_id": 2680,
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "text": "Of my grandfather Verus I have learned to be gentle and meek, and to refrain from all anger and passion. From the fame and memory of him that begot me I have learned both shamefastness and manlike behaviour. Of my mother I have learned to be religious, and bountiful; and to forbear, not only to do, but to intend any evil; to content myself with a spare diet, and to fly all such excess as is incidental to great wealth.",
+    "words": 80
+  },
+  {
+    "slug": "the-secret-of-chimneys",
+    "gutenberg_id": 65238,
+    "title": "The Secret of Chimneys",
+    "author": "Agatha Christie",
+    "text": "Castle’s Select Tour, represented by seven depressed-looking females and three perspiring males, looked on with considerable interest. Evidently their Mr. Cade had met an old friend. They all admired Mr. Cade so much, his tall lean figure, his sun-tanned face, the light-hearted manner with which he settled disputes and cajoled them all into good temper. This friend of his now—surely rather a peculiar-looking man. About the same height as Mr. Cade, but thickset and not nearly so good-looking.",
+    "words": 78
+  },
+  {
+    "slug": "sense-and-sensibility",
+    "gutenberg_id": 21839,
+    "title": "Sense and Sensibility",
+    "author": "Jane Austen",
+    "text": "The family of Dashwood had long been settled in Sussex. Their estate was large, and their residence was at Norland Park, in the centre of their property, where, for many generations, they had lived in so respectable a manner as to engage the general good opinion of their surrounding acquaintance. The late owner of this estate was a single man, who lived to a very advanced age, and who for many years of his life, had a constant companion and housekeeper in his sister.",
+    "words": 84
+  },
+  {
+    "slug": "the-extraordinary-adventures-of-arsene-lupin",
+    "gutenberg_id": 6133,
+    "title": "The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar",
+    "author": "Maurice Leblanc",
+    "text": "It was a strange ending to a voyage that had commenced in a most auspicious manner. The transatlantic steamship ‘La Provence’ was a swift and comfortable vessel, under the command of a most affable man. The passengers constituted a select and delightful society. The charm of new acquaintances and improvised amusements served to make the time pass agreeably. We enjoyed the pleasant sensation of being separated from the world, living, as it were, upon an unknown island, and consequently obliged to be sociable with each other.",
+    "words": 86
+  },
+  {
+    "slug": "the-lady-of-the-lake",
+    "gutenberg_id": 3011,
+    "title": "The Lady of the Lake",
+    "author": "Walter Scott",
+    "text": "The stag at eve had drunk his fill, where danced the moon on Monan's rill, and deep his midnight lair had made in lone Glenartney's hazel shade; but when the sun his beacon red had kindled on Benvoirlich's head, the deep-mouthed bloodhound's heavy bay resounded up the rocky way, and faint, from farther distance borne, were heard the clanging hoof and horn.",
+    "words": 62
+  },
+  {
+    "slug": "the-confessions-of-st-augustine",
+    "gutenberg_id": 3296,
+    "title": "The Confessions of St. Augustine",
+    "author": "Saint Augustine of Hippo",
+    "text": "Great art Thou, O Lord, and greatly to be praised; great is Thy power, and Thy wisdom infinite. And Thee would man praise; man, but a particle of Thy creation; man, that bears about him his mortality, the witness of his sin, the witness that Thou resistest the proud: yet would man praise Thee; he, but a particle of Thy creation. Thou awakest us to delight in Thy praise; for Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
+    "words": 85
+  },
+  {
+    "slug": "the-man-who-was-thursday",
+    "gutenberg_id": 1695,
+    "title": "The Man Who Was Thursday: A Nightmare",
+    "author": "G. K. Chesterton",
+    "text": "The suburb of Saffron Park lay on the sunset side of London, as red and ragged as a cloud of sunset. It was built of a bright brick throughout; its sky-line was fantastic, and even its ground plan was wild. It had been the outburst of a speculative builder, faintly tinged with art, who called its architecture sometimes Elizabethan and sometimes Queen Anne, apparently under the impression that the two sovereigns were identical. It was described with some justice as an artistic colony, though it never in any definable way produced any art.",
+    "words": 93
+  },
+  {
+    "slug": "the-brothers-karamazov",
+    "gutenberg_id": 28054,
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoyevsky",
+    "text": "Alexey Fyodorovitch Karamazov was the third son of Fyodor Pavlovitch Karamazov, a land owner well known in our district in his own day, and still remembered among us owing to his gloomy and tragic death, which happened thirteen years ago, and which I shall describe in its proper place. For the present I will only say that this “landowner”—for so we used to call him, although he hardly spent a day of his life on his own estate—was a strange type, yet one pretty frequently to be met with, a type abject and vicious and at the same time senseless.",
+    "words": 100
+  },
+  {
+    "slug": "the-enchanted-april",
+    "gutenberg_id": 16389,
+    "title": "The Enchanted April",
+    "author": "Elizabeth von Arnim",
+    "text": "It began in a Woman’s Club in London on a February afternoon—an uncomfortable club, and a miserable afternoon—when Mrs. Wilkins, who had come down from Hampstead to shop and had lunched at her club, took up _The Times_ from the table in the smoking-room, and running her listless eye down the Agony Column saw this:",
+    "words": 55
+  },
+  {
+    "slug": "four-arthurian-romances",
+    "gutenberg_id": 831,
+    "title": "Four Arthurian Romances",
+    "author": "Chrétien de Troyes",
+    "text": "The rustic's proverb says that many a thing is despised that is worth much more than is supposed. Therefore he does well who makes the most of whatever intelligence he may possess. So Chrétien de Troyes maintains that one ought always to study and strive to speak well and teach the right; and he derives from a story of adventure a pleasing argument whereby it may be proved and known that he is not wise who does not make liberal use of his knowledge so long as God may give him grace.",
+    "words": 92
+  },
+  {
+    "slug": "the-monk",
+    "gutenberg_id": 601,
+    "title": "The Monk: A Romance",
+    "author": "M. G. Lewis",
+    "text": "Scarcely had the Abbey Bell tolled for five minutes, and already was the Church of the Capuchins thronged with Auditors. Do not encourage the idea that the Crowd was assembled either from motives of piety or thirst of information. But very few were influenced by those reasons; and in a city where superstition reigns with such despotic sway as in Madrid, to seek for true devotion would be a fruitless attempt.",
+    "words": 71
+  },
+  {
+    "slug": "the-adventures-of-tom-sawyer",
+    "gutenberg_id": 74,
+    "title": "The Adventures of Tom Sawyer",
+    "author": "Mark Twain",
+    "text": "The old lady pulled her spectacles down and looked over them about the room; then she put them up and looked out under them. She seldom or never looked _through_ them for so small a thing as a boy; they were her state pair, the pride of her heart, and were built for “style,” not service—she could have seen through a pair of stove-lids just as well. She looked perplexed for a moment, and then said, not fiercely, but still loud enough for the furniture to hear:",
+    "words": 87
+  },
+  {
+    "slug": "thuvia-maid-of-mars",
+    "gutenberg_id": 72,
+    "title": "Thuvia, Maid of Mars",
+    "author": "Edgar Rice Burroughs",
+    "text": "Upon a massive bench of polished ersite beneath the gorgeous blooms of a giant pimalia a woman sat. Her shapely, sandalled foot tapped impatiently upon the jewel-strewn walk that wound beneath the stately sorapus trees across the scarlet sward of the royal gardens of Thuvan Dihn, Jeddak of Ptarth, as a dark-haired, red-skinned warrior bent low toward her, whispering heated words close to her ear.",
+    "words": 65
+  },
+  {
+    "slug": "the-great-gatsby",
+    "gutenberg_id": 64317,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "text": "In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. “Whenever you feel like criticizing anyone,” he told me, “just remember that all the people in this world haven't had the advantages that you've had.” He didn't say any more, but we've always been unusually communicative in a reserved way, and I understood that he meant a great deal more than that.",
+    "words": 75
+  },
+  {
+    "slug": "cranford",
+    "gutenberg_id": 394,
+    "title": "Cranford",
+    "author": "Elizabeth Gaskell",
+    "text": "IN the first place, Cranford is in possession of the Amazons; all the holders of houses above a certain rent are women. If a married couple come to settle in the town, somehow the gentleman disappears; he is either fairly frightened to death by being the only man in the Cranford evening parties, or he is accounted for by being with his regiment, his ship, or closely engaged in business all the week in the great neighbouring commercial town of Drumble, distant only twenty miles on a railroad.",
+    "words": 88
+  },
+  {
+    "slug": "the-adventures-of-ferdinand-count-fathom",
+    "gutenberg_id": 6761,
+    "title": "The Adventures of Ferdinand Count Fathom",
+    "author": "Tobias Smollett",
+    "text": "The Adventures of Ferdinand Count Fathom, Smollett’s third novel, was given to the world in 1753. Lady Mary Wortley Montagu, writing to her daughter, the Countess of Bute, over a year later [January 1st, 1755], remarked that “my friend Smollett . . . has certainly a talent for invention, though I think it flags a little in his last work.” Lady Mary was both right and wrong. The inventive power which we commonly think of as Smollett’s was the ability to work over his own experience into realistic fiction.",
+    "words": 89
+  },
+  {
+    "slug": "the-expedition-of-humphry-clinker",
+    "gutenberg_id": 2160,
+    "title": "The Expedition of Humphry Clinker",
+    "author": "Tobias Smollett",
+    "text": "The pills are good for nothing—I might as well swallow snowballs to cool my reins—I have told you over and over how hard I am to move; and at this time of day, I ought to know something of my own constitution. Why will you be so positive? Prithee send me another prescription—I am as lame and as much tortured in all my limbs as if I was broke upon the wheel: indeed, I am equally distressed in mind and body.",
+    "words": 81
+  },
+  {
+    "slug": "the-string-of-pearls",
+    "gutenberg_id": 59828,
+    "title": "The String of Pearls; Or, The Barber of Fleet Street. A Domestic Romance",
+    "author": "Thomas Peckett Prest and James Malcolm Rymer",
+    "text": "Before Fleet-street had reached its present importance, and when George the Third was young, and the two figures who used to strike the chimes at old St. Dunstan's church were in all their glory--being a great impediment to errand-boys on their progress, and a matter of gaping curiosity to country people--there stood close to the sacred edifice a small barber's shop, which was kept by a man of the name of Sweeney Todd.",
+    "words": 73
+  },
+  {
+    "slug": "autobiography-of-benjamin-franklin",
+    "gutenberg_id": 20203,
+    "title": "Autobiography of Benjamin Franklin",
+    "author": "Benjamin Franklin",
+    "text": "I have ever had pleasure in obtaining any little anecdotes of my ancestors. You may remember the inquiries I made among the remains of my relations when you were with me in England, and the journey I undertook for that purpose. Imagining it may be equally agreeable to you to know the circumstances of my life, many of which you are yet unacquainted with, and expecting the enjoyment of a week's uninterrupted leisure in my present country retirement, I sit down to write them for you.",
+    "words": 86
+  },
+  {
+    "slug": "manon-lescaut",
+    "gutenberg_id": 468,
+    "title": "Manon Lescaut",
+    "author": "Abbé Prévost",
+    "text": "Just about six months before my departure for Spain, I first met the Chevalier des Grieux. Though I rarely quitted my retreat, still the interest I felt in my child's welfare induced me occasionally to undertake short journeys, which, however, I took good care to abridge as much as possible.",
+    "words": 50
+  },
+  {
+    "slug": "history-of-tom-jones-a-foundling",
+    "gutenberg_id": 6593,
+    "title": "History of Tom Jones, a Foundling",
+    "author": "Henry Fielding",
+    "text": "An author ought to consider himself, not as a gentleman who gives a private or eleemosynary treat, but rather as one who keeps a public ordinary, at which all persons are welcome for their money. In the former case, it is well known that the entertainer provides what fare he pleases; and though this should be very indifferent, and utterly disagreeable to the taste of his company, they must not find any fault; nay, on the contrary, good breeding forces them outwardly to approve and to commend whatever is set before them.",
+    "words": 92
+  },
+  {
+    "slug": "the-adventures-of-roderick-random",
+    "gutenberg_id": 4085,
+    "title": "The Adventures of Roderick Random",
+    "author": "Tobias Smollett",
+    "text": "I was born in the northern part of this united kingdom, in the house of my grandfather, a gentleman of considerable fortune and influence, who had on many occasions signalised himself in behalf of his country; and was remarkable for his abilities in the law, which he exercised with great success in the station of a judge, particularly against beggars, for whom he had a singular aversion.",
+    "words": 67
+  },
+  {
+    "slug": "a-farewell-to-arms",
+    "gutenberg_id": 75201,
+    "title": "A Farewell to Arms",
+    "author": "Ernest Hemingway",
+    "text": "In the late summer of that year we lived in a house in a village that looked across the river and the plain to the mountains. In the bed of the river there were pebbles and boulders, dry and white in the sun, and the water was clear and swiftly moving and blue in the channels. Troops went by the house and down the road and the dust they raised powdered the leaves of the trees.",
+    "words": 76
+  },
+  {
+    "slug": "life-on-the-mississippi",
+    "gutenberg_id": 245,
+    "title": "Life on the Mississippi",
+    "author": "Mark Twain",
+    "text": "THE Mississippi is well worth reading about. It is not a commonplace river, but on the contrary is in all ways remarkable. Considering the Missouri its main branch, it is the longest river in the world--four thousand three hundred miles. It seems safe to say that it is also the crookedest river in the world, since in one part of its journey it uses up one thousand three hundred miles to cover the same ground that the crow would fly over in six hundred and seventy-five.",
+    "words": 86
+  },
+  {
+    "slug": "the-mystery-of-edwin-drood",
+    "gutenberg_id": 564,
+    "title": "The Mystery of Edwin Drood",
+    "author": "Charles Dickens",
+    "text": "An ancient English Cathedral Tower? How can the ancient English Cathedral tower be here! The well-known massive gray square tower of its old Cathedral? How can that be here! There is no spike of rusty iron in the air, between the eye and it, from any point of the real prospect. What is the spike that intervenes, and who has set it up? Maybe it is set up by the Sultan’s orders for the impaling of a horde of Turkish robbers, one by one.",
+    "words": 84
+  },
+  {
+    "slug": "a-study-in-scarlet",
+    "gutenberg_id": 244,
+    "title": "A Study in Scarlet",
+    "author": "Arthur Conan Doyle",
+    "text": "In the year 1878 I took my degree of Doctor of Medicine of the University of London, and proceeded to Netley to go through the course prescribed for surgeons in the army. Having completed my studies there, I was duly attached to the Fifth Northumberland Fusiliers as Assistant Surgeon. The regiment was stationed in India at the time, and before I could join it, the second Afghan war had broken out. On landing at Bombay, I learned that my corps had advanced through the passes, and was already deep in the enemy’s country.",
+    "words": 93
+  },
+  {
+    "slug": "the-hound-of-the-baskervilles",
+    "gutenberg_id": 2852,
+    "title": "The Hound of the Baskervilles",
+    "author": "Arthur Conan Doyle",
+    "text": "Mr. Sherlock Holmes, who was usually very late in the mornings, save upon those not infrequent occasions when he was up all night, was seated at the breakfast table. I stood upon the hearth-rug and picked up the stick which our visitor had left behind him the night before. It was a fine, thick piece of wood, bulbous-headed, of the sort which is known as a “Penang lawyer.” Just under the head was a broad silver band nearly an inch across.",
+    "words": 81
+  },
+  {
+    "slug": "wuthering-heights",
+    "gutenberg_id": 768,
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "text": "1801—I have just returned from a visit to my landlord—the solitary neighbour that I shall be troubled with. This is certainly a beautiful country! In all England, I do not believe that I could have fixed on a situation so completely removed from the stir of society. A perfect misanthropist’s Heaven—and Mr. Heathcliff and I are such a suitable pair to divide the desolation between us. A capital fellow!",
+    "words": 69
+  },
+  {
+    "slug": "narrative-of-the-life-of-frederick-douglass",
+    "gutenberg_id": 23,
+    "title": "Narrative of the Life of Frederick Douglass, an American Slave",
+    "author": "Frederick Douglass",
+    "text": "I was born in Tuckahoe, near Hillsborough, and about twelve miles from Easton, in Talbot county, Maryland. I have no accurate knowledge of my age, never having seen any authentic record containing it. By far the larger part of the slaves know as little of their ages as horses know of theirs, and it is the wish of most masters within my knowledge to keep their slaves thus ignorant. I do not remember to have ever met a slave who could tell of his birthday.",
+    "words": 85
+  },
+  {
+    "slug": "the-sorrows-of-young-werther",
+    "gutenberg_id": 2527,
+    "title": "The Sorrows of Young Werther",
+    "author": "Johann Wolfgang von Goethe",
+    "text": "How happy I am that I am gone! My dear friend, what a thing is the heart of man! To leave you, from whom I have been inseparable, whom I love so dearly, and yet to feel happy! I know you will forgive me. Have not other attachments been specially appointed by fate to torment a head like mine? Poor Leonora! and yet I was not to blame. Was it my fault, that, whilst the peculiar charms of her sister afforded me an agreeable entertainment, a passion for me was engendered in her feeble heart?",
+    "words": 95
+  },
+  {
+    "slug": "the-odyssey",
+    "gutenberg_id": 1727,
+    "title": "The Odyssey",
+    "author": "Homer",
+    "text": "Tell me, O Muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy. Many cities did he visit, and many were the nations with whose manners and customs he was acquainted; moreover he suffered much by sea while trying to save his own life and bring his men safely home; but do what he might he could not save his men, for they perished through their own sheer folly in eating the cattle of the Sun-god Hyperion; so the god prevented them from ever reaching home.",
+    "words": 95
+  },
+  {
+    "slug": "the-lives-of-the-twelve-caesars",
+    "gutenberg_id": 6400,
+    "title": "The Lives of the Twelve Caesars",
+    "author": "Suetonius",
+    "text": "Julius Caesar, the Divine, lost his father when he was in the sixteenth year of his age; and the year following, being nominated to the office of high-priest of Jupiter, he repudiated Cossutia, who was very wealthy, although her family belonged only to the equestrian order, and to whom he had been contracted when he was a mere boy. He then married Cornelia, the daughter of Cinna, who was four times consul; and had by her, shortly afterwards, a daughter named Julia.",
+    "words": 82
+  },
+  {
+    "slug": "adventures-of-huckleberry-finn",
+    "gutenberg_id": 76,
+    "title": "Adventures of Huckleberry Finn",
+    "author": "Mark Twain",
+    "text": "You don't know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain't no matter. That book was made by Mr. Mark Twain, and he told the truth, mainly. There was things which he stretched, but mainly he told the truth. That is nothing. I never seen anybody but lied one time or another, without it was Aunt Polly, or the widow, or maybe Mary.",
+    "words": 75
+  },
+  {
+    "slug": "around-the-world-in-eighty-days",
+    "gutenberg_id": 103,
+    "title": "Around the World in Eighty Days",
+    "author": "Jules Verne",
+    "text": "Mr. Phileas Fogg lived, in 1872, at No. 7, Saville Row, Burlington Gardens, the house in which Sheridan died in 1814. He was one of the most noticeable members of the Reform Club, though he seemed always to avoid attracting attention; an enigmatical personage, about whom little was known, except that he was a polished man of the world. People said that he resembled Byron—at least that his head was Byronic; but he was a bearded, tranquil Byron, who might live on a thousand years without growing old.",
+    "words": 88
+  },
+  {
+    "slug": "a-journey-to-the-centre-of-the-earth",
+    "gutenberg_id": 18857,
+    "title": "A Journey to the Centre of the Earth",
+    "author": "Jules Verne",
+    "text": "Looking back to all that has occurred to me since that eventful day, I am scarcely able to believe in the reality of my adventures. They were truly so wonderful that even now I am bewildered when I think of them. My uncle was a German, having married my mother's sister, an Englishwoman. Being very much attached to his fatherless nephew, he invited me to study under him in his home in the fatherland. This home was in a large town, and my uncle a professor of philosophy, chemistry, geology, mineralogy, and many other ologies.",
+    "words": 95
+  },
+  {
+    "slug": "the-blue-lagoon",
+    "gutenberg_id": 393,
+    "title": "The Blue Lagoon: A Romance",
+    "author": "H. De Vere Stacpoole",
+    "text": "Mr Button was seated on a sea-chest with a fiddle under his left ear. He was playing the “Shan van vaught,” and accompanying the tune, punctuating it, with blows of his left heel on the fo'c'sle deck. He was dressed in dungaree trousers, a striped shirt, and a jacket baize—green in parts from the influence of sun and salt. A typical old shell-back, round-shouldered, hooked of finger; a figure with strong hints of a crab about it.",
+    "words": 77
+  },
+  {
+    "slug": "i-am-a-woman",
+    "gutenberg_id": 76178,
+    "title": "I Am a Woman",
+    "author": "Ann Bannon",
+    "text": "Tell your father to go to hell. Try it. It’s a rotten hard thing to do, even if he deserves it. Merrill Landon did. He was an out-and-out bastard, but like most of the breed, he didn’t know it. He said he was a good father: sensible, firm, and just. He said everything he did was for Laura’s own good. He took her opposition for a sign that he was right, and the more she opposed him, the righter he swore he was.",
+    "words": 83
+  },
+  {
+    "slug": "the-turn-of-the-screw",
+    "gutenberg_id": 209,
+    "title": "The Turn of the Screw",
+    "author": "Henry James",
+    "text": "The story had held us, round the fire, sufficiently breathless, but except the obvious remark that it was gruesome, as, on Christmas Eve in an old house, a strange tale should essentially be, I remember no comment uttered till somebody happened to say that it was the only case he had met in which such a visitation had fallen on a child.",
+    "words": 62
+  },
+  {
+    "slug": "catriona",
+    "gutenberg_id": 589,
+    "title": "Catriona",
+    "author": "Robert Louis Stevenson",
+    "text": "The 25th day of August, 1751, about two in the afternoon, I, David Balfour, came forth of the British Linen Company, a porter attending me with a bag of money, and some of the chief of these merchants bowing me from their doors. Two days before, and even so late as yestermorning, I was like a beggar-man by the wayside, clad in rags, brought down to my last shillings, my companion a condemned traitor, a price set on my own head for a crime with the news of which the country rang.",
+    "words": 92
+  },
+  {
+    "slug": "lorna-doone",
+    "gutenberg_id": 17460,
+    "title": "Lorna Doone: A Romance of Exmoor",
+    "author": "R. D. Blackmore",
+    "text": "If anybody cares to read a simple tale told simply, I, John Ridd, of the parish of Oare, in the county of Somerset, yeoman and churchwarden, have seen and had a share in some doings of this neighborhood, which I will try to set down in order, God sparing my life and memory.",
+    "words": 53
+  },
+  {
+    "slug": "the-wonderful-wizard-of-oz",
+    "gutenberg_id": 55,
+    "title": "The Wonderful Wizard of Oz",
+    "author": "L. Frank Baum",
+    "text": "Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer’s wife. Their house was small, for the lumber to build it had to be carried by wagon many miles. There were four walls, a floor and a roof, which made one room; and this room contained a rusty looking cookstove, a cupboard for the dishes, a table, three or four chairs, and the beds.",
+    "words": 78
+  },
+  {
+    "slug": "autobiography-of-a-yogi",
+    "gutenberg_id": 7452,
+    "title": "Autobiography of a Yogi",
+    "author": "Paramahansa Yogananda",
+    "text": "The characteristic features of Indian culture have long been a search for ultimate verities and the concomitant disciple-guru {FN1-2} relationship. My own path led me to a Christlike sage whose beautiful life was chiseled for the ages. He was one of the great masters who are India’s sole remaining wealth. Emerging in every generation, they have bulwarked their land against the fate of Babylon and Egypt.",
+    "words": 66
+  },
+  {
+    "slug": "the-romance-of-tristan-and-iseult",
+    "gutenberg_id": 14244,
+    "title": "The Romance of Tristan and Iseult",
+    "author": "Joseph Bédier",
+    "text": "My lords, if you would hear a high tale of love and of death, here is that of Tristan and Queen Iseult; how to their full joy, but to their sorrow also, they loved each other, and how at last they died of that love together upon one day; she by him and he by her.",
+    "words": 56
+  },
+  {
+    "slug": "sonnets-from-the-portuguese",
+    "gutenberg_id": 2002,
+    "title": "Sonnets from the Portuguese",
+    "author": "Elizabeth Barrett Browning",
+    "text": "I thought once how Theocritus had sung of the sweet years, the dear and wished for years, who each one in a gracious hand appears to bear a gift for mortals, old or young: and, as I mused it in his antique tongue, I saw, in gradual vision through my tears, the sweet, sad years, the melancholy years, those of my own life, who by turns had flung a shadow across me.",
+    "words": 72
+  },
+  {
+    "slug": "treasure-island",
+    "gutenberg_id": 120,
+    "title": "Treasure Island",
+    "author": "Robert Louis Stevenson",
+    "text": "Squire Trelawney, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the island, and that only because there is still treasure not yet lifted, I take up my pen in the year of grace, and go back to the time when my father kept the Admiral Benbow inn and the brown old seaman with the sabre cut first took up his lodging under our roof.",
+    "words": 89
+  },
+  {
+    "slug": "the-sign-of-the-four",
+    "gutenberg_id": 2097,
+    "title": "The Sign of the Four",
+    "author": "Arthur Conan Doyle",
+    "text": "Sherlock Holmes took his bottle from the corner of the mantel-piece and his hypodermic syringe from its neat morocco case. With his long, white, nervous fingers he adjusted the delicate needle, and rolled back his left shirt-cuff. For some little time his eyes rested thoughtfully upon the sinewy forearm and wrist all dotted and scarred with innumerable puncture-marks. Finally he thrust the sharp point home, pressed down the tiny piston, and sank back into the velvet-lined arm-chair with a long sigh of satisfaction.",
+    "words": 83
+  },
+  {
+    "slug": "a-midsummer-nights-dream",
+    "gutenberg_id": 1514,
+    "title": "A Midsummer Night's Dream",
+    "author": "William Shakespeare",
+    "text": "Now, fair Hippolyta, our nuptial hour Draws on apace; four happy days bring in Another moon; but oh, methinks, how slow This old moon wanes! She lingers my desires, Like to a step-dame or a dowager, Long withering out a young man’s revenue.",
+    "words": 43
+  },
+  {
+    "slug": "as-you-like-it",
+    "gutenberg_id": 1523,
+    "title": "As You Like It",
+    "author": "William Shakespeare",
+    "text": "As I remember, Adam, it was upon this fashion bequeathed me by will but poor a thousand crowns, and, as thou sayst, charged my brother, on his blessing, to breed me well; and there begins my sadness. My brother Jaques he keeps at school, and report speaks goldenly of his profit. For my part, he keeps me rustically at home, or, to speak more properly, stays me here at home unkept; for call you that keeping, for a gentleman of my birth, that differs not from the stalling of an ox?",
+    "words": 91
+  },
+  {
+    "slug": "the-red-lily",
+    "gutenberg_id": 3922,
+    "title": "The Red Lily",
+    "author": "Anatole France",
+    "text": "She gave a glance at the armchairs placed before the chimney, at the tea-table, which shone in the shade, and at the tall, pale stems of flowers ascending above Chinese vases. She thrust her hand among the flowery branches of the guelder roses to make their silvery balls quiver. Then she looked at herself in a mirror with serious attention. She held herself sidewise, her neck turned over her shoulder, to follow with her eyes the spring of her fine form in its sheath-like black satin gown, around which floated a light tunic studded with pearls wherein sombre lights scintillated.",
+    "words": 100
+  },
+  {
+    "slug": "the-countess-of-pembrokes-arcadia",
+    "gutenberg_id": 70854,
+    "title": "The Countess of Pembroke's Arcadia",
+    "author": "Philip Sidney",
+    "text": "It was in the time that the earth begins to put on her new apparel against the approach of her lover, and that the sun, running a most even course, becomes an indifferent arbiter between the night and the day, when the hopeless shepherd Strephon was come to the sands, which lie against the island of Cithera; where viewing the place with a heavy kind of delight, and sometimes casting his eyes to the isleward, he called his friendly rival the pastor Claius unto him.",
+    "words": 85
+  },
+  {
+    "slug": "the-interesting-narrative-of-the-life-of-olaudah-equiano",
+    "gutenberg_id": 15399,
+    "title": "The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African: Written By Himself",
+    "author": "Olaudah Equiano",
+    "text": "I believe it is difficult for those who publish their own memoirs to escape the imputation of vanity; nor is this the only disadvantage under which they labour: it is also their misfortune, that what is uncommon is rarely, if ever, believed, and what is obvious we are apt to turn from with disgust, and to charge the writer with impertinence. People generally think those memoirs only worthy to be read or remembered which abound in great or striking events.",
+    "words": 80
+  },
+  {
+    "slug": "camille-la-dame-aux-camelias",
+    "gutenberg_id": 1608,
+    "title": "Camille (La Dame aux Camélias)",
+    "author": "Alexandre Dumas fils",
+    "text": "In my opinion, it is impossible to create characters until one has spent a long time in studying men, as it is impossible to speak a language until it has been seriously acquired. Not being old enough to invent, I content myself with narrating, and I beg the reader to assure himself of the truth of a story in which all the characters, with the exception of the heroine, are still alive.",
+    "words": 72
+  },
+  {
+    "slug": "undine",
+    "gutenberg_id": 2825,
+    "title": "Undine",
+    "author": "Friedrich de la Motte Fouqué",
+    "text": "On a beautiful evening, many hundred years ago, a worthy old fisherman sat mending his nets. The spot where he dwelt was exceedingly picturesque. The green turf on which he had built his cottage ran far out into a great lake; and this slip of verdure appeared to stretch into it as much through love of its clear waters as the lake, moved by a like impulse, strove to fold the meadow, with its waving grass and flowers, and the cooling shade of the trees, in its embrace of love.",
+    "words": 90
+  },
+  {
+    "slug": "the-germany-and-the-agricola-of-tacitus",
+    "gutenberg_id": 7524,
+    "title": "The Germany and the Agricola of Tacitus",
+    "author": "Tacitus",
+    "text": "Germany is separated from Gaul, Rhaetia, and Pannonia, by the rivers Rhine and Danube; from Sarmatia and Dacia, by mountains and mutual dread. The rest is surrounded by an ocean, embracing broad promontories and vast insular tracts, in which our military expeditions have lately discovered various nations and kingdoms. The Rhine, issuing from the inaccessible and precipitous summit of the Rhaetic Alps, bends gently to the west, and falls into the Northern Ocean.",
+    "words": 73
+  },
+  {
+    "slug": "incidents-in-the-life-of-a-slave-girl",
+    "gutenberg_id": 11030,
+    "title": "Incidents in the Life of a Slave Girl, Written by Herself",
+    "author": "Harriet A. Jacobs",
+    "text": "I was born a slave; but I never knew it till six years of happy childhood had passed away. My father was a carpenter, and considered so intelligent and skilful in his trade, that, when buildings out of the common line were to be erected, he was sent for from long distances, to be head workman. On condition of paying his mistress two hundred dollars a year, and supporting himself, he was allowed to work at his trade, and manage his own affairs.",
+    "words": 83
+  },
+  {
+    "slug": "the-diary-of-samuel-pepys",
+    "gutenberg_id": 4200,
+    "title": "The Diary of Samuel Pepys",
+    "author": "Samuel Pepys",
+    "text": "Blessed be God, at the end of the last year I was in very good health, without any sense of my old pain, but upon taking of cold. I lived in Axe Yard, having my wife, and servant Jane, and no more in family than us three. My wife gave me hopes of her being with child, but on the last day of the year.",
+    "words": 65
+  },
+  {
+    "slug": "de-profundis",
+    "gutenberg_id": 921,
+    "title": "De Profundis",
+    "author": "Oscar Wilde",
+    "text": "Suffering is one very long moment. We cannot divide it by seasons. We can only record its moods, and chronicle their return. With us time itself does not progress. It revolves. It seems to circle round one centre of pain. The paralysing immobility of a life every circumstance of which is regulated after an unchangeable pattern, so that we eat and drink and lie down and pray, or kneel at least for prayer, according to the inflexible laws of an iron formula.",
+    "words": 82
+  },
+  {
+    "slug": "grimms-fairy-tales",
+    "gutenberg_id": 2591,
+    "title": "Grimms' Fairy Tales",
+    "author": "Jacob Grimm and Wilhelm Grimm",
+    "text": "A certain king had a beautiful garden, and in the garden stood a tree which bore golden apples. These apples were always counted, and about the time when they began to grow ripe it was found that every night one of them was gone. The king became very angry at this, and ordered the gardener to keep watch all night under the tree. The gardener set his eldest son to watch; but about twelve o’clock he fell asleep, and in the morning another of the apples was missing.",
+    "words": 88
+  },
+  {
+    "slug": "the-merry-adventures-of-robin-hood",
+    "gutenberg_id": 10148,
+    "title": "The Merry Adventures of Robin Hood",
+    "author": "Howard Pyle",
+    "text": "In merry England in the time of old, when good King Henry the Second ruled the land, there lived within the green glades of Sherwood Forest, near Nottingham Town, a famous outlaw whose name was Robin Hood. No archer ever lived that could speed a gray goose shaft with such skill and cunning as his, nor were there ever such yeomen as the sevenscore merry men that roamed with him through the greenwood shades.",
+    "words": 74
+  },
+  {
+    "slug": "the-murder-of-roger-ackroyd",
+    "gutenberg_id": 69087,
+    "title": "The Murder of Roger Ackroyd",
+    "author": "Agatha Christie",
+    "text": "Mrs. Ferrars died on the night of the 16th–17th September—a Thursday. I was sent for at eight o’clock on the morning of Friday the 17th. There was nothing to be done. She had been dead some hours.",
+    "words": 37
+  },
+  {
+    "slug": "love-and-freindship",
+    "gutenberg_id": 1212,
+    "title": "Love and Freindship",
+    "author": "Jane Austen",
+    "text": "How often, in answer to my repeated intreaties that you would give my Daughter a regular detail of the Misfortunes and Adventures of your Life, have you said “No, my freind never will I comply with your request till I may be no longer in Danger of again experiencing such dreadful ones.” Surely that time is now at hand. You are this day 55. If a woman may ever be said to be in safety from the determined Perseverance of disagreeable Lovers and the cruel Persecutions of obstinate Fathers, surely it must be at such a time of Life.",
+    "words": 99
+  },
+  {
+    "slug": "the-woman-in-white",
+    "gutenberg_id": 583,
+    "title": "The Woman in White",
+    "author": "Wilkie Collins",
+    "text": "This is the story of what a Woman's patience can endure, and what a Man's resolution can achieve. If the machinery of the Law could be depended on to fathom every case of suspicion, and to conduct every process of inquiry, with moderate assistance only from the lubricating influences of oil of gold, the events which fill these pages might have claimed their share of the public attention in a Court of Justice.",
+    "words": 73
+  },
+  {
+    "slug": "the-mysterious-affair-at-styles",
+    "gutenberg_id": 863,
+    "title": "The Mysterious Affair at Styles",
+    "author": "Agatha Christie",
+    "text": "The intense interest aroused in the public by what was known at the time as “The Styles Case” has now somewhat subsided. Nevertheless, in view of the world-wide notoriety which attended it, I have been asked, both by my friend Poirot and the family themselves, to write an account of the whole story. This, we trust, will effectually silence the sensational rumours which still persist.",
+    "words": 65
+  },
+  {
+    "slug": "a-pair-of-blue-eyes",
+    "gutenberg_id": 224,
+    "title": "A Pair of Blue Eyes",
+    "author": "Thomas Hardy",
+    "text": "Elfride Swancourt was a girl whose emotions lay very near the surface. Their nature more precisely, and as modified by the creeping hours of time, was known only to those who watched the circumstances of her history. Personally, she was the combination of very interesting particulars, whose rarity, however, lay in the combination itself rather than in the individual elements combined.",
+    "words": 61
+  },
+  {
+    "slug": "biographia-literaria",
+    "gutenberg_id": 6081,
+    "title": "Biographia Literaria",
+    "author": "Samuel Taylor Coleridge",
+    "text": "It has been my lot to have had my name introduced both in conversation, and in print, more frequently than I find it easy to explain, whether I consider the fewness, unimportance, and limited circulation of my writings, or the retirement and distance, in which I have lived, both from the literary and political world. Most often it has been connected with some charge which I could not acknowledge, or some principle which I had never entertained.",
+    "words": 77
+  },
+  {
+    "slug": "gullivers-travels",
+    "gutenberg_id": 17157,
+    "title": "Gulliver's Travels into Several Remote Regions of the World",
+    "author": "Jonathan Swift",
+    "text": "My father had a small estate in Nottinghamshire; I was the third of five sons. He sent me to Emmanuel College in Cambridge at fourteen years old, where I resided three years, and applied myself close to my studies; but the charge of maintaining me, although I had a very scanty allowance, being too great for a narrow fortune, I was bound apprentice to Mr. James Bates, an eminent surgeon in London, with whom I continued four years.",
+    "words": 78
+  },
+  {
+    "slug": "the-memoirs-of-sherlock-holmes",
+    "gutenberg_id": 834,
+    "title": "The Memoirs of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "text": "“I am afraid, Watson, that I shall have to go,” said Holmes, as we sat down together to our breakfast one morning. “Go! Where to?” “To Dartmoor; to King's Pyland.” I was not surprised. Indeed, my only wonder was that he had not already been mixed up in this extraordinary case, which was the one topic of conversation through the length and breadth of England.",
+    "words": 65
+  },
+  {
+    "slug": "the-return-of-sherlock-holmes",
+    "gutenberg_id": 108,
+    "title": "The Return of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "text": "It was in the spring of the year 1894 that all London was interested, and the fashionable world dismayed, by the murder of the Honourable Ronald Adair under most unusual and inexplicable circumstances. The public has already learned those particulars of the crime which came out in the police investigation, but a good deal was suppressed upon that occasion, since the case for the prosecution was so overwhelmingly strong that it was not necessary to bring forward all the facts.",
+    "words": 80
+  },
+  {
+    "slug": "a-tale-of-two-cities",
+    "gutenberg_id": 98,
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "text": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way.",
+    "words": 85
+  },
+  {
+    "slug": "the-phantom-of-the-opera",
+    "gutenberg_id": 175,
+    "title": "The Phantom of the Opera",
+    "author": "Gaston Leroux",
+    "text": "The Opera ghost really existed. He was not, as was long believed, a creature of the imagination of the artists, the superstition of the managers, or a product of the absurd and impressionable brains of the young ladies of the ballet, their mothers, the box-keepers, the cloak-room attendants or the concierge. Yes, he existed in flesh and blood, although he assumed the complete appearance of a real phantom; that is to say, of a spectral shade.",
+    "words": 76
+  },
+  {
+    "slug": "peter-pan",
+    "gutenberg_id": 16,
+    "title": "Peter Pan: Peter and Wendy",
+    "author": "J. M. Barrie",
+    "text": "All children, except one, grow up. They soon know that they will grow up, and the way Wendy knew was this. One day when she was two years old she was playing in a garden, and she plucked another flower and ran with it to her mother. I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and cried, “Oh, why can’t you remain like this for ever!” This was all that passed between them on the subject, but henceforth Wendy knew that she must grow up.",
+    "words": 94
+  },
+  {
+    "slug": "anarchism-and-other-essays",
+    "gutenberg_id": 2162,
+    "title": "Anarchism and Other Essays",
+    "author": "Emma Goldman",
+    "text": "The history of human growth and development is at the same time the history of the terrible struggle of every new idea heralding the approach of a brighter dawn. In its tenacious hold on tradition, the Old has never hesitated to make use of the foulest and cruelest means to stay the advent of the New, in whatever form or period the latter may have asserted itself. Nor need we retrace our steps into the distant past to realize the enormity of opposition, difficulties, and hardships placed in the path of every progressive idea.",
+    "words": 94
+  },
+  {
+    "slug": "lady-audleys-secret",
+    "gutenberg_id": 8954,
+    "title": "Lady Audley's Secret",
+    "author": "M. E. Braddon",
+    "text": "It lay down in a hollow, rich with fine old timber and luxuriant pastures; and you came upon it through an avenue of limes, bordered on either side by meadows, over the high hedges of which the cattle looked inquisitively at you as you passed, wondering, perhaps, what you wanted; for there was no thorough-fare, and unless you were going to the Court you had no business there at all.",
+    "words": 70
+  },
+  {
+    "slug": "war-and-peace",
+    "gutenberg_id": 2600,
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "text": "“Well, Prince, so Genoa and Lucca are now just family estates of the Buonapartes. But I warn you, if you don’t tell me that this means war, if you still try to defend the infamies and horrors perpetrated by that Antichrist—I really believe he is Antichrist—I will have nothing more to do with you and you are no longer my friend, no longer my ‘faithful slave,’ as you call yourself! But how do you do?",
+    "words": 75
+  },
+  {
+    "slug": "the-house-on-the-borderland",
+    "gutenberg_id": 10002,
+    "title": "The House on the Borderland",
+    "author": "William Hope Hodgson",
+    "text": "Right away in the west of Ireland lies a tiny hamlet called Kraighten. It is situated, alone, at the base of a low hill. Far around there spreads a waste of bleak and totally inhospitable country; where, here and there at great intervals, one may come upon the ruins of some long desolate cottage—unthatched and stark. The whole land is bare and unpeopled, the very earth scarcely covering the rock that lies beneath it.",
+    "words": 74
+  },
+  {
+    "slug": "the-picture-of-dorian-gray",
+    "gutenberg_id": 174,
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "text": "The studio was filled with the rich odour of roses, and when the light summer wind stirred amidst the trees of the garden, there came through the open door the heavy scent of the lilac, or the more delicate perfume of the pink-flowering thorn. From the corner of the divan of Persian saddle-bags on which he was lying, smoking, as was his custom, innumerable cigarettes, Lord Henry Wotton could just catch the gleam of the honey-sweet and honey-coloured blossoms of a laburnum, whose tremulous branches seemed hardly able to bear the burden of a beauty so flamelike as theirs.",
+    "words": 99
+  },
+  {
+    "slug": "the-valley-of-fear",
+    "gutenberg_id": 3289,
+    "title": "The Valley of Fear",
+    "author": "Arthur Conan Doyle",
+    "text": "“I am inclined to think—” said I. “I should do so,” Sherlock Holmes remarked impatiently. I believe that I am one of the most long-suffering of mortals; but I'll admit that I was annoyed at the sardonic interruption. “Really, Holmes,” said I severely, “you are a little trying at times.” He was too much absorbed with his own thoughts to give any immediate answer to my remonstrance. He leaned upon his hand, with his untasted breakfast before him, and he stared at the slip of paper which he had just drawn from its envelope.",
+    "words": 94
+  },
+  {
+    "slug": "the-innocence-of-father-brown",
+    "gutenberg_id": 204,
+    "title": "The Innocence of Father Brown",
+    "author": "G. K. Chesterton",
+    "text": "Between the silver ribbon of morning and the green glittering ribbon of sea, the boat touched Harwich and let loose a swarm of folk like flies, among whom the man we must follow was by no means conspicuous--nor wished to be. There was nothing notable about him, except a slight contrast between the holiday gaiety of his clothes and the official gravity of his face. His clothes included a slight, pale grey jacket, a white waistcoat, and a silver straw hat with a grey-blue ribbon.",
+    "words": 85
+  },
+  {
+    "slug": "the-moonstone",
+    "gutenberg_id": 155,
+    "title": "The Moonstone",
+    "author": "Wilkie Collins",
+    "text": "I address these lines—written in India—to my relatives in England. My object is to explain the motive which has induced me to refuse the right hand of friendship to my cousin, John Herncastle. The reserve which I have hitherto maintained in this matter has been misinterpreted by members of my family whose good opinion I cannot consent to forfeit. I request them to suspend their decision until they have read my narrative. And I declare, on my word of honour, that what I am now about to write is, strictly and literally, the truth.",
+    "words": 94
+  },
+  {
+    "slug": "paul-clifford",
+    "gutenberg_id": 7735,
+    "title": "Paul Clifford",
+    "author": "Edward Bulwer-Lytton",
+    "text": "It was a dark and stormy night; the rain fell in torrents, except at occasional intervals, when it was checked by a violent gust of wind which swept up the streets (for it is in London that our scene lies), rattling along the house-tops, and fiercely agitating the scanty flame of the lamps that struggled against the darkness.",
+    "words": 58
+  }
+]

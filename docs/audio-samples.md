@@ -52,55 +52,64 @@ like that.
 
 The opening of one catalog book, read by James — the same voice as the clip
 above, and the voice every remaining sample will use — keyed by
-the same slug as `/listen/[slug]`. **Five of the hundred books have one.** The
-page renders the player only when a sample exists, so the other ninety-five
-pages are unchanged rather than promising silence.
+the same slug as `/listen/[slug]`. **Every catalog book has one** — the whole
+tier-1 catalog (100 books), one opening each, all read by James. The page
+renders the player only when a sample exists, so a page never promises silence.
 
 These come from the offline render path in the app repo, not from the phone:
 
-- `Scripts/generate_chatterbox_marketing.py` — deterministic (per-segment seed,
-  emits a manifest), takes a jobs JSON of `{name, text, reference}` and the
-  flagship reference voice, runs on a CUDA box.
-- `Scripts/postprocess_marketing_sample.sh` — WAV → MP3: trims silence, caps at
-  35 s, compresses, normalises to −16 LUFS.
+- `scripts/render-samples-local.py` in this repo — the local variant of
+  `LoudReader_mac/Scripts/generate_chatterbox_marketing.py`, adapted to the
+  newer `distill` checkout in `chatterbox-apple`. Deterministic (per-segment
+  seed, emits a manifest), takes a jobs JSON of `{name, text, segments,
+  reference}` and the flagship reference voice. Runs on the laptop on CPU —
+  the T3 graph does not run on MPS, and CPU is how the original five samples
+  were rendered.
+- `LoudReader_mac/Scripts/postprocess_marketing_sample.sh` — WAV → MP3: trims
+  silence, caps at 35 s, compresses, normalises to −16 LUFS.
 
 Same narrator and same character as the app, but a different render path, so
 treat them as representative rather than byte-identical. If that distinction
 ever starts to matter, the honest fix is to render book openings through the
 device dump too.
 
-## Rendering the remaining 95
+## Rebuilding the catalog
 
-The work is: pick the opening passage per book (the catalog already has the
-Gutenberg id, and the existing five show the shape), render, post-process, drop
-into `public/samples/`, add a line to `BOOK_SAMPLES` in `data/audio-samples.ts`.
+The full loop, end to end:
 
-It is schedulable — the render is a headless script with a fixed seed, and the
-verification is mechanical (file exists, duration in range, loudness in range).
-A nightly batch of ten finishes the catalog inside a fortnight. What it needs
-before it can run unattended:
-
-1. **A reachable GPU box with the checkpoint** — the script wants
-   `--checkpoint` and a CUDA device.
-2. **A jobs file**, generated from `data/catalog-slugs.json` plus the opening
-   passage of each book. Passage selection is the only judgement call in the
-   loop: it should be the first real prose, skipping the Gutenberg header,
-   dedication and table of contents.
-3. **A gate before publishing.** Rendered speech can go wrong quietly — a
-   clipped ending, a mispronounced proper noun, a hallucinated word. Somebody
-   has to listen. The cheap version: the batch opens a PR with the new files
-   and the manifest, and merging is the human step.
+1. **Passages.** `scripts/extract-sample-passages.mjs` fetches each book's
+   Gutenberg text and extracts the first real prose — skipping the header,
+   title page, dedication, preface, and table of contents — with hand-curated
+   overrides where the heuristic picks wrong front matter. Writes
+   `data/sample-passages.json`. Passage selection is the only judgement call
+   in the loop; review the JSON before rendering.
+2. **Jobs.** `scripts/build-sample-jobs.mjs` turns the passages into the jobs
+   JSON (`data/…` → `/tmp/marketing-jobs.json`), with abbreviation-aware
+   sentence segments and over-long segments split at semicolons.
+3. **Render.** From `~/Developer/chatterbox-apple`:
+   `PYTHONPATH=distill .venv/bin/python ~/Developer/loudreader-landing/scripts/render-samples-local.py --checkpoint distill/ckpts/E13_180.pt --jobs /tmp/marketing-jobs.json --output /tmp/marketing-batch --seed 20260721 --device cpu --temperature 0.7 --exaggeration 0.85`.
+   Checkpoint `E13_180.pt` is the packed production student (==
+   `loudkit-v0.1`), the reference is the flagship voice (James), and the seed
+   is locked — re-runs are deterministic. The script retries a cap-hitting
+   segment with a shifted seed and bisects it if it still rambles, so the
+   batch never dies on one bad sentence.
+4. **Post-process.** `node scripts/postprocess-samples.mjs /tmp/marketing-batch`
+   — trims, normalises, encodes every WAV into `public/samples/<slug>.mp3` and
+   writes `data/sample-durations.json`.
+5. **Wire up.** `node scripts/update-audio-samples.mjs` regenerates
+   `BOOK_SAMPLES` in `data/audio-samples.ts` from the durations.
+6. **Gate.** Rendered speech can go wrong quietly — a clipped ending, a
+   mispronounced proper noun, a hallucinated word. Somebody has to listen
+   before the batch ships: spot-check a spread of passages against the text
+   and against each other's loudness.
 
 ## Weight on Vercel
 
 | what | count | size |
 |---|---|---|
 | the James clip | 1 | 176 KB |
-| book samples | 5 | 1.3 MB |
-| book samples at full catalog | 100 | ~25 MB |
+| book samples | 100 | ~27 MB |
 
 Static files in `public/`, served from the CDN — no blob storage or streaming
 service needed at this size. `preload="none"` on both players, so a visitor who
-never presses play downloads none of it. The repo grows by ~25 MB when the
-catalog is complete, which is the point to reconsider (Git LFS or Vercel Blob)
-rather than now.
+never presses play downloads none of it.
