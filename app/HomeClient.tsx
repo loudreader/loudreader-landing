@@ -271,7 +271,7 @@ export default function Home() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-loudBlue opacity-60" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-loudBlue" />
                   </span>
-                  Free forever &middot; No limits &middot; No quotas
+                  Start for free &middot; No limits &middot; No quotas
                 </span>
               </div>
               <h1
@@ -284,7 +284,7 @@ export default function Home() {
                 className="animate-fade-in-up delay-200 text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-10 leading-relaxed transition-colors duration-[1200ms]"
                 style={{ color: heroDimmed ? "rgba(255,255,255,0.5)" : "#9ca3af" }}
               >
-                Natural AI voices read any book aloud, every word highlighted in sync. Listen as much as you want. No limits, no quotas, no account. Fully private, completely offline.
+                Natural AI voices read any book aloud, every word highlighted in sync. All 23 voices are free for your first 8 hours. After that, the free tier keeps one natural voice with unlimited listening. No account, fully private, completely offline.
               </p>
               <div className="animate-fade-in-up delay-300 flex flex-col items-center lg:items-start gap-4">
                 <AppStoreButton dark={heroDimmed} source="home-hero" />
@@ -502,10 +502,10 @@ export default function Home() {
         <section className="w-full bg-[#f7f5f2] overflow-hidden" style={{ contentVisibility: "auto" }}>
           <div className="max-w-4xl mx-auto px-6 py-24 md:py-32">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 text-center mb-4">
-              Free forever. Go further.
+              Start for free. Go further.
             </h2>
             <p className="text-lg text-gray-400 text-center mb-16 max-w-md mx-auto">
-              Every book, cover to cover, with no time limit. Free, always. Upgrade only when you want more.
+              Unlimited listening never expires and never runs out. All 23 voices are free for your first 8 hours — after that, the free tier keeps one natural voice, and Premium unlocks the rest.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -517,6 +517,7 @@ export default function Home() {
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited listening, cover to cover</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited library, import all you like</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Every voice free for your first 8 hours</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>After that, one natural voice — still unlimited</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>100+ curated classics, plus all of Project Gutenberg</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Night mode, chapters, background play</span></li>
                 </ul>
@@ -555,7 +556,7 @@ export default function Home() {
             <div className="flex flex-col items-center gap-4">
               <AppStoreButton dark source="home-cta-footer" />
               <p className="text-[13px] text-gray-600 tracking-wide">
-                Free forever &middot; Offline &middot; Private
+                Start for free &middot; Offline &middot; Private
               </p>
             </div>
           </div>

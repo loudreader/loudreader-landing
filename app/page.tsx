@@ -33,7 +33,7 @@ const softwareApplicationJsonLd = {
       price: "0",
       priceCurrency: "USD",
       description:
-        "Unlimited listening cover to cover, unlimited library, word-by-word highlighting, Project Gutenberg catalog. No account needed.",
+        "Unlimited listening cover to cover, unlimited library, word-by-word highlighting, Project Gutenberg catalog. Every voice free for the first 8 hours, then one natural offline voice. No account needed.",
     },
     {
       "@type": "Offer",

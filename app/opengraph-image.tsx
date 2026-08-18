@@ -53,7 +53,7 @@ export default async function OpengraphImage() {
           Every text is an audiobook.
         </div>
         <div style={{ fontSize: 26, color: "#6b7280", marginTop: 44 }}>
-          Free forever · Offline · Private
+          Start for free · Offline · Private
         </div>
       </div>
     ),
