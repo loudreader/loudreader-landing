@@ -6,11 +6,20 @@ import { motion } from "framer-motion";
 // Interactive accordion leaf. The answer is ALWAYS in the DOM (collapsed via
 // height animation, `initial={false}`) so search engines and AI crawlers that
 // don't execute JavaScript still see the full Q&A in the server-rendered HTML.
-export default function FAQItem({ q, a }: { q: string; a: string }) {
+export default function FAQItem({
+  q,
+  a,
+  id,
+}: {
+  q: string;
+  a: string;
+  /** Anchor target, so /faq#<slug> lands on this question. */
+  id?: string;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-100 last:border-0">
+    <div id={id} className="border-b border-gray-100 last:border-0 scroll-mt-24">
       <button
         className="w-full flex items-center justify-between py-5 text-left group"
         onClick={() => setOpen(!open)}

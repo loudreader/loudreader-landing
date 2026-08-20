@@ -80,7 +80,7 @@ export default function SupportPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I make a narrator out of my own voice?</h3>
                   <p>
-                    Yes. Voice Studio asks you to read one short paragraph aloud — about thirty seconds — and builds a narrator from that recording. The audio, the model and the finished voice stay on your device; deleting the voice deletes the files. Voice cloning is part of Premium.
+                    Yes. Voice Studio asks you to read a short passage aloud — about ten seconds is enough — and builds a narrator from that recording. The audio, the model and the finished voice stay on your device; deleting the voice deletes the files. Voice cloning is part of Premium.
                   </p>
                 </div>
 

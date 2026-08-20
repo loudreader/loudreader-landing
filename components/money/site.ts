@@ -56,11 +56,18 @@ export const VOICES = {
  * On-device voice cloning (Voice Studio), shipping since 2026-07-28. The site
  * was silent about it for a full release; it is the strongest thing we can say
  * that no cloud competitor can match on privacy grounds.
+ *
+ * TEN seconds, not thirty. The app asked for thirty at one point and the site
+ * inherited that number everywhere; Voice Studio now says "About ten seconds
+ * of speech is enough" and enrollment accepts a clip half of clipSeconds = 10
+ * (LoudReader/Engines/VoiceEnrollment.swift). Corrected site-wide 2026-08-20.
+ * Asking for three times the speech someone actually has to give is a worse
+ * ask than the product makes.
  */
 export const CLONING = {
   short: "clone your own voice on device",
   long:
-    "Read one paragraph aloud — about thirty seconds — and LoudReader builds a narrator from it. The recording, the model and the voice never leave your device, and deleting the voice deletes the files.",
+    "Read a few sentences aloud — about ten seconds — and LoudReader builds a narrator from it. The recording, the model and the voice never leave your device, and deleting the voice deletes the files.",
 } as const;
 
 /**

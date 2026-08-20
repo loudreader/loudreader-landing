@@ -84,7 +84,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voice cloning",
     cells: [
-      "On device. About thirty seconds of your own speech, processed on your phone, never uploaded.",
+      "On device. About ten seconds of your own speech, processed on your phone, never uploaded.",
       "In the cloud. Your recording is uploaded and processed on their servers.",
     ],
   },

@@ -111,7 +111,7 @@ def main():
         Retries once with a shifted seed; if the cap is still hit, bisects
         the segment and renders each half, so the batch never dies on one
         rambling sentence."""
-        tokens, info = free_run_with_eos(model, tokenizer, enrolled[reference], segment, "en", args.device, seed)
+        tokens, info = free_run_with_eos(model, tokenizer, enrolled[reference], segment, job.get("lang", "en"), args.device, seed)
         render_tokens = tokens
         if not info["ended"] and info["best_eos_p"] > 0.05 and info["best_eos"] > 10:
             render_tokens = tokens[: info["best_eos"]]

@@ -1,13 +1,13 @@
 /*
  * What audio the site can play, and where it came from.
  *
- * ONE VOICE ON THE SITE: James, the flagship narrator. The app ships 23, and
- * the copy says so, but everything a visitor hears here is James — the sample
- * on the home page and the opening of every catalog book. A single voice
- * across the whole site is a decision, not a limitation: it is the voice the
+ * ONE VOICE ON THE WAY IN: James, the flagship narrator. Everything covered by
+ * THIS file is James — the sample on the home page and the opening of every
+ * catalog book. That is a decision, not a limitation: he is the voice the
  * product is levelled against, and eleven pills of near-identical English
  * narrators asks a stranger to audition a roster before they have heard one
- * sentence.
+ * sentence. The roster itself lives on /voices (data/voices.ts), one click
+ * away, for the visitor who has heard him and wants the rest.
  *
  * Two provenances, kept apart deliberately:
  *
@@ -23,9 +23,12 @@
  */
 
 /**
- * The flagship narrator's showcase clip. The other ten English clips exist in
- * the app bundle and are deliberately not published here; add one only if the
- * site gains a reason to let people compare voices.
+ * The flagship narrator's showcase clip, played on the home page.
+ *
+ * This is the untouched device recording. The whole roster — James included —
+ * also lives in public/voices as loudness-matched MP3s for /voices, driven by
+ * data/voices.ts; that page is where comparing voices is the point, and this
+ * one is where hearing a good one is.
  */
 export const JAMES_CLIP = {
   file: "/voices/james.m4a",

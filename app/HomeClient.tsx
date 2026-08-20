@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState, useEffect, useCallback } from "react";
 
 import NarratorPlayer from "@/components/listen/NarratorPlayer";
@@ -386,6 +387,12 @@ export default function Home() {
                 No internet. No data leaves your phone.
               </p>
               <NarratorPlayer />
+              <p className="mt-6 text-sm text-gray-500 max-w-md mx-auto lg:mx-0">
+                <Link href="/voices" className="text-loudBlue hover:underline font-medium">
+                  Hear all 23 narrators
+                </Link>{" "}
+                — every one of them, in the language they read.
+              </p>
             </div>
           </div>
         </section>
@@ -402,7 +409,7 @@ export default function Home() {
               Or read it<br />in your own voice.
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed max-w-xl mx-auto mb-4">
-              Read one paragraph aloud — about thirty seconds — and LoudReader builds a narrator out of it. Then any book in your library can be read in that voice.
+              Read a few sentences aloud — about ten seconds — and LoudReader builds a narrator out of it. Then any book in your library can be read in that voice.
             </p>
             <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto font-medium">
               The recording never leaves your phone. Neither does the voice. Delete it and the files go with it.

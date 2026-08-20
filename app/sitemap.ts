@@ -24,6 +24,7 @@ const routes: Array<{
 }> = [
   { path: "/", lastModified: "2026-07-14", changeFrequency: "weekly", priority: 1 },
   { path: "/faq", lastModified: "2026-07-14", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/voices", lastModified: "2026-08-20", changeFrequency: "monthly", priority: 0.8 },
   { path: "/releases", lastModified: "2026-07-06", changeFrequency: "monthly", priority: 0.6 },
   { path: "/support", lastModified: "2026-07-06", changeFrequency: "monthly", priority: 0.5 },
   { path: "/terms", lastModified: "2026-07-06", changeFrequency: "yearly", priority: 0.3 },

@@ -39,7 +39,7 @@ export const faqs = [
       },
       {
         q: "Can I use my own voice?",
-        a: "Yes, and it never leaves your phone. Voice Studio asks you to read one short paragraph aloud - about thirty seconds - and builds a narrator from that recording. The audio, the model, and the finished voice all stay on the device. Delete the voice and the files go with it. Voice cloning is part of Premium.",
+        a: "Yes, and it never leaves your phone. Voice Studio asks you to read a short passage aloud - about ten seconds is enough - and builds a narrator from that recording. The audio, the model, and the finished voice all stay on the device. Delete the voice and the files go with it. Voice cloning is part of Premium.",
       },
       {
         q: "Does it work without internet?",
@@ -82,3 +82,19 @@ export const faqs = [
     ],
   },
 ];
+
+/**
+ * Stable anchor for one question, so other pages can link straight at it
+ * (/faq#can-i-use-my-own-voice). Derived from the question text rather than a
+ * hand-kept id list: an anchor that silently stops matching its question is
+ * worse than no anchor, and this one cannot drift.
+ *
+ * Editing a question's wording DOES change its anchor. Grep for the old slug
+ * before you reword one.
+ */
+export function faqAnchor(question: string): string {
+  return question
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}

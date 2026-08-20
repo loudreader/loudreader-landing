@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { faqs } from "./faq-data";
+import { faqAnchor, faqs } from "./faq-data";
 import FAQItem from "./FAQItem";
 
 export const metadata: Metadata = {
@@ -66,7 +66,7 @@ export default function FAQPage() {
               </h2>
               <div className="bg-gray-50/50 rounded-2xl px-6">
                 {category.questions.map((faq) => (
-                  <FAQItem key={faq.q} q={faq.q} a={faq.a} />
+                  <FAQItem key={faq.q} id={faqAnchor(faq.q)} q={faq.q} a={faq.a} />
                 ))}
               </div>
             </div>

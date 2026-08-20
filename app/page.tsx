@@ -57,7 +57,7 @@ const softwareApplicationJsonLd = {
   featureList: [
     "23 studio narrators across 10 languages, all text-to-speech runs on-device",
     "Native narrators for English, Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish",
-    "On-device voice cloning: read one paragraph aloud and the app builds a narrator from it (Premium)",
+    "On-device voice cloning: read a few sentences aloud, about ten seconds, and the app builds a narrator from it (Premium)",
     "Word-by-word highlighting synced to narration",
     "Import any EPUB or PDF",
     "70,000+ free Project Gutenberg classics built in",

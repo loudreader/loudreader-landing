@@ -6,12 +6,13 @@ and the other is a faithful stand-in.
 
 ## 1. The narrator clip — `public/voices/james.m4a`
 
-**One voice on the whole site: James, the flagship narrator.** The app ships
-23 and the copy says so, but everything a visitor hears here — the home page
-sample and the opening of every catalog book — is James. That is a decision.
-He is the voice the product is levelled against, and asking a stranger to
-audition eleven near-identical English narrators before they have heard one
-sentence is a worse first minute than hearing one good one.
+**One voice on the way in: James, the flagship narrator.** The home page sample
+and the opening of every catalog book are his, and that is a decision. He is
+the voice the product is levelled against, and asking a stranger to audition
+eleven near-identical English narrators before they have heard one sentence is
+a worse first minute than hearing one good one. The roster is a click away on
+`/voices` (below) for the visitor who wants it — which is the order that
+decision always implied, not a reversal of it.
 
 **What a visitor hears is exactly what the app renders.** This is the app's own
 showcase clip: rendered on a physical iPhone through the shipping engine
@@ -25,12 +26,52 @@ What he reads:
 > piano began to play — slow and unhurried, as if the city had finally decided
 > to rest.
 
-The other twenty-two narrators have no clip on the site. Ten English ones exist
-in the app bundle and are simply not published; the twelve non-English ones
-have not been rendered at all. If the site ever gains a reason to let people
-compare voices — a dedicated voices page, say — the English ten are a copy
-away, and the rest are one dump run on a device holding books in those
-languages.
+## 1b. The roster clips — `public/voices/<name>.mp3`
+
+**All twenty-three narrators, one clip each, for `/voices`.** The home page
+still plays James alone; this is the page for the visitor who has already
+heard him and now wants the roster. Each narrator introduces themselves **in
+the language they read** — a Polish narrator reading English would disprove
+the very claim the page makes.
+
+Two provenances again, and this time they are mixed deliberately:
+
+- **The eleven English clips** are the app's own showcase recordings, copied
+  from `LoudReader/Resources/VoiceShowcase/chatterbox_<name>.m4a` and put
+  through the loudness pass below.
+- **The twelve others** are rendered here by `scripts/render-voice-clips.py`,
+  from the **shipped voice tensors** rather than a reference WAV:
+  `bench-payload/t3-prod/voice_<name>_cond.bin` (T3 conditioning) plus
+  `models/roster/<name>_{prompt,cond,spks}.bin` (s3gen). That is what the
+  phone loads, so it is the narrator, not an approximation of one.
+
+Why tensors and not WAVs. Two reasons, both discovered the hard way:
+
+1. The four Spanish narrators were enrolled from ten-second windows of
+   YouTube-sourced recordings that survive on **neither machine**. Every
+   remaining window scores 0.85–0.92 speaker cosine against the shipped
+   vector — the same person, audibly not the same conditioning. The tensors
+   *are* the enrolment.
+2. Conditioning bakes `emotion_adv`, and the app ships **0.5**
+   (`LoudReader/Engines/VoiceEnrollment.swift`). The book samples use 0.85 for
+   expressiveness; a voice preview must not promise a livelier narrator than
+   the app delivers. Rendering from the dumped cond inherits 0.5 for free.
+
+Sanity check on the result: resynthesised speech never scores 1.0 against its
+own reference vector. The app's own device clips land at **0.68–0.89** speaker
+cosine, and these twelve land at **0.80–0.87** — inside the band the shipping
+app itself produces. `/tmp` scripts aside, the check is
+`s3.flow.spk_embed_affine_layer(normalize(embed_ref(clip)["embedding"]))`
+against `models/roster/<name>_spks.bin`.
+
+**Every clip, English ones included, goes through
+`scripts/postprocess-voice-clips.mjs`** (trim, compress, −16 LUFS, 96k mono) —
+a comparison page is only fair if the voices are equally loud, and the device
+clips were never loudness-normalised. `public/voices/james.m4a` stays untouched
+beside them: the home page keeps playing the device recording verbatim.
+
+Copy lives in `data/voices.ts` (roster, language groups, blurbs, the line each
+narrator speaks); durations in `data/voice-durations.json`.
 
 **Filenames carry no engine or model name** — `james.m4a`, not the app-side
 `chatterbox_james.m4a`. A URL is public copy. See `components/money/site.ts`.
@@ -108,6 +149,7 @@ The full loop, end to end:
 | what | count | size |
 |---|---|---|
 | the James clip | 1 | 176 KB |
+| roster clips | 23 | ~2.3 MB |
 | book samples | 100 | ~27 MB |
 
 Static files in `public/`, served from the CDN — no blob storage or streaming
