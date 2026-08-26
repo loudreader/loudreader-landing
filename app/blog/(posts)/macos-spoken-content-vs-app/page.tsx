@@ -22,7 +22,7 @@ export default function MacosSpokenContentVsAppArticle() {
           macOS Spoken Content (select text, Option+Esc) is free, built in, and
           works in any app. It is the right tool for reading a paragraph or
           checking a sentence. For books and long documents, a dedicated app
-          like <strong>LoudReader</strong> (native Mac and iPhone apps) adds
+          like <strong>LoudReader</strong> (iPhone, iPad, and Mac) adds
           what Spoken Content lacks: natural voices designed for long reading,
           place bookmarking, per-book speed control from 0.3x to 3.0x, word
           highlighting, and a sleep timer. LoudReader is fully on-device and

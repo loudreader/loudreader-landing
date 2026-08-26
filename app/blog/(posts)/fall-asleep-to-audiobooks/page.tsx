@@ -133,9 +133,7 @@ export default function FallAsleepToAudiobooksArticle() {
           is a text-to-speech reader with natural offline voices. It reads
           any DRM-free EPUB or PDF (and those built-in classics) as an
           audiobook, on{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            native Mac and iPhone apps
-          </Link>
+          <Link href="/" className="text-loudBlue hover:underline">iPhone, iPad, and Mac apps</Link>
           . For bedtime specifically:
         </p>
         <ul className="list-disc pl-6 space-y-2">

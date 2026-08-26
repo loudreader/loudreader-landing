@@ -19,7 +19,7 @@ export default function SpanishTextToSpeechAppArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
           Spanish-language books and PDFs aloud with four Spanish narrators:
           Sofía, Hector, Diego, and Valentina. That is the widest non-English
           voice roster in the app. Every other language it supports besides

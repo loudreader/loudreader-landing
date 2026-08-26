@@ -25,7 +25,7 @@ export default function HowToBuildAReadingHabitArticle() {
           car, or waiting for coffee. Stack listening onto routines you already
           have. Start small: one chapter or ten minutes per day. The habit
           forms around the repetition, not the volume.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) removes
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) removes
           nearly every friction point: no account, no conversion, no word
           quotas. Import any DRM-free EPUB or PDF or pick from 70,000+ free
           classics and press play. Natural offline voices, fully on-device and

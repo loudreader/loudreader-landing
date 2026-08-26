@@ -71,7 +71,7 @@ export default function ListenIndexPage() {
           pick a title from the built-in catalog, and press play: natural
           offline voices read it with word-by-word highlighting, fully
           on-device and private, your library never leaves your device.{" "}
-          {APP_NAME} ships native Mac and iPhone apps, and listening is
+          {APP_NAME} runs on iPhone, iPad, and Apple Silicon Macs, and listening is
           unlimited on the free tier. These {bookCount} classics are a curated
           start. The app itself carries the whole 70,000+ book catalog.
         </p>

@@ -21,7 +21,7 @@ export default function TheGreatGatsbyAudiobookFreeArticle() {
         <p>
           The Great Gatsby entered the public domain in 2021, so a free
           audiobook of it now exists inside <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps). One honest note up front: this is a
+          (iPhone, iPad, and Mac). One honest note up front: this is a
           synthetic voice reading Fitzgerald&apos;s actual text on your
           device, not a professionally performed recording with a human
           narrator. If that&apos;s enough, open the app, find{" "}

@@ -137,7 +137,7 @@ export default function ProjectGutenbergAudiobooksArticle() {
         </p>
         <p>
           Listening is free and unlimited (every book, cover to cover, no
-          word quota, no account) in native Mac and iPhone apps. The honest
+          word quota, no account) on iPhone, iPad, and Apple Silicon Macs. The honest
           concession: narration is generated live, so there are no MP3s to
           export. If downloadable files are the requirement, the two
           collections above are the right tools.

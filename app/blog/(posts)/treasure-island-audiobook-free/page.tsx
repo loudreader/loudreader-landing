@@ -85,7 +85,7 @@ export default function TreasureIslandAudiobookFreeArticle() {
             >
               LoudReader from the App Store
             </a>{" "}
-            for its native Mac and iPhone apps. Free, no account.
+            for iPhone, iPad, and Mac. Free, no account.
           </li>
           <li>
             Open the app and search Treasure Island in the built-in Project

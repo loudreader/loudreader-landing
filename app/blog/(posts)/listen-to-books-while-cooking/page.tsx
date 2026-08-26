@@ -22,7 +22,7 @@ export default function ListenToBooksWhileCookingArticle() {
           Cooking is hands-on work that leaves your ears completely free. Dinner
           prep, baking, meal prepping for the week. Those 30 to 60 minutes every
           evening are prime reading time your eyes could never use.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) turns any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
           DRM-free EPUB or PDF into an audiobook with natural offline voices,
           fully on-device and private, your library never leaves your device. A
           Bluetooth speaker on the counter or a pair of earbuds is all you need.

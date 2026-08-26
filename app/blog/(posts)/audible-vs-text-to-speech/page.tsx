@@ -27,7 +27,7 @@ export default function AudibleVsTextToSpeechArticle() {
           want a performance, buy it on Audible. If a book has no
           audiobook, or you want to own your library as DRM-free files you
           keep forever, use TTS.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
           any EPUB or PDF with natural offline voices. It is fully
           on-device and private, your library never leaves your device.
           Free tier: {PRICING.free}. Premium is {PRICING.premiumMonthly} or{" "}

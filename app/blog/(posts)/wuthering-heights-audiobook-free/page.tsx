@@ -23,8 +23,7 @@ export default function WutheringHeightsAudiobookFreeArticle() {
           exists and you can be listening in a couple of minutes. The honest
           tradeoff is that the fast free option is a synthetic voice reading
           Emily Bronte&apos;s actual text, not a performed audiobook with a
-          trained human narrator. <strong>LoudReader</strong> (native
-          Mac and iPhone apps) already has Wuthering Heights in its 70,000+
+          trained human narrator. <strong>LoudReader</strong> (iPhone, iPad, and Mac) already has Wuthering Heights in its 70,000+
           Project Gutenberg catalog, so there&apos;s no file to hunt down or
           convert. Open the book, press play, and it reads aloud with natural
           offline voices, free with unlimited listening and no account.

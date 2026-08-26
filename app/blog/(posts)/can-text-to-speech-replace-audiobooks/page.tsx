@@ -27,8 +27,7 @@ export default function CanTextToSpeechReplaceAudiobooksArticle() {
           Where text to speech wins outright is availability. Most books ever
           published, backlist titles, academic texts, manuscripts,
           self-published novels, public domain classics, were never recorded
-          as audiobooks and never will be. <strong>LoudReader</strong> (native
-          Mac and iPhone apps) reads any DRM-free EPUB or PDF aloud with{" "}
+          as audiobooks and never will be. <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any DRM-free EPUB or PDF aloud with{" "}
           {DIFFERENTIATORS.voices}, so for the book you already own that has
           no audiobook edition, TTS is not a compromise. It is the only
           version that exists. For a story you want performed rather than

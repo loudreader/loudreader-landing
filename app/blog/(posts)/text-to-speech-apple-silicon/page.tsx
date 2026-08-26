@@ -22,8 +22,7 @@ export default function TextToSpeechAppleSiliconArticle() {
           Every Apple Silicon chip (M1 through M4) has a dedicated Neural
           Engine, a processor designed for machine learning tasks like voice
           generation. This is what makes high-quality, offline text-to-speech
-          possible without a cloud server. <strong>LoudReader</strong> (native
-          Mac and iPhone apps) uses the Neural Engine to generate natural
+          possible without a cloud server. <strong>LoudReader</strong> (iPhone, iPad, and Mac) uses the Neural Engine to generate natural
           voices entirely on your device. It is fully on-device and private,
           your library never leaves your device. No internet connection is
           needed, no text is sent to a server, and no account is required.
@@ -67,9 +66,11 @@ export default function TextToSpeechAppleSiliconArticle() {
 
       <QuestionSection question="How does LoudReader use Apple Silicon?">
         <p>
-          LoudReader is built specifically for Apple Silicon. It is a native
-          Mac app that uses the Neural Engine for every voice it generates.
-          There are three practical benefits:
+          LoudReader is built specifically for Apple silicon and uses the
+          Neural Engine for every voice it generates. On a Mac it is the iPad
+          app running in Apple&apos;s compatibility mode rather than a separate
+          Mac build, but the engine is the same and it runs on the Mac&apos;s
+          own Neural Engine. There are three practical benefits:
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -153,8 +154,8 @@ export default function TextToSpeechAppleSiliconArticle() {
             <strong className="text-gray-900">Use an iPhone or iPad.</strong>{" "}
             All iPhones from the iPhone 8 and newer, and all iPads from 2018
             and newer, have a Neural Engine. LoudReader runs on any iPhone or
-            iPad with iOS 18+, and it includes the same voices and features
-            as the Mac version.
+            iPad with iOS 18+, and it is the same app, with the same voices
+            and features, that you install on a Mac.
           </li>
         </ul>
         <p>

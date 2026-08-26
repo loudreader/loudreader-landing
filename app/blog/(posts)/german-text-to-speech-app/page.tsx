@@ -18,7 +18,7 @@ export default function GermanTextToSpeechAppArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
           German EPUBs and PDFs aloud with one German narrator, Klaus. One
           voice, not a roster to pick from, and it's worth saying that plainly
           instead of implying a choice that isn't there. The narrator runs

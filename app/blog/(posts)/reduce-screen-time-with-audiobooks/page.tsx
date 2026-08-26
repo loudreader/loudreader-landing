@@ -22,7 +22,7 @@ export default function ReduceScreenTimeWithAudiobooksArticle() {
           If reading is part of your screen time, switching from eyes to ears
           cuts that block to zero. The same chapter, the same book, but the
           screen is off and locked the entire time.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices. It is fully
           on-device and private, your library never leaves your device. Press
           play, lock the screen, and listen. The lock screen shows play, pause,

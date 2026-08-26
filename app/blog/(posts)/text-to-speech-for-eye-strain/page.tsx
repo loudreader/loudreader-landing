@@ -23,7 +23,7 @@ export default function TextToSpeechForEyeStrainArticle() {
           done before your brain is, and the book you wanted to read feels
           like overtime. Text-to-speech gives you a way to keep reading
           without asking anything more from your eyes.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           EPUB or PDF aloud with natural offline voices. Press play, lock the
           screen, and your eyes get the rest of the night off while the book
           keeps going. It is fully on-device and private, your library never

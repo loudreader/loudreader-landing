@@ -22,7 +22,7 @@ export default function NaturalReaderAlternativeArticle() {
           NaturalReader is a solid app with a clean interface and good voice
           quality, but it runs most voices in the cloud and requires a
           subscription for real use.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) goes the
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) goes the
           other direction: it is fully on-device and private, your library
           never leaves your device. The free tier has no word quota and lets
           you listen to entire books without paying a cent. Premium is{" "}
@@ -147,8 +147,7 @@ export default function NaturalReaderAlternativeArticle() {
         <p>
           Pick LoudReader if you read mostly EPUBs or PDFs, want everything
           to work offline, care about keeping your documents private, or
-          want to pay once and be done. LoudReader is native Mac and iPhone
-          apps, so your library and your place syncs across those two
+          want to pay once and be done. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, so your library and your place syncs across those two
           platforms through iCloud.
         </p>
         <p>

@@ -23,7 +23,7 @@ export default function AudiobooksForBusyParentsArticle() {
           fragments: the 20 minutes while dinner cooks, the stroller walk to
           the park, the dark room where a baby is falling asleep on your
           chest. Text-to-speech turns those fragments into reading time.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices, so you can
           listen to the book you actually want during the chaos of the day.
           One earbud in, one ear free for kid sounds. It is fully on-device

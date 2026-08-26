@@ -105,7 +105,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Platforms",
     cells: [
-      "Native Mac and iPhone apps (iPad too)",
+      "iPhone, iPad, and Apple Silicon Macs",
       "iOS, Android, web app, Chrome extension, no Mac app",
     ],
   },
@@ -140,7 +140,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does ElevenReader have a Mac app?",
-    a: "No. ElevenReader ships iOS and Android apps, a web app, and a Chrome extension, so on a Mac you use it in the browser. LoudReader ships native Mac and iPhone apps, so you get a real desktop reading app with word-by-word highlighting.",
+    a: "No. ElevenReader ships iOS and Android apps, a web app, and a Chrome extension, so on a Mac you use it in the browser. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, so you can listen on the Mac itself with word-by-word highlighting, rather than in a browser tab.",
   },
   {
     q: "Do I need an account to use LoudReader?",

@@ -25,7 +25,7 @@ export default function TextToSpeechForWritersArticle() {
           auto-correct and exposes what is actually on the page. Repetition,
           run-ons, rhythm problems, missing words: they survive silent
           proofreading but do not survive a listen.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) turns any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
           EPUB or PDF draft into an audio proofread with natural offline
           voices. Export your manuscript, import it, press play, and listen
           with your eyes off the screen. It is fully on-device and private,

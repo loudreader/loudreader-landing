@@ -39,7 +39,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I do this on my Mac and my iPhone?",
-    a: "Yes, LoudReader has native Mac and iPhone apps. A common pattern is writing on the Mac and doing the listening pass on the iPhone with headphones, away from the keyboard. There's no cloud between the devices (by design), so move the PDF over yourself (AirDrop takes seconds) and import it on the device where you want to listen.",
+    a: "Yes, LoudReader runs on iPhone, iPad, and Apple Silicon Macs. A common pattern is writing on the Mac and doing the listening pass on the iPhone with headphones, away from the keyboard. There's no cloud between the devices (by design), so move the PDF over yourself (AirDrop takes seconds) and import it on the device where you want to listen.",
   },
   {
     q: "Is my essay uploaded to a server when LoudReader reads it?",

@@ -24,7 +24,7 @@ export default function ListenToBooksInsteadOfScrollingArticle() {
           book asks you to sit still and focus. The habit swap that actually
           sticks is making a book just as convenient: one tap, one press, the
           chapter starts.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices, fully
           on-device and private, your library never leaves your device. Open the
           app instead of your feed, press play, lock the screen. The book runs.

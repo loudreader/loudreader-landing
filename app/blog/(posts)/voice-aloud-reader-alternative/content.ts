@@ -10,7 +10,7 @@ import type { Faq } from "@/components/money/FaqSection";
 export const FAQS: Faq[] = [
   {
     q: "Does LoudReader work on Android?",
-    a: "No. LoudReader is native Mac and iPhone apps only. There is no Android version and no plans to build one. If you are on Android, @Voice Aloud Reader is a solid choice for offline EPUB and PDF reading with good customization options.",
+    a: "No. LoudReader runs on iPhone, iPad, and Apple Silicon Macs only. There is no Android version and no plans to build one. If you are on Android, @Voice Aloud Reader is a solid choice for offline EPUB and PDF reading with good customization options.",
   },
   {
     q: "How is LoudReader different from @Voice Aloud Reader?",

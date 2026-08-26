@@ -26,7 +26,7 @@ export default function CanYouLearnFromAudiobooksArticle() {
           the words came in through your eyes or your ears. The gap appears
           with dense technical material, diagrams, formulas, and anything
           that relies on visual aids you cannot recreate mentally.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices, so your
           entire non-fiction library becomes learnable by ear. It is fully
           on-device and private, your library never leaves your device.

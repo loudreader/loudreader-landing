@@ -97,7 +97,7 @@ export default function IsElevenReaderFreeArticle() {
           before you pick a free plan to build a habit around.
         </p>
         <p>
-          LoudReader is built the other way: native Mac and iPhone apps,
+          LoudReader is built the other way: iPhone, iPad, and Apple Silicon Macs,
           reading the same book and picking up your place on either device.
           ElevenReader offers speed control from 0.25x to 4x and GenFM, an
           AI-generated podcast feature built from your reading, on top of
@@ -107,7 +107,7 @@ export default function IsElevenReaderFreeArticle() {
 
       <QuestionSection question="Is there a free text-to-speech app with no monthly limit?">
         <p>
-          Yes. LoudReader (native Mac and iPhone apps) turns any DRM-free
+          Yes. LoudReader (iPhone, iPad, and Mac) turns any DRM-free
           EPUB or PDF into an audiobook, and its free tier is unlimited
           listening on every book, cover to cover, with no hour or word quota
           and no account required. You get one natural offline voice for

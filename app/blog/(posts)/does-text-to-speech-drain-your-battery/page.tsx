@@ -153,9 +153,7 @@ export default function DoesTextToSpeechDrainYourBatteryArticle() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-loudBlue hover:underline"
-          >
-            native Mac and iPhone apps
-          </a>
+          >iPhone, iPad, and Mac apps</a>
           , with natural offline voices that don't need a live connection to
           keep talking.
         </p>

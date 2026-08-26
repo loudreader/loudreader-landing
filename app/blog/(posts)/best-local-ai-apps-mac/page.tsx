@@ -106,7 +106,7 @@ export default function BestLocalAiAppsMacArticle() {
             built-in Project Gutenberg classics, into listening, with
             natural offline voices generated on the Neural Engine. The voice
             models ship inside the app, and the engine is built so it cannot
-            touch the network at runtime. Native Mac and iPhone apps, free
+            touch the network at runtime. Runs on iPhone, iPad, and Apple Silicon Macs, free
             unlimited listening with no word quota.{" "}
             <a
               href={APP_STORE_URL}

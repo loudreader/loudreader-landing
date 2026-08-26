@@ -24,7 +24,7 @@ export default function PocketReadAloudAlternativeArticle() {
           natural-sounding voices need an internet connection, and your
           article text gets sent to a server for processing. If you want
           offline listening with no data leaving your device,{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) gives you
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) gives you
           an alternative path. Save your Pocket articles as PDFs, import
           them into LoudReader, and listen with natural offline voices
           anywhere. It is fully on-device and private, your library never

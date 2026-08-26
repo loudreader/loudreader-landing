@@ -23,9 +23,13 @@ export default function ReadAloudOnMacbookArticle() {
           (select text, Option+Esc). For books and long documents, the built-in
           option is limited: one system voice, one speed slider for everything,
           no bookmarking, and it stops when you switch windows.{" "}
-          <strong>LoudReader</strong> is a native Mac app built for Apple
-          Silicon that reads EPUBs and PDFs aloud with natural offline voices,
-          remembers your place, and works with the app in the background. It
+          <strong>LoudReader</strong> runs on Apple Silicon Macs and reads
+          EPUBs and PDFs aloud with natural offline voices, remembers your
+          place, and keeps playing in the background. One thing to be straight
+          about: it is an iPhone and iPad app, installed on a Mac from the Mac
+          App Store&apos;s &ldquo;iPhone &amp; iPad Apps&rdquo; tab, so it runs
+          in a fixed-size window rather than a resizable Mac one. The speech
+          engine is the real thing and runs on your Mac&apos;s own silicon. It
           is fully on-device and private, your library never leaves your
           device. The app costs nothing to try, and the free tier includes
           unlimited listening with a standard voice. Premium adds all eight
@@ -36,7 +40,7 @@ export default function ReadAloudOnMacbookArticle() {
 
       <ArticleIllustration
         variant="devices"
-        caption="Native Mac app for Apple Silicon. Drag in an EPUB or PDF and press play."
+        caption="Runs on Apple Silicon Macs. Import an EPUB or PDF and press play."
       />
 
       <QuestionSection question="What is the built-in way to read aloud on a MacBook?">
@@ -215,7 +219,7 @@ export default function ReadAloudOnMacbookArticle() {
 
       <StoreCta
         headline="Your MacBook, now a reading machine"
-        subline="Import EPUBs and PDFs, press play, and hear them with natural voices. Native Mac app, Apple Silicon, fully offline."
+        subline="Import EPUBs and PDFs, press play, and hear them with natural voices. Apple Silicon Macs, iPhone and iPad. Fully offline."
       />
     </ArticleLayout>
   );

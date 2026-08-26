@@ -23,7 +23,7 @@ export default function TextToSpeechForSeniorsArticle() {
           becomes a strain, and screen glare irritates faster than it used
           to. Text-to-speech offers a practical alternative: listen to the
           book instead of squinting at it.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices. You import
           the book, press play, and listen. No magnification, no screen
           adjustments, no eye strain at all. It is fully on-device and
@@ -182,7 +182,7 @@ export default function TextToSpeechForSeniorsArticle() {
 
       <QuestionSection question="Can I listen on my computer instead of my phone?">
         <p>
-          Yes. LoudReader has native Mac and iPhone apps, and it works on
+          Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and it works on
           iPad as well. The library syncs across your devices through the
           app. Many seniors prefer a larger screen on iPad when they do need
           to look at the text, or the Mac for at-home listening because the

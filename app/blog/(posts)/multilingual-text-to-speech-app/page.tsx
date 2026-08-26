@@ -19,7 +19,7 @@ export default function MultilingualTextToSpeechAppArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads text
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads text
           aloud in 10 languages: {VOICES.languageList}. That's{" "}
           {VOICES.headline}, but the roster isn't even across languages.
           English carries 11 narrators and Spanish carries 4; the other eight

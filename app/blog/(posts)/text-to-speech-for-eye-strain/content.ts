@@ -30,7 +30,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What if I get eye strain from work but still want to read at night?",
-    a: "That is exactly the gap text-to-speech fills. You spent eight hours on a work screen. Reading for pleasure should not feel like overtime for your eyes. Import your book into LoudReader, pick a comfortable voice, and listen. The native Mac and iPhone apps give you the same experience on whatever device is nearby when your eyes give out.",
+    a: "That is exactly the gap text-to-speech fills. You spent eight hours on a work screen. Reading for pleasure should not feel like overtime for your eyes. Import your book into LoudReader, pick a comfortable voice, and listen. The iPhone, iPad, and Mac apps give you the same experience on whatever device is nearby when your eyes give out.",
   },
   {
     q: "Does the sleep timer help?",

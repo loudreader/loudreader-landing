@@ -28,8 +28,7 @@ export default function LearnEnglishByListeningToBooksArticle() {
           <strong>LoudReader</strong> is built for exactly this loop. It
           highlights each word the moment it is spoken, includes 70,000+
           free Project Gutenberg classics built in as unlimited practice
-          material, and its natural offline voices run on native Mac and
-          iPhone apps with no account, no upload, and offline playback. One
+          material, and its natural offline voices run on iPhone, iPad, and Apple Silicon Macs with no account, no upload, and offline playback. One
           honest note on the voices: English is the deepest part of the
           roster, 11 narrators of the 23, which for this goal is exactly what
           you want.

@@ -27,7 +27,7 @@ export default function ReadAndListenAtTheSameTimeArticle() {
           its Audible audiobook, which is beautifully polished but means
           buying two editions of every book. The other way is a
           text-to-speech reader with synced highlighting.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices and
           highlights each word as it speaks. It's free, with unlimited
           listening, no account, and fully on-device and private, your

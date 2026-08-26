@@ -21,7 +21,7 @@ export default function TextToSpeechAirplaneModeArticle() {
         <p>
           Cloud-based text-to-speech apps stop working the moment you switch to
           airplane mode because they need a server to generate audio.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) runs
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) runs
           entirely on your device. The voices are built in, the processing
           happens on the Neural Engine, and the library lives on your phone. It
           is fully on-device and private, your library never leaves your

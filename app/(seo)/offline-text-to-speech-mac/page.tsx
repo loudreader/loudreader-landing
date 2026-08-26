@@ -48,7 +48,7 @@ export default function OfflineTextToSpeechMacPage() {
           <strong>Option + Esc</strong>. It works in every app, no internet
           needed. For long-form listening (whole books, PDFs, and articles
           with a library, resume, and word-by-word highlighting) use{" "}
-          <strong>LoudReader</strong>, a native Mac app whose neural
+          <strong>LoudReader</strong>, which runs on Apple Silicon Macs and whose neural
           text-to-speech engine runs entirely on your Mac, with natural
           offline voices that sound like an audiobook rather than a screen
           reader. LoudReader is fully on-device and private, your library
@@ -99,7 +99,7 @@ export default function OfflineTextToSpeechMacPage() {
             LoudReader
           </Link>{" "}
           turns any EPUB, PDF, or article into an audiobook with natural
-          offline voices. It ships as native Mac and iPhone apps, not a web
+          offline voices. It runs on iPhone, iPad, and Apple Silicon Macs, not a web
           wrapper, and every word of speech is generated on your device by a
           modern neural TTS engine. It&apos;s fully on-device and private, your
           library never leaves your device. There&apos;s no account and no

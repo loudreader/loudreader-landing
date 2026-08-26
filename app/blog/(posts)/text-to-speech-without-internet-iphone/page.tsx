@@ -122,7 +122,8 @@ export default function TextToSpeechWithoutInternetIphoneArticle() {
           LoudReader&apos;s voice models ship <em>inside the app</em>. There is
           no separate voice download after install, and the engine is built so
           it never touches the network. The same design that makes it work on
-          a plane is what makes it private. The Mac version works the same way.
+          a plane is what makes it private. It works the same way on a Mac, where
+          you install the same app.
           If you split your reading between devices, see{" "}
           <Link
             href="/offline-text-to-speech-mac"

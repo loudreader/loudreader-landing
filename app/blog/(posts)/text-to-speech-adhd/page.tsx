@@ -25,7 +25,7 @@ export default function TextToSpeechAdhdArticle() {
           making reading <strong>dual-channel</strong>. A voice reads while
           the text highlights word by word, so the pace is set externally and
           a drift costs one glance instead of a page.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) does this
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) does this
           on any EPUB or PDF with natural offline voices: highlighting is
           free on every book with no word quota, playback continues with the
           screen locked so you can pace or do dishes, and it is fully

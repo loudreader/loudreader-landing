@@ -27,7 +27,7 @@ export default function HowMuchDoTextToSpeechAppsCostArticle() {
           apps add nicer voices and features on top of that: Speechify Premium
           is $29/month, ElevenReader&apos;s Ultra plan is $11/month or
           $99/year, and Voice Dream Reader is $79.99/year.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) sits at the
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) sits at the
           low end: the free tier is unlimited listening on every book with no
           word quota, and Premium is {PRICING.premiumMonthly},{" "}
           {PRICING.premiumYearly}, or {PRICING.premiumLifetime} as a

@@ -110,9 +110,7 @@ export default function MakeIphoneReadBooksAloudArticle() {
             LoudReader
           </a>{" "}
           is built exactly for that, as{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            native Mac and iPhone apps
-          </Link>
+          <Link href="/" className="text-loudBlue hover:underline">iPhone, iPad, and Mac apps</Link>
           :
         </p>
         <ul className="list-disc pl-6 space-y-2">

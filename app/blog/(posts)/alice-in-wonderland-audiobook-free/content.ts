@@ -12,7 +12,7 @@
 //     catalog.
 //   - LoudReader app-behavior claims (free unlimited listening, no account,
 //     70,000+ built-in Gutenberg catalog, on-device, word-by-word
-//     highlighting, natural offline voices, native Mac and iPhone apps) come
+//     highlighting, natural offline voices, iPhone, iPad, and Apple Silicon Macs) come
 //     from components/money/site.ts, the single source of truth.
 //   - LibriVox as a free human-narrated alternative: general, verifiable
 //     description only (volunteer readers, MP3 downloads).

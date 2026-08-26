@@ -21,7 +21,7 @@ export default function BrothersKaramazovAudiobookFreeArticle() {
         <p>
           The Brothers Karamazov is public domain, so a free audiobook of it
           already exists, you just have to generate it. <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) reads the full Constance Garnett
+          (iPhone, iPad, and Mac) reads the full Constance Garnett
           translation aloud with a natural offline voice, free, with no word
           limit and no time trial. One honest note up front: this is a
           synthetic voice reading Dostoyevsky&apos;s text on your device, not

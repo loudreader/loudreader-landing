@@ -13,8 +13,7 @@
 //   - LoudReader app claims: components/money/site.ts (single source of
 //     truth), free tier = unlimited listening with one voice, Premium adds
 //     all 23 studio narrators across 10 languages, playback speed 0.3x to
-//     3.0x, on-device processing (DIFFERENTIATORS.private), native Mac and
-//     iPhone apps, no account, imports EPUB/PDF, 70,000+ Gutenberg catalog
+//     3.0x, on-device processing (DIFFERENTIATORS.private), iPhone, iPad and Apple Silicon Macs, no account, imports EPUB/PDF, 70,000+ Gutenberg catalog
 //     built in.
 //   - No audio export: LoudReader generates narration live on-device and
 //     does not produce a downloadable MP3 file (consistent with the same

@@ -25,7 +25,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does LoudReader run on my iPad or Mac in the kitchen?",
-    a: "LoudReader is a native Mac and iPhone app. On Mac, it works with any Bluetooth speaker or headphones. On iPhone, it runs with the screen locked and in your pocket. There is no dedicated iPad layout at this time, but the iPhone app runs on iPad in compatibility mode.",
+    a: "LoudReader runs on iPhone, iPad, and Apple Silicon Macs. On Mac, it works with any Bluetooth speaker or headphones. On iPhone, it runs with the screen locked and in your pocket. There is no dedicated iPad layout at this time, but the iPhone app runs on iPad in compatibility mode.",
   },
   {
     q: "Will audiobook narration get drowned out by kitchen noise?",

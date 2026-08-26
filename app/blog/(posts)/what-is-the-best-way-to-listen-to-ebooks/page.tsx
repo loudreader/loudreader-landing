@@ -23,7 +23,7 @@ export default function WhatIsTheBestWayToListenToEbooksArticle() {
           different needs. Official audiobooks (Audible, Apple Books, Libby)
           give you professional human narration but only for books that got a
           recording. Text-to-speech apps like <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) turn any DRM-free EPUB or PDF into an
+          (iPhone, iPad, and Mac) turn any DRM-free EPUB or PDF into an
           audiobook instantly with natural offline voices, fully on-device and
           private, your library never leaves your device. Built-in system
           tools (Spoken Content on Mac and iPhone) are free and basic but lack

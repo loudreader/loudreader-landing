@@ -23,8 +23,7 @@ export default function TooTiredToReadArticle() {
           usually your eyes, not your interest. After a day of screens they
           are dry and done focusing, and ten pages in, the lines swim. The fix
           is not more willpower. It is switching the <em>same book</em> from
-          your eyes to your ears. <strong>LoudReader</strong> (native Mac and
-          iPhone apps) reads any DRM-free EPUB or PDF aloud with natural
+          your eyes to your ears. <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any DRM-free EPUB or PDF aloud with natural
           offline voices: read while you are fresh, press play when you fade,
           and the narration picks up right where you are. It keeps your place
           either way, works with the screen locked or off, and is fully

@@ -27,7 +27,7 @@ export default function ListenToWordDocumentArticle() {
           manuscript over a weekend, export the document to PDF (File &rarr;
           Save As &rarr; PDF, about ten seconds) and open it in{" "}
           <strong>LoudReader</strong>, which reads it with natural offline
-          voices on native Mac and iPhone apps, highlights each word as it
+          voices on iPhone, iPad, and Apple Silicon Macs, highlights each word as it
           speaks, and is fully on-device and private, your library never
           leaves your device. One honest note. LoudReader doesn&apos;t import
           .docx directly, so the PDF export <em>is</em> the workaround, and

@@ -27,7 +27,7 @@ export default function BestVoiceForNonfictionVsFictionArticle() {
           personality. Fiction reads better in a voice with more range, one
           that can carry dialogue and let a scene breathe. Neither is a rule.
           It is a starting point for what to listen for. <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) ships {VOICES.headline}, and the{" "}
+          (iPhone, iPad, and Mac) ships {VOICES.headline}, and the{" "}
           <Link href="/voices" className="text-loudBlue hover:underline">
             voices page
           </Link>{" "}

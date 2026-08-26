@@ -49,7 +49,7 @@ export default function VoiceDreamReaderAlternativePage() {
           tier includes unlimited listening on every book, cover to cover.
           Premium costs $7.99/month, $49.99/year, or $199.99 once, compared
           with Voice Dream&apos;s $79.99/year subscription for new users,
-          introduced in May 2024. LoudReader ships native Mac and iPhone apps.
+          introduced in May 2024. LoudReader runs on iPhone, iPad, and Apple Silicon Macs.
           Choose Voice Dream Reader instead if you rely on Bookshare or DAISY,
           read Word or PowerPoint files, want an Apple Watch app, or need its
           30 languages and deep accessibility toolkit.
@@ -81,8 +81,7 @@ export default function VoiceDreamReaderAlternativePage() {
       <QuestionSection question="What is LoudReader?">
         <p>
           LoudReader turns any EPUB, PDF, or Project Gutenberg classic into an
-          audiobook with natural offline voices. It ships as native Mac and
-          iPhone apps, not a web wrapper, and every word of speech is generated
+          audiobook with natural offline voices. It runs on iPhone, iPad, and Apple Silicon Macs, not a web wrapper, and every word of speech is generated
           on your device by a modern neural TTS engine. LoudReader is fully
           on-device and private, your library never leaves your device. There's
           no account and no sign-up. The app never even asks for an email
@@ -221,7 +220,7 @@ export default function VoiceDreamReaderAlternativePage() {
 
       <StoreCta
         headline="Try the modern Voice Dream alternative"
-        subline="Natural offline voices, unlimited free listening, no account. Native Mac and iPhone apps."
+        subline="Natural offline voices, unlimited free listening, no account. Runs on iPhone, iPad, and Apple Silicon Macs."
       />
     </MoneyPageLayout>
   );

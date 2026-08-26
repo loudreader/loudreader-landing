@@ -26,8 +26,7 @@ export default function TextToSpeechDyslexiaArticle() {
           <strong>word-by-word highlighting</strong> that keeps eyes and ears
           locked together, control over the voice and pace, and{" "}
           <strong>no word quota</strong>, because dyslexic readers listen to
-          whole books, not paragraphs. <strong>LoudReader</strong> (native Mac
-          and iPhone apps) highlights every word as it speaks, free and
+          whole books, not paragraphs. <strong>LoudReader</strong> (iPhone, iPad, and Mac) highlights every word as it speaks, free and
           unlimited on every EPUB and PDF, with natural offline voices, and it
           is fully on-device and private, your library never leaves your
           device. Honest alternatives exist too: Microsoft&apos;s Immersive

@@ -24,7 +24,7 @@ export default function TextToSpeechForResearchersArticle() {
           cites but nobody has actually read. Text-to-speech turns the paper
           stack into something you can absorb while walking, commuting, or
           giving your eyes a break from the screen.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
           PDFs and EPUBs aloud with natural offline voices, so you can
           screen papers during your commute and save the deep read for your
           desk. It is fully on-device and private, your library never leaves
@@ -178,7 +178,7 @@ export default function TextToSpeechForResearchersArticle() {
 
       <QuestionSection question="Does this work on Mac as well as iPhone?">
         <p>
-          Yes. LoudReader has native Mac and iPhone apps, and the experience
+          Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and the experience
           is consistent on both. Many researchers do the screening pass on
           iPhone during the commute and the deep read on Mac at the desk.
           The library syncs across devices through the app. Both platforms

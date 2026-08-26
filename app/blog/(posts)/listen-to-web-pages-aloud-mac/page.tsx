@@ -26,7 +26,7 @@ export default function ListenToWebPagesAloudMacArticle() {
           there is no bookmarking, speed control per article, or offline queue.
           The app path: open the article in Safari Reader view to strip ads
           and sidebars, export as PDF, and import into <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps). LoudReader reads the PDF with natural
+          (iPhone, iPad, and Mac). LoudReader reads the PDF with natural
           offline voices, remembers your place, and works fully offline because
           it is fully on-device and private, your library never leaves your
           device. Both paths are honest. Pick the one that matches what you

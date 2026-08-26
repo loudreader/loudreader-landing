@@ -26,7 +26,7 @@ export default function EnglishShadowingPracticeArticle() {
           <Link href="/" className="text-loudBlue hover:underline">
             LoudReader
           </Link>{" "}
-          (native Mac and iPhone apps) reads any book aloud with natural
+          (iPhone, iPad, and Mac) reads any book aloud with natural
           offline voices while highlighting each word, so your eyes, ears, and
           mouth stay on the same sentence, and tapping any sentence replays it
           from the start. Premium adds playback speed from 0.3x to 3.0x for

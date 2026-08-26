@@ -26,7 +26,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I use an iPhone read-aloud app on my Mac?",
-    a: "Some iPhone apps run on Apple Silicon Macs through Apple's compatibility layer, but the experience varies. LoudReader has a separate native Mac app built for macOS, not an iPhone app running in compatibility mode. A native Mac app uses the screen properly, supports drag-and-drop, and responds to media keys. If you read a lot on Mac, a native app is worth it over a compatibility-mode iPhone app.",
+    a: "Yes, on Apple Silicon. Many iPhone and iPad apps install on an Apple Silicon Mac from the Mac App Store's 'iPhone & iPad Apps' tab, and LoudReader is one of them. Being straight about the trade-off: this is Apple's compatibility mode, so you get a fixed-size window rather than a resizable Mac one, and no drag-and-drop or menu bar. What you do get is the full engine, with voices generated on the Mac's own Neural Engine and no network access. For listening to a book while you work, that is usually the part that matters. If you want a resizable window and Mac-native window management, no compatibility-mode app will give you that.",
   },
   {
     q: "Do any Mac read-aloud apps offer a one-time purchase?",

@@ -17,7 +17,11 @@ export const SUPPORT_EMAIL = "jeremi@loudreader.io";
 export const DIFFERENTIATORS = {
   private: "fully on-device and private, your library never leaves your device",
   voices: "natural offline voices",
-  native: "native Mac and iPhone apps",
+  // NOT a native Mac app: there is no macOS target and no Mac App Store
+  // record. On Apple Silicon Macs this is the iPad build running in Apple's
+  // compatibility mode. Verified 2026-08-26 against the Xcode project and
+  // the App Store record. Do not reintroduce the word "native" here.
+  native: "runs on iPhone, iPad, and Apple Silicon Macs",
 } as const;
 
 /**

@@ -20,7 +20,7 @@ export default function NoAccountArticle() {
       <Tldr>
         <p>
           <strong>LoudReader</strong> has no sign-up screen, no login, and no
-          account of any kind. You install it (native Mac and iPhone apps),
+          account of any kind. You install it (iPhone, iPad, and Mac),
           import a book, and press play, with nothing that asks for an email
           or password first. It's fully on-device and private, your library
           never leaves your device, and with no account, there's no server

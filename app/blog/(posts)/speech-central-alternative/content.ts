@@ -13,7 +13,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does Speech Central have a Mac app?",
-    a: "No, Speech Central is available on iPhone, iPad, and Apple Watch. LoudReader provides native Mac and iPhone apps, so you get the full experience on desktop too, with the same voices and the same library synced through iCloud.",
+    a: "No, Speech Central is available on iPhone, iPad, and Apple Watch. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, so you get the full experience on desktop too, with the same voices and the same library synced through iCloud.",
   },
   {
     q: "Does Speech Central have a free tier?",
@@ -25,6 +25,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Which one should I pick if I read on multiple devices?",
-    a: "Speech Central has wider platform support overall with iOS, watchOS, and Android. LoudReader is native Mac and iPhone apps only. If you need Android or Apple Watch support, Speech Central is the answer. If Mac and iPhone cover your devices, LoudReader gives you the better voices and a cleaner reading experience.",
+    a: "Speech Central has wider platform support overall with iOS, watchOS, and Android. LoudReader runs on iPhone, iPad, and Apple Silicon Macs only. If you need Android or Apple Watch support, Speech Central is the answer. If Mac and iPhone cover your devices, LoudReader gives you the better voices and a cleaner reading experience.",
   },
 ];

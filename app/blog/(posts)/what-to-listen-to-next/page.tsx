@@ -31,8 +31,7 @@ export default function WhatToListenToNextArticle() {
           hours) or Tolstoy&apos;s <strong>War and Peace</strong> (about 62
           hours) are the biggest commitments in the catalog and both earn it.
           All of these, and 70,000+ more public domain books, are free to
-          browse and listen to in <strong>LoudReader</strong> (native Mac and
-          iPhone apps) with natural offline voices, no account needed. Times
+          browse and listen to in <strong>LoudReader</strong> (iPhone, iPad, and Mac) with natural offline voices, no account needed. Times
           below are estimates at normal 1x speed.
         </p>
       </Tldr>

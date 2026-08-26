@@ -24,7 +24,7 @@ export default function ListenToSubstackNewslettersArticle() {
           the top. For every other newsletter, the path to listening is
           straightforward: open the post in Safari, use Reader view to strip
           the noise, export as PDF, and import into <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps). LoudReader reads the PDF aloud with
+          (iPhone, iPad, and Mac). LoudReader reads the PDF aloud with
           natural offline voices and remembers your place. It is fully
           on-device and private, your library never leaves your device. If you
           subscribe to paid newsletters, make sure you are logged in before

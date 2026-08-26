@@ -95,7 +95,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
 export const FAQS: Faq[] = [
   {
     q: "Can my Mac do text to speech without an internet connection?",
-    a: "Yes, two ways. macOS has a built-in Spoken Content feature (System Settings → Accessibility) that speaks selected text with Option + Esc, fully offline. And LoudReader, a native Mac app, reads whole books, PDFs, and articles aloud with natural offline voices. All speech is generated on your Mac, so it works with Wi-Fi switched off.",
+    a: "Yes, two ways. macOS has a built-in Spoken Content feature (System Settings → Accessibility) that speaks selected text with Option + Esc, fully offline. And LoudReader, which runs on Apple Silicon Macs as an iPad app, reads whole books, PDFs, and articles aloud with natural offline voices. All speech is generated on your Mac, so it works with Wi-Fi switched off.",
   },
   {
     q: "Is LoudReader's text to speech really offline?",
@@ -116,5 +116,9 @@ export const FAQS: Faq[] = [
   {
     q: "Why choose offline TTS over a cloud service like Speechify?",
     a: "Three reasons: it works anywhere (planes, trains, dead zones), there are no word quotas or metering because nothing runs on someone else's servers, and it's private. With LoudReader, your library never leaves your device. Cloud services counter with more languages and voices, so it depends on what you read.",
+  },
+  {
+    q: "Is LoudReader a native Mac app?",
+    a: "No, and it is worth being precise about it. LoudReader is an iPhone and iPad app. On an Apple Silicon Mac you install it from the Mac App Store's 'iPhone & iPad Apps' tab, and it runs in Apple's compatibility mode: a fixed-size window rather than a resizable Mac one, and no menu bar. There is no separate Mac build. What is not a compromise is the engine underneath. Speech is generated on your Mac's own silicon, offline, and nothing is uploaded. It needs macOS 15 or later on Apple Silicon; Intel Macs are not supported.",
   },
 ];

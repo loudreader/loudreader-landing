@@ -23,7 +23,7 @@ export default function TextToSpeechForStudentsArticle() {
           cannot run it alone. Text-to-speech turns the reading list into
           something you can consume while walking between classes, doing
           chores, or giving your eyes a break after a long screen day.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices while
           highlighting each word, so you can follow along or just listen. It
           is fully on-device and private, your library never leaves your

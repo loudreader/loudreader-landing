@@ -6,7 +6,7 @@
 //     well-known services with no specific pricing or feature claims.
 //   - LoudReader features from site.ts: imports EPUB/PDF, 70,000+ Gutenberg,
 //     natural offline voices, word-by-word highlighting, free unlimited listening,
-//     fully on-device, native Mac and iPhone apps, Premium features.
+//     fully on-device, iPhone, iPad, and Apple Silicon Macs, Premium features.
 //   - macOS Spoken Content: a real built-in feature; described generically.
 //   - No fabricated study claims, testimonials, or statistics.
 // Claims you may NOT make: specific pricing for third-party services, that any

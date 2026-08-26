@@ -26,7 +26,7 @@ export default function ListenToConfidentialDocumentsArticle() {
           <Link href="/" className="text-loudBlue hover:underline">
             LoudReader
           </Link>{" "}
-          (native Mac and iPhone apps), where it is copied into the
+          (iPhone, iPad, and Mac), where it is copied into the
           app&apos;s local storage; turn on airplane mode if you want proof;
           press play and listen with natural offline voices; delete it from
           the library when you are done. The whole loop is fully on-device

@@ -24,7 +24,7 @@ export default function AliceInWonderlandAudiobookFreeArticle() {
           minutes. Worth knowing before you start: the fast free option is a
           synthetic voice reading Lewis Carroll&apos;s actual text, not a
           performed audiobook with a trained human narrator.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) already has
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) already has
           Alice&apos;s Adventures in Wonderland in its 70,000+ Project
           Gutenberg catalog, so there&apos;s no file to hunt down or convert.
           Open the book, press play, and it reads aloud with natural offline

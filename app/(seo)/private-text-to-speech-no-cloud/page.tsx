@@ -145,7 +145,7 @@ export default function PrivateTextToSpeechNoCloudPage() {
             LoudReader
           </Link>{" "}
           turns any EPUB, PDF, or article into an audiobook with natural
-          offline voices, as native Mac and iPhone apps. Import a document
+          offline voices, on iPhone, iPad, and Apple Silicon Macs. Import a document
           and press play: a neural voice reads while each word highlights in
           the text, and your place is saved automatically. The free tier
           includes unlimited listening on every book, cover to cover, with no

@@ -36,6 +36,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I listen on my iPad or Mac instead of my phone?",
-    a: "Yes. LoudReader has native Mac and iPhone apps, and works on iPad as well. The same library syncs across your devices through the app, and the listening experience is consistent on all of them. Many seniors prefer iPad for the larger screen when they do need to look at the text, or Mac for at-home listening during the day.",
+    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and works on iPad as well. The same library syncs across your devices through the app, and the listening experience is consistent on all of them. Many seniors prefer iPad for the larger screen when they do need to look at the text, or Mac for at-home listening during the day.",
   },
 ];

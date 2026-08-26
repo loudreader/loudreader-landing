@@ -39,7 +39,7 @@ export default function WarAndPeaceAudiobookFreeArticle() {
             device
           </strong>
           , so once downloaded, no connection is needed to keep going. Get{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) free from
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) free from
           the App Store, search the title in the built-in catalog, and press
           play.
         </p>

@@ -21,7 +21,7 @@ export default function PeterPanAudiobookFreeArticle() {
         <p>
           Peter Pan is public domain, so you can hear the whole novel read
           aloud for free, right now, no library hold and no subscription.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads J. M.
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads J. M.
           Barrie&apos;s full text, Peter and Wendy, aloud with a natural
           offline voice. One honest note first: this is a synthetic voice
           reading Barrie&apos;s text on your device, not a studio-recorded

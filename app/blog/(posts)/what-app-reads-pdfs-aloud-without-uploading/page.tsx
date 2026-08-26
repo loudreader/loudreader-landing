@@ -69,8 +69,7 @@ export default function PdfWithoutUploadingArticle() {
           running on-device. None of that requires a network connection, and
           none of it involves a server holding a copy of your file. The app
           is fully on-device and private, your library never leaves your
-          device, whether that device is an iPhone or a Mac (native Mac and
-          iPhone apps).
+          device, whether that device is an iPhone or a Mac (iPhone, iPad, and Mac).
         </p>
         <p>
           You can check this yourself: switch your phone to airplane mode,

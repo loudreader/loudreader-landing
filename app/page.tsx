@@ -20,7 +20,7 @@ const softwareApplicationJsonLd = {
   name: "LoudReader",
   alternateName: "LoudReader: Text to Speech",
   description:
-    "LoudReader turns any EPUB, PDF, or Project Gutenberg classic into an audiobook with natural offline voices. Fully on-device and private, your library never leaves your device. Native Mac and iPhone apps.",
+    "LoudReader turns any EPUB, PDF, or Project Gutenberg classic into an audiobook with natural offline voices. Fully on-device and private, your library never leaves your device. Runs on iPhone, iPad, and Apple Silicon Macs.",
   url: "https://loudreader.io",
   installUrl: appStoreUrl,
   // applicationCategory matches Apple's own structured data for this listing.

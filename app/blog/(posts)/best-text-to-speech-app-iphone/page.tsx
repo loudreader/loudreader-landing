@@ -23,7 +23,7 @@ export default function BestTextToSpeechAppIphoneArticle() {
           most. There is no single winner across every dimension. If voice
           quality and celebrity voices matter most, Speechify leads. If you
           want fully offline, private reading with no account,{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) is the
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) is the
           strongest pick: it is fully on-device and private, your library never
           leaves your device, the free tier has no word quota, and Premium
           ({PRICING.premiumMonthly}) adds eight neural voices, speed from 0.3x

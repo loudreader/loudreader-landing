@@ -98,7 +98,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Platforms",
     cells: [
-      "Native Mac and iPhone apps (iPad too)",
+      "iPhone, iPad, and Apple Silicon Macs",
       "iOS, Android, web app, Chrome extension, Mac app",
     ],
   },
@@ -142,5 +142,9 @@ export const FAQS: Faq[] = [
   {
     q: "What does Speechify offer that LoudReader doesn't?",
     a: "Quite a lot, honestly: 60+ languages, 1000+ voices including celebrity voices, Android and Windows support via web and mobile apps, a Chrome extension, scanning physical books with your camera, and AI extras like summaries and podcasts. LoudReader is deliberately narrower, a private, offline reader for books and documents on Mac and iPhone.",
+  },
+  {
+    q: "Is LoudReader a native Mac app?",
+    a: "No, and it is worth being precise about it. LoudReader is an iPhone and iPad app. On an Apple Silicon Mac you install it from the Mac App Store's 'iPhone & iPad Apps' tab, and it runs in Apple's compatibility mode: a fixed-size window rather than a resizable Mac one, and no menu bar. There is no separate Mac build. What is not a compromise is the engine underneath. Speech is generated on your Mac's own silicon, offline, and nothing is uploaded. It needs macOS 15 or later on Apple Silicon; Intel Macs are not supported.",
   },
 ];

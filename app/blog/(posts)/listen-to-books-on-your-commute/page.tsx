@@ -24,7 +24,7 @@ export default function ListenToBooksOnYourCommuteArticle() {
           half-hour each way adds up to 5 hours a week. That is a novel every
           two weeks, give or take, from time you were already spending in
           transit.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices. It is fully
           on-device and private, your library never leaves your device, so
           underground tunnels, dead zones, and airplane mode make no difference.

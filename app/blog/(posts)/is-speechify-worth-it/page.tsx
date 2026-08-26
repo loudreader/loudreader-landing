@@ -88,7 +88,7 @@ export default function IsSpeechifyWorthItArticle() {
           If your actual use case is simpler than the suite, mostly books and
           PDFs, read privately, with no monthly word cap to watch, you can pay
           less and get exactly that. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>{" "}
-          (native Mac and iPhone apps)
+          (iPhone, iPad, and Mac)
           reads any DRM-free EPUB or PDF aloud with natural offline voices,
           fully on-device and private, your library never leaves your device.
           The free tier is unlimited listening on every book, cover to cover,

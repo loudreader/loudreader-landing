@@ -26,7 +26,7 @@ export default function AreAiVoicesGoodEnoughForBooksArticle() {
           is part of the art still benefit from human narration. The honest
           assessment: AI voices have closed most of the gap, but they have not
           eliminated it.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) gives you 8
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) gives you 8
           natural offline voices powered by Apple Silicon's Neural Engine,
           fully on-device and private, your library never leaves your device.
           The free tier includes one voice with unlimited listening; all 8

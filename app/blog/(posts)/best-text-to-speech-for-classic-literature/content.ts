@@ -8,7 +8,7 @@
 //     sibling article app/blog/(posts)/project-gutenberg-audiobooks.
 //   - Playback speed 0.3x to 3.0x is a Premium feature: components/money/site.ts
 //     (PRICING.premiumFeatures).
-//   - Fully on-device, natural offline voices, native Mac and iPhone apps:
+//   - Fully on-device, natural offline voices, iPhone, iPad, and Apple Silicon Macs:
 //     components/money/site.ts (DIFFERENTIATORS).
 // General claims about how text-to-speech engines handle long sentences and
 // unfamiliar/archaic words (pausing at punctuation, sentence-by-sentence

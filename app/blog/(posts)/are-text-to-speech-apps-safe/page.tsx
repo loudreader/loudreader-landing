@@ -155,7 +155,7 @@ export default function AreTextToSpeechAppsSafeArticle() {
         <p>
           Keep the synthesis on the device, and the entire question of what a
           server does with your file becomes moot. That is how LoudReader is
-          built: native Mac and iPhone apps that read EPUBs, PDFs, and
+          built: apps for iPhone, iPad, and Mac that read EPUBs, PDFs, and
           articles aloud with natural offline voices, fully on-device and
           private, your library never leaves your device. There is no
           account, imported files live in the app&apos;s local storage, and

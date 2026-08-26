@@ -24,7 +24,7 @@ export default function ReadMyEssayOutLoudArticle() {
           Read Aloud button. But if you want to hear your essay so you can{" "}
           <strong>edit it</strong>, use a reader built for a listening pass.
           Export the essay to PDF, open it in{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps), and press
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac), and press
           play. It reads with natural offline voices, highlights each word as
           it speaks, and lets you pause, fix, and reread a paragraph as many
           times as you need. There's no paste box and no length limit (the
@@ -188,7 +188,7 @@ export default function ReadMyEssayOutLoudArticle() {
 
       <QuestionSection question="Can you edit by ear on both Mac and iPhone?">
         <p>
-          Yes, LoudReader ships as native Mac and iPhone apps, and the split
+          Yes, LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and the split
           works well for essays: write at the desk on the Mac, then do the
           listening pass on the iPhone with headphones, away from the
           keyboard, where you can't fiddle-edit mid-sentence. One honest

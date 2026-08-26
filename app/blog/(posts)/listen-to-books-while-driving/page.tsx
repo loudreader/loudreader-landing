@@ -23,7 +23,7 @@ export default function ListenToBooksWhileDrivingArticle() {
           a library app is the easiest way to listen in the car. The gap is
           every book that doesn&apos;t: most books you own as EPUB or PDF files
           were never recorded at all. A text-to-speech reader closes that gap.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) turns any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
           DRM-free EPUB or PDF into an audiobook with natural offline voices.
           It is fully on-device and private, your library never leaves your
           device, so playback doesn&apos;t care about tunnels or dead zones on

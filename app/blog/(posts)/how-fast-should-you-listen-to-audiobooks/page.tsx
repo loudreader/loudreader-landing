@@ -24,7 +24,7 @@ export default function HowFastShouldYouListenToAudiobooksArticle() {
           you are skimming by ear. But the real answer is that content
           complexity matters more than the number on the dial. A light novel at
           1.5x is fine; dense non-fiction at 1.2x can lose you.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) gives you
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) gives you
           speed control from 0.3x to 3.0x with natural offline voices, so you
           can find your personal sweet spot per book. It is fully on-device and
           private, your library never leaves your device. Speed control is part

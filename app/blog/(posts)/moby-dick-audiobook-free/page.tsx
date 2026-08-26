@@ -20,8 +20,7 @@ export default function MobyDickAudiobookFreeArticle() {
       <Tldr>
         <p>
           Moby Dick is public domain, so a free full-length audiobook of it
-          is already built into <strong>LoudReader</strong> (native Mac and
-          iPhone apps). One honest note first: this is a synthetic voice
+          is already built into <strong>LoudReader</strong> (iPhone, iPad, and Mac). One honest note first: this is a synthetic voice
           reading Herman Melville&apos;s actual text on your device, not a
           professionally performed recording with a human narrator. If
           that&apos;s what you need to finally get through it, open the app,

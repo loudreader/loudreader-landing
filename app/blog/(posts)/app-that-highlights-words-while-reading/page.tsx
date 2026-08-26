@@ -25,7 +25,7 @@ export default function AppThatHighlightsWordsArticle() {
           Reader, and Microsoft&apos;s free Immersive Reader all do it. What
           actually differs is price, privacy, and what you can read. If the
           thing you want highlighted is <em>books</em> (EPUBs, PDFs, whole
-          novels), LoudReader (native Mac and iPhone apps) highlights the
+          novels), LoudReader (iPhone, iPad, and Mac) highlights the
           current sentence and each word within it, synced to natural offline
           voices, free on every book with no word quota. It is fully on-device
           and private, your library never leaves your device. If your reading
@@ -129,7 +129,7 @@ export default function AppThatHighlightsWordsArticle() {
             No account, works in airplane mode.
           </li>
           <li>
-            <strong className="text-gray-900">Native Mac and iPhone apps</strong>,
+            <strong className="text-gray-900">Runs on iPhone, iPad, and Apple Silicon Macs</strong>,
             not a web wrapper. The same book and highlighting on both.
           </li>
         </ul>

@@ -115,7 +115,7 @@ export default function ListenToResearchPapersArticle() {
       <QuestionSection question="How do you get a paper into LoudReader?">
         <p>
           Import once, then listen anywhere. It&apos;s the same flow on both
-          the native Mac and iPhone apps:
+          the iPhone, iPad, and Mac apps:
         </p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>

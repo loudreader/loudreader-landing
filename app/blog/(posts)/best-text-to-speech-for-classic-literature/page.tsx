@@ -28,7 +28,7 @@ export default function BestTtsForClassicLiteratureArticle() {
           makes a book unlistenable. Slowing playback down helps with long
           sentences, and reading along with word highlighting catches the
           rare mispronunciation before it derails you. <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) has a built-in catalog of 70,000+
+          (iPhone, iPad, and Mac) has a built-in catalog of 70,000+
           Project Gutenberg classics, reads them aloud with natural offline
           voices, and it&apos;s fully on-device and private, your library
           never leaves your device.

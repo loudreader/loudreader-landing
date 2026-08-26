@@ -25,7 +25,7 @@ export default function ReadAloudForVisualFatigueArticle() {
           your focusing muscles are spent. Text-to-speech gives you a way to
           keep reading without asking anything more from the part that is
           already worn out.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           EPUB or PDF aloud with natural offline voices, so you can press
           play, close your eyes, and let the book happen. It is fully
           on-device and private, your library never leaves your device. The

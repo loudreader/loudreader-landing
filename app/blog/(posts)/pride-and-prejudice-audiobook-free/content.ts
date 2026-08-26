@@ -11,8 +11,7 @@
 //     about Pride and Prejudice, not sourced from app data.
 //   - LoudReader claims (built-in Gutenberg catalog browsable by genre and
 //     author, free unlimited listening, word-by-word highlighting, saved
-//     place, natural offline voices, on-device, no account, native Mac and
-//     iPhone apps): components/money/site.ts and the same claims already
+//     place, natural offline voices, on-device, no account, iPhone, iPad and Apple Silicon Macs): components/money/site.ts and the same claims already
 //     verified in app/blog/(posts)/project-gutenberg-audiobooks/content.ts
 //     and app/blog/(posts)/listen-to-books-while-driving/content.ts.
 //   - Playback speed (0.3x to 3.0x) is a Premium feature: components/money/site.ts

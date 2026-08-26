@@ -9,8 +9,9 @@
 //     basis for the "stays in sync at faster speeds" FAQ answer.
 //   - Import formats: .fileImporter(allowedContentTypes: [.epub, .pdf]) in
 //     ContentView.swift / HomeView.swift, DRM-free EPUB and PDF only.
-//   - Both platforms: the app is a native Mac + iPhone app (single codebase,
-//     macOS 15+/iOS 18+ per components/money/site.ts REQUIREMENTS).
+//   - Both platforms: one iOS app (iOS 18+). On Apple Silicon Macs it is the
+//     iPad build in Apple's compatibility mode, which is why the Mac floor is
+//     macOS 15+. No separate macOS target exists.
 //   - 70,000+ built-in Project Gutenberg classics: same claim as the home
 //     page (app/page.tsx) and the App Store listing.
 //   - Free tier unlimited listening / speed control (0.3x to 3.0x) is Premium:
@@ -89,7 +90,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can LoudReader do immersion reading on Mac and iPhone?",
-    a: "Yes. LoudReader is a native Mac and iPhone app: import an EPUB or PDF on either device, press play, and follow the word-by-word highlight as the voice reads. It's fully on-device and private, your library never leaves your device, and the free tier includes unlimited listening with no account.",
+    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs: import an EPUB or PDF on either device, press play, and follow the word-by-word highlight as the voice reads. It's fully on-device and private, your library never leaves your device, and the free tier includes unlimited listening with no account.",
   },
   {
     q: "Does the highlighted text stay in sync at faster speeds?",

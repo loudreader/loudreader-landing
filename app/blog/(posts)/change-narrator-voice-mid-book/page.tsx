@@ -21,7 +21,7 @@ export default function ChangeNarratorVoiceMidBookArticle() {
         <p>
           Yes, you can change the narrator voice partway through a book, and
           you don&apos;t need to restart or wait for a chapter break.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) has a voice
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) has a voice
           button right in the player: tap it to cycle to the next narrator,
           or press and hold to open a full picker of every voice, grouped by
           language. The switch takes effect on the next sentence, so the line

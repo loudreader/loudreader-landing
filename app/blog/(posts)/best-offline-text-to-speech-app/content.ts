@@ -14,7 +14,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does Voice Dream Reader work on Mac?",
-    a: "Voice Dream Reader has an iOS and iPadOS app. It does not have a dedicated Mac app. LoudReader provides native Mac and iPhone apps, so you get the full desktop experience alongside mobile.",
+    a: "Voice Dream Reader has an iOS and iPadOS app. It does not have a dedicated Mac app. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, so you get the full desktop experience alongside mobile.",
   },
   {
     q: "Can I use my own voices with LoudReader?",

@@ -24,7 +24,7 @@ export default function FinishTheBooksYouStartArticle() {
           you miss a few days, the thread breaks, and picking it back up feels
           heavier than starting something new. Listening fixes the momentum
           problem by filling the gaps.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices, fully
           on-device and private, your library never leaves your device. Read
           chapter three with your eyes when you have time. Listen to chapter

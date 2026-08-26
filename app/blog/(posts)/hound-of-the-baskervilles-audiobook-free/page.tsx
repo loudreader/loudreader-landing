@@ -21,7 +21,7 @@ export default function HoundOfTheBaskervillesAudiobookFreeArticle() {
         <p>
           The Hound of the Baskervilles is public domain, so you can hear the
           full Sherlock Holmes novel read aloud for free, right now.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
           Arthur Conan Doyle&apos;s complete text aloud with a natural
           offline voice, no cost, no time limit. One honest note first: this
           is a synthetic voice reading Doyle&apos;s text on your device, not
