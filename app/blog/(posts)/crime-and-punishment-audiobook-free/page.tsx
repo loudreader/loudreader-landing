@@ -23,8 +23,7 @@ export default function CrimeAndPunishmentAudiobookFreeArticle() {
           exists and you can start it in a couple of minutes. One honest
           note up front: the fast free option is a synthetic voice reading
           Dostoyevsky&apos;s actual text, not a performed audiobook with a
-          trained human narrator. <strong>LoudReader</strong> (native Mac and
-          iPhone apps) already has Crime and Punishment in its 70,000+ Project
+          trained human narrator. <strong>LoudReader</strong> (iPhone, iPad, and Mac) already has Crime and Punishment in its 70,000+ Project
           Gutenberg catalog, so there&apos;s no file to hunt down or convert.
           Open the book, press play, and it reads aloud with natural offline
           voices, free with unlimited listening and no account. Before you

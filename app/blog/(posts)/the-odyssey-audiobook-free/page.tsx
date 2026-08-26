@@ -41,7 +41,7 @@ export default function TheOdysseyAudiobookFreeArticle() {
           composed to be heard aloud long before it was written down, so
           listening to it is, in a real sense, closer to the original
           experience than reading it silently. Get <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) free from the App Store, search The
+          (iPhone, iPad, and Mac) free from the App Store, search The
           Odyssey in the built-in catalog, and press play.
         </p>
       </Tldr>

@@ -93,7 +93,7 @@ export default function TaleOfTwoCitiesAudiobookFreeArticle() {
             >
               LoudReader from the App Store
             </a>{" "}
-            for its native Mac and iPhone apps. Free, no account.
+            for iPhone, iPad, and Mac. Free, no account.
           </li>
           <li>
             Search A Tale of Two Cities in the app&apos;s built-in Project

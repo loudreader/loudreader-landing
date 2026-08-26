@@ -27,7 +27,7 @@ export default function WhatDoesOfflineTTSArticle() {
           emotional performance a skilled human narrator gives a great scene.
           What it does well is make any book, including the ones no
           audiobook company ever recorded, actually listenable.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) runs its{" "}
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) runs its{" "}
           <Link href="/voices" className="text-loudBlue hover:underline">
             23 studio narrators across 10 languages
           </Link>{" "}

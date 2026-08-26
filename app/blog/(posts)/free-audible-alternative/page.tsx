@@ -110,9 +110,7 @@ export default function FreeAudibleAlternativeArticle() {
       <QuestionSection question="How does LoudReader turn books you already own into audiobooks?">
         <p>
           LoudReader is one of the few{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            native Mac and iPhone apps
-          </Link>{" "}
+          <Link href="/" className="text-loudBlue hover:underline">iPhone, iPad, and Mac apps</Link>{" "}
           built around this idea: import the file, press play. There&apos;s no
           conversion step and no audio files to manage. The narration is
           generated live on your device by natural offline voices, each word

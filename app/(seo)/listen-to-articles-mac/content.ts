@@ -113,4 +113,8 @@ export const FAQS: Faq[] = [
     q: "Can I listen to the same article on my iPhone?",
     a: "LoudReader runs on iPhone too, with the same paste-or-share flow and background playback. One honest note: because everything stays on-device by design, libraries don't sync through a cloud, so add the article on the device you plan to listen on.",
   },
+  {
+    q: "Is LoudReader a native Mac app?",
+    a: "No, and it is worth being precise about it. LoudReader is an iPhone and iPad app. On an Apple Silicon Mac you install it from the Mac App Store's 'iPhone & iPad Apps' tab, and it runs in Apple's compatibility mode: a fixed-size window rather than a resizable Mac one, and no menu bar. There is no separate Mac build. What is not a compromise is the engine underneath. Speech is generated on your Mac's own silicon, offline, and nothing is uploaded. It needs macOS 15 or later on Apple Silicon; Intel Macs are not supported.",
+  },
 ];

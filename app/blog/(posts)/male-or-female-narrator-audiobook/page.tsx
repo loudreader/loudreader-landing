@@ -24,7 +24,7 @@ export default function MaleOrFemaleNarratorArticle() {
           a science, and the preference is yours to make, not ours to argue
           for. What actually settles it is listening to both and noticing
           which one you keep listening to without thinking about it.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) has 11
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) has 11
           English narrators, a genuine mix of both, plus{" "}
           <Link href="/voices" className="text-loudBlue hover:underline">
             23 studio narrators across 10 languages

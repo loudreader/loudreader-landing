@@ -14,7 +14,7 @@
 //     not sourced from app data.
 //   - LoudReader claims (built-in Gutenberg catalog, free unlimited
 //     listening, word-by-word highlighting, saved place, natural offline
-//     voices, on-device, no account, native Mac and iPhone apps):
+//     voices, on-device, no account, iPhone, iPad, and Apple Silicon Macs):
 //     components/money/site.ts and the same claims already verified in
 //     app/blog/(posts)/project-gutenberg-audiobooks/content.ts and
 //     app/blog/(posts)/listen-to-books-while-driving/content.ts (background

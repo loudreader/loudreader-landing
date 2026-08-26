@@ -14,7 +14,7 @@
 //   - Playback speed (0.3x to 3.0x) is Premium; free tier plays at normal
 //     speed; prices $7.99/month, $49.99/year, $199.99 lifetime, all from
 //     components/money/site.ts PRICING (stated honestly in copy and FAQ).
-//   - Native Mac and iPhone apps: components/money/site.ts DIFFERENTIATORS.
+//   - Runs on iPhone, iPad, and Apple Silicon Macs: components/money/site.ts DIFFERENTIATORS.
 // The "why ears catch errors" section is presented as the shared experience
 // of writers and an explanation from first principles (prediction /
 // familiarity), NOT as a cited research finding. No study is cited anywhere

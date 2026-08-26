@@ -20,8 +20,7 @@ export default function GulliversTravelsAudiobookFreeArticle() {
       <Tldr>
         <p>
           Gulliver&apos;s Travels is public domain, so a free audiobook of it
-          is one download away. <strong>LoudReader</strong> (native Mac and
-          iPhone apps) reads Jonathan Swift&apos;s complete text aloud with a
+          is one download away. <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads Jonathan Swift&apos;s complete text aloud with a
           natural offline voice, all four voyages, no cost, no time limit.
           One honest note up front: this is a synthetic voice reading
           Swift&apos;s text on your device, not a studio-recorded

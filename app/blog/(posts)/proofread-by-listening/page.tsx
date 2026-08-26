@@ -25,7 +25,7 @@ export default function ProofreadByListeningArticle() {
           A text-to-speech voice reads what's actually on the page, so missing
           words, doubled words, run-ons, and rhythm problems all become
           audible. The workflow: export your draft as a PDF or EPUB, import
-          it into <strong>LoudReader</strong> (native Mac and iPhone apps),
+          it into <strong>LoudReader</strong> (iPhone, iPad, and Mac),
           press play with the manuscript open in your editor, and pause, fix,
           and resume as errors surface. Your draft stays fully on-device and
           private, your library never leaves your device, which matters

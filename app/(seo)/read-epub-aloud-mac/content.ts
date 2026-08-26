@@ -111,7 +111,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Runs as a Mac app",
     cells: [
-      "Yes, native Mac app (Apple Silicon, macOS 15+)",
+      "Yes, as the iPad app on Apple Silicon (macOS 15+)",
       "Yes, part of macOS itself",
       "Speechify: yes (sign-in required). ElevenReader: no Mac app, browser only",
     ],
@@ -142,5 +142,9 @@ export const FAQS: Faq[] = [
   {
     q: "Do I have to upload my EPUB somewhere to hear it?",
     a: "Not with LoudReader. All speech is generated on your Mac, so nothing is uploaded and it works completely offline. Cloud apps like ElevenReader work the other way: you upload the file and the service converts it to audio.",
+  },
+  {
+    q: "Is LoudReader a native Mac app?",
+    a: "No, and it is worth being precise about it. LoudReader is an iPhone and iPad app. On an Apple Silicon Mac you install it from the Mac App Store's 'iPhone & iPad Apps' tab, and it runs in Apple's compatibility mode: a fixed-size window rather than a resizable Mac one, and no menu bar. There is no separate Mac build. What is not a compromise is the engine underneath. Speech is generated on your Mac's own silicon, offline, and nothing is uploaded. It needs macOS 15 or later on Apple Silicon; Intel Macs are not supported.",
   },
 ];

@@ -23,8 +23,7 @@ export default function BestReadAloudAppMacArticle() {
           value privacy. Your Mac already reads text aloud for free through
           macOS Spoken Content (select text, Option+Esc). For books and long
           documents, a dedicated app adds natural voices, bookmarking, and
-          reading features. <strong>LoudReader</strong> (native Mac and iPhone
-          apps) is the strongest pick for privacy and offline use: it is fully
+          reading features. <strong>LoudReader</strong> (iPhone, iPad, and Mac) is the strongest pick for privacy and offline use: it is fully
           on-device and private, your library never leaves your device,
           requires no account, and has a free tier with no word quota. Premium
           ({PRICING.premiumMonthly} or {PRICING.premiumLifetime}) adds all
@@ -48,11 +47,14 @@ export default function BestReadAloudAppMacArticle() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong className="text-gray-900">Native vs. web-based.</strong>{" "}
-            A native Mac app uses Apple Silicon's Neural Engine for voice
-            generation, responds to media keys, supports drag-and-drop import,
-            and feels like a Mac app. An Electron or web-based app consumes
-            more resources and often streams voices from a server.
+            <strong className="text-gray-900">On-device vs. web-based.</strong>{" "}
+            An app that generates speech on Apple Silicon&apos;s Neural Engine
+            keeps working offline and never sends your documents anywhere. An
+            Electron or web-based app consumes more resources and usually
+            streams voices from a server. Worth checking separately: whether
+            the app is a real Mac build or an iPad app running in Apple&apos;s
+            compatibility mode, which affects the window and the menu bar but
+            not the speech engine.
           </li>
           <li>
             <strong className="text-gray-900">Privacy model.</strong> On a
@@ -81,15 +83,19 @@ export default function BestReadAloudAppMacArticle() {
         </ul>
       </QuestionSection>
 
-      <QuestionSection question="LoudReader (native Mac app)">
+      <QuestionSection question="LoudReader (iPad app on Apple Silicon Macs)">
         <p>
           <strong>Best for:</strong> privacy, offline listening, and a free
           tier that is actually useful.
         </p>
         <p>
-          LoudReader is a native Mac app built for Apple Silicon (M1 or newer,
-          macOS 15+). It is not an Electron wrapper, not a Catalyst port, and
-          not a web app in a window. It reads EPUBs and PDFs aloud with eight
+          LoudReader is an iPhone and iPad app that installs on Apple Silicon
+          Macs (M1 or newer, macOS 15+) from the Mac App Store&apos;s
+          &ldquo;iPhone &amp; iPad Apps&rdquo; tab. There is no separate Mac
+          build, so it runs in Apple&apos;s compatibility mode: a fixed-size
+          window, no menu bar. It is not an Electron wrapper and not a web app
+          in a window &mdash; the speech engine is real and runs on your
+          hardware. It reads EPUBs and PDFs aloud with eight
           neural voices that run on the Mac's Neural Engine. The free tier
           includes unlimited listening with a standard voice. Premium
           ({PRICING.premiumMonthly}, {PRICING.premiumYearly}, or{" "}

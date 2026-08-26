@@ -58,8 +58,7 @@ export default function ReadEpubAloudMacPage() {
 
       <QuestionSection question="What's the fastest way to read an EPUB aloud on a Mac?">
         <p>
-          Use an app built for it. LoudReader ships native Mac and iPhone
-          apps and turns any EPUB or PDF into an audiobook in three steps:
+          Use an app built for it. LoudReader runs on iPhone, iPad, and Apple Silicon Macs and turns any EPUB or PDF into an audiobook in three steps:
         </p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
@@ -70,7 +69,7 @@ export default function ReadEpubAloudMacPage() {
               rel="noopener noreferrer"
               className="text-loudBlue hover:underline"
             >
-              LoudReader from the Mac App Store
+              LoudReader from the App Store
             </a>{" "}
             (macOS 15+ on Apple Silicon). No account or sign-up. The app never
             asks for an email address.
@@ -183,7 +182,7 @@ export default function ReadEpubAloudMacPage() {
 
       <QuestionSection question="Can I listen on my iPhone too?">
         <p>
-          Yes. LoudReader ships native Mac and iPhone apps (iPad too, with
+          Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs (iPad too, with
           iOS 18+), so the same EPUB-to-audiobook workflow travels with you.
           And because all speech is generated on-device, it keeps working on a
           plane or in the subway with zero connectivity. Learn more about the

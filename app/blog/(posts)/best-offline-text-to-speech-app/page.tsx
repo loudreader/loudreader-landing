@@ -22,13 +22,13 @@ export default function BestOfflineTextToSpeechAppArticle() {
           If you want text-to-speech with no internet and natural-sounding
           voices, two apps stand above the rest:{" "}
           <strong>Voice Dream Reader</strong> and{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps). Both
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac). Both
           run entirely on-device. Both work with EPUB and PDF files. Both
           respect your privacy with no document uploads. Voice Dream Reader
           has deeper customization and a long history of accessibility
-          support. LoudReader has a more polished reading experience, a
-          dedicated Mac app alongside iPhone, and a free tier with no word
-          limit. It is fully on-device and private, your library never
+          support. LoudReader has a more polished reading experience, runs
+          on Apple Silicon Macs as well as iPhone and iPad, and has a free
+          tier with no word limit. It is fully on-device and private, your library never
           leaves your device. Most other TTS apps that sound good rely on
           cloud processing. These two do not. Pick based on whether you
           want maximum flexibility and customizability (Voice Dream) or a
@@ -97,7 +97,7 @@ export default function BestOfflineTextToSpeechAppArticle() {
         <p>
           LoudReader is the newer player with a different philosophical
           approach: fewer settings, cleaner design, better default
-          experience. It is native Mac and iPhone apps, so your library
+          experience. It runs on iPhone, iPad, and Apple Silicon Macs, so your library
           syncs across desktop and mobile through iCloud. Same book, same
           place, same voice on both devices.
         </p>

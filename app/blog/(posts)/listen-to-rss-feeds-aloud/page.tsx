@@ -25,7 +25,7 @@ export default function ListenToRssFeedsAloudArticle() {
           you like with a dedicated text-to-speech app. Use your RSS reader to
           find and open articles, use Safari Reader view to strip ads and
           sidebars, export as PDF, and import into <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps). LoudReader reads the PDFs aloud with
+          (iPhone, iPad, and Mac). LoudReader reads the PDFs aloud with
           natural offline voices, remembers your place, and works in airplane
           mode. It is fully on-device and private, your library never leaves
           your device. This is a manual queue, not a live feed, but the

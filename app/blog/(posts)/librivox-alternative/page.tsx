@@ -115,9 +115,7 @@ export default function LibrivoxAlternativeArticle() {
           consistent voice from the first chapter to the last. Each word is
           highlighted as it is read, every book keeps your place, and it all
           runs in{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            native Mac and iPhone apps
-          </Link>{" "}
+          <Link href="/" className="text-loudBlue hover:underline">iPhone, iPad, and Mac apps</Link>{" "}
           that work in airplane mode. You can also import your own DRM-free
           EPUBs and PDFs. The walkthrough is in{" "}
           <Link

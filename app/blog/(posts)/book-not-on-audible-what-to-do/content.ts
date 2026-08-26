@@ -7,7 +7,7 @@
 //     behavior list, same as every prior article in this repo.
 //   - "Fully on-device and private" and "natural offline voices": verbatim
 //     from DIFFERENTIATORS in components/money/site.ts.
-//   - Native Mac and iPhone apps, no CarPlay/Android/Windows: DIFFERENTIATORS
+//   - Runs on iPhone, iPad, and Apple Silicon Macs, no CarPlay/Android/Windows: DIFFERENTIATORS
 //     and the batch2-brief DO-NOT-CLAIM list.
 // Statements about Audible's catalog size and policies are deliberately
 // generic (it is a large commercial catalog with real gaps) with no invented

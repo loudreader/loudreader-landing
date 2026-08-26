@@ -24,7 +24,7 @@ export default function JaneEyreAudiobookFreeArticle() {
           couple of minutes. One honest note first: the fastest free option is
           a synthetic voice reading Charlotte Bronte&apos;s actual text, not a
           performed audiobook with a trained human narrator. <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) has Jane Eyre built into its 70,000+
+          (iPhone, iPad, and Mac) has Jane Eyre built into its 70,000+
           Project Gutenberg catalog already, so there&apos;s no file to find or
           convert. Open the book, press play, and it reads aloud with natural
           offline voices, free with unlimited listening and no account. You

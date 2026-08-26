@@ -25,7 +25,7 @@ export default function TextToSpeechForEslLearnersArticle() {
           Text-to-speech changes that by giving you two channels at once: the
           voice reads aloud while the text highlights word by word, so you
           hear the pronunciation and see the spelling simultaneously.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) does this
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) does this
           with natural offline voices on any DRM-free EPUB or PDF. It is
           fully on-device and private, your library never leaves your device.
           The free tier covers unlimited listening with no word quota.

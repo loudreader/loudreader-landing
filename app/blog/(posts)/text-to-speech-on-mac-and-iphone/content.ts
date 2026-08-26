@@ -1,7 +1,7 @@
 // FACT PROVENANCE. Verified 2026-08-25 against the LoudReader app source
 // (LoudReader_mac repo, main branch) and components/money/site.ts (single
 // source of truth for pricing, voices, and requirements):
-//   - Native Mac and iPhone apps built from one Xcode project targeting both
+//   - Runs on iPhone, iPad, and Apple Silicon Macs built from one Xcode project targeting both
 //     platforms: LoudReader.xcodeproj.
 //   - System requirements are read verbatim from REQUIREMENTS in site.ts:
 //     "iOS 18.0+, iPadOS 18.0+, macOS 15.0+ (Apple Silicon)". The Apple

@@ -106,7 +106,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Platforms",
     cells: [
-      "Native Mac and iPhone apps (iPad too)",
+      "iPhone, iPad, and Apple Silicon Macs",
       "iOS, iPadOS, macOS, plus a companion Apple Watch app",
     ],
   },
@@ -146,6 +146,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can LoudReader read EPUBs and PDFs aloud on both Mac and iPhone?",
-    a: "Yes. LoudReader ships native Mac and iPhone apps (iPad too). Import any DRM-free EPUB or PDF and it is read aloud with natural offline voices and word-by-word highlighting, so you can read along as you listen.",
+    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs (iPad too). Import any DRM-free EPUB or PDF and it is read aloud with natural offline voices and word-by-word highlighting, so you can read along as you listen.",
   },
 ];

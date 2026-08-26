@@ -26,7 +26,7 @@ export default function SpeechifyVsNaturalReaderArticle() {
           celebrity-voiced options and heavy marketing. NaturalReader is
           cleaner, more document-oriented, and has wider format support.
           Neither lets you buy the app once and own it. If you want a third
-          path, <strong>LoudReader</strong> (native Mac and iPhone apps)
+          path, <strong>LoudReader</strong> (iPhone, iPad, and Mac)
           does TTS differently: it is fully on-device and private, your
           library never leaves your device. Natural offline voices, no
           account, and a free tier with {PRICING.free} Premium is{" "}
@@ -136,7 +136,7 @@ export default function SpeechifyVsNaturalReaderArticle() {
           pleasant, may be slightly less expressive than the best cloud
           voices from Speechify or NaturalReader. LoudReader reads EPUB and
           PDF files, not web pages, Word documents, or scanned documents
-          directly. LoudReader is native Mac and iPhone apps only, no web
+          directly. LoudReader runs on iPhone, iPad, and Apple Silicon Macs only, no web
           version or Android support.
         </p>
         <p>

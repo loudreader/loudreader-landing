@@ -43,7 +43,7 @@ export default function TurnAnyBookIntoAnAudiobookPage() {
         <p>
           You can turn any book you own into an audiobook in about a minute,
           with no file conversion and no waiting for a narrator. Install{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps), import the
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac), import the
           book (any DRM-free EPUB or PDF), and press play: natural offline
           voices read it aloud in real time while each word highlights on the
           page. There&apos;s nothing to export and no MP3 files to manage. The

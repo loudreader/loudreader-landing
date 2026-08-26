@@ -91,7 +91,7 @@ export default function ListenToPdfIphonePage() {
           exactly where you stopped, and you can keep listening with the
           screen locked, with full playback controls on the lock screen, like
           a podcast app for your own documents. And because LoudReader ships
-          as native Mac and iPhone apps, the same share-and-play workflow
+          on iPhone, iPad, and Apple Silicon Macs, the same share-and-play workflow
           works on your Mac too.
         </p>
       </QuestionSection>

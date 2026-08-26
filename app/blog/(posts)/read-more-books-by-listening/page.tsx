@@ -23,7 +23,7 @@ export default function ReadMoreBooksByListeningArticle() {
           put books into time you already spend on other things. Your commute,
           your walk, your chores, your gym session. Your eyes cannot read during
           those minutes, but your ears have nothing else to do.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) turns any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
           DRM-free EPUB or PDF into an audiobook with natural offline voices,
           fully on-device and private, your library never leaves your device.
           Import the book once. Press play during dead time. Lock the screen.

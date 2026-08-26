@@ -35,7 +35,7 @@ export default function SherlockHolmesAudiobookFreeArticle() {
           it is <strong>fully on-device and private, your library never
           leaves your device</strong>, so once the book is downloaded it
           plays with no connection at all. To listen, get{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) free from
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) free from
           the App Store, search Sherlock Holmes in the built-in catalog, and
           press play.
         </p>

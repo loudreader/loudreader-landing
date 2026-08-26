@@ -34,7 +34,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I use this on my work Mac?",
-    a: "Yes. LoudReader has native Mac and iPhone apps, and the same on-device privacy model applies on both. Import a PDF brief on your Mac, press play, and the narration runs locally with no network dependency.",
+    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and the same on-device privacy model applies on both. Import a PDF brief on your Mac, press play, and the narration runs locally with no network dependency.",
   },
   {
     q: "What about page numbers and citations?",

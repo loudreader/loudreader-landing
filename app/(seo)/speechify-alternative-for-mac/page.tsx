@@ -77,8 +77,7 @@ export default function SpeechifyAlternativeForMacPage() {
       <QuestionSection question="What is LoudReader?">
         <p>
           LoudReader turns any EPUB, PDF, or Project Gutenberg classic into an
-          audiobook with natural offline voices. It ships as native Mac and
-          iPhone apps, not a web wrapper, and every word of speech is generated
+          audiobook with natural offline voices. It runs on iPhone, iPad, and Apple Silicon Macs, not a web wrapper, and every word of speech is generated
           on your device. LoudReader is fully on-device and private, your
           library never leaves your device. There's no account and no sign-up.
           The app never even asks for an email address.
@@ -125,8 +124,8 @@ export default function SpeechifyAlternativeForMacPage() {
           <li>
             <strong>Platform breadth.</strong> Speechify runs on Android,
             Windows (via web), and in Chrome as an extension. LoudReader is
-            Apple-only, and the Mac app needs Apple Silicon (macOS 15+), so
-            Intel Mac owners are out of luck.
+            Apple-only; on Mac it is the iPad app running on Apple Silicon
+            (macOS 15+), so Intel Mac owners are out of luck.
           </li>
           <li>
             <strong>Beyond reading.</strong> Scanning physical books with your
@@ -203,7 +202,7 @@ export default function SpeechifyAlternativeForMacPage() {
 
       <StoreCta
         headline="Try the private Speechify alternative"
-        subline="Free unlimited listening, no account, no word quota. Native Mac and iPhone apps."
+        subline="Free unlimited listening, no account, no word quota. Runs on iPhone, iPad, and Apple Silicon Macs."
       />
     </MoneyPageLayout>
   );

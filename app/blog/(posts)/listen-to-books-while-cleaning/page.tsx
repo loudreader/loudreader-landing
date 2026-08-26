@@ -23,7 +23,7 @@ export default function ListenToBooksWhileCleaningArticle() {
           from your brain. That makes it perfect audiobook territory. Your
           hands scrub, fold, sweep, and wipe while your ears get through a
           chapter or three.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices. It is fully
           on-device and private, your library never leaves your device, so
           playback keeps going through every room in the house, including the

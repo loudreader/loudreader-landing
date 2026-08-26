@@ -49,7 +49,7 @@ export default function ElevenReaderAlternativePage() {
           meter. The free tier includes unlimited listening on every book, cover
           to cover, while ElevenReader&apos;s free plan caps text-to-audio at 10
           hours per month and unlimited listening on your own imports requires
-          Ultra at $11/month. LoudReader also ships native Mac and iPhone apps;
+          Ultra at $11/month. LoudReader also runs on iPhone, iPad, and Apple Silicon Macs;
           ElevenReader has no Mac app. Choose ElevenReader instead if you want
           1,000+ cloud voices, 30+ languages, a premium audiobook store, or
           Android support.
@@ -81,8 +81,7 @@ export default function ElevenReaderAlternativePage() {
       <QuestionSection question="What is LoudReader?">
         <p>
           LoudReader turns any EPUB, PDF, or Project Gutenberg classic into an
-          audiobook with natural offline voices. It ships as native Mac and
-          iPhone apps, not a web wrapper, and every word of speech is generated
+          audiobook with natural offline voices. It runs on iPhone, iPad, and Apple Silicon Macs, not a web wrapper, and every word of speech is generated
           on your device. LoudReader is fully on-device and private, your
           library never leaves your device. There's no account and no sign-up.
           The app never even asks for an email address.
@@ -211,7 +210,7 @@ export default function ElevenReaderAlternativePage() {
 
       <StoreCta
         headline="Try the private ElevenReader alternative"
-        subline="Unlimited free listening, no upload, no account. Native Mac and iPhone apps."
+        subline="Unlimited free listening, no upload, no account. Runs on iPhone, iPad, and Apple Silicon Macs."
       />
     </MoneyPageLayout>
   );

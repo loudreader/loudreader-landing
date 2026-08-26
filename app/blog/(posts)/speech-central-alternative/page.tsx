@@ -23,8 +23,8 @@ export default function SpeechCentralAlternativeArticle() {
           that genuinely work the same way: offline EPUB and PDF reading
           with no cloud dependency. Speech Central has wider platform
           support with Apple Watch and Android. LoudReader has better voice
-          quality and a dedicated Mac app. <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) gives you natural offline voices that
+          quality and runs on Apple Silicon Macs as well as iPhone and iPad. <strong>LoudReader</strong>{" "}
+          (iPhone, iPad, and Mac) gives you natural offline voices that
           sound closer to a real reader, plus a generous free tier with no
           word cap. It is fully on-device and private, your library never
           leaves your device. If you are on Android or need Watch support,
@@ -87,7 +87,7 @@ export default function SpeechCentralAlternativeArticle() {
           generation ahead.
         </p>
         <p>
-          LoudReader provides native Mac and iPhone apps. Speech Central
+          LoudReader runs on iPhone, iPad, and Apple Silicon Macs. Speech Central
           skips the Mac entirely. If you read at your desk sometimes and on
           your phone sometimes, LoudReader gives you the same app, same
           voices, same library on both, synced through iCloud. The Mac app
@@ -144,7 +144,8 @@ export default function SpeechCentralAlternativeArticle() {
         </p>
         <p>
           If you live entirely in the Apple ecosystem with Mac and iPhone,
-          care most about voice quality, want a real desktop app, and like
+          care most about voice quality, want it running on the Mac itself
+          rather than in a browser tab, and like
           the idea of starting free with no word cap, LoudReader is your
           app. It is fully on-device and private, your library never
           leaves your device, and the natural offline voices make

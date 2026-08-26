@@ -27,7 +27,7 @@ export default function TextToSpeechForLawyersArticle() {
           your eyes rest. The catch for lawyers is confidentiality: most TTS
           tools send your text to a cloud server to process, which is a
           non-starter for client documents.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) is
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) is
           different. It runs fully on-device and private, your library never
           leaves your device. No account, no upload, no third party ever sees
           the text. Import a PDF brief, press play, and natural offline

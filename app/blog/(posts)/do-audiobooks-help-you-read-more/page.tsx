@@ -28,7 +28,7 @@ export default function DoAudiobooksHelpYouReadMoreArticle() {
           with books. For people with limited sit-down time, audio is not a
           compromise. It is the difference between reading some books and
           reading none.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) turns any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
           DRM-free EPUB or PDF into an audiobook with natural offline voices,
           fully on-device and private, your library never leaves your device.
           Free unlimited listening on the free tier.

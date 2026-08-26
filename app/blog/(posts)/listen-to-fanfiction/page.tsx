@@ -22,8 +22,7 @@ export default function ListenToFanfictionArticle() {
           The cleanest way to listen to fanfiction is hiding in plain sight:
           every work on AO3 has a <strong>Download</strong> button near the top
           of the page, and one of the formats it offers is EPUB. Download the
-          fic, open it in <strong>LoudReader</strong> (native Mac and iPhone
-          apps), and the whole work (every chapter, in order) becomes an
+          fic, open it in <strong>LoudReader</strong> (iPhone, iPad, and Mac), and the whole work (every chapter, in order) becomes an
           audiobook with natural offline voices and word-by-word highlighting.
           No account on either side and no word quota. LoudReader is fully
           on-device and private, your library never leaves your device, so

@@ -21,8 +21,7 @@ export default function ListenToTextbooksArticle() {
         <p>
           If your textbook is a digital PDF or EPUB with real text in it, an
           app can read it aloud, and that turns every commute, walk, and gym
-          session into study time. <strong>LoudReader</strong> (native Mac and
-          iPhone apps) imports course PDFs and EPUBs, reads them with natural
+          session into study time. <strong>LoudReader</strong> (iPhone, iPad, and Mac) imports course PDFs and EPUBs, reads them with natural
           offline voices, and highlights each word as it&apos;s spoken, so your
           eyes and ears stay locked to the same sentence. Listening is free
           and unlimited, with no word quota and no account. Two honest limits.

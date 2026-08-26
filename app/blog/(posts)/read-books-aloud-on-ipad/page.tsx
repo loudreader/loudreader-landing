@@ -20,7 +20,7 @@ export default function ReadBooksAloudOnIpadArticle() {
       <Tldr>
         <p>
           An iPad is the best screen for following along while a book is read
-          aloud. <strong>LoudReader</strong> (native Mac and iPhone apps, also
+          aloud. <strong>LoudReader</strong> (iPhone, iPad, and Mac, also
           runs on iPad) reads EPUBs and PDFs with natural offline voices and
           highlights each word as it is spoken. The larger display makes word
           highlighting genuinely useful, and Split View lets you take notes on

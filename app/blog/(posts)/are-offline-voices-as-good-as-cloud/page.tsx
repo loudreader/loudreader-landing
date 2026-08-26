@@ -26,7 +26,7 @@ export default function AreOfflineVoicesAsGoodAsCloudArticle() {
           reliability (no internet needed), and latency (instant play and
           pause). For book-length listening, the quality gap is small enough
           that most people would not notice without a side-by-side comparison.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) runs 8
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) runs 8
           natural offline voices on Apple Silicon's Neural Engine, fully
           on-device and private, your library never leaves your device. One
           voice is free with unlimited listening; all 8 are part of{" "}

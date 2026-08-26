@@ -22,7 +22,7 @@ export default function ReadAloudScreenOffIphoneArticle() {
           Not every app that reads text aloud keeps playing when you lock your
           iPhone. iOS requires apps to explicitly declare background audio
           support, and many reading apps skip this. <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) declares the audio background mode, so
+          (iPhone, iPad, and Mac) declares the audio background mode, so
           playback continues with the screen locked. The lock screen shows the
           book title, author, elapsed time, and standard controls: play/pause
           and 15-second skip forward/backward. The same controls work from

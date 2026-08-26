@@ -21,7 +21,7 @@ export default function PrideAndPrejudiceAudiobookFreeArticle() {
         <p>
           Pride and Prejudice is public domain, so a free full-length
           audiobook of it is one tap away in <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps). One honest note first: this is a
+          (iPhone, iPad, and Mac). One honest note first: this is a
           synthetic voice reading Jane Austen&apos;s actual text, generated
           on your device, not a professionally performed recording with a
           human narrator. If that&apos;s what you&apos;re after, open the app,

@@ -21,8 +21,7 @@ export default function BestFreeTextToSpeechAppArticle() {
         <p>
           The two genuinely free, no-catch text-to-speech options are{" "}
           <strong>Apple Spoken Content</strong> (built into every iPhone
-          and Mac) and <strong>LoudReader</strong> (native Mac and iPhone
-          apps). Apple Spoken Content is always free and reads anything on
+          and Mac) and <strong>LoudReader</strong> (iPhone, iPad, and Mac). Apple Spoken Content is always free and reads anything on
           screen, but it is not built for books. LoudReader&apos;s free
           tier provides {PRICING.free} You get one natural offline voice
           and can listen to entire books with no word cap. Most other apps

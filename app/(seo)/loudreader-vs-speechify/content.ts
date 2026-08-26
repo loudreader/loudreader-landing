@@ -108,7 +108,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Platforms",
     cells: [
-      "Native Mac and iPhone apps (iPad too)",
+      "iPhone, iPad, and Apple Silicon Macs",
       "iOS, Android, web app, Chrome extension, Mac app",
     ],
   },

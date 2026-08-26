@@ -38,8 +38,7 @@ export default function LittleWomenAudiobookFreeArticle() {
             device
           </strong>
           , so once it&apos;s downloaded there&apos;s no connection needed to
-          keep listening. Get <strong>LoudReader</strong> (native Mac and
-          iPhone apps) free from the App Store, search Little Women in the
+          keep listening. Get <strong>LoudReader</strong> (iPhone, iPad, and Mac) free from the App Store, search Little Women in the
           built-in catalog, and press play.
         </p>
       </Tldr>

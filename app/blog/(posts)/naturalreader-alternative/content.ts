@@ -25,6 +25,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does LoudReader have a web version or Windows app?",
-    a: "No. LoudReader is native Mac and iPhone apps only, the same as NaturalReader's native apps. If you need a web-based reader or Windows support, NaturalReader is the better choice.",
+    a: "No. LoudReader runs on iPhone, iPad, and Apple Silicon Macs only, the same as NaturalReader's native apps. If you need a web-based reader or Windows support, NaturalReader is the better choice.",
   },
 ];

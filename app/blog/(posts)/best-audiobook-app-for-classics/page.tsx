@@ -23,7 +23,7 @@ export default function BestAudiobookAppForClassicsArticle() {
           <strong>LibriVox</strong> gives you free human-narrated audiobooks
           with real performances, but covers only a fraction of the
           catalog and recording quality varies.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) builds
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) builds
           in the entire Project Gutenberg catalog of 70,000+ books, read
           by natural offline voices. It is fully on-device and private,
           your library never leaves your device, and the free tier gives

@@ -39,6 +39,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I listen to Peter Pan on my iPhone and Mac?",
-    a: "Yes. LoudReader has native Mac and iPhone apps, both reading the same book with your place saved, so you can start on one device and finish on the other.",
+    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, both reading the same book with your place saved, so you can start on one device and finish on the other.",
   },
 ];

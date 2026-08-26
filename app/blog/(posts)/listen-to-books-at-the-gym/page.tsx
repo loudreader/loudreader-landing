@@ -23,7 +23,7 @@ export default function ListenToBooksAtTheGymArticle() {
           mind has room on every steady cardio session, warm-up, and cool-down.
           An audiobook turns that hour into a workout plus a chapter, no extra
           scheduling required.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices. It is fully
           on-device and private, your library never leaves your device, so gym
           WiFi that requires a sign-in or a dead zone in the locker room makes

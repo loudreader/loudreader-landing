@@ -22,7 +22,7 @@ export default function ListenToBooksWhileRunningArticle() {
           Running with an audiobook is different from running with music. Music
           sets a beat and disappears. A book pulls you forward through
           something: a chapter, an argument, a world.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
           DRM-free EPUB or PDF aloud with natural offline voices. It is fully
           on-device and private, your library never leaves your device, so no
           data plan is needed mid-run. The voices work in airplane mode, in

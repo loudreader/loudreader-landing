@@ -20,8 +20,7 @@ export default function FrankensteinAudiobookFreeArticle() {
       <Tldr>
         <p>
           Frankenstein is public domain, so a free full-length audiobook of
-          it is already sitting inside <strong>LoudReader</strong> (native
-          Mac and iPhone apps). One honest note first: this is a synthetic
+          it is already sitting inside <strong>LoudReader</strong> (iPhone, iPad, and Mac). One honest note first: this is a synthetic
           voice reading Mary Shelley&apos;s actual text on your device, not a
           professionally performed recording with a human narrator. If
           that&apos;s what you need, open the app, find{" "}

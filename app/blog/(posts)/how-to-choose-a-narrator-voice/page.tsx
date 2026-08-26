@@ -26,7 +26,7 @@ export default function HowToChooseANarratorVoiceArticle() {
           easy to tune into the background while you fold laundry. No
           description of a voice tells you what it actually sounds like, so
           the only real way to pick one is to listen. <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) has{" "}
+          (iPhone, iPad, and Mac) has{" "}
           <Link href="/voices" className="text-loudBlue hover:underline">
             23 studio narrators across 10 languages
           </Link>

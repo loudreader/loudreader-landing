@@ -23,8 +23,7 @@ export default function VoiceAloudReaderAlternativeArticle() {
           reads EPUBs and PDFs offline, has deep customization, and does
           not require an account. If you are looking for an alternative
           because you moved from Android to iPhone, or because you want a
-          Mac app too, <strong>LoudReader</strong> (native Mac and iPhone
-          apps) is the closest match. It is fully on-device and private,
+          Mac app too, <strong>LoudReader</strong> (iPhone, iPad, and Mac) is the closest match. It is fully on-device and private,
           your library never leaves your device, with natural offline
           voices and a free tier that provides {PRICING.free} The honest
           caveat: if you are on Android and just want a different app,
@@ -88,8 +87,9 @@ export default function VoiceAloudReaderAlternativeArticle() {
         <p>
           LoudReader adds a few things @Voice does not have. A curated set
           of natural offline voices that sound better than most system TTS
-          engines, and you can upgrade them through Premium. A native Mac
-          app, so your library and place sync across desktop and phone. A
+          engines, and you can upgrade them through Premium. It runs on Mac
+          as well as iPhone and iPad, so your library and place carry across
+          desktop and phone. A
           built-in catalog of 70,000+ free Project Gutenberg classics: open
           the app, pick a book, start listening, no import step needed.
         </p>

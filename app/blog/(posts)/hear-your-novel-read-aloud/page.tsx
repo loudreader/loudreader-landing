@@ -26,8 +26,7 @@ export default function HearYourNovelReadAloudArticle() {
           your head, the word you used five times in one chapter, scenes
           where the pacing quietly sags. The tool question has one hard
           requirement: an unpublished manuscript should not be uploaded to
-          anyone&apos;s server. <strong>LoudReader</strong> (native Mac and
-          iPhone apps) reads your exported EPUB or PDF with natural offline
+          anyone&apos;s server. <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads your exported EPUB or PDF with natural offline
           voices, fully on-device and private, your library never leaves your
           device. No account, no cloud, and it works in airplane mode.
         </p>

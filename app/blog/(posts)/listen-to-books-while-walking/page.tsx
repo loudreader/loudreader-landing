@@ -23,7 +23,7 @@ export default function ListenToBooksWhileWalkingArticle() {
           already doing it. The daily dog walk, the lunch loop around the block,
           the stroll after dinner. Those minutes add up, and your ears are free
           the whole time.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) turns any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
           DRM-free EPUB or PDF into an audiobook with natural offline voices. It
           is fully on-device and private, your library never leaves your device,
           so playback works on trails, in parks with spotty signal, and anywhere

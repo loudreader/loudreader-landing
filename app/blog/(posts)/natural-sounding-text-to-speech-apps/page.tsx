@@ -28,7 +28,7 @@ export default function NaturalSoundingTextToSpeechAppsArticle() {
           they do not perform. Cloud voices (Speechify, NaturalReader) tend
           to be slightly more expressive but need internet and cost per
           word. On-device voices like{" "}
-          <strong>LoudReader</strong>&apos;s (native Mac and iPhone apps)
+          <strong>LoudReader</strong>&apos;s (iPhone, iPad, and Mac)
           are natural offline voices that work anywhere with no data
           leaving your device. It is fully on-device and private, your
           library never leaves your device. The free tier gives you one

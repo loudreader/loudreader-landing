@@ -20,8 +20,7 @@ export default function DraculaAudiobookFreeArticle() {
       <Tldr>
         <p>
           Dracula is public domain, so a free full-length audiobook of it is
-          already built into <strong>LoudReader</strong> (native Mac and
-          iPhone apps). One honest note first: this is a synthetic voice
+          already built into <strong>LoudReader</strong> (iPhone, iPad, and Mac). One honest note first: this is a synthetic voice
           reading Bram Stoker&apos;s actual text on your device, not a
           professionally performed recording with a human narrator. If
           that&apos;s enough for you, open the app, find{" "}

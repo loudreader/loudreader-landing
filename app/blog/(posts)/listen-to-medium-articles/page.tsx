@@ -23,8 +23,7 @@ export default function ListenToMediumArticlesArticle() {
           authors record their own narrations, and those articles show a Listen
           button at the top. For every other Medium article, the path is: open
           it in Safari, activate Reader view to strip the Medium interface,
-          export as PDF, and import into <strong>LoudReader</strong> (native
-          Mac and iPhone apps). LoudReader reads the article aloud with natural
+          export as PDF, and import into <strong>LoudReader</strong> (iPhone, iPad, and Mac). LoudReader reads the article aloud with natural
           offline voices, remembers your place, and works offline. It is fully
           on-device and private, your library never leaves your device. If the
           article is behind Medium&apos;s member paywall, you need an active

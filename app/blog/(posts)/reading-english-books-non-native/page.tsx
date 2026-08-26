@@ -30,7 +30,7 @@ export default function ReadingEnglishBooksNonNativeArticle() {
           <Link href="/" className="text-loudBlue hover:underline">
             LoudReader
           </Link>{" "}
-          (native Mac and iPhone apps) reads any book aloud with natural
+          (iPhone, iPad, and Mac) reads any book aloud with natural
           offline voices while highlighting each word, which turns a hard page
           into a guided one. Start with a short, plain-prose classic (it's
           free) and finish it. Finishing is the whole strategy.

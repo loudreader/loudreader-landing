@@ -93,7 +93,7 @@ export default function WizardOfOzAudiobookFreeArticle() {
             >
               LoudReader from the App Store
             </a>{" "}
-            for its native Mac and iPhone apps. Free, no account.
+            for iPhone, iPad, and Mac. Free, no account.
           </li>
           <li>
             Search The Wonderful Wizard of Oz in the app&apos;s built-in

@@ -12,7 +12,7 @@
 //     appear on Mac and vice versa.
 //   - No account data collected: with no sign-up flow, there's no server-side
 //     account record to build (no email, no password, no profile).
-//   - Native Mac and iPhone apps, on-device processing, pricing and free-tier
+//   - Runs on iPhone, iPad, and Apple Silicon Macs, on-device processing, pricing and free-tier
 //     facts: components/money/site.ts (single source of truth).
 // This article does not claim purchase restore behavior beyond what's
 // verifiable: App Store purchases are tied to the Apple ID the App Store

@@ -25,7 +25,7 @@ export default function IsTextToSpeechGoodForStudyingArticle() {
           For deep study that requires note-taking, working through diagrams,
           or active recall, TTS alone falls short. The honest take: use TTS to
           get more reps with the material, not to replace active engagement.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) reads your
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads your
           EPUBs and PDFs aloud with natural offline voices and word-by-word
           highlighting, giving you the dual-channel benefit of reading while
           listening. It is fully on-device and private, your library never

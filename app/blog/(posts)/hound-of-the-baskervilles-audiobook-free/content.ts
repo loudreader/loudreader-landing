@@ -40,6 +40,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I listen on my iPhone and my Mac?",
-    a: "Yes. LoudReader has native Mac and iPhone apps, both reading the same imported book and remembering your place, so you can switch devices without losing where you were.",
+    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, both reading the same imported book and remembering your place, so you can switch devices without losing where you were.",
   },
 ];

@@ -21,7 +21,7 @@ export default function PhantomOfTheOperaAudiobookFreeArticle() {
         <p>
           The Phantom of the Opera novel is public domain, so a free
           audiobook of it is one download away. <strong>LoudReader</strong>{" "}
-          (native Mac and iPhone apps) reads Gaston Leroux&apos;s original
+          (iPhone, iPad, and Mac) reads Gaston Leroux&apos;s original
           1910 text aloud with a natural offline voice, no cost, no time
           limit. One honest note first: this is a synthetic voice reading
           Leroux&apos;s text on your device, not a studio-recorded

@@ -26,7 +26,7 @@ export default function BestPlaybackSpeedForComprehensionArticle() {
           technical writing at 1.2x might not be. Text-to-speech voices can be
           less forgiving at high speeds than human narrators because algorithmically
           generated prosody compresses differently.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) gives you
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) gives you
           fine-grained speed control from 0.3x to 3.0x with natural offline
           voices, so you can dial in the exact speed that preserves comprehension
           for each book. Speed control is part of {PRICING.premiumMonthly} Premium.

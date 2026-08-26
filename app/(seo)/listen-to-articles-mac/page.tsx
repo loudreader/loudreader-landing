@@ -178,7 +178,7 @@ export default function ListenToArticlesMacPage() {
           </li>
         </ul>
         <p>
-          LoudReader ships as native Mac and iPhone apps, and beyond articles
+          LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and beyond articles
           it handles books and documents too. See{" "}
           <Link
             href="/turn-any-book-into-an-audiobook"

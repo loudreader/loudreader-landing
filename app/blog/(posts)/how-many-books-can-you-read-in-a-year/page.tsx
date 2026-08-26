@@ -26,7 +26,7 @@ export default function HowManyBooksCanYouReadInAYearArticle() {
           or roughly 43 books. Add in chores, walks, and exercise, and the
           number climbs further. This is rough math, not a promise, but it
           shows how dead time adds up.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) turns any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
           DRM-free EPUB or PDF into an audiobook with natural offline voices,
           fully on-device and private, your library never leaves your device.
           Speed control from 0.3x to 3.0x is part of {PRICING.premiumMonthly}{" "}

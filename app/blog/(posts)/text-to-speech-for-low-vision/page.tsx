@@ -23,7 +23,7 @@ export default function TextToSpeechForLowVisionArticle() {
           for low-vision readers. LoudReader is not a screen reader. It does
           not read menus, buttons, or system interfaces. What it does is
           read the books, articles, and documents you import into it.{" "}
-          <strong>LoudReader</strong> (native Mac and iPhone apps) turns any
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
           DRM-free EPUB or PDF into spoken audio with natural offline voices,
           highlighting each word as it goes. It is fully on-device and
           private, your library never leaves your device. No account, no

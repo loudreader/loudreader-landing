@@ -51,7 +51,7 @@ export default function LoudReaderVsSpeechifyPage() {
           Its free tier includes unlimited listening on every book, cover to
           cover; Premium is $7.99/month, $49.99/year, or $199.99 once. Pick
           Speechify for breadth and languages; pick LoudReader for private,
-          unlimited, long-form listening on native Mac and iPhone apps. Full
+          unlimited, long-form listening on iPhone, iPad, and Apple Silicon Macs. Full
           disclosure: this page is written by LoudReader&apos;s developer, so
           the table below sticks to facts you can verify.
         </p>
@@ -190,8 +190,7 @@ export default function LoudReaderVsSpeechifyPage() {
             for life, or a free tier you can genuinely live on.
           </li>
           <li>
-            <strong>You live on Mac and iPhone.</strong> Native Mac and
-            iPhone apps, built for long-form reading with word-by-word
+            <strong>You live on Mac and iPhone.</strong> Runs on iPhone, iPad, and Apple Silicon Macs, built for long-form reading with word-by-word
             highlighting.
           </li>
         </ul>
@@ -229,7 +228,7 @@ export default function LoudReaderVsSpeechifyPage() {
 
       <StoreCta
         headline="Try LoudReader free"
-        subline="Unlimited listening, no account, no word quota. Native Mac and iPhone apps."
+        subline="Unlimited listening, no account, no word quota. Runs on iPhone, iPad, and Apple Silicon Macs."
       />
     </MoneyPageLayout>
   );

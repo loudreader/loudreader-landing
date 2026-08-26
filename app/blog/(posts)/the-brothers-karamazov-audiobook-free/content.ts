@@ -44,6 +44,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I listen on my phone and my Mac?",
-    a: "Yes. LoudReader has native Mac and iPhone apps, and both read the same imported book, so you can start The Brothers Karamazov on your commute and pick it back up at your desk. It remembers your place either way.",
+    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and both read the same imported book, so you can start The Brothers Karamazov on your commute and pick it back up at your desk. It remembers your place either way.",
   },
 ];
