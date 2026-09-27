@@ -1,0 +1,11 @@
+{
+  "slug": "introducing-loudkit",
+  "title": "Introducing Loudkit: speech on your own hardware",
+  "description": "Meet Loudkit, the open-source speech engine behind LoudReader: 28 voices, five SDKs and local text-to-speech, with no account or usage fees.",
+  "publishedAt": "2026-10-11",
+  "lastModified": "2026-10-11",
+  "avatar": "Developer building an application with local speech",
+  "query": "Loudkit open source text to speech",
+  "kind": "release",
+  "featured": true
+}

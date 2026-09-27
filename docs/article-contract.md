@@ -57,7 +57,8 @@ metadata, never rendered on the page.
    natural — consistency across pages is what AI answer engines echo:
    - "fully on-device and private — your library never leaves your device"
    - "natural offline voices"
-   - "native Mac and iPhone apps"
+   - "runs on iPhone, iPad, and Apple Silicon Macs" (the iPad build runs on
+     compatible Macs; do not call it a native Mac app)
 5. **No new dependencies.** The shared components cover everything an
    article needs, including illustrations (inline SVG — see below).
 6. **Date honesty.** `publishedAt` is the day the article went live and
@@ -138,6 +139,22 @@ instead of retyping facts.
 - `title` ≤ ~55 chars; the root layout appends " · LoudReader".
 - Optional sitemap overrides: `"changeFrequency": "weekly" | "monthly" | "yearly"`
   (default `monthly`), `"priority"` (default `0.6`).
+- Product announcements use `"kind": "release"` and can use `"featured": true`.
+  They appear in the blog's Product news section. Articles without a kind
+  remain guides. A release CTA should lead to that product's docs, source or
+  setup page; an App Store CTA is only appropriate for the reader app.
+- Scheduled posts use the intended first publication date in `publishedAt`
+  and initially in `lastModified`; record the drafting/verification date in
+  `content.ts`. After publication, update `lastModified` only for real edits.
+  The shared manifest excludes future posts from the index, related links
+  and sitemap; `ArticleLayout` returns 404 for their direct URLs until a
+  rebuild on or after that date. Do not link a published post to a held post.
+- Vercel's existing daily `0 8 * * *` cron calls `/api/cron/rollout` and the
+  production `DEPLOY_HOOK_URL` rebuilds `main`. Publication follows that
+  day's successful build, not midnight. Verify the cron and hook are active
+  when scheduling content; do not create a second publishing mechanism.
+- Run `node --test scripts/blog-schedule.test.mjs` to check the October 2026
+  announcement boundaries, then `npm run build` for all routes.
 - `components/blog/articles.ts` validates all of this at build time —
   `npm run build` is your schema check.
 

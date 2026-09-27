@@ -7,7 +7,7 @@ import { APP_NAME, SITE_URL } from "@/components/money/site";
 
 import Byline from "./Byline";
 import RelatedArticles from "./RelatedArticles";
-import type { ArticleMeta } from "./articles";
+import { isArticlePublished, type ArticleMeta } from "./articles";
 
 /**
  * Shared shell for blog articles (server component).
@@ -41,8 +41,7 @@ export default function ArticleLayout({
   // then reveals it). getAllArticles() already keeps held articles out of the
   // /blog listing, sitemap, and "Keep reading" links; this closes the last path
   // (someone hitting the URL directly), so held == truly invisible.
-  const buildToday = new Date().toISOString().slice(0, 10);
-  if (meta.publishedAt > buildToday) notFound();
+  if (!isArticlePublished(meta)) notFound();
 
   const url = `${SITE_URL}/blog/${meta.slug}`;
   const jsonLd = {

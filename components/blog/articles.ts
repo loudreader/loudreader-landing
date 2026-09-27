@@ -32,6 +32,10 @@ export type ArticleMeta = {
   avatar?: string;
   /** Internal targeting metadata (never rendered): the ONE search query. */
   query?: string;
+  /** Product announcements are listed separately from practical guides. */
+  kind?: "guide" | "release";
+  /** Give an important announcement a prominent place in product news. */
+  featured?: boolean;
   /** Sitemap override; defaults to "monthly". */
   changeFrequency?: ChangeFrequency;
   /** Sitemap override; defaults to 0.6 (money pages are 0.7). */
@@ -75,6 +79,12 @@ function validate(folder: string, raw: Record<string, unknown>): ArticleMeta {
   if (priority !== undefined && (typeof priority !== "number" || priority <= 0 || priority > 1)) {
     throw new Error(`${where}: "priority" must be a number in (0, 1]`);
   }
+  if (raw.kind !== undefined && raw.kind !== "guide" && raw.kind !== "release") {
+    throw new Error(`${where}: "kind" must be guide | release`);
+  }
+  if (raw.featured !== undefined && typeof raw.featured !== "boolean") {
+    throw new Error(`${where}: "featured" must be a boolean`);
+  }
 
   return {
     slug,
@@ -84,20 +94,21 @@ function validate(folder: string, raw: Record<string, unknown>): ArticleMeta {
     lastModified,
     avatar: typeof raw.avatar === "string" ? raw.avatar : undefined,
     query: typeof raw.query === "string" ? raw.query : undefined,
+    kind: raw.kind as ArticleMeta["kind"],
+    featured: raw.featured as boolean | undefined,
     changeFrequency: changeFrequency as ChangeFrequency | undefined,
     priority: priority as number | undefined,
   };
 }
 
 /** All published articles (publishedAt on or before the build date), newest first. */
-export function getAllArticles(): ArticleMeta[] {
+export function getAllArticles(asOf = new Date().toISOString().slice(0, 10)): ArticleMeta[] {
   if (!fs.existsSync(POSTS_DIR)) return [];
   // Scheduled rollout: an article becomes visible (listing, sitemap,
   // RelatedArticles, and therefore crawlable) only once its publishedAt is on
   // or before the build date. Future-dated articles are held back until a
   // later rebuild, so content drips in over time instead of all at once. A
   // daily redeploy (vercel.json cron -> /api/cron/rollout) advances the drip.
-  const buildToday = new Date().toISOString().slice(0, 10);
   return fs
     .readdirSync(POSTS_DIR, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
@@ -107,12 +118,20 @@ export function getAllArticles(): ArticleMeta[] {
       const raw = JSON.parse(fs.readFileSync(metaPath, "utf8")) as Record<string, unknown>;
       return [validate(entry.name, raw)];
     })
-    .filter((meta) => meta.publishedAt <= buildToday)
+    .filter((meta) => isArticlePublished(meta, asOf))
     .sort(
       (a, b) =>
         b.publishedAt.localeCompare(a.publishedAt) ||
         a.title.localeCompare(b.title)
     );
+}
+
+/** Shared by discovery and direct pages so a scheduled post cannot leak early. */
+export function isArticlePublished(
+  meta: Pick<ArticleMeta, "publishedAt">,
+  asOf = new Date().toISOString().slice(0, 10)
+): boolean {
+  return meta.publishedAt <= asOf;
 }
 
 /**

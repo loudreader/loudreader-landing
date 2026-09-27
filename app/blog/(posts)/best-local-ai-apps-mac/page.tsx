@@ -20,193 +20,176 @@ export default function BestLocalAiAppsMacArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          A local AI app runs its models on your Mac&apos;s own chip, so your
-          data is processed on your machine, not on a vendor&apos;s server.
-          Five apps genuinely clear that bar today, each covering a different
-          job: <strong>LM Studio</strong> for chatting with local language
-          models, <strong>Ollama</strong> for running them under everything
-          else, <strong>MacWhisper</strong> for transcription,{" "}
-          <strong>Draw Things</strong> for image generation, and{" "}
-          <strong>LoudReader</strong> for reading. LoudReader turns books and
-          PDFs into audio with natural offline voices and is fully on-device
-          and private, your library never leaves your device. We checked every
-          app&apos;s local-processing claim against its own site, and we note
-          honestly where optional cloud features exist. All five have a free
-          tier, and all five keep working with Wi-Fi off.
+          Choose a local AI app by the job you want to do and the features
+          that actually run on your Mac. <strong>LM Studio</strong> and{" "}
+          <strong>Ollama</strong> run downloaded language models;{" "}
+          <strong>MacWhisper</strong> transcribes audio with local models;{" "}
+          <strong>Draw Things</strong> generates images locally; and{" "}
+          <strong>LoudReader</strong> reads books and documents with natural
+          offline voices. Some also offer cloud features, so &ldquo;local&rdquo;
+          describes a particular workflow, not every button in the app. Below
+          are five starting points, the network boundaries to check, and the
+          separate developer tools from LoudReader: Loudkit for building with
+          speech, and Loudkit for agents for adding voice to an existing bot.
+          Start with one task and test it on your own files.
         </p>
       </Tldr>
 
       <ArticleIllustration
         variant="offline"
-        caption="The defining feature: unplug the network and the app doesn't care."
+        caption="Download what you need, then check which features work without a network."
       />
 
-      <QuestionSection question="What counts as a truly local AI app?">
+      <QuestionSection question="What counts as a local AI workflow?">
         <p>
-          The test is simple and unforgiving:{" "}
-          <strong className="text-gray-900">
-            the model runs on your hardware, and the data being processed
-            never leaves it
-          </strong>
-          . Switch off Wi-Fi and the core feature still works. That&apos;s the
-          whole bar.
+          The model processes your input on your own hardware. Downloading
+          models and checking for updates may still require a connection.
+          An app may also offer remote models, web search, or external tools.
+          Selecting a local model does not automatically make those other
+          services local.
         </p>
         <p>
-          It disqualifies more apps than you&apos;d expect. Most
-          &ldquo;AI&rdquo; Mac apps are native front-ends to a cloud API: the
-          interface is local, but every document, prompt, and recording rides
-          to a server. Others do some work locally and quietly route the
-          interesting features through the cloud. And if the data is
-          sensitive, &ldquo;partly local&rdquo; is another way of saying
-          &ldquo;not local.&rdquo; This list holds every entry to the strict
-          version, and flags each app&apos;s optional cloud parts explicitly.
+          Running the core feature with Wi-Fi off is a useful availability
+          test. It does not prove that an app never communicates when it is
+          online. Read its documentation and settings as well, especially
+          before processing confidential material.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Which local AI apps are actually worth installing?">
+      <QuestionSection question="Which local AI apps should I look at for each job?">
         <p>
-          One per job, each verified against its own published claims on July
-          14, 2026:
+          These entries describe the vendors&apos; documented local workflows,
+          checked on September 27, 2026. This is a practical shortlist, not a
+          benchmark ranking. LoudReader is our own app.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong className="text-gray-900">LM Studio: chat with local
-            language models.</strong> A polished desktop app for downloading
-            open-weight LLMs and chatting with them entirely on your Mac. Its
-            pitch is AI models running locally and privately on your own
-            hardware, free for home and work use. Models download once;
-            conversations run offline.
+            <strong className="text-gray-900">LM Studio: local chat.</strong>{" "}
+            Download a compatible language model and use it for conversations
+            or questions about documents. Its{" "}
+            <a href="https://lmstudio.ai/docs/app/offline" className="text-loudBlue hover:underline">offline documentation</a>{" "}
+            distinguishes local chat and document processing from model
+            discovery, downloads, and update checks that require a network.
           </li>
           <li>
-            <strong className="text-gray-900">Ollama: the local model
-            runner.</strong> A lightweight engine for running open models,
-            and the backend for countless other tools; it runs entirely
-            offline and is free locally. Honest note: Ollama also sells
-            optional cloud tiers, so the local path stays free but the upsell
-            exists.
+            <strong className="text-gray-900">Ollama: a model runner for apps and tools.</strong>{" "}
+            Run a model locally and connect software to it. Ollama also has
+            cloud models and web search; its{" "}
+            <a href="https://docs.ollama.com/faq#how-do-i-disable-ollama-cloud-features" className="text-loudBlue hover:underline">FAQ explains how to disable cloud features</a>{" "}
+            if you want a local-only configuration.
           </li>
           <li>
             <strong className="text-gray-900">MacWhisper: transcription.</strong>{" "}
-            Drop in audio or video and get a transcript from local speech
-            models. Its claim: sensitive content processed without data ever
-            leaving your Mac. Free version, one-time Pro purchase. Honest
-            note: optional integrations (cloud transcription providers, AI
-            summarization) do send data out if you enable them.
+            Use local speech models to turn recordings into text. Its{" "}
+            <a href="https://www.macwhisper.com/" className="text-loudBlue hover:underline">feature page</a>{" "}
+            also lists cloud transcription and AI integrations. Check the
+            selected provider before using a recording; a local transcript
+            and a cloud-generated summary are different processing steps.
           </li>
           <li>
-            <strong className="text-gray-900">Draw Things: image
-            generation.</strong> Runs image-generation models locally and
-            offline on Mac, iPhone, and iPad, explicitly to protect your
-            privacy. The free edition is genuinely free; model downloads need
-            a connection, generation doesn&apos;t.
+            <strong className="text-gray-900">Draw Things: image generation.</strong>{" "}
+            Its <a href="https://drawthings.ai/" className="text-loudBlue hover:underline">local generation workflow</a>{" "}
+            runs image models on supported Apple devices. Download the model
+            first and choose local generation when you want that processing
+            to happen on your Mac.
           </li>
           <li>
-            <strong className="text-gray-900">LoudReader: reading and text
-            to speech.</strong> Turns any DRM-free EPUB or PDF, plus 70,000+
-            built-in Project Gutenberg classics, into listening, with
-            natural offline voices generated on the Neural Engine. The voice
-            models ship inside the app, and the engine is built so it cannot
-            touch the network at runtime. Runs on iPhone, iPad, and Apple Silicon Macs, free
-            unlimited listening with no word quota.{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              Get it on the App Store
-            </a>
-            , or read the full picture in{" "}
-            <Link
-              href="/offline-text-to-speech-mac"
-              className="text-loudBlue hover:underline"
-            >
-              offline text to speech on Mac
-            </Link>
-            .
+            <strong className="text-gray-900">LoudReader: reading and text to speech.</strong>{" "}
+            Listen to DRM-free EPUBs and PDFs with voices bundled in the app.
+            Speech is generated on the device. LoudReader runs on iPhone,
+            iPad, and Apple Silicon Macs; the Mac version is the iPad app
+            running in Apple&apos;s compatibility mode. Start with{" "}
+            <Link href="/voices" className="text-loudBlue hover:underline">the voice samples</Link>{" "}
+            or <a href={APP_STORE_URL} className="text-loudBlue hover:underline">the App Store listing</a>.
           </li>
         </ul>
         <ComparisonTable
-          caption="Local AI apps for Mac compared: category, on-device processing, cloud parts, and price"
+          caption="Local AI workflows: what runs on your Mac and what to check separately"
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
           highlightColumn={4}
         />
       </QuestionSection>
 
-      <QuestionSection question="How do you check an app's &ldquo;local&rdquo; claim yourself?">
+      <QuestionSection question="Where do Loudkit and voice-enabled agents fit?">
         <p>
-          Don&apos;t take this article&apos;s word for it, or any
-          vendor&apos;s. Three checks, in escalating rigor:
+          <a href="https://loudkit.loudreader.io/" className="text-loudBlue hover:underline">Loudkit</a>{" "}
+          is the open-source speech framework from LoudReader, for people
+          building their own apps and tools. It provides a CLI and SDKs for
+          Python, Swift, TypeScript, Go, and Rust. After the model download,
+          speech runs locally. The framework is licensed under Apache-2.0;
+          it is a separate project from the LoudReader reading app.
         </p>
+        <p>
+          <a href="https://loudkit.loudreader.io/agents/" className="text-loudBlue hover:underline">Loudkit for agents</a>{" "}
+          adds a voice service to an existing agent. The current developer
+          preview runs speech synthesis and transcription on an Apple Silicon
+          Mac. Hermes and OpenClaw speech-provider integrations have local
+          tests; full delivery through real messaging accounts still needs
+          validation. Your agent&apos;s language model and the messenger may
+          use online services, with their own costs and data handling.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="How can I check a local setup before relying on it?">
         <ol className="list-decimal pl-6 space-y-2">
           <li>
-            <strong className="text-gray-900">Read the privacy claim for
-            specificity.</strong> &ldquo;Your data never leaves your
-            Mac&rdquo; is falsifiable; &ldquo;we take privacy seriously&rdquo;
-            is weather.
+            <strong className="text-gray-900">Identify the provider.</strong>{" "}
+            Check which model is selected and whether it is downloaded or
+            hosted remotely. Review separate settings for search, tools,
+            transcription, and summaries.
           </li>
           <li>
-            <strong className="text-gray-900">The airplane test.</strong>{" "}
-            Switch off Wi-Fi and use the core feature. Local inference
-            doesn&apos;t know the network is gone.
+            <strong className="text-gray-900">Finish setup while online.</strong>{" "}
+            Download the models and runtimes, then try the exact task you
+            want to repeat offline.
           </li>
           <li>
-            <strong className="text-gray-900">Watch the wire.</strong> Run an
-            outbound network monitor or firewall and watch what connections
-            the app opens while working. Update checks and model downloads
-            are legitimate. What matters is whether your <em>content</em>{" "}
-            triggers a request.
+            <strong className="text-gray-900">Disconnect and repeat.</strong>{" "}
+            Use a sample file with no sensitive information. Check that the
+            model, file access, and output all work without the connection.
+          </li>
+          <li>
+            <strong className="text-gray-900">Review connected behaviour.</strong>{" "}
+            Documentation and an outbound network monitor can help you
+            understand online requests. An offline test by itself is not a
+            security audit.
           </li>
         </ol>
         <p>
-          Why the scrutiny is warranted: most AI companies can&apos;t offer
-          truly local processing even if they wanted to, because their
-          business model is metering a cloud API. That&apos;s the argument
-          made at length in{" "}
-          <Link
-            href="/blog/on-device-text-to-speech-explained"
-            className="text-loudBlue hover:underline"
-          >
-            on-device text to speech, explained
-          </Link>
-          . And it&apos;s why the genuinely local apps tend to come from
-          indie developers whose product is the software, not your data.
+          The speech-specific version of this checklist is in{" "}
+          <Link href="/blog/on-device-text-to-speech-explained" className="text-loudBlue hover:underline">on-device text to speech, explained</Link>.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Why do local AI apps love Apple Silicon?">
+      <QuestionSection question="Does every local AI app need Apple Silicon?">
         <p>
-          Because Apple put a machine-learning accelerator in every chip.
-          Apple Silicon pairs the Neural Engine (silicon dedicated to running
-          neural networks) with unified memory the CPU, GPU, and accelerator
-          all share, so a model can generate text, images, or speech in real
-          time on a fanless laptop. Some apps here run better on Apple
-          Silicon; some, like LoudReader (macOS 15+), require it outright.
-          Hours of real-time speech synthesis is exactly the sustained
-          workload the Neural Engine was built for.
+          Requirements depend on the app, model, and runtime. Do not assume
+          all local AI uses the Neural Engine: different tools can use the
+          CPU, GPU, or other supported acceleration. Check the vendor&apos;s
+          supported hardware and allow enough memory and storage for the
+          model you choose. LoudReader specifically requires macOS 15 or
+          later on Apple Silicon; our{" "}
+          <Link href="/offline-text-to-speech-mac" className="text-loudBlue hover:underline">Mac reading guide</Link>{" "}
+          explains the app&apos;s requirements.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What do you give up by going local?">
+      <QuestionSection question="What do I give up by going local?">
         <p>
-          Peak capability and variety, honestly stated. A model that fits on
-          your Mac cannot match the largest cloud models on raw intelligence,
-          voice selection, or language coverage. LoudReader&apos;s narrators,
-          for instance, cover ten languages, not sixty. What you get back: your
-          documents, recordings, and library stay yours; everything works on
-          a plane; and nobody can meter, mine, or lose your data, because
-          they never had it. For well-defined jobs (transcribe this,
-          illustrate this, read this aloud), that trade has quietly become
-          easy to make.
+          You take responsibility for the model files, device capacity,
+          updates, and setup. Which quality trade-offs you notice depends on
+          the task and model; there is no universal local-versus-cloud score.
+          Compare the tools on a recording, document, or prompt you actually
+          use. A setup that handles that job well is more useful than a
+          broad promise about every possible AI task.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
       <StoreCta
         headline="The local AI app for your reading"
-        subline="Books and PDFs, read aloud with natural offline voices, fully on-device. Free, no account, no word quota."
+        subline="Books and PDFs, read aloud with natural offline voices. Try the samples, then listen on your own device."
       />
     </ArticleLayout>
   );
