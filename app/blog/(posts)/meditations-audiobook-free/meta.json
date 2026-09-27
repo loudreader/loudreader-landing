@@ -1,9 +1,10 @@
 {
   "slug": "meditations-audiobook-free",
-  "title": "Meditations Audiobook, Free",
-  "description": "Listen to Meditations by Marcus Aurelius free, read aloud by a synthetic voice. Hear a real sample and press play in under a minute.",
+  "title": "Free Meditations audio: start with the translation",
+  "description": "Choose a free Meditations text, identify the Casaubon translation and listen a section at a time. Avoid confusing an old edition with a modern one.",
   "publishedAt": "2026-09-20",
-  "lastModified": "2026-09-20",
+  "lastModified": "2026-09-28",
   "avatar": "Time-Starved Book Lover",
-  "query": "marcus aurelius meditations audiobook free"
+  "query": "marcus aurelius meditations audiobook free",
+  "topic": "classics"
 }

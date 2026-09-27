@@ -5,186 +5,57 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function HearYourNovelReadAloudArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Before your novel goes to beta readers or agents, give it a{" "}
-          <strong>listening pass</strong>: have a voice read the whole
-          manuscript aloud while you do nothing but listen. Your ears will
-          catch what four screen passes missed: dialogue that only worked in
-          your head, the word you used five times in one chapter, scenes
-          where the pacing quietly sags. The tool question has one hard
-          requirement: an unpublished manuscript should not be uploaded to
-          anyone&apos;s server. <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads your exported EPUB or PDF with natural offline
-          voices, fully on-device and private, your library never leaves your
-          device. No account, no cloud, and it works in airplane mode.
-        </p>
+        <p>A manuscript listening pass is useful when you give it one job at a time. First listen for the shape of a scene: who wants what, where the conversation changes direction and whether the ending earns its place. On a later pass, inspect repeated wording and sentence joins with the text visible. Keep a chapter-and-phrase issue log and make changes in your master manuscript. A synthetic narrator can reveal a passage you want to revisit, but it is not an editor: awkward delivery may come from the voice or the export rather than your writing.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="offline"
-        caption="Your manuscript, read aloud, with no server in the loop."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Mark the passage and the question. Make the edit in your master draft." />
 
-      <QuestionSection question="What does a listening pass catch that reading misses?">
-        <p>
-          By the final draft you don&apos;t read your novel anymore, you
-          recognize it. Your eyes skim sentences they have seen fifty times,
-          and your inner narrator performs the dialogue exactly as you
-          intended it. A voice that isn&apos;t you breaks that spell.
-          Listening, you will catch:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Dialogue that clunks.</strong>{" "}
-            Spoken aloud by a neutral voice, stilted exchanges and
-            speechifying characters are unmistakable. If it sounds wrong in
-            one voice, it reads wrong in a stranger&apos;s head.
-          </li>
-          <li>
-            <strong className="text-gray-900">Echo words.</strong> The
-            &ldquo;just&rdquo;, &ldquo;suddenly&rdquo;, or a character&apos;s
-            name repeated three times in a paragraph, nearly invisible on
-            screen, impossible to miss by ear.
-          </li>
-          <li>
-            <strong className="text-gray-900">Pacing drift.</strong> Scenes
-            that overstay their welcome announce themselves when you have to
-            sit through them in real time instead of skimming.
-          </li>
-          <li>
-            <strong className="text-gray-900">Sentence-level stumbles.</strong>{" "}
-            Run-ons, missing words, and tangled clauses, the same mechanics
-            covered in the companion guide to{" "}
-            <Link
-              href="/blog/proofread-by-listening"
-              className="text-loudBlue hover:underline"
-            >
-              proofreading by listening
-            </Link>
-            .
-          </li>
-        </ul>
+      <QuestionSection question="What is different about listening to a whole novel?">
+        <p>A typo check looks closely at individual words. A novel pass also asks what the reader is being asked to remember over time. Use the recording’s forward movement to notice places where you want context, where a name has not appeared for several chapters or where a scene seems to end twice.</p><p>These are prompts for your judgement, not defects the software detects. A deliberate repetition, unusual rhythm or withholding of information may be exactly what the novel needs.</p>
       </QuestionSection>
 
-      <QuestionSection question="Is it safe to put an unpublished manuscript into a TTS app?">
-        <p>
-          This is the question that stops most writers, and it deserves a
-          precise answer: it depends on where the speech is generated. A
-          cloud TTS service synthesizes audio on its servers, which means
-          your manuscript is transmitted, processed, and handled under terms
-          of service that vary by provider and can change after you agreed
-          to them. Whether any given service uses uploaded text for model
-          training is a question only its current terms can answer. And for
-          a novel you haven&apos;t published yet, &ldquo;go read the terms and
-          hope they don&apos;t change&rdquo; is a lot of trust to extend.
-        </p>
-        <p>
-          The alternative is structural, not contractual: use a reader where
-          the text never leaves your machine. LoudReader generates its
-          narration entirely on your Mac or iPhone. It&apos;s fully on-device
-          and private, your library never leaves your device. There&apos;s no
-          account to create and no server ever sees a word of the manuscript.
-          You can turn on airplane mode and the book keeps reading. The full
-          privacy picture is on{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text-to-speech with no cloud
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you run a listening pass?">
+      <QuestionSection question="How do I prepare a reliable listening copy?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Export a listening copy.</strong>{" "}
-            Compile to EPUB from Scrivener, or export PDF from Word, Google
-            Docs, or Pages. EPUB reflows more cleanly, and PDF always works.
-          </li>
-          <li>
-            <strong className="text-gray-900">Import it into LoudReader.</strong>{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              Download it from the App Store
-            </a>{" "}
-            (free, no account), then import the file on Mac or share it to
-            the app on iPhone.
-          </li>
-          <li>
-            <strong className="text-gray-900">Listen away from the keyboard.</strong>{" "}
-            The first listening pass works best as a reader, not an editor:
-            go for a walk, keep a notebook, and jot chapter numbers where
-            something snagged. Resist fixing as you go. You&apos;re here to
-            hear the shape of the book.
-          </li>
-          <li>
-            <strong className="text-gray-900">Work in chapters.</strong>{" "}
-            LoudReader remembers your position between sessions, so a
-            90,000-word manuscript becomes a few weeks of commutes and
-            evening walks rather than one heroic sitting.
-          </li>
-          <li>
-            <strong className="text-gray-900">Then edit from your notes.</strong>{" "}
-            Back at the desk, fix the flagged scenes in your master document.
-            The listening copy is disposable and never edited directly.
-          </li>
-        </ol>
+          <li>Export a dated EPUB or PDF from your writing tool. Keep the editable manuscript as the source of truth.</li>
+          <li>Test the beginning, middle and end. Check scene breaks, italics, dialogue punctuation and any footnotes in the listening copy.</li>
+          <li>Listen to a short passage while looking at the master draft. If words or order differ, fix the export before reviewing the prose.</li>
+          <li>Name the copy with a revision date so you do not accidentally listen to yesterday’s draft after changing a scene.</li>
+        </ol><p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> imports DRM-free EPUBs and PDFs; it does not edit a Scrivener project or Word document in place. For PDF problems, use <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">the PDF listening guide</Link>.</p>
       </QuestionSection>
 
-      <QuestionSection question="Should the voice perform the book?">
-        <p>
-          No, and to be clear, LoudReader won&apos;t. The narration follows
-          your punctuation with a single, consistent, neutral narrator: pauses
-          at commas, full stops at periods, natural sentence contours. It
-          doesn&apos;t do character voices or acted dialogue, the way a hired
-          audiobook narrator would.
-        </p>
-        <p>
-          For an editing pass, that neutrality is exactly what you want. A
-          performance can rescue flat dialogue, but a neutral read can&apos;t,
-          so flat dialogue stays audibly flat. That&apos;s the information you
-          came for. The manuscript that survives a plain reading is the one
-          that&apos;s ready for other people&apos;s heads.
-        </p>
+      <QuestionSection question="What should the first pass record?">
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Orientation:</strong> the chapter and a distinctive phrase you can search later.</li>
+          <li><strong>The question:</strong> “Who is speaking here?” or “Why has the goal changed?” is more useful than “bad scene”.</li>
+          <li><strong>The scale:</strong> mark a sentence issue separately from a structural issue.</li>
+          <li><strong>A possible explanation:</strong> note whether it might be a narration or extraction problem before rewriting.</li>
+        </ul><p>Let the scene finish if you can follow it. Constantly rewriting the first paragraph makes it hard to hear the whole exchange. If you prefer to fix immediately, work in small scenes and replay each one after revision.</p>
       </QuestionSection>
 
-      <QuestionSection question="When in the process should the listening pass happen?">
-        <p>
-          Last, after your own screen edits are done and before other
-          people see it. The listening pass is the cheapest full read your
-          book will ever get: it costs you hours, not a favor from a beta
-          reader or a first impression with an agent. Many writers do two:
-          one pass for scenes and pacing after the structural edit, and one
-          final pass for sentences just before submission. With unlimited
-          free listening and a manuscript that never leaves your device,
-          the only real cost is the walk you take while listening.
-        </p>
+      <QuestionSection question="How should I judge dialogue and pacing?">
+        <p>Listen for ambiguous speakers, repeated greetings, exposition nobody in the scene would need, and turns in the conversation that arrive without a response. Then read the passage yourself with its intended expression. The contrast helps separate wording from a flat or unusual synthetic delivery.</p><p>A narrator’s pause is not a universal rule for your punctuation. Nor does a scene feeling slow during a tired walk establish that it is too long. Recheck important decisions in a focused read or with a human reader before cutting.</p>
+      </QuestionSection>
+
+      <QuestionSection question="What should I check before importing an unpublished draft?">
+        <p>Choose a tool whose processing and data policy suit the manuscript’s requirements. LoudReader generates narration locally rather than uploading the book to a speech server. It also sends crash/performance diagnostics and usage analytics; usage analytics is enabled by default, and version 1.12 has no visible switch to disable it. Offline playback alone does not prove that an application never makes network requests.</p><p>For work under a contract or confidentiality agreement, follow its actual requirements. See <Link href="/private-text-to-speech-no-cloud" className="text-loudBlue hover:underline">the local-speech privacy explanation</Link> for the distinction between narration and other app services.</p>
+      </QuestionSection>
+
+      <QuestionSection question="When is the listening pass finished?">
+        <p>After you have reviewed the issue log, make the chosen changes in the master document and replay the changed passages in context. Keep unresolved structural questions for your next edit or beta reader. A completed audio pass does not certify the manuscript as error-free.</p><p>For the final wording check, use <Link href="/blog/catch-typos-in-your-own-writing" className="text-loudBlue hover:underline">the typo-checking pass</Link>. You can change voices if that helps you attend to the text, but there is no requirement to listen to the entire novel multiple times.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear your novel before anyone else does"
-        subline="Import your manuscript as EPUB or PDF. Read aloud on-device, never uploaded, no account."
-      />
     </ArticleLayout>
   );
 }

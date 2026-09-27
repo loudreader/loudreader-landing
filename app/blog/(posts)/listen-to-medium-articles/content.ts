@@ -1,43 +1,31 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - LoudReader imports EPUB and PDF files. There is no Medium
-//     integration, no URL paste field, and no browser extension.
-//   - The workflow described (open in Safari Reader, export as PDF,
-//     import into LoudReader) is the honest route.
-//   - Medium's own audio feature (authors recording narrations) is
-//     mentioned as an existing but rare feature. Medium's member-only
-//     paywall is described accurately: non-members see a truncated article
-//     with a signup prompt, and the PDF export captures whatever is
-//     visible on the page.
-//   - Pricing, free-tier, and voice facts come from components/money/site.ts.
-// Claims you may NOT make: Medium integration, paywall bypass, member
-// article access.
+// FACT PROVENANCE — reviewed 2026-09-28.
+// Shipping source: LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+//   LoudReader/AddContentSheet.swift; LinkImportSheet.swift — Paste a Link
+//   LoudReader/BookImportService.swift; ArticleImportPipeline.swift — HTML extraction and quality failures
+//   LoudReader/Subscription/SubscriptionAccess.swift — article allowance
+//   LoudReader/Analytics.swift; LoudReaderApp.swift — telemetry exists
+// Canonical release audit: docs/product-facts-2026-09-28.md.
+// Source inspection, not a new runtime or network test.
+// Official source checked 2026-09-28: https://help.medium.com/hc/en-us/articles/4635049283351-About-audio
+// No promise of perfect extraction, all-site compatibility, or absence of telemetry.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does Medium have a built-in listen feature?",
-    a: "Medium added audio narrations in 2020, but only for articles where the author recorded a reading themselves. When an article has audio, a 'Listen' button appears at the top of the page next to the bookmark icon. Most Medium articles do not have this. For text-only articles, Medium provides no text-to-speech option.",
+    "q": "Does Medium have text-to-speech?",
+    "a": "Yes. Medium documents English text-to-speech for active members, with a Listen button in the browser and app. Check its audio help page for availability."
   },
   {
-    q: "Can I listen to member-only Medium articles?",
-    a: "Only if you have a Medium membership and you are logged in when you export. Medium articles behind the paywall show a truncated preview to non-members. When you export the page as PDF, you get whatever is visible: the full article if you are a logged-in member, or the paywall preview if you are not. LoudReader does not bypass Medium's paywall.",
+    "q": "Does LoudReader unlock member-only stories?",
+    "a": "No. Its link importer is separate from your signed-in browser. Use content you can access and verify that the imported copy contains the complete article."
   },
   {
-    q: "How do I export a Medium article for listening?",
-    a: "Open the article in Safari on iPhone or Mac. Tap the Reader button in the address bar to strip ads, claps, and the Medium sidebar. Then export as PDF: on Mac, File then Export as PDF. On iPhone, share button, Print, pinch outward to open as PDF, save to Files or share to LoudReader. Import the PDF into LoudReader and press play.",
+    "q": "Must I export every article as a PDF?",
+    "a": "No. Try Paste a Link or the share extension first. A PDF is a fallback when you can save a complete readable copy from your browser."
   },
   {
-    q: "Does the TTS voice handle Medium's formatting well?",
-    a: "Medium articles are mostly straightforward prose with occasional images and pull quotes. Safari Reader strips the Medium interface but preserves headings, paragraphs, and blockquotes. LoudReader reads these naturally. Embedded tweets, charts, and other rich media produce no audio. Captions get read, which helps for images.",
-  },
-  {
-    q: "Can I build a Medium reading queue to listen offline?",
-    a: "Yes. Bookmark articles in Medium or save them to a reading list. When you have a batch, open each one in Safari Reader, export as PDF, and import into LoudReader. The PDFs are offline files. LoudReader is fully on-device and private, your library never leaves your device, so you can listen through your queue without an internet connection.",
-  },
-  {
-    q: "What about the Medium app? Can I listen there?",
-    a: "The Medium app does not have text-to-speech. On iOS, you can use the system Speak Screen feature (two-finger swipe down) to read articles aloud in the app. The voice is the system accessibility voice, it reads interface elements along with the text, and it stops if you lock the screen. For a short article, it is functional. For a long read, the PDF export approach with LoudReader gives you natural voices and offline playback.",
-  },
+    "q": "Will saved stories update automatically?",
+    "a": "No. Treat the imported article as a snapshot. Return to the original URL for edits, comments and linked sources."
+  }
 ];

@@ -18,166 +18,126 @@ export default function WhatHappensToYourDataArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          Your book or document never leaves the device with{" "}
-          <strong>LoudReader</strong>: it&apos;s fully on-device and private,
-          your library never leaves your device, and speech is generated
-          locally. But &ldquo;no cloud&rdquo; and &ldquo;zero network
-          requests&rdquo; are not the same claim, and the honest answer names
-          exactly what does travel. Three things: content you explicitly
-          download, like a free Project Gutenberg book or a pasted article
-          link; anonymous usage signals (a book was opened, the sleep timer
-          was set) with no title, filename, or document text attached, which
-          you can turn off with one Settings toggle; and crash reports, which
-          stay on with no separate toggle but are scrubbed of file paths and
-          URLs before they leave the device, with several crash-reporting
-          features that would otherwise capture screen content or full
-          request URLs turned off entirely rather than filtered. None of
-          those three carries what you actually read.
+          LoudReader processes imported books and generates speech on your
+          device. It does not upload a book to a speech service for narration.
+          It also uses <strong>TelemetryDeck for usage analytics and Sentry
+          for crash and performance diagnostics</strong>. Analytics is on by
+          default; version 1.12 does not expose an analytics switch in
+          Settings. Downloads and App Store purchases involve network
+          services too. Those are different kinds of data handling, and
+          &ldquo;on-device&rdquo; should not blur them together. This account
+          was checked against release 1.12 on 28 September 2026; it describes
+          the source configuration, not an independent capture and audit of
+          all traffic from the installed app.
         </p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="offline"
-        caption="Three kinds of network request, and what each one does and doesn't carry."
-      />
+      <ArticleIllustration variant="offline" caption="Local reading content and external diagnostic services are separate parts of the app." />
 
-      <QuestionSection question="What does 'your data never leaves the device' actually mean?">
+      <QuestionSection question="Which parts of reading happen locally?">
         <p>
-          It means the content you&apos;re listening to and the speech
-          generated from it stay local. Your book, PDF, or article is stored
-          on your device, and the voice reading it is synthesized on your
-          device, with no upload step in between. That part is the core
-          privacy claim and it is real. What it does not mean, in LoudReader
-          or in any real app, is that the app makes zero network requests of
-          any kind. An app that never talks to a server can&apos;t check for
-          updates, fetch a free book, or tell its developer that a crash
-          happened. The honest question isn&apos;t whether any network
-          request exists, it&apos;s which ones do and what they carry.
+          Imported EPUB and PDF files are processed into the app&apos;s local
+          library, and speech is generated on the device. The current app
+          also uses local text recognition for scanned PDFs. Reading an
+          existing book therefore does not require a speech-server request
+          for each passage.
+        </p>
+        <p>
+          This is a narrower claim than saying that no copy of a book can
+          ever exist elsewhere. Your source may be in iCloud Drive or an email
+          attachment; device backup settings are another consideration.
+          LoudReader has no automatic library or reading-position sync
+          between devices. Removing a library item does not remove originals
+          from those other places.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What downloads does LoudReader make on your behalf?">
+      <QuestionSection question="What does usage analytics describe?">
         <p>
-          Only what you ask for. Two categories: fetching a book from the
-          70,000-plus title Project Gutenberg catalog built into the app, and
-          fetching an article when you paste in a link. Both are requests you
-          triggered, for content you chose, and both are the same kind of
-          network activity any reading app makes when you tell it to go get
-          something. Nothing about your existing library, your listening
-          history, or the documents already on your device triggers a request
-          on its own.
+          The app uses TelemetryDeck to count feature usage and reliability
+          events. Examples include opening a book, importing a file with a
+          format and source category, starting playback and ending a listening
+          session. Session statistics can include a duration range, playback
+          speed and the speech engine used. The analytics SDK also supplies
+          app and device context such as app version, operating-system version
+          and platform.
+        </p>
+        <p>
+          The reviewed event definitions are designed not to include book
+          titles or reading text. That does not make them &ldquo;no
+          data&rdquo;: they still describe how the app is used. Analytics is
+          enabled by default. Release 1.12 contains an internal opt-out
+          preference, but the user-facing switch is hidden. There is no
+          Settings action we can currently tell a reader to use to turn it
+          off. We do not treat the existence of unused toggle code as a
+          shipping privacy control.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What does 'anonymous usage statistics' actually send?">
+      <QuestionSection question="What is sent for crashes and performance?">
         <p>
-          Named, bounded events, not free text. LoudReader&apos;s analytics
-          layer sends signals like &ldquo;a book was opened,&rdquo;
-          &ldquo;an item was imported&rdquo; (with the file format, such as
-          EPUB, attached, not a filename), &ldquo;playback started&rdquo;
-          (with a content type, not a title), or &ldquo;the sleep timer was
-          set to N minutes.&rdquo; Every one of these event definitions takes
-          a fixed, small set of parameters chosen in advance. None of them
-          takes a book title, an author name, a file path, or any of the text
-          you&apos;re actually reading as a parameter, because the event
-          shapes simply don&apos;t have a field for it.
+          Sentry is a separate diagnostic channel. It helps identify crashes,
+          app hangs, memory pressure and performance problems using information
+          such as stack traces, app/device context and diagnostic measurements.
+          It is active in the release build and has no separate in-app switch.
+          Turning off a usage-analytics preference, where a future version
+          offers one, would not by itself disable this channel.
         </p>
         <p>
-          This is on by default, and it is also the one channel with a real
-          switch: Settings &gt; Privacy has a single toggle,
-          &ldquo;Share Anonymous Usage Statistics.&rdquo; Turning it off stops
-          every one of these signals immediately, and the app&apos;s own
-          description of the toggle states plainly that it covers
-          &ldquo;feature-usage counts only, never book titles, files, or
-          anything you read.&rdquo;
+          The release configuration disables default personal-information
+          collection, screenshot attachments and session replay. It also
+          disables automatic file and network tracing. Error reports and
+          diagnostic breadcrumbs pass through filters intended to remove
+          file paths and filenames, reduce web addresses to the host and
+          remove query details that might disclose a search or article.
+        </p>
+        <p>
+          These are safeguards, not an assurance that no unexpected value
+          could ever reach a diagnostic report. Pattern filters cannot
+          recognise every possible book title. Avoiding reading content in
+          the event definitions and keeping those safeguards reviewed both
+          matter. We have not independently audited all transmitted payloads
+          for this article.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What about crash reports? Do they see what I was reading?">
-        <p>
-          This is the channel most privacy write-ups skip, because it&apos;s
-          the one that sounds like it should be riskiest: a crash report can,
-          in a badly built app, include the last URL fetched, a file path, or
-          even a screenshot of what was on screen. LoudReader&apos;s crash
-          reporting has no separate opt-out toggle of its own; it stays on so
-          the developer can find and fix real defects. What it does not do is
-          send those risky details in the first place, and that&apos;s a
-          design choice rather than an accident:
-        </p>
+      <QuestionSection question="What other activity can contact a service?">
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            Every crash and error report passes through a scrubbing step
-            before it leaves the device, specifically built to strip file
-            paths and URLs.
-          </li>
-          <li>
-            Failed network requests are deliberately excluded from crash
-            reporting, because a failed request&apos;s own event would
-            otherwise carry the full URL, which could reveal what article or
-            book you were fetching.
-          </li>
-          <li>
-            File-access tracing is turned off entirely, because those events
-            carry absolute file paths, which is another way your library
-            contents could otherwise leak into a report.
-          </li>
-          <li>
-            Network request tracing is off, for the same reason: the raw URL
-            of every request would otherwise be attached.
-          </li>
-          <li>
-            Session replay, the feature that would record your screen for
-            debugging, is set to record nothing, ever, because a replay of
-            the screen is a replay of the book text on it.
-          </li>
+          <li><strong>Getting content:</strong> fetching a catalogue book or saving an article requests content from the relevant service or website. The destination necessarily receives the request for that resource.</li>
+          <li><strong>Getting resources:</strong> installation, updates or resources needed by a selected feature can require downloads. Test the desired book and voice offline before relying on them away from a connection.</li>
+          <li><strong>Purchases:</strong> buying or restoring Premium uses Apple&apos;s App Store services. A LoudReader account is not required, but Apple&apos;s purchase account still applies.</li>
+          <li><strong>Diagnostics:</strong> analytics and reliability reporting operate separately from whether a new document is being fetched.</li>
         </ul>
         <p>
-          One more thing worth knowing, because it shows the policy holding
-          up under real pressure rather than just existing on paper: an
-          earlier version of the app shipped Firebase, and it was removed
-          entirely after the app never actually used it for analytics, yet it
-          was still writing close to a gigabyte to disk in the background.
-          Rather than configure around an SDK doing something unaccounted
-          for, it was deleted.
+          This list explains the main categories; it is not a packet-by-packet
+          inventory of every system request. A website&apos;s data handling
+          when you fetch an article is also separate from LoudReader&apos;s
+          local narration of the resulting text.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How does this compare with a cloud text-to-speech app?">
+      <QuestionSection question="What can you check for yourself?">
         <p>
-          A cloud TTS service has to transmit your text to generate the
-          voice, full stop, because the model runs on its servers. That is
-          architecture, not a choice a privacy toggle can undo. LoudReader
-          never has that requirement in the first place, so the only things
-          that can leave the device are the three named above: your own
-          downloads, opt-out usage counts with no content in them, and
-          scrubbed crash reports. For the full architectural comparison and
-          the airplane-mode test that proves synthesis is local, see{" "}
-          <Link
-            href="/blog/are-text-to-speech-apps-safe"
-            className="text-loudBlue hover:underline"
-          >
-            are text-to-speech apps safe
-          </Link>{" "}
-          and{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text to speech with no cloud
-          </Link>
-          . This article goes one level deeper than both: it names exactly
-          what the handful of remaining network requests are, beyond the fact
-          that your content stays local, and states what each one does and
-          doesn&apos;t carry.
+          Start with the current <Link href="/privacy" className="text-loudBlue hover:underline">privacy policy</Link>
+          {" "}and app version. On iPhone and iPad, Apple&apos;s{" "}
+          <a href="https://support.apple.com/en-gb/102188" className="text-loudBlue hover:underline">App Privacy Report</a>
+          {" "}can show contacted domains. It does not show the full contents of
+          requests, so a connection alone does not establish that a book was
+          uploaded—or that the request contained nothing sensitive.
+        </p>
+        <p>
+          Disconnecting connectivity can check offline availability, but
+          cannot establish what happened earlier or what may be delivered
+          later. For a general evaluation use the{" "}
+          <Link href="/blog/are-text-to-speech-apps-safe" className="text-loudBlue hover:underline">TTS privacy checklist</Link>.
+          If your requirement is no external diagnostics, the current
+          LoudReader configuration does not offer that guarantee. Knowing
+          that limitation is part of choosing the right reading workflow.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Every network request, accounted for"
-        subline="LoudReader reads books and PDFs fully on-device. Downloads are the ones you ask for, and everything else is scrubbed or off by default."
-      />
+      <StoreCta headline="Local speech, with a clear data disclosure" subline="LoudReader narrates books on your device. Review its analytics and diagnostic practices alongside that benefit." />
     </ArticleLayout>
   );
 }

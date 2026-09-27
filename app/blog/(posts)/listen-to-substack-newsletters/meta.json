@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-substack-newsletters",
   "title": "How to Listen to Substack Newsletters",
-  "description": "Substack doesn't have a built-in listen button. Open the newsletter in Safari Reader view, export as PDF, and import into LoudReader to hear it read with natural offline voices.",
+  "description": "Use Substack’s built-in audio where available, or save a readable newsletter in LoudReader. Practical options for public posts and subscriber copies.",
   "publishedAt": "2026-08-28",
-  "lastModified": "2026-08-28",
+  "lastModified": "2026-09-28",
   "avatar": "Time-Starved Book Lover",
-  "query": "listen to substack newsletters"
+  "query": "listen to substack newsletters",
+  "topic": "formats"
 }

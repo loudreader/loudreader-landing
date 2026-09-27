@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,120 +6,23 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function PublicDomainAudiobooksLegalArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Yes, generally. A public domain book has no active copyright left
-          to restrict reading it, copying it, or turning it into audio.
-          Project Gutenberg, the largest source of these texts, only
-          publishes books it has determined are in the public domain in the
-          United States, and it's explicit that this is a U.S. determination:
-          copyright terms vary by country, so a book that's clear in the U.S.
-          isn't automatically clear everywhere. None of this is legal advice.
-          If you generate your own audio reading of a public domain text for
-          your own listening, the text itself carries no copyright to run
-          into. <strong>LoudReader</strong> reads any of its 70,000+
-          built-in Project Gutenberg books aloud live, on your device, with
-          natural offline voices, and doesn&apos;t save or export an audio
-          file. What you may do with a recording beyond private listening,
-          like sharing or selling it, is a separate question outside what
-          this article can settle.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="offline"
-        caption="A public domain text, read privately on your own device."
-      />
-
-      <QuestionSection question="What does 'public domain' actually mean?">
-        <p>
-          It means a work's copyright has expired, or the rights holder
-          released it, so no one holds exclusive rights over it anymore.
-          Nobody's permission is required to read it, quote it, copy it, or
-          adapt it into a new format, because there's no active copyright
-          left to enforce. That's different from a book being merely free or
-          out of print, which can still be fully under copyright.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How does Project Gutenberg decide a book is public domain?">
-        <p>
-          Gutenberg checks the U.S. copyright status of each book before
-          publishing it, using the standard expiration rules (works from
-          before a certain publication date, or where the copyright term has
-          simply run out) plus cases where an author or rights holder
-          explicitly released a work. It publishes the result of that
-          determination, which is exactly why the site can offer{" "}
-          <Link href="/listen" className="text-loudBlue hover:underline">
-            70,000+ free classics
-          </Link>{" "}
-          without licensing fees: every one of them has already been checked.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Does U.S. public domain status apply everywhere?">
-        <p>
-          Not automatically, and this is the part worth being honest about.
-          Copyright terms and rules differ by country. A book that's clearly
-          public domain in the United States can still be under copyright in
-          another country, and the reverse can also be true. If your
-          location matters for how you plan to use a text, that's a question
-          for your own country's copyright law, not one a blog article can
-          answer for you.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Can you legally generate your own audio reading of a public domain book?">
-        <p>
-          If the underlying text is public domain, there's no text copyright
-          standing in the way of turning it into audio for your own personal
-          listening, because that copyright has already expired or was
-          released. This is exactly what a text-to-speech reader does:{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            it turns the book you already have into narration
-          </Link>
-          , generated as you listen. LoudReader generates that narration live
-          on your device and doesn&apos;t save an exportable audio file, so
-          the question of what you could do with a saved recording (share it,
-          post it, sell it) doesn&apos;t come up in normal use. If you're
-          building something that does produce and distribute audio files
-          from public domain text, that's a different situation with its own
-          questions, and this article isn't the place to resolve them.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Is a specific recording the same as the public domain text it's based on?">
-        <p>
-          No, and this trips people up. The text being public domain doesn't
-          automatically mean every recording of it is free to use however you
-          like. A volunteer narration on a site like LibriVox, a professional
-          audiobook, and a synthetic reading generated by an app are each
-          their own separate piece of work, sitting on top of the same public
-          domain text, and each one can carry its own terms for reuse. Listen
-          privately and you're on safe, simple ground. Reuse or redistribute
-          a specific recording and you're asking a different question than
-          the one this article answers.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>A classic being available online is not enough to establish how you may use it. Check the country whose rules apply, the specific text or translation, and the recording if you are downloading audio. Project Gutenberg follows US copyright rules; it also hosts some works under permission. Neither an old author nor a free download clears every modern edition worldwide. This guide explains the checks and points to official sources. It cannot determine the rights of an individual book for every reader or proposed use.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Check the text, edition, country and recording separately." />
+      <QuestionSection question="What does Project Gutenberg’s listing tell you?"><p>Start with the ebook’s own landing page and copyright notice. Gutenberg’s <a href="https://www.gutenberg.org/policy/permission.html" className="text-loudBlue hover:underline">permissions guidance</a> distinguishes its public-domain material from copyrighted items included under permission. Do not replace the item’s notice with the assumption that everything in the catalogue has identical terms.</p><p>The project’s <a href="https://www.gutenberg.org/help/copyright.html" className="text-loudBlue hover:underline">copyright how-to</a> describes its US clearance rules. That is useful evidence about the listed item, but it is not a worldwide licence for every edition with the same title.</p></QuestionSection>
+      <QuestionSection question="Why does your country matter?"><p>Copyright duration and exceptions differ by jurisdiction. For example, the UK’s <a href="https://www.gov.uk/copyright/how-long-copyright-lasts" className="text-loudBlue hover:underline">official summary of copyright duration</a> describes terms by type of work; a US publication-date shortcut does not resolve a UK question.</p><p>Use the guidance of the relevant national copyright office for your situation. If the status is unclear and you need certainty, ask a qualified adviser rather than treating a blog or download button as clearance. Public posting or commercial reuse deserves its own check.</p></QuestionSection>
+      <QuestionSection question="What should you check about the edition?"><ul className="list-disc pl-6 space-y-2"><li>The exact text: original language, abridgement, adaptation or later revision.</li><li>The translator, if any, and the edition’s publication details.</li><li>Added introductions, annotations, illustrations or other new material.</li><li>The notice supplied with the download, including any licence conditions.</li></ul><p>The <a href="https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term" className="text-loudBlue hover:underline">UK Intellectual Property Office’s detailed duration notice</a> explains that a translation can have its own copyright without reviving copyright in the underlying original. A nineteenth-century novel and a recent translation are therefore not interchangeable for this check.</p></QuestionSection>
+      <QuestionSection question="Does a recording have the same status as its text?"><p>No. A modern recording is a separate object to examine. The underlying words being public domain does not by itself let you copy a particular commercial performance. Read the recording provider’s terms and credits.</p><p>LibriVox explains its own approach in <a href="https://wiki.librivox.org/index.php/Copyright_and_Public_Domain" className="text-loudBlue hover:underline">Copyright and Public Domain</a>. Do not generalise that policy to an unrelated recording, or treat its US basis as a decision about another country.</p></QuestionSection>
+      <QuestionSection question="How does personal text-to-speech listening fit in?"><p>A reader such as <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> generates narration from an accessible file on your device. It does not determine copyright status or make an unauthorised source authorised. Choose a file you are entitled to use and distinguish private listening from making a recording available to others.</p><p>The <Link href="/listen" className="text-loudBlue hover:underline">classics shelf</Link> can help you find a title; the source edition and its rights still need checking. For publishing or selling audio, also consider the recording, voice and service terms relevant to that project. This article makes no blanket clearance claim for those uses.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Listen to public domain classics"
-        subline="70,000+ free books, read aloud on your device with natural offline voices. No account needed."
-      />
+      <StoreCta headline="Explore the classics shelf" subline="Find a title, then check its source edition and applicable rights." />
     </ArticleLayout>
   );
 }

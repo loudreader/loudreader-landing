@@ -1,9 +1,10 @@
 {
   "slug": "text-to-speech-for-esl-learners",
-  "title": "Text to Speech for ESL Learners: Listen and Read Together",
-  "description": "How listening while reading helps English learners build vocabulary, improve pronunciation, and get through books that would stall them in print alone.",
+  "title": "Text to Speech for ESL Learners: Four Exercises",
+  "description": "Four practical English exercises using narration and text: check what you heard, repeat a phrase, review vocabulary and proofread your writing.",
   "publishedAt": "2026-08-25",
-  "lastModified": "2026-08-25",
+  "lastModified": "2026-09-28",
   "avatar": "English Language Learner",
-  "query": "text to speech for esl"
+  "query": "text to speech for esl",
+  "topic": "learning"
 }

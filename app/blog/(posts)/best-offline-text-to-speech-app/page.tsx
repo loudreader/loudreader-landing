@@ -1,17 +1,15 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { PRICING, FREE_TIER } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
 export default function BestOfflineTextToSpeechAppArticle() {
@@ -19,177 +17,123 @@ export default function BestOfflineTextToSpeechAppArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          If you want text-to-speech with no internet and natural-sounding
-          voices, two apps stand above the rest:{" "}
-          <strong>Voice Dream Reader</strong> and{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac). Both
-          run entirely on-device. Both work with EPUB and PDF files. Both
-          respect your privacy with no document uploads. Voice Dream Reader
-          has deeper customization and a long history of accessibility
-          support. LoudReader has a more polished reading experience, runs
-          on Apple Silicon Macs as well as iPhone and iPad, and has a free
-          tier with no word limit. It is fully on-device and private, your library never
-          leaves your device. Most other TTS apps that sound good rely on
-          cloud processing. These two do not. Pick based on whether you
-          want maximum flexibility and customizability (Voice Dream) or a
-          simpler, cross-device reading experience with better voice
-          quality out of the box (LoudReader).
+          The best offline TTS app for you is one that reads your files, in your
+          chosen voice, without needing a connection for the next chapter.
+          Voice Dream and LoudReader both offer offline reading workflows on
+          Apple devices, while built-in speech may be enough for selected text.
+          Check the voice and document rather than relying on an “offline” badge:
+          cloud voices, unsaved articles and files still in cloud storage can
+          change what works on a journey. Try the exact setup in advance. Offline
+          narration is also different from an app having no network activity or
+          collecting no diagnostics.
         </p>
+        <Disclosure />
       </Tldr>
+      <ArticleIllustration variant="offline" caption="Prepare a book and voice, then test the next chapter without a connection." />
 
-      <ArticleIllustration
-        variant="offline"
-        caption="Offline TTS means no signal, no problem, no privacy trade-off."
-      />
-
-      <QuestionSection question="Why does offline text-to-speech matter?">
+      <QuestionSection question="What does offline mean for a reading app?">
         <p>
-          Most apps that sound good are cloud-based. They send your text to
-          a server that generates the audio and streams it back. With good
-          Wi-Fi, this works fine. On a plane, in a subway, in a parking
-          garage, or on a rural highway, it fails. And even with good
-          internet, your content leaves your device.
+          There are two useful possibilities. An app can generate new speech
+          locally as you move through text, or it can play audio already prepared
+          and downloaded. Both can work on a flight, but a downloaded chapter
+          does not prove that the next unprepared chapter will work. When testing
+          TTS, jump to a part of the book you have not previously played.
         </p>
         <p>
-          Offline TTS eliminates both problems. The voice engine runs on
-          your phone or computer. No data plan needed. No dead zones kill
-          your playback. No server sees what you are reading. For long-form
-          book listening, privacy-minded readers, and anyone who listens on
-          the go, offline is the only architecture that makes sense.
-        </p>
-        <p>
-          The trade-off: cloud voices can be more expressive because they
-          have server-grade processing power behind them. On-device voices
-          are constrained by your phone&apos;s processor. But that gap is
-          closing fast, and modern on-device neural voices are good enough
-          for hours of comfortable listening.
+          Separate preparation from playback. Installing an app, obtaining books,
+          downloading voices and restoring a purchase may need a connection even
+          when normal narration does not. If the app offers a choice of local
+          and cloud providers, the selected provider matters. Save a web article
+          and ensure a file from cloud storage is available on the device before
+          you leave.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Voice Dream Reader: the long-time standard">
+      <QuestionSection question="When should I consider Voice Dream?">
         <p>
-          Voice Dream Reader has been the go-to offline TTS app for years,
-          and for good reason. It works on iPhone and iPad. It supports
-          EPUB, PDF, and several other formats including Word documents and
-          web pages. It reads DAISY books, which matters for readers with
-          visual impairments who use that format. It lets you buy and
-          install additional voices from multiple providers, so you can
-          build your own voice setup.
+          Voice Dream&apos;s <a href="https://www.voicedream.com/" className="text-loudBlue hover:underline">official feature page</a>{" "}
+          describes offline reading on iPhone, iPad and Mac, along with support
+          for documents and web pages, pronunciation settings and reading
+          annotations. It also documents accessibility support including VoiceOver
+          and braille displays. Check its current platform-specific offering
+          and purchase terms; it is incorrect to assume Voice Dream has no Mac
+          version.
         </p>
         <p>
-          Voice Dream Reader dominates on customization. You can adjust
-          pronunciation, set custom pauses, tweak the visual display for
-          dyslexia-friendly fonts and spacing, and fine-tune almost every
-          aspect of the reading experience. The accessibility community
-          trusts Voice Dream Reader because it has proven itself over many
-          years with real attention to diverse reading needs.
-        </p>
-        <p>
-          The downsides: it is a paid app with no permanent free tier. It
-          does not have a Mac version. The interface and the overall feel
-          reflect years of adding features, which means power and depth
-          but also some visual clutter. If you need every knob and switch
-          available, Voice Dream is unmatched.
+          It is a candidate to evaluate if pronunciation adjustments, a particular
+          document format or an assistive-technology workflow is central to how
+          you read. Test those exact controls with a representative file. A broad
+          accessibility feature list is useful evidence for a shortlist, but
+          cannot tell you whether your preferred gestures, keyboard setup or
+          display work comfortably in a specific version.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="LoudReader: polished, cross-device, free to start">
+      <QuestionSection question="When should I consider LoudReader?">
         <p>
-          LoudReader is the newer player with a different philosophical
-          approach: fewer settings, cleaner design, better default
-          experience. It runs on iPhone, iPad, and Apple Silicon Macs, so your library
-          syncs across desktop and mobile through iCloud. Same book, same
-          place, same voice on both devices.
+          LoudReader focuses on listening to supported DRM-free EPUBs, PDFs and
+          saved articles with local speech. Its PDF importer can attempt
+          on-device text recognition for scans; preview the result because
+          recognition and reading order can be imperfect. The app runs on iPhone
+          and iPad, and compatible Apple Silicon Macs run the iPad build. It does
+          not automatically synchronise the library or reading position between
+          devices.
         </p>
         <p>
-          LoudReader&apos;s natural offline voices sound excellent out of
-          the box. You do not need to shop for voices or configure
-          anything. Pick a voice, press play. {FREE_TIER.full} There is no word
-          quota. Premium adds all 23 studio narrators, playback speed (0.3x to
-          3.0x), sleep timer, ambient soundscapes, and notes and highlights
-          for {PRICING.premiumMonthly} or {PRICING.premiumYearly}. A{" "}
-          {PRICING.premiumLifetime} option also exists.
+          {FREE_TIER.full} Continuing access to every available studio voice,
+          adjustable speed, sleep timer and soundscapes is part of Premium.
+          Voice availability depends on the device. Start with the free workflow
+          on your own hardware and compare a voice sample with a real chapter;
+          a claim that one app has “better default voices” is not a substitute
+          for listening.
         </p>
         <p>
-          The built-in catalog of 70,000+ Project Gutenberg classics is
-          another LoudReader advantage: open the app, browse or search,
-          pick a book, press play. No download, no import, no format
-          conversion. For{" "}
-          <Link
-            href="/blog/project-gutenberg-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            accessing public domain classics through TTS
-          </Link>
-          , it is the quickest path from browsing to listening.
-        </p>
-        <p>
-          LoudReader is fully on-device and private, your library never
-          leaves your device. The reading experience is simple by design:
-          import, play, control from the lock screen. If you want a TTS app
-          that feels like a reading app rather than a Swiss Army knife,
-          LoudReader is built that way.
+          Books found through the built-in Project Gutenberg browser still need
+          to be downloaded. The service&apos;s US public-domain catalogue also
+          needs a local copyright check outside the US. Our{" "}
+          <Link href="/offline-text-to-speech-mac" className="text-loudBlue hover:underline">Mac guide</Link>{" "}
+          and <Link href="/faq" className="text-loudBlue hover:underline">FAQ</Link>{" "}
+          cover the app&apos;s requirements and current feature access.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What about other offline TTS apps?">
+      <QuestionSection question="Could the built-in reader be enough?">
         <p>
-          Speech Central is another fully offline option that reads EPUBs
-          and PDFs. It runs on more platforms including Apple Watch and
-          Android, but its voice quality is a step behind both Voice Dream
-          Reader and LoudReader. It is a solid app for users who need
-          cross-platform support above all else.
+          Try system speech before installing another app if you mainly listen
+          to short passages already on screen. On Mac, Apple&apos;s{" "}
+          <a href="https://support.apple.com/en-gb/guide/mac-help/mh27448/mac" className="text-loudBlue hover:underline">Speak Selection guide</a>{" "}
+          includes highlighting and a controller for pausing, moving through text
+          and changing the rate. A reading app becomes more relevant when you
+          need an imported library, chapter navigation and a place to return to
+          across sessions.
         </p>
         <p>
-          Apple&apos;s built-in Spoken Content is free and offline, but it
-          is a system utility, not a reading app. It does not import EPUBs,
-          save positions, or highlight words. Good for short-form content,
-          not for books.
-        </p>
-        <p>
-          Beyond these, the field thins out. Most apps that advertise
-          natural-sounding voices are cloud-based. The on-device TTS space
-          is small because building a good offline voice engine is harder
-          than calling an API. That is why the comparison really comes down
-          to Voice Dream Reader versus LoudReader for serious offline book
-          listening.
+          The shortlist is not limited to two commercial apps. Other readers
+          can use installed system voices or provide local options. For any
+          candidate, check format support, language, the actual selected voice
+          and whether the feature you need is paid. Avoid treating a vendor&apos;s
+          most impressive online demo as proof of its offline voice quality.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Which one should you pick?">
+      <QuestionSection question="How do I test an offline reader before a trip?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Install and open the app while connected. Complete any required voice setup and import a non-sensitive sample book.</li>
+          <li>Choose the voice you intend to keep using, including the appropriate free or paid tier.</li>
+          <li>Disconnect the network and start a previously unplayed chapter. Try pause, resume and navigation.</li>
+          <li>On a phone, lock the screen and test the playback controls you normally use. Reopen the app and check your place.</li>
+          <li>Before departure, download the actual books and leave enough storage and battery for the journey.</li>
+        </ol>
         <p>
-          Pick Voice Dream Reader if you need extensive customization,
-          DAISY format support, or the ability to buy and install voices
-          from multiple providers. It is the power user&apos;s choice with
-          years of accessibility-focused development behind it.
-        </p>
-        <p>
-          Pick LoudReader if you want a cleaner, simpler experience that
-          works across Mac and iPhone with excellent default voices and no
-          configuration needed. The free tier lets you start without
-          committing money. The Mac app keeps your reading going on
-          desktop.{" "}
-          <Link
-            href="/offline-text-to-speech-mac"
-            className="text-loudBlue hover:underline"
-          >
-            Offline text-to-speech on Mac
-          </Link>{" "}
-          matters if you split your reading between phone and computer.
-        </p>
-        <p>
-          Both apps are excellent at what they do. Both respect your
-          privacy. Both work with no internet. The choice is about how much
-          control you want versus how simple you want the experience to be.
+          This is an availability test, not a privacy audit. LoudReader generates
+          speech locally without uploading books for narration, but the app also
+          sends crash/performance diagnostics and usage analytics when connected.
+          Other apps have their own policies and settings. Read those separately
+          if data handling is part of your choice.
         </p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Natural voices, offline, private"
-        subline="Try LoudReader free. Unlimited listening, Mac and iPhone, no account."
-      />
+      <StoreCta headline="Try your own book without Wi-Fi" subline="Prepare LoudReader and your chosen voice, then test an unplayed chapter before travelling." />
     </ArticleLayout>
   );
 }

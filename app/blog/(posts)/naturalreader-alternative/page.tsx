@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,149 +20,109 @@ export default function NaturalReaderAlternativeArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          NaturalReader is a solid app with a clean interface and good voice
-          quality, but it runs most voices in the cloud and requires a
-          subscription for real use.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) goes the
-          other direction: it is fully on-device and private, your library
-          never leaves your device. The free tier has no word quota and lets
-          you listen to entire books without paying a cent. Premium is{" "}
-          {PRICING.premiumMonthly} or {PRICING.premiumYearly}, and there is
-          a {PRICING.premiumLifetime} option so you can buy it once and own
-          it. If you want something that works offline by design, has no
-          account requirement, and won&apos;t send your reading habits to a
-          server, LoudReader is the direct alternative.
+          Looking for a NaturalReader alternative starts with identifying which
+          NaturalReader product you use. Its online personal reader and its
+          downloadable desktop software have different voices, plans and features.
+          LoudReader is worth trying if you want to narrate books locally on an
+          iPhone or iPad, or use that iPad app on a compatible Apple Silicon Mac.
+          It is not a replacement for every NaturalReader workflow: document
+          formats, exported audio and access from Windows may matter more than a
+          different voice. Compare those requirements before moving your library,
+          then listen to a few pages of your own material in both apps.
         </p>
+        <Disclosure />
       </Tldr>
 
-      <ArticleIllustration
-        variant="offline"
-        caption="Read anything, no cloud required."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Start with the documents you actually read, then compare the workflow." />
 
-      <QuestionSection question="What is NaturalReader, and why look for an alternative?">
+      <QuestionSection question="Which NaturalReader are you replacing?">
         <p>
-          NaturalReader is a well-known text-to-speech app that reads
-          documents, PDFs, and web pages aloud. The interface is polished and
-          easy to use. It has been around for years and the company keeps it
-          updated. For many people, NaturalReader works fine.
+          NaturalReader&apos;s <a href="https://help.naturalreaders.com/en/articles/8584530-what-is-naturalreader-ai-text-to-speech-personal-version" className="text-loudBlue hover:underline">personal reader</a>
+          {" "}works through the web, iOS and Android apps, and a browser extension.
+          Its supported inputs include Word documents and DRM-free EPUBs as well as
+          PDFs. Those are meaningful advantages if your reading arrives in several
+          formats or you work across different operating systems.
         </p>
         <p>
-          The main reasons people search for an alternative: the best
-          natural-sounding voices need an internet connection because they
-          run on cloud servers. There is no way to buy it once; everything
-          that makes the app useful sits behind a recurring subscription.
-          And your documents get sent to NaturalReader&apos;s servers for
-          processing when you use the cloud voices, which matters if you
-          read confidential stuff or just prefer to keep your reading
-          private.
-        </p>
-        <p>
-          LoudReader is built around the opposite philosophy. Everything
-          happens on your phone or Mac. No document upload. No account
-          creation. No server ever sees what you are reading. The voices
-          live on your device, so they work anywhere.
+          Separately, <a href="https://www.naturalreaders.com/software.html" className="text-loudBlue hover:underline">NaturalReader Software</a>
+          {" "}offers downloadable desktop products, including paid perpetual
+          licences. It would be inaccurate to describe the whole NaturalReader
+          range as subscription-only. Check the product name on your current plan
+          before comparing its cost or replacing features you already own.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How does the pricing compare?">
+      <QuestionSection question="Does offline mean downloaded audio or local narration?">
         <p>
-          NaturalReader uses a subscription model. The free version is
-          limited in what it can do. To get the natural-sounding cloud
-          voices and full feature set, you pay monthly or yearly with no
-          lifetime option.
+          These solve different problems. A downloaded recording can play with no
+          signal, but its voice and wording are already fixed. Local narration
+          generates speech from the text on the device. For a flight either can
+          be useful; for switching between unread chapters without preparing
+          recordings, local generation is the feature to look for.
         </p>
         <p>
-          LoudReader&apos;s free tier is genuinely generous:{" "}
-          {PRICING.free} Premium adds{" "}
-          {PRICING.premiumFeatures}. Premium costs{" "}
-          {PRICING.premiumMonthly} or {PRICING.premiumYearly}. And there is
-          a {PRICING.premiumLifetime} purchase. Pay once, and Premium is
-          yours forever across both Mac and iPhone.
-        </p>
-        <p>
-          If you read a lot and do not want another monthly bill, the
-          lifetime option is the biggest pricing difference between the two
-          apps.
+          NaturalReader documents <a href="https://help.naturalreaders.com/en/articles/11543218-working-with-text-and-audio-personal-version" className="text-loudBlue hover:underline">MP3 conversion for offline listening</a>
+          {" "}for subscribers, with conversion limits. It therefore is not fair to
+          say NaturalReader cannot be used offline. LoudReader narrates imported
+          books locally. Install it, open your chosen book and voice, then test a
+          previously unread section without a connection before relying on it for
+          travel. That checks playback readiness; it does not audit an app&apos;s
+          privacy practices.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What about privacy and where your data lives?">
+      <QuestionSection question="What changes when you move to LoudReader?">
         <p>
-          This is where the two apps diverge the most. NaturalReader
-          processes text through cloud servers for its best voices. That
-          means your documents leave your device. For casual reading like
-          news articles, that might not bother you. For work documents,
-          manuscripts, or personal journals, it can be a dealbreaker.
+          LoudReader imports DRM-free EPUB and PDF files and saves web articles
+          from links or the share extension. Scanned PDFs have on-device text
+          recognition, although columns, damaged scans and tables can still read
+          poorly. Keep a sample with the hardest layout in your trial: a clean
+          novel does not tell you how a reader will handle your research paper.
         </p>
         <p>
-          LoudReader is fully on-device and private, your library never
-          leaves your device. The app does not have an account system, so
-          there is no email to collect, no reading history to sync to a
-          server, and no analytics dashboard tracking what you open. Your
-          EPUB and PDF files stay local. The speech synthesis engine runs
-          right on your iPhone or Mac. No internet means no data
-          transmitted anywhere.
-        </p>
-        <p>
-          If you read anything you would not upload to a random website, an
-          on-device reader is the safer choice.
+          There is no native Word-document importer, so a DOCX-heavy workflow needs
+          conversion first. There is also no automatic library or reading-position
+          sync between LoudReader devices. Importing a file from iCloud Drive does
+          not make the app&apos;s reading position sync. On a Mac, you are using the
+          iPad app in Apple&apos;s compatibility mode, not a separate native Mac app.
+          Our <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">PDF listening guide</Link>
+          {" "}and <Link href="/read-epub-aloud-mac" className="text-loudBlue hover:underline">EPUB guide for Mac</Link>
+          {" "}cover the basic import workflows.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How does the reading experience compare?">
+      <QuestionSection question="What should you check about price and privacy?">
         <p>
-          Both apps do the core job well: import text, pick a voice, press
-          play. NaturalReader has a slightly wider format support out of
-          the box. It reads Word documents, plain text files, and web pages
-          directly, while LoudReader focuses on EPUB and PDF. For web
-          articles, you can save them as PDF first and open them in
-          LoudReader.
+          {FREE_TIER.full} LoudReader Premium unlocks every available narrator,
+          adjustable speed, a sleep timer, soundscapes and unlimited article saving.
+          Monthly, yearly and lifetime options are shown in the app; check your
+          storefront price. Compare that with the exact NaturalReader plan you
+          need, including any audio-conversion limits, rather than comparing two
+          headline prices with different features.
         </p>
         <p>
-          LoudReader shines in the details of book reading. It remembers
-          your position in every book, highlights words as it reads them,
-          and works with the lock screen and Bluetooth controls on iPhone.
-          The Mac app gives you the same experience on desktop with the
-          same voices and the same library.
-        </p>
-        <p>
-          Voice quality is comparable for the premium voices on both sides.
-          NaturalReader&apos;s cloud voices can sound slightly more
-          expressive since they have server power behind them.
-          LoudReader&apos;s voices are local and always available, which
-          means no latency waiting for text to round-trip through a server
-          before it starts speaking.
+          LoudReader does not upload books to a speech server for narration, but
+          that does not mean it has no network activity or telemetry. It sends
+          crash/performance diagnostics and usage analytics. Downloads and
+          purchases also use a connection. For sensitive work, check the complete
+          data policy of whichever app and voice service you select.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Which one should you pick?">
+      <QuestionSection question="When is switching actually worth it?">
         <p>
-          Pick NaturalReader if you need to read Word documents, web pages,
-          or other formats beyond EPUB and PDF directly, or if you rely on
-          Windows. The wider format support and cross-platform reach are
-          real advantages.
-        </p>
-        <p>
-          Pick LoudReader if you read mostly EPUBs or PDFs, want everything
-          to work offline, care about keeping your documents private, or
-          want to pay once and be done. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, so your library and your place syncs across those two
-          platforms through iCloud.
-        </p>
-        <p>
-          The two apps are not enemies. They solve the same problem from
-          opposite angles: NaturalReader from the cloud, LoudReader from
-          the device. Pick the one that fits how you think about your
-          reading life.
+          Stay with NaturalReader if its document handling, browser workflow or
+          audio export already solves your problem. Try LoudReader when local
+          narration of your own books on Apple devices is the priority. A fair
+          comparison uses the same document, language and comfortable speed, with
+          a few names, headings and numbers included. Listen long enough to notice
+          repeated pronunciation errors or awkward pauses; a promotional sample
+          cannot make that decision for you.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Read privately, no cloud required"
-        subline="Free unlimited listening, natural offline voices, and a lifetime purchase option. Your books stay on your device."
-      />
+      <StoreCta headline="Try local narration with your own book" subline="Import an EPUB or PDF and compare the reading experience before choosing a plan." />
     </ArticleLayout>
   );
 }

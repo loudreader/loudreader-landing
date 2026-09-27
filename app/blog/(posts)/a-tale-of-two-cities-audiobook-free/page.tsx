@@ -1,153 +1,37 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function TaleOfTwoCitiesAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          A Tale of Two Cities is public domain, so Charles Dickens&apos;s
-          actual text, including the famous opening line, is free to listen
-          to with no purchase and no subscription. LoudReader has the full
-          novel built into its catalog: open{" "}
-          <Link
-            href="/listen/a-tale-of-two-cities"
-            className="text-loudBlue hover:underline"
-          >
-            its LoudReader page
-          </Link>{" "}
-          to hear the real opening read aloud right now, free, no account.
-          One honest note up front: this is a synthetic voice reading
-          Dickens&apos;s text, not a performed audiobook with an actor giving
-          Sydney Carton and Madame Defarge different voices. It reads
-          clearly and steadily through Dickens&apos;s long sentences, exactly
-          as written. Free tier listening is unlimited, cover to cover, and
-          LoudReader is fully on-device and private, your library never
-          leaves your device. Since the book is already in the built-in
-          Project Gutenberg catalog, there's no file to import and no
-          connection required.
-        </p>
+        <p>You can listen to <em>A Tale of Two Cities</em> through a free human recording or have an ebook read aloud. <a href="https://librivox.org/a-tale-of-two-cities-by-charles-dickens-2/" className="text-loudBlue hover:underline">LibriVox’s version 2</a> is one recorded option. LoudReader offers a different route: download the Gutenberg text and use an on-device synthetic voice. Its <Link href="/listen/a-tale-of-two-cities" className="text-loudBlue hover:underline">opening sample</Link> lets you try that sound before installing the app. Choose a version you enjoy listening to, then stay with it: Dickens moves between two cities, several households and different periods, so a familiar reading voice and clear chapter breaks are more useful than chasing the shortest runtime.</p>
+        <Disclosure />
       </Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Three books within one novel: use their chapter boundaries to plan a listen." />
+      <QuestionSection question="Which free text are you hearing?"><p>LoudReader’s catalog entry points to <a href="https://www.gutenberg.org/ebooks/98" className="text-loudBlue hover:underline">Project Gutenberg ebook #98</a>, the English novel by Charles Dickens. Gutenberg labels this edition public domain in the USA. Outside the USA, check the edition’s status where you live; a catalogue listing is not worldwide clearance.</p><p>A text-to-speech reading follows that ebook. It is not a recording of a particular commercial narrator, and it does not include the introduction or annotations from a modern print edition. If you are reading for a course, compare the assigned edition’s contents before using the audio as your companion.</p></QuestionSection>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Dickens's text, read aloud, from the first line to the last."
-      />
+      <QuestionSection question="How do you keep track of the two cities?"><p>The contents divide the novel into three books: <em>Recalled to Life</em>, <em>The Golden Thread</em> and <em>The Track of a Storm</em>. Treat each as a useful checkpoint. When returning after a break, note the book and chapter rather than only a playback time; times change with the reader or speed setting.</p><ul className="list-disc pl-6 space-y-2"><li>Keep a short, spoiler-free list of the Manette family, Charles Darnay, Sydney Carton and the Defarges. Add details as you encounter them.</li><li>At a scene change, establish whether you are in London or Paris before continuing with another task.</li><li>If a long sentence loses you, replay the whole paragraph while looking at the text. Do not assume that every confusing passage is a voice problem.</li></ul></QuestionSection>
 
-      <QuestionSection question="What does the A Tale of Two Cities audiobook actually sound like?">
-        <p>
-          The fastest way to answer that is to listen. LoudReader&apos;s
-          catalog page for the book has a rendered sample of the real
-          opening, in the same voice you&apos;d hear in the app.{" "}
-          <Link
-            href="/listen/a-tale-of-two-cities"
-            className="text-loudBlue hover:underline"
-          >
-            Play the sample
-          </Link>{" "}
-          before deciding whether it's for you.
-        </p>
-        <p>
-          It's a natural offline voice reading Dickens&apos;s narration exactly
-          as written, unabridged, with no modernizing of the period
-          vocabulary or long clauses. One voice reads every character, so it
-          doesn&apos;t shift tone between Doctor Manette, Charles Darnay, and
-          Sydney Carton the way a full-cast dramatization would. If you want
-          the real text read clearly at a pace you control, including the
-          famous opening and closing lines, it does that well.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Should you choose a human recording or text-to-speech?"><p>Try the opening of both. A recorded narrator makes a fixed set of choices about dialogue, emphasis and pauses; text-to-speech generates a reading with the voice you select. Neither an opening sample nor a “natural voice” label guarantees that you will enjoy several hours of it.</p><p>The linked LibriVox page lists its chapter recordings and readers. Use those details to check whether you want that version. LoudReader is useful when you want the written text and generated speech together. Our <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">guide to reading ebooks aloud</Link> explains that workflow.</p></QuestionSection>
 
-      <QuestionSection question="How do you listen to it free right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Play the sample on{" "}
-            <Link
-              href="/listen/a-tale-of-two-cities"
-              className="text-loudBlue hover:underline"
-            >
-              the book's catalog page
-            </Link>{" "}
-            to hear the voice first.
-          </li>
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            for iPhone, iPad, and Mac. Free, no account.
-          </li>
-          <li>
-            Search A Tale of Two Cities in the app&apos;s built-in Project
-            Gutenberg catalog. It's already there, nothing to import or
-            convert.
-          </li>
-          <li>
-            Press play. {FREE_TIER.full}
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="How do you prepare the book in LoudReader?"><ol className="list-decimal pl-6 space-y-2"><li>Install LoudReader on iPhone or iPad; its iPad build also runs on compatible Apple Silicon Macs.</li><li>While connected, find A Tale of Two Cities in the Gutenberg catalogue and download it. Let any required voice download finish.</li><li>Open the text and play a passage. Before travelling, test playback with the connection turned off so you know the files are ready.</li><li>Keep the same edition for your listening sessions and record the current book and chapter if you also use a print copy.</li></ol><p>{FREE_TIER.full} Premium adds features including playback-speed control and the sleep timer. The free voice allowance is separate from how long this novel takes to finish.</p></QuestionSection>
 
-      <QuestionSection question="Why isn't there already a well-known free audiobook of this everywhere?">
-        <p>
-          There actually might be one you haven&apos;t found: LibriVox, the
-          volunteer human-narration project, likely has a recording of A
-          Tale of Two Cities, and it's worth a look if you want a performed
-          reading with a narrator's pacing and character work.
-        </p>
-        <p>
-          Text-to-speech offers something different and more immediate: the
-          exact Gutenberg text, read aloud on demand, in an app you already
-          have open, with no library hold and no browsing for a recording.
-          The general case for that is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          . For this specific book, the file is already sitting in
-          LoudReader&apos;s catalog.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What do you give up compared to a professionally narrated version?">
-        <p>
-          Worth saying plainly: a synthetic voice doesn&apos;t act. It won&apos;t
-          build dread the way a skilled narrator paces the storming of the
-          Bastille or the final ride to the guillotine, and it won&apos;t
-          give Madame Defarge a different edge than Lucie Manette. What you
-          get instead is the whole novel, unabridged, right now, no purchase
-          and no waiting. Premium adds playback speed from 0.3x to 3.0x, so a
-          dense passage can be slowed down or a familiar section sped
-          through.
-        </p>
-      </QuestionSection>
-
+      <QuestionSection question="How long should you allow?"><p>There is no single runtime for the title. Human recordings differ, and generated narration depends on voice and playback speed. Use the duration shown for the recording you choose, or the app’s estimate as a planning aid. A chapter is a better stopping target than an arbitrary number of minutes when a conversation or scene is still unfolding.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear A Tale of Two Cities read aloud, free"
-        subline="The full book is already in LoudReader's catalog. Press play, no download, no account."
-      />
+      <StoreCta headline="Try the ebook with a voice you choose" subline="Download the book and voice first, then listen on your device." />
     </ArticleLayout>
   );
 }

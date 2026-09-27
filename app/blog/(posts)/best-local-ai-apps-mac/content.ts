@@ -1,4 +1,4 @@
-// FACT PROVENANCE — refreshed 2026-09-27. Vendor documentation was checked;
+// FACT PROVENANCE — refreshed 2026-09-28. Vendor documentation was checked;
 // this article does NOT claim that we ran each third-party app or audited it.
 //   - https://lmstudio.ai/docs/app/offline: local chat, RAG, server;
 //     network required for discovery, model/runtime downloads, update checks.
@@ -9,7 +9,7 @@
 //   - https://drawthings.ai/: local image generation on Apple devices.
 //     No pricing or claim that every available generation mode is local.
 //   - components/money/site.ts: documented LoudReader app-source audits,
-//     bundled local voices, DRM-free files, Apple Silicon/macOS 15+;
+//     current release_v1.12 audit: local speech, DRM-free files, Apple Silicon/macOS 15+;
 //     Mac runs the iPad compatibility build, NOT a native macOS app.
 //   - https://loudkit.loudreader.io/ and loudkit/README.md: Apache-2.0,
 //     CLI + five language SDKs, download model before offline speech.
@@ -17,6 +17,8 @@
 //     separate Apple Silicon developer preview, local STT/TTS, local Hermes
 //     and OpenClaw provider tests; real messenger delivery not yet verified;
 //     agent and messenger can still use online services/cost money.
+// Current app also uses diagnostics and analytics; no visible analytics opt-out
+// or all-models-bundled promise is made. No automatic device sync is implied.
 // No ranking, benchmark, model-quality equivalence, privacy certification,
 // current third-party pricing, or all-local end-to-end agent claim.
 
@@ -49,7 +51,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
       "Inference with a locally installed model",
       "Transcription with a local speech model",
       "Generation with a locally installed image model",
-      "Speech synthesis with bundled voices",
+      "Speech synthesis on the device",
     ],
   },
   {
@@ -59,7 +61,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
       "Cloud models and web search; local-only settings",
       "Selected transcription and AI-summary providers",
       "Model downloads and selected generation mode",
-      "Book downloads and other network features are separate from synthesis",
+      "Book downloads, crash/performance diagnostics and usage analytics",
     ],
   },
 ];

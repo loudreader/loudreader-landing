@@ -5,167 +5,48 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ListenToBooksInsteadOfScrollingArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Scrolling is easy and books are hard, but that equation is about
-          friction, not value. A feed loads in one tap and asks for nothing. A
-          book asks you to sit still and focus. The habit swap that actually
-          sticks is making a book just as convenient: one tap, one press, the
-          chapter starts.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
-          DRM-free EPUB or PDF aloud with natural offline voices, fully
-          on-device and private, your library never leaves your device. Open the
-          app instead of your feed, press play, lock the screen. The book runs.
-          Your thumb has nothing to scroll. Fifteen minutes of scrolling becomes
-          fifteen minutes of chapter. The swap is one decision, made once per
-          trigger moment, and the math on how each one feels afterward does the
-          rest of the persuading.
-        </p>
+        <p>If you want to scroll less, try replacing one specific session with listening rather than trying to change every phone habit at once. Choose a book in advance, open it to the next passage and play it at the moment you usually open a feed. Put the screen away for a short, chosen interval. Afterwards, decide whether you enjoyed the swap and want to repeat it. This is an experiment in how you spend a few minutes, not a treatment for compulsive use or a claim that books always make you feel better than social media.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="One tap opens a feed. One tap opens a chapter. Which one leaves you with something?"
-      />
+      <ArticleIllustration variant="waveform" caption="Choose the next passage before the moment you usually open a feed." />
 
-      <QuestionSection question="Why is scrolling so much easier than reading?">
-        <p>
-          Because it was designed to be. Social feeds, news apps, and short-form
-          video platforms are built around variable rewards and zero friction.
-          You open the app and content is already there. You scroll and more
-          content appears. There is no start-up cost and no attention
-          commitment. The feed asks for nothing and gives you tiny hits of
-          novelty in return.
-        </p>
-        <p>
-          A book, by contrast, asks you to initiate. You have to decide to read,
-          find the book, find your place, and then give it sustained attention
-          before it starts to pay off. The value is much higher on the other
-          side, but the entry cost is steeper. The swap that works is lowering
-          the book&apos;s entry cost until it is as close to the feed&apos;s as
-          possible.
-        </p>
+      <QuestionSection question="Which scrolling moment should I replace?">
+        <p>Choose one you can recognise: sitting on the sofa after dinner, waiting before an appointment or the first few minutes of a train journey. Avoid a slot where you are actually trying to reply to a friend or get useful information. Those activities are different from opening a feed without deciding what you want from it.</p><p>Name the replacement narrowly: “I will listen for ten minutes after dinner.” The time is an example, not a prescribed dose. It should be short enough to try without feeling trapped in the book.</p>
       </QuestionSection>
 
-      <QuestionSection question="What is the one-trigger habit swap?">
-        <p>
-          Do not try to replace all scrolling with books. That is a resolution,
-          not a system, and resolutions fail. Instead, pick one trigger moment.
-          A specific time of day or situation where you reliably reach for your
-          phone to scroll. The ten minutes on the couch after dinner. The
-          five-minute wait for coffee to brew. The moment you sit down on the
-          bus.
-        </p>
-        <p>
-          The swap has two steps and one rule:
-        </p>
+      <QuestionSection question="What can I prepare before that moment?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            When the trigger moment arrives, open{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader
-            </a>{" "}
-            instead of your feed app.
-          </li>
-          <li>
-            Press <strong>play</strong>. Do not decide which book. Do not
-            browse. The book you are currently reading is already open to your
-            place. One press resumes it.
-          </li>
-        </ol>
-        <p>
-          The rule: do not open the feed app for the duration of the trigger
-          moment. That is it. One trigger, one swap, one press. The book takes
-          over from there.
-        </p>
+          <li>Choose one book and test the first passage. Do the catalogue browsing at another time.</li>
+          <li>Download or import what you need and check your chosen voice before depending on offline playback.</li>
+          <li>Make the reading app easy to find. If it helps, move the feed app away from its usual first-screen position.</li>
+          <li>Choose a comfortable stopping point or interval. Decide in advance that you can stop afterwards.</li>
+        </ol><p>For a DRM-free ebook, <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> can generate narration on the device and continue while the iPhone screen is locked. A recorded audiobook in an app you already use is equally suitable for testing the idea.</p>
       </QuestionSection>
 
-      <QuestionSection question="What makes the swap actually stick?">
-        <p>
-          The feeling afterward. After 15 minutes of scrolling, you close the
-          app and the time is gone. Nothing remains. After 15 minutes of a
-          chapter, you close the app and you have moved through something. A
-          scene, an argument, a paragraph that will stay with you.
-        </p>
-        <p>
-          The contrast between those two post-session feelings is what makes the
-          swap stick over time. It is not discipline. It is noticing which one
-          leaves you with something and which one does not. After a few days of
-          the swap, the feed starts to feel like a worse deal. The book becomes
-          the obvious choice because it actually delivers.
-        </p>
-        <p>
-          If you want to build the reading side into a stronger habit,{" "}
-          <Link
-            href="/blog/how-to-build-a-reading-habit"
-            className="text-loudBlue hover:underline"
-          >
-            how to build a reading habit
-          </Link>{" "}
-          walks through the full system.
-        </p>
+      <QuestionSection question="What if I keep picking up the phone?">
+        <p>Notice why. If you need to check a message, pause the book and do that deliberately. If playback is hard to follow, change the book or shorten the session. If the urge is simply to reopen the feed, put the phone a little farther away and see whether you still want the chapter.</p><p>Do not try to read a feed while following the book and then judge the book by what you missed. You can choose either activity; giving each a separate slot makes it easier to tell which one you want.</p>
       </QuestionSection>
 
-      <QuestionSection question="What if I want to scroll and listen at different times?">
-        <p>
-          That is the realistic version. Nobody replaces all scrolling with all
-          books. The goal is to claim back specific slots, not to overhaul your
-          entire relationship with your phone overnight. The trigger-moment swap
-          gives you reading time every day without asking you to become a
-          different person.
-        </p>
-        <p>
-          Over time, what tends to happen is that the book slot grows naturally
-          because it feels better than the feed slot. You start the swap for the
-          after-dinner couch moment and two weeks later you are doing it on the
-          lunch walk too. Not because you forced it. Because a chapter turned
-          out to be more satisfying than a scroll and you wanted more of that
-          feeling.
-        </p>
+      <QuestionSection question="How do I decide whether to keep the swap?">
+        <p>After a few attempts, ask three questions: Did I start without a long setup? Did I follow enough to enjoy it? Do I want to return to this book? A “no” is information about the plan, not evidence that you lack willpower.</p><p>Keep, change or abandon the slot. There is no requirement to replace all scrolling, finish every started book or expand the session each week. If the listening part is working and you want more regularity, see <Link href="/blog/how-to-build-a-reading-habit" className="text-loudBlue hover:underline">building a reading habit</Link>.</p>
       </QuestionSection>
 
-      <QuestionSection question="Can you listen while doing something else to resist the scroll urge?">
-        <p>
-          Yes, and this is one of the strongest defenses against mindless
-          scrolling. Put a book on while you fold laundry, clean, or cook. Your
-          hands are occupied, your ears are engaged, and the phone is across the
-          room playing audio with the screen locked. You cannot scroll because
-          the phone is not in your hand. The book fills the mental space the
-          feed normally occupies, and your hands are too busy to reach for
-          anything.
-        </p>
-        <p>
-          LoudReader makes this easy because playback continues with the screen
-          locked. The lock screen shows play, pause, and 15-second skip, and the
-          voices run fully on-device and private, your library never leaves your
-          device. No internet needed. The phone can sit on the other side of the
-          room while the chapter runs through a Bluetooth speaker.
-        </p>
+      <QuestionSection question="Can I save a passage without getting pulled back into the screen?">
+        <p>Pause and make one deliberate note, then lock the screen again. In LoudReader, notes and highlights are available without Premium; the word-following highlight is a separate playback aid. You can also jot a chapter and phrase on paper and return later.</p><p>If your actual goal is fewer minutes looking at a display, measure that separately from the urge to scroll. The <Link href="/blog/reduce-screen-time-with-audiobooks" className="text-loudBlue hover:underline">screen-time guide</Link> explains how to keep those two goals distinct.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Swap the scroll for a chapter"
-        subline="Open a book instead of a feed. Free unlimited listening, no account, one press."
-      />
     </ArticleLayout>
   );
 }

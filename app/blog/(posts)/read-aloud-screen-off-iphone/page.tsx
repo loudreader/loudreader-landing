@@ -7,7 +7,6 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,185 +18,90 @@ export default function ReadAloudScreenOffIphoneArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          Not every app that reads text aloud keeps playing when you lock your
-          iPhone. iOS requires apps to explicitly declare background audio
-          support, and many reading apps skip this. <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) declares the audio background mode, so
-          playback continues with the screen locked. The lock screen shows the
-          book title, author, elapsed time, and standard controls: play/pause
-          and 15-second skip forward/backward. The same controls work from
-          Bluetooth headphones, car stereos, and speakers. The app is fully
-          on-device and private, your library never leaves your device. Press
-          play, lock the screen, put the phone in your pocket, and the book
-          keeps reading.
+          LoudReader supports reading with your iPhone locked. Start the book,
+          wait for narration, then press the side button. Playback can continue
+          while you use another app too. The lock screen offers play/pause and
+          skip controls, though the controls available on headphones or a car
+          stereo depend on what commands that accessory sends. Background audio
+          does not prevent every interruption: calls, a disconnected headset or
+          another app starting audio can still affect playback.
         </p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="offline"
-        caption="Lock the screen. Playback continues. The lock screen gives you play, pause, and skip."
-      />
+      <ArticleIllustration variant="offline" caption="Start narration, lock your iPhone, then check the controls you plan to use." />
 
-      <QuestionSection question="Why do some apps stop when I lock the screen?">
-        <p>
-          iOS has a rule: when the user locks the screen, apps are expected to
-          stop doing work and go to sleep. This saves battery and prevents apps
-          from running in the background without your knowledge. Audio is the
-          main exception. An app can ask iOS for permission to keep playing
-          audio while the screen is off or another app is in front. The
-          developer adds a key to the app's configuration file (the
-          UIBackgroundModes entry with the value &quot;audio&quot;), and iOS
-          grants the permission.
-        </p>
-        <p>
-          Many apps that happen to read text aloud were not built as audio
-          players. A notes app, a PDF viewer with a TTS feature bolted on, or a
-          browser that reads articles might not have the background audio
-          declaration. When you lock the screen, the audio stops because iOS
-          suspends the app, and the developer never asked for the audio
-          exception.
-        </p>
-        <p>
-          The fix is not something you can do as a user. The app has to declare
-          the mode in its build. If screen-off listening matters to you, check
-          whether the app supports it before relying on it.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What do you get on the lock screen with LoudReader?">
-        <p>
-          When LoudReader is playing, the lock screen looks similar to the
-          music player, with book-specific information:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Book title and author.</strong>{" "}
-            Extracted from the EPUB or PDF metadata, shown at the top of the
-            playback widget.
-          </li>
-          <li>
-            <strong className="text-gray-900">Elapsed time and progress bar.</strong>{" "}
-            Shows how far into the book or chapter you are. You can scrub
-            forward and backward by dragging the progress bar.
-          </li>
-          <li>
-            <strong className="text-gray-900">Play/pause button.</strong>{" "}
-            The standard center button. Tap to pause, tap again to resume.
-          </li>
-          <li>
-            <strong className="text-gray-900">Skip forward and skip back.</strong>{" "}
-            Jumps 15 seconds in either direction. Useful for revisiting a
-            sentence you missed or skipping ahead past a section you already
-            know.
-          </li>
-        </ul>
-        <p>
-          These same controls work from Bluetooth devices. If your headphones
-          have a play/pause button, it controls LoudReader playback. If your
-          car stereo has track-skip buttons, they trigger the 15-second skips.
-          This is standard iOS media control behavior, and LoudReader
-          implements the system's media player interface so these controls work
-          the same way they do for music and podcasts.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What about iOS Speak Screen as a screen-off option?">
-        <p>
-          iOS has a system-wide feature called Speak Screen. Swipe down with
-          two fingers from the top of the screen, and iOS reads whatever is on
-          the screen aloud. It works in any app, and it sometimes continues
-          with the screen locked.
-        </p>
-        <p>
-          The honest experience: Speak Screen was not designed for screen-off
-          listening. The voice is the system accessibility voice (a single
-          voice for everything), the reading stops unpredictably when you
-          switch apps or receive notifications, and there are no lock-screen
-          playback controls. You cannot pause from the lock screen, skip back,
-          or see which book you are listening to. For a short passage in an app
-          that lacks its own TTS, Speak Screen is fine. For a book or a long
-          article you want to listen to with the phone in your pocket, an app
-          built for screen-off listening is the right tool.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Does screen-off listening save battery?">
-        <p>
-          Yes, and the difference is significant. On most iPhones, the display
-          is the single biggest power draw. When the screen is on at full
-          brightness, it can consume several watts. When the screen is off,
-          that draw goes to near zero.
-        </p>
-        <p>
-          LoudReader's voice generation runs on the Neural Engine, a
-          specialized part of the Apple Silicon chip that is designed for
-          machine learning tasks and is very power-efficient. On a fully
-          charged iPhone, you can expect many hours of screen-off listening
-          before the battery runs low. The exact number depends on the iPhone
-          model, battery health, and whether other apps are running in the
-          background.
-        </p>
-        <p>
-          If you listen while exercising, commuting, or doing chores, screen-off
-          playback is the mode that makes the most sense. Set up the book, pick
-          the voice, press play, lock the screen, and put the phone away.{" "}
-          <Link
-            href="/blog/listen-to-books-while-driving"
-            className="text-loudBlue hover:underline"
-          >
-            Listening while driving
-          </Link>{" "}
-          covers the setup for a specific use case where screen-off and
-          hands-free are essential.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do I know if a TTS app supports screen-off listening before I download it?">
-        <p>
-          Most apps do not advertise this in their App Store description, which
-          is frustrating. Here is how to check:
-        </p>
+      <QuestionSection question="How do I set up screen-off listening?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download the app (preferably a free one, or a free trial).
-          </li>
-          <li>
-            Import a short text or sample book and press play.
-          </li>
-          <li>
-            Lock the screen. If playback stops within a second or two, the
-            app does not support background audio.
-          </li>
-          <li>
-            If playback continues, unlock the screen and check the lock
-            screen: are the title and playback controls visible? If yes, the
-            app has proper background audio support.
-          </li>
+          <li>Open your book or saved article in LoudReader and choose an available voice.</li>
+          <li>Connect your headphones if you use them, then press play and wait until you hear narration.</li>
+          <li>Lock the screen. Let it run long enough to move beyond the first sentence.</li>
+          <li>Wake the lock screen without opening the app and try pause, resume and skip. Test your headphone buttons separately.</li>
         </ol>
         <p>
-          This is the only reliable test. App Store descriptions can say
-          &quot;plays in the background&quot; and still mean different things
-          to different developers. Lock the screen and see for yourself.
+          Do this before a journey or workout. To listen without internet, also
+          check that the imported book and chosen voice work with Wi-Fi and
+          mobile data disabled. Screen-off playback and offline readiness are
+          different things.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="Which controls should I expect?">
+        <p>
+          LoudReader supplies the book title and author to iOS, with artwork and
+          timing information when available. Its media controls support play,
+          pause, and 15-second skip requests in both directions. Do not assume
+          that a displayed progress bar supports dragging to any point in the
+          book: the app&apos;s remote controls do not provide that seeking action.
         </p>
         <p>
-          If you want an app you know passes this test out of the box,{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader is built for it
-          </Link>
-          . Background audio is not a side feature. It is the core playback
-          model.
+          A headset&apos;s play/pause button can send the matching media command.
+          A next-track button is different: LoudReader disables next/previous
+          track commands, so a car stereo&apos;s track buttons are not guaranteed
+          to become 15-second skips. Try the actual accessory you will use.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="What should I check if playback stops?">
+        <p>
+          First, reopen LoudReader and see whether it is paused, finished or
+          showing an error. Check the selected audio output, try the phone&apos;s
+          speaker, and confirm another app has not taken over playback. If a
+          sleep timer was enabled, check whether it expired; LoudReader&apos;s
+          timer is a Premium feature.
+        </p>
+        <p>
+          If it keeps happening, note your iPhone model, iOS version, voice,
+          book and whether headphones were connected. Try another short text to
+          distinguish a document-specific issue from a general playback problem.
+          One interruption does not prove an app lacks background support.
+        </p>
+        <p>
+          For apps in general, both the audio session and background capability
+          need suitable configuration. Apple describes this in its <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/ConfiguringAudioSettings/ConfiguringAudioSettings.html" className="text-loudBlue hover:underline">media playback guide</a>.
+          It is something the developer implements, rather than a permission
+          you can add to an arbitrary app in Settings.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="Can I use Apple’s Speak Screen instead?">
+        <p>
+          Yes, it is worth trying for text already open in another app. Apple&apos;s
+          <a href="https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios" className="text-loudBlue hover:underline"> Speak Screen guide</a> explains
+          how to enable it in Accessibility, choose voices and use its speech
+          controller. Swipe down with two fingers from the top to start reading.
+          Settings names vary by iOS version.
+        </p>
+        <p>
+          Test your particular app and lock-screen workflow before relying on
+          it for a long listen. We have not established a universal screen-off
+          guarantee or failure for Speak Screen. For imported books and a saved
+          reading position, <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">LoudReader&apos;s book player</Link> is
+          another option. For listening away from a desk, see the <Link href="/blog/listen-to-books-while-running" className="text-loudBlue hover:underline">running setup guide</Link>.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Press play, lock the screen, put your phone away"
-        subline="LoudReader keeps reading with the screen off. Lock-screen controls, Bluetooth support, all on-device and private."
-      />
+      <StoreCta headline="Let the book play with your phone put away" subline="Local narration with background playback and supported iOS media controls." />
     </ArticleLayout>
   );
 }

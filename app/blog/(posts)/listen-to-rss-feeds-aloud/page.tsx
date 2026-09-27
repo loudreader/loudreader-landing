@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,180 +6,90 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ListenToRssFeedsAloudArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          RSS readers do not read articles aloud. The handful that do use a
-          robotic system voice and stop when you lock the screen. The practical
-          workflow for listening to your RSS queue is to pair any RSS reader
-          you like with a dedicated text-to-speech app. Use your RSS reader to
-          find and open articles, use Safari Reader view to strip ads and
-          sidebars, export as PDF, and import into <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac). LoudReader reads the PDFs aloud with
-          natural offline voices, remembers your place, and works in airplane
-          mode. It is fully on-device and private, your library never leaves
-          your device. This is a manual queue, not a live feed, but the
-          tradeoff is that your entire reading list stays offline and private,
-          with no account and no tracking.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="devices"
-        caption="An RSS reader finds the articles. Safari cleans them up. LoudReader reads them aloud."
-      />
-
-      <QuestionSection question="Why don't RSS readers read articles aloud?">
-        <p>
-          Most RSS readers are built to skim headlines and read text on screen.
-          Text-to-speech is not a feature the market has demanded from them, so
-          developers have not invested in it. A few apps have tried: Voice
-          Dream Reader on iOS can import RSS feeds and read articles aloud, and
-          it does a decent job. But it is the exception, and even then the
-          voice quality is tied to whatever system voices Apple makes available
-          through the older speech API.
-        </p>
-        <p>
-          The result is that RSS reading and TTS listening are two separate
-          tools, and the workflow that bridges them is the export step. It is
-          not seamless, and it is honest to say so. You do a few seconds of
-          manual work per article in exchange for natural voices, offline
-          playback, and privacy.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do I set up an RSS-to-audio workflow?">
-        <p>
-          You need three pieces, and all of them are free:
-        </p>
+      <Tldr><p>
+        Keep using the RSS reader you like. If it has a listening feature
+        that suits you, there is no need to add another app. For a LoudReader
+        queue, open an item’s original article and use <strong>Paste a Link</strong>{" "}
+        or the share extension. If the page cannot be extracted, save a
+        readable PDF from your browser and import it. LoudReader does not
+        subscribe to RSS feeds or automatically download new entries. This
+        is a way to choose a few articles for local listening, not an
+        automatic conversion of a whole feed into a podcast.
+      </p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Use RSS for discovery and choose individual articles for a listening queue." />
+      <QuestionSection question="How do I move an RSS article into LoudReader?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">An RSS reader.</strong>{" "}
-            NetNewsWire is free, open source, and native on both Mac and
-            iPhone. It syncs feeds privately via iCloud. Reeder is a paid
-            alternative with a polished design. Either one works. Add your
-            feeds and skim headlines as you normally would.
-          </li>
-          <li>
-            <strong className="text-gray-900">Safari Reader view.</strong>{" "}
-            When you find an article worth listening to, tap the Reader button
-            in Safari&apos;s address bar. This strips the page down to the
-            article text and images, removing navigation, ads, and sidebars.
-          </li>
-          <li>
-            <strong className="text-gray-900">LoudReader on iPhone or Mac.</strong>{" "}
-            Export the Safari Reader page as a PDF. On Mac: File then Export as
-            PDF. On iPhone: share button, Print, pinch outward to open as PDF,
-            save or share to LoudReader. Import the PDF and press play.
-          </li>
+          <li>In your RSS reader, open the article’s original page rather than copying the feed subscription URL.</li>
+          <li>Share that article link to LoudReader, or paste it using the app’s link-import option.</li>
+          <li>Wait for import while online. Compare the saved text with the source, including the ending.</li>
+          <li>Play a short section. If extraction is incomplete, inspect a browser PDF export as a fallback.</li>
         </ol>
-        <p>
-          This three-tool chain feels like more work than it actually is. After
-          the second or third article, it becomes muscle memory. The entire
-          sequence takes about 15 seconds per article.
-        </p>
+        <p>The distinction between a feed URL and an article URL matters.
+        The former describes a stream of items; it is not a request that
+        LoudReader will follow and keep synchronised. The <Link href="/listen-to-articles-mac" className="text-loudBlue hover:underline">article listening guide</Link>{" "}
+        covers saved web content on a compatible Mac.</p>
       </QuestionSection>
-
-      <QuestionSection question="Can I listen to full-text RSS feeds or only summaries?">
-        <p>
-          Whatever text Safari Reader view extracts is what you hear. If the
-          RSS feed sends the full article text, Safari Reader captures it all,
-          and LoudReader reads the entire piece. If the feed only sends a
-          summary (a headline and a paragraph with a &quot;read more&quot;
-          link), that summary is what Safari sees and what LoudReader reads.
-        </p>
-        <p>
-          Most news sites and blogs that care about RSS send full-text feeds.
-          Sites that truncate their feeds usually do it to drive clicks to the
-          website. For those, you need to open the article link in Safari
-          separately, wait for Reader view to activate, and export from the
-          full article page. It adds one extra step but still works.
-        </p>
+      <QuestionSection question="What if the feed contains only a summary?">
+        <p>A summary in an RSS reader and the full page on the publisher’s
+        site are different sources. Opening the original article may provide
+        more text, but it may also require a subscription or sign-in. Check
+        the actual imported copy rather than assuming the feed’s description
+        is the full article.</p>
+        <p>A link importer does not automatically inherit your browser
+        session. If you are authorised to view a complete article but the
+        import contains a teaser, try saving a PDF from the readable page.
+        Confirm the PDF contains the full text before importing it. Neither
+        method supplies access you do not already have.</p>
       </QuestionSection>
-
-      <QuestionSection question="What are the privacy tradeoffs?">
-        <p>
-          The RSS-to-audio pipeline with LoudReader is unusually private for a
-          listening workflow, and the privacy comes from three layers:
-        </p>
+      <QuestionSection question="How do I keep the queue useful instead of growing another backlog?">
+        <p>Start with three items that have a clear purpose: one report you
+        need for work, one long essay and one topic you want to explore.
+        Short announcements usually take longer to organise than to read.
+        Prefer articles whose argument is mainly in the prose.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">The RSS reader.</strong>{" "}
-            NetNewsWire fetches feeds directly from the source with no
-            intermediary server. There is no account, no analytics, and no
-            tracking. Your feed list stays on your device.
-          </li>
-          <li>
-            <strong className="text-gray-900">The export step.</strong>{" "}
-            Safari exports a local PDF. No URL is sent to any service. The
-            PDF is created offline on your device.
-          </li>
-          <li>
-            <strong className="text-gray-900">LoudReader.</strong> The app is
-            fully on-device and private, your library never leaves your
-            device. There is no account, no cloud processing, and no analytics.
-            Your article queue is as private as a stack of printed pages on
-            your desk.
-          </li>
+          <li>Use a title that identifies the source and subject.</li>
+          <li>Keep the source URL for references and later corrections.</li>
+          <li>Check diagrams and tables before going away from the screen.</li>
+          <li>Remove completed copies you do not need to keep.</li>
         </ul>
-        <p>
-          Compare this to a cloud TTS service that receives every article URL
-          you send, extracts the text on a server, and stores your reading
-          history. For professionals reading industry news, competitive
-          analysis, or anything they would rather not have profiled, the
-          manual workflow is the private one. For more on the privacy model,
-          see{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text-to-speech with no cloud
-          </Link>
-          .
-        </p>
+        <p>A library of saved articles is not necessarily an automatic
+        playlist. Choose what to play and verify how navigation works for
+        your own queue. Unlimited article saving is Premium; the app has
+        a free article allowance to try the workflow first.</p>
       </QuestionSection>
-
-      <QuestionSection question="What about article discovery with TTS built in?">
-        <p>
-          A few apps try to combine feed reading and TTS into one product.
-          Voice Dream Reader on iOS does RSS plus TTS. Pocket has a listen
-          feature for saved articles, though the voice is limited and the
-          processing happens on Pocket&apos;s servers. Speechify can ingest
-          articles from a URL. All of these are cloud-based and require
-          accounts.
-        </p>
-        <p>
-          The separated workflow (RSS reader plus LoudReader) is not as
-          integrated. You manage feeds in one app and listen in another. The
-          tradeoff is that both apps are native, private, and offline. For some
-          people, the integration is worth the privacy cost. For others, the
-          privacy is worth the manual step. Pick the tradeoff that fits your
-          threat model. For more on the offline angle, see{" "}
-          <Link
-            href="/listen-to-articles-mac"
-            className="text-loudBlue hover:underline"
-          >
-            listening to articles on Mac
-          </Link>
-          .
-        </p>
+      <QuestionSection question="Which parts can work offline?">
+        <p>Fetching a feed and downloading a new article require access to
+        those sources. Once a readable copy and the needed voice resources
+        are available locally, LoudReader can generate its speech offline.
+        Test that specific article and voice without a connection before
+        a trip.</p>
+        <p>This does not make the entire chain private by default. Your
+        RSS reader’s sync provider, the publisher and any cloud file storage
+        have their own handling of data. LoudReader itself includes diagnostics
+        and usage analytics. Its local speech path means the article is not
+        uploaded to a speech server for narration; it is not a promise that
+        no service sees any activity.</p>
       </QuestionSection>
-
+      <QuestionSection question="Do I need a different RSS app?">
+        <p>Usually not just for this workflow. First check whether your
+        current reader can open or share the original article URL and whether
+        its own read-aloud option meets your needs. A useful comparison is
+        one real article with headings, a quotation and an image—not a
+        general claim that one category of voices sounds better.</p>
+        <p>We make <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>.
+        Its role here is saving and narrating selected text, while your RSS
+        app remains responsible for subscriptions and unread counts. For
+        newsletters delivered through a platform, the <Link href="/blog/listen-to-substack-newsletters" className="text-loudBlue hover:underline">Substack guide</Link>{" "}
+        starts with that platform’s own audio options.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your RSS queue, read aloud"
-        subline="Skim feeds in your RSS reader, export articles as PDFs, and listen in LoudReader. Private, offline, natural voices."
-      />
+      <StoreCta headline="Try your own document in LoudReader" subline="Import a supported file and check a short passage before a longer listening session." />
     </ArticleLayout>
   );
 }

@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-confidential-documents",
-  "title": "How to Listen to Confidential Documents Securely",
-  "description": "A workflow for listening to sensitive contracts, case files, and reports without uploading them: on-device text to speech, verified in airplane mode.",
+  "title": "Listen to Confidential Documents: A Local Workflow",
+  "description": "A practical checklist for listening to sensitive documents: approved devices, local narration, OCR checks, diagnostics, headphones and working copies.",
   "publishedAt": "2026-07-23",
-  "lastModified": "2026-07-23",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "listen to confidential documents"
+  "query": "listen to confidential documents",
+  "topic": "technology"
 }

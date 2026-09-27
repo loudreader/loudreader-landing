@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -17,132 +18,20 @@ export const metadata = articleMetadata(meta);
 export default function PeterPanAudiobookFreeArticle() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Peter Pan is public domain, so you can hear the whole novel read
-          aloud for free, right now, no library hold and no subscription.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads J. M.
-          Barrie&apos;s full text, Peter and Wendy, aloud with a natural
-          offline voice. One honest note first: this is a synthetic voice
-          reading Barrie&apos;s text on your device, not a studio-recorded
-          performance with different voices for Peter, Hook, and Tinker Bell.
-          At roughly 48,000 words, it runs about 5.5 hours, short enough for
-          a weekend. Hear a sample on the{" "}
-          <Link href="/listen/peter-pan" className="text-loudBlue hover:underline">
-            Peter Pan catalog page
-          </Link>
-          , then open the app, where the book is already built in, and press
-          play.
-        </p>
-      </Tldr>
+      <Tldr><p>A free text-to-speech reading of <em>Peter Pan</em> starts with the right book: J. M. Barrie’s <em>Peter and Wendy</em>, rather than a film script or a shortened picture book. <a href="https://www.gutenberg.org/ebooks/16" className="text-loudBlue hover:underline">Project Gutenberg lists the English novel as ebook #16</a> and marks it public domain in the United States. The UK has a special Peter Pan royalty arrangement, so that US listing is not a worldwide clearance. LoudReader can read an eligible downloaded text with a synthetic voice. It does not supply a cast recording of Peter, Wendy and Hook. The <Link href="/listen/peter-pan" className="text-loudBlue hover:underline">Peter Pan sample</Link> lets you hear the voice before choosing this route.</p><Disclosure /></Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Peter and Wendy, read aloud from the original 1911 text."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Barrie’s novel and an audiobook adaptation are different editions to choose between." />
 
-      <QuestionSection question="Where can you listen to Peter Pan for free?">
-        <p>
-          J. M. Barrie died in 1937, and the novel version of Peter Pan,
-          titled Peter and Wendy, has been public domain for decades.
-          Project Gutenberg carries the complete text as ebook #16, which
-          means a free audiobook of it isn&apos;t locked behind anything.
-          The catch with any plain ebook file is that it just sits there.
-          Nothing reads it to you.
-        </p>
-        <p>
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          closes that gap. Peter Pan is already in the app&apos;s built-in
-          library of 70,000+ free Gutenberg books, so there&apos;s nothing to
-          download or convert first. Open the app, find it, press play. If
-          you want to hear the voice before you commit to the app, the{" "}
-          <Link href="/listen/peter-pan" className="text-loudBlue hover:underline">
-            Peter Pan catalog page
-          </Link>{" "}
-          has a rendered sample.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Which Peter Pan book is this?"><p>This guide refers to <em>Peter and Wendy</em>, the novel published in 1911. The <a href="https://www.gosh.nhs.uk/about-us/our-history/peter-pan-at-great-ormond-street-hospital/" className="text-loudBlue hover:underline">Great Ormond Street Hospital history</a> distinguishes it from the earlier play and <em>Peter Pan in Kensington Gardens</em>. Matching the title matters: a recording labelled simply “Peter Pan” might be a dramatisation, an abridgement or a reading of the novel.</p><p>Barrie’s narrator comments on the action as well as telling it. Keep those passages if you want the novel rather than a plot summary. For a family listen, preview the text as well as the voice: the original includes violence and dated portrayals that an adaptation may change. An old children’s-book label does not tell you whether it suits a particular child.</p></QuestionSection>
 
-      <QuestionSection question="Is it the real novel, or a shortened kids' version?">
-        <p>
-          It&apos;s the real thing. Most people know Peter Pan through a
-          stage musical, a Disney film, or an abridged picture book, and all
-          three sand down what Barrie actually wrote. The original novel is
-          sharper, funnier, and a lot sadder than any of the adaptations,
-          because Barrie is telling two stories at once: a children&apos;s
-          adventure on the surface, and a much more melancholy meditation on
-          growing up aimed over the children&apos;s heads at whoever is
-          reading it to them. Heard as an audiobook, both stories land
-          together, which is closer to how it was meant to be experienced in
-          the first place. Barrie&apos;s narrator also keeps interrupting the
-          plot to needle the reader directly, a habit picture-book versions
-          almost always cut, and it&apos;s a big part of why the original
-          reads so differently from what most adults remember.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="What is different about Peter Pan in the UK?"><p><a href="https://neverlandofficial.com/discover/peter-pan-copyright/" className="text-loudBlue hover:underline">GOSH Charity’s official copyright guidance</a> describes continuing UK royalty rights covering uses including publications, ebooks and audiobooks.</p><p>For a UK listening copy, choose a provider whose edition is offered for your territory. If you intend to publish, distribute or perform a version, use the contact and licensing guidance from GOSH. In other countries, check the edition and local rules before using a US download.</p></QuestionSection>
 
-      <QuestionSection question="What does the narration actually sound like?">
-        <p>
-          Worth being direct about this. LoudReader&apos;s narrator is a
-          synthetic voice, not a human actor. It&apos;s built from{" "}
-          {"natural offline voices"}, generated on your device while you
-          listen, with no separate audio file created or downloaded. It
-          reads the whole book in one consistent voice, Peter, Hook,
-          Wendy, and Barrie&apos;s own narration included, rather than
-          performing a separate character for each one.
-        </p>
-        <p>
-          That&apos;s a real trade-off, not a hidden one. If a full-cast
-          dramatization is what you&apos;re after, a commercial audiobook
-          will give you that and this article won&apos;t pretend otherwise.
-          What you get here is the complete, unabridged Peter Pan, narrated
-          on demand, for free, whenever you feel like pressing play.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you choose between text-to-speech and a recording?"><p>A synthetic reading speaks the written text. A human narration can interpret the narrator’s asides and the exchanges between children and adults; a dramatisation may instead alter the text and add music or a cast. Compare the edition and the opening sample, not just the title or whether an option is free.</p><p>The <Link href="/listen/peter-pan" className="text-loudBlue hover:underline">LoudReader catalog sample</Link> demonstrates one voice, not every voice or every passage. Listen long enough to decide whether its pacing suits you. Total listening time depends on the edition, voice and playback speed; this is not a fixed-length studio recording.</p></QuestionSection>
 
-      <QuestionSection question="How do you start listening right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Get{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>
-            . It&apos;s free, no account needed.
-          </li>
-          <li>
-            Search the built-in Gutenberg catalog inside the app for Peter
-            Pan. No file to find, no conversion step.
-          </li>
-          <li>
-            Press play. LoudReader is{" "}
-            {"fully on-device and private, your library never leaves your device"},
-            so all 5.5 hours play with no connection needed once the book is
-            loaded.
-          </li>
-          <li>
-            Word-by-word highlighting tracks along as it reads, useful if
-            you&apos;re reading along with a child or want to follow
-            Barrie&apos;s longer sentences without losing your place. If
-            you&apos;re reading it as a bedtime story out loud together, the
-            highlighting also makes it easy to pick up mid-sentence wherever
-            you left off.
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="How do you prepare a copy in LoudReader?"><p>LoudReader is an iPhone and iPad app; its iPad build also runs on compatible Apple Silicon Macs.</p><ol className="list-decimal pl-6 space-y-2"><li>Choose a copy you may use in your location. Check that it is the novel <em>Peter and Wendy</em>.</li><li>Install <a href="https://apps.apple.com/app/loudreader/id6758149478" className="text-loudBlue hover:underline">LoudReader</a> and find the book in the Gutenberg catalog, or import your permitted DRM-free EPUB.</li><li>Download the book and any required voice resources while connected. The catalog entry itself is not a preinstalled book.</li><li>Play a passage before a family listening session. For offline use, check that the downloaded book and selected voice play before travelling.</li></ol><p>{FREE_TIER.full}</p><p>The <Link href="/voices" className="text-loudBlue hover:underline">voice guide</Link> explains the available narrators. Premium adds features such as playback speed control and the sleep timer; those are separate from free listening.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear Peter Pan tonight"
-        subline="It's already in LoudReader's free Gutenberg library. Import nothing, just press play."
-      />
+      <StoreCta headline="Preview a reading of Peter and Wendy" subline="Try the voice, then choose the edition you want to read." />
     </ArticleLayout>
   );
 }

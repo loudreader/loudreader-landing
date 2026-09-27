@@ -3,6 +3,9 @@ import {
   APP_STORE_URL,
   CLONING,
   DIFFERENTIATORS,
+  FEATURES,
+  LIBRARY,
+  PRIVACY,
   PRICING,
   REQUIREMENTS,
   SITE_URL,
@@ -17,17 +20,20 @@ export const dynamic = "force-static";
 export function GET(): Response {
   const document = `# ${APP_NAME}
 
-> ${APP_NAME} is a text-to-speech reader that turns any EPUB, PDF, or Project Gutenberg classic into an audiobook with ${DIFFERENTIATORS.voices}. It is ${DIFFERENTIATORS.private}. It ${DIFFERENTIATORS.native}.
+> ${APP_NAME} reads ${FEATURES.imports} aloud with ${DIFFERENTIATORS.voices}. It ${DIFFERENTIATORS.native}. Speech is generated locally.
 
 ## Key facts
 
 - ${PRICING.free}
 - Premium includes ${PRICING.premiumFeatures}: ${PRICING.premiumMonthly}, ${PRICING.premiumYearly}, or ${PRICING.premiumLifetime}.
 - All text-to-speech runs on-device, so downloaded books can be read aloud offline.
-- 70,000+ free public-domain books from Project Gutenberg built in, plus 100+ curated classics on the home shelf.
+- ${LIBRARY.gutenberg}; download the selected book before offline use. Check the rights for your country and chosen edition.
 - Word-by-word highlighting synced to the narration.
 - ${VOICES.headline} (${VOICES.languageList}); ${VOICES.english}. ${VOICES.lazyLanguages}.
-- On-device voice cloning (Premium): ${CLONING.long}
+- On-device voice cloning: ${CLONING.long} ${CLONING.trial}
+- Scanned PDFs support on-device OCR. Recognition depends on legibility and layout; complex tables and equations need checking.
+- ${PRIVACY.summary}
+- No automatic library or reading-position sync between devices.
 - Requires ${REQUIREMENTS}.
 - App Store: ${APP_STORE_URL}
 - Made by solo developer Jeremi Podlasek.

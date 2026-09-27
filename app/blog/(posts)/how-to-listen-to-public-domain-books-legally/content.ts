@@ -1,43 +1,46 @@
-// FACT PROVENANCE. Verified on 2026-08-24:
-//   - Project Gutenberg's own stated practice, that it publishes ebooks
-//     whose U.S. copyright has expired or that were explicitly released
-//     into the public domain: https://www.gutenberg.org/policy/permission.html
-//     and https://www.gutenberg.org/help/copyright.html (Gutenberg's own
-//     copyright FAQ, which also states that copyright rules differ outside
-//     the U.S. and that non-U.S. readers are responsible for checking their
-//     own country's law).
-//   - LoudReader claims: built-in Project Gutenberg catalog (70,000+ books),
-//     fully on-device narration generated live with no exported audio file,
-//     from components/money/site.ts and the sibling article
-//     app/blog/(posts)/project-gutenberg-audiobooks.
-// This article is deliberately NOT legal advice. It states what Project
-// Gutenberg itself says about its clearance process, and is explicit that
-// copyright law varies by country and that redistributing or selling a
-// generated recording is a different question from listening to it
-// privately. No statute is cited, no jurisdiction-specific claim is made,
-// and the FAQ answers repeat that hedge rather than resolve it.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
+// Official source checked 2026-09-28: https://www.gutenberg.org/policy/permission.html
+// Official source checked 2026-09-28: https://www.gutenberg.org/help/copyright.html
+// Official source checked 2026-09-28: https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term
+// Official source checked 2026-09-28: https://www.gov.uk/copyright/how-long-copyright-lasts
+// Official source checked 2026-09-28: https://wiki.librivox.org/index.php/Copyright_and_Public_Domain
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is it legal to listen to public domain audiobooks?",
-    a: "Generally yes. A public domain book has no active copyright restricting who can read it, copy it, or turn it into another format, including audio. Project Gutenberg, the largest source of these texts, only publishes books it has determined are in the public domain in the United States. This is general information, not legal advice, and copyright rules differ by country.",
+    "q": "Is every Gutenberg ebook public domain?",
+    "a": "No. Most are public domain in the US, but the project also includes copyrighted items under permission. Check the specific notice."
   },
   {
-    q: "How does Project Gutenberg decide a book is public domain?",
-    a: "Gutenberg checks U.S. copyright status before publishing a book, using expiration rules (works from before a certain date, or where the copyright term has run out) and cases where a rights holder explicitly released a work. It publishes the outcome of that check, not a blanket claim that every book is free everywhere in the world.",
+    "q": "Does US public-domain status apply in the UK?",
+    "a": "Not automatically. Check UK rules and the particular edition, including any translation or added material."
   },
   {
-    q: "Is a public domain book in the U.S. also public domain in my country?",
-    a: "Not necessarily. Copyright terms and rules vary by country, and a work that's public domain in the United States can still be under copyright somewhere else, or vice versa. If you're outside the U.S. and it matters for your use, that's a question for your own country's law, not something this article can settle for you.",
+    "q": "Does a free ebook mean every audiobook of it is free to reuse?",
+    "a": "No. A recording and its performance require a separate check from the underlying text."
   },
   {
-    q: "Can I generate my own audio reading of a public domain book?",
-    a: "If the text itself is public domain, generating a personal audio reading of it for your own listening doesn't run into the text's copyright, because there's no copyright on the text left to run into. LoudReader does exactly this: it reads the book aloud live, on your device, and doesn't save or export an audio file. Whether you can share, sell, or republish a recording you make is a separate question this article isn't answering.",
-  },
-  {
-    q: "Does Project Gutenberg's public domain status cover fan recordings and TTS apps too?",
-    a: "The public domain status applies to the underlying text. A specific recording, whether a volunteer narration or a synthetic reading, is a separate piece of work from the text it's based on, and different projects (Gutenberg's own text files, LibriVox's volunteer recordings, an app like LoudReader) each have their own terms for how their specific output can be used. Read the terms of whichever one you're using if you plan to do more than listen privately.",
-  },
+    "q": "Does using a local TTS app settle copyright questions?",
+    "a": "No. Local processing describes where speech is generated, not what rights you have in the source or a recording you publish."
+  }
 ];

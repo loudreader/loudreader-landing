@@ -5,197 +5,48 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function HowToBuildAReadingHabitArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Building a reading habit is less about willpower and more about
-          lowering the barrier to start. Listening to books makes starting
-          trivially easy: press play while brushing your teeth, walking to the
-          car, or waiting for coffee. Stack listening onto routines you already
-          have. Start small: one chapter or ten minutes per day. The habit
-          forms around the repetition, not the volume.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) removes
-          nearly every friction point: no account, no conversion, no word
-          quotas. Import any DRM-free EPUB or PDF or pick from 70,000+ free
-          classics and press play. Natural offline voices, fully on-device and
-          private, your library never leaves your device. Free unlimited
-          listening makes the habit cost nothing to start.
-        </p>
+        <p>To start reading more regularly, choose one book you want to return to and one realistic moment to open it. Make the first session small enough to try today: a few pages or five minutes of listening. Prepare the book beforehand, then review after a week whether the moment, format and book suited you. This is a practical experiment, not a guaranteed habit formula or a fixed number of days to success. Audio can help when looking at a page is inconvenient, but it still takes attention, and a quiet break is sometimes what you need instead.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="The habit forms when starting is easier than skipping."
-      />
+      <ArticleIllustration variant="waveform" caption="One book, one occasion, then a small adjustment." />
 
-      <QuestionSection question="Why is starting so hard?">
-        <p>
-          Because reading asks for a lot upfront. A quiet place. Good light.
-          Uninterrupted time. A book within arm's reach. Enough mental energy
-          to focus on small text. That is a higher bar than most people realize,
-          especially at the end of a long day. The result: you want to read,
-          you intend to read, and then the evening slips away and you have read
-          zero pages.
-        </p>
-        <p>
-          Listening changes the equation. All it asks for is your ears. You can
-          start a book while doing something you were going to do anyway:
-          brushing your teeth, walking to the car, folding laundry. The barrier
-          drops from &ldquo;set aside dedicated time&rdquo; to &ldquo;press
-          play.&rdquo; That is the whole trick: make starting so easy you
-          cannot talk yourself out of it.
-        </p>
+      <QuestionSection question="What should I choose before day one?">
+        <p>Pick a book for interest, not because it looks like the book a regular reader ought to choose. Keep a longer wish list elsewhere. Your active choice should be obvious when the moment arrives, so that starting does not require another search.</p><p>Choose the format you can use comfortably. Print, an ebook and audio are all options. If you want to try audio, sample the voice and confirm you can access the whole book before building a routine around it.</p>
       </QuestionSection>
 
-      <QuestionSection question="How do you stack reading onto existing routines?">
-        <p>
-          Habit stacking is a well-known behavioral strategy: you attach a new
-          habit to something you already do every day. The existing routine
-          becomes the trigger, and the new habit rides along until it sticks on
-          its own. For reading via audio, the best anchors are:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">The morning routine.</strong>{" "}
-            Press play while making coffee, brushing teeth, or getting dressed.
-            You get a chapter in before the day starts competing for your
-            attention.
-          </li>
-          <li>
-            <strong className="text-gray-900">The commute.</strong> Book on as
-            soon as you pull out of the driveway or step onto the train. This
-            is the single biggest daily block of guaranteed listening time for
-            most people.
-          </li>
-          <li>
-            <strong className="text-gray-900">Daily chores.</strong> Cooking
-            dinner, washing dishes, folding laundry. Your hands are busy but
-            your mind is free. Swap the podcast for a book.
-          </li>
-          <li>
-            <strong className="text-gray-900">Exercise and walks.</strong>{" "}
-            Running, walking the dog, at the gym. Movement pairs perfectly with
-            audio because the physical activity keeps you alert.
-          </li>
+      <QuestionSection question="How do I choose a moment that can repeat?">
+        <p>Write a concrete plan such as “after lunch, before I open messages, I will read for five minutes” or “while folding the clean laundry, I will play the next part”. It is easier to test a specific occasion than an intention to read more sometime this week.</p><ul className="list-disc pl-6 space-y-2">
+          <li>Use a moment that actually exists in your current week.</li>
+          <li>Leave demanding tasks, conversations and anything needing full attention free of narration.</li>
+          <li>Prepare downloads and playback before a journey; set up a car session while safely parked.</li>
+          <li>Allow the session to end at the small amount you chose. Continuing is optional.</li>
         </ul>
-        <p>
-          The key is picking one anchor to start. Do not try to stack onto
-          everything at once. One routine, one book, one chapter. Consistency
-          beats ambition.
-        </p>
       </QuestionSection>
 
-      <QuestionSection question="How much is enough to build the habit?">
-        <p>
-          Way less than you think. The goal is not volume. The goal is
-          repetition. Ten minutes a day, every day, builds a stronger habit
-          than two hours on Sunday that never happen. Pick an amount so small
-          it feels silly to skip. One chapter. Ten minutes. Five pages if
-          you are reading print. The habit forms around the streak, not the
-          page count.
-        </p>
-        <p>
-          Once the daily repetition is locked in, volume takes care of itself.
-          You will naturally extend sessions on days when the book has its
-          hooks in you. But the foundation is the minimum viable habit, the
-          thing you can do even on the worst day. Protect that floor at all
-          costs.
-        </p>
+      <QuestionSection question="What should I track?">
+        <p>For the first week, a simple mark for “tried it” is enough. Add one short note if useful: enjoyed it, too noisy, wrong time, or wanted to keep going. You are testing whether the plan fits, not creating a score for how disciplined you were.</p><p>A long session on Saturday can be worthwhile even if weekday sessions did not happen. There is no need to protect a streak at the cost of sleep, work or enjoyment.</p>
       </QuestionSection>
 
-      <QuestionSection question="What if I keep falling off?">
-        <p>
-          The fix is usually one of two things: the habit is too big, or the
-          anchor is wrong.
-        </p>
-        <p>
-          If the habit is too big, shrink it. Thirty minutes felt like too
-          much, so you skipped it. Try ten. Ten still felt like effort? Try
-          five. Keep shrinking until the thought of skipping feels genuinely
-          silly. &ldquo;I do not have five minutes&rdquot; is a harder
-          excuse to sell yourself than &ldquo;I do not have an hour.&rdquot;
-        </p>
-        <p>
-          If the anchor is wrong, try a different routine. Listening during
-          your commute might not work if you need that time to mentally
-          transition. Try attaching it to the first thing you do when you get
-          home instead. Or the last thing before bed. The anchor needs to be
-          automatic, something you do not decide to do, so the habit does not
-          require a decision either.
-        </p>
+      <QuestionSection question="What if I miss several days?">
+        <p>Look for a specific obstacle before making the goal smaller by default. Was the file not downloaded? Did the chosen moment disappear? Was the book difficult to resume? Did you actually want quiet? Each calls for a different change.</p><p>Try one adjustment for the next week: prepare the file, move the slot, choose shorter chapters, change the book, or read less often. A routine can be useful without happening every day. Do not turn a missed session into a backlog to repay.</p>
       </QuestionSection>
 
-      <QuestionSection question="How does LoudReader make the habit easier to start?">
-        <p>
-          The app is built to remove friction at every step:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">No account.</strong> You open the
-            app and you are in. No sign-up, no password, no email verification.
-            One less barrier between you and starting.
-          </li>
-          <li>
-            <strong className="text-gray-900">No conversion.</strong> Import
-            any DRM-free EPUB or PDF directly. No converting to audio files, no
-            managing downloads. The book is the audiobook.
-          </li>
-          <li>
-            <strong className="text-gray-900">Built-in library.</strong>{" "}
-            70,000+ free Project Gutenberg classics are ready to go. If you do
-            not have a book handy, pick one and start listening in seconds.
-          </li>
-          <li>
-            <strong className="text-gray-900">Works anywhere.</strong> Natural
-            offline voices run fully on-device and private, your library never
-            leaves your device. No internet needed means no dead zones, no
-            buffering, no excuses.
-          </li>
-          <li>
-            <strong className="text-gray-900">Free unlimited listening.</strong>{" "}
-            No word quota, no time limit, no trial that expires. You can build
-            the habit over weeks and months without a meter running.
-          </li>
-        </ul>
-        <p>
-          The full picture of turning your books into audio is at{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          . The quick start:{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            get LoudReader from the App Store
-          </a>
-          , pick a book, press play during your morning coffee. That is the
-          habit. Everything else is just doing it again tomorrow.
-        </p>
+      <QuestionSection question="How can listening fit without becoming another project?">
+        <p>Use the player you already have if it does the job. For your own DRM-free EPUB or PDF, <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> can combine text and local narration in one app. Open a sample, test the voice, lock the screen and confirm you can resume before the first planned session.</p><p>Try every available voice for your first 8 hours of listening. Afterwards, a free English voice selection remains available with unlimited book listening. If audio is the format you prefer, <Link href="/blog/read-more-books-by-listening" className="text-loudBlue hover:underline">planning a small listening queue</Link> covers the next step. If your main obstacle is an automatic reach for a feed, try <Link href="/blog/listen-to-books-instead-of-scrolling" className="text-loudBlue hover:underline">replacing one scrolling slot</Link> instead of changing your whole day.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Start the habit with zero friction"
-        subline="Import a book, press play, and stack it onto your morning routine. Free, on-device, no account."
-      />
     </ArticleLayout>
   );
 }

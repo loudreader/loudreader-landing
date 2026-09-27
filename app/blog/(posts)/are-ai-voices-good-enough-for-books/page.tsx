@@ -25,8 +25,8 @@ export default function AreAiVoicesGoodEnoughForBooksArticle() {
           in nonfiction, dialogue in novels, and longer sentences in either.
           Check whether you follow the meaning comfortably and want to keep
           listening. <strong>LoudReader</strong> offers 23 studio narrators
-          across 10 languages, with natural offline voices generated on your
-          device. Start with the browser samples, then use your own book.
+          across 10 languages, with availability depending on your device.
+          Narration is generated locally. Start with the browser samples, then use your own book.
           {" "}{FREE_TIER.full} A human-recorded audiobook remains a separate
           choice when you want a particular narrator&apos;s performance.
         </p>
@@ -145,7 +145,7 @@ export default function AreAiVoicesGoodEnoughForBooksArticle() {
       <QuestionSection question="How do I try LoudReader on a book?">
         <p>
           <a href={APP_STORE_URL} className="text-loudBlue hover:underline">Get LoudReader from the App Store</a>,
-          import a DRM-free EPUB or PDF, choose a narrator, and press play.
+          import a supported DRM-free EPUB or PDF, choose an available narrator, and press play.
           {" "}{FREE_TIER.full} Try a few voices on the same passage before
           settling into a chapter. If you prefer a human performance for that
           book, keep that as a separate choice; your other reading may suit a

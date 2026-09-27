@@ -1,196 +1,28 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
-import ComparisonTable from "@/components/money/ComparisonTable";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
-import { BOOK_TABLE_COLUMNS, BOOK_TABLE_ROWS, FAQS } from "./content";
+import { FREE_TIER } from "@/components/money/site";
+import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function EasyEnglishBooksArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          The easiest English books to listen to for free are public-domain
-          classics with plain prose: start with{" "}
-          <em>The Tale of Peter Rabbit</em> (about 7 minutes),{" "}
-          <em>Aesop&apos;s Fables</em> (one-minute stories), then{" "}
-          <em>The Wonderful Wizard of Oz</em> and{" "}
-          <em>Alice&apos;s Adventures in Wonderland</em>, and work up to{" "}
-          <em>Black Beauty</em> and the <em>Sherlock Holmes</em> stories. All
-          nine books below are on Project Gutenberg, and{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          has that catalog built in, so you browse, download, and press play,
-          with each word highlighted as it is read by natural offline voices. The
-          free tier is unlimited listening with no word quota, so a slow,
-          careful learner pace costs nothing. Word counts below were measured
-          from the actual Gutenberg editions; listening times assume a typical
-          150-words-per-minute narration pace.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Every public-domain classic is a free audiobook once a reader can narrate it."
-      />
-
-      <QuestionSection question="Which easy English books should you start with?">
-        <p>
-          Nine books, ordered roughly from easiest to hardest. The word counts
-          are measured from the Project Gutenberg plain-text editions (and
-          rounded); the listening times assume about 150 words per minute, a
-          typical audiobook narration pace. The difficulty labels are my
-          editorial judgment as a reader, not a formal grading system, so
-          treat them as a starting order, not a verdict.
-        </p>
-        <ComparisonTable
-          caption="Nine easy public-domain English books with approximate word counts, estimated listening times at a 150-words-per-minute narration pace, and editorial difficulty labels"
-          columns={BOOK_TABLE_COLUMNS}
-          rows={BOOK_TABLE_ROWS}
-          highlightColumn={-1}
-        />
-        <p>A few notes on why these earn their spots:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">The Wonderful Wizard of Oz</strong>{" "}
-            is the best first novel on the list. Baum wrote deliberately
-            plain sentences for children, and the story is one you probably
-            already know, which is half the comprehension battle.
-          </li>
-          <li>
-            <strong className="text-gray-900">Aesop&apos;s Fables</strong>{" "}
-            are complete stories in about a minute each, perfect when a whole
-            book feels like too much commitment.
-          </li>
-          <li>
-            <strong className="text-gray-900">Black Beauty</strong> is told in
-            the first person by a horse, in short, calm sentences, longer
-            than Oz but rarely harder.
-          </li>
-          <li>
-            <strong className="text-gray-900">Alice</strong> has simple
-            sentence structure but plenty of invented words and wordplay,
-            fine to enjoy without understanding every joke.
-          </li>
-          <li>
-            <strong className="text-gray-900">Sherlock Holmes</strong> is the
-            step up: each story is a self-contained hour with some Victorian
-            vocabulary, and the plots pull you through it.
-          </li>
-        </ul>
-      </QuestionSection>
-
-      <QuestionSection question="Why start with classics instead of graded readers?">
-        <p>
-          Graded readers (books rewritten for a specific vocabulary level)
-          are genuinely good tools, and if you have access to them, use them.
-          The case for these classics is practical: they are free, they are
-          real unabridged English rather than simplified English, and with a
-          text-to-speech reader every one of them is instantly an audiobook.
-          There is no per-book cost, so abandoning one that turns out too hard
-          costs you nothing.
-        </p>
-        <p>
-          The honest caveat: books this old contain some old-fashioned
-          language, so you will meet &ldquo;shan&apos;t&rdquo; and
-          &ldquo;whereupon&rdquo;. Treat those like furniture in the
-          background. They are rarely the words that block the plot, and the
-          strategy in{" "}
-          <Link
-            href="/blog/reading-english-books-non-native"
-            className="text-loudBlue hover:underline"
-          >
-            reading English books as a non-native speaker
-          </Link>{" "}
-          is exactly about not stalling on them.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How long does an easy classic take to finish?">
-        <p>
-          Less time than it feels like it should. At 20 minutes of listening a
-          day (one commute, one chore session),{" "}
-          <em>The Wonderful Wizard of Oz</em> takes under two weeks and{" "}
-          <em>The Call of the Wild</em> about ten days. That math matters for
-          motivation: finishing your first real English book is a milestone,
-          and picking a 40,000-word book instead of a 200,000-word one makes
-          the milestone reachable this month. It is also why the table above
-          is ordered by effort, not by fame.
-        </p>
-        <p>
-          If you use LoudReader Premium&apos;s speed control, your times will
-          differ. Slowing to 0.8x for comfort adds about a quarter to each
-          estimate, and that is a perfectly good trade.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you read along while you listen?">
-        <p>
-          Listening while reading is the learner&apos;s version of training
-          wheels. The audio sets the pace and the pronunciation, the text
-          shows you the spelling.{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader (free on the App Store)
-          </a>{" "}
-          is built around exactly that: as the voice reads, each word
-          highlights in the text, and tapping any sentence plays it again from
-          the start. The Project Gutenberg catalog is built into the app, so
-          every book above is a search away. Download once, then listen fully
-          offline. Everything is fully on-device and private, your library
-          never leaves your device, and the voices are natural offline
-          voices, with eleven English narrators to choose between, which for
-          learning English is precisely what you want. How the free catalog works, and what else is in it,
-          is covered in{" "}
-          <Link
-            href="/blog/project-gutenberg-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            Project Gutenberg audiobooks
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What should you read after these?">
-        <p>
-          When the &ldquo;moderate&rdquo; rows feel comfortable, you have
-          outgrown the list, and the same tool keeps working. Any DRM-free
-          EPUB or PDF you own becomes listening material the moment you import
-          it; the walkthrough is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          . Modern novels, non-fiction, even work documents: the
-          read-along-while-listening loop is the same whether the book is from
-          1900 or last year.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>For a first English book, a short complete story is often a more manageable commitment than a famous long novel. Start by sampling <em>The Tale of Peter Rabbit</em>, an individual Aesop fable or a chapter of <em>The Wonderful Wizard of Oz</em>. The eight choices below range from short starting points to longer stretches. They are editorial suggestions, not CEFR grades, and “children’s classic” does not mean every word is easy. Each links to a specific Project Gutenberg edition. Read a page, try its narration if useful and choose based on whether you can follow the story.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Sample a short story before committing to a long novel." />
+<QuestionSection question="Which books are worth sampling first?"><ul className="list-disc pl-6 space-y-2"><li><strong><a href="https://www.gutenberg.org/ebooks/14838" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">The Tale of Peter Rabbit — Beatrix Potter</a>.</strong> A short, self-contained starting point. The illustrations provide context if you use them, but garden vocabulary and unfamiliar names may still need checking. Read the whole story before deciding you need a longer book.</li><li><strong><a href="https://www.gutenberg.org/ebooks/21" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">Three Hundred Aesop’s Fables — translated by George Fyler Townsend</a>.</strong> Choose one fable at a time rather than committing to the collection. Short length is useful, but this translation includes older phrasing. If the moral is unclear, restate the events before trying to interpret it.</li><li><strong><a href="https://www.gutenberg.org/ebooks/55" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">The Wonderful Wizard of Oz — L. Frank Baum</a>.</strong> A possible first longer story when you want a clear journey to follow. Sample a chapter to judge the descriptions and unfamiliar creatures; recognising a film plot does not guarantee that all of the book will be familiar.</li><li><strong><a href="https://www.gutenberg.org/ebooks/11" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">Alice’s Adventures in Wonderland — Lewis Carroll</a>.</strong> An option if you enjoy playful language. It is not the default beginner recommendation: jokes, invented words and shifts in logic can be difficult even when the sentences look short.</li></ul><p>These are alternatives, not compulsory steps. If none feels comfortable, a modern graded reader may give you a better match to your current vocabulary.</p></QuestionSection>
+<QuestionSection question="What can you try when you want a longer challenge?"><ul className="list-disc pl-6 space-y-2"><li><strong><a href="https://www.gutenberg.org/ebooks/271" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">Black Beauty — Anna Sewell</a>.</strong> Try it if first-person narration helps you stay with a story. Expect historical vocabulary about horses and work, and episodes involving cruelty; a gentle title does not mean a gentle story throughout.</li><li><strong><a href="https://www.gutenberg.org/ebooks/215" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">The Call of the Wild — Jack London</a>.</strong> A choice for readers interested in an adventure setting. Nature and survival vocabulary make it a stretch rather than a universal easy pick. It also contains violence and animal suffering.</li><li><strong><a href="https://www.gutenberg.org/ebooks/1661" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">The Adventures of Sherlock Holmes — Arthur Conan Doyle</a>.</strong> The individual mysteries offer stopping points without reading the full collection. Victorian expressions and details important to the solution reward careful checking. Choose one story and see whether you can explain the case.</li><li><strong><a href="https://www.gutenberg.org/ebooks/45" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">Anne of Green Gables — L. M. Montgomery</a>.</strong> Consider it when you want a longer, character-focused novel. Dialogue, descriptive passages and Anne’s imaginative language create different challenges from a short fable.</li></ul><p>Older books can also contain social attitudes and language that need historical context. Choose according to your interest and comfort as well as sentence difficulty.</p></QuestionSection>
+<QuestionSection question="Are the linked editions free everywhere?"><p>Project Gutenberg lists these editions as public domain in the United States. Its <a href="https://www.gutenberg.org/policy/permission.html" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">permissions guidance</a> asks readers elsewhere to check local copyright. A different translation, introduction or illustrated edition may have different rights. The links identify the editions being discussed, not a worldwide permission for every version of each title.</p></QuestionSection>
+<QuestionSection question="How do you choose without a reading-level score?"><p>Read a page from the opening and another from later in the book. Then describe the situation without looking. If unfamiliar words prevent you from explaining it, try another title or an adapted edition. You do not need to understand every joke or decorative detail, but you should know what is happening.</p><p>For a lookup strategy, see <Link href="/blog/reading-english-books-non-native" className="text-loudBlue hover:underline">reading English books as a non-native speaker</Link>. Use your understanding of the sample rather than treating the order of this list as a formal grading scale.</p></QuestionSection>
+<QuestionSection question="How can you listen to your chosen book?"><p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> includes browsing and downloading from Project Gutenberg, or you can import a supported DRM-free EPUB. Press play and use word highlighting to follow the passage; pause and replay sentences when needed. Synthetic narration can make pronunciation mistakes, so check unfamiliar names or doubtful words against another source.</p><p>{FREE_TIER.full} Adjustable playback speed is Premium. The app runs on iPhone and iPad, with its iPad build available on compatible Apple Silicon Macs. Prepare the book and voice assets before relying on offline playback.</p><p>We do not give fixed completion times here: edition length, voice, speed and pauses all change them. Plan for a short session and use the end of a story or chapter as a stopping point. The <Link href="/blog/learn-english-by-listening-to-books" className="text-loudBlue hover:underline">English listening routine</Link> gives a way to turn those sessions into practice.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="70,000+ free classics, read aloud"
-        subline="Browse the built-in Project Gutenberg catalog and listen with word-by-word highlighting. Free, unlimited, no account."
-      />
+      <StoreCta headline="Try your first English chapter" subline="Browse the catalogue or import a supported EPUB, then follow narration with word highlighting." />
     </ArticleLayout>
   );
 }

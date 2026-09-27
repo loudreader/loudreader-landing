@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -17,155 +18,20 @@ export const metadata = articleMetadata(meta);
 export default function SherlockHolmesAudiobookFreeArticle() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          The Adventures of Sherlock Holmes is public domain, so a free
-          audiobook of it is one tap away.{" "}
-          <Link
-            href="/listen/the-adventures-of-sherlock-holmes"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader&apos;s catalog page for the book
-          </Link>{" "}
-          lets you hear an opening sample before you commit to anything, and
-          the full 12 stories play free in the app with unlimited listening.
-          One honest thing up front: this is a synthetic voice reading the
-          real Gutenberg text on your device, not a professional audiobook
-          performance. It runs about 11.5 hours across the twelve cases, and
-          it is <strong>fully on-device and private, your library never
-          leaves your device</strong>, so once the book is downloaded it
-          plays with no connection at all. To listen, get{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) free from
-          the App Store, search Sherlock Holmes in the built-in catalog, and
-          press play.
-        </p>
-      </Tldr>
+      <Tldr><p><em>The Adventures of Sherlock Holmes</em> is a collection of twelve cases, not the whole Holmes series. <a href="https://www.gutenberg.org/ebooks/1661" className="text-loudBlue hover:underline">Project Gutenberg ebook #1661</a> supplies the English text and marks it public domain in the US. Outside the US, check local terms. You can listen by downloading a recording or by having a text-to-speech app read the ebook. LoudReader uses the second approach: the <Link href="/listen/the-adventures-of-sherlock-holmes" className="text-loudBlue hover:underline">Sherlock Holmes sample</Link> is a synthetic voice, not an actor playing Holmes and Watson. Choose a voice you enjoy, then try one complete case before deciding whether you want the collection this way.</p><Disclosure /></Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="The same text Doyle wrote, read aloud by a natural offline voice."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Twelve separate cases make the collection easy to divide by story, without a fixed time commitment." />
 
-      <QuestionSection question="Where can you listen to Sherlock Holmes free right now?">
-        <p>
-          Start with the sample.{" "}
-          <Link
-            href="/listen/the-adventures-of-sherlock-holmes"
-            className="text-loudBlue hover:underline"
-          >
-            The book&apos;s catalog page
-          </Link>{" "}
-          plays a real rendered clip of the opening, so you can hear the voice
-          before installing anything. From there, the full listen happens
-          inside the LoudReader app: the entire Project Gutenberg edition of{" "}
-          <em>The Adventures of Sherlock Holmes</em> is already built into the
-          catalog, so there is nothing to download separately and no file to
-          find. Search the title, tap it, press play.
-        </p>
-        <p>
-          This is worth saying plainly, because it is the honest core of the
-          whole article: what you are hearing is a computer voice reading
-          Arthur Conan Doyle&apos;s actual words, generated on your device. It
-          is not a recording of a professional narrator performing the book.
-          If a performed narration matters to you specifically for Holmes,
-          check an audiobook store or a library app like Libby first, since
-          Holmes is popular enough that recordings usually exist. If you just
-          want to hear the stories today, for free, with no waiting list,
-          this is the fastest route there is.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Which Sherlock Holmes collection should you search for?"><p>Search for the full title, <em>The Adventures of Sherlock Holmes</em>, by Arthur Conan Doyle. Its contents begin with <em>A Scandal in Bohemia</em> and end with <em>The Adventure of the Copper Beeches</em>. A result labelled “Complete Sherlock Holmes” or <em>The Memoirs of Sherlock Holmes</em> is a different collection.</p><p>The <a href="https://www.gutenberg.org/ebooks/1661" className="text-loudBlue hover:underline">Gutenberg record</a> also points to an improved text edition, #48320, and an audio edition, #9551. Those are separate downloads. For audio, read the recording’s own terms: an old underlying story does not make every recording unrestricted. <a href="https://www.gutenberg.org/policy/permission.html" className="text-loudBlue hover:underline">Project Gutenberg’s permissions guidance</a> explains the US scope of Gutenberg’s copyright checks.</p></QuestionSection>
 
-      <QuestionSection question="What does a synthetic Sherlock Holmes audiobook actually sound like?">
-        <p>
-          Steady and clear, closer to a good reference recording than to a
-          dramatized performance. LoudReader&apos;s voices are{" "}
-          <strong>natural offline voices</strong> built to read continuous
-          prose evenly, with normal sentence rhythm and pausing. What they
-          don&apos;t do is act: no distinct voice for Holmes versus Watson,
-          no dramatic tension held for a reveal. For a mystery that leans on
-          Conan Doyle&apos;s own prose to build suspense, that is a fair
-          trade rather than a loss, but it is a different listening
-          experience than a performed audiobook, and you should know that
-          before you start the first story.
-        </p>
-        <p>
-          {FREE_TIER.full}{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            LoudReader Premium
-          </Link>{" "}
-          opens all 23 narrators across the app&apos;s language roster,
-          including 11 English voices, so if the default voice doesn&apos;t
-          suit a Baker Street mystery, you can try a few others until one
-          does. Speed control from 0.3x to 3.0x is also a Premium feature,
-          useful for slowing down the denser deduction passages or speeding
-          through familiar setup scenes.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you judge a voice for a detective story?"><p>Listen for how easily you can follow Watson’s narration and the exchanges with clients. A clue may be a name, an address or a short phrase. If the voice mispronounces something, look at the text rather than guessing from the audio. A sample is useful, but it does not establish pronunciation quality throughout all twelve stories.</p><p>LoudReader generates narration from the text on your device; it is not a performed recording with an actor’s interpretation. If you prefer human narration, sample an edition offered by your library or audiobook provider and compare the same opening passage.</p></QuestionSection>
 
-      <QuestionSection question="How do you start listening in the next five minutes?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on iPhone or Mac. Free, no account required.
-          </li>
-          <li>
-            Open the built-in Project Gutenberg catalog inside the app and
-            search &ldquo;Sherlock Holmes.&rdquo; The Adventures of Sherlock
-            Holmes is one of the 70,000+ titles already there.
-          </li>
-          <li>
-            Tap the book, then press play. The text loads once and then plays
-            fully offline from there, with each word highlighted as it is
-            read.
-          </li>
-          <li>
-            Pick a story to start with; each one is a self-contained case
-            around 40 to 50 minutes long, so you don&apos;t need to commit to
-            the whole collection in one sitting.
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="How do you get the stories ready in LoudReader?"><p>LoudReader is an iPhone and iPad app; its iPad build also runs on compatible Apple Silicon Macs.</p><ol className="list-decimal pl-6 space-y-2"><li>Install <a href="https://apps.apple.com/app/loudreader/id6758149478" className="text-loudBlue hover:underline">LoudReader from the App Store</a>.</li><li>Search the in-app Gutenberg catalog for the full collection title and confirm the author. Download the text; browsing the catalog does not mean the book is already stored.</li><li>Finish any required voice download, then play a passage. Check downloaded playback before relying on it offline.</li><li>Use the contents to choose a case. Stop at a story boundary if you want a self-contained session; the stories do not all take the same time.</li></ol><p>{FREE_TIER.full}</p><p>Playback speed control is a Premium feature. See the <Link href="/voices" className="text-loudBlue hover:underline">voice options</Link> before choosing a narrator for the rest of the collection.</p></QuestionSection>
 
-      <QuestionSection question="What is The Adventures of Sherlock Holmes, and why does it hold up?">
-        <p>
-          Published in 1892, it collects the first twelve short Holmes cases
-          Arthur Conan Doyle wrote for The Strand Magazine, from{" "}
-          <em>A Scandal in Bohemia</em> through{" "}
-          <em>The Adventure of the Copper Beeches</em>. Each story is
-          self-contained: a client climbs the stairs to 221B Baker Street with
-          an impossible problem, and Holmes solves it in front of the reader
-          rather than after the fact. That format is exactly why the book
-          reads (and listens) so well in short sessions rather than one long
-          push.
-        </p>
-        <p>
-          If you want the wider case for reading classics this way, or a
-          catalog of other titles built into LoudReader,{" "}
-          <Link
-            href="/blog/project-gutenberg-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            Project Gutenberg audiobooks
-          </Link>{" "}
-          covers the free routes in general. This article stays narrow on
-          purpose: it is about getting this one book playing today.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Do you have to start with the first story?"><p>Reading in the printed order is a simple starting point, but these are separate cases rather than chapters of one mystery. If you already know the opening story, choose another from the contents. Avoid plot summaries if you want to preserve the solution.</p><p>Story length, voice and speed all affect the time needed for a case. Start one story, see how your chosen setup feels, and adjust your listening sessions from there. The <Link href="/blog/project-gutenberg-audiobooks" className="text-loudBlue hover:underline">Gutenberg listening guide</Link> explains the broader difference between downloading text and downloading audio.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear Sherlock Holmes free, today"
-        subline="The full 12 stories are built into LoudReader's Gutenberg catalog. Free, on-device, no account."
-      />
+      <StoreCta headline="Try a Sherlock Holmes passage" subline="Try the voice, then choose the edition you want to read." />
     </ArticleLayout>
   );
 }

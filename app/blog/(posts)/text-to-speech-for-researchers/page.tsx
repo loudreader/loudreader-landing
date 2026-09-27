@@ -5,211 +5,51 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function TextToSpeechForResearchersArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Research means reading. A lot of it. Papers, preprints, theses,
-          grant proposals, and the one 1998 conference paper that everyone
-          cites but nobody has actually read. Text-to-speech turns the paper
-          stack into something you can absorb while walking, commuting, or
-          giving your eyes a break from the screen.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
-          PDFs and EPUBs aloud with natural offline voices, so you can
-          screen papers during your commute and save the deep read for your
-          desk. It is fully on-device and private, your library never leaves
-          your device, and it needs no account. Import a PDF from arXiv,
-          press play, and listen. Speed control (0.3x to 3.0x, a Premium
-          feature) lets you skim at 2x and slow down for the methods section
-          that actually matters.
-        </p>
+        <p>Text-to-speech can support a research reading workflow when each listening session has a defined output. Use it to become familiar with a paper’s question, revisit prose you have already read or collect issues for a focused review. Keep the PDF version and citation details, flag what needs visual inspection, then return to the source before relying on a claim. A narrated paper is not automatically a reviewed paper. LoudReader is a general reader with local speech and PDF OCR, not a reference manager, evidence checker or replacement for close reading.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="A 30-minute commute is a paper. A year of commutes is a literature review."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="A useful listening pass ends with a question you can check." />
 
-      <QuestionSection question="Why do researchers have a reading problem?">
-        <p>
-          Volume is the obvious part. A researcher in any active field might
-          need to stay current with dozens of journals, preprint servers,
-          and working papers. The less obvious part is that reading papers
-          competes directly with the work that produces papers: running
-          experiments, writing, teaching, and meetings. Reading tends to be
-          the thing that slides to evenings and weekends, which is exactly
-          when your brain is least equipped for dense academic text.
-        </p>
-        <p>
-          Text-to-speech moves reading into the time that already exists.
-          Your commute, your lunch walk, your gym session. These are not
-          &ldquo;found&rdquo; hours, they are hours you already have that
-          happen to be compatible with audio. A 30-minute walk to campus is
-          one paper. A year of those walks is an entire subfield surveyed.
-        </p>
+      <QuestionSection question="How should I organise a listening queue?">
+        <p>Start with the question your reading is meant to answer. Put a small number of relevant papers in the active queue and give each an intended pass: orientation, reread or close review. A large folder of unlabelled PDFs makes it easy to confuse collecting papers with examining them.</p><ul className="list-disc pl-6 space-y-2">
+          <li><strong>Orientation:</strong> What problem is the paper addressing, and is it relevant to my question?</li>
+          <li><strong>Reread:</strong> What argument or detail do I want to refresh?</li>
+          <li><strong>Close review:</strong> Which method, comparison, figure or limitation needs direct inspection?</li>
+        </ul><p>Audio may suit the first two. The third generally needs the document and other evidence available, even if you also use narration.</p>
       </QuestionSection>
 
-      <QuestionSection question="Can you really listen to an academic paper?">
-        <p>
-          Some papers, yes. Others, less so. Here is the honest breakdown:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">
-              Literature reviews and introductions.
-            </strong>{" "}
-            These are narrative text and absorb well by ear. You get the
-            framing, the gap, and the contribution without needing to see the
-            page.
-          </li>
-          <li>
-            <strong className="text-gray-900">
-              Discussion and conclusion sections.
-            </strong>{" "}
-            Same thing. Once you understand the method, the interpretation
-            reads naturally aloud.
-          </li>
-          <li>
-            <strong className="text-gray-900">Humanities papers.</strong>{" "}
-            These are often more narrative throughout and work well for
-            audio from start to finish.
-          </li>
-          <li>
-            <strong className="text-gray-900">
-              Methods sections with heavy math.
-            </strong>{" "}
-            These are tough. Equations do not read well aloud, and dense
-            statistical notation is hard to follow without seeing it. Save
-            these for the screen.
-          </li>
-          <li>
-            <strong className="text-gray-900">Papers in your subfield.</strong>{" "}
-            You already know the terminology and the standard methods.
-            Listening at 1.5x to 2.0x lets you extract the contribution
-            quickly because your brain fills in the scaffolding.
-          </li>
-        </ul>
-        <p>
-          Many researchers use TTS as a screening pass: listen to the
-          abstract and intro on the way in, flag the papers worth a full
-          read, and only sit down for the ones that clear the bar. This cuts
-          the reading pile by half or more.
-        </p>
+      <QuestionSection question="What belongs in a note from a listening pass?">
+        <p>Record the paper identifier or citation, version/date, section or page, a short claim in your own words and the next check it requires. For example: “Results p. 6: improvement claimed over baseline; inspect Table 2 and the evaluation setup.” That is more actionable than marking the entire paper as read.</p><p>Separate what the authors say from your interpretation. If you may quote a line, return to the original wording later. A spoken phrase can be misheard, and PDF extraction can omit the qualification attached to it.</p>
       </QuestionSection>
 
-      <QuestionSection question="How do you handle PDF papers practically?">
-        <p>
-          Most modern academic PDFs work right away. Journal articles,
-          arXiv preprints, conference papers: all of these are text-based
-          PDFs that{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          reads natively. Import the file and press play. No conversion, no
-          reformatting.
-        </p>
-        <p>
-          What does not work: old scanned articles that are just page
-          images. If you cannot select text in the PDF, LoudReader cannot
-          read it. Most papers from the last 20 years are text-based, but
-          anything from the pre-digital era may need OCR first, which
-          LoudReader does not do.
-        </p>
-        <p>
-          For a deeper walkthrough of PDF listening, see{" "}
-          <Link
-            href="/listen-to-pdf-iphone"
-            className="text-loudBlue hover:underline"
-          >
-            listen to PDF on iPhone
-          </Link>
-          , which covers the import process and what to expect from
-          different PDF types.
-        </p>
+      <QuestionSection question="How do I prepare a PDF without losing track of the source?">
+        <p>Keep the original in your reference workflow and import a listening copy into <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>. Check a sample, column transitions, figures and the document ending. The app can attempt local OCR on scans, with a 300-page OCR limit per import, but recognition and reading order still need review.</p><p>The detailed <Link href="/blog/listen-to-research-papers" className="text-loudBlue hover:underline">paper import checklist</Link> covers those checks. A successful import is not evidence that equations, tables and citations were represented faithfully.</p>
       </QuestionSection>
 
-      <QuestionSection question="What speed should you use for academic reading?">
-        <p>
-          It depends on your goal and your familiarity with the material.
-          For screening papers in your own field, 1.5x to 2.0x works well:
-          you know the terminology, you recognize the methods, and you just
-          need the contribution. For papers in an adjacent field where the
-          vocabulary is less automatic, 1.0x to 1.3x keeps comprehension
-          intact. For dense theory sections, 0.9x can help.
-        </p>
-        <p>
-          In LoudReader, speed control from 0.3x to 3.0x is a Premium
-          feature; the free tier plays at normal speed. The full range is
-          useful for researchers because you switch speeds based on the
-          paper and the section, in a way that casual reading does not
-          require. Skim the intro at 2x, slow to 1.2x for the argument you
-          actually need to understand, and skip the methods entirely if they
-          are standard.
-        </p>
+      <QuestionSection question="What should stay in my reference manager?">
+        <p>Keep bibliographic records, source links, version history and final research notes in the system you use for the project. LoudReader does not provide automatic integration with Zotero, Mendeley or EndNote. It also does not automatically sync its library or reading position between devices.</p><p>Notes and highlights in LoudReader are free. Treat them as reading aids; transfer or restate the important findings in your research notes and verify them against the source. Do not assume an in-app highlight appears in the original PDF or another application.</p>
       </QuestionSection>
 
-      <QuestionSection question="What about notes and reference management?">
-        <p>
-          LoudReader is a reading tool, not a reference manager. It does not
-          integrate with Zotero, Mendeley, or EndNote. What it gives you is
-          a way to absorb the content. Many researchers use it as the
-          consumption layer and keep their reference manager on screen for
-          the note-taking layer.
-        </p>
-        <p>
-          LoudReader Premium includes notes and highlights you can mark
-          during playback. After a listening session, you have a set of
-          flagged passages to transfer into your reference manager or
-          reading notes. The app remembers your place in every file, so you
-          can pause mid-paper when the bus reaches your stop and pick it up
-          exactly there on the way home.
-        </p>
+      <QuestionSection question="How should I choose playback speed?">
+        <p>Choose it by the task and whether you can explain the passage afterwards. Faster playback is not evidence that you have extracted the contribution correctly. If unfamiliar terminology, a long argument or a numerical result requires replays, pause and inspect the text instead of pushing through.</p><p>LoudReader’s speed control is Premium. No papers-per-commute or percentage reduction in a reading backlog is promised here. The useful output is a better next question or a verified note, not the number of audio minutes completed.</p>
       </QuestionSection>
 
-      <QuestionSection question="Does this work on Mac as well as iPhone?">
-        <p>
-          Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and the experience
-          is consistent on both. Many researchers do the screening pass on
-          iPhone during the commute and the deep read on Mac at the desk.
-          The library syncs across devices through the app. Both platforms
-          use the same on-device privacy model: the PDFs and EPUBs you
-          import stay local, no cloud processing.
-        </p>
-        <p>
-          For more on the Mac side, see{" "}
-          <Link
-            href="/read-epub-aloud-mac"
-            className="text-loudBlue hover:underline"
-          >
-            read EPUB aloud on Mac
-          </Link>
-          . And for the privacy architecture,{" "}
-          <Link
-            href="/blog/on-device-text-to-speech-explained"
-            className="text-loudBlue hover:underline"
-          >
-            on-device text to speech explained
-          </Link>{" "}
-          walks through what &ldquo;on-device&rdquo; actually means.
-        </p>
+      <QuestionSection question="What should I check for confidential material and devices?">
+        <p>For a review copy or unpublished draft, follow the applicable journal and institutional rules. LoudReader generates speech and OCR locally, but includes crash/performance diagnostics and usage analytics. Usage analytics is enabled by default, and version 1.12 has no visible switch to disable it. This does not constitute an independent confidentiality or compliance certification.</p><p>The app runs on iPhone and iPad and can run on compatible Apple Silicon Macs as an iPad app. Keep a source version and passage reference when moving between devices; do not expect automatic handoff. See <Link href="/blog/on-device-text-to-speech-explained" className="text-loudBlue hover:underline">what local speech means</Link> for the architecture boundary.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Turn your paper queue into a playlist"
-        subline="Import PDFs, press play, and get through the stack during the time you already have. Free, on-device, no account."
-      />
     </ArticleLayout>
   );
 }

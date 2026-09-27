@@ -7,140 +7,33 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function MobyDickAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Moby Dick is public domain, so a free full-length audiobook of it
-          is already built into <strong>LoudReader</strong> (iPhone, iPad, and Mac). One honest note first: this is a synthetic voice
-          reading Herman Melville&apos;s actual text on your device, not a
-          professionally performed recording with a human narrator. If
-          that&apos;s what you need to finally get through it, open the app,
-          find{" "}
-          <Link
-            href="/listen/moby-dick"
-            className="text-loudBlue hover:underline"
-          >
-            Moby Dick
-          </Link>{" "}
-          in the built-in Project Gutenberg catalog, and press play. No
-          purchase, no account, natural offline voices, and it works with no
-          connection because LoudReader is fully on-device and private, your
-          library never leaves your device.
-        </p>
+        <p>There are free text and audio routes into Moby-Dick. <Link href="/listen/moby-dick" className="text-loudBlue hover:underline">LoudReader’s catalogue entry</Link> uses <a href="https://www.gutenberg.org/ebooks/2701" className="text-loudBlue hover:underline">Gutenberg ebook 2701</a> and generates speech from its text. Gutenberg also links a <a href="https://www.gutenberg.org/ebooks/28794" className="text-loudBlue hover:underline">human audio performance</a> and recommends <a href="https://www.gutenberg.org/ebooks/15" className="text-loudBlue hover:underline">ebook 15</a> as its preferred text edition. These entries are listed as public domain in the USA. The US listing does not establish availability in other countries. Choose the text or recording first, then plan the listening time. A familiar title does not mean every digital edition has the same corrections or audio performance.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="&quot;Call me Ishmael.&quot; Read aloud, free, all 23.5 hours of it."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="For a long novel, choose the edition as carefully as the voice." />
 
-      <QuestionSection question="Is there really a free Moby Dick audiobook?">
-        <p>
-          Yes. Herman Melville published Moby Dick in 1851, and the
-          copyright expired long ago, so the full text is free on Project
-          Gutenberg for anyone to read or listen to. LoudReader has it built
-          into the free catalog already, no file to hunt down. You can hear
-          a sample of the famous opening on the{" "}
-          <Link
-            href="/listen/moby-dick"
-            className="text-loudBlue hover:underline"
-          >
-            Moby Dick catalog page
-          </Link>{" "}
-          before you open the app.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Which free text should you choose?"><p>The existing LoudReader catalogue link is ebook 2701. Gutenberg’s own edition note points readers to ebook 15, based on the first American edition, as the strongest of its three text versions. That is a reason to inspect ebook 15 if textual accuracy matters to you; it is not a claim that we have compared every line ourselves.</p><p>Download the preferred EPUB and <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import it into LoudReader</Link> if you want that version. If you are following an assigned edition, keep it for page references. Chapter titles are more useful than page numbers when moving between an ebook and a printed copy.</p></QuestionSection>
 
-      <QuestionSection question="What does the free version actually sound like?">
-        <p>
-          It sounds like a computer reading, clearly and steadily, not a
-          seasoned narrator relishing Melville&apos;s digressions on whaling
-          and fate. LoudReader&apos;s narration is a synthetic voice,
-          generated on your device with natural offline voices. It won&apos;t
-          add the dramatic weight a great human reading gives Ahab&apos;s
-          obsession. What it gives you is the entire novel, cetology
-          chapters and all, read out loud at a steady pace with the current
-          word highlighted on screen, for free.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Where is the free recorded audiobook?"><p><a href="https://www.gutenberg.org/ebooks/28794" className="text-loudBlue hover:underline">Gutenberg’s human audio entry 28794</a> provides audio downloads, including MP3. This is a separate recording, not audio exported by LoudReader. Its files and section divisions are the things to check if you want a recording for an existing audio player.</p><p>With generated speech, you choose a supported ebook and an available voice. With a recording, the reader’s pacing and interpretation are fixed in the file. Both can be worth sampling. Do not assume every recorded version is a full-cast drama or that every synthetic reading handles nautical vocabulary equally well.</p></QuestionSection>
 
-      <QuestionSection question="How do you play it in LoudReader?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone or Mac. Free, no account.
-          </li>
-          <li>
-            Open the built-in Project Gutenberg catalog and search the
-            title, or go straight to the{" "}
-            <Link
-              href="/listen/moby-dick"
-              className="text-loudBlue hover:underline"
-            >
-              Moby Dick
-            </Link>{" "}
-            page to hear the sample first.
-          </li>
-          <li>Tap the book. It downloads once, then plays offline after that.</li>
-          <li>Press play. LoudReader remembers your exact place every time.</li>
-        </ol>
-        <p>
-          Free listening on Moby Dick is unlimited, cover to cover, no word
-          quota. Premium adds playback speed from 0.3x to 3.0x, a sleep
-          timer, and every other voice in the app. At 23.5 hours, nudging the
-          speed up on familiar chapters is a reasonable way to keep momentum,
-          but it costs nothing to finish the book at normal speed either.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen through the changes of style?"><p>Moby-Dick moves between narrative, conversation and extended discussions of whales and whaling. If you expect an uninterrupted chase, those shifts can be disorienting. Treat the chapter title as a signpost and pause at a boundary when a session ends, rather than assuming each chapter advances the voyage in the same way.</p><p>The catalogue’s 23.5-hour estimate is calculated from text length, not a measured recording. Use it as a rough budget. After a first session, decide whether the voice suits both narrative and explanatory passages; the opening alone cannot test that.</p></QuestionSection>
 
-      <QuestionSection question="How long is Moby Dick, and is it worth the time?">
-        <p>
-          Around 23.5 hours, based on the novel&apos;s roughly 212,700 words,
-          the longest title in this batch of free classics by a wide margin.
-          That&apos;s a word-count estimate, not a measured recording, the
-          same figure shown on the book&apos;s own catalog page. The book is
-          long on purpose, alternating a whaling adventure with essay-like
-          chapters, and some readers find that structure works better as
-          audio than on the page, where a wandering aside feels less like a
-          detour and more like a storyteller talking.
-        </p>
-        <p>
-          If you&apos;d rather borrow a volunteer-read recording instead of a
-          synthetic one, the free alternatives and the tradeoffs are covered
-          in{" "}
-          <Link
-            href="/blog/librivox-alternative"
-            className="text-loudBlue hover:underline"
-          >
-            LibriVox alternative
-          </Link>
-          .
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for Moby Dick. Use the built-in entry for ebook 2701, or import ebook 15 yourself after checking its download page. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Press play on Moby Dick"
-        subline="Free, built into the app, no account. Natural offline voices, on Mac and iPhone."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

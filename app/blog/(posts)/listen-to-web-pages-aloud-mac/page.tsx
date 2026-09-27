@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,186 +6,88 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ListenToWebPagesAloudMacArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Your Mac has two honest paths to listen to web pages aloud. The
-          built-in one: Safari&apos;s Spoken Content (select text, right-click,
-          Speech, Start Speaking, or Option+Esc). It is free and works
-          immediately, but the voice is the system accessibility voice and
-          there is no bookmarking, speed control per article, or offline queue.
-          The app path: open the article in Safari Reader view to strip ads
-          and sidebars, export as PDF, and import into <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac). LoudReader reads the PDF with natural
-          offline voices, remembers your place, and works fully offline because
-          it is fully on-device and private, your library never leaves your
-          device. Both paths are honest. Pick the one that matches what you
-          need.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="devices"
-        caption="Safari Reader strips the noise. LoudReader reads the text. Both run on your Mac."
-      />
-
-      <QuestionSection question="What is the built-in way to listen to web pages on a Mac?">
-        <p>
-          Safari on macOS has a feature called Spoken Content that reads
-          selected text aloud. Here is exactly what it does and does not do:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">How to use it:</strong> Select
-            the text you want to hear, right-click, and pick Speech then Start
-            Speaking. Or select text and press Option+Esc. Press Option+Esc
-            again to stop.
-          </li>
-          <li>
-            <strong className="text-gray-900">What voice it uses:</strong>{" "}
-            The system voice set in System Settings under Accessibility then
-            Spoken Content. You can pick from the voices Apple ships, including
-            the higher-quality neural voices (Samantha, Daniel, etc.) if you
-            have downloaded them. The voice applies globally to all Spoken
-            Content on your Mac.
-          </li>
-          <li>
-            <strong className="text-gray-900">What it lacks:</strong>{" "}
-            No per-article speed control (there is one system-wide slider), no
-            bookmarking, no offline queue of articles, no sleep timer. It reads
-            whatever text is selected on screen, and when it reaches the end of
-            the selection, it stops. If the page scrolls or reloads, you lose
-            your place.
-          </li>
-        </ul>
-        <p>
-          This is a perfectly good tool for reading a few paragraphs, checking
-          a quote, or hearing a short news item. It was not designed for
-          listening to long articles or building a reading queue.
-        </p>
+      <Tldr><p>
+        A Mac can speak selected webpage text using its built-in accessibility
+        controls. For a saved reading copy, LoudReader can import an article
+        link or a PDF exported from the browser. Choose the first route for
+        text you want to hear immediately, and the second when you want the
+        article in a separate library. LoudReader runs on compatible Apple
+        Silicon Macs as an iPad app; it is not a separate native macOS reader.
+        Both methods depend on getting the right text, so check the selection
+        or imported article before a long session.
+      </p><p className="text-sm">We make LoudReader. Start with the Mac’s existing controls if they already meet your needs.</p></Tldr>
+      <ArticleIllustration variant="devices" caption="Read a selection now, or keep an article copy for later." />
+      <QuestionSection question="How do I make macOS speak selected text?">
+        <p>Open System Settings → Accessibility and find <strong>Read &amp;
+        Speak</strong> (called Spoken Content on older macOS versions). Enable
+        Speak selection and check its shortcut; the default is Option–Esc.
+        Select a passage in the browser and use the shortcut. The available
+        controller can adjust rate and move through speech. Apple’s <a href="https://support.apple.com/guide/mac-help/mh27448/mac" className="text-loudBlue hover:underline">spoken-text guide</a>{" "}
+        covers these settings.</p>
+        <p>This is a system feature, not a guarantee that every webpage
+        exposes its content equally well. If menus or unrelated text are
+        spoken, make a more precise selection or use the browser’s Reader
+        view where available. Try the voices offered by your Mac before
+        deciding whether you need a separate app.</p>
       </QuestionSection>
-
-      <QuestionSection question="How do I listen to a web page with LoudReader on Mac?">
-        <p>
-          The workflow has three steps, and after the first time it takes under
-          a minute:
-        </p>
+      <QuestionSection question="How do I import a webpage into LoudReader?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Open the article in Safari Reader view.</strong>{" "}
-            When Safari detects an article, a Reader button appears in the
-            address bar (it looks like a document icon). Click it. Reader view
-            strips navigation, ads, sidebars, and auto-play videos, leaving
-            just the headline, body text, and images. If the page has no Reader
-            button, it is usually not an article page (it might be a landing
-            page, a forum, or a page built in a way Safari cannot parse).
-          </li>
-          <li>
-            <strong className="text-gray-900">Export as PDF.</strong> With
-            Reader view active, go to File then Export as PDF. Pick a name
-            and save it. The PDF contains only the Reader view content, which
-            is exactly what you want read back.
-          </li>
-          <li>
-            <strong className="text-gray-900">Import into LoudReader.</strong>{" "}
-            Open LoudReader on your Mac, drag the PDF into the app, and press
-            play. The app reads the article aloud with natural offline voices,
-            remembers your place, and keeps reading with the screen locked or
-            in the background.
-          </li>
+          <li>Copy the URL of the article itself, rather than a homepage or search results page.</li>
+          <li>In LoudReader, choose <strong>Paste a Link</strong>, paste the address, and import it while online.</li>
+          <li>Open the resulting article. Check the opening, a middle paragraph and the ending.</li>
+          <li>Choose a voice and listen to a sample before adding more articles.</li>
         </ol>
-        <p>
-          For a deeper look at article listening on Mac, see{" "}
-          <Link
-            href="/listen-to-articles-mac"
-            className="text-loudBlue hover:underline"
-          >
-            how to listen to articles on Mac
-          </Link>
-          .
-        </p>
+        <p>The app’s share extension provides another way to hand over
+        supported content. This is web extraction, so a JavaScript-only
+        page, authentication screen or sparse preview can fail. It does not
+        make LoudReader a browser, and it does not synchronise later edits
+        to the original page. See <Link href="/listen-to-articles-mac" className="text-loudBlue hover:underline">the article listening overview</Link>{" "}
+        for more context.</p>
       </QuestionSection>
-
-      <QuestionSection question="What are the tradeoffs of the PDF export approach?">
-        <p>
-          The approach is simple and private, and it has real limits. Being
-          honest about them:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">It is manual.</strong> You
-            export each article one at a time. There is no &quot;send this URL
-            to LoudReader&quot; button and no browser extension that does it
-            for you. If you read dozens of articles a day, the manual export
-            step adds up.
-          </li>
-          <li>
-            <strong className="text-gray-900">Paywalled pages export the paywall.</strong>{" "}
-            If a page is behind a paywall and you are not logged in, the PDF
-            shows the paywall overlay, not the article. You need an active
-            subscription and you need to be logged in before exporting.
-          </li>
-          <li>
-            <strong className="text-gray-900">No live links.</strong> The
-            PDF is a static snapshot. Hyperlinks from the original article
-            are not clickable in audio form, which is obvious but worth saying.
-          </li>
-          <li>
-            <strong className="text-gray-900">Images are silent.</strong>{" "}
-            LoudReader reads text. Charts, photos, and diagrams appear in the
-            PDF but produce no audio. Captions get read, which gives some
-            context.
-          </li>
-        </ul>
-        <p>
-          On the upside, the PDF lives on your device and never touches a
-          server. LoudReader is fully on-device and private, your library
-          never leaves your device. Compare that to a cloud-based article
-          reader that uploads every URL to its server for processing. For
-          professionals reading confidential research, legal memos, or
-          internal documents, the privacy tradeoff favors the manual route
-          every time. See{" "}
-          <Link
-            href="/offline-text-to-speech-mac"
-            className="text-loudBlue hover:underline"
-          >
-            offline text-to-speech on Mac
-          </Link>{" "}
-          for more on the privacy angle.
-        </p>
+      <QuestionSection question="What if the link does not import the whole article?">
+        <p>Open the page in your browser with your normal access. If Reader
+        view is available, inspect it, then use the browser’s print or PDF
+        export. On macOS, the print dialog can save a PDF. Check the resulting
+        file before importing: a successful save can still contain a clipped
+        column or only a subscription prompt.</p>
+        <p>A PDF is a snapshot of available content, not an authentication
+        workaround. A signed-in page can be readable in Safari while a
+        separate link importer sees only a preview. For visual material,
+        keep the original page or PDF nearby: a chart, formula or screenshot
+        can carry information that narration does not convey.</p>
       </QuestionSection>
-
-      <QuestionSection question="When would I use Safari's built-in reader vs LoudReader?">
-        <p>
-          Safari&apos;s built-in Spoken Content wins when you need one
-          paragraph read right now and the system voice is fine. No setup, no
-          export, no file management. Select text, Option+Esc, done.
-        </p>
-        <p>
-          LoudReader wins when you are listening to a long article and care
-          about voice quality, when you want to queue up several articles and
-          listen through them without touching the computer, when you are
-          stepping away from the screen entirely, or when the content is
-          sensitive and you do not want it processed by a cloud service. The
-          two tools complement each other. Use both.
-        </p>
+      <QuestionSection question="What do I gain from a saved article library?">
+        <p>You can return to an imported copy without reopening the live
+        page, and LoudReader keeps your reading position. Local speech means
+        an imported article can be narrated without sending its text to a
+        speech server. Prepare the app, article and desired voice before
+        testing offline playback.</p>
+        <p>Premium covers adjustable playback speed, the sleep timer and
+        unlimited article saving. The free article allowance lets you try
+        the process. Do not choose an app solely from a feature list: test
+        an article whose structure resembles what you actually read.</p>
+        <p>macOS speech remains useful for a short passage that does not
+        need a saved copy. Keeping both routes available is often simpler
+        than forcing every page through one workflow.</p>
       </QuestionSection>
-
+      <QuestionSection question="Does local speech mean nothing uses the internet?">
+        <p>No. Opening the website and importing a link require network
+        access. Cloud folders and browser services have their own settings.
+        LoudReader also includes diagnostics and usage analytics. Its local
+        speech engine is specifically about where narration is generated.</p>
+        <p>If you handle internal work documents, first check that saving
+        them in another app is permitted. The <Link href="/offline-text-to-speech-mac" className="text-loudBlue hover:underline">offline Mac guide</Link>{" "}
+        discusses preparing a local listening session. The <Link href="/" className="text-loudBlue hover:underline">LoudReader overview</Link>{" "}
+        lists the app’s platform requirements.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Turn web articles into a podcast queue"
-        subline="Export as PDF, import into LoudReader, and listen with natural voices. Fully offline, private, no account."
-      />
+      <StoreCta headline="Try your own document in LoudReader" subline="Import a supported file and check a short passage before a longer listening session." />
     </ArticleLayout>
   );
 }

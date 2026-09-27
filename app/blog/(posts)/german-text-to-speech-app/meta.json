@@ -1,9 +1,10 @@
 {
   "slug": "german-text-to-speech-app",
-  "title": "German Text to Speech App",
-  "description": "LoudReader reads German EPUBs and PDFs aloud with one on-device narrator. Free, private, no account. Here is exactly what it offers and what it doesn't.",
+  "title": "German Text to Speech: Try Klaus with Your Books",
+  "description": "Try German EPUBs and PDFs with Klaus, LoudReader’s German studio narrator. Check device support, language settings, pronunciation and Premium access.",
   "publishedAt": "2026-10-03",
   "lastModified": "2026-10-03",
   "avatar": "English Language Learner",
-  "query": "german text to speech app"
+  "query": "german text to speech app",
+  "topic": "learning"
 }

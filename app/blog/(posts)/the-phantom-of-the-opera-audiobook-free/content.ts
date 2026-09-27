@@ -1,48 +1,47 @@
-// FACT PROVENANCE. Every claim verified on 2027-01-01 against:
-//   - The Phantom of the Opera is public domain and on Project Gutenberg
-//     (Gaston Leroux, Gutenberg ebook #175):
-//     https://www.gutenberg.org/ebooks/175
-//   - Author dates, catalog entry, and the listening-time estimate (about
-//     9.5 hours) come from data/gutenberg-catalog.json, the same dataset
-//     that renders the /listen/the-phantom-of-the-opera catalog page on
-//     this site. Listening hours are computed from word count, not
-//     measured from a recording, so this article calls it an estimate.
-//   - LoudReader app-behavior claims come from components/money/site.ts
-//     (single source of truth): 70,000+ Gutenberg books browsable in the
-//     app, free tier = one natural offline voice with unlimited listening,
-//     Premium adds all 23 studio narrators, playback speed 0.3x to 3.0x,
-//     sleep timer, soundscapes, and notes. Word-by-word highlighting is a
-//     real, non-gated feature per the reference article in this repo
-//     (app/blog/(posts)/app-that-highlights-words-while-reading/content.ts).
-//   - /listen/the-phantom-of-the-opera exists in data/catalog-slugs.json
-//     and ships a rendered audio sample.
-//   - The Phantom of the Opera musical, referenced only as the well-known
-//     adaptation the novel differs from, no specifics about the show are
-//     claimed beyond it existing.
-// Claims you may NOT make until verified: CarPlay, Android, a human
-// narrator, or any claim that the app exports audio files to keep.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Read the previous page.tsx, content.ts and meta.json in full before revision.
+// Primary edition/catalog sources checked 2026-09-28:
+//   - https://www.gutenberg.org/ebooks/175
+//   - https://www.gutenberg.org/cache/epub/175/pg175-images.html
+//   - https://www.gutenberg.org/policy/permission.html
+//   - data/gutenberg-catalog.json: current catalogue entry the-phantom-of-the-opera,
+//     ebook 175. Listening hours, where used, are catalogue estimates,
+//     not measured audio runtimes. No comparative voice test was performed.
+//   - data/audio-samples.ts confirms the shipped opening sample lookup.
+//   - /listen/the-phantom-of-the-opera: catalogue/sample route, not a full audiobook.
+// Product facts: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0)
+// in the LoudReader app source, reviewed by the shared 2026-09-28
+// source audit (docs/product-facts-2026-09-28.md): SubscriptionAccess.swift,
+// SubscriptionManager.swift, VoiceRegistry.swift, PaywallReason.swift,
+// ProjectGutenbergService, ContentView.swift file importer, Xcode target configuration.
+// FREE_TIER imports the updated shared wording: eight cumulative listening hours,
+// then a free English voice selection (not any studio narrator), unlimited listening.
+// iPad compatibility on Apple Silicon is not a native Mac app; no device sync promise.
+// Local speech is not a claim of zero diagnostics, analytics or network use.
+// Edition and voice-selection advice is editorial guidance, not a tested superiority claim.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is The Phantom of the Opera free to listen to?",
-    a: "Yes. Gaston Leroux's novel is public domain, free on Project Gutenberg, and LoudReader reads the full text aloud with a natural offline voice at no cost. The free tier is unlimited listening, not a limited preview.",
+    q: "Is this the musical soundtrack?",
+    a: "No. It is generated speech from an English translation of Leroux’s novel. It does not include the stage musical’s songs or script.",
   },
   {
-    q: "Is this the musical, or the original novel?",
-    a: "The original novel, Leroux's 1910 text, not the musical or any film adaptation. This is a different, stranger story than the show made famous, and the version this reading covers is the complete original text as Project Gutenberg carries it.",
+    q: "Is ebook 175 the original French text?",
+    a: "No. Gutenberg lists it as English and identifies it as a translation. The catalogue record does not name its translator; this guide does not claim it is a particular modern translation.",
   },
   {
-    q: "Is this a performed audiobook with a human narrator?",
-    a: "No, and this article says so upfront. LoudReader generates its narration with a synthetic voice reading the text on your device, not a recording of a human actor. If you want a performed reading with distinct voices for Christine, Raoul, and the Phantom, a commercial audiobook edition will give you that. This gives you the complete novel, free, on demand.",
+    q: "Is the English edition guaranteed unabridged against the French?",
+    a: "This guide does not make that claim. Check the translation’s editorial information if textual completeness against the French original matters to you.",
   },
   {
-    q: "How long is The Phantom of the Opera as an audiobook?",
-    a: "About 9.5 hours, based on the novel's roughly 84,000 words. That's a solid but manageable listen, comparable to many mid-length commercial audiobooks.",
+    q: "How long is the reading?",
+    a: "The approximately 9.5-hour catalogue estimate is derived from text length. The actual voice and speed determine listening time.",
   },
   {
-    q: "Can I listen on both my iPhone and Mac?",
-    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs that share the same imported book and remember your place, so you can move between devices without losing where you left off.",
+    q: "Can I listen free in LoudReader?",
+    a: FREE_TIER.full,
   },
 ];

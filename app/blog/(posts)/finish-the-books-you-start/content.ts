@@ -1,40 +1,41 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Position saving: playback resumes from current position across
-//     app launches, eyes-to-ears switching uses the same file.
-//   - Lock-screen controls via MPRemoteCommandCenter: PlayerService.swift.
-//   - Background audio: Info.plist UIBackgroundModes = ["audio"].
-//   - On-device voices, no internet: speech synthesis runs locally.
-//   - Sleep timer is Premium: PaywallReason.sleepTimer.
-//   - Playback speed 0.3x to 3.0x is Premium: PaywallReason.playbackSpeed.
-//   - Free tier unlimited listening: SubscriptionAccess.swift.
-//   - Pricing: components/money/site.ts PRICING.
-// Claims you may NOT make: any completion-rate statistics, ADHD-specific
-// completion data, or that listening eliminates all barriers to finishing
-// books. The article frames momentum as practical advice, not a clinical
-// claim.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Why do I keep abandoning books halfway through?",
-    a: "Most abandoned books are victims of a gap, not a bad book. You hit a busy week, you go three days without reading, the thread breaks, and picking it back up feels like restarting. The book didn't get worse. The continuity got interrupted and eyeball-only reading has no way to bridge that gap.",
+    "q": "Why do I abandon books?",
+    "a": "There is no single explanation. Time, interest, difficulty and interruptions all matter. Look at the particular book before deciding what to change."
   },
   {
-    q: "How does listening help me finish a book I already started?",
-    a: "Listening fills the gaps that kill momentum. When you cannot sit down with the book, you listen during the walk, the drive, the dishes. The story keeps moving in your head even when your eyes are unavailable. A book that gets a chapter a day through any channel is a book that stays alive in your attention.",
+    "q": "Will switching to audio make me finish?",
+    "a": "It may help if it fits your routine or the material better. It cannot guarantee interest, attention or completion."
   },
   {
-    q: "Can I switch between reading and listening in the same book?",
-    a: "Yes. In LoudReader, the book you read and the book that is narrated are the same imported file. Read chapter three with your eyes in the evening. Listen to chapter four with your ears during tomorrow's commute. Your position is saved either way. There is no syncing step and no two-edition problem.",
+    "q": "Does the sleep timer save the point where I fell asleep?",
+    "a": "No. It stops playback after the selected interval; it cannot detect which words you heard. Check your place when you return."
   },
   {
-    q: "Should I switch to listening when I feel stuck on a book?",
-    a: "Yes, try it before you give up on the book entirely. A change of format can reset your relationship with the material. A chapter that felt like a slog on the page might move differently in your ears, especially if the writing is voice-driven or narrative. If it still does not grab you after a few chapters of listening, the book might genuinely not be for you.",
-  },
-  {
-    q: "Does LoudReader have a sleep timer so I do not lose my place?",
-    a: "The sleep timer is a Premium feature. It gently fades out playback after a set duration and saves your position, so nodding off costs you a few minutes of lost place rather than a whole night of narration. Without the timer, playback continues until you pause it manually.",
-  },
+    "q": "Is it okay to stop a book?",
+    "a": "For leisure reading, yes. For required reading, consider the actual requirement and make a plan for the sections you need."
+  }
 ];

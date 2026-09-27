@@ -7,141 +7,33 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function TheGreatGatsbyAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          The Great Gatsby entered the public domain in 2021, so a free
-          audiobook of it now exists inside <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac). One honest note up front: this is a
-          synthetic voice reading Fitzgerald&apos;s actual text on your
-          device, not a professionally performed recording with a human
-          narrator. If that&apos;s enough, open the app, find{" "}
-          <Link
-            href="/listen/the-great-gatsby"
-            className="text-loudBlue hover:underline"
-          >
-            The Great Gatsby
-          </Link>{" "}
-          in the built-in Project Gutenberg catalog, and press play. No
-          purchase, no account, natural offline voices, and it keeps
-          playing with no connection because LoudReader is fully on-device
-          and private, your library never leaves your device.
-        </p>
+        <p><a href="https://www.gutenberg.org/ebooks/64317" className="text-loudBlue hover:underline">Project Gutenberg ebook 64317</a> offers F. Scott Fitzgerald’s The Great Gatsby in English, listed as public domain in the USA. The US listing does not establish availability in other countries. LoudReader can read that text aloud from its catalogue, using speech generated on your device. The <Link href="/listen/the-great-gatsby" className="text-loudBlue hover:underline">Gatsby catalogue page</Link> has a short opening sample. A free ebook is different from a particular actor’s audiobook or a film soundtrack: decide whether you want the text read aloud or a specific performance, and check the edition details of the option you choose.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="One green light across the bay, read aloud for free."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Start with the text edition, then preview the narration." />
 
-      <QuestionSection question="Is there really a free Great Gatsby audiobook?">
-        <p>
-          Yes, and it&apos;s newer than you might think. Fitzgerald published
-          The Great Gatsby in 1925, and under US copyright law the book
-          stayed protected for 95 years, entering the public domain on
-          January 1, 2021. That&apos;s why it&apos;s free on Project Gutenberg
-          now in a way the 19th-century classics on this list have been for
-          much longer. LoudReader has it built into the free catalog already,
-          so there&apos;s no file to find. You can hear a sample of the
-          opening on the{" "}
-          <Link
-            href="/listen/the-great-gatsby"
-            className="text-loudBlue hover:underline"
-          >
-            Great Gatsby catalog page
-          </Link>{" "}
-          before you open the app.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="What does the free Gutenberg edition include?"><p>It provides the English novel as an ebook. Its catalogue entry identifies Fitzgerald as author and records the text’s publication source. That gives you a specific file to evaluate; it does not establish that every modern edition, translation or recording with the same title is freely available.</p><p>If you are outside the United States, a US catalogue label is not a worldwide availability promise. If you are reading for a class, also check whether you need an introduction, annotations or a particular pagination. Those materials are not automatically part of the older text.</p></QuestionSection>
 
-      <QuestionSection question="What does the free version actually sound like?">
-        <p>
-          It sounds like a computer reading Nick Carraway&apos;s narration
-          clearly and steadily, not like a film adaptation&apos;s voiceover.
-          LoudReader generates the audio on your device with natural offline
-          voices, and it will not vary its delivery for the glitter of
-          Gatsby&apos;s parties or the flatness of the valley of ashes the way
-          a skilled actor would. What it gives you is the full text, read at
-          a consistent pace, with the current word highlighted on screen so
-          your eyes and ears stay together. If a performed reading matters
-          more to you than the price, a commercial audiobook edition is the
-          better fit. If you want the whole novel narrated for free today,
-          this is that.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="What should you test in a voice sample?"><p>Nick Carraway’s account moves between observation, conversation and reflection. Try a section containing dialogue after the opening. Listen for sentence boundaries and names, and decide whether you can follow who is speaking without relying on a cast of different voices.</p><p>LoudReader uses a synthetic voice rather than an actor’s interpretation. The sample is a useful preview, not evidence that every line has been manually checked. If a particular recorded performance is the reason you want the audiobook, search for that edition through its publisher or your library instead.</p></QuestionSection>
 
-      <QuestionSection question="How do you play it in LoudReader?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone or Mac. Free, no account.
-          </li>
-          <li>
-            Open the built-in Project Gutenberg catalog and search the
-            title, or go straight to the{" "}
-            <Link
-              href="/listen/the-great-gatsby"
-              className="text-loudBlue hover:underline"
-            >
-              The Great Gatsby
-            </Link>{" "}
-            page to hear the sample first.
-          </li>
-          <li>Tap the book. It downloads once, then plays offline from then on.</li>
-          <li>Press play. LoudReader saves your exact place every time.</li>
-        </ol>
-        <p>
-          Free listening on The Great Gatsby is unlimited, no word quota.
-          Premium adds playback speed from 0.3x to 3.0x, a sleep timer, and
-          every other voice in the app, none of which you need to finish this
-          particular book.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for The Great Gatsby. Check the title and edition before downloading. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
-      <QuestionSection question="How long is The Great Gatsby audiobook?">
-        <p>
-          Around 5.5 hours, based on the novel&apos;s roughly 51,100 words.
-          That&apos;s a word-count estimate, not a measured recording time,
-          the same figure shown on the book&apos;s own catalog page. It&apos;s
-          the shortest title in this whole free-classics roundup, easily
-          finished in one long drive or two or three commutes.
-        </p>
-        <p>
-          For the wider case for free public-domain listening and how the
-          built-in catalog works, see{" "}
-          <Link
-            href="/blog/project-gutenberg-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            Project Gutenberg audiobooks
-          </Link>
-          .
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Can it help with a reading assignment?"><p>Listening can be another way to move through the text, but keep your assigned edition for quotations and page numbers. Mark the chapter and the first few words of passages you want to discuss. This works across versions more reliably than copying an audio timestamp.</p><p>The catalogue estimates around 5.5 hours from text length. That is not an exact runtime or a guarantee that the book fits a particular journey. For the practical steps of using your own course copy, see <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">the ebook-to-speech guide</Link>. Use a supported DRM-free file and check its contents before starting.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Press play on The Great Gatsby"
-        subline="Free, built into the app, no account. Natural offline voices, on Mac and iPhone."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

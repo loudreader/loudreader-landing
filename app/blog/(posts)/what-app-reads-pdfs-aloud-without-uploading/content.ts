@@ -1,46 +1,47 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - PDF text extraction runs locally with no network call: LoudReader/PDFImportPipeline.swift
-//     opens the file with PDFKit and pulls the embedded text layer on-device.
-//     There is no URLSession or upload code path anywhere in that file.
-//   - No OCR: PDFImportPipeline.swift only reads a PDF's existing selectable
-//     text layer (minTextualPageRatio check + PDFKit text extraction). A
-//     scanned, image-only PDF with no text layer will not read reliably.
-//   - No account, no server sync: there is no CloudKit or account code in the
-//     app source at all (grepped the full LoudReader/ tree). Nothing about a
-//     PDF you import is sent anywhere.
-//   - Speech generation runs on-device: LoudReader/Engines/BaseTTSEngine.swift
-//     and the CoreML-based TTS pipeline run locally; no network call happens
-//     to produce audio.
-//   - Background playback with the screen locked: LoudReader/Info.plist
-//     declares UIBackgroundModes = ["audio", "processing"].
-//   - Pricing, free-tier, and voice facts come from components/money/site.ts
-//     (single source of truth, synced with the App Store listing).
-// Claims NOT made here: CarPlay, Android, Windows, live cloud integrations,
-// or reading image-only/scanned PDFs (that needs OCR, which this pipeline
-// does not do).
+// FACT PROVENANCE — revised 2026-09-28, not a runtime test.
+// Shipping app: the LoudReader app source, release_v1.12,
+// peeled commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 (git show, not dirty HEAD).
+// BookImportService.swift:319–334,972–979 accepts EPUB/PDF file imports;
+// remote article links have a separate download/import path.
+// PDFImportPipeline.swift:88–96,153–218 uses on-device Apple Vision OCR
+// when at least half the pages lack text or total extracted text is very small;
+// at most 300 OCR pages/import, with partial/unreadable-result notices.
+// LoudReaderApp.swift and Analytics.swift initialise Sentry diagnostics and
+// TelemetryDeck usage analytics; the latter defaults ON. Release SettingsSheet.swift
+// hides the usage-statistics switch; do not promise a visible opt-out.
+// Local narration is not a claim of zero network traffic.
+// Platform/account/free-tier facts: docs/product-facts-2026-09-28.md,
+// audited against this shipping tag and official Apple lookup on 2026-09-28.
+// Privacy-focused source detail: LoudReaderApp.swift:62,244 initialises Sentry/Analytics;
+// Analytics.swift:52,69–70 default-on opt-out design; no independent traffic audit.
+// No cloud-retention generalisation, compliance certification, universal backup exclusion,
+// or inference that airplane mode proves privacy. Future publication date preserved.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does LoudReader upload my PDF anywhere to read it aloud?",
-    a: "No. LoudReader opens the PDF and generates the narration entirely on your iPhone or Mac. The file never leaves your device, there's no server in the pipeline, and the app works the same with your Wi-Fi off.",
+    "q": "Does LoudReader upload my PDF to generate narration?",
+    "a": "No. PDF extraction, supported scanned-page recognition and speech generation run on-device. The document is not sent to a speech server for narration."
   },
   {
-    q: "Can a PDF reader really work without sending the file to a server?",
-    a: "Yes, if the app does both steps locally: reading the PDF's text layer, and generating the audio. LoudReader does both on-device using Apple's PDFKit for extraction and on-device speech generation, so no PDF content or generated audio needs a network round trip.",
+    "q": "Does LoudReader collect no data at all?",
+    "a": "That would be inaccurate. The app uses Sentry crash/performance diagnostics and TelemetryDeck usage analytics. Usage analytics is enabled by default; the current release does not expose its usage-statistics switch."
   },
   {
-    q: "Does an app that reads PDFs offline need my PDF to have selectable text?",
-    a: "Yes. LoudReader reads a PDF's existing text layer, the same text you could already select and copy in a normal PDF viewer. It doesn't run OCR, so a scanned page saved as an image with no text layer won't read reliably.",
+    "q": "Does airplane mode prove that an app is private?",
+    "a": "No. It can show that a particular book and voice work offline. It does not establish what the app sends while connected or what other apps and storage services have already done with the file."
   },
   {
-    q: "Do I need an account to read a PDF aloud with LoudReader?",
-    a: "No. There's no account, no login, and no sign-up screen. You open the app, import the PDF, and press play.",
+    "q": "Do scanned PDFs require a cloud OCR service?",
+    "a": "Not in LoudReader. It includes local text recognition for image-based PDFs, with up to 300 OCR pages per import and notices for incomplete results. Recognition quality and layout still need checking."
   },
   {
-    q: "Is a PDF I import into LoudReader stored anywhere except my device?",
-    a: "No. The app has no account system and no cloud sync in its source code, so there's nowhere else for the file to go. It lives in your local library, the same as any file in your Files app.",
+    "q": "Do I need a LoudReader account?",
+    "a": "No LoudReader account is required to import and listen. That is separate from your Apple account for App Store services and from the app’s diagnostics and analytics."
   },
+  {
+    "q": "Is my library guaranteed never to appear in a backup or synced folder?",
+    "a": "No such guarantee follows from local narration. LoudReader has no automatic library or reading-position sync, but the source file’s storage provider and your device backup settings are separate. Check them for sensitive documents."
+  }
 ];

@@ -1,223 +1,52 @@
 import Link from "next/link";
-
-import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER, PRICING, VOICES } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
+import Disclosure from "@/components/blog/Disclosure";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function ReadAloudOnMacbookArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Your MacBook already reads text aloud through macOS Spoken Content
-          (select text, Option+Esc). For books and long documents, the built-in
-          option is limited: one system voice, one speed slider for everything,
-          no bookmarking, and it stops when you switch windows.{" "}
-          <strong>LoudReader</strong> runs on Apple Silicon Macs and reads
-          EPUBs and PDFs aloud with natural offline voices, remembers your
-          place, and keeps playing in the background. One thing to be straight
-          about: it is an iPhone and iPad app, installed on a Mac from the Mac
-          App Store&apos;s &ldquo;iPhone &amp; iPad Apps&rdquo; tab, so it runs
-          in a fixed-size window rather than a resizable Mac one. The speech
-          engine is the real thing and runs on your Mac&apos;s own silicon. It
-          is fully on-device and private, your library never leaves your
-          device. {FREE_TIER.full} Premium adds {PRICING.premiumFeatures}.
-        </p>
+        <p>A MacBook can read selected text aloud using macOS accessibility controls. If you want to keep a collection of books and return to your place later, a reading app adds a different workflow. LoudReader can run on an Apple Silicon Mac, but it is the iPad app in Apple&apos;s compatibility mode, not a separate native Mac app. Use its free listening tier to check how the interface and import process suit your desk setup. Intel Macs cannot install this build; they can still use compatible system speech or other local tools. Hardware compatibility does not decide which voice you will prefer.</p>
+        <Disclosure />
       </Tldr>
-
-      <ArticleIllustration
-        variant="devices"
-        caption="Runs on Apple Silicon Macs. Import an EPUB or PDF and press play."
-      />
-
-      <QuestionSection question="What is the built-in way to read aloud on a MacBook?">
-        <p>
-          macOS has a feature called Spoken Content that reads selected text
-          aloud. It lives in System Settings under Accessibility, and once
-          enabled, you can select text in any app and press Option+Esc to
-          hear it. You can also set it to read the item under the pointer when
-          you press a key, or read the entire screen with a keyboard shortcut.
-        </p>
-        <p>
-          It works. It is free and built in, and for reading a paragraph or a
-          short email, it gets the job done. Here is what it does not do:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            There is one voice and one speed slider for the entire system. If
-            you want a different voice for fiction and non-fiction, you change
-            it globally every time.
-          </li>
-          <li>
-            There is no bookmarking. If you stop listening and come back, you
-            find your place manually.
-          </li>
-          <li>
-            It reads the selected text or the item under the pointer. If the
-            text scrolls off screen or the window loses focus, the reading
-            stops. It was not designed for long-form content.
-          </li>
-          <li>
-            It uses the system accessibility voice. Apple ships some good
-            neural voices (Samantha, Daniel, etc.), but you get one voice
-            system-wide with no per-document settings.
-          </li>
-        </ul>
-        <p>
-          For books, research papers, long articles, and any content where
-          you want a proper listening experience, a dedicated reader closes the
-          gap.
-        </p>
+      <ArticleIllustration variant="devices" caption="Check both the voice and the iPad-style interface on your Mac." />
+      <QuestionSection question="How do I use the built-in Mac speech controls?">
+        <p>In System Settings → Accessibility, open Read &amp; Speak, or Spoken Content on older macOS releases. Enable Speak Selection, select text and use the configured shortcut; the default is Option–Esc. Apple&apos;s <a href="https://support.apple.com/guide/mac-help/mh27448/mac" className="text-loudBlue hover:underline">Mac speech guide</a> explains the controller and highlighting settings.</p>
+        <p>Try this first for an email, an extract or proofreading. Test the actual document rather than assuming every application exposes its text the same way. If a PDF reads in the wrong order, changing the voice will not repair the document layout.</p>
       </QuestionSection>
-
-      <QuestionSection question="What does a dedicated read-aloud app add on Mac?">
-        <p>
-          The difference between Spoken Content and a dedicated app is the
-          difference between a text selection tool and a book player. A
-          dedicated app like{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          adds:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Natural offline voices.</strong>{" "}
-            {VOICES.headline}, designed for long-form reading. You can switch
-            voices per book during the trial or with Premium without touching
-            system settings.
-          </li>
-          <li>
-            <strong className="text-gray-900">Place bookmarking.</strong>{" "}
-            Stop listening, close the app, restart your Mac, and the book opens
-            where you left off. This is the single feature that makes the
-            difference between a tool and a player.
-          </li>
-          <li>
-            <strong className="text-gray-900">Speed control per book.</strong>{" "}
-            Set a faster speed for light non-fiction and a slower one for dense
-            technical text. The range is 0.3x to 3.0x with LoudReader Premium.
-          </li>
-          <li>
-            <strong className="text-gray-900">Sleep timer.</strong> Set the
-            app to stop after a set interval. Useful for falling asleep to a
-            book without it playing all night.
-          </li>
-          <li>
-            <strong className="text-gray-900">Word highlighting.</strong>{" "}
-            Each word lights up as it is spoken. This helps with focus and
-            makes it easier to follow along, especially for dense or technical
-            material.
-          </li>
-        </ul>
-        <p>
-          These features turn a MacBook into a proper audiobook player for
-          content that has no recorded edition. For the full rundown of
-          reading EPUBs on Mac, see{" "}
-          <Link
-            href="/read-epub-aloud-mac"
-            className="text-loudBlue hover:underline"
-          >
-            reading EPUB aloud on Mac
-          </Link>
-          .
-        </p>
+      <QuestionSection question="What does LoudReader add for books?">
+        <p>A library keeps imported EPUBs and PDFs together. Saved reading progress makes it possible to return to the same local book, and word highlighting lets you follow the narration. The <Link href="/read-epub-aloud-mac" className="text-loudBlue hover:underline">EPUB reading guide</Link> covers the file-based workflow.</p>
+        <p>Premium adds controls including adjustable playback speed and a sleep timer. {FREE_TIER.full} Try the available voices on your Mac before upgrading: the studio roster is subject to device capability, and a feature list is not a substitute for a listening sample.</p>
       </QuestionSection>
-
-      <QuestionSection question="Why does it matter that the app is native and not a web wrapper?">
-        <p>
-          Because the difference is audible and practical:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Voice processing.</strong>{" "}
-            A native app running on Apple Silicon uses the Neural Engine on
-            the M-series chip directly. Voice generation is faster, uses less
-            battery, and sounds better than an Electron app routing through
-            a web-based speech API. On a MacBook running on battery, this
-            matters: native voice processing can run for hours without a
-            noticeable battery hit.
-          </li>
-          <li>
-            <strong className="text-gray-900">Offline reliability.</strong>{" "}
-            LoudReader is fully on-device and private, your library never
-            leaves your device. There is no connection to drop, no server to
-            time out, and no cloud dependency. A web-based app that streams
-            voices from a server stops working the moment your WiFi flickers.
-          </li>
-          <li>
-            <strong className="text-gray-900">System integration.</strong>{" "}
-            Native apps respond to media keys, show up in the menu bar, and
-            feel like part of macOS. Drag-and-drop import, standard file
-            dialogs, and the Share menu all work the way they do in every other
-            Mac app.
-          </li>
-        </ul>
-        <p>
-          If you work with confidential documents, the privacy angle alone
-          makes the native route the right one. See{" "}
-          <Link
-            href="/offline-text-to-speech-mac"
-            className="text-loudBlue hover:underline"
-          >
-            offline text-to-speech on Mac
-          </Link>{" "}
-          for more on why this matters.
-        </p>
+      <QuestionSection question="How do I install and check the Mac version?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Check that your Mac uses Apple Silicon and meets the App Store&apos;s current compatibility requirements.</li>
+          <li>Find LoudReader among the compatible iPhone and iPad apps in the Mac App Store.</li>
+          <li>Import a DRM-free book and try a chapter with the mouse or trackpad.</li>
+          <li>Check pausing, reopening and background playback in your own setup before moving a large library.</li>
+        </ol>
+        <p>Apple explains how <a href="https://support.apple.com/guide/app-store/fird2c7092da/mac" className="text-loudBlue hover:underline">iPad apps run on compatible Macs</a>. Do not expect every Mac-specific menu, window behaviour or keyboard shortcut from an app designed for iPad. We have not verified every one of those interactions in this release.</p>
       </QuestionSection>
-
-      <QuestionSection question="What are the honest limits of reading aloud on a MacBook?">
-        <p>
-          No article about MacBooks is honest without listing the friction
-          points:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Lid-closed listening does not work.</strong>{" "}
-            macOS stops audio when the lid closes. LoudReader cannot override
-            this. If you want to close the lid and keep listening, use an
-            iPhone instead. The two devices complement each other: MacBook for
-            desk listening with visual follow-along, iPhone for portable,
-            screen-off listening.
-          </li>
-          <li>
-            <strong className="text-gray-900">Intel Macs are not supported.</strong>{" "}
-            LoudReader requires Apple Silicon (M1 or newer). MacBooks from 2020
-            and earlier with Intel chips cannot run it.
-          </li>
-          <li>
-            <strong className="text-gray-900">No playback position sync.</strong>{" "}
-            If you start a book on your MacBook and want to continue on your
-            iPhone, you need to remember or note the chapter. The app does
-            not sync playback position between devices. You can share EPUB
-            and PDF files between devices via iCloud Drive or AirDrop, but you
-            manually find your place.
-          </li>
-        </ul>
-        <p>
-          These are real tradeoffs. Whether they matter depends on how you
-          listen. For desk-based reading and document review, the MacBook is
-          the best screen in the house. For portable listening, the iPhone
-          takes over.
-        </p>
+      <QuestionSection question="Can I close the lid or continue on my iPhone?">
+        <p>Putting a Mac to sleep can interrupt playback. A typical laptop closes into sleep; external-display arrangements and power settings can behave differently. Test your setup, and use a phone for listening that needs to continue while the laptop is packed away.</p>
+        <p>LoudReader does not automatically sync its library or reading position between devices. Keeping a source EPUB in iCloud Drive makes the file accessible for import; it does not transfer the app&apos;s playback progress. Note a chapter or a short phrase before changing devices, then find it in the other copy.</p>
       </QuestionSection>
-
+      <QuestionSection question="Does local speech make the whole app offline?">
+        <p>Speech is generated on the Mac rather than by uploading each passage to a speech service. Installation, new books and articles, purchases, diagnostics and analytics can still use the network. Version 1.12 enables crash diagnostics and usage analytics by default.</p>
+        <p>For travel, open your chosen voice and book once, disconnect and test a passage you have not already played. For confidential work, check the <Link href="/privacy" className="text-loudBlue hover:underline">privacy policy</Link> and your organisation&apos;s requirements before importing a document. Being an installed app does not by itself prove a privacy or battery advantage.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your MacBook, now a reading machine"
-        subline="Import EPUBs and PDFs, press play, and hear them with natural voices. Apple Silicon Macs, iPhone and iPad. Fully offline."
-      />
+      <StoreCta headline="Try a book in LoudReader" subline="Import a DRM-free EPUB or PDF and choose a voice available on your device." />
     </ArticleLayout>
   );
 }

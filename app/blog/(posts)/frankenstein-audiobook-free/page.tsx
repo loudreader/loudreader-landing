@@ -1,141 +1,37 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function FrankensteinAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Frankenstein is public domain, so a free full-length audiobook of
-          it is already sitting inside <strong>LoudReader</strong> (iPhone, iPad, and Mac). One honest note first: this is a synthetic
-          voice reading Mary Shelley&apos;s actual text on your device, not a
-          professionally performed recording with a human narrator. If
-          that&apos;s what you need, open the app, find{" "}
-          <Link
-            href="/listen/frankenstein"
-            className="text-loudBlue hover:underline"
-          >
-            Frankenstein
-          </Link>{" "}
-          in the built-in Project Gutenberg catalog, and press play. No
-          purchase, no account, natural offline voices, and it works with no
-          connection because LoudReader is fully on-device and private, your
-          library never leaves your device.
-        </p>
+        <p>Before starting a free <em>Frankenstein</em> audiobook, decide which text you need: <strong>1818 or the revised 1831 edition</strong>. This matters particularly for a class or reading group. Project Gutenberg offers separately identified copies of both. LoudReader’s <Link href="/listen/frankenstein" className="text-loudBlue hover:underline">catalogue entry and audio sample</Link> use its existing #84 reference; do not assume that this automatically matches an assigned 1818 edition. You can import the clearly labelled ebook you need and have it read aloud, or choose a human recording with the same edition credit. The voice and the version are two separate decisions.</p>
+        <Disclosure />
       </Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Walton, Victor and the creature: keep track of who is telling the story." />
+      <QuestionSection question="Where do you find the right free edition?"><p>The <a href="https://www.gutenberg.org/ebooks/84" className="text-loudBlue hover:underline">Gutenberg #84 listing</a> explicitly points readers to improved editions: <a href="https://www.gutenberg.org/ebooks/41445" className="text-loudBlue hover:underline">#41445 for 1818</a> and <a href="https://www.gutenberg.org/ebooks/42324" className="text-loudBlue hover:underline">#42324 for 1831</a>. Choose the one named on your reading list. A cover that only says “Frankenstein” does not answer the edition question.</p><p>Gutenberg marks these ebooks as public domain in the USA. Check availability for your territory and chosen edition; a modern introduction or recording has its own rights. For a human reading, <a href="https://librivox.org/frankenstein-edition-1831-by-mary-shelley-wollstonecraft/" className="text-loudBlue hover:underline">this LibriVox entry identifies the 1831 edition</a>.</p></QuestionSection>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="The creature learned to speak. Now it's read aloud, free."
-      />
+      <QuestionSection question="Why are there letters before Victor’s story?"><p>The opening belongs to the explorer Robert Walton. Victor’s account sits inside Walton’s correspondence, and the creature later tells a story within Victor’s. Those changes of speaker are part of the novel, not an audiobook ordering mistake.</p><ul className="list-disc pl-6 space-y-2"><li>At the opening, note who is writing and who is being addressed.</li><li>When the creature begins speaking, keep its account separate from Victor’s description of it.</li><li>If a chapter sounds like a sudden change of narrator, check the surrounding text before skipping ahead.</li></ul><p>A single synthetic voice will not reliably mark every change as a distinct character performance. Keeping the text nearby for transitions is more useful than expecting the voice to explain the frame for you.</p></QuestionSection>
 
-      <QuestionSection question="Is there really a free Frankenstein audiobook?">
-        <p>
-          Yes. Mary Shelley published Frankenstein in 1818, and the copyright
-          expired long ago, so the full text is free on Project Gutenberg for
-          anyone to read or listen to. LoudReader has it built into the free
-          catalog already, no file to hunt down. You can hear a sample of the
-          opening framing letters on the{" "}
-          <Link
-            href="/listen/frankenstein"
-            className="text-loudBlue hover:underline"
-          >
-            Frankenstein catalog page
-          </Link>{" "}
-          before you open the app.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="What should you check in a voice sample?"><p>Listen to a paragraph with long sentences as well as a short exchange of dialogue. Notice whether the pauses help you follow the thought, and whether the voice becomes tiring at your usual volume. The web sample is a starting point; it is not a test of the entire novel.</p><p>A human recording also deserves a sample. Some listeners want a recognisable performance for Walton, Victor and the creature; others prefer one consistent reading voice. You do not need sound effects or a dramatization to hear Shelley’s text, but an adaptation should not be mistaken for the complete novel.</p></QuestionSection>
 
-      <QuestionSection question="What does the free version actually sound like?">
-        <p>
-          It sounds like a computer reading, clearly and evenly, not like a
-          horror-radio production. LoudReader&apos;s narration is a synthetic
-          voice, generated on your device with natural offline voices, and it
-          reads the ship captain&apos;s letters, Victor&apos;s confession, and
-          the creature&apos;s own eloquent account in the same voice, rather
-          than switching cast for each. It won&apos;t build dread the way a
-          full-cast audio drama would. What it does is get the whole
-          nested, epistolary structure of the novel read out loud, start to
-          finish, at no cost.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you load the chosen text?"><ol className="list-decimal pl-6 space-y-2"><li>Download the permitted EPUB of the edition you selected. EPUB is usually easier to follow as flowing text than a page scan.</li><li>Import it into LoudReader on iPhone or iPad, or the iPad build on a compatible Apple Silicon Mac. You can also download its existing Gutenberg catalogue entry if that is the copy you want.</li><li>Check the title, contents and first letters after import. Let any required voice download finish.</li><li>Play a passage before disconnecting. Once the book and voice are ready, speech can be generated on the device.</li></ol><p>{FREE_TIER.full} Speed control and the sleep timer are Premium features. For general file preparation, see <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">how to listen to an ebook</Link>.</p></QuestionSection>
 
-      <QuestionSection question="How do you play it in LoudReader?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone or Mac. Free, no account.
-          </li>
-          <li>
-            Open the built-in Project Gutenberg catalog and search the
-            title, or go straight to the{" "}
-            <Link
-              href="/listen/frankenstein"
-              className="text-loudBlue hover:underline"
-            >
-              Frankenstein
-            </Link>{" "}
-            page to hear the sample first.
-          </li>
-          <li>Tap the book. It downloads once, then plays offline after that.</li>
-          <li>Press play. LoudReader remembers your exact place every time.</li>
-        </ol>
-        <p>
-          Free listening on Frankenstein is unlimited, cover to cover.
-          Premium adds playback speed from 0.3x to 3.0x, a sleep timer, and
-          every other voice in the app, none of it required to finish the
-          book.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How long is the Frankenstein audiobook?">
-        <p>
-          Around 8.5 hours, based on the novel&apos;s roughly 74,800 words.
-          That&apos;s a word-count estimate, not a measured recording time,
-          the same figure shown on the book&apos;s own catalog page. It&apos;s
-          one of the shorter classics here, easy to finish in a handful of
-          evenings.
-        </p>
-        <p>
-          For more free horror and gothic classics like this one, the built-in
-          catalog is browsable by genre, and the case for it is laid out in{" "}
-          <Link
-            href="/blog/best-audiobook-app-for-classics"
-            className="text-loudBlue hover:underline"
-          >
-            the best audiobook app for classics
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
+      <QuestionSection question="How much listening time should you set aside?"><p>Use the chosen recording’s runtime or your app’s current estimate. Edition, reading speed and included front matter affect the total, so a single figure for “the Frankenstein audiobook” can be misleading. For a first listen, stop at a chapter boundary and note the current speaker before taking a break.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Press play on Frankenstein"
-        subline="Free, built into the app, no account. Natural offline voices, on Mac and iPhone."
-      />
+      <StoreCta headline="Try the ebook with a voice you choose" subline="Download the book and voice first, then listen on your device." />
     </ArticleLayout>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import ComparisonTable from "@/components/money/ComparisonTable";
 import FaqSection from "@/components/money/FaqSection";
@@ -33,6 +34,7 @@ export default function BestLocalAiAppsMacArticle() {
           speech, and Loudkit for agents for adding voice to an existing bot.
           Start with one task and test it on your own files.
         </p>
+        <Disclosure />
       </Tldr>
 
       <ArticleIllustration
@@ -52,15 +54,18 @@ export default function BestLocalAiAppsMacArticle() {
           Running the core feature with Wi-Fi off is a useful availability
           test. It does not prove that an app never communicates when it is
           online. Read its documentation and settings as well, especially
-          before processing confidential material.
+          before processing confidential material. LoudReader, for example,
+          generates narration locally but also sends crash/performance diagnostics
+          and usage analytics. Local inference alone is not a complete description
+          of an app&apos;s data handling.
         </p>
       </QuestionSection>
 
       <QuestionSection question="Which local AI apps should I look at for each job?">
         <p>
           These entries describe the vendors&apos; documented local workflows,
-          checked on September 27, 2026. This is a practical shortlist, not a
-          benchmark ranking. LoudReader is our own app.
+          checked on September 28, 2026. This is a practical shortlist, not a
+          benchmark ranking or a report of hands-on tests.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -95,8 +100,9 @@ export default function BestLocalAiAppsMacArticle() {
           </li>
           <li>
             <strong className="text-gray-900">LoudReader: reading and text to speech.</strong>{" "}
-            Listen to DRM-free EPUBs and PDFs with voices bundled in the app.
-            Speech is generated on the device. LoudReader runs on iPhone,
+            Listen to supported DRM-free EPUBs, PDFs and saved web articles.
+            Speech is generated on the device; book downloads, diagnostics and
+            usage analytics are separate network activity. LoudReader runs on iPhone,
             iPad, and Apple Silicon Macs; the Mac version is the iPad app
             running in Apple&apos;s compatibility mode. Start with{" "}
             <Link href="/voices" className="text-loudBlue hover:underline">the voice samples</Link>{" "}

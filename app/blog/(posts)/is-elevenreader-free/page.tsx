@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,7 +6,8 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
+import Disclosure from "@/components/blog/Disclosure";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,136 +19,110 @@ export default function IsElevenReaderFreeArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          Yes, ElevenReader has a free plan, but it&apos;s capped, not
-          unlimited. The free tier includes 10 hours of text-to-audio a
-          month, which ElevenLabs describes as about a 400-page book, and you
-          need to create an account before you can start listening at all.
-          Going past 10 hours, or turning on offline downloads, the 200,000+
-          premium audiobook store, and custom voice creation, requires the
-          Ultra plan at $11/month or $99/year (about $8.25/month billed
-          annually). If a real free tier without a monthly clock matters more
-          to you than ElevenReader&apos;s 1,000+ voices,{" "}
-          <strong>LoudReader</strong> offers unlimited listening on every
-          book with no account and no hour cap; it is fully on-device and
-          private, your library never leaves your device.
+          Yes. ElevenReader has a free plan with 10 hours of new text-to-audio
+          generation each month. That is not a ten-hour cutoff on every kind
+          of listening: replaying audio already generated and listening to
+          free Explore titles do not use those hours. If you regularly import
+          more new text, compare extra-hour packs with Ultra, its paid plan.
+          The details below were checked against ElevenReader&apos;s own
+          pricing and help pages on 28 September 2026.
         </p>
       </Tldr>
+      <ArticleIllustration variant="waveform" caption="The free allowance concerns new audio generation, not every replay." />
 
-      <ArticleIllustration
-        variant="offline"
-        caption="Free, but the clock is running: 10 hours a month before Ultra kicks in."
-      />
-
-      <QuestionSection question="What exactly does ElevenReader's free plan include?">
+      <QuestionSection question="What counts against the free allowance?">
         <p>
-          ElevenReader&apos;s free plan gives you 10 hours of text-to-audio
-          per month, along with the app&apos;s free classic audiobooks and
-          the core reading experience, including word-synced highlighting.
-          ElevenLabs frames the 10-hour cap as roughly a 400-page book&apos;s
-          worth of listening, which is generous for a single book but tight
-          for a reader working through more than one title a month.
+          The <a href="https://help.elevenlabs.io/hc/en-us/articles/35971782968465-How-do-ElevenReader-hours-work" className="text-loudBlue hover:underline">official hour guide</a>
+          distinguishes converting your imported text from playing it again.
+          Free hours reset monthly, so keep an eye on the remaining allowance
+          when adding a new book. The stated hours use normal playback speed
+          as a reference; turning narration up does not make more text free.
         </p>
         <p>
-          One detail worth knowing upfront: the free plan still requires
-          creating an account before you can listen to anything. There is no
-          try-it-with-no-signup path.
+          Avoid converting the allowance into a fixed page count. A page of
+          dialogue and a dense textbook page contain different amounts of
+          text. Try a chapter of the material you actually read and check the
+          usage display before deciding whether the plan covers your month.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What do you have to pay for?">
+      <QuestionSection question="What does Ultra cost, and what are its limits?">
         <p>
-          Past the 10-hour monthly cap, or for anything beyond basic
-          reading, ElevenReader moves you to Ultra: $11/month, or $99/year
-          (about $8.25/month billed annually). Ultra removes the hour cap on
-          your own uploads, adds offline downloading so you can listen
-          without a connection, opens up the 200,000+ premium audiobook store,
-          and includes custom voice creation. Individual audiobook purchases
-          are sold separately as in-app purchases on top of either plan.
+          ElevenReader&apos;s <a href="https://elevenreader.io/" className="text-loudBlue hover:underline">current site</a>
+          lists Ultra at US $11 monthly or $99 annually. Check your local
+          checkout for taxes, offers and renewal terms. Ultra adds offline
+          downloads and custom voices. It also includes premium catalogue
+          access with a separate 20-hour monthly allowance; do not treat the
+          catalogue as unlimited simply because imported text has a different limit.
+        </p>
+        <p>
+          For your imports, <a href="https://elevenreader.io/pricing" className="text-loudBlue hover:underline">the plan details</a>
+          define Ultra&apos;s unlimited offer as up to 24 hours of generated
+          audio per day at normal speed. Offline downloads have their own
+          conditions, and downloaded audio stays inside ElevenReader rather
+          than becoming a shareable export. Read these distinctions before
+          paying specifically for travel or audio-file creation.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Does the free plan upload your documents?">
+      <QuestionSection question="Do you have to subscribe when the free hours run out?">
         <p>
-          Yes. ElevenReader is built as a cloud service; the company&apos;s
-          own description of the flow is &quot;simply upload and press
-          play&quot;, meaning your document is sent to ElevenLabs&apos;
-          servers to be converted to audio, on the free plan and on Ultra
-          alike. For a privacy-conscious reader, that upload step, not the
-          hour cap, is often the bigger consideration.
+          Not necessarily. ElevenLabs documents extra-hour packs that can be
+          bought without an active subscription. A pack may fit an occasional
+          long book; a recurring plan may fit regular use. Compare the offer
+          shown in your account, including expiry, rather than assuming
+          Ultra is the only way to add capacity.
         </p>
         <p>
-          Apps that generate speech entirely on-device skip that step by
-          design. LoudReader is one of them: it{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            reads books and PDFs aloud with no upload
-          </Link>
-          , because the narration is generated on your own Mac or iPhone.
+          Before paying, decide whether you are buying more generation or a
+          feature such as offline downloads. Extra hours do not automatically
+          unlock every subscription feature. Likewise, a trial that becomes
+          a paid subscription is different from remaining on the free plan.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Does ElevenReader have a Mac app?">
+      <QuestionSection question="Can you use ElevenReader on a Mac or without internet?">
         <p>
-          No. ElevenReader ships for iPhone and iPad, plus web and Android,
-          but there is no native Mac app in the App Store listing. If you read
-          on a Mac as often as you read on your phone, that is worth knowing
-          before you pick a free plan to build a habit around.
+          ElevenReader offers <a href="https://help.elevenlabs.io/hc/en-us/sections/26165356474897-ElevenReader" className="text-loudBlue hover:underline">web/desktop access as well as mobile apps</a>.
+          You can therefore use its web reader on a Mac; the absence of a
+          particular native app would not mean the service is unavailable
+          there. Files are associated with your ElevenReader account.
         </p>
         <p>
-          LoudReader is built the other way: iPhone, iPad, and Apple Silicon Macs,
-          reading the same book and picking up your place on either device.
-          ElevenReader offers speed control from 0.25x to 4x and GenFM, an
-          AI-generated podcast feature built from your reading, on top of
-          its book listening.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Is there a free text-to-speech app with no monthly limit?">
-        <p>
-          Yes. LoudReader (iPhone, iPad, and Mac) turns any DRM-free
-          EPUB or PDF into an audiobook, and its free tier is unlimited
-          listening on every book, cover to cover, with no hour or word quota
-          and no account required. {FREE_TIER.full} It works entirely offline
-          since it is fully
-          on-device and private, your library never leaves your device.
-        </p>
-        <p>
-          The honest trade: ElevenReader offers 1,000+ voices across 30+
-          languages on Ultra, including licensed celebrity voices and custom
-          voice creation, well beyond LoudReader&apos;s smaller offline
-          roster. If breadth matters more to you than an unmetered free tier,
-          ElevenReader is the better fit. The full side-by-side is at{" "}
-          <Link
-            href="/elevenreader-alternative"
-            className="text-loudBlue hover:underline"
-          >
-            the ElevenReader alternative comparison
-          </Link>
-          .
+          Its offline-download feature prepares audio before you disconnect.
+          That is a different workflow from generating a new book&apos;s speech
+          on your own device. Test a prepared chapter before travelling and
+          check download availability on the device you intend to carry.
+          For sensitive documents, review the service&apos;s upload and privacy
+          terms before importing them.
         </p>
       </QuestionSection>
 
+      <QuestionSection question="What if you want ongoing free local book listening?">
+        <Disclosure />
+        <p>
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>
+          {" "}is another option for DRM-free EPUBs and PDFs on iPhone and iPad,
+          including compatible Apple Silicon Macs running the iPad app.
+          {" "}{FREE_TIER.full} It does not automatically sync libraries or
+          positions across devices.
+        </p>
+        <p>
+          Narration runs locally, so your book is not uploaded for speech
+          generation. The app nevertheless sends crash/performance diagnostics
+          and usage analytics; release 1.12 has no visible in-app switch for
+          them. Choose based on the workflow and voices you need, rather than
+          equating a free download with identical features or privacy practices.
+        </p>
+        <p>
+          Our <Link href="/elevenreader-alternative" className="text-loudBlue hover:underline">ElevenReader alternative page</Link>
+          {" "}covers the different reading workflows. Sample both with a real
+          chapter before deciding which allowance, device support and narrator
+          selection suit you.
+        </p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Unlimited listening, no account, no upload"
-        subline={`Free tier is every book, cover to cover. Premium is ${PRICING.premiumMonthly} or a one-time ${PRICING.premiumLifetime}.`}
-      />
-
-      <p className="text-sm text-gray-500">
-        Get LoudReader from the{" "}
-        <a
-          href={APP_STORE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-loudBlue hover:underline"
-        >
-          App Store
-        </a>
-        .
-      </p>
+      <StoreCta headline="Try local narration with LoudReader" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

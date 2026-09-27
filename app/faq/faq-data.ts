@@ -1,4 +1,4 @@
-import { CLONING, FREE_TIER } from "@/components/money/site";
+import { CLONING, FREE_TIER, PRICING, VOICES } from "@/components/money/site";
 
 // Single source of truth for FAQ content.
 // Rendered server-side on /faq AND emitted as FAQPage JSON-LD. Keep both in sync by editing only this file.
@@ -8,15 +8,15 @@ export const faqs = [
     questions: [
       {
         q: "How do I add my own books?",
-        a: "Share any EPUB or PDF to LoudReader from the Files app, Safari, or any app with a share button. You can also use the import button inside the app. Your book shows up in your library instantly.",
+        a: "Import DRM-free EPUBs and PDFs from Files, or share them to LoudReader from another app. You can also save web articles using a link or the share extension. Scanned PDFs use on-device text recognition; results depend on the scan and layout, and OCR processes up to 300 pages per import. Password-protected PDFs are not supported.",
       },
       {
         q: "Where do the free books come from?",
-        a: "LoudReader includes the entire Project Gutenberg catalog - over 70,000 public domain titles. Browse by genre, search by author, and download anything that catches your eye. It's all free and always will be.",
+        a: "LoudReader lets you browse and download over 70,000 Project Gutenberg classics. Downloading needs an internet connection; once a book is in your library, narration works offline. These titles are public domain in the United States, but copyright rules differ by country. The curated starter shelf is separate from the full online catalogue.",
       },
       {
         q: "Do I need an account to use the app?",
-        a: "No. LoudReader works right out of the box - no sign-up, no login, no profile. Just open the app and start reading.",
+        a: "No LoudReader account is required to import books and listen. An Apple ID is used for App Store downloads and purchases.",
       },
     ],
   },
@@ -25,27 +25,27 @@ export const faqs = [
     questions: [
       {
         q: "How does the text-to-speech work?",
-        a: "LoudReader uses an advanced AI voice model that runs directly on your device to generate natural-sounding narration in real time. Nothing is sent to the cloud - it all happens locally on your iPhone or iPad.",
+        a: "LoudReader generates speech directly on your device. Your book text is not uploaded to a speech server for narration. This is separate from the app's network features and diagnostics, explained in the privacy answers below.",
       },
       {
         q: "Can I read and listen at the same time?",
-        a: "Yes! That's what LoudReader is built for. As the AI reads aloud, each word highlights in the text so your eyes and ears stay perfectly in sync. It's a great way to improve focus and retention.",
+        a: "Yes. Words are highlighted as narration plays, so you can follow the text while listening and find your place when you switch between reading and listening.",
       },
       {
         q: "Which voices are available?",
-        a: "23 studio narrators across 10 languages: 11 in English, 4 in Spanish, and one each in German, French, Italian, Dutch, Polish, Portuguese, Swedish, and Danish. Every one of them runs on your device. The picker stays short by only showing narrators for languages you actually read - a Polish narrator appears once there's a Polish book in your library. Every voice is free to try for your first 8 hours of listening. After that, free users keep one natural offline voice, while Premium keeps all 23, plus adjustable playback speed from 0.3x to 3.0x.",
+        a: `${VOICES.headline}: 11 in English, four in Spanish, and one each in German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish. ${VOICES.availability} In the picker, ${VOICES.lazyLanguages}. ${FREE_TIER.full} ${FREE_TIER.choice} Premium unlocks the full selection available on your device.`,
       },
       {
         q: "Can LoudReader read books in languages other than English?",
-        a: "Yes. Ten languages have their own narrator, recorded in that language rather than an English voice putting on an accent: English, Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish, and Danish. English has the deepest roster with 11 voices. Everything is generated on your device, in every language.",
+        a: `The studio roster covers ${VOICES.languageList}. Narrator availability depends on your device. You can select reading languages in Settings as well as importing books in those languages. Speech is generated locally.`,
       },
       {
         q: "Can I use my own voice?",
-        a: `Yes. ${CLONING.long} Voice cloning is part of Premium.`,
+        a: `Yes. ${CLONING.long} You can create up to three voices during the all-voices allowance. Premium removes that creation quota. Existing cloned voices remain stored but lock after the allowance ends unless you have Premium.`,
       },
       {
         q: "Does it work without internet?",
-        a: "100%. All text-to-speech processing happens on your device in real time, in every language and with your own cloned voices too. You can listen on a plane, in the subway, or anywhere with zero connectivity.",
+        a: "Books already on your device can be narrated offline. Installation, downloading books or articles, purchases and diagnostics use the network. Before travelling, open the app and test your chosen book and voice in airplane mode so you know the needed resources are available.",
       },
     ],
   },
@@ -54,11 +54,11 @@ export const faqs = [
     questions: [
       {
         q: "What do I get for free?",
-        a: `Unlimited listening on every book cover to cover, an unlimited library, word-by-word highlighting, the full Project Gutenberg catalog, and 100+ curated classics. ${FREE_TIER.full}`,
+        a: `Unlimited book listening and individual book imports, notes and highlights, word-following highlighting, and access to Project Gutenberg browsing are free. ${FREE_TIER.full} Free use also includes up to 30 saved articles and five bulk-import actions; those are separate from individual book imports.`,
       },
       {
         q: "What does Premium add?",
-        a: "Premium keeps all 23 studio narrators after the free trial, adds on-device voice cloning, and adds adjustable playback speed (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes & highlights. Available monthly, yearly, or as a one-time Lifetime purchase through Apple.",
+        a: `Premium includes ${PRICING.premiumFeatures}. Notes and highlights are also available free. US pricing is ${PRICING.premiumMonthly}, ${PRICING.premiumYearly}, or ${PRICING.premiumLifetime}; prices can vary by storefront. An eligible subscriber's introductory offer is separate from the eight-hour voice allowance.`,
       },
       {
         q: "How do I manage or cancel my subscription?",
@@ -75,11 +75,11 @@ export const faqs = [
     questions: [
       {
         q: "Is my data private?",
-        a: "Completely. LoudReader doesn't collect any personal data. Your books, notes, highlights, and reading progress all stay on your device. Nothing is uploaded, tracked, or shared.",
+        a: "Speech generation and scanned-document text recognition happen on your device. Your books are not uploaded to a speech server for narration. The app also sends crash and performance diagnostics through Sentry and usage analytics through TelemetryDeck. Local speech processing does not mean the app collects no data; see the privacy policy for details.",
       },
       {
         q: "Does the app phone home?",
-        a: "No. The only network requests are when you browse or download free books from Project Gutenberg. Everything else - reading, listening, notes - is fully offline.",
+        a: "Yes. Book and article downloads, App Store purchases, crash and performance diagnostics, and usage analytics can involve network requests. Narrating a book already on your device does not require a speech service. Version 1.12 does not expose an in-app usage-analytics switch; the website's cookie controls apply to the website, not the app.",
       },
     ],
   },

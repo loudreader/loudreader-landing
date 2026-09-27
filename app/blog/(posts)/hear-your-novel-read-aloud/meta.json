@@ -1,9 +1,10 @@
 {
   "slug": "hear-your-novel-read-aloud",
   "title": "Hear Your Novel Read Aloud Before Anyone Else Does",
-  "description": "The listening pass: catch clunky dialogue, echo words, and pacing drift before betas or agents see the manuscript, without uploading it anywhere.",
+  "description": "A manuscript listening pass for scene shape, dialogue and repeated wording. Keep an issue log, edit the master draft, then check the revision in context.",
   "publishedAt": "2026-07-21",
-  "lastModified": "2026-07-21",
+  "lastModified": "2026-09-28",
   "avatar": "Writer Proofreading by Ear",
-  "query": "listen to your manuscript read aloud"
+  "query": "listen to your manuscript read aloud",
+  "topic": "formats"
 }

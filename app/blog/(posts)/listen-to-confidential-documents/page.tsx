@@ -7,7 +7,6 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,194 +18,120 @@ export default function ListenToConfidentialDocumentsArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          The documents you most want read aloud (a 60-page contract, a case
-          file, a due-diligence report) are exactly the ones you must not
-          upload to a cloud service. The secure workflow is on-device text to
-          speech: import the file into{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          (iPhone, iPad, and Mac), where it is copied into the
-          app&apos;s local storage; turn on airplane mode if you want proof;
-          press play and listen with natural offline voices; delete it from
-          the library when you are done. The whole loop is fully on-device
-          and private, your library never leaves your device. No account,
-          no upload, and a one-minute verification step that does not require
-          trusting anyone&apos;s privacy policy: if it still reads with all
-          connectivity off, nothing is being sent anywhere.
+          To listen to a confidential document, first establish whether you
+          may copy it into a reading app on that device. Then choose a
+          workflow that fits those rules: local speech generation can avoid
+          uploading text for narration, but device backups, diagnostic
+          services and audible playback still matter. In LoudReader, imports,
+          PDF text recognition and speech processing happen locally. The app
+          also sends usage analytics and crash/performance diagnostics, so it
+          is not a zero-network tool. Start with a non-sensitive sample,
+          check the extracted text, use headphones, and remove working copies
+          when your organisation&apos;s retention rules allow it.
         </p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="offline"
-        caption="The rule for confidential material: no copy you don't control."
-      />
+      <ArticleIllustration variant="offline" caption="A confidential listening workflow includes the file, the device and the room." />
 
-      <QuestionSection question="Why can't you just use any TTS app on confidential files?">
+      <QuestionSection question="What should you establish before importing anything?">
         <p>
-          Because most text-to-speech apps generate their voices in the
-          cloud, and cloud synthesis has one unavoidable step: your text is
-          transmitted to the provider&apos;s servers. For a novel, that is a
-          non-issue. For a document covered by an NDA, attorney-client
-          privilege, HR confidentiality, or a client engagement letter, it
-          means a third party&apos;s infrastructure now holds a copy of the
-          material you promised to protect, before you have heard a single
-          sentence.
+          A document being available to read does not necessarily mean you
+          can copy it into another app or onto a personal phone. Use an
+          approved device and check the rules for the particular information.
+          If the file must remain in a managed document system, use that
+          system&apos;s approved reading or accessibility tools.
         </p>
         <p>
-          This is the professional&apos;s version of a very common trap: the
-          longer and more tedious the document, the more you want it read
-          aloud, and the more likely it is to be the one document that must
-          not leave your machine.
+          For a cloud voice, ask whether transmitting the relevant text is
+          permitted and whether the provider&apos;s retention and access
+          terms fit. For a local voice, ask where imports, extracted text,
+          audio caches and backups live. Neither label makes the whole
+          decision for you, and this article does not certify a tool for a
+          professional or regulated use.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What is the actual threat model when you upload a document?">
-        <p>
-          No FUD, just the mechanics of where copies end up:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Retention.</strong> The service
-            holds at least a processing copy, and depending on its terms may
-            keep your text longer, tied to an account, a library feature, or
-            a log.
-          </li>
-          <li>
-            <strong className="text-gray-900">Subprocessors.</strong> Cloud
-            services run on other companies&apos; infrastructure. Your
-            document&apos;s journey usually involves parties you have never
-            evaluated, in jurisdictions you did not choose.
-          </li>
-          <li>
-            <strong className="text-gray-900">Breach surface.</strong> Every
-            server-side copy is one more system whose security you now depend
-            on. A copy that never exists cannot leak.
-          </li>
-          <li>
-            <strong className="text-gray-900">Terms drift.</strong> Policies
-            get updated. A promise that holds today is a document you must
-            re-read after every revision, and your protection is contractual,
-            not structural.
-          </li>
-        </ul>
-        <p>
-          One sentence to carry out of this section: every copy of a document
-          that exists outside your control is a copy you must account for.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you listen to a confidential document without uploading it?">
-        <p>The on-device workflow, start to finish:</p>
+      <QuestionSection question="How do you prepare a document for local listening?">
         <ol className="list-decimal pl-6 space-y-2">
           <li>
-            Get{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            with no account, so there is nothing to sign up for and nothing
-            your reading is tied to. It runs on iPhone and iPad (iOS 18+) and
-            Apple Silicon Macs (macOS 15+).
+            <strong>Try a harmless sample first.</strong> Install and open the
+            app, select the voice and test a document with a similar layout.
+            For offline use, repeat that test with connectivity disabled.
           </li>
           <li>
-            <strong>Import the document locally.</strong> Share or open the
-            DRM-free PDF or EPUB from the Files app (or Finder on Mac). The
-            file is processed on the device and stored in LoudReader&apos;s
-            own local storage. Importing is local work, not an upload. The
-            same flow works for{" "}
-            <Link
-              href="/listen-to-pdf-iphone"
-              className="text-loudBlue hover:underline"
-            >
-              PDFs on your iPhone
-            </Link>
-            .
+            <strong>Import an authorised copy.</strong> LoudReader accepts
+            DRM-free EPUB and PDF files. Its library is local; selecting a
+            file from iCloud Drive can still require downloading the source
+            file from Apple first.
           </li>
           <li>
-            <strong>Optionally: airplane mode on.</strong> If the document is
-            sensitive enough that you want proof rather than promises, cut
-            connectivity before you press play.
+            <strong>Check reading order.</strong> Compare the beginning,
+            headings and a few later paragraphs with the original. Tables,
+            columns, footnotes and scanned numbers need particular attention.
+            Listening should not replace checking the original wording where
+            the exact value or qualification matters.
           </li>
           <li>
-            <strong>Listen.</strong> Natural offline voices read the document
-            while each word highlights; playback continues with the screen
-            locked, so a long report works like a podcast on a commute or a
-            walk.
+            <strong>Listen somewhere appropriate.</strong> Use headphones,
+            check the selected audio output and avoid leaving the document
+            visible on an unlocked screen. A private processing path does not
+            prevent someone nearby hearing a speaker.
           </li>
           <li>
-            <strong>Delete when done.</strong> Removing the book from your
-            library deletes the file from the app&apos;s local storage. The
-            loop starts and ends on your device.
+            <strong>Manage the working copies.</strong> Delete the item from
+            the reading library when appropriate and check for an original
+            in Files, email attachments or your document system. Removing one
+            app copy is not a secure-erasure guarantee for every copy or backup.
           </li>
         </ol>
-      </QuestionSection>
-
-      <QuestionSection question="How do you verify the app isn't sending your files anywhere?">
         <p>
-          The airplane-mode test: turn off Wi-Fi and cellular, then press
-          play. An app that keeps reading with no connection is generating
-          the speech on your device, and there is no way to fake that. An app
-          that stops, errors, or degrades needed a server, which means your
-          document was traveling. LoudReader passes this test on both Mac and
-          iPhone; it is the audit anyone can run in under a minute, no
-          network inspector required.
-        </p>
-        <p>
-          For the fuller background on what cloud TTS does with files, and
-          what to check in a privacy policy when you do evaluate one, see{" "}
-          <Link
-            href="/blog/are-text-to-speech-apps-safe"
-            className="text-loudBlue hover:underline"
-          >
-            are text-to-speech apps safe
-          </Link>{" "}
-          and the architecture page on{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text to speech with no cloud
-          </Link>
-          .
+          The <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">PDF listening guide</Link>
+          {" "}covers the basic import flow. LoudReader runs on iPhone and iPad,
+          and on compatible Apple Silicon Macs as an iPad app.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What are the honest limits?">
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">This is not legal advice.</strong>{" "}
-            Whether a document may be on your personal device at all is a
-            question for your NDA, your firm&apos;s policy, or your
-            compliance team. On-device narration adds no new recipient, but
-            it does not override a policy that says the file stays on the
-            case-management system.
-          </li>
-          <li>
-            <strong className="text-gray-900">Your device becomes the perimeter.</strong>{" "}
-            The point of on-device is that there is nothing else to secure,
-            which means your passcode, screen lock, and disk encryption are
-            now the whole story. Treat the device accordingly.
-          </li>
-          <li>
-            <strong className="text-gray-900">DRM-free files only.</strong>{" "}
-            LoudReader reads DRM-free EPUBs and PDFs. Documents locked with
-            DRM, and PDFs that are pure scans with no text layer, are not
-            what it is built for.
-          </li>
-        </ul>
+      <QuestionSection question="Can LoudReader read a scanned confidential PDF?">
+        <p>
+          Version 1.12 includes on-device text recognition for image-based
+          PDFs. It can attempt OCR when an imported PDF contains little
+          extractable text; there is no need to upload a scan solely for this
+          step. Recognition can still miss words or scramble complex layouts,
+          and the import processes at most 300 OCR pages. Check any partial
+          import warning and compare the resulting text with the original.
+        </p>
+        <p>
+          If a scan needs cleanup or another OCR tool, evaluate that tool&apos;s
+          processing and storage separately. A local narration app cannot
+          change where an earlier conversion took place.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="What does local speech leave out of the privacy picture?">
+        <p>
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>
+          {" "}does not upload a book to a speech service for narration. Its
+          release 1.12 also uses TelemetryDeck for usage statistics and Sentry
+          for crash/performance diagnostics, with analytics enabled by default
+          and no exposed Settings switch. These reports are designed to
+          exclude reading text; this source-level review is not an independent
+          audit of every network payload. Read the{" "}
+          <Link href="/privacy" className="text-loudBlue hover:underline">privacy disclosure</Link>
+          {" "}before deciding whether the app fits your requirements.
+        </p>
+        <p>
+          An airplane-mode check tells you whether your prepared workflow
+          works offline. It does not reveal earlier uploads, future queued
+          requests or what a system backup contains. For a broader evaluation,
+          see <Link href="/blog/are-text-to-speech-apps-safe" className="text-loudBlue hover:underline">the TTS privacy checklist</Link>.
+          If your requirement is an approved environment with no external
+          diagnostics, do not infer that approval from the phrase
+          &ldquo;on-device.&rdquo;
+        </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Listen to sensitive documents without uploading them"
-        subline="Import locally, verify in airplane mode, listen, delete. No account, no cloud, no copy you don't control."
-      />
+      <StoreCta headline="Evaluate local narration with a sample document" subline="Check your document rules, extracted text and privacy requirements before importing sensitive material." />
     </ArticleLayout>
   );
 }

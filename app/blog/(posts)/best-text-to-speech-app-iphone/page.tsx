@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER, PRICING } from "@/components/money/site";
+import { FREE_TIER, PRICING, VOICES } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,168 +20,129 @@ export default function BestTextToSpeechAppIphoneArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          The best text-to-speech app for iPhone depends on what you value
-          most. There is no single winner across every dimension. If voice
-          quality and celebrity voices matter most, Speechify leads. If you
-          want fully offline, private reading with no account,{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) is the
-          strongest pick: it is fully on-device and private, your library never
-          leaves your device, and the free tier has no word quota. {FREE_TIER.full}
-          {" "}Premium ({PRICING.premiumMonthly}) adds {PRICING.premiumFeatures}. Voice Dream
-          Reader is the closest peer with offline voices. Apple's built-in
-          Spoken Content is free and works everywhere, but its voice and
-          feature set are basic. The right app is the one whose tradeoffs match
-          your priorities.
+          The best iPhone text-to-speech app is the one that handles your reading
+          material and listening routine well. Start with Apple&apos;s built-in
+          reader for occasional passages. Shortlist LoudReader or Voice Dream
+          for a book-centred workflow, Speechify for its broader listening tools,
+          and NaturalReader or Speech Central if their document and article
+          workflows fit your needs. These are options to test, not a voice-quality
+          league table. Compare the same chapter, check screen-off playback and
+          distinguish an offline voice from audio downloaded in advance. Then
+          check which features remain when the free trial ends.
         </p>
       </Tldr>
+      <Disclosure />
+      <ArticleIllustration variant="devices" caption="A useful comparison starts with your own book, phone and listening habits." />
 
-      <ArticleIllustration
-        variant="devices"
-        caption="Different apps win on different dimensions. Pick the one whose tradeoffs match your reading habits."
-      />
-
-      <QuestionSection question="What makes a good iPhone TTS app?">
+      <QuestionSection question="When is Apple’s free reader enough?">
         <p>
-          Before naming apps, it helps to define what you should measure. A
-          good text-to-speech app for iPhone does a few things well, and no app
-          does all of them perfectly:
+          In Settings → Accessibility → Read &amp; Speak, enable Speak Selection
+          or Speak Screen. Earlier iOS versions use the name Spoken Content.
+          You can choose voices, adjust the speaking rate, highlight spoken text
+          and use an onscreen controller. With Speak Screen enabled, swipe down
+          with two fingers from the top. Follow{" "}
+          <a href="https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios" className="text-loudBlue hover:underline">Apple&apos;s current instructions</a>{" "}
+          if your settings differ.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <p>
+          Try this for messages, drafts and short articles. The text must be
+          available to the reader; image-based pages and some app layouts can
+          get in the way. A dedicated app becomes useful when you want an
+          organised library and a repeatable import-and-resume routine.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="What does LoudReader offer on iPhone?">
+        <p>
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>{" "}
+          reads DRM-free EPUBs, PDFs and saved web articles. It includes local
+          text recognition for scanned PDFs, though difficult layouts still need
+          checking. No LoudReader account is required to import and listen.
+          The studio catalogue contains {VOICES.headline}; availability depends
+          on hardware, and languages can be selected in Settings.
+        </p>
+        <p>
+          {FREE_TIER.full} Premium unlocks every available narrator, speed controls,
+          the sleep timer, soundscapes and unlimited article saving. Notes and
+          highlights remain available without Premium. There is no automatic
+          library or reading-position sync across devices.
+        </p>
+        <p>
+          Narration happens on the phone without uploading the book to a speech
+          service. The app also sends crash/performance diagnostics and usage
+          analytics. Local speech processing should not be confused with an app
+          collecting no data.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="Which other iPhone readers are worth comparing?">
+        <ul className="list-disc pl-6 space-y-3">
           <li>
-            <strong className="text-gray-900">Voice quality.</strong> Does the
-            voice sound natural enough for long listening sessions? Can you
-            switch voices per book? Are the voices on-device or streaming from
-            a server?
+            <a href="https://speechify.com/ios/" className="text-loudBlue hover:underline"><strong>Speechify</strong></a>{" "}
+            offers document and article listening with a range of voices. Its
+            iOS page explicitly supports offline listening for Premium users
+            through downloaded converted audio. Check what needs preparing
+            before a journey rather than assuming it cannot work offline.
           </li>
           <li>
-            <strong className="text-gray-900">Offline support.</strong> Does
-            it work in airplane mode, on the subway, and in rural areas with
-            no signal? Many apps claim offline support but fall back to a
-            robotic voice without a connection.
+            <a href="https://www.voicedream.com/" className="text-loudBlue hover:underline"><strong>Voice Dream</strong></a>{" "}
+            supports offline listening, document imports, highlights and notes.
+            Try it if annotation and navigating a substantial reading library
+            matter to you; judge its controls with your own document.
           </li>
           <li>
-            <strong className="text-gray-900">Privacy.</strong> Does the app
-            send your text to a server? Does it require an account? Does it
-            track what you read? For some people this does not matter. For
-            others it is the deciding factor.
+            <a href="https://www.naturalreaders.com/" className="text-loudBlue hover:underline"><strong>NaturalReader</strong></a>{" "}
+            offers a mobile app alongside its web reader, with document, EPUB
+            and webpage support. Its mobile offering includes offline listening
+            options. Check your chosen plan&apos;s voice and download allowances.
           </li>
           <li>
-            <strong className="text-gray-900">Import flexibility.</strong>{" "}
-            Can you import EPUBs and PDFs from any source, or are you locked
-            into a specific format or store?
-          </li>
-          <li>
-            <strong className="text-gray-900">Pricing model.</strong>{" "}
-            Subscription, one-time purchase, or free tier with limits? What
-            does the free tier actually include?
-          </li>
-          <li>
-            <strong className="text-gray-900">Reading features.</strong>{" "}
-            Word highlighting, place bookmarking, sleep timer, speed control
-            range, notes and highlights. These separate a player from a tool.
+            <a href="https://speechcentral.net/" className="text-loudBlue hover:underline"><strong>Speech Central</strong></a>{" "}
+            covers books, documents and web reading, with offline voices and
+            optional cloud services. It is another candidate when your queue
+            mixes longer books with articles and feeds.
           </li>
         </ul>
-        <p>
-          The apps below are evaluated against these dimensions honestly. No
-          app wins them all.
-        </p>
       </QuestionSection>
 
-      <QuestionSection question="LoudReader">
+      <QuestionSection question="How do you compare them without buying every subscription?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>
+            <strong>Use the same passage.</strong> Pick a few pages with names,
+            dialogue and numbers. Compare at a comfortable rate, not each
+            app&apos;s most impressive demo speed. Listen for errors that would
+            repeatedly distract you.
+          </li>
+          <li>
+            <strong>Check your import route.</strong> Open your EPUB or PDF from
+            Files, or share a real article. Inspect the reading order. A pleasant
+            voice cannot repair missing text, and a supported file extension
+            does not guarantee a clean import.
+          </li>
+          <li>
+            <strong>Rehearse the journey.</strong> Download anything required,
+            turn off both mobile data and Wi-Fi, lock the screen, pause, then
+            resume. Try an unread section as well as something already played.
+            Our <Link href="/blog/text-to-speech-without-internet-iphone" className="text-loudBlue hover:underline">offline iPhone guide</Link>{" "}
+            explains the preparation in more detail.
+          </li>
+          <li>
+            <strong>Read the paywall carefully.</strong> Check which voice,
+            speed controls and export options are included after the trial.
+            Compare the full annual cost in your storefront, not just the
+            monthly equivalent shown beside annual billing.
+          </li>
+        </ol>
         <p>
-          <strong>Best for:</strong> privacy-conscious readers who want fully
-          offline playback with natural voices and no account.
-        </p>
-        <p>
-          LoudReader is a native iPhone and Mac app that reads EPUBs and PDFs
-          aloud. It is fully on-device and private, your library never leaves
-          your device. There is no account, no cloud processing, and no
-          analytics. {FREE_TIER.full} There is no word quota. Premium
-          ({PRICING.premiumMonthly} or {PRICING.premiumLifetime}) adds{" "}
-          {PRICING.premiumFeatures}.
-        </p>
-        <p>
-          The app imports EPUBs and PDFs from the Files app, Safari, Mail, and
-          any app with a Share button. A built-in Project Gutenberg browser
-          gives you 70,000+ free classics without leaving the app. Word
-          highlighting syncs with playback, and lock-screen controls work with
-          the screen off.
-        </p>
-        <p>
-          Honest weaknesses: no CarPlay, no Android or Windows version, no
-          supported languages beyond English, no DRM removal, no cloud sync
-          of playback position between devices, and no built-in web article
-          extraction (you export articles as PDFs first). If any of those are
-          must-haves, LoudReader is not the right app for you.
+          LoudReader has subscription options and a {PRICING.premiumLifetime}{" "}
+          purchase in the US storefront; local prices differ. A free trial is
+          useful for finding deal-breakers, but no trial can promise that you
+          will enjoy a particular voice for every book. Keep the app that makes
+          your ordinary reading session easiest to start and finish.
         </p>
       </QuestionSection>
-
-      <QuestionSection question="Other notable iPhone TTS apps">
-        <p>
-          A brief honest look at the rest of the field:
-        </p>
-        <ul className="list-disc pl-6 space-y-4">
-          <li>
-            <strong className="text-gray-900">Speechify.</strong>{" "}
-            Best voice selection on the market, including celebrity voices.
-            Extracts text from web pages, PDFs, and photos via OCR. The
-            highest-quality voices stream from the cloud, so offline use is
-            limited. Subscription starts at a higher price point than most
-            competitors. Strong on features, weaker on privacy and offline
-            reliability. A good fit if voice variety and web extraction are
-            your priorities.
-          </li>
-          <li>
-            <strong className="text-gray-900">Voice Dream Reader.</strong>{" "}
-            The closest peer to LoudReader. Reads EPUBs, PDFs, and web articles
-            with offline voices. Has RSS feed support and integrates with
-            several cloud storage services. Historically a one-time purchase
-            but now subscription-based. The interface is dense with settings,
-            which is good for power users and overwhelming for newcomers. Voice
-            quality is solid but the app uses an older speech API that does not
-            match the latest neural voices.
-          </li>
-          <li>
-            <strong className="text-gray-900">NaturalReader.</strong>{" "}
-            Clean interface, good voice quality, reads PDFs and web articles.
-            The best voices are cloud-based and require a subscription. The
-            free tier is limited in features. Good for web article listening
-            and document review, weaker on ebook support and offline playback.
-          </li>
-          <li>
-            <strong className="text-gray-900">Apple Spoken Content (built-in).</strong>{" "}
-            Free, works in every app, zero setup. The voice is the system
-            accessibility voice with one global speed slider. No bookmarking,
-            no per-book settings, no sleep timer. Best for quick checks and
-            short passages. Not designed for reading books. Use it alongside
-            a dedicated app, not instead of one.
-          </li>
-        </ul>
-        <p>
-          For a deeper comparison with Speechify specifically, see{" "}
-          <Link
-            href="/speechify-alternative-for-mac"
-            className="text-loudBlue hover:underline"
-          >
-            the Speechify alternative page
-          </Link>
-          . For the offline angle,{" "}
-          <Link
-            href="/blog/text-to-speech-without-internet-iphone"
-            className="text-loudBlue hover:underline"
-          >
-            text-to-speech without internet on iPhone
-          </Link>{" "}
-          covers which apps survive the airplane test.
-        </p>
-      </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Try the private, offline TTS reader for iPhone"
-        subline="Try all 23 studio narrators for your first 8 hours, then keep one eligible voice with unlimited listening. No account."
-      />
+      <StoreCta headline="Test LoudReader with your own reading" subline="Import a book, try the available voices and check the free tier before choosing Premium." />
     </ArticleLayout>
   );
 }

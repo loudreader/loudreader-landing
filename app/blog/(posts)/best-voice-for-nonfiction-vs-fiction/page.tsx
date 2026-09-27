@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,11 +6,9 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER, VOICES } from "@/components/money/site";
-
+import { FREE_TIER, VOICES } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
 export default function BestVoiceForNonfictionVsFictionArticle() {
@@ -19,166 +16,101 @@ export default function BestVoiceForNonfictionVsFictionArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          There is no single best text-to-speech voice for nonfiction, but
-          there is a useful pattern. Nonfiction reads better in a steady,
-          restrained voice, because your attention should go to the argument,
-          not the performance. Dense chapters with numbers, citations, and
-          technical terms want even pacing and clear consonants over
-          personality. Fiction reads better in a voice with more range, one
-          that can carry dialogue and let a scene breathe. Neither is a rule.
-          It is a starting point for what to listen for. <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) ships {VOICES.headline}, and the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          lets you hear every one of them read a real sample before you pick.
-          The app is fully on-device and private, your library never leaves
-          your device, and you can use one narrator for your nonfiction and a
-          different one for your fiction with no extra setup.
+          Choose a TTS voice using passages from the book you want to hear.
+          For nonfiction, test numbers, names and a dense explanation; for
+          fiction, try dialogue, scene changes and unfamiliar character names.
+          Clear pronunciation and a comfortable pace matter in both. You may
+          prefer a restrained voice for one book and a more expressive voice
+          for another, but genre does not dictate the right answer. LoudReader&apos;s{" "}
+          <Link href="/voices" className="text-loudBlue hover:underline">voice samples</Link>{" "}
+          can help you shortlist candidates. Then compare them on the same
+          chapter in the app, on your own device. A short demo is a starting
+          point, not a guarantee about hours of listening.
         </p>
       </Tldr>
+      <ArticleIllustration variant="waveform" caption="Use the same passage to compare voices, then try the one you prefer on a longer chapter." />
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="Two books, two different jobs for a voice."
-      />
-
-      <QuestionSection question="Why would nonfiction and fiction want different voices?">
+      <QuestionSection question="What should I test in a nonfiction chapter?">
         <p>
-          Think about what each kind of book is asking you to do while you
-          listen. Nonfiction asks you to follow an argument, hold a sequence
-          of facts, or absorb instructions. The narration is a delivery
-          mechanism, and the less it draws attention to itself, the better it
-          does that job. A voice that is even, unhurried, and clean on
-          consonants lets a dense paragraph about interest rates or protein
-          folding land the first time, instead of making you rewind because a
-          word blurred.
-        </p>
-        <p>
-          Fiction asks something different. You are following a scene, not
-          extracting a fact, and a narrator with more warmth or range can
-          carry tension through a chapter the way a flat, careful voice
-          can&apos;t. None of this is a rule you have to follow. Plenty of
-          people happily listen to a whole library in one voice. It is a
-          pattern worth knowing before you pick a default, especially if
-          you&apos;re about to commit to a Premium voice you&apos;ll hear for
-          hours.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What should you listen for in a nonfiction narrator?">
-        <p>
-          A few concrete things to check on an actual sample, not a
-          description of the voice:
+          Choose a section that resembles the difficult parts of the book,
+          rather than only its introduction. A conversational preface may
+          tell you little about how a voice handles dates, abbreviations,
+          references or a sequence of instructions. Keep the text nearby so
+          you can distinguish a pronunciation issue from an extraction error.
         </p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Even pacing.</strong> Does the
-            voice speed up on easy sentences and slow down on hard ones, or
-            does it hold a steady rhythm through a paragraph packed with
-            numbers or names? Steady is what you want for reference material.
-          </li>
-          <li>
-            <strong className="text-gray-900">Clear consonants.</strong>{" "}
-            Technical terms, acronyms, and proper nouns need crisp
-            articulation. A softer, breathier voice that sounds lovely in a
-            novel can smear a term like &ldquo;coefficient&rdquo; into mush.
-          </li>
-          <li>
-            <strong className="text-gray-900">Low personality, on
-            purpose.</strong> A narrator with a strong character is
-            memorable in fiction and distracting in a business book. For
-            dense nonfiction, restraint is a feature.
-          </li>
+          <li><strong className="text-gray-900">Numbers and units.</strong> Can you hear the difference between a year, a decimal and a measurement? Replay anything whose meaning depends on a digit.</li>
+          <li><strong className="text-gray-900">Names and specialist terms.</strong> Check recurring terms early. A pleasant voice may still pronounce an unfamiliar name incorrectly.</li>
+          <li><strong className="text-gray-900">Sentence boundaries.</strong> Notice whether clauses run together or pauses interrupt the argument. Slow down if you keep losing the thread.</li>
+          <li><strong className="text-gray-900">Lists and references.</strong> Listen for whether the spoken order makes sense. A table or footnote problem may come from the file rather than the voice.</li>
         </ul>
         <p>
-          On LoudReader&apos;s English roster, narrators described as
-          &ldquo;even and precise&rdquo; or &ldquo;clear and light&rdquo; are
-          the ones worth auditioning first for reference-heavy reading. You
-          can see every narrator&apos;s own one-line description, and hear
-          the actual sample, on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>
-          .
+          There is no requirement to choose a flat voice. A lively reading can
+          suit narrative history; a calm one may suit a technical manual. The
+          useful question is whether you can comfortably follow this material,
+          not which voice sounds most like a stereotypical lecturer.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What should you listen for in a fiction narrator?">
+      <QuestionSection question="What should I test in fiction?">
         <p>
-          Fiction rewards the opposite instincts. Look for a narrator with
-          some warmth or texture, someone who sounds like they&apos;re telling
-          you the story rather than reading you a memo. A voice described as a
-          &ldquo;storyteller&rdquo; or one with a little more depth or
-          character tends to hold attention better across a long novel than
-          the flattest, most neutral option in the roster.
+          Pick a passage with narration and dialogue, ideally involving more
+          than one character. Listen for quotation boundaries and whether the
+          pacing fits the scene. Do not assume a synthetic narrator will assign
+          a distinct, stable character voice to each speaker just because its
+          demo sounds expressive. Check what the actual reader does.
         </p>
         <p>
-          This matters more the longer the book is. A voice that&apos;s fine
-          for a 20-minute short story can start to grate over a
-          400-page novel if it never varies. Sampling a chapter, not just the
-          first paragraph, is the only reliable way to know before you
-          commit.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you actually compare voices instead of guessing from a description?">
-        <p>
-          Descriptions like &ldquo;warm&rdquo; or &ldquo;precise&rdquo; only
-          get you so far. Two people reading the same word will disagree on
-          what it sounds like. The only real test is hearing the voice read
-          something.{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            LoudReader&apos;s voices page
-          </Link>{" "}
-          plays every one of the {VOICES.headline}, each reading a real
-          sample in their own language, right in the browser. Pull it up
-          alongside the book you&apos;re about to start, listen to two or
-          three candidates back to back, and pick the one that felt right on
-          your ears, not on paper.
-        </p>
-        <p>
-          Once you&apos;ve picked, the choice isn&apos;t permanent.{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader
-          </a>{" "}
-          lets you change narrators from inside the player at any time, so a
-          nonfiction pick that turns out too dry, or a fiction pick that turns
-          out too much, is a couple of taps away from a different voice. The
-          details of switching mid-book are in{" "}
-          <Link
-            href="/blog/change-narrator-voice-mid-book"
-            className="text-loudBlue hover:underline"
-          >
-            how to change your narrator voice mid-book
-          </Link>
-          .
+          Names, invented words and changes in point of view are useful tests.
+          If a delivery style draws attention away from the story, try a less
+          emphatic voice. If it feels too uniform, try another. These are
+          preferences, not evidence that one kind of voice is objectively better
+          for fiction. Using the same favourite voice for a novel and a history
+          book is a perfectly reasonable choice.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Do you need Premium to try different voices?">
+      <QuestionSection question="How can I compare two voices fairly?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Choose a short passage containing a difficult name, a long sentence and something representative of the book.</li>
+          <li>Play that same passage in two or three available voices, at a comparable volume and comfortable rate.</li>
+          <li>Note concrete differences: a word you missed, a pause you found awkward, or a tone you enjoyed.</li>
+          <li>Use the preferred voice for a longer section. Change your choice if it becomes distracting.</li>
+        </ol>
         <p>
-          No. {FREE_TIER.full} Use the first eight hours to compare narrators
-          on your own chapters. After the trial, Premium keeps access to{" "}
-          {VOICES.premium}, plus speed control from 0.3x to 3.0x, a sleep
-          timer, ambient soundscapes, and notes. If your reading is mostly
-          nonfiction and mostly one voice, the free tier may be all you ever
-          need. If you want a different narrator for every book, Premium is
-          what buys you that.
+          Try changing one thing at a time. If you switch both narrator and
+          speed, it can be hard to tell which change helped. This is a personal
+          listening exercise, not a scientific benchmark. You do not need to
+          prove that your preference will work for somebody else.
+        </p>
+        <p>
+          In LoudReader you can change the narrator from the player. The app
+          offers {VOICES.headline}, with availability depending on the device.
+          Languages shown in the voice list also follow your library and language
+          settings. The <Link href="/voices" className="text-loudBlue hover:underline">voice catalogue</Link>{" "}
+          helps you explore the available languages before opening the player.
         </p>
       </QuestionSection>
 
+      <QuestionSection question="What should I check before paying for more voices?">
+        <p>
+          {FREE_TIER.full} Use that listening allowance on your own chapters,
+          not only samples. If the continuing free English selection suits your
+          books, extra voices may not be necessary. Non-English reading and
+          particular studio narrators can require a different entitlement;
+          check the choices shown on your hardware.
+        </p>
+        <p>
+          Premium adds continuing access to every available narrator, adjustable
+          speed from 0.3× to 3.0×, a sleep timer, soundscapes and unlimited article
+          saving. Notes and highlighting are not Premium-only. You can check the
+          current <Link href="/faq" className="text-loudBlue hover:underline">feature details</Link>{" "}
+          before subscribing. Paying for a larger roster gives you more options,
+          not a guarantee of perfect pronunciation or a performed audiobook.
+        </p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear every voice before you pick one"
-        subline={`${FREE_TIER.full} Hear all 23 studio narrators on the voices page.`}
-      />
+      <StoreCta headline="Try a voice on the chapter you actually want to hear" subline="Compare samples, then check names, dialogue and pacing in your own book." />
     </ArticleLayout>
   );
 }

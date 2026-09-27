@@ -1,9 +1,10 @@
 {
   "slug": "app-that-highlights-words-while-reading",
   "title": "Apps That Highlight Words While Reading Aloud",
-  "description": "An honest roundup of apps with synced word highlighting (LoudReader, Speechify, NaturalReader, Voice Dream, Immersive Reader) and how they differ.",
+  "description": "Find read-along highlighting for books, documents and webpages. Compare documented options and test syncing, layout and scanned-text quality.",
   "publishedAt": "2026-07-18",
-  "lastModified": "2026-07-18",
+  "lastModified": "2026-09-28",
   "avatar": "Neurodivergent Student",
-  "query": "app that highlights words while reading aloud"
+  "query": "app that highlights words while reading aloud",
+  "topic": "voices"
 }

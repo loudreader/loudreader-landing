@@ -14,139 +14,28 @@ import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function WizardOfOzAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          The Wonderful Wizard of Oz is public domain, so L. Frank Baum&apos;s
-          actual 1900 text is free to listen to with no purchase and no
-          subscription. LoudReader has the full book built into its catalog:
-          open{" "}
-          <Link
-            href="/listen/the-wonderful-wizard-of-oz"
-            className="text-loudBlue hover:underline"
-          >
-            its LoudReader page
-          </Link>{" "}
-          to hear the real opening read aloud right now, free, no account.
-          One honest note up front: this is a synthetic voice reading Baum&apos;s
-          text, not a performed audiobook with a different actor for Dorothy,
-          the Scarecrow, and the Wizard. It reads the book brisker and
-          stranger than the film script most people remember. Free tier
-          listening is unlimited, cover to cover, and LoudReader is fully
-          on-device and private, your library never leaves your device.
-          Since the book is already in the built-in Project Gutenberg
-          catalog, there's no file to import and no connection required.
-        </p>
+        <p>The book to look for is L. Frank Baum’s The Wonderful Wizard of Oz. <Link href="/listen/the-wonderful-wizard-of-oz" className="text-loudBlue hover:underline">LoudReader’s catalogue entry</Link> points to <a href="https://www.gutenberg.org/ebooks/55" className="text-loudBlue hover:underline">Gutenberg ebook 55</a>; Gutenberg also directs readers to the improved <a href="https://www.gutenberg.org/ebooks/43936" className="text-loudBlue hover:underline">edition 43936</a> with W. W. Denslow credited as illustrator. These English ebooks are listed as public domain in the USA. The US listing does not establish availability in other countries. You can listen with a synthetic reading in LoudReader or use a volunteer recording. Either way, choose the novel edition deliberately: a book reading is different from a film or stage adaptation.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Baum's original 1900 text, read aloud, no download required."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Baum’s novel has its own chapter order and illustrated editions." />
 
-      <QuestionSection question="What does the Wizard of Oz audiobook actually sound like?">
-        <p>
-          The fastest way to answer that is to listen. LoudReader&apos;s
-          catalog page for the book has a rendered sample of the real
-          opening, in the same voice you&apos;d hear in the app.{" "}
-          <Link
-            href="/listen/the-wonderful-wizard-of-oz"
-            className="text-loudBlue hover:underline"
-          >
-            Play the sample
-          </Link>{" "}
-          before deciding whether it's for you.
-        </p>
-        <p>
-          It's a natural offline voice reading Baum&apos;s narration exactly as
-          written, from the cyclone lifting Dorothy&apos;s farmhouse onward,
-          with no abridgment and no rewriting for a younger audience. One
-          voice handles every character, so it does not switch tone between
-          the Cowardly Lion and the Wizard the way a full-cast production
-          would. If you want the actual text read clearly at whatever speed
-          suits you, it holds up well; if you're picturing a dramatized
-          multi-voice production, this isn't that.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Which Gutenberg edition should you use?"><p>The catalogue sample and built-in entry use ebook 55. Its Gutenberg page points to ebook 43936 as an improved edition. If you want that version, inspect its illustrated EPUB and import it separately into a compatible reading app. We have not compared every line between the two files.</p><p>Keep the illustrations available if you are reading alongside a child. Hearing the prose does not describe all the visual information in a picture. When comparing an audio edition, check whether it reads Baum’s novel or an adaptation with a similar title.</p></QuestionSection>
 
-      <QuestionSection question="How do you listen to it free right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Play the sample on{" "}
-            <Link
-              href="/listen/the-wonderful-wizard-of-oz"
-              className="text-loudBlue hover:underline"
-            >
-              the book's catalog page
-            </Link>{" "}
-            to hear the voice first.
-          </li>
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            for iPhone, iPad, and Mac. Free, no account.
-          </li>
-          <li>
-            Search The Wonderful Wizard of Oz in the app&apos;s built-in
-            Project Gutenberg catalog. It's already there, nothing to import
-            or convert.
-          </li>
-          <li>
-            Press play. {FREE_TIER.full}
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="What is different about listening to the novel?"><p>Follow the chapter list in the book rather than expecting an adaptation’s scene order. The novel gives each stage of Dorothy’s journey its own space. A familiar character or place does not mean the wording or sequence will match the version you remember.</p><p>For shared listening, try one chapter before deciding on a longer session. A story’s age or reputation is not a substitute for checking whether its language, peril and pacing suit the particular listener. Pause to look at a picture or discuss a confusing passage when that helps.</p></QuestionSection>
 
-      <QuestionSection question="Is this the same story as the movie?">
-        <p>
-          Close, but not identical, and the differences are part of the fun.
-          Baum&apos;s 1900 novel has more of Oz in it: extra dangers on the
-          road, stranger little kingdoms Dorothy passes through, and a
-          Wizard whose secret plays a little differently on the page than it
-          does on screen. It was written to be read aloud to children, which
-          makes it a natural fit for a listen rather than a read, and its
-          gentle joke about self-belief lands as much for adults as for kids.
-        </p>
-        <p>
-          For a broader look at listening to public-domain classics like this
-          one, see{" "}
-          <Link
-            href="/blog/best-audiobook-app-for-classics"
-            className="text-loudBlue hover:underline"
-          >
-            the best audiobook app for classics
-          </Link>
-          . This page is just about this one book: pressing play on it, today.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Can you choose a free human recording?"><p>Yes. <a href="https://librivox.org/wonderful-wizard-of-oz-version-9-by-l-frank-baum/" className="text-loudBlue hover:underline">LibriVox’s version 9</a> lists a volunteer reading with downloadable sections. Preview the narrator on that page. LoudReader’s website sample instead demonstrates synthetic speech from the ebook, and the app reads in your selected voice.</p><p>The catalogue estimate of about 4.5 hours is based on text length. It is not the duration of that LibriVox recording or any film. Choose a recording by its edition and sample, then use its own runtime when planning a journey.</p></QuestionSection>
 
-      <QuestionSection question="What do you give up compared to a professionally narrated version?">
-        <p>
-          Worth saying plainly: a synthetic voice does not act. It won&apos;t
-          give the Wicked Witch a different register than Glinda, and it
-          reads scene breaks the same way it reads everything else, evenly.
-          What you get instead is the whole book, right now, with no library
-          hold and no purchase, plus control a performed recording rarely
-          gives you. Premium adds playback speed from 0.3x to 3.0x, useful
-          for slowing down or speeding through a chapter you already know.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for The Wonderful Wizard of Oz. Use ebook 55 from the catalogue or import ebook 43936 if you want the illustrated alternative. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
+
+      <QuestionSection question="How do you keep your own edition?"><p>If you have a supported DRM-free EPUB, you can <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import it for listening</Link> without switching to the catalogue text. Check the title page and contents first. Do not assume a commercial adaptation or later Oz collection contains this same novel unchanged.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear The Wonderful Wizard of Oz read aloud, free"
-        subline="The full book is already in LoudReader's catalog. Press play, no download, no account."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

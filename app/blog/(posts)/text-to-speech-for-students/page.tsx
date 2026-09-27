@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,164 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function TextToSpeechForStudentsArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          A semester of reading is a marathon, not a sprint, and your eyes
-          cannot run it alone. Text-to-speech turns the reading list into
-          something you can consume while walking between classes, doing
-          chores, or giving your eyes a break after a long screen day.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
-          DRM-free EPUB or PDF aloud with natural offline voices while
-          highlighting each word, so you can follow along or just listen. It
-          is fully on-device and private, your library never leaves your
-          device, which means it works in the library basement, on the bus
-          with no signal, and anywhere else your phone goes. The free tier
-          covers unlimited listening on every book with no word quota. Pick a
-          textbook chapter, press play, and see if dual-channel reading keeps
-          you locked in longer than eyes-only ever did.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Listening while following highlighted text: two channels are harder to drift from than one."
-      />
-
-      <QuestionSection question="Why do students burn out on reading?">
-        <p>
-          The volume is the problem. A full course load can assign hundreds of
-          pages a week across textbooks, papers, and primary sources. Silent
-          reading is slow, tiring, and demands a dedicated block of seated
-          focus. After the third hour, comprehension drops and re-reading
-          creeps in. The stack does not shrink, but your ability to process it
-          does.
-        </p>
-        <p>
-          Text-to-speech gives you a second way in. Instead of sitting down
-          for every reading session, you can listen during the pockets of time
-          that already exist in a student day: the walk to campus, the
-          treadmill at the gym, the hour between classes when you would
-          otherwise scroll your phone. The book moves at a steady pace, and
-          your attention moves with it.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you combine listening and reading for better retention?">
-        <p>
-          Dual-channel reading (listening while following the highlighted
-          text) is the sweet spot for dense material. Your eyes track the
-          words as the voice speaks them, and the moving highlight gives you
-          an instant anchor if your attention drifts. This is not just a
-          comfort feature, a 2018 meta-analysis found moderate comprehension
-          gains from text-to-speech read-aloud tools for students with reading
-          disabilities, and the mechanic works for anyone who has ever zoned
-          out three paragraphs into a textbook.
-        </p>
-        <p>
-          In{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>
-          , word-by-word highlighting is free on every book with no quota or
-          time limit. Press play and follow the highlight. When your eyes get
-          tired, lock the screen and keep listening. The two modes reinforce
-          each other, and you can switch between them as your energy and
-          environment dictate. For a deeper look at the mechanics behind this,
-          see our guide on{" "}
-          <Link
-            href="/blog/read-and-listen-at-the-same-time"
-            className="text-loudBlue hover:underline"
-          >
-            reading and listening at the same time
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What is the best way to handle textbook PDFs?">
-        <p>
-          Most textbook PDFs and journal articles work right away. Import the
-          file into LoudReader, and the app reads the text aloud with natural
-          offline voices. The key requirement: the PDF needs selectable text.
-          Modern textbooks, course readers, and journal preprints are almost
-          always text-based and work fine. Old scanned pages with no text
-          layer will not.
-        </p>
-        <p>
-          The workflow that saves the most time: import the week's readings on
-          Sunday, listen to the lighter chapters during the week, and save the
-          dense theory sections for a dual-channel session with the text open.
-          Speed control from 0.3x to 3.0x (a Premium feature) lets you skim
-          review material fast and slow down for new concepts. The full
-          walkthrough is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Does listening work with ADHD or focus issues?">
-        <p>
-          It often does, for a mechanical reason rather than a medical one.
-          Silent reading asks one attention channel to do everything. When
-          that channel glitches, the page does not notice and your eyes keep
-          sliding. A voice sets the pace externally: it does not stall, so you
-          cannot silently re-read the same sentence four times without
-          realizing it. The word-by-word highlighting gives you an instant way
-          back after a drift, no backwards scan required.
-        </p>
-        <p>
-          We covered this in detail in our guide to{" "}
-          <Link
-            href="/blog/text-to-speech-adhd"
-            className="text-loudBlue hover:underline"
-          >
-            text to speech for ADHD
-          </Link>
-          . The short version: it is not a clinical claim, it is a practical
-          test. One real chapter, dual-channel, and you will know whether the
-          format works for your attention.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you make TTS part of a real study workflow?">
-        <p>
-          The habit that sticks: assign listening to specific parts of your
-          day so it becomes automatic rather than a decision you have to make.
-          The walk to campus gets one paper. The gym session gets a textbook
-          chapter at 1.3x. The post-dinner wind-down gets the novel for your
-          literature elective. The readings you were going to do anyway simply
-          happen in a different format.
-        </p>
-        <p>
-          For note-taking, LoudReader Premium includes highlights you can mark
-          during playback and return to later. Many students keep a separate
-          notes app open and pause the audio when they hit something worth
-          capturing, using the lock-screen controls for quick
-          pause-and-resume.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>A useful student setup starts with the reading list, not playback speed. Separate prose you can follow by ear from material that needs diagrams, calculation or close comparison. Test each file before you depend on its narration, then leave time to write or answer questions. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> reads supported DRM-free EPUBs and PDFs with word highlighting and offline speech after downloads. That can make a reading session more flexible, but the app does not promise faster learning or higher grades. Here is a workable way to organise assignments, handle awkward PDFs and keep track of what you still need to understand.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Read, listen, pause and return to the passage you need." />
+<QuestionSection question="How should you sort a week of assigned reading?"><p>Make three small groups. Put narrative or explanatory prose in a listening list. Put papers with figures, mathematical work and difficult arguments in a read-with-the-source list. Keep assignments requiring answers or calculations in a separate work list: hearing an example is different from solving it.</p><p>Give each item a concrete finish line, such as summarising the author’s main claim or answering two seminar questions. “Play chapter four” is a playback task; “explain the difference between these theories” is a study task. The latter tells you when another pass is needed.</p></QuestionSection>
+<QuestionSection question="How do you check a textbook PDF before listening?"><ol className="list-decimal pl-6 space-y-2"><li>Import a supported file you are allowed to use. A subscription or ebook purchase does not always provide a DRM-free download.</li><li>Compare the opening paragraphs with the original. Check two-column pages, footnotes, headings and page numbers for reading-order problems.</li><li>For a scanned PDF, check the local OCR output against the image. Small type, handwriting, poor scans and mathematical symbols can produce errors.</li><li>Sample a page from the middle as well as the introduction. A clean first page does not prove that later tables are readable.</li><li>Ask the library, publisher or accessibility service for a more suitable copy if essential content is missing.</li></ol><p>EPUB is often easier to follow when a book is mostly prose, because it is not tied to fixed page layout. Keep the original PDF available when page references matter. See <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">importing books for narration</Link> for the app workflow.</p></QuestionSection>
+<QuestionSection question="How do you take notes without transcribing the audio?"><p>Before listening, put the assignment question at the top of your notes. Pause when a passage answers it and write a short claim, the supporting evidence and the source location. Put a question mark beside anything you cannot explain yet.</p><p>After a section, try a brief summary with the source hidden. Reopen it to check names, quotations and details. LoudReader includes notes and highlights on the free tier, and paper or a separate notes app works too. Avoid letting the availability of a highlight button decide what deserves a note.</p><p>For evidence and a sample session structure, see <Link href="/blog/is-text-to-speech-good-for-studying" className="text-loudBlue hover:underline">whether TTS is useful for studying</Link>.</p></QuestionSection>
+<QuestionSection question="What is realistic to hear between classes?"><p>A familiar summary or a short passage is a reasonable starting point. LoudReader supports background playback and lock-screen controls, so you do not need to keep the reader visible. Download the book and required voice assets before going offline.</p><p>Save work that requires cross-referencing or written answers for somewhere you can stop. If you reach the destination and cannot say what the passage was about, replay a smaller section later or switch to reading. Time with headphones on is not automatically completed coursework.</p></QuestionSection>
+<QuestionSection question="What if attention or accessibility is the main difficulty?"><p>Try one manageable passage with narration and visible text, then compare it with the format you normally use. Notice whether you follow the argument and can find your place after a pause. Adding sound helps some tasks and adds distraction to others; there is no universal student setting.</p><p>The <Link href="/blog/text-to-speech-adhd" className="text-loudBlue hover:underline">ADHD reading guide</Link> describes a practical trial without claiming treatment effects. For exams or formally assessed work, ask your institution which tools and formats are permitted. Do not assume that a general-purpose reading app is approved simply because it has speech.</p></QuestionSection>
+<QuestionSection question="What should you know before choosing LoudReader?"><p>It runs on iPhone and iPad; compatible Apple Silicon Macs use the iPad build. Narration is local after downloads. This is a book-reading app, not a system screen reader or a service that explains diagrams.</p><p>{FREE_TIER.full} Speed control from 0.3x to 3.0x is a Premium feature; notes and highlights are free. Test a representative textbook page and the voice you intend to keep before making the app central to your routine.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Turn your reading list into a listening list"
-        subline="Import your textbooks, papers, and assigned books. Press play. Free, on-device, no account."
-      />
+      <StoreCta headline="Try a chapter in LoudReader" subline="Local narration and word highlighting. All voices free for the first 8 listening hours." />
     </ArticleLayout>
   );
 }

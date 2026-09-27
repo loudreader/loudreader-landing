@@ -1,162 +1,48 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
-import ComparisonTable from "@/components/money/ComparisonTable";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
+import ComparisonTable from "@/components/money/ComparisonTable";
+import Disclosure from "@/components/blog/Disclosure";
 
-import { FAQS, HIGHLIGHT_COLUMNS, HIGHLIGHT_ROWS } from "./content";
+import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function AppThatHighlightsWordsArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Plenty of apps highlight each word as it is read aloud.{" "}
-          <strong>LoudReader</strong>, Speechify, NaturalReader, Voice Dream
-          Reader, and Microsoft&apos;s free Immersive Reader all do it. What
-          actually differs is price, privacy, and what you can read. If the
-          thing you want highlighted is <em>books</em> (EPUBs, PDFs, whole
-          novels), LoudReader (iPhone, iPad, and Mac) highlights the
-          current sentence and each word within it, synced to natural offline
-          voices, free on every book with no word quota. It is fully on-device
-          and private, your library never leaves your device. If your reading
-          is Word documents and web pages instead, Immersive Reader is free and
-          already installed. The table below gives the honest lay of the land.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="devices"
-        caption="Follow the voice word by word, on Mac and iPhone."
-      />
-
-      <QuestionSection question="What is synced word highlighting, and why does it work?">
-        <p>
-          Synced highlighting means the app tracks its own narration and marks
-          the exact word being spoken, in real time, in the text. Your eyes
-          and ears receive the same word at the same moment.
-        </p>
-        <p>
-          The mechanical benefits are easy to state. You never lose your
-          place, because a glance at the door costs nothing when the highlight
-          marks the way back. Every printed word is paired with its sound,
-          which is what makes read-along useful for dyslexic readers and
-          language learners. And your attention has two channels to hold
-          instead of one. On the evidence, honesty is owed. Read-aloud tools as
-          a category have real research behind them. A{" "}
-          <a
-            href="https://journals.sagepub.com/doi/10.1177/0022219416688170"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            2018 meta-analysis in the Journal of Learning Disabilities
-          </a>{" "}
-          found they moderately improved comprehension for students with
-          reading disabilities, but highlighting <em>in isolation</em> is far
-          less studied. So treat the highlight as ergonomics with strong
-          face-validity, not a clinically proven feature.
-        </p>
+      <Tldr><p>
+        Look for <strong>synchronised word highlighting</strong>, not just an annotation tool. It marks the word being narrated so you can follow the text while listening. LoudReader does this in its reading view; Microsoft Word’s Immersive Reader, NaturalReader and Speechify also document read-along highlighting. The useful choice depends on where your material lives: a book file, a Word document or a webpage. Test a page of your own material before paying, especially if it is a scan or a complex PDF. A moving highlight can help you locate the current passage, but it does not guarantee better attention or comprehension.
+      </p><Disclosure /></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Check that the highlight follows narration, rather than merely marking a saved annotation." />
+      <QuestionSection question="Which kind of highlighting do I need?">
+        <p>Three features often share the same name. An <strong>annotation</strong> is a passage you mark for later. A <strong>line focus</strong> hides or dims surrounding text. <strong>Spoken-word highlighting</strong> moves as narration advances. Some readers combine all three; a product advertising highlighting may mean only one of them.</p>
+        <p>For read-along use, check whether the app marks a word, a whole sentence or both. Also check whether the page follows automatically, whether you can return after scrolling away, and whether changing text size leaves the current word visible. These details matter more than a feature tick alone.</p>
       </QuestionSection>
-
-      <QuestionSection question="Which apps highlight each word as it is spoken?">
-        <p>
-          All claims below were checked against each vendor&apos;s own pages
-          in July 2026:
-        </p>
-        <ComparisonTable
-          caption="Apps with synced word highlighting compared on highlighting granularity, price, and offline/privacy behavior"
-          columns={HIGHLIGHT_COLUMNS}
-          rows={HIGHLIGHT_ROWS}
-          highlightColumn={-1}
-        />
-        <p>
-          A sentence of honest color on each.{" "}
-          <strong className="text-gray-900">Speechify</strong> has polished
-          word-for-word highlighting and the biggest marketing footprint. Its
-          free tier is 10 standard voices at up to 1.5x, and Premium is
-          $29/month with a metered word allowance, which is fine for articles
-          but the wrong shape for novels.{" "}
-          <strong className="text-gray-900">NaturalReader</strong> offers an
-          immersive mobile mode with highlighted text synced to audio and has
-          a free plan, though it is web-first at heart.{" "}
-          <strong className="text-gray-900">Voice Dream Reader</strong> is the
-          accessibility veteran, with synchronized highlighting, deep format
-          support, and a price now at $79.99/year. Our full comparison is on
-          the{" "}
-          <Link
-            href="/voice-dream-reader-alternative"
-            className="text-loudBlue hover:underline"
-          >
-            Voice Dream Reader alternative page
-          </Link>
-          . <strong className="text-gray-900">Immersive Reader</strong> is
-          free inside Word, OneNote, Teams, and Edge and highlights each word.
-          It is unbeatable for documents, but it is a view mode, not a home for
-          a book library.
-        </p>
+      <QuestionSection question="Where can I find a read-along option?">
+        <ComparisonTable caption="Documented read-along options, checked 28 September 2026" columns={["Option", "Documented highlighting", "Start by checking"]} highlightColumn={-1} rows={[
+          {label:"Book files",cells:["LoudReader","Current sentence and spoken word in the reading view","Import your EPUB or PDF and inspect the extracted text"]},
+          {label:"Word documents",cells:["Microsoft Word: Immersive Reader","Read Aloud highlights each word","Availability in your installed Word version"]},
+          {label:"Web or mobile reader",cells:["NaturalReader Personal","Word, sentence or combined highlighting settings","Original document view versus Text View or captions"]},
+          {label:"Browser pages",cells:["Speechify Chrome extension","Words highlighted along with the audio","The actual webpage and access needed for your chosen voice"]}
+        ]} />
+        <p>The feature descriptions come from <a href="https://support.microsoft.com/en-us/accessibility/word/use-immersive-reader-in-word" className="text-loudBlue hover:underline">Microsoft’s Word guide</a>, <a href="https://help.naturalreaders.com/en/articles/11585617-display-and-reading-appearance-personal-version" className="text-loudBlue hover:underline">NaturalReader’s display guide</a> and <a href="https://speechify.com/chrome/" className="text-loudBlue hover:underline">Speechify’s extension page</a>. We checked the documentation; this is not a hands-on benchmark of every app. Plans, supported files and interfaces vary, so inspect the current offer before subscribing.</p>
       </QuestionSection>
-
-      <QuestionSection question="Where does LoudReader stand?">
-        <p>
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          is the books-first entry on the list. Import any DRM-free EPUB or
-          PDF, or pick from 70,000+ built-in Project Gutenberg classics, and it
-          reads aloud with natural offline voices while highlighting the
-          current sentence and each spoken word inside it. The parts worth
-          stating plainly:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Highlighting is free on
-            every book</strong>, and free listening has no word quota. Whole
-            novels, cover to cover.
-          </li>
-          <li>
-            <strong className="text-gray-900">Everything runs on-device.</strong>{" "}
-            Fully on-device and private, your library never leaves your device.
-            No account, works in airplane mode.
-          </li>
-          <li>
-            <strong className="text-gray-900">Runs on iPhone, iPad, and Apple Silicon Macs</strong>,
-            not a web wrapper. The same book and highlighting on both.
-          </li>
-        </ul>
-        <p>
-          And the concessions. English voices only today, no browser extension
-          for reading web pages in place, and if you need DAISY, Bookshare, or
-          Word files, Voice Dream is the better tool. If your use case is
-          books,{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader is a free download
-          </a>
-          , so you can watch the highlighting run on a full classic before
-          spending anything.
-        </p>
+      <QuestionSection question="What should I test on my own document?">
+        <ol className="list-decimal pl-6 space-y-2"><li><strong>Use a representative page.</strong> Include headings, a paragraph break and any tables or footnotes you need.</li><li><strong>Follow a full paragraph.</strong> Check whether the visible text matches the narration and whether the highlight is useful to you.</li><li><strong>Look away and return.</strong> See whether you can find the active passage without repeatedly scrolling.</li><li><strong>Inspect errors.</strong> If words are skipped or read in the wrong order, compare the extracted text with the original before blaming highlighting.</li></ol>
+        <p>For scans, text recognition can introduce mistakes; columns and equations can be especially awkward. A clean EPUB may give a simpler reading view than a page designed for print. No highlight can correct text that the importer has read incorrectly.</p>
       </QuestionSection>
-
+      <QuestionSection question="How does LoudReader handle it?">
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> highlights the current sentence and word while narrating supported DRM-free EPUBs and PDFs. Scanned PDFs can use on-device OCR, with results depending on legibility and layout. The app runs on iPhone and iPad, and on Apple Silicon Macs as an iPad app. Book libraries and reading positions do not automatically sync between devices.</p>
+        <p>Word-following highlighting is free. {FREE_TIER.full} Adjustable playback speed is Premium. The studio voice collection covers ten languages, with availability depending on device; it is not English-only. If you have chosen a tool and want a routine for using it, see <Link href="/blog/read-and-listen-at-the-same-time" className="text-loudBlue hover:underline">how to read and listen at the same time</Link>.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="See the words light up as it reads"
-        subline="Word-by-word highlighting on every EPUB and PDF, free, with natural offline voices. No account needed."
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

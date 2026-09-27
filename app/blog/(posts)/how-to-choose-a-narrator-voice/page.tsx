@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,174 +6,46 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, DIFFERENTIATORS, FREE_TIER } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function HowToChooseANarratorVoiceArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          The right narrator voice depends on what you&apos;re reading, not
-          on some universal &quot;best&quot; voice. A thriller wants presence
-          and shape, something that holds your attention through a scene. A
-          report or a set of meeting notes wants the opposite: even, brisk,
-          easy to tune into the background while you fold laundry. No
-          description of a voice tells you what it actually sounds like, so
-          the only real way to pick one is to listen. <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) has{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            23 studio narrators across 10 languages
-          </Link>
-          , every one playable on that page before you download anything. It
-          is {DIFFERENTIATORS.private}. {FREE_TIER.full} Premium keeps the
-          full roster available after the trial so you can match the narrator
-          to each book.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Every narrator, playable before you pick."
-      />
-
-      <QuestionSection question="Why does the right voice depend on what you're reading?">
-        <p>
-          A novel and a PDF of your team&apos;s quarterly numbers ask
-          different things of a narrator. Fiction rewards a voice with some
-          shape to it, warmth or weight that carries character and pacing
-          across a long scene. You&apos;re listening for pleasure, so a
-          little personality in the reading helps rather than hurts.
-        </p>
-        <p>
-          Nonfiction and reference material want the opposite. When
-          you&apos;re listening to a research paper or a set of notes for
-          information, not story, a plain, even, easy-to-follow voice gets
-          out of the way faster. Anything too expressive starts to feel like
-          it&apos;s performing at you when you just want the content.
-        </p>
-        <p>
-          Neither is wrong. They&apos;re different jobs, and treating one
-          voice as correct for both is how people end up disliking a
-          perfectly good narrator, just in the wrong context.
-        </p>
+      <Tldr><p>
+        Choose a narrator by hearing it read the material you care about. Start with the book’s language, compare a few available voices on the same passage, then try a longer section with the one you prefer. Listen for clear pronunciation, useful pauses and a pace you can comfortably follow. You may like one voice for everything or different voices for different books; neither choice needs a genre rule. LoudReader’s <Link href="/voices" className="text-loudBlue hover:underline">browser samples</Link> let you hear its studio roster before downloading. In the app, voice availability depends on your device and access, so confirm that your favourite is available where you will listen.
+      </p></Tldr>
+      <ArticleIllustration variant="waveform" caption="A sample creates a shortlist; a passage from your book helps you choose." />
+      <QuestionSection question="What should I listen for in a sample?">
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Clarity.</strong> Can you follow words and sentence boundaries without straining? Include a name or number from your own material if those are important.</li>
+          <li><strong>Pacing.</strong> Notice pauses within a sentence and between paragraphs. A voice you like in a greeting may feel different in long prose.</li>
+          <li><strong>Tone.</strong> Do you enjoy hearing it? Descriptions such as warm or bright are only shortcuts; your response to the sound matters more.</li>
+          <li><strong>Consistency.</strong> Try several paragraphs and a difficult sentence rather than choosing solely from the cleanest demo.</li>
+        </ul>
+        <p>Use a similar comfortable volume for comparisons. If you change the speed and voice at the same time, it becomes harder to tell which change helped. Pick a voice first, then fine-tune playback if your plan supports it.</p>
       </QuestionSection>
-
-      <QuestionSection question="Why won't a description tell you what a voice sounds like?">
-        <p>
-          Because words about sound are a translation, and translations lose
-          the thing that mattered. &quot;Warm and even&quot; or &quot;deep and
-          calm&quot; narrow the field a little, but two voices that both fit
-          that description can still feel completely different in your ear.
-          Pace, texture, how a voice handles a comma, none of that survives
-          being written down.
-        </p>
-        <p>
-          The only test that actually works is hearing the voice read
-          something. That&apos;s why LoudReader puts every narrator on one
-          page instead of describing them in a feature list.{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            Visit /voices
-          </Link>{" "}
-          and you can play any of the 23 narrators right in your browser, no
-          download or account required, and just listen until one sounds
-          right for the book you have in mind.
-        </p>
+      <QuestionSection question="Should fiction and nonfiction use different voices?">
+        <p>They can, but there is no rule that fiction needs drama or nonfiction needs a flat delivery. Try a dialogue scene if you read novels; try definitions and numbers if you read reports. The question is whether that voice helps you follow those passages and remains comfortable to hear.</p>
+        <p>A recorded audiobook also offers a particular narrator’s interpretation. If that performance is part of the appeal, TTS may be a different choice rather than a substitute you must prefer. See <Link href="/blog/are-ai-voices-good-enough-for-books" className="text-loudBlue hover:underline">how to judge an AI voice for a whole book</Link> for a longer listening checklist.</p>
       </QuestionSection>
-
-      <QuestionSection question="How many voices are actually available, and in what languages?">
-        <p>
-          LoudReader ships {DIFFERENTIATORS.voices} covering 11 English
-          narrators, 4 Spanish narrators, and one narrator each for German,
-          French, Italian, Dutch, Polish, Portuguese, Swedish, and Danish.
-          That&apos;s the honest shape of it: English readers get real range
-          to choose from, and most other languages get one voice rather than
-          a lineup. If you&apos;re reading in one of those single-voice
-          languages, the samples at{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            /voices
-          </Link>{" "}
-          are still worth a listen before you commit, since it&apos;s the
-          voice you&apos;ll be spending your reading time with.
-        </p>
-        <p>
-          {FREE_TIER.full} Try different narrators on your books during those
-          first eight hours. Premium keeps the full roster available afterward.
-        </p>
+      <QuestionSection question="What voice choices does LoudReader offer?">
+        <p>The studio roster has 23 narrators across ten languages: eleven English, four Spanish, and one each for German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish. This is the roster, not a guarantee that every device exposes every voice. Check the in-app picker on your device.</p>
+        <p>Languages become visible when they are present in your library or selected in Settings. If you do not see your language, check those settings before assuming there are only English voices. A voice’s language is not a translation setting: use text in the language you want to hear.</p>
+        <p>{FREE_TIER.full} The permanent free selection is limited English narration, rather than a promise that you may retain any studio voice from the trial. Premium keeps the full selection supported by your device available afterwards.</p>
       </QuestionSection>
-
-      <QuestionSection question="Can you switch narrators once you've started a book?">
-        <p>
-          Yes, from the reader controls, any time. One thing worth knowing
-          before you rely on it: the voice is a single setting for the whole
-          app rather than something saved per book. Switching narrators
-          changes what plays next everywhere in your library, not just the
-          title you&apos;re currently listening to, until you switch again.
-          It&apos;s still an easy way to test a voice mid-chapter and back out
-          if it isn&apos;t working, you just want to know it&apos;s one dial,
-          not one per book.
-        </p>
+      <QuestionSection question="Can I change my mind after starting a book?">
+        <p>Yes. In LoudReader’s reader controls, tap the voice button to cycle through available unlocked voices for the book’s language, or press and hold for the picker. You do not need to restart the book. A voice change takes effect for the next sentence.</p>
+        <p>The selected voice is an app-wide preference, not a separate saved narrator for each book. If you switch it while testing a report, remember that choice when returning to your novel. The change does not require deleting the book or importing it again.</p>
       </QuestionSection>
-
-      <QuestionSection question="What if none of the built-in voices fit?">
-        <p>
-          Worth trying all 11 English narrators before deciding that, since
-          the range is wider than most apps offer. But if genuinely none of
-          them land, LoudReader Premium also includes on-device voice
-          cloning: read a few sentences aloud, about ten seconds, and the app
-          builds a narrator from your own voice. The recording and the model
-          never leave your device, matching the same privacy standard as
-          everything else in the app.
-        </p>
-        <p>
-          Download{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader from the App Store
-          </a>{" "}
-          to try it, or start with the samples first.
-        </p>
+      <QuestionSection question="What if none of the available voices suits me?">
+        <p>You can try another reader or a recorded edition; you do not owe a voice a long trial if it is uncomfortable. On supported devices, LoudReader’s Voice Studio can also create a local narrator from about ten seconds of speech. Use your own voice or one you have permission to use. Creating a clone is not a guarantee of perfect pronunciation or an identical performance.</p>
+        <p>The all-voices trial allows up to three clone creations; Premium removes that creation quota. Saved clones remain stored when the allowance ends, but their playback access locks without the required access. Start with <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> and its existing samples before deciding whether custom narration is useful for you.</p>
       </QuestionSection>
-
-      <QuestionSection question="What comes after picking a voice?">
-        <p>
-          Once you&apos;ve found a narrator you like, the rest of the setup
-          is quick. Import a DRM-free EPUB or PDF, or pick from the 70,000+
-          Project Gutenberg classics built into the app, and it&apos;s ready
-          to read aloud right away. The full walkthrough is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          , but the short version is: pick a voice, import the file, press
-          play.
-        </p>
-        <p>
-          One more thing worth knowing before you settle on a narrator: the
-          voice you pick applies across the whole app, not to one book in
-          isolation. That&apos;s a small tradeoff for how easy it makes
-          switching. There&apos;s no menu of &quot;book settings&quot; to dig
-          through, just the reader controls and whichever narrator you feel
-          like hearing next.
-        </p>
-      </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear the roster before you pick"
-        subline={`${FREE_TIER.full} Hear every narrator at /voices, no account needed.`}
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

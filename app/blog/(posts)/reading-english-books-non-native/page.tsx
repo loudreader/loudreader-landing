@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,191 +6,23 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function ReadingEnglishBooksNonNativeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Reading English books as a non-native speaker works when you get
-          three things right. <strong>Level</strong> means picking a book where
-          you know roughly 98% of the words, about one unknown word in fifty, a
-          threshold that comes from second-language reading research.{" "}
-          <strong>Tolerance</strong> means looking up only the words that block
-          the plot or keep recurring, and letting the rest go.{" "}
-          <strong>Momentum</strong> means using narration alongside the text so
-          you keep moving instead of stalling.{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          (iPhone, iPad, and Mac) reads any book aloud with natural
-          offline voices while highlighting each word, which turns a hard page
-          into a guided one. Start with a short, plain-prose classic (it's
-          free) and finish it. Finishing is the whole strategy.
-        </p>
-      </Tldr>
-
-      <QuestionSection question="How do you pick an English book at the right level?">
-        <p>
-          Use the one-page test: open the book anywhere and read a full page.
-          Count the words you don't know. In second-language reading
-          research,{" "}
-          <a
-            href="https://nflrc.hawaii.edu/rfl/item/43"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            Hu &amp; Nation (2000)
-          </a>
-          , a widely cited study in <em>Reading in a Foreign Language</em>,
-          found that comfortable unassisted comprehension of fiction generally
-          required knowing about 98% of the running words. That's roughly one
-          unknown word in fifty: on a typical 300-word page, around six.
-        </p>
-        <p>
-          So the practical rule: a handful of unknown words per page is a book
-          you can read alone. Ten or more means you either pick an easier book
-          or bring support like audio, highlighting, and patience. Neither
-          choice is failure. If you need candidates for the easier book, start
-          with{" "}
-          <Link
-            href="/blog/easy-english-books-to-listen-to"
-            className="text-loudBlue hover:underline"
-          >
-            easy English books you can listen to for free
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Should you look up every word you don't know?">
-        <p>
-          No, and this is the habit that kills more English reading than any
-          grammar gap. Stopping for the dictionary every third sentence turns
-          a story into a vocabulary worksheet, and nobody finishes a
-          vocabulary worksheet for pleasure. Sort unknown words into three
-          buckets instead:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Blockers</strong>: you can't
-            follow the plot without this word. Look it up now. These are rarer
-            than they feel.
-          </li>
-          <li>
-            <strong className="text-gray-900">Repeaters</strong>: the third
-            time the same word appears, it's earned a lookup. Words that
-            recur are the ones worth owning.
-          </li>
-          <li>
-            <strong className="text-gray-900">Everything else</strong>: skip
-            it. Context will explain some, the story will survive the rest.
-          </li>
-        </ul>
-        <p>
-          A dictionary is a tool for the second encounter, not the first.
-          Trust that a word that matters will come back.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Does listening while you read make English books easier?">
-        <p>
-          It changes the physics of the problem. Reading alone, your eyes
-          control the pace, which means every unknown word is an invitation
-          to stall. With narration, the voice keeps walking and you walk with
-          it, past the words you'd otherwise circle for a minute each.
-          And you get pronunciation for free: years of silently misreading a
-          word ends the first time you hear it spoken while looking at it.
-        </p>
-        <p>
-          This is exactly what{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader
-          </a>{" "}
-          is for: it reads the book with natural offline voices and highlights
-          each word as it's spoken, so your ears and eyes stay locked on the
-          same line, and tapping any sentence plays it again. Everything is
-          fully on-device and private, your library never leaves your device,
-          and eleven of the twenty-three narrators are English, which for this purpose is
-          the point. On the free tier listening is unlimited with no word
-          quota, and slowing the narration down (0.3x to 3.0x) is part of
-          Premium, stated honestly.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you stay motivated through a long English novel?">
-        <p>
-          Momentum beats discipline, so engineer for momentum:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Finish something short first.</strong>{" "}
-            A completed 40,000-word book does more for your confidence than
-            being 15% into a 200,000-word masterpiece forever.
-          </li>
-          <li>
-            <strong className="text-gray-900">Small daily sessions.</strong>{" "}
-            Twenty minutes a day finishes a short classic in two weeks. Count
-            chapters, not pages, since chapters end with a click of progress.
-          </li>
-          <li>
-            <strong className="text-gray-900">Stay with an author.</strong>{" "}
-            Writers repeat their own vocabulary; the second book by the same
-            author is always easier than the first.
-          </li>
-          <li>
-            <strong className="text-gray-900">Quit freely.</strong> Abandoning
-            a book that isn't working is strategy, not defeat, especially
-            when the book was free.
-          </li>
-        </ul>
-      </QuestionSection>
-
-      <QuestionSection question="Are older classics harder for learners than modern books?">
-        <p>
-          Often yes, and it would be dishonest to pretend otherwise: a novel
-          from 1890 carries phrasing no one will ever say to you in a meeting.
-          But &ldquo;classic&rdquo; spans a huge range. <em>The Wonderful
-          Wizard of Oz</em> and <em>Black Beauty</em> are plainer than plenty
-          of contemporary literary fiction, while Dickens will happily spend
-          forty words on a doorknob. The advantage of the classics is
-          economic: they're free, unabridged, real English, and instantly
-          listenable, so they're the cheapest reading practice that exists.
-          Choose the plain-prose ones now and save the ornate ones as a
-          someday reward. And when a modern book you own is the one you
-          actually want to read, the same read-along loop works on it too.
-          Questions about formats and what the app can and can't do are in
-          the{" "}
-          <Link href="/faq" className="text-loudBlue hover:underline">
-            LoudReader FAQ
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Audio as scaffolding: the voice keeps the pace so your eyes can do the learning."
-      />
-
+      <Tldr><p>Reading a book in English becomes more manageable when you choose material you can follow and decide in advance what to do with unfamiliar words. Start with a sample page. Can you explain what happened, even if some details are unclear? If not, try a simpler text, a familiar story or a graded reader. Use a dictionary for words that block meaning or recur usefully, and treat narration as optional support. This guide focuses on selecting books and maintaining understanding; you do not need to hit a fixed vocabulary percentage or finish a difficult classic to make the reading worthwhile.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Sample a passage, check its meaning and decide which words deserve a closer look." />
+<QuestionSection question="How can you judge a book’s difficulty?"><p>Read a page from the middle as well as the opening. Then explain the situation in your own words: who is involved, what changed and what question the passage leaves you with. Notice whether unfamiliar vocabulary, sentence structure or assumed background knowledge is the main difficulty.</p><p>Vocabulary coverage matters, but a universal pass mark would be misleading. <a href="https://nflrc.hawaii.edu/rfl/item/43" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">Hu and Nation’s 2000 study</a> estimated roughly 98% coverage for adequate understanding of its fiction passage; that percentage was inferred, not a rule tested across all books. A <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/lang.12622" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">2023 registered replication</a> did not reproduce 98% as a sufficient threshold. Use an actual comprehension check rather than counting six unfamiliar words and declaring a page suitable.</p><p>If a sample is too difficult, changing the edition or book is a useful choice. There is no requirement to struggle through the unabridged version first.</p></QuestionSection>
+<QuestionSection question="Which unfamiliar words deserve a lookup?"><p>For reading for pleasure, try three categories. These are flexible habits, not rules for an exam or a technical instruction:</p><ul className="list-disc pl-6 space-y-2"><li><strong>Meaning blockers.</strong> Look up a word now if misunderstanding it changes the event or argument.</li><li><strong>Useful repeaters.</strong> Mark a recurring phrase and check it at the end of the paragraph or scene. Record an example, not just an isolated translation.</li><li><strong>Background detail.</strong> If you can follow the passage without it, continue and decide later whether it deserves attention.</li></ul><p>Do not assume context will always reveal the correct meaning. Return to uncertain words when precision matters, and check the whole phrase if a familiar word appears to mean something unexpected.</p></QuestionSection>
+<QuestionSection question="When does listening alongside the text help?"><p>It can be useful when the written form is familiar but you cannot recognise the spoken phrase, or when a steady narration pace suits the passage. Keep the freedom to pause. Continuing to hear words while you have lost the meaning does not solve the problem.</p><p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> shows word-following highlighting and supports sentence replay for imported books. Its voices are synthetic and can mispronounce a name or context-sensitive word, so check doubtful pronunciation elsewhere. Use text alone when audio adds more difficulty than it removes.</p><p>Speed control from 0.3x to 3.0x is Premium; notes, highlights and normal-speed narration are available on the free tier. {FREE_TIER.full}</p></QuestionSection>
+<QuestionSection question="How do you make a long book manageable?"><ul className="list-disc pl-6 space-y-2"><li><strong>Use a natural stopping point.</strong> A scene, short section or chapter gives you something complete to describe afterwards.</li><li><strong>Keep a brief reminder.</strong> Write the main event or argument and any unanswered question before closing the book.</li><li><strong>Choose interest as well as level.</strong> A topic you know can supply helpful context; a book you dislike may not repay the effort.</li><li><strong>Try related material.</strong> Another story by the same author may reuse vocabulary, but do not assume it will always be easier.</li><li><strong>Change course when needed.</strong> A shorter book, a graded version or an entirely different subject can be a better next step.</li></ul><p>A small regular session is a practical option. There is no fixed number of minutes that guarantees you will finish within two weeks. Let the length and difficulty of the book shape your plan.</p></QuestionSection>
+<QuestionSection question="Are classics a good place to begin?"><p>Some are, but “written for children” and “easy for a language learner” are different labels. Older prose may contain unfamiliar objects, social customs, dialect and humour. A modern graded reader can be more suitable than an unabridged classic.</p><p>The <Link href="/blog/easy-english-books-to-listen-to" className="text-loudBlue hover:underline">English book shortlist</Link> identifies useful starting points and specific difficulties. Its Project Gutenberg links refer to particular editions, whose availability depends on your location. For a book you already own, the <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import guide</Link> explains supported DRM-free files.</p><p>LoudReader runs on iPhone and iPad, and compatible Apple Silicon Macs can use its iPad build. Local narration lets you prepare a book for offline reading and listening; it does not turn an unsuitable level into a suitable one.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Read English books with a voice beside you"
-        subline="Word-by-word highlighting, natural offline voices, and 70,000+ free classics. Free, no account."
-      />
+      <StoreCta headline="Keep the text and narration together" subline="Use word highlighting and sentence replay when they help you follow your book." />
     </ArticleLayout>
   );
 }

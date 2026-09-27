@@ -1,45 +1,44 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against:
-//   - 70,000+ Project Gutenberg books built into the app, free tier plays
-//     them at unlimited length: components/money/site.ts (PRICING.free) and
-//     the batch2-brief app-behavior list, cross-checked with app/listen
-//     (the 100-book catalog page pulling from that same Gutenberg set).
-//   - EPUB/PDF import, no conversion step: components/money/site.ts app
-//     behavior list, same as every prior article in this repo.
-//   - "Fully on-device and private" and "natural offline voices": verbatim
-//     from DIFFERENTIATORS in components/money/site.ts.
-//   - Runs on iPhone, iPad, and Apple Silicon Macs, no CarPlay/Android/Windows: DIFFERENTIATORS
-//     and the batch2-brief DO-NOT-CLAIM list.
-// Statements about Audible's catalog size and policies are deliberately
-// generic (it is a large commercial catalog with real gaps) with no invented
-// numbers, prices, or specific title counts, since Audible does not publish
-// an exact catalog size and any number would go stale or be a guess.
-// No fabricated statistics, studies, or testimonials.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
+// Official source checked 2026-09-28: https://help.audible.co.uk/s/article/understand-error-codes?language=en_GB
+// Official source checked 2026-09-28: https://www.gutenberg.org/policy/permission.html
+// Official source checked 2026-09-28: https://wiki.librivox.org/index.php/Copyright_and_Public_Domain
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Why isn't every book on Audible?",
-    a: "Audible licenses recordings from publishers and rights holders, and a title only shows up once someone pays to record and license it. Most backlist books, self-published titles, academic texts, niche non-fiction, and older public-domain works never get that treatment because the economics don't justify a studio recording. The book existing is not the same as the book being worth recording commercially.",
+    "q": "Does absence from Audible mean no audiobook exists?",
+    "a": "No. Alternate titles, editions, regional availability and catalogue changes can affect what you find. Check the publisher and your library too."
   },
   {
-    q: "Can I request that Audible add a book?",
-    a: "Audible has no public system for readers to request specific titles, and adding a book depends on a publisher deciding to produce and license an audio edition, not on reader demand alone. If a book matters enough to a large audience, a publisher may eventually record it, but there's no guaranteed timeline and no reader-facing request form.",
+    "q": "Can I ask for an audiobook to be made?",
+    "a": "You can contact the publisher or author about planned editions and tell your library what you would like to borrow. None of those requests guarantees production or availability."
   },
   {
-    q: "Is it legal to make my own audiobook from a book I own?",
-    a: "For a book you own as a DRM-free file, a text-to-speech reader generating a spoken narration for your own private listening is a normal use of tools like LoudReader, VoiceOver, or a Kindle's accessibility features. This isn't legal advice and copyright details vary by country and use case, but generating a private narration from a file you legitimately own is different from redistributing someone else's recording.",
+    "q": "Can LoudReader open a protected Kindle book?",
+    "a": "No. It needs a supported accessible file; it does not remove DRM."
   },
   {
-    q: "Does text to speech work for books that are still under copyright?",
-    a: "Yes, as long as you have a legitimate DRM-free copy of the file, such as a self-published EPUB, a review copy, a manuscript, or an ebook from a store that doesn't lock its files. LoudReader reads any DRM-free EPUB or PDF aloud. It can't open a file that's still locked to another app's reader, like a DRM-protected Kindle book.",
-  },
-  {
-    q: "What if the book is a PDF instead of an EPUB?",
-    a: "LoudReader reads PDFs aloud the same way it reads EPUBs: import the file and press play. The one honest limit is scanned, image-only PDFs, since there's no text underneath a photo of a page for the app to read. A PDF with selectable text, which is most exported or downloaded ones, works fine.",
-  },
-  {
-    q: "Is a synthetic narration as good as a professional audiobook?",
-    a: "Not for every book. A performed audiobook with a skilled narrator doing character voices is its own art form, and for a novel you love, that might be worth waiting or paying for. But for the huge number of books that will never get that treatment, natural offline voices reading the actual text is the difference between listening to the book now and not listening to it at all.",
-  },
+    "q": "Can a scanned PDF be read?",
+    "a": "LoudReader includes OCR for scanned pages. Recognition and reading order can be imperfect, so check a sample, particularly names, numbers and columns."
+  }
 ];

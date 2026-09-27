@@ -1,43 +1,19 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against:
-//   - components/money/site.ts (VOICES, DIFFERENTIATORS, PRICING, CLONING):
-//     23 studio narrators across 10 languages, 11 English voices, free tier
-//     includes all voices for eight hours, then one chosen voice with unlimited
-//     listening; Premium keeps the full roster available after the trial
-//     plus speed control 0.3x to 3.0x.
-//   - data/voices.ts (VOICE_LANGUAGES): the English roster names and blurbs
-//     used below (James, Grace, Arthur, Ivy, Henry) are read directly from
-//     this file, not invented.
-//   - LoudReader_mac/LoudReader/ReaderView.swift (toggleVoice, voiceMenuContent):
-//     confirms a reader can switch narrators from inside the player, so the
-//     "try it on the actual chapter you're about to read" advice in this
-//     article describes a real, in-app action, not a hypothetical.
-// No study or statistic about "which voice type suits which genre" is cited
-// anywhere in this article, because none was found that is specific to
-// synthetic narration; the guidance here is editorial judgment from using
-// the app, stated as such, not research.
-
+// FACT PROVENANCE — editorial revision 2026-09-28; publication stays2026-09-29.
+// - LoudReader release_v1.12 source audit: VoiceRegistry/ChatterboxVoice roster,
+//   ReaderView voice selection, ReadingLanguagesSheet, SubscriptionManager and
+//   PaywallReason: current free selection, hardware limits, actual paid controls.
+// - data/voices.ts and /voices: official narrator samples for shortlisting.
+// The comparison checklist is suggested editorial practice, not a reported
+// listening test or research conclusion. Removed the earlier claim that advice
+// came from using the app; no such test record was available in this review.
+// No scientific genre-to-voice rule, guaranteed comprehension/fatigue benefit,
+// per-book setting retention, no-telemetry assertion or Premium-only notes claim.
 import type { Faq } from "@/components/money/FaqSection";
 import { FREE_TIER } from "@/components/money/site";
-
 export const FAQS: Faq[] = [
-  {
-    q: "Is there a single best TTS voice for nonfiction?",
-    a: "No, and treat any answer that names one voice as marketing rather than advice. What nonfiction needs is a narrator that stays flat and steady through dense material, an even pace and clear consonants so numbers, names, and technical terms don't blur together. Which specific voice delivers that for you is a matter of taste, so listen to a few candidates on your own material before deciding.",
-  },
-  {
-    q: "Does fiction really need a different voice than nonfiction?",
-    a: "It benefits from a different one, though nothing stops you from using one voice for everything. Fiction rewards a narrator with more range, someone who can carry dialogue and let a scene breathe, while nonfiction rewards restraint: a voice that gets out of the way of the argument. The difference is about what the material asks the voice to do, not a rule you have to follow.",
-  },
-  {
-    q: "How do I actually compare narrators instead of guessing?",
-    a: "Listen to them read, not a description of how they sound. LoudReader's voices page plays every narrator reading a real sample in their own language, so you can compare two or three candidates back to back before picking one for your book.",
-  },
-  {
-    q: "Can I switch voices for different books in my library?",
-    a: "Yes. LoudReader remembers a voice per session and you can change it from the player at any time, so a technical manual and a novel can use two different narrators without any extra setup. The full mechanics of switching mid-book are covered in changing your narrator voice mid-book.",
-  },
-  {
-    q: "Are LoudReader's voices free to try?",
-    a: `Yes. ${FREE_TIER.full} Compare narrators on real chapters during the trial. Premium keeps all 23 studio narrators across 10 languages available afterward and adds speed control from 0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes.`,
-  },
+  { q: "Is there one best TTS voice for nonfiction?", a: "No. Try voices on the numbers, names and sentence structures your book contains. Choose a voice and rate that you can follow comfortably rather than relying on a genre label." },
+  { q: "Do I need a different voice for fiction?", a: "No. Compare a dialogue passage if you are considering a change, but using one favourite voice for different genres is reasonable. Synthetic narration does not automatically provide distinct voices for every character." },
+  { q: "How do I compare voices rather than their descriptions?", a: "Play the same passage in a few candidates at comparable volume and rate. Note pronunciation, pauses and comfort, then try your preferred voice for a longer section. Treat the result as your own preference, not a universal ranking." },
+  { q: "Are all LoudReader studio voices available on every device?", a: "No. The roster contains 23 studio narrators across 10 languages, but device capability and entitlement affect which are available. Language settings and books in your library affect the languages shown." },
+  { q: "Can I try the voices before subscribing?", a: FREE_TIER.full },
 ];

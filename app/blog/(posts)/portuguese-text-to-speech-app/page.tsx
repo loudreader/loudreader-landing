@@ -19,114 +19,111 @@ export default function PortugueseTextToSpeechAppArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
-          Portuguese EPUBs and PDFs aloud with one Portuguese narrator, Rafael.
-          One voice, not a roster to pick from, and it's worth saying that
-          plainly instead of implying a choice that isn't there. The narrator
-          runs entirely on your device, so it's fully on-device and private,
-          your library never leaves your device, and it works offline once
-          you've imported a book. Import any DRM-free Portuguese EPUB or PDF,
-          or grab a Portuguese classic from the 70,000+ free Project Gutenberg
-          books built into the app, and the voice shows up in the narrator
-          picker once your library has a Portuguese book in it. You can hear
-          Rafael before you install anything on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>
-          , where every narrator has a real audio sample.
+          LoudReader can read Portuguese EPUBs and PDFs using Rafael, its
+          Portuguese studio narrator. It does not offer a Brazilian/European
+          Portuguese switch, so audition the <Link href="/voices" className="text-loudBlue hover:underline">sample</Link>
+          {' '}and a passage from your own material before choosing it for a
+          particular accent. Studio voice availability depends on your device. Portuguese narration is included in the voice
+          trial and requires Premium afterwards. The app is available on
+          iPhone and iPad, with the iPad build usable on compatible Apple
+          Silicon Macs. Speech runs locally and can work offline once the book
+          and required voice resources are ready.
         </p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="Portuguese text, read aloud, on your device."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Start with one representative page, then check a longer Portuguese passage." />
 
-      <QuestionSection question="Does LoudReader actually speak Portuguese?">
+      <QuestionSection question="How do I check whether the Portuguese voice suits my reading?">
         <p>
-          Yes. LoudReader reads books aloud with natural offline voices, and
-          Rafael, the Portuguese narrator, is one of them. He&apos;s part of
-          the app&apos;s 10-language roster. Import a DRM-free Portuguese
-          EPUB or PDF and
-          the app reads it aloud, word by word, with the same import-and-play
-          flow it uses for English books. There's no separate Portuguese app
-          or mode to find. It's built into the same reader, and the narrator
-          appears in the voice picker automatically once your library has a
-          Portuguese-language book in it.
+          Begin with the kind of text you plan to use. A reader listening to a
+          Brazilian novel, a student working through a Portuguese course and
+          someone reviewing a work report may want different things from the
+          same voice. Pick a short paragraph whose meaning and pronunciation
+          you already know, then one with unfamiliar names, numbers or dialogue.
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Can you follow the rhythm without looking at every word?</li>
+          <li>Are names and recurring terms clear enough for this document?</li>
+          <li>Do pauses separate sentences and speakers sensibly?</li>
+          <li>After a few minutes, is the voice still comfortable to listen to?</li>
+        </ul>
+        <p>
+          These checks are a practical audition, not a claim that Rafael has
+          passed a regional pronunciation assessment. LoudReader lists the
+          narrator as Portuguese without a selectable regional variant. If an
+          exact accent is the main requirement, compare it with a source that
+          explicitly identifies the variety you need.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How many Portuguese voices can I choose from?">
+      <QuestionSection question="How do I turn on Portuguese in the app?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Import a DRM-free Portuguese EPUB or PDF.</li>
+          <li>Choose Rafael in the narrator picker. Voices become available through the languages found in your library.</li>
+          <li>If Portuguese is not shown, go to Settings → Languages You Read and mark Portuguese.</li>
+          <li>Play your test passage and follow the displayed text before starting a longer session.</li>
+        </ol>
         <p>
-          One. That's worth saying plainly rather than letting you assume
-          there's a lineup. English has 11 narrators and Spanish has 4, but
-          Portuguese, like German, French, Italian, Dutch, Polish, Swedish,
-          and Danish, ships with a single voice. If you want to hear exactly
-          what Rafael sounds like before you commit to anything, the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          has a real recorded sample, not a description. Listening beats
-          reading an adjective like "warm" or "clear" and hoping it matches
-          your ear.
+          You can mark Portuguese in Settings before importing anything. This
+          reveals the voice; the trial or Premium entitlement still determines
+          access. The <Link href="/voices" className="text-loudBlue hover:underline">voice directory</Link>
+          {' '}lets you hear Rafael without installing the app first.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Is it Brazilian Portuguese or European Portuguese?">
+      <QuestionSection question="Should I use an EPUB, a PDF or a scan?">
         <p>
-          The app doesn't split that out as a setting. Rafael is labeled the
-          Portuguese narrator, full stop, with no toggle between Brazilian and
-          European pronunciation. If that distinction is important for your
-          project, the honest move is to listen to the sample on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          and judge it against your own ear rather than assume either way.
+          Use a DRM-free EPUB when you have a choice of editions, and check a
+          PDF&apos;s extracted text before a long listen. The current app also
+          recognises text from scanned PDF pages using on-device OCR, but
+          recognition can miss words or pages. Review import warnings and
+          compare a sample with the original, especially accents, line breaks,
+          columns and footnotes. A narrator cannot repair text that was
+          extracted incorrectly.
+        </p>
+        <p>
+          An ebook locked inside another service is a different issue:
+          LoudReader does not remove DRM. Start with a supported file you are
+          entitled to use. See the <Link href="/" className="text-loudBlue hover:underline">reader overview</Link>
+          {' '}for the app&apos;s general import and listening features.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What can you actually import and listen to?">
+      <QuestionSection question="Can I use it to practise Portuguese?">
         <p>
-          LoudReader reads any DRM-free EPUB or PDF, in Portuguese or any of
-          its other languages. That covers books you already own as files,
-          documents you write yourself, and study material. It also has
-          70,000+ free Project Gutenberg books built in, including
-          Portuguese-language classics, so you can test the Portuguese voice
-          on a real book without hunting down your own file first. One
-          concession worth making here: LoudReader reads the text layer of a
-          document. A PDF that's really a scanned image of a printed page has
-          no text for the app to read, in Portuguese or anything else.
+          Try a short listen-read-listen cycle: hear a paragraph, read it while
+          listening, then replay it without looking. Make a note of the words
+          that caused difficulty instead of repeatedly restarting the entire
+          chapter. If pronunciation is your focus, check those words against
+          your course audio or another reliable spoken reference.
+        </p>
+        <p>
+          TTS adds a repeatable way to hear written material. It does not
+          assess your spoken Portuguese, provide conversation practice or
+          translate the book. The <Link href="/blog/text-to-speech-for-esl-learners" className="text-loudBlue hover:underline">listening practice guide</Link>
+          {' '}has more ideas for combining text and audio; its routine can be
+          adapted to Portuguese.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What does the Portuguese voice cost?">
+      <QuestionSection question="Is Portuguese narration free, and can I listen offline?">
         <p>
-          Try {FREE_TIER.trial}. After that, continuing with Rafael requires
-          Premium. Free users choose one keepable voice from the eligible
-          English lineup and retain unlimited listening, with no account or
-          word quota. Premium includes all 23 studio narrators across 10
-          languages, playback speed from 0.3x to 3.0x, a sleep timer,
-          soundscapes, and notes and highlights. Either way, the
-          Portuguese narrator itself never streams anything to a server. It
-          runs on your phone or Mac, so listening stays fully on-device and
-          private, your library never leaves your device. If you're learning
-          Portuguese rather than just reading it, our notes on{" "}
-          <Link
-            href="/blog/text-to-speech-for-esl-learners"
-            className="text-loudBlue hover:underline"
-          >
-            using text-to-speech to learn a language
-          </Link>{" "}
-          cover pacing and repetition tricks that apply here too.
+          {FREE_TIER.full} Rafael requires Premium after the trial. Premium also
+          adds playback-speed controls, the sleep timer and ambient soundscapes;
+          notes and highlights remain available without Premium. Current prices
+          are shown in the app for your storefront.
+        </p>
+        <p>
+          Import the book and prepare the voice while connected, then try a
+          chapter offline before a journey. Speech processing is local; book
+          downloads and other online services still need a connection. The app
+          also uses diagnostics and analytics, so local narration should not be
+          read as a claim that the whole app sends no data.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear the Portuguese narrator for yourself"
-        subline="One voice, real samples, no account needed to listen."
-      />
+      <StoreCta headline="Try Rafael with a Portuguese passage" subline="Hear the sample, then check the text and accent against your own material." />
     </ArticleLayout>
   );
 }

@@ -1,103 +1,89 @@
-// Shared, verified product facts for money pages.
-// Single source of truth. Money pages import from here so every page phrases
-// the differentiators IDENTICALLY (AI answer engines echo consistent phrasing).
-//
-// Do NOT edit these strings casually: they must stay in sync with the App Store
-// listing and the home page JSON-LD (app/page.tsx). The /llms.txt route
-// imports these constants so its cloning and pricing facts stay in sync.
+// Shared facts checked against shipping LoudReader 1.12 (release_v1.12,
+// 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0) and Apple's live US lookup on
+// 2026-09-28. See docs/product-facts-2026-09-28.md for exact source evidence.
+// Keep app facts separate from the Loudkit framework and agent companion.
 
 export const APP_NAME = "LoudReader";
 export const SITE_URL = "https://loudreader.io";
 export const APP_STORE_URL = "https://apps.apple.com/app/loudreader/id6758149478";
 export const SUPPORT_EMAIL = "jeremi@loudreader.io";
+export const DEVELOPER = "Jeremi Podlasek";
 
-/**
- * The three differentiators. Use these VERBATIM in page copy. Consistency
- * across pages is deliberate and load-bearing for AI answer engines.
- */
 export const DIFFERENTIATORS = {
-  private: "fully on-device and private, your library never leaves your device",
+  private: "speech is generated on your device; books are not uploaded for narration",
   voices: "natural offline voices",
-  // NOT a native Mac app: there is no macOS target and no Mac App Store
-  // record. On Apple Silicon Macs this is the iPad build running in Apple's
-  // compatibility mode. Verified 2026-08-26 against the Xcode project and
-  // the App Store record. Do not reintroduce the word "native" here.
-  native: "runs on iPhone, iPad, and Apple Silicon Macs",
+  native: "runs on iPhone and iPad, and on Apple Silicon Macs as an iPad app",
 } as const;
 
-/**
- * The voice roster, read out of the shipping app rather than remembered.
- * Source of truth: the studio voice enum in the app (roster + language map)
- * and the free-tier voice enum. Audited 2026-08-04 against 1.06.
- *
- * Engine and model names are deliberately absent from this repo: nothing that
- * ships to a reader should name the models behind the voices.
- *
- * Counting rule: 23 = 11 English + 4 Spanish + one each for German, French,
- * Italian, Dutch, Polish, Portuguese and Danish/Swedish. Two QA references
- * (David, Golden) exist in the enum, never reach a user, and are NOT counted.
- */
+export const MAC = {
+  precise:
+    "LoudReader is an iPhone and iPad app. On compatible Apple Silicon Macs it runs through Apple's iPad-app compatibility mode, rather than as a separate native macOS application.",
+} as const;
+
 export const VOICES = {
-  /** The headline number. Use this phrasing verbatim. */
   headline: "23 studio narrators across 10 languages",
-  /** For English-market pages where the language spread is not the point. */
   english: "11 English studio voices",
-  /** What Premium unlocks, phrased as a noun for feature lists. */
-  premium: "all 23 studio narrators across 10 languages",
-  /** What a free user keeps after the trial. */
-  free: "one natural offline voice, with unlimited listening",
-  /**
-   * The picker is lazy by language: non-English narrators appear once there is
-   * a book in that language in the library. Say this whenever the copy could
-   * be read as "23 names in one list".
-   */
+  premium: "all available studio narrators across 10 languages",
+  free: "a free English voice selection, with unlimited book listening",
   lazyLanguages:
-    "narrators for a language appear once you have a book in that language",
+    "the voice list follows languages in your library or languages you choose in Settings",
   languageList:
     "English, Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish",
+  availability: "Available voices depend on your device; check the in-app voice list.",
 } as const;
 
-/**
- * On-device voice cloning (Voice Studio), shipping since 2026-07-28. The site
- * was silent about it for a full release; it is the strongest thing we can say
- * that no cloud competitor can match on privacy grounds.
- *
- * TEN seconds, not thirty. The app asked for thirty at one point and the site
- * inherited that number everywhere; Voice Studio now says "About ten seconds
- * of speech is enough" and enrollment accepts a clip half of clipSeconds = 10
- * (LoudReader/Engines/VoiceEnrollment.swift). Corrected site-wide 2026-08-20.
- * Asking for three times the speech someone actually has to give is a worse
- * ask than the product makes.
- */
+// VoiceEnrollment uses a roughly ten-second recording. Trial creation allowance
+// is three clones; existing clones lock after the all-voices allowance expires.
 export const CLONING = {
   short: "clone your own voice on device",
   long:
-    "Read a few sentences aloud — about ten seconds — and LoudReader builds a narrator from it. The recording, the model and the voice never leave your device, and deleting the voice deletes the files.",
+    "Record about ten seconds of clear speech to create a narrator on your device. Use your own voice or a recording you have permission to use. Voice files are stored locally, and deleting a clone removes its saved files.",
+  trial:
+    "You can create up to three voice clones during the all-voices trial. Continued use after the trial requires Premium.",
 } as const;
 
-/** The voice trial and the permanent free tier describe different limits. */
+// SubscriptionManager retains the chosen lighter English voice (Stella or Rio)
+// plus Bella on supported devices. Do not describe this as any one of 23 voices.
 export const FREE_TIER = {
-  trial: "every voice free for your first 8 hours",
+  trial: "every available voice free for your first 8 hours of listening",
   afterTrial:
-    "after that you keep one eligible English voice of your choice, and listening stays unlimited",
+    "afterwards, keep a free English voice selection and unlimited book listening",
   full:
-    "Every voice is free for your first 8 hours. After that you keep one eligible English voice of your choice, and listening stays unlimited: no account, no word quota.",
+    "Try every available voice for your first 8 hours of listening. Afterwards, keep a free English voice selection and unlimited book listening. No LoudReader account or word quota.",
+  choice:
+    "Choose Stella or Rio as your free English voice; supported devices also keep Bella.",
 } as const;
 
-/**
- * Pricing facts, verifiable against the App Store listing and loudreader.io.
- * If pricing changes in App Store Connect, update HERE and every money page
- * stays correct.
- */
+// These are the US App Store listing's prices, not a universal storefront price.
+// Notes, highlights, normal offline listening and the share extension are free.
 export const PRICING = {
-  free: `Free. Unlimited listening on every book, cover to cover. ${FREE_TIER.full}`,
-  premiumMonthly: "$7.99/month",
-  premiumYearly: "$49.99/year",
-  premiumLifetime: "$199.99 one-time (lifetime)",
+  free: `Free book listening. ${FREE_TIER.full}`,
+  premiumMonthly: "US$7.99/month",
+  premiumYearly: "US$49.99/year",
+  premiumLifetime: "US$199.99 one-time (lifetime)",
   premiumFeatures:
-    "all 23 studio narrators across 10 languages, on-device voice cloning, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, and notes & highlights",
+    "every available narrator, continued voice cloning, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, unlimited article saving and uncapped batch imports",
 } as const;
 
-/** System requirements, from the App Store listing. */
+export const LIBRARY = {
+  gutenberg: "browse 70,000+ Project Gutenberg titles, subject to local copyright",
+  curated: "100+ curated classics on the home shelf",
+} as const;
+
+export const FEATURES = {
+  highlighting: "word-by-word highlighting synced to the narration",
+  imports: "DRM-free EPUBs, PDFs and saved web articles",
+  ocr: "on-device text recognition for scanned PDFs, with results depending on the document",
+  onDevice: "speech is generated on your device, so books already on the device can be narrated offline",
+  speed: "Premium playback speed from 0.3x to 3.0x",
+} as const;
+
+// SettingsSheet.showsUsageStatisticsChoice is false in release 1.12. The SDK
+// wrapper's comment about a visible opt-out is stale; do not repeat it in copy.
+export const PRIVACY = {
+  summary:
+    "Speech and text recognition run locally. The app also sends crash/performance diagnostics and usage analytics. Version 1.12 has no visible in-app switch for these diagnostics and analytics; website analytics consent is separate.",
+} as const;
+
 export const REQUIREMENTS =
-  "iOS 18.0+, iPadOS 18.0+, macOS 15.0+ (Apple Silicon)";
+  "iOS 18.0+, iPadOS 18.0+, macOS 15.0+ on a compatible Apple Silicon Mac; voice availability depends on the device";

@@ -5,154 +5,48 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ListenToBooksWhileCleaningArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Cleaning takes up real hours every week and demands almost nothing
-          from your brain. That makes it perfect audiobook territory. Your
-          hands scrub, fold, sweep, and wipe while your ears get through a
-          chapter or three.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
-          DRM-free EPUB or PDF aloud with natural offline voices. It is fully
-          on-device and private, your library never leaves your device, so
-          playback keeps going through every room in the house, including the
-          basement with no signal. The lock screen and your headphone button
-          handle pause and resume, which means you can stop the book with wet
-          hands without touching your phone. Chores become something you almost
-          look forward to.
-        </p>
+        <p>Books can fit alongside some household jobs, especially quiet, familiar tasks such as folding laundry. They are a poor match for a task that needs concentration or drowns out the narration. Prepare the book, put the phone somewhere dry and test a pause control before your hands are occupied. Pause for the vacuum, a conversation or anything that needs your attention instead of turning the volume up to compete. The point is to enjoy part of a book while doing a suitable chore, not to make every minute of housework count as reading.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="devices"
-        caption="Folding laundry is reading time. The phone sits locked on the dresser."
-      />
+      <ArticleIllustration variant="devices" caption="Use the quiet tasks for listening. Pause for the noisy ones." />
 
-      <QuestionSection question="Why pair audiobooks with chores?">
-        <p>
-          Chores and books solve each other&apos;s problem. The problem with
-          chores is that they are boring; the problem with reading is that it
-          needs time you do not have. Pair them and boredom vanishes while
-          reading volume climbs.
-        </p>
-        <p>
-          The math is better than you think. A weekly cleaning session of two
-          hours is two hours of audiobook time. At normal speed, that is roughly
-          a quarter of a typical novel. Over a month, you finish a book doing
-          something you were going to do anyway. The chores did not get longer.
-          Your reading simply moved into time your eyes could never use.
-        </p>
+      <QuestionSection question="Which chores make a sensible listening slot?">
+        <p>Try a task whose next step you already know and that leaves room to follow a story. Sorting clean clothes, dusting a familiar room or tidying a shelf may suit you. Reading labels, following a new recipe, using tools or dealing with something unexpected asks for more attention.</p><p>Test one short section rather than assuming the whole cleaning session will work. If you keep rewinding, either the book or the task needs a different setting.</p>
       </QuestionSection>
 
-      <QuestionSection question="What is the best setup for cleaning and listening?">
-        <p>
-          A Bluetooth speaker on a shelf or counter is the right tool for most
-          cleaning. It fills the room and you do not wear anything in your ears,
-          which is helpful when you are moving between rooms, reaching into
-          cabinets, or working with water. Earbuds or headphones work too, but a
-          speaker makes the audio ambient rather than tethered.
-        </p>
+      <QuestionSection question="How should I set up the phone and audio?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Get{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone. Free, no account.
-          </li>
-          <li>
-            Import any DRM-free EPUB or PDF, or pick a free classic from the
-            70,000+ built-in Project Gutenberg library.
-          </li>
-          <li>
-            Connect to a Bluetooth speaker, press <strong>play</strong>, lock
-            the screen, and leave the phone on a counter or charger.
-          </li>
-          <li>
-            Start cleaning. The book plays from the speaker, and your headphone
-            or speaker button pauses it when you run the vacuum or need a
-            moment of quiet.
-          </li>
-        </ol>
+          <li>Choose and start the passage with clean, dry hands. Test the speaker or headphones at a comfortable volume.</li>
+          <li>Put the phone on a stable, dry surface away from splashes, cleaning products and the area you are working on. A plastic bag is not a substitute for a suitable location.</li>
+          <li>Test your accessory’s play/pause control. Commands vary by model; do not assume every button gesture works the same way.</li>
+          <li>Lock the screen and try a short task. Pause before moving equipment or doing anything that needs your full attention.</li>
+        </ol><p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> supports background playback and standard media controls on iPhone. That provides the playback capability; compatibility with a particular speaker or button still deserves a quick test.</p>
       </QuestionSection>
 
-      <QuestionSection question="How do you handle the noisy parts of cleaning?">
-        <p>
-          Vacuuming, blending, and running water are loud enough to drown out a
-          speaker. The practical solution has two parts:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Pause the book.</strong> Tap your
-            headphone or speaker button before you start the noisy task. The
-            book pauses exactly where it was. No hunting for your place later.
-          </li>
-          <li>
-            <strong className="text-gray-900">Group noisy tasks together.</strong>{" "}
-            Do all the vacuuming at once, all the blending at once, all the
-            scrubbing at once. That way you pause once, do the loud stuff, and
-            resume for the rest of the session.
-          </li>
-        </ul>
-        <p>
-          If you use earbuds with active noise cancelling instead of a speaker,
-          the vacuum problem largely disappears. The narration cuts through. But
-          noise cancelling while home alone has its own trade-offs. You may not
-          hear the doorbell or a timer going off in the kitchen.
-        </p>
+      <QuestionSection question="What should I do during the noisy parts?">
+        <p>Pause. If narration is being drowned out by the vacuum or running water, raising it to compete is not a useful listening strategy. Resume afterwards and rewind a little if the last sentence was lost.</p><p>You can group quiet tasks into one listening session if that is convenient, but there is no reason to reorganise all the housework around a chapter. Noise cancelling may alter what you hear around you; it does not remove the need to notice alarms, people or the job itself.</p>
       </QuestionSection>
 
-      <QuestionSection question="What kind of books work best while cleaning?">
-        <p>
-          The same books that work on a walk or a run. Narrative-driven fiction
-          and story-driven non-fiction. Memoirs, popular history, true crime,
-          thrillers, and any book where the plot pulls you forward without
-          requiring you to stop and think through a complex argument.
-        </p>
-        <p>
-          Reference books, textbooks, and anything that expects you to flip
-          back, check footnotes, or study diagrams are poor cleaning companions.
-          Your hands are occupied and your attention is split. Save those for{" "}
-          <Link
-            href="/blog/read-and-listen-at-the-same-time"
-            className="text-loudBlue hover:underline"
-          >
-            focused reading-and-listening sessions
-          </Link>{" "}
-          and use chore time for the books that reward momentum. For a deeper
-          look at fitting listening into your routine,{" "}
-          <Link
-            href="/blog/read-more-books-by-listening"
-            className="text-loudBlue hover:underline"
-          >
-            how to read more books by listening
-          </Link>{" "}
-          covers the strategy end to end.
-        </p>
+      <QuestionSection question="Which books are easiest to return to?">
+        <p>Choose a familiar story, a short essay or anything whose thread survives a pause for you. A novel with a large cast may work well if you know it; a seemingly simple book may not if you are distracted. Sample the actual book rather than treating a genre as a guarantee.</p><p>Save passages that require a diagram, careful note-taking or verification for a <Link href="/blog/read-and-listen-at-the-same-time" className="text-loudBlue hover:underline">focused read-and-listen session</Link>. You can keep a separate light listening choice for chores without abandoning your more demanding reading.</p>
+      </QuestionSection>
+
+      <QuestionSection question="How do I use my own ebook?">
+        <p>Import a supported DRM-free EPUB or PDF into LoudReader and check a page before beginning. Local narration can continue without a connection once the book and required voice resources are available; test that setup first if your home has a dead zone.</p><p>When switching to music or another app, pause the book yourself rather than assuming the app switch will stop audio. Resume from a passage you recognise afterwards. See <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">the import walkthrough</Link> if the file is new to you.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Chores plus chapters, zero schedule math"
-        subline="Import any EPUB or PDF, connect a speaker, and clean. Free unlimited listening, no account."
-      />
     </ArticleLayout>
   );
 }

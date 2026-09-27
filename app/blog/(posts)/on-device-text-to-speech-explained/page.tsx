@@ -27,8 +27,7 @@ export default function OnDeviceTextToSpeechExplainedArticle() {
           became small enough to run locally,
           and chips like Apple Silicon shipped dedicated machine-learning
           hardware to run them on. Today an app like <strong>LoudReader</strong>{" "}
-          generates natural offline voices on your device. Downloads, file
-          sync and any connected services are separate things to check.
+          generates natural offline voices on your device. Downloads, diagnostics and any connected services are separate things to check.
           This explainer covers how local speech works, why it
           took so long, and the trade-offs nobody should hide from you.
         </p>
@@ -43,7 +42,7 @@ export default function OnDeviceTextToSpeechExplainedArticle() {
         <p>
           Every text-to-speech system does the same job: it turns written
           words into an audio waveform that sounds like someone saying them.
-          The only architectural question is <em>where that computation runs</em>.
+          One architectural question is <em>where that computation runs</em>; model design and the surrounding application matter too.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -78,13 +77,11 @@ export default function OnDeviceTextToSpeechExplainedArticle() {
 
       <QuestionSection question="Why were offline voices robotic for so long?">
         <p>
-          Because the techniques that fit on a device were the ones that
-          sounded mechanical. Classic offline synthesis either stitched
-          together tiny fragments of recorded speech (concatenative synthesis)
-          or generated sound from hand-tuned acoustic rules (formant
-          synthesis). Both were small and fast; both produced the flat,
-          seam-riddled voice everyone associates with &ldquo;computer
-          reading.&rdquo;
+          Earlier systems often used recorded speech fragments or hand-tuned
+          acoustic rules. Their joins and intonation could sound mechanical,
+          although quality varied between systems. Local speech is not one
+          fixed sound: it describes where generation happens, not a particular
+          synthesis technique or a ceiling on quality.
         </p>
         <p>
           The turning point was neural speech synthesis. DeepMind&apos;s{" "}
@@ -117,22 +114,20 @@ export default function OnDeviceTextToSpeechExplainedArticle() {
           </li>
           <li>
             <strong className="text-gray-900">Devices got ML hardware.</strong>{" "}
-            Phone and laptop chips stopped being general-purpose only. Apple
-            Silicon ships a dedicated Neural Engine, silicon whose whole job
-            is running neural networks, alongside fast unified memory that
-            lets a model stream data without bottlenecks.
+            Phone and laptop processors can accelerate suitable models. On
+            Apple platforms, Core ML offers CPU, GPU and Neural Engine
+            options. The runtime and supported operations determine where the
+            work runs; having an accelerator does not remove every bottleneck.
           </li>
         </ul>
         <p>
-          When a small-enough model meets a fast-enough accelerator, the
-          datacenter stops being necessary. LoudReader is a concrete example of
-          the pattern: its voice models ship inside the app, execute on the
-          Neural Engine via Core ML, and the engine is written so it{" "}
-          <em>cannot</em> download models at runtime. That is how the app
-          generates its natural offline voices. Other local tools, including
-          Loudkit, download their models during setup and then generate
-          speech locally. Both approaches can provide offline synthesis once
-          the required files are present.
+          A suitable model and runtime can generate speech without a remote
+          server. LoudReader uses local speech for book narration. Other local
+          tools, including Loudkit, download models during setup and then
+          generate speech locally. Packaging varies by product and release;
+          check resource availability before relying on disconnected use.
+          Apple documents the runtime choices in its{" "}
+          <a href="https://developer.apple.com/documentation/coreml/mlcomputeunits" className="text-loudBlue hover:underline">Core ML compute-unit guide</a>.
         </p>
       </QuestionSection>
 
@@ -157,22 +152,27 @@ export default function OnDeviceTextToSpeechExplainedArticle() {
             <strong className="text-gray-900">Voice variety.</strong> A cloud
             service may offer a different voice and language selection from
             a local tool. LoudReader offers 23 studio narrators across 10
-            languages; Loudkit has its own 28-voice collection. Check the
+            languages, subject to device capability; Loudkit has its own 28-voice collection. Check the
             actual roster and samples rather than assuming the two products
             expose identical choices.
           </li>
           <li>
             <strong className="text-gray-900">Hardware floor.</strong> Real-time
-            neural synthesis needs a modern chip. LoudReader requires macOS
-            15+ on Apple Silicon, or iOS 18+ on iPhone. An Intel Mac
-            can&apos;t run it, and pretending otherwise would help nobody.
+            speech performance depends on the model and runtime. LoudReader
+            requires iOS/iPadOS 18+ and can run its iPad build on compatible
+            Apple Silicon Macs with macOS 15+. It has no separate native Mac
+            build. Its requirements are not a rule for every local speech tool.
           </li>
         </ul>
         <p>
           Local synthesis avoids sending each passage to a hosted speech
           provider and keeps working without that provider&apos;s connection.
-          Pricing, quotas, accounts, and file sync are separate product
-          decisions; an on-device engine alone does not determine them.
+          Pricing, quotas, accounts, file sync and diagnostics are separate
+          product decisions. LoudReader 1.12 also includes Sentry diagnostics
+          and TelemetryDeck usage analytics, enabled by default; the privacy
+          toggle is not exposed in that release. An on-device engine alone
+          does not make an entire application network-free. See the{" "}
+          <Link href="/privacy" className="text-loudBlue hover:underline">privacy policy</Link>.
         </p>
       </QuestionSection>
 
@@ -190,7 +190,7 @@ export default function OnDeviceTextToSpeechExplainedArticle() {
           >
             install LoudReader
           </a>
-          , switch off Wi-Fi, and play a chapter. The Mac-specific picture,
+          , prepare your chosen voice and book, disconnect and try a new passage. The Mac-specific picture,
           including what the built-in system voices can and can&apos;t do, is
           covered in{" "}
           <Link
@@ -233,7 +233,7 @@ export default function OnDeviceTextToSpeechExplainedArticle() {
 
       <StoreCta
         headline="Hear what on-device sounds like"
-        subline="Natural offline voices, generated on your Mac or iPhone. Free, no account. Turn off Wi-Fi and judge for yourself."
+        subline="Try a book with a voice available on your device. Check the sound and workflow for yourself."
       />
     </ArticleLayout>
   );

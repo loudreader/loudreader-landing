@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,175 +6,54 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function TextToSpeechForEyeStrainArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Eye strain from screens is cumulative. By evening, your eyes are
-          done before your brain is, and the book you wanted to read feels
-          like overtime. Text-to-speech gives you a way to keep reading
-          without asking anything more from your eyes.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
-          EPUB or PDF aloud with natural offline voices. Press play, lock the
-          screen, and your eyes get the rest of the night off while the book
-          keeps going. It is fully on-device and private, your library never
-          leaves your device. The free tier covers unlimited listening on
-          every book with no word quota. Word-by-word highlighting is free.
-          Speed control (0.3x to 3.0x), a sleep timer, and ambient
-          soundscapes are Premium. This is not a medical fix, it is a
-          practical one: your eyes are tired, so use your ears.
-        </p>
+        <p>Text-to-speech lets you hear a document without continuously looking at it. That can be useful when you want to reduce screen viewing, but an audio app does not diagnose or treat the cause of eye discomfort. Plan breaks as well as listening: the <a href="https://www.nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work/keep-your-eyes-healthy" className="text-loudBlue hover:underline">National Eye Institute advises looking about 20 feet away for 20 seconds every 20 minutes</a> of computer use. Listening to a report while continuing to scroll another screen defeats the practical aim. Choose an audio task that lets you look away, and stop working entirely when that is the break you need.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="offline"
-        caption="Screen off, eyes closed, book still going. The evening reading session your eyes were asking for."
-      />
-
-      <QuestionSection question="Why does eye strain kill evening reading?">
-        <p>
-          Eye strain is the accumulation of a full day of focus work. If you
-          spend eight or more hours on a screen for work, your eye muscles
-          have been contracting at near distance the entire time. By evening,
-          focusing on text feels effortful. Letters blur slightly. You squint.
-          The light from the screen, even with night mode on, feels harsher
-          than it did at 9 AM.
-        </p>
-        <p>
-          The result is not dramatic. It is just that reading, which should
-          be relaxing, feels like work. You pick up the book and you put it
-          down five minutes later because your eyes are protesting. You end
-          up scrolling something mindless instead, which is gentler on
-          comprehension but not on your eyes, or you give up on reading
-          entirely for the night.
-        </p>
-        <p>
-          We covered the broader version of this problem in{" "}
-          <Link
-            href="/blog/too-tired-to-read"
-            className="text-loudBlue hover:underline"
-          >
-            too tired to read
-          </Link>
-          . Eye strain is one piece of it, but it is the piece that has the
-          most direct fix: stop reading with your eyes.
-        </p>
+      <ArticleIllustration variant="devices" caption="A useful audio break lets you stop looking at the document." />
+      <QuestionSection question="What does switching to audio actually change?">
+        <p>It removes the need to inspect the document for the duration of that passage. It does not establish why your eyes feel uncomfortable, whether your glasses prescription is suitable or whether a medical condition is involved.</p>
+        <p>The <a href="https://aao.org/eye-health/tips-prevention/blue-light-digital-eye-strain" className="text-loudBlue hover:underline">American Academy of Ophthalmology describes discomfort associated with prolonged device use</a> and discusses changes such as breaks and screen adjustments. A text-to-speech app is one way to change an activity; it is not evidence that symptoms will resolve after a set number of listening minutes.</p>
+        <p>If discomfort persists or keeps returning, <a href="https://www.nhs.uk/symptoms/dry-eyes/" className="text-loudBlue hover:underline">seek advice from an eye-care professional</a>. Audio should not become a reason to ignore pain or a change in your vision.</p>
       </QuestionSection>
-
-      <QuestionSection question="How does listening actually help tired eyes?">
-        <p>
-          It removes the visual demand entirely. When you listen instead of
-          read, your eyes can do whatever they need: close, relax, look at
-          something in the distance. The focusing muscles stop contracting.
-          The screen is off. The book is still happening, just through a
-          different channel.
-        </p>
-        <p>
-          The practical setup: import your book into{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader
-          </a>{" "}
-          (free, no account). Pick a voice you find gentle. Lie down, close
-          your eyes, and press play. The sleep timer (Premium) stops playback
-          after 30 or 60 minutes so you do not wake up hours later having
-          lost your place. Ambient soundscapes (also Premium) add rain or
-          white noise behind the narration, which some people find helps mask
-          the kind of mental fatigue that makes focusing hard.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Does this work during the workday too?">
-        <p>
-          Yes, and it is worth using as a deliberate screen break. The
-          standard advice for eye strain is the 20-20-20 rule: every 20
-          minutes, look at something 20 feet away for 20 seconds. It helps,
-          but 20 seconds is not a break. Listening to a 10-minute article or
-          a book chapter gives your eyes a meaningful rest while you still
-          absorb information.
-        </p>
-        <p>
-          The workflow for workday use:
-        </p>
+      <QuestionSection question="Which work tasks can move away from the screen?">
+        <p>Continuous prose is a useful candidate: a draft report, background article or explanatory section. Review a sample first so you know whether it makes sense without its layout.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Save a long-form article as PDF.</li>
-          <li>Import it into LoudReader.</li>
-          <li>Lean back, close your eyes, and listen.</li>
-          <li>Ten minutes later, your eyes feel fresher and you absorbed the article.</li>
+          <li><strong>Suitable for a trial:</strong> an article or report section whose argument is explained in ordinary sentences.</li>
+          <li><strong>Keep the page available:</strong> charts, tables, equations and references to a figure you need to inspect.</li>
+          <li><strong>Keep a visual verification pass:</strong> financial figures, contractual wording or other material where an extraction or pronunciation error could matter.</li>
         </ul>
-        <p>
-          Because LoudReader is fully on-device and private, your library
-          never leaves your device, this works on a work machine without
-          sending company documents or reading material to a cloud service.
-          For more on the privacy side, see{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text to speech with no cloud
-          </Link>
-          .
-        </p>
+        <p>If a document continually sends you back to the screen, choose another task for the listening break. A different format does not automatically make every document suitable for audio.</p>
       </QuestionSection>
-
-      <QuestionSection question="What is the best device setup for eye-strain listening?">
-        <p>
-          iPhone with earbuds is the simplest. The screen stays locked, the
-          lock-screen controls handle play and pause, and you can lie in any
-          position. The Mac app works well for at-desk listening breaks: turn
-          off your display or look away from it while the book plays through
-          your computer's speakers.
-        </p>
-        <p>
-          For bedtime listening specifically, combine the sleep timer with
-          ambient soundscapes (both Premium features). Set the timer for 30
-          minutes, pick a rain or ocean backdrop, and let the book fade out
-          on its own. We covered the bedtime use case in detail in{" "}
-          <Link
-            href="/blog/fall-asleep-to-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            fall asleep to audiobooks
-          </Link>
-          .
-        </p>
+      <QuestionSection question="How do you try one listening break?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Choose a short document or section you are allowed to use in the reader.</li>
+          <li>Import a supported file and check the extracted text and reading order.</li>
+          <li>Start playback and establish where pause and resume are before looking away.</li>
+          <li>Put the display out of use for the listening period. Do not replace reading with phone scrolling.</li>
+          <li>Pause when you need a note or a figure, or when you would prefer a complete break from work.</li>
+        </ol>
+        <p>This is a practical trial, not a ten-minute relief protocol. Notice whether the workflow is comfortable and useful without turning symptoms into a measure of how much more work you can finish.</p>
       </QuestionSection>
-
-      <QuestionSection question="What voice and speed work best when your eyes are tired?">
-        <p>
-          Comfort matters more than speed when you are already fatigued. Pick
-          the clearest, most natural-sounding voice you can find. LoudReader
-          offers 23 studio narrators across 10 languages, all free to try for the first 8 listening hours.
-          A voice that sounds slightly robotic or harsh is grating when your
-          senses are already worn out.
-        </p>
-        <p>
-          Speed is personal, but most people prefer slightly below their
-          normal listening speed when their eyes are tired. If you normally
-          listen at 1.5x, try 1.2x. The goal is absorption without effort.
-          Speed control from 0.3x to 3.0x is a Premium feature; the free tier
-          plays at normal speed.
-        </p>
+      <QuestionSection question="Where does LoudReader fit?">
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> reads supported DRM-free EPUBs and PDFs and can continue narration with an iPhone or iPad locked. Compatible Apple Silicon Macs can run its iPad build; it is not a separate native Mac application. For a long report, the <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">PDF guide</Link> explains the import path.</p>
+        <p>{FREE_TIER.full} The sleep timer, soundscapes and speed control from 0.3x to 3.0x require Premium. A particular voice or speed is a preference, not a medical setting. Choose something you can follow without straining to keep up.</p>
+        <p>Speech and PDF text recognition run locally, so a book is not uploaded to a speech server for narration. The app also sends diagnostics and analytics. For work documents, follow your organisation&apos;s software and information-handling policies rather than treating local speech as an automatic approval to import anything.</p>
       </QuestionSection>
-
+      <QuestionSection question="What about reading after work?">
+        <p>A workday break and an evening book need not use the same routine. During work, you may need to return to figures or take notes. In the evening, you might prefer continuous audio with no text visible at all.</p>
+        <p>The <Link href="/blog/read-aloud-for-visual-fatigue" className="text-loudBlue hover:underline">evening read-aloud routine</Link> covers preparing a book, using lock-screen controls and stopping when listening also feels like effort.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Rest your eyes. Keep your book."
-        subline="Import any EPUB or PDF, press play, and listen with the screen off. Free, on-device, no account."
-      />
+      <StoreCta headline="Try listening to one suitable document" subline="Check the file, start narration and put the screen away. Take complete breaks when you need them." />
     </ArticleLayout>
   );
 }

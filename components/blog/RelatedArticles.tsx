@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { formatArticleDate, getAllArticles } from "./articles";
+import { formatArticleDate, getRelatedArticles } from "./articles";
 
 /**
  * "Keep reading" block (server component).
  * Driven entirely by the build-time article manifest (components/blog/articles.ts
  * globs each app/blog/(posts)/<slug>/meta.json), so writers never edit a central
- * related-articles list. Shows the newest articles other than the current one; renders
+ * related-articles list. Prioritises the current topic or release series; renders
  * nothing while the blog has a single article.
  */
 export default function RelatedArticles({
@@ -15,9 +15,7 @@ export default function RelatedArticles({
   currentSlug: string;
   max?: number;
 }) {
-  const related = getAllArticles()
-    .filter((article) => article.slug !== currentSlug)
-    .slice(0, max);
+  const related = getRelatedArticles(currentSlug, max);
 
   if (related.length === 0) return null;
 

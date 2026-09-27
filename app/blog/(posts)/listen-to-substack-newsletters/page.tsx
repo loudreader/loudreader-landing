@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,184 +6,83 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ListenToSubstackNewslettersArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Substack has no built-in text-to-speech button for newsletters. Some
-          authors record their own audio, and those posts have a play button at
-          the top. For every other newsletter, the path to listening is
-          straightforward: open the post in Safari, use Reader view to strip
-          the noise, export as PDF, and import into <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac). LoudReader reads the PDF aloud with
-          natural offline voices and remembers your place. It is fully
-          on-device and private, your library never leaves your device. If you
-          subscribe to paid newsletters, make sure you are logged in before
-          exporting, otherwise the PDF captures the paywall, not the article.
-          No account is needed for LoudReader itself.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Newsletter to audio: open, export, import, press play. Three steps."
-      />
-
-      <QuestionSection question="Does Substack let me listen to newsletters?">
-        <p>
-          Only the ones where the author recorded a narration. A growing number
-          of Substack writers record themselves reading each post, and Substack
-          added built-in audio support for that in 2023. When a post has audio,
-          a play button appears below the title, and you can listen right in
-          the browser or the Substack app. The quality is whatever the
-          author&apos;s microphone produces. It is a human reading, not TTS.
-        </p>
-        <p>
-          For the vast majority of Substack posts, there is no audio. The post
-          is text, and Substack gives you no button to listen to it. That is
-          the gap this guide covers.
-        </p>
+      <Tldr><p>
+        Start with the play button in the Substack app. Substack supports
+        text-to-speech for many English posts, as well as recordings supplied
+        by writers. If you want an independent reading copy, LoudReader can
+        import a public article link or a PDF you have saved from the post or
+        email. Subscriber access still matters: a URL alone may expose only
+        the public preview. Choose the workflow for the way the newsletter
+        actually reaches you, rather than exporting every post automatically.
+      </p><p className="text-sm">We make LoudReader; this guide also covers Substack’s own listening option.</p></Tldr>
+      <ArticleIllustration variant="waveform" caption="A newsletter may already have audio. A saved copy is an optional second route." />
+      <QuestionSection question="Can I listen directly in Substack?">
+        <p>Open a post in the Substack app and try its play icon. Substack’s
+        help page says text-to-speech is available for most, but not all,
+        publications, and currently for English posts. An older or ineligible
+        post may report that audio is unavailable. Playback can continue in
+        the background. See <a href="https://support.substack.com/hc/en-us/articles/7265753724692-How-do-I-listen-to-a-Substack-post" className="text-loudBlue hover:underline">Substack’s listening instructions</a>.</p>
+        <p>Writers can also add their own voiceovers. When offered, that can
+        be a useful choice if you want to hear the writer’s delivery. Substack
+        explains the distinction in its <a href="https://support.substack.com/hc/en-us/articles/7265784112916-How-do-I-add-a-voiceover-to-my-Substack-post" className="text-loudBlue hover:underline">voiceover documentation</a>.</p>
       </QuestionSection>
-
-      <QuestionSection question="How do I listen to a text-only Substack post?">
-        <p>
-          The workflow is the same as listening to any web article. Here it is
-          step by step:
-        </p>
+      <QuestionSection question="How do I save a public newsletter for local listening?">
+        <p>Copy the post’s article URL and choose <strong>Paste a Link</strong>{" "}
+        in LoudReader, or use its share extension. Import while online, then
+        compare the saved text with the source. Headings, the last paragraph,
+        and a passage near the middle are useful checks.</p>
+        <p>This is a general article importer, not a Substack account
+        integration. It does not subscribe to publications, monitor your inbox
+        or fetch each new post automatically. A page that exposes too little
+        text or requires JavaScript can fail to import.</p>
+        <p>LoudReader runs on iPhone and iPad, and as an iPad app on compatible
+        Apple Silicon Macs. The <Link href="/listen-to-articles-mac" className="text-loudBlue hover:underline">article listening guide</Link>{" "}
+        explains the Mac option.</p>
+      </QuestionSection>
+      <QuestionSection question="What about posts I receive as a paying subscriber?">
+        <p>A link copied from an authenticated browser does not necessarily
+        carry that login into another app. If the importer receives a preview,
+        it cannot read the missing text. Open the complete post using your
+        authorised access, then use your browser’s PDF or print export if it
+        produces a readable copy. Alternatively, save the complete newsletter
+        email as a PDF.</p>
+        <p>Inspect that PDF before importing it. Look for a subscription
+        prompt in place of the ending, clipped text, and repeated headers.
+        A PDF export is not a paywall workaround. The separate <Link href="/blog/listen-to-long-emails-aloud" className="text-loudBlue hover:underline">long-email guide</Link>{" "}
+        covers handling email copies without connecting LoudReader to an inbox.</p>
+      </QuestionSection>
+      <QuestionSection question="What should I keep on screen?">
+        <p>A newsletter may make its point through a chart, screenshot or
+        embedded video. Narration of the surrounding paragraphs will not
+        necessarily explain those elements. Review them before listening, or
+        pause and return to the original when the author refers to a visual.</p>
+        <p>Comments, linked discussions and later corrections are also
+        separate from the saved article. Keep the source link with your notes.
+        If you save several editions of an ongoing series, name them with the
+        date and topic so you can tell which version you heard.</p>
+      </QuestionSection>
+      <QuestionSection question="How do I make a manageable newsletter queue?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Open the post in Safari.</strong>{" "}
-            On iPhone or Mac, open the Substack post in Safari rather than the
-            Substack app. If it is a subscriber-only post, make sure you are
-            logged in.
-          </li>
-          <li>
-            <strong className="text-gray-900">Activate Reader view.</strong>{" "}
-            Tap or click the Reader button in the Safari address bar. Reader
-            view strips the Substack branding, the subscribe prompts, the
-            comment section, and everything that is not the article text. You
-            get a clean page with just the headline and the body.
-          </li>
-          <li>
-            <strong className="text-gray-900">Export as PDF.</strong> On Mac,
-            go to File then Export as PDF. On iPhone, tap the share button,
-            find Print, pinch outward on the preview to open it as a PDF, then
-            save to Files or share directly to LoudReader.
-          </li>
-          <li>
-            <strong className="text-gray-900">Import into LoudReader.</strong>{" "}
-            Open LoudReader, import the PDF, and press play. The app reads the
-            newsletter aloud with natural neural voices.
-          </li>
+          <li>Choose the few posts you intend to hear this week; leave quick announcements in the inbox.</li>
+          <li>Use the existing audio if it suits you. Save a local copy only when that adds something useful.</li>
+          <li>Check each import before going offline, including the voice you plan to use.</li>
+          <li>After listening, keep the source and any notes you need, then remove redundant reading copies.</li>
         </ol>
-        <p>
-          After you do this once, the whole sequence takes about 30 seconds. If
-          you read several newsletters in a session, you can export them all
-          as PDFs first, then import them into LoudReader as a batch.{" "}
-          <Link
-            href="/listen-to-pdf-iphone"
-            className="text-loudBlue hover:underline"
-          >
-            Listening to PDFs on iPhone
-          </Link>{" "}
-          covers the import side in more detail.
-        </p>
+        <p>LoudReader generates speech on device, but downloading a new post
+        uses the network. It also includes diagnostics and usage analytics;
+        local narration is a narrower claim than an entirely network-free
+        application. Unlimited article saving is a Premium feature after the
+        free allowance. The <Link href="/" className="text-loudBlue hover:underline">LoudReader overview</Link>{" "}
+        describes the app alongside its book-reading features.</p>
       </QuestionSection>
-
-      <QuestionSection question="What are the honest limits of this approach?">
-        <p>
-          The approach works, and it has real tradeoffs worth knowing before
-          you commit to it:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Manual export.</strong> There is
-            no &quot;send this Substack to LoudReader&quot; button. Every post
-            needs a manual export. This takes seconds per post, and if you read
-            ten newsletters a day, you will spend a few minutes a day
-            exporting. Whether that friction is acceptable depends on how much
-            you value listening over reading.
-          </li>
-          <li>
-            <strong className="text-gray-900">Paywall honesty.</strong>{" "}
-            If a post is behind a paywall and you are not subscribed, the PDF
-            captures the paywall message (usually a &quot;subscribe to
-            read&quot; prompt with a blurred preview). The text behind the
-            paywall does not export. You must be an active subscriber and
-            logged in to capture the full article.
-          </li>
-          <li>
-            <strong className="text-gray-900">No embedded content.</strong>{" "}
-            Substack posts often include embedded tweets, YouTube videos,
-            charts, and Substack Notes. None of these produce audio. The TTS
-            voice reads the surrounding text and skips the embeds. If the
-            author describes what is in the embed, you hear the description.
-            If not, you miss that content entirely.
-          </li>
-          <li>
-            <strong className="text-gray-900">No comment section.</strong>{" "}
-            Reader view strips the comments, which is usually what you want
-            for listening, but some Substack communities have comment threads
-            that are worth reading separately.
-          </li>
-        </ul>
-      </QuestionSection>
-
-      <QuestionSection question="Can I build a newsletter listening queue?">
-        <p>
-          You can, but the queue is a folder of PDFs, not a live feed. Here is
-          a practical workflow that several LoudReader users have settled on:
-        </p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            When a newsletter arrives in your inbox, open it in Safari and
-            export it as a PDF immediately. Save it to a dedicated folder
-            (iCloud Drive, or a local folder on your Mac).
-          </li>
-          <li>
-            At the end of the day or week, open LoudReader and import the
-            PDFs you collected. The app lists them in its library, and you
-            can play them in any order.
-          </li>
-          <li>
-            Delete each PDF from LoudReader when you are done listening, or
-            keep them as a reference archive.
-          </li>
-        </ol>
-        <p>
-          This is not as slick as a podcast app that auto-downloads new
-          episodes. It is a manual queue. But it works, it is entirely offline
-          once the PDFs are imported, and it keeps your reading private.
-          LoudReader is fully on-device and private, your library never leaves
-          your device, so your newsletter queue is not mined or profiled by a
-          cloud service.
-        </p>
-        <p>
-          For a broader look at turning web content into audio, see{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          . The same principles apply to newsletters.
-        </p>
-      </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Give your inbox a voice"
-        subline="Export your Substack newsletters as PDFs and listen in LoudReader. Offline, private, no account needed."
-      />
+      <StoreCta headline="Try your own document in LoudReader" subline="Import a supported file and check a short passage before a longer listening session." />
     </ArticleLayout>
   );
 }

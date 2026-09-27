@@ -1,45 +1,29 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-11-01 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Background playback / lock screen: Info.plist UIBackgroundModes = ["audio"];
-//     MPRemoteCommandCenter in PlayerService.swift (play, pause, 15s skip).
-//   - On-device voices: Apple speech synthesis, all local. Works without
-//     internet, which matters for parents multitasking around the house.
-//   - Speed 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed).
-//   - Sleep timer: Premium (PaywallReason.sleepTimer).
-//   - Word-by-word highlighting: free (ReaderStylesheet.swift).
-//   - EPUB/PDF import + 70,000+ Gutenberg: verified in-app.
-//   - Free tier unlimited listening: SubscriptionAccess.swift.
-//   - Voice selection: 23 studio narrators in 10 languages, all free for first 8 hours, 1 free
-//     thereafter, all 8 on Premium.
-// NO claims about: parenting advice, child development, audiobook efficacy
-// for children, or sleep training. The article is about fitting adult reading
-// into a parenting schedule.
+// FACT PROVENANCE — editorial verification 2026-09-28.
+// App-source audit on 2026-09-28: LoudReader release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0, released 2026-09-22 (Apple lookup id6758149478). Sources: LoudReader/PlayerService.swift (saved position, background audio, remote controls); ContentView.swift and BookImportService.swift (EPUB/PDF imports); Subscription/SubscriptionAccess.swift, SubscriptionManager.swift and Subscription/PaywallReason.swift (8-hour eligible-voice allowance, limited free English selection thereafter, paid speed/timer, free notes); LoudReaderApp.swift and Analytics.swift (diagnostics and usage analytics); PDFImportPipeline.swift (local OCR with limits). Source review, not new runtime testing.
+// SleepTimerFloatingMenu.swift options [15,30,60]; PlayerService.tickSleepTimer pauses playback. No child-development or sleep-benefit claims.
+// Practical workflows are editorial suggestions, not measured outcomes or medical promises.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "How do parents actually find time to read?",
-    a: "They do not find it, they borrow it from activities where their hands are busy but their mind is free. Dishes, laundry, night feeds, stroller walks, the drive to daycare. These are all reading opportunities if the book lives in your ears. The honest truth is that the two-hour reading session is gone, but six 15-minute listening sessions scattered through the day add up to a chapter.",
+    "q": "Do I need a long session for it to be worthwhile?",
+    "a": "No. A few enjoyable minutes are worthwhile on their own. Short sessions will not necessarily finish a chapter, and you do not need to turn them into a book-count target."
   },
   {
-    q: "Can I listen while holding a sleeping baby?",
-    a: "Yes, and this is one of the most common parent reading hacks. Baby falls asleep on you, the room is dark, you cannot move, and you cannot hold a book or a phone screen. One earbud in, playback running on device, and you get through a chapter of something that is not about parenting. The sleep timer (Premium) stops playback so you do not wake up three hours later with the book still going.",
+    "q": "Will the app remember what I heard?",
+    "a": "It can save the playback position, but it cannot tell when you stopped paying attention. Rewind to the last passage you recognise after an interruption."
   },
   {
-    q: "What if the book I want has no audiobook edition?",
-    a: "This is where text-to-speech fills the gap. Most books were never recorded, and the ones that were tend to be bestsellers. If you are reading something niche, a backlist novel, or a book you already own as an EPUB, LoudReader turns it into audio on the spot. Import the file and press play. No conversion, no waiting. The narration is generated live on your device with natural offline voices.",
+    "q": "Is one earbud enough to keep me aware of a child?",
+    "a": "No headphone arrangement guarantees attention. Use a setup that lets you notice your surroundings, and pause the audio whenever supervision needs your attention."
   },
   {
-    q: "Does listening work with one earbud?",
-    a: "Yes. Parents often keep one ear free for kid sounds and one earbud in for the book. Mono audio mode (built into iOS settings) routes both channels to one ear so you do not miss half the narration. LoudReader plays through whatever audio output your phone is using, earbuds or speaker.",
+    "q": "Can I use an ebook I already own?",
+    "a": "Yes, if you have a supported DRM-free EPUB or PDF. Store or library access alone does not necessarily give you an importable file."
   },
   {
-    q: "Can I pause and come back days later?",
-    a: "Yes. LoudReader remembers your place in every book. You can stop mid-sentence when the toddler needs you and pick up exactly there three days later. The app is free with no account, and everything stays local: it is fully on-device and private, your library never leaves your device.",
-  },
-  {
-    q: "What speed works best for distracted listening?",
-    a: "Slightly slower than your desk speed. If you normally listen at 1.5x, try 1.2x when you are also doing dishes. The divided attention means you need a pace that lets you absorb without effort. Slower speeds from 0.8x to 1.0x also work well for late-night listening when you are tired and not fighting for speed. Speed control from 0.3x to 3.0x is a Premium feature.",
-  },
+    "q": "Can I listen without paying for Premium?",
+    "a": "Try every available voice for your first 8 hours of listening. Afterwards, a free English voice selection remains available with unlimited book listening. Speed control and the sleep timer are paid features."
+  }
 ];

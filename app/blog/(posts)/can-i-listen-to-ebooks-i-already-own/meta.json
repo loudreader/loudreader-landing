@@ -1,9 +1,10 @@
 {
   "slug": "can-i-listen-to-ebooks-i-already-own",
   "title": "Can I Listen to Ebooks I Already Own?",
-  "description": "Yes, if they're DRM-free. Store-bought Kindle, Kobo, and Apple Books files are usually locked. Here's how to tell which of your ebooks will actually play.",
+  "description": "Check your ebook’s download format and DRM, including eligible Kindle EPUB/PDF downloads. Choose an importable copy or listen in the original service.",
   "publishedAt": "2026-10-15",
   "lastModified": "2026-10-15",
   "avatar": "Time-Starved Book Lover",
-  "query": "listen to ebooks i already own"
+  "query": "listen to ebooks i already own",
+  "topic": "formats"
 }

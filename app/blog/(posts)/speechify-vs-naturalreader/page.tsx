@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,7 +6,8 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { PRICING } from "@/components/money/site";
+import Disclosure from "@/components/blog/Disclosure";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,176 +19,124 @@ export default function SpeechifyVsNaturalReaderArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          Speechify and NaturalReader are the two most visible cloud-based
-          TTS apps. Both sound excellent. Both need an internet connection
-          for their best voices. Both are subscription-only. Speechify
-          leans toward a mobile-first, consumer experience with
-          celebrity-voiced options and heavy marketing. NaturalReader is
-          cleaner, more document-oriented, and has wider format support.
-          Neither lets you buy the app once and own it. If you want a third
-          path, <strong>LoudReader</strong> (iPhone, iPad, and Mac)
-          does TTS differently: it is fully on-device and private, your
-          library never leaves your device. Natural offline voices, no
-          account, and a free tier with {PRICING.free} Premium is{" "}
-          {PRICING.premiumMonthly} or {PRICING.premiumYearly}, with a{" "}
-          {PRICING.premiumLifetime} option. No word quotas, no data
-          collection, no internet dependency.
+          Compare the edition and workflow before choosing between Speechify
+          and NaturalReader. Both offer reading tools across web and mobile;
+          voice access, document handling and usage allowances depend on the
+          plan. NaturalReader also sells separate desktop software, which
+          should not be confused with its web/mobile subscription. There is
+          no measured voice-quality winner in this article. The useful test
+          is which app handles your documents, preferred narrator and devices
+          with the least friction at a price you accept.
         </p>
       </Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Use the same documents to compare import quality, controls and plan limits." />
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="Two cloud leaders, one offline alternative. Fair comparison without the hype."
-      />
-
-      <QuestionSection question="Speechify: the consumer TTS powerhouse">
+      <QuestionSection question="Which versions are being compared?">
         <p>
-          Speechify is the most visible name in consumer text-to-speech.
-          Its marketing is everywhere. The app itself is polished,
-          mobile-first, and designed for a broad audience. It reads
-          documents, web pages, and ebooks with cloud-based neural voices
-          that sound genuinely good.
+          This comparison concerns Speechify&apos;s reader and NaturalReader&apos;s
+          personal reading plans. Both companies sell other speech products;
+          a creator or commercial voice-generation plan is not automatically
+          the plan you need to listen to books. Check that the checkout page
+          names the product you tested.
         </p>
         <p>
-          Speechify&apos;s standout features include celebrity-voiced
-          options, a strong mobile interface, cross-platform support, and
-          document scanning. It targets students, professionals, and
-          anyone who wants to &quot;read faster.&quot; The free tier gives
-          you a taste of the cloud voices with a word limit; the paid
-          version removes caps and adds features.
-        </p>
-        <p>
-          The honest strengths: the app works well, the voices sound great,
-          and the ecosystem covers most platforms. The honest trade-offs:
-          everything good requires a subscription, the best voices need
-          internet, and your reading material gets processed on
-          Speechify&apos;s servers.
+          NaturalReader&apos;s <a href="https://help.naturalreaders.com/en/articles/8854700-plans-pricing-personal-version" className="text-loudBlue hover:underline">personal plans</a>
+          include web, mobile and Chrome access. Its separate
+          <a href="https://www.naturalreaders.com/software.html" className="text-loudBlue hover:underline"> desktop software</a>
+          is advertised with a perpetual licence. Saying that NaturalReader
+          never offers a one-time purchase would therefore be incorrect.
+          Check compatibility before buying that edition, since the advertised
+          system requirements differ from the web product.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="NaturalReader: the document specialist">
+      <QuestionSection question="How do the free and paid plans differ?">
         <p>
-          NaturalReader has been in the TTS space longer than Speechify. It
-          positions itself as a practical tool: read documents, PDFs, and
-          web pages aloud in a clean, no-fuss interface. The voice quality
-          is strong, particularly for non-fiction and informational
-          reading. It supports a wider range of file formats than Speechify
-          out of the box, including Word documents and plain text files.
+          <a href="https://speechify.com/pricing/" className="text-loudBlue hover:underline">Speechify</a>
+          separates its basic free voices from Premium voices and additional
+          features. Premium also has a
+          <a href="https://speechify.com/usage-limits/" className="text-loudBlue hover:underline"> usage policy</a>
+          ; paying does not remove all limits.
         </p>
         <p>
-          NaturalReader&apos;s interface is more desktop-oriented. It feels
-          like a utility rather than a lifestyle app. For people who want
-          to convert documents to audio without the flash, NaturalReader
-          delivers a focused experience. The premium voices are
-          cloud-based, meaning the same internet dependency applies.
+          <a href="https://help.naturalreaders.com/en/articles/8823770-voices-languages-and-tts-limits-personal-version" className="text-loudBlue hover:underline">NaturalReader</a>
+          allows unlimited use of its available system Free Voices, while
+          AI voice access has separate allowances. Its paid voice tiers
+          also differ. A free plan can therefore remain useful after an AI
+          sample ends; judge the voice you can actually keep using.
         </p>
         <p>
-          The honest strengths: clean interface, good format support,
-          reliable voice quality, and a straightforward reading experience.
-          The honest trade-offs: subscription-only pricing, cloud
-          dependency for premium voices, and less mobile polish than
-          Speechify.
+          Pricing and plan names here were checked on 28 September 2026.
+          Use the linked vendor pages and your local purchase sheet for the
+          actual billed amount. Compare like for like: monthly with monthly,
+          the same voice tier, and the same kind of listening or audio generation.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Where do they overlap, and where do they differ?">
+      <QuestionSection question="Which is better for PDFs and study documents?">
         <p>
-          Both apps use cloud-based neural TTS for their best voices. Both
-          are subscription-based with no lifetime purchase. Both have web
-          versions alongside mobile apps. Both send your text to servers
-          for processing. If you put their premium voices side by side,
-          most listeners would find them comparable with minor differences
-          in expressiveness and voice catalog.
+          A file-format list cannot answer that on its own. NaturalReader
+          documents formats including PDFs, EPUBs and Word files, plus OCR
+          in paid personal plans. Speechify advertises scanning. Neither
+          feature list proves that a particular journal article, equation
+          or two-column handout will be read in the right order.
         </p>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Import the same representative file into each app.</li>
+          <li>Check the first page after the contents, then a page with footnotes or columns.</li>
+          <li>Listen for repeated headers, missing text and incorrect reading order.</li>
+          <li>Try returning to the same paragraph after closing the app.</li>
+        </ol>
         <p>
-          The differences are about positioning. Speechify is the consumer
-          brand: celebrity voices, viral marketing, reading speed as a
-          productivity hack. NaturalReader is the utility brand:
-          document-focused, clean UI, fewer bells and whistles. Speechify
-          supports more platforms and integrations. NaturalReader supports
-          more file formats directly.
-        </p>
-        <p>
-          For the core job of reading text aloud, both do it well. Choosing
-          between them comes down to whether you prefer the Speechify
-          ecosystem and voice catalog or NaturalReader&apos;s simpler,
-          document-first approach.
+          If the imported text is wrong, changing the narrator rarely fixes
+          it. For study, reliable navigation back to the original passage
+          can matter more than the number of voices on offer.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What about the third option: LoudReader?">
+      <QuestionSection question="What about offline listening and audio files?">
         <p>
-          Both Speechify and NaturalReader share a fundamental architecture:
-          cloud processing. That means your text leaves your device, you
-          need internet for premium voices, there are per-word costs that
-          lead to quotas, and there is no lifetime purchase.
+          Ask three separate questions: can you generate new speech offline,
+          can you replay prepared audio offline, and can you export a usable
+          audio file? These are different capabilities. NaturalReader&apos;s
+          <a href="https://help.naturalreaders.com/en/articles/11543218-working-with-text-and-audio-personal-version" className="text-loudBlue hover:underline"> audio guide</a>
+          describes paid MP3 conversion, subject to its voice and usage rules.
+          That feature is not included simply because a voice can read a page.
         </p>
         <p>
-          LoudReader takes the other path. It is fully on-device and
-          private, your library never leaves your device. The voices run on
-          your iPhone or Mac, not on a server. There is no per-word cost,
-          so the free tier is genuinely unlimited. There is no account, so
-          there is no data to collect. And there is a{" "}
-          {PRICING.premiumLifetime} option alongside the subscription tiers.
-        </p>
-        <p>
-          The trade-off: LoudReader&apos;s voices, while natural and
-          pleasant, may be slightly less expressive than the best cloud
-          voices from Speechify or NaturalReader. LoudReader reads EPUB and
-          PDF files, not web pages, Word documents, or scanned documents
-          directly. LoudReader runs on iPhone, iPad, and Apple Silicon Macs only, no web
-          version or Android support.
-        </p>
-        <p>
-          If you want{" "}
-          <Link
-            href="/speechify-alternative-for-mac"
-            className="text-loudBlue hover:underline"
-          >
-            a Speechify alternative for Mac
-          </Link>{" "}
-          that runs offline, or{" "}
-          <Link
-            href="/loudreader-vs-speechify"
-            className="text-loudBlue hover:underline"
-          >
-            a direct comparison between LoudReader and Speechify
-          </Link>
-          , those pages cover the cloud vs. on-device trade-offs in more
-          detail.
+          If offline use is essential, test the exact plan, voice and device
+          after preparing your document. Review upload and retention terms
+          before using either service for sensitive work; successful offline
+          playback does not establish how the audio was originally generated.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Which one should you actually pick?">
+      <QuestionSection question="Where does LoudReader fit in this choice?">
+        <Disclosure />
         <p>
-          Pick Speechify if you want the most consumer-friendly experience
-          with celebrity voices, cross-platform support, and do not mind a
-          subscription. The app is well-made and the marketing is heavy
-          because the product actually works.
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>
+          {" "}offers local book narration on iPhone and iPad, and on compatible
+          Apple Silicon Macs as an iPad app. {FREE_TIER.full} It supports
+          DRM-free EPUBs, PDFs and saved web articles, including on-device
+          text recognition for scanned PDFs. Difficult layouts still need checking.
         </p>
         <p>
-          Pick NaturalReader if you want a cleaner, more document-focused
-          tool with wider native format support and a simpler interface.
-          Good for professionals who read reports, research, and
-          documents.
+          It does not automatically sync your library or position between
+          devices. Narrators depend on hardware, and the permanent free
+          selection is English. The app generates speech locally but also
+          sends crash/performance diagnostics and usage analytics, with no
+          visible in-app switch in release 1.12. Those are concrete trade-offs
+          to consider alongside its local narration and one-time Premium option.
         </p>
         <p>
-          Pick LoudReader if you read mostly books (EPUB and PDF), want
-          everything to work offline on Mac and iPhone, care about privacy,
-          and like the idea of a free unlimited tier with a lifetime
-          purchase option. LoudReader is fully on-device and private, your
-          library never leaves your device, and the natural offline voices
-          are good enough for hours of comfortable reading with no
-          internet dependency.
+          See <Link href="/loudreader-vs-speechify" className="text-loudBlue hover:underline">LoudReader and Speechify compared</Link>
+          {" "}if those two workflows fit your shortlist. Choose from the
+          features you have tested rather than labels such as &quot;consumer
+          app&quot; or &quot;document specialist.&quot;
         </p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Read books offline, no subscription required"
-        subline="Natural voices on Mac and iPhone. Free unlimited tier, lifetime purchase available."
-      />
+      <StoreCta headline="Try local book narration with LoudReader" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

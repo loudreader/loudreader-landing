@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { PRICING, FREE_TIER } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,145 +20,123 @@ export default function SpeechCentralAlternativeArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          Speech Central and LoudReader are the two apps in the TTS space
-          that genuinely work the same way: offline EPUB and PDF reading
-          with no cloud dependency. Speech Central has wider platform
-          support with Apple Watch and Android. LoudReader has better voice
-          quality and runs on Apple Silicon Macs as well as iPhone and iPad. <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) gives you natural offline voices that
-          sound closer to a real reader, plus a generous free tier with no
-          word cap. It is fully on-device and private, your library never
-          leaves your device. If you are on Android or need Watch support,
-          Speech Central is your answer. If you live in the Apple ecosystem
-          and want the best voices, LoudReader is the pick.
+          Speech Central is already a capable option for listening to documents
+          and web content across Apple devices, Android and Windows. LoudReader
+          is an alternative to try for book listening on iPhone or iPad, with
+          local narration and a free English voice selection after the initial
+          voice allowance. Its iPad app also runs on compatible Apple Silicon
+          Macs. There is no established voice-quality winner between the two:
+          the voice you select, your language and your document matter. If
+          Speech Central fits your workflow, try another voice or adjust its
+          settings before assuming you need a different reader.
         </p>
+        <Disclosure />
       </Tldr>
 
-      <ArticleIllustration
-        variant="devices"
-        caption="Two apps, two philosophies. Pick what fits your devices."
-      />
+      <ArticleIllustration variant="devices" caption="Check the app on each device you actually use, including how you move your files." />
 
-      <QuestionSection question="Why compare these two apps specifically?">
+      <QuestionSection question="Does Speech Central have a Mac app?">
         <p>
-          Most text-to-speech apps rely on cloud processing for their best
-          voices. Speechify, NaturalReader, ElevenReader: they all send
-          your text to a server to generate speech. That works fine with
-          good internet, but it means your documents leave your device and
-          playback fails when your signal drops.
+          Yes. Speech Central lists <a href="https://speechcentral.net/" className="text-loudBlue hover:underline">iPhone, iPad, Mac, Android and Windows</a>
+          {" "}versions, and has a separate <a href="https://apps.apple.com/us/app/speech-central-text-to-speech/id1223093645?mt=12" className="text-loudBlue hover:underline">Mac App Store listing</a>.
+          {" "}Claims that it skips the Mac are wrong. If a desktop interface or
+          an Android phone is central to your reading, include it in your trial.
         </p>
         <p>
-          Speech Central and LoudReader are the exceptions. Both process
-          everything locally on your device. No upload. No account
-          required. No internet needed. They are the two apps that share
-          the same core philosophy, so comparing them is less about which
-          is &quot;better&quot; and more about which trade-offs fit your
-          situation.
+          LoudReader&apos;s Mac support is different: you run its iPad app in
+          Apple&apos;s compatibility mode. It is not a separate native Mac build
+          and does not support Intel Macs. It also has no automatic library or
+          reading-position sync. A shared file in iCloud Drive is only a way to
+          import the same document, not a promise that playback continues at the
+          same sentence on another device.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Where does Speech Central lead?">
+      <QuestionSection question="How should you compare the voices?">
         <p>
-          Speech Central wins on platform reach. It is available on iPhone,
-          iPad, Apple Watch, and Android. If you use an Apple Watch and
-          want to control playback from your wrist, or if you have an
-          Android phone alongside an iPad, Speech Central covers more of
-          your devices.
+          Speech Central offers an open voice platform with offline and optional
+          cloud voices, rather than a single fixed narration engine. That makes
+          statements such as &ldquo;all Speech Central voices are offline&rdquo;
+          or &ldquo;they are only basic system voices&rdquo; misleading. Check the
+          voice configuration and any separate service costs in the version you
+          plan to use. Its <a href="https://apps.apple.com/us/app/speech-central-text-to-speech/id1223093645?mt=12" className="text-loudBlue hover:underline">Mac product listing</a>
+          {" "}describes the current options.
         </p>
         <p>
-          Speech Central also reads web articles and RSS feeds natively. If
-          you want to catch up on blog posts and news articles by listening
-          to them, Speech Central pulls those in directly. LoudReader is
-          focused on books: EPUB and PDF files. For web articles, you can
-          save them as PDF first and import them, but there is no built-in
-          RSS reader or browser.
-        </p>
-        <p>
-          If your reading life centers on web content as much as books,
-          Speech Central has a real edge in workflow convenience.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Where does LoudReader lead?">
-        <p>
-          LoudReader wins on voice quality. It uses more modern on-device
-          neural voices that sound noticeably closer to a human narrator
-          than the system voices Speech Central defaults to. Both apps are
-          offline, but LoudReader&apos;s natural offline voices are a
-          generation ahead.
-        </p>
-        <p>
-          LoudReader runs on iPhone, iPad, and Apple Silicon Macs. Speech Central
-          skips the Mac entirely. If you read at your desk sometimes and on
-          your phone sometimes, LoudReader gives you the same app, same
-          voices, same library on both, synced through iCloud. The Mac app
-          is not a scaled-up phone interface; it is built for the desktop
-          screen with proper keyboard shortcuts and window management.
-        </p>
-        <p>
-          LoudReader&apos;s free tier is genuinely free:{" "}
-          {PRICING.free} Speech Central is a paid app. You can try it first,
-          but there is no permanent free option.
-        </p>
-        <p>
-          LoudReader also builds in a catalog of 70,000+ free Project
-          Gutenberg classics you can start reading without importing
-          anything. Speech Central does not include a book catalog.
+          LoudReader generates narration locally and includes studio voices on
+          supported devices. That is a description of where speech is made,
+          not evidence that it sounds better. Use the same chapter in both
+          apps, keep the speed comfortable, and include dialogue, a heading,
+          unfamiliar names and numbers. Listen for repeated mistakes, pauses
+          that interrupt meaning and whether you still like the voice after
+          several pages. For a bilingual library, repeat this in both languages.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How does pricing compare?">
+      <QuestionSection question="What if most of your reading comes from the web?">
         <p>
-          Speech Central is a one-time purchase app. You pay once and get
-          the full feature set. No subscription. That is a fair and honest
-          pricing model that respects the user.
+          Speech Central has a <a href="https://speechcentral.net/2023/09/02/elevate-your-voice-reading-experience-with-speech-central-beyond-the-ordinary/" className="text-loudBlue hover:underline">web-reading workflow</a>
+          {" "}for headlines, articles and RSS. That is worth evaluating if your
+          listening queue begins with feeds rather than book files.
+          LoudReader can also save web articles from links or the share
+          extension, so converting every article to PDF is not necessary.
+          Its free article-saving allowance is 30 saves, with unlimited saving
+          in Premium.
         </p>
         <p>
-          LoudReader takes a different approach. {FREE_TIER.full} No account
-          needed. Premium adds{" "}
-          {PRICING.premiumFeatures} for{" "}
-          {PRICING.premiumMonthly} or {PRICING.premiumYearly}. There is
-          also a {PRICING.premiumLifetime} option so you can choose the
-          subscription path or the own-it-forever path.
-        </p>
-        <p>
-          Both apps let you pay once and stop thinking about it. Speech
-          Central is cheaper upfront. LoudReader lets you start free and
-          only pay if you want the premium voices and features.
+          In either app, try the sites you actually visit. A tidy demo article
+          will not expose missing paragraphs, captions inserted mid-sentence or
+          a paywall that prevents extraction. Check a difficult page before
+          committing your whole queue. If you already have a useful PDF copy,
+          our <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">PDF listening guide</Link>
+          {" "}covers that route. LoudReader also imports DRM-free EPUB books and
+          uses local text recognition for scanned PDFs, with results dependent
+          on the scan and page layout.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What should you actually pick?">
+      <QuestionSection question="How do the purchase options differ?">
         <p>
-          If you need Android support, Speech Central is the answer.
-          LoudReader does not exist on Android and there are no plans to
-          build it.
+          Speech Central advertises a one-time unlock, plus free access for
+          eligible blind users and managed school deployments. See its current
+          <a href="https://speechcentral.net/" className="text-loudBlue hover:underline"> licensing information</a>
+          {" "}and your platform&apos;s store rather than assuming that every
+          installation is a paid trial or that one purchase covers every OS.
+          Optional voice services can have separate terms.
         </p>
         <p>
-          If you need Apple Watch playback control, Speech Central again.
+          {FREE_TIER.full} LoudReader offers monthly, yearly and lifetime
+          Premium options. Premium includes every available narrator,
+          adjustable speed, sleep timer, soundscapes and unlimited article saving;
+          notes and highlights are not Premium-only. Compare the checkout price
+          for the controls you need, not a broad claim that one app is
+          &ldquo;free&rdquo; and the other is &ldquo;paid&rdquo;.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="What should decide whether you switch?">
+        <p>
+          Keep Speech Central on your shortlist for its platform coverage,
+          configurable voice sources and web-reading workflow. Try LoudReader
+          if you want its book-library experience and local voice selection on
+          supported Apple hardware. There is no need to move every file until
+          you have checked import, resume position and an offline chapter with
+          your chosen voice.
         </p>
         <p>
-          If you read a lot of web articles and RSS feeds and want them
-          spoken directly without converting formats, Speech Central has
-          the better workflow for that.
-        </p>
-        <p>
-          If you live entirely in the Apple ecosystem with Mac and iPhone,
-          care most about voice quality, want it running on the Mac itself
-          rather than in a browser tab, and like
-          the idea of starting free with no word cap, LoudReader is your
-          app. It is fully on-device and private, your library never
-          leaves your device, and the natural offline voices make
-          long-form book listening genuinely enjoyable.
+          Privacy also deserves a more specific question than which app is
+          &ldquo;offline&rdquo;. LoudReader does not upload books for narration,
+          but it sends crash/performance diagnostics and usage analytics.
+          Speech Central&apos;s local or cloud voice choice changes the speech
+          processing path. Read the relevant privacy information alongside the
+          app settings before using confidential material. The
+          <Link href="/offline-text-to-speech-mac" className="text-loudBlue hover:underline"> Mac offline-reading guide</Link>
+          {" "}explains the preparation checks for local listening.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Better voices, real Mac app, start free"
-        subline="Natural offline voices for your EPUBs and PDFs. Mac and iPhone, no account needed."
-      />
+      <StoreCta headline="Compare with a chapter you know" subline="Try LoudReader’s local book narration on your supported Apple device." />
     </ArticleLayout>
   );
 }

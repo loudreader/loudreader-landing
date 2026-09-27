@@ -1,43 +1,42 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-11-01 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - On-device processing: all voice generation runs locally via Apple's
-//     speech synthesis APIs. No network calls for TTS. Verified in
-//     Engines/*.swift (no outbound URL requests for speech).
-//   - No account required: SubscriptionAccess.swift and AppEntry.swift (no
-//     signup gate, free tier starts immediately without login).
-//   - EPUB/PDF import: works via iOS Share sheet and file picker. Files stay
-//     in the app sandbox, never uploaded.
-//   - Background playback / lock screen: Info.plist UIBackgroundModes = ["audio"];
-//     MPRemoteCommandCenter in PlayerService.swift.
-//   - Speed control 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed).
-//   - Voice selection: 23 studio narrators in 10 languages, all free for first 8 hours, 1 voice
-//     remains free, all 8 on Premium (site.ts PRICING).
-// NO claims about: legal-specific certifications, bar association endorsements,
-// compliance with specific privacy regulations (HIPAA, GDPR). LoudReader is
-// not a legal-tech product; it is a general on-device TTS reader suitable for
-// confidential documents precisely because nothing leaves the device.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
+// Official source checked 2026-09-28: https://www.sra.org.uk/solicitors/guidance/confidentiality-client-information/
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is it safe to use text-to-speech for client documents?",
-    a: "It depends on the tool. Cloud-based TTS services send your text to a remote server for processing, which is a confidentiality problem for legal documents. On-device readers like LoudReader process everything locally: the text stays in the app sandbox, no upload happens, and no account is required. You should still follow your firm's data-handling policies, but an on-device reader removes the third-party exposure that makes most TTS tools a non-starter for legal work.",
+    "q": "Is LoudReader automatically approved for client files?",
+    "a": "No. It is a general reader. Your firm must assess the app and the complete data-handling workflow for the particular material."
   },
   {
-    q: "What kinds of legal documents work well for listening?",
-    a: "Briefs you are reviewing rather than drafting line by line. Opposing counsel's filings where you want the gist before a deep read. Contracts at the familiarity stage, where you have seen the template and need to catch deviations. Long witness statements. Hearing transcripts. Anything where the primary task is absorption rather than precise editing. Dense legal writing with heavy citations is harder to follow by ear, but the preamble and fact sections often read well aloud.",
+    "q": "Does local speech mean no information is sent from the app?",
+    "a": "No. Speech and OCR are local, but the app includes diagnostics and default-enabled usage analytics. No independent network audit is claimed."
   },
   {
-    q: "Does LoudReader work offline?",
-    a: "Yes. The voices are downloaded to your device and run entirely locally. This matters for legal work in courtrooms, client sites, airplanes, and any environment where Wi-Fi is unreliable or prohibited. It is fully on-device and private, your library never leaves your device.",
+    "q": "Can listening verify a contract or citation?",
+    "a": "No. Check the original text, references and legal effect through the appropriate professional review."
   },
   {
-    q: "Can I use this on my work Mac?",
-    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and the same on-device privacy model applies on both. Import a PDF brief on your Mac, press play, and the narration runs locally with no network dependency.",
-  },
-  {
-    q: "What about page numbers and citations?",
-    a: "LoudReader is not a legal research tool. It reads the text of a document aloud and highlights as it goes, but it does not preserve pagination to match official filings. For precise citation work, you will still want the PDF open alongside the audio. What it gives you is a way to absorb the substance of a 40-page motion during a commute or while you review exhibits.",
-  },
+    "q": "Does deleting the app copy remove every copy?",
+    "a": "Not necessarily. Exports, downloads, source-system copies and backups are separate. Follow the organisation’s retention and deletion process."
+  }
 ];

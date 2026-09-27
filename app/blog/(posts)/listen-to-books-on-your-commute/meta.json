@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-books-on-your-commute",
   "title": "How to Listen to Books on Your Commute",
-  "description": "Turn your train, bus, or plane ride into reading time. LoudReader works fully offline with natural voices, no signal required underground or mid-flight.",
+  "description": "Set up a book before boarding, prepare for poor signal and keep a useful restart point. A practical guide for train, bus and passenger journeys.",
   "publishedAt": "2026-08-10",
-  "lastModified": "2026-08-10",
+  "lastModified": "2026-09-28",
   "avatar": "Active/On-the-go",
-  "query": "listen to books on commute"
+  "query": "listen to books on commute",
+  "topic": "reading"
 }

@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER, PRICING, VOICES } from "@/components/money/site";
+import { FREE_TIER, PRICING, VOICES } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,157 +20,125 @@ export default function BestReadAloudAppMacArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          The best read-aloud app for Mac depends on what you read and how you
-          value privacy. Your Mac already reads text aloud for free through
-          macOS Spoken Content (select text, Option+Esc). For books and long
-          documents, a dedicated app adds natural voices, bookmarking, and
-          reading features. <strong>LoudReader</strong> (iPhone, iPad, and Mac) is the strongest pick for privacy and offline use: it is fully
-          on-device and private, your library never leaves your device,
-          requires no account, and has no word quota. {FREE_TIER.full} Premium
-          ({PRICING.premiumMonthly} or {PRICING.premiumLifetime}) adds{" "}
-          {PRICING.premiumFeatures}. Speechify leads on voice variety.
-          NaturalReader has a clean reading interface. Voice Dream Reader is
-          the power-user option. No single app wins every category.
+          Start with the reading job. For a paragraph in an email, your Mac&apos;s
+          built-in speech may be enough. For a book you return to every evening,
+          compare library navigation, voice comfort and how reliably the app
+          resumes. Speechify, Voice Dream, NaturalReader and Speech Central offer
+          different Mac workflows; LoudReader runs as an iPad app on compatible
+          Apple Silicon Macs. This is a shortlist based on current product
+          documentation, not a measured voice-quality ranking. Try the same
+          document in two candidates before paying: a pleasant demo cannot tell
+          you whether your own PDF reads in the right order.
         </p>
       </Tldr>
+      <Disclosure />
+      <ArticleIllustration variant="devices" caption="Compare the workflow you will use every day, as well as the voice." />
 
-      <ArticleIllustration
-        variant="devices"
-        caption="Your Mac has a built-in reader. A dedicated app adds what the built-in one leaves out."
-      />
-
-      <QuestionSection question="What should you look for in a Mac read-aloud app?">
+      <QuestionSection question="Can the built-in Mac reader do the job?">
         <p>
-          The Mac is a different environment than the iPhone. Screen size,
-          multitasking, file management, and privacy expectations are all
-          different. A good Mac read-aloud app should be evaluated on:
+          Open System Settings → Accessibility → Read &amp; Speak and enable
+          Speak selection. Older macOS versions call this area Spoken Content.
+          The default shortcut is Option–Esc. Apple also provides highlighting
+          and a controller for pausing, changing the rate and moving through
+          sentences. It reads available text; that does not guarantee access to
+          every app or document. See{" "}
+          <a href="https://support.apple.com/en-gb/guide/mac-help/mh27448/mac" className="text-loudBlue hover:underline">Apple&apos;s setup instructions</a>.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <p>
+          Try this first for proofreading and occasional passages. If managing
+          chapters and returning to several books becomes awkward, compare a
+          dedicated library app. Our{" "}
+          <Link href="/blog/macos-spoken-content-vs-app" className="text-loudBlue hover:underline">built-in reader comparison</Link>{" "}
+          looks more closely at that decision.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="Which dedicated Mac apps should you shortlist?">
+        <ul className="list-disc pl-6 space-y-3">
           <li>
-            <strong className="text-gray-900">On-device vs. web-based.</strong>{" "}
-            An app that generates speech on Apple Silicon&apos;s Neural Engine
-            keeps working offline and never sends your documents anywhere. An
-            Electron or web-based app consumes more resources and usually
-            streams voices from a server. Worth checking separately: whether
-            the app is a real Mac build or an iPad app running in Apple&apos;s
-            compatibility mode, which affects the window and the menu bar but
-            not the speech engine.
+            <a href="https://speechify.com/mac/" className="text-loudBlue hover:underline"><strong>Speechify</strong></a>{" "}
+            has a dedicated Mac app with listening shortcuts, voice typing and
+            text highlighting. Consider it if you want speech across your working
+            day, then check the plan and voices available specifically on Mac.
           </li>
           <li>
-            <strong className="text-gray-900">Privacy model.</strong> On a
-            Mac, you are more likely to read work documents, contracts, legal
-            texts, and other confidential material. If the app sends your text
-            to a cloud server for processing, that is a risk you should know
-            about before importing anything sensitive.
+            <a href="https://www.voicedream.com/" className="text-loudBlue hover:underline"><strong>Voice Dream</strong></a>{" "}
+            advertises offline listening on Mac, iPhone and iPad, plus document
+            imports and annotation tools. It belongs on a shortlist for readers
+            who want to listen and take notes in the same workflow.
           </li>
           <li>
-            <strong className="text-gray-900">Offline reliability.</strong>{" "}
-            Macs move between networks. A cafe WiFi drops, a VPN disconnects,
-            you work from a park with no connection. An app that streams voices
-            stops working in those moments. An app that runs voices on-device
-            does not care.
+            <a href="https://www.naturalreaders.com/software.html" className="text-loudBlue hover:underline"><strong>NaturalReader desktop software</strong></a>{" "}
+            has perpetual-licence options. This is a separate product from its
+            online service: check the desktop edition&apos;s compatibility and
+            included voices rather than assuming a web subscription covers it.
           </li>
           <li>
-            <strong className="text-gray-900">File format support.</strong>{" "}
-            EPUB and PDF are the two formats that matter. If an app only reads
-            one or requires conversion, that is friction.
-          </li>
-          <li>
-            <strong className="text-gray-900">Pricing.</strong> Subscription,
-            one-time, or free tier with real limits. The Mac read-aloud market
-            has fewer free options than the iPhone side.
+            <a href="https://speechcentral.net/" className="text-loudBlue hover:underline"><strong>Speech Central</strong></a>{" "}
+            offers Mac and other platform versions, with offline and optional
+            cloud voice choices. Compare it if you read a mixture of documents,
+            web articles and feeds.
           </li>
         </ul>
       </QuestionSection>
 
-      <QuestionSection question="LoudReader (iPad app on Apple Silicon Macs)">
+      <QuestionSection question="Where does LoudReader fit on Mac?">
         <p>
-          <strong>Best for:</strong> privacy, offline listening, and a free
-          tier that is actually useful.
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>{" "}
+          is worth trying for local narration of DRM-free EPUBs, PDFs and saved
+          web articles. Its studio catalogue has {VOICES.headline}, with
+          availability depending on device. It runs on Apple Silicon Macs through
+          Apple&apos;s iPad compatibility mode; there is no separate native macOS
+          app. Check the interface on your Mac before committing to a long library.
         </p>
         <p>
-          LoudReader is an iPhone and iPad app that installs on Apple Silicon
-          Macs (M1 or newer, macOS 15+) from the Mac App Store&apos;s
-          &ldquo;iPhone &amp; iPad Apps&rdquo; tab. There is no separate Mac
-          build, so it runs in Apple&apos;s compatibility mode: a fixed-size
-          window, no menu bar. It is not an Electron wrapper and not a web app
-          in a window &mdash; the speech engine is real and runs on your
-          hardware. It reads EPUBs and PDFs aloud with {VOICES.headline}
-          {" "}that run on the Mac's Neural Engine. {FREE_TIER.full} Premium
-          ({PRICING.premiumMonthly}, {PRICING.premiumYearly}, or{" "}
-          {PRICING.premiumLifetime}) adds {PRICING.premiumFeatures}.
+          {FREE_TIER.full} Premium adds the full available voice selection,
+          adjustable speed, a sleep timer, soundscapes and unlimited article
+          saving. Notes and highlights are not Premium-only. There is no
+          automatic library or reading-position sync between devices.
         </p>
         <p>
-          The privacy model is simple: LoudReader is fully on-device and
-          private, your library never leaves your device. No account, no cloud
-          processing, no analytics. For professionals reading confidential
-          documents, this is the differentiator that matters most.
-        </p>
-        <p>
-          Honest limits: no CarPlay, no Android or Windows, Intel Macs are not
-          supported, no supported languages beyond English, no DRM removal, no
-          cloud sync of playback position. If you need any of those, LoudReader
-          is not the right fit.
+          Speech is generated locally, so books are not uploaded for narration.
+          That is separate from app telemetry: LoudReader sends crash/performance
+          diagnostics and usage analytics. These services are separate from
+          the local speech engine.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Other Mac read-aloud apps">
-        <ul className="list-disc pl-6 space-y-4">
+      <QuestionSection question="How should you test an app before paying?">
+        <ol className="list-decimal pl-6 space-y-2">
           <li>
-            <strong className="text-gray-900">Speechify.</strong>{" "}
-            Widest voice selection, including celebrity voices. Web-based Mac
-            app (runs in a browser or as an Electron wrapper). Best voices
-            stream from the cloud. Good for web article extraction and
-            productivity-focused reading. Weaker on privacy and offline
-            reliability. Higher subscription cost than most alternatives.
+            <strong>Bring a real file.</strong> Use a chapter with dialogue, names
+            and numbers, or a work PDF with columns and footnotes. Check that
+            paragraphs arrive in order and that page furniture does not interrupt.
           </li>
           <li>
-            <strong className="text-gray-900">NaturalReader.</strong>{" "}
-            Clean, simple interface designed for document reading. Good voice
-            quality, but the best voices are cloud-based. Reads PDFs well.
-            Weaker on EPUB support and offline playback. Subscription-based
-            with a limited free tier.
+            <strong>Listen beyond the preview.</strong> Compare several pages at
+            your comfortable speed. Note any repeated pronunciation problem and
+            whether finding your place is easy after a pause.
           </li>
           <li>
-            <strong className="text-gray-900">Voice Dream Reader.</strong>{" "}
-            Power-user app with RSS integration, cloud storage connections,
-            and extensive settings. Uses on-device voices through Apple's
-            speech API. Interface is dense and can be overwhelming. Moved from
-            one-time purchase to subscription.
+            <strong>Try the desktop workflow.</strong> Import from Finder, resize
+            or arrange the window as you normally would, and return to the book
+            after switching apps. Check the controls you actually use.
           </li>
           <li>
-            <strong className="text-gray-900">macOS Spoken Content (built-in).</strong>{" "}
-            Free, works in every app, zero setup. Option+Esc reads selected
-            text aloud with the system voice. No bookmarking, one speed slider
-            for everything, no sleep timer. Best for quick checks. Not
-            designed for reading books.{" "}
-            <Link
-              href="/blog/macos-spoken-content-vs-app"
-              className="text-loudBlue hover:underline"
-            >
-              Full comparison of Spoken Content vs dedicated apps
-            </Link>
-            .
+            <strong>Check the offline promise.</strong> Prepare the app and voice
+            first, disconnect Wi-Fi, then try an unread section. Downloaded audio
+            playback and generating new speech locally are different capabilities.
+            Neither test establishes a complete privacy policy.
           </li>
-        </ul>
+        </ol>
         <p>
-          For the offline privacy angle in detail, see{" "}
-          <Link
-            href="/offline-text-to-speech-mac"
-            className="text-loudBlue hover:underline"
-          >
-            offline text-to-speech on Mac
-          </Link>
-          .
+          Finally, price the same feature set over a year. Check voice allowances,
+          renewals and whether mobile access costs extra. LoudReader offers
+          subscriptions and a {PRICING.premiumLifetime} option in the US storefront;
+          regional prices vary. Paying once is not unique to LoudReader. Choose
+          after the file and listening tests, not because a plan says “lifetime”.
         </p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="The private read-aloud app for Mac"
-        subline="Native Apple Silicon app. Natural voices, fully offline, no account. Free tier with unlimited listening."
-      />
+      <StoreCta headline="Try your own book in LoudReader" subline="Local narration on compatible Apple Silicon Macs through the iPad app. Check the fit before upgrading." />
     </ArticleLayout>
   );
 }

@@ -1,42 +1,30 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Background playback with the screen locked: LoudReader/Info.plist
-//     declares UIBackgroundModes = ["audio", "processing"].
-//   - Lock-screen / Bluetooth controls: LoudReader/PlayerService.swift
-//     configures MPRemoteCommandCenter with play, pause, toggle, and
-//     skip forward/backward (preferredIntervals = [15] seconds), and
-//     publishes title/author/artwork/elapsed time to MPNowPlayingInfoCenter.
-//   - CarPlay: NOT present anywhere in the app source. Do NOT claim CarPlay
-//     support in this article until it ships and is verified in-app.
-//   - Pricing, free-tier, and voice facts come from components/money/site.ts
-//     (single source of truth, synced with the App Store listing).
-// Statements about audiobook stores (Audible, Apple Books, Spotify) and
-// library apps (Libby, Hoopla) are deliberately generic descriptions of what
-// those services are, with no pricing or feature specifics that could go stale.
-// Legal guidance is deliberately non-specific: laws vary by jurisdiction and
-// the article says so instead of citing any statute.
+// FACT PROVENANCE — editorial verification 2026-09-28.
+// App-source audit on 2026-09-28: LoudReader release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0, released 2026-09-22 (Apple lookup id6758149478). Sources: LoudReader/PlayerService.swift (saved position, background audio, remote controls); ContentView.swift and BookImportService.swift (EPUB/PDF imports); Subscription/SubscriptionAccess.swift, SubscriptionManager.swift and Subscription/PaywallReason.swift (8-hour eligible-voice allowance, limited free English selection thereafter, paid speed/timer, free notes); LoudReaderApp.swift and Analytics.swift (diagnostics and usage analytics); PDFImportPipeline.swift (local OCR with limits). Source review, not new runtime testing.
+// PlayerService.swift MPRemoteCommandCenter supports preferred 15-second skips; actual vehicle mapping varies. No dedicated CarPlay target/entitlement in release audit.
+// Primary source checked 2026-09-28: https://www.gov.uk/using-mobile-phones-when-driving-the-law
+// Practical workflows are editorial suggestions, not measured outcomes or medical promises.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Can I listen to an ebook in the car if it has no audiobook version?",
-    a: "Yes. A text-to-speech reader turns the ebook itself into the audiobook. LoudReader reads any DRM-free EPUB or PDF aloud with natural offline voices, remembers your place, and needs no conversion step. You import the file once and press play. It works for novels, technical books, manuscripts, and PDFs that never got a recorded edition.",
+    "q": "Does LoudReader have a dedicated CarPlay app?",
+    "a": "No. It can play through the iPhone’s connected audio output and supports standard media commands, but it has no dedicated CarPlay interface."
   },
   {
-    q: "Do I need an internet connection to listen while driving?",
-    a: "Not with LoudReader. The voices run entirely on your iPhone, so listening is fully on-device and private, your library never leaves your device, and playback continues through tunnels, rural dead zones, and even airplane mode. Streaming and cloud-based apps generally need a connection or audio you remembered to download in advance.",
+    "q": "Can I use lock-screen controls while driving?",
+    "a": "Do not handle the phone while driving. Set up while safely parked and follow the laws where you are. A lock screen is not a safety or legal exemption."
   },
   {
-    q: "Is listening to audiobooks while driving safe and legal?",
-    a: "Listening to audio is generally treated the same as listening to the radio or a podcast, which is legal for drivers in most places. What traffic laws restrict is handling your phone: many jurisdictions ban handheld phone use outright, and laws vary, so check your local rules. The safe pattern is simple. Set everything up before you drive, and control playback only from the lock screen or your car's own buttons.",
+    "q": "Will every steering-wheel button work?",
+    "a": "No universal guarantee is made. Test your vehicle’s supported pause and playback controls while safely parked."
   },
   {
-    q: "Does LoudReader keep playing with the screen locked?",
-    a: "Yes. On iPhone, playback continues with the screen locked, and the lock screen shows the book with play, pause, and 15-second skip controls. The same play/pause commands work from standard Bluetooth controls, like the buttons on many car stereos and steering wheels.",
+    "q": "Will an imported book play without signal?",
+    "a": "Local narration can work offline when the book and required voice resources are ready. Test the exact setup before the journey."
   },
   {
-    q: "How fast should I set playback speed in the car?",
-    a: "Slower than at your desk. Driving deserves most of your attention, so pick a speed you can follow easily. Starting at 1.0x is sensible, and you can nudge it up on familiar routes. Adjust it before you set off, not while moving. Speed control from 0.3x to 3.0x is part of LoudReader Premium; the free tier plays at normal speed.",
-  },
+    "q": "What if listening distracts me?",
+    "a": "Stop listening when you can do so safely. A hands-free setup does not make the story attention-free."
+  }
 ];

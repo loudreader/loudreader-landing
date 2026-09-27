@@ -17,6 +17,17 @@ import type { Metadata } from "next";
 
 export type ChangeFrequency = "weekly" | "monthly" | "yearly";
 
+export const ARTICLE_TOPICS = {
+  reading: "Reading & listening habits",
+  formats: "Documents & web articles",
+  voices: "Voices & playback",
+  learning: "Learning & accessibility",
+  comparisons: "Choosing an app",
+  classics: "Books & editions",
+  technology: "Local speech & privacy",
+} as const;
+export type ArticleTopic = keyof typeof ARTICLE_TOPICS;
+
 export type ArticleMeta = {
   /** Must equal the folder name under app/blog/(posts)/, validated below. */
   slug: string;
@@ -36,6 +47,8 @@ export type ArticleMeta = {
   kind?: "guide" | "release";
   /** Give an important announcement a prominent place in product news. */
   featured?: boolean;
+  /** Reader-facing category for navigation and relevant follow-up articles. */
+  topic?: ArticleTopic;
   /** Sitemap override; defaults to "monthly". */
   changeFrequency?: ChangeFrequency;
   /** Sitemap override; defaults to 0.6 (money pages are 0.7). */
@@ -85,6 +98,9 @@ function validate(folder: string, raw: Record<string, unknown>): ArticleMeta {
   if (raw.featured !== undefined && typeof raw.featured !== "boolean") {
     throw new Error(`${where}: "featured" must be a boolean`);
   }
+  if (raw.topic !== undefined && (typeof raw.topic !== "string" || !Object.hasOwn(ARTICLE_TOPICS, raw.topic))) {
+    throw new Error(`${where}: "topic" must be a recognised article topic`);
+  }
 
   return {
     slug,
@@ -96,6 +112,7 @@ function validate(folder: string, raw: Record<string, unknown>): ArticleMeta {
     query: typeof raw.query === "string" ? raw.query : undefined,
     kind: raw.kind as ArticleMeta["kind"],
     featured: raw.featured as boolean | undefined,
+    topic: raw.topic as ArticleTopic | undefined,
     changeFrequency: changeFrequency as ChangeFrequency | undefined,
     priority: priority as number | undefined,
   };
@@ -132,6 +149,19 @@ export function isArticlePublished(
   asOf = new Date().toISOString().slice(0, 10)
 ): boolean {
   return meta.publishedAt <= asOf;
+}
+
+/** Prefer the same product series or topic, retaining publication order. */
+export function getRelatedArticles(currentSlug: string, max = 3, asOf?: string): ArticleMeta[] {
+  const published = getAllArticles(asOf);
+  const current = published.find((article) => article.slug === currentSlug);
+  const score = (article: ArticleMeta) =>
+    current?.kind === "release" && article.kind === "release" ? 2 :
+      current?.topic && article.topic === current.topic ? 1 : 0;
+  return published
+    .filter((article) => article.slug !== currentSlug)
+    .sort((a, b) => score(b) - score(a))
+    .slice(0, Math.max(0, max));
 }
 
 /**

@@ -7,148 +7,33 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function AliceInWonderlandAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Alice&apos;s Adventures in Wonderland is public domain, so a free
-          audiobook always exists and you can be listening in a couple of
-          minutes. Worth knowing before you start: the fast free option is a
-          synthetic voice reading Lewis Carroll&apos;s actual text, not a
-          performed audiobook with a trained human narrator.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) already has
-          Alice&apos;s Adventures in Wonderland in its 70,000+ Project
-          Gutenberg catalog, so there&apos;s no file to hunt down or convert.
-          Open the book, press play, and it reads aloud with natural offline
-          voices, free with unlimited listening and no account. Before you
-          install anything, hear a real rendered sample on the{" "}
-          <Link
-            href="/listen/alices-adventures-in-wonderland"
-            className="text-loudBlue hover:underline"
-          >
-            Alice&apos;s Adventures in Wonderland catalog page
-          </Link>
-          .
-        </p>
+        <p>You can hear Lewis Carroll’s Alice’s Adventures in Wonderland through a volunteer recording or by having its ebook read aloud. <a href="https://www.gutenberg.org/ebooks/11" className="text-loudBlue hover:underline">Project Gutenberg ebook 11</a> supplies the English text and lists it as public domain in the USA. The US listing does not establish availability in other countries. LoudReader offers the text in its catalogue and reads it with a synthetic voice. The <Link href="/listen/alices-adventures-in-wonderland" className="text-loudBlue hover:underline">Alice listening page</Link> has an opening sample. If the comic delivery matters most to you, compare that with a human recording before choosing how to listen.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Alice's Adventures in Wonderland, read aloud from the Gutenberg text."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Carroll’s wordplay is worth checking in both print and sound." />
 
-      <QuestionSection question="Is there a free Alice in Wonderland audiobook?">
-        <p>
-          Yes, and it&apos;s about as settled as public-domain status gets.
-          Lewis Carroll published Alice&apos;s Adventures in Wonderland in
-          1865, and its copyright expired long ago, so the full text sits in
-          the public domain everywhere. Project Gutenberg hosts it free, and
-          a text-to-speech app can read that exact text aloud without
-          licensing anything from anyone.
-        </p>
-        <p>
-          That&apos;s a different situation than hunting down a pirated copy
-          of a commercial recording, which is the usual shortcut people mean
-          by &ldquo;free audiobook.&rdquo; Alice in Wonderland doesn&apos;t
-          need it. The text is genuinely, permanently free to read aloud, in
-          full.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Which Alice book are you getting?"><p>Look for the full title Alice’s Adventures in Wonderland. A collection called Alice in Wonderland may contain this story, its sequel, or an adaptation. The Gutenberg entry linked here is the first book; do not assume it includes Through the Looking-Glass.</p><p>For a class or a reading group, compare the chapter headings with your assigned copy. An illustrated edition and an ebook can place the same passage on different pages. Record the chapter and a few opening words when you want to return to a passage.</p></QuestionSection>
 
-      <QuestionSection question="What does a free Alice in Wonderland audiobook actually sound like?">
-        <p>
-          It&apos;s a synthetic voice reading the real Gutenberg text, not a
-          performed recording by a professional narrator. LoudReader&apos;s
-          voices are natural offline voices, not the flat, robotic
-          text-to-speech you might remember from years ago, and they read
-          Carroll&apos;s puns, riddles, and nonsense verse clearly and
-          consistently. What they don&apos;t do is give the Mad Hatter, the
-          Cheshire Cat, and the Queen of Hearts distinct voices the way a
-          trained narrator would. It reads what&apos;s on the page, clearly
-          and consistently.
-        </p>
-        <p>
-          You can check that for yourself before deciding anything. The{" "}
-          <Link
-            href="/listen/alices-adventures-in-wonderland"
-            className="text-loudBlue hover:underline"
-          >
-            Alice&apos;s Adventures in Wonderland catalog page
-          </Link>{" "}
-          plays a short rendered sample of the opening right in your browser,
-          no install required.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="What should you listen for in a sample?"><p>Try some dialogue and a poem as well as the opening narration. Carroll uses sound, pauses and double meanings; a voice that suits ordinary prose may put an unexpected emphasis on a joke. A short sample cannot establish how the whole book will sound.</p><p>The Mouse’s tale is also a visual joke: its shape on the page is part of the experience. Keep the text nearby for passages like this. LoudReader highlights spoken words, but hearing the words alone does not reproduce typography or illustrations. Text-to-speech is useful for following the writing; it does not supply an explanation of a pun.</p></QuestionSection>
 
-      <QuestionSection question="How do I listen to Alice in Wonderland free right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Play the sample on the{" "}
-            <Link
-              href="/listen/alices-adventures-in-wonderland"
-              className="text-loudBlue hover:underline"
-            >
-              Alice&apos;s Adventures in Wonderland catalog page
-            </Link>{" "}
-            to hear the voice.
-          </li>
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your Mac or iPhone. Free, no account.
-          </li>
-          <li>
-            Open the built-in Gutenberg catalog and search for Alice&apos;s
-            Adventures in Wonderland. It&apos;s already there, nothing to
-            import.
-          </li>
-          <li>
-            Press play. The current sentence and word highlight as it reads,
-            and your place saves automatically if you stop partway through a
-            chapter.
-          </li>
-        </ol>
-        <p>
-          If you already own a specific illustrated edition as an EPUB or
-          PDF, you can import that instead, but with the book built into the
-          catalog, most readers won&apos;t need to.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for Alice’s Adventures in Wonderland. Check the title and edition before downloading. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
-      <QuestionSection question="What if you want a human narrator instead?">
-        <p>
-          Fair preference. <Link href="/blog/librivox-alternative" className="text-loudBlue hover:underline">LibriVox</Link> has volunteer-read, human-narrated
-          recordings of Alice&apos;s Adventures in Wonderland free as MP3
-          downloads. Reader quality varies since anyone can volunteer, but
-          it&apos;s a real human performance, and LoudReader isn&apos;t
-          trying to replace that. What it offers instead is instant access
-          to any of the 70,000+ Gutenberg titles, not only the ones that
-          happened to get a volunteer recording, plus word-by-word
-          highlighting and offline playback on the same book.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Where is a free human reading?"><p><a href="https://librivox.org/alices-adventures-in-wonderland-by-lewis-carroll-5" className="text-loudBlue hover:underline">LibriVox’s Alice’s Adventures in Wonderland, version 4</a> is a volunteer recording with downloadable audio. Its catalogue page lists the reader and sections. Listen to a section before downloading the whole recording; choose according to the voice you prefer, rather than assuming a free recording has one particular style.</p><p>Use a recording if you want a fixed performance you can keep in an audio player. Use <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">ebook text-to-speech</Link> if you want to listen to an editable choice of text edition and follow the words on screen. These are two ways to enjoy the book, not a quality ranking.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Start Alice in Wonderland in under a minute"
-        subline="It's already in the built-in Gutenberg catalog. Free, on-device, no account."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

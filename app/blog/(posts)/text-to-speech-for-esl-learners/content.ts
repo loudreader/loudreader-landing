@@ -1,45 +1,47 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-11-01 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Word-by-word highlighting: free, not gated (ReaderStylesheet.swift +
-//     HighlightSchedule.swift). The dual-channel reading mechanic (listen while
-//     following highlighted text) is the core feature for ESL learners.
-//   - Speed 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed). Slow speeds
-//     (below 1.0x) are particularly relevant for language learners.
-//   - Natural offline voices: all local. 23 studio narrators across 10
-//     languages, 11 of them English (site.ts VOICES). Non-English narrators
-//     surface once a book in that language is in the library.
-//   - 70,000+ Gutenberg books: includes many accessible English classics.
-//   - Free tier unlimited listening: SubscriptionAccess.swift.
-//   - Notes & highlights: Premium.
-// NO claims about: language acquisition research, fluency guarantees, TOEFL/IELTS
-// score improvements, or formal language pedagogy. The article offers practical
-// advice for using TTS as one tool among many for English learning.
+// EDITORIAL AUDIT — 2026-09-28. Product claims reconciled with the release_v1.12
+// shipping source release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0
+// in loudreader/LoudReader_mac (product fact audit, source references below).
+// Release version verified using https://itunes.apple.com/lookup?id=6758149478&country=us.
+// This editorial review includes source inspection, not a runtime accessibility test.
+// LoudReader iOS/iPadOS app; compatible Apple Silicon Macs run the iPad build.
+// Word/sentence highlighting and replay: ContinuousReaderView.swift,
+// ContinuousReaderController.swift and HighlightSchedule.swift.
+// Premium speed; notes/highlights are free: Subscription/PaywallReason.swift118–148
+// and TTSPreferences.swift.
+// EPUB/PDF and local scanned-PDF OCR: PDFImportPipeline.swift90,155–218
+// plus release_v1.12 product audit; OCR/reading-order quality is not guaranteed.
+// Playback/background controls: PlayerService.swift and Info.plist audio mode.
+// Free access copy is imported from components/money/site.ts FREE_TIER.
+// Speech is generated locally after downloads; this is not a promise of no
+// diagnostics, analytics, networking, automatic sync or accessibility certification.
+
+// Practical routines are editorial suggestions, not measured learning outcomes.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does listening while reading help with English?",
-    a: "Yes, for several reasons at once. You hear the correct pronunciation of words you might otherwise guess at. You absorb sentence rhythm and natural phrasing, which are hard to pick up from silent reading alone. The word-by-word highlighting connects the sound to the spelling in real time, so you build the mapping between written and spoken English without flashcards.",
+    "q": "What is a useful first TTS exercise for an English learner?",
+    "a": "Listen to a short passage, note what you understood, then compare with the text. Identify whether a gap came from unfamiliar vocabulary, sound recognition or meaning, and replay that part."
   },
   {
-    q: "Should I listen at a slower speed?",
-    a: "Many learners start at 0.8x or 0.9x because it gives the brain slightly more time to process each word while still sounding natural. As comprehension improves, you can nudge the speed up. In LoudReader, speed control from 0.3x to 3.0x is a Premium feature; the free tier plays at normal speed. The slower end of the range is genuinely useful for language learning in a way it is not for native-speed reading.",
+    "q": "Does word highlighting teach pronunciation automatically?",
+    "a": "No. It shows the current narration position. You still need to attend to the phrase, understand it and check doubtful pronunciation against another source."
   },
   {
-    q: "What kind of books should I start with?",
-    a: "Books you already know in your native language are a great starting point, because you already understand the story and can focus on the English. Graded readers and young adult novels use simpler vocabulary and shorter sentences. The 70,000+ free classics built into LoudReader include many accessible starting points. If you want a curated list, check out our guide to easy English books to listen to.",
+    "q": "Is pausing and repeating the same as shadowing?",
+    "a": "They are related practice formats. Pause-and-repeat separates listening from speaking; shadowing usually means speaking with or shortly behind the recording. Use the version you can manage."
   },
   {
-    q: "Can I practice pronunciation by repeating after the voice?",
-    a: "Yes. This is called shadowing, and it is a common language-learning technique. Play a sentence, pause, repeat it aloud trying to match the voice's rhythm and intonation. The 15-second skip back button on the lock screen makes it easy to replay the same sentence several times. It works with any imported book or article.",
+    "q": "Can TTS correct my English writing?",
+    "a": "It can help you notice awkward or repetitive passages, but it does not explain grammar or reliably identify errors. Check suspected problems in the original text."
   },
   {
-    q: "Does text-to-speech work for English exams?",
-    a: "It can help with the reading sections. Listening to practice passages while following the highlighted text builds the speed and comprehension you need under timed conditions. It is a study tool, not a cheat code, and there is no substitute for practice tests. But for the months of preparation before the exam, dual-channel reading is one of the most efficient ways to absorb a lot of English text.",
+    "q": "Will these exercises raise an IELTS or TOEFL score?",
+    "a": "No score improvement is promised. Use official exam practice and the relevant test conditions alongside any general language practice."
   },
   {
-    q: "Will the voice sound natural enough?",
-    a: "Modern AI voices are quite good. LoudReader uses high-quality neural voices that sound closer to a human narrator than the robotic TTS of a decade ago. You can try all 23 studio narrators free for the first 8 listening hours and pick the one that is clearest and most pleasant for long sessions.",
-  },
+    "q": "Are notes and slower playback free in LoudReader?",
+    "a": "Notes and highlights are free. Adjustable playback speed from 0.3x to 3.0x is Premium; normal-speed narration and sentence replay can still be used for the exercises."
+  }
 ];

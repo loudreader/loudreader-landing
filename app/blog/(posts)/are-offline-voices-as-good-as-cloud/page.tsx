@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,178 +6,37 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { FREE_TIER, PRICING } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function AreOfflineVoicesAsGoodAsCloudArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          On-device neural voices are remarkably close to cloud quality now.
-          Cloud voices still have a slight edge on expressiveness and variety
-          because they run on bigger models with no storage limits. But offline
-          voices win on privacy (your text never leaves your device),
-          reliability (no internet needed), and latency (instant play and
-          pause). For book-length listening, the quality gap is small enough
-          that most people would not notice without a side-by-side comparison.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) runs 23
-          natural offline voices on Apple Silicon's Neural Engine, fully
-          on-device and private, your library never leaves your device.{" "}
-          {FREE_TIER.full} To keep all 23 voices after the trial, Premium
-          costs {PRICING.premiumMonthly} on the monthly plan.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="offline"
-        caption="The voice model lives on your chip. No server, no stream, no connection needed."
-      />
-
-      <QuestionSection question="What is the actual quality difference between offline and cloud voices?">
-        <p>
-          Let us be honest about what &ldquo;quality&rdquo; means here. Modern
-          neural TTS on both sides of the fence produces speech with natural
-          intonation, pacing, and clarity. The difference is in the subtleties:
-          cloud voices, running on larger models, can produce slightly richer
-          expressiveness, more varied pitch patterns, and more natural-sounding
-          emphasis. An on-device voice might sound 92 percent as good as the
-          best cloud voice, and most listeners would describe both as
-          &ldquo;natural.&rdquo;
-        </p>
-        <p>
-          But &ldquo;most listeners&rdquo; is the key phrase. If you are
-          someone who is particularly sensitive to voice quality, or you are
-          listening to emotionally rich fiction where vocal nuance matters, you
-          might notice the difference. For non-fiction and everyday reading,
-          the practical gap is negligible. The honest test: listen to a chapter
-          of each and see if you can tell which is which.
-        </p>
+      <Tldr><p>
+        Offline and cloud describe where speech is generated, not how good it sounds. Compare the particular voice, language and passage you would actually use. A cloud service may offer controls or a narrator a local app does not; a local voice may be the one you prefer for a whole book. For a useful comparison, judge sound separately from internet requirements, document handling, storage and cost. LoudReader generates narration on your device, but that does not make every app function offline or imply that the app sends no diagnostics. Here is how to compare those trade-offs without inventing a universal quality score.
+      </p></Tldr>
+      <ArticleIllustration variant="offline" caption="Local narration changes where speech is generated. Voice quality still needs a listening test." />
+      <QuestionSection question="How should I compare the sound?">
+        <p>Use the same short passage with each voice, at comfortable volume and a similar speaking pace. Include the material that matters to you: names and numbers in a report, dialogue in a novel, or unfamiliar vocabulary in another language. A provider’s polished greeting tells you little about how its voice will handle your document.</p>
+        <ul className="list-disc pl-6 space-y-2"><li><strong>Pronunciation:</strong> are words and names intelligible, and are important numbers read correctly?</li><li><strong>Phrasing:</strong> do pauses and emphasis help you follow the sentence?</li><li><strong>Longer listening:</strong> after the short comparison, do you still want to hear that voice for a chapter?</li><li><strong>Controls:</strong> can you adjust the features you actually need, on your device and plan?</li></ul>
+        <p>Do not reduce the result to an unsupported percentage. We have not run a controlled listener study comparing LoudReader with cloud services. The <Link href="/voices" className="text-loudBlue hover:underline">voice samples</Link> and your own book are starting points for a personal choice, not proof that one processing location wins.</p>
       </QuestionSection>
-
-      <QuestionSection question="What does cloud TTS do better?">
-        <p>
-          Cloud TTS has two structural advantages that on-device cannot match:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Model size.</strong> A cloud
-            service can run a multi-billion-parameter speech model on a rack
-            of GPUs. An on-device app runs a compact model on a phone chip. The
-            larger model captures more of the subtleties of human speech, which
-            translates to slightly more expressive output.
-          </li>
-          <li>
-            <strong className="text-gray-900">Voice variety.</strong> Cloud
-            services can host hundreds of voices in dozens of languages because
-            storage is effectively unlimited server-side. LoudReader ships 23
-            natural offline narrators across 10 languages. If you need Mandarin,
-            Hindi, or a specific regional accent, the cloud genuinely serves you
-            better.
-          </li>
-        </ul>
-        <p>
-          For book-length listening in English, these advantages are real but
-          small. The quality difference is much narrower than most people expect.
-        </p>
+      <QuestionSection question="What changes when speech is generated locally?">
+        <p>The narration model processes text on your device, so that text does not need to be sent to a speech server for synthesis. Once the required book and voice resources are ready, local narration can continue without an internet connection. Before travel, open the book and test the voice you intend to use offline.</p>
+        <p>Local processing uses your device’s compute, memory and storage. Startup time and battery use depend on the model and hardware; we do not have a comparative battery benchmark to claim that it always beats streaming. A cloud service can also offer downloaded or cached audio, so a loss of signal does not necessarily stop every cloud-based product.</p>
       </QuestionSection>
-
-      <QuestionSection question="What does on-device TTS do better?">
-        <p>
-          Offline TTS wins on three dimensions that matter a lot for daily use:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Privacy.</strong> Your text never
-            leaves your device. No server receives your documents, no account
-            is needed, and no audio stream passes through third-party
-            infrastructure. Privacy here is structural, not promised.
-          </li>
-          <li>
-            <strong className="text-gray-900">Reliability.</strong> Playback
-            continues through tunnels, dead zones, airplane mode, and anywhere
-            with spotty coverage. A cloud-based reader stops when the
-            connection drops. An on-device reader does not have that failure
-            mode.
-          </li>
-          <li>
-            <strong className="text-gray-900">Latency.</strong> Generating
-            audio locally is faster than round-tripping to a server. Play,
-            pause, and skip feel instant, with none of the buffering hiccups
-            that can interrupt a listening session.
-          </li>
-        </ul>
-        <p>
-          For long listening sessions, these advantages compound. Hours of
-          uninterrupted playback with instant controls and no data usage is a
-          meaningfully better experience than streaming, even if the voice
-          quality is a notch below the cloud ceiling.
-        </p>
+      <QuestionSection question="Does offline speech mean the whole app collects no data?">
+        <p>No. Speech processing and the rest of an app’s network activity are separate questions. LoudReader synthesises speech and recognises scanned PDF text locally. It also sends crash/performance diagnostics and usage analytics. Analytics is enabled by default; version 1.12 does not expose a user-facing switch to disable it. Downloading books, saving web articles and App Store purchases also involve network access.</p>
+        <p>For a cloud service, check which text or audio it receives, its retention policy and any relevant account settings. For a local app, check diagnostics, backup and sync behaviour as well. Turning off Wi-Fi demonstrates that a prepared book can play offline; it does not audit an app’s behaviour when it reconnects.</p>
       </QuestionSection>
-
-      <QuestionSection question="How does on-device TTS work on Apple devices?">
-        <p>
-          Apple Silicon chips include a dedicated Neural Engine, hardware
-          purpose-built for running machine learning models. LoudReader
-          packages compact neural voice models inside the app and runs them on
-          this hardware via Core ML. The entire text-to-speech pipeline
-          (analyzing the text, generating the audio waveform, playing it back)
-          executes locally on your chip with no server in the loop.
-        </p>
-        <p>
-          The technical underpinnings are covered in more depth in{" "}
-          <Link
-            href="/blog/on-device-text-to-speech-explained"
-            className="text-loudBlue hover:underline"
-          >
-            on-device text to speech explained
-          </Link>
-          . The practical takeaway: if you have an iPhone with iOS 18+ or a Mac
-          with Apple Silicon, your device has the hardware to generate natural
-          speech locally. LoudReader puts that hardware to work for book
-          listening.
-        </p>
+      <QuestionSection question="Which setup fits my reading?">
+        <p>Choose around the actual constraint. If you need a specific language or accent, compare available samples first. If you need dependable narration on a journey, test an offline book before leaving. If the text is sensitive, assess the app’s full data handling rather than relying on an offline badge. If you listen for many hours, compare ongoing limits and local resource requirements.</p>
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> has 23 studio narrators across 10 languages, with availability depending on the device. {FREE_TIER.full} For the mechanics, see <Link href="/blog/on-device-text-to-speech-explained" className="text-loudBlue hover:underline">on-device text to speech explained</Link>. For judging book-length narration itself, see <Link href="/blog/are-ai-voices-good-enough-for-books" className="text-loudBlue hover:underline">testing an AI voice on a whole book</Link>.</p>
       </QuestionSection>
-
-      <QuestionSection question="What is the right choice for me?">
-        <p>
-          It depends on what you value most:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            If absolute voice quality and variety are your top priority and
-            you have a stable internet connection, cloud TTS is the better fit.
-          </li>
-          <li>
-            If privacy, reliability, and instant controls matter more than a
-            small quality edge, or if you listen in places with spotty
-            coverage, on-device TTS is the clear winner.
-          </li>
-          <li>
-            If you want to try both and decide with your own ears, LoudReader
-            lets you start for free. {FREE_TIER.full}{" "}
-            Import a book, turn off Wi-Fi, and listen. You will know within a
-            chapter whether on-device quality meets your standard.
-          </li>
-        </ul>
-        <p>
-          The gap is small enough now that for most people, the privacy and
-          reliability of on-device TTS outweigh the marginal quality advantage
-          of the cloud. But it is a personal call, and the only honest answer
-          is to try both and trust your own ears.
-        </p>
-      </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear on-device voices for yourself"
-        subline={`${FREE_TIER.full} Turn off Wi-Fi, import a book, and decide.`}
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

@@ -1,47 +1,43 @@
-// FACT PROVENANCE. Every claim verified on 2026-11-01 against:
-//   - Dual-coding theory: a real, established concept in cognitive psychology
-//     (Paivio, 1971/1986). The core idea is that information processed
-//     simultaneously through visual and auditory channels creates two separate
-//     mental representations, which can improve encoding and recall. This is
-//     standard textbook material, not a recent or contested finding.
-//   - TTS for review vs deep study: the distinction between passive review
-//     (listening) and active study (note-taking, self-testing) is grounded in
-//     the well-established "testing effect" and active-recall research in
-//     cognitive psychology. Listening alone is a weaker encoding strategy than
-//     active engagement. The article frames this honestly.
-//   - LoudReader features: word-by-word highlighting is free (see too-tired-to-read
-//     provenance), notes & highlights are Premium (site.ts PRICING), speed control
-//     is Premium, AI voices (8 total) are Premium. Free tier = unlimited listening.
-//   - No fabricated study claims, no invented statistics.
-// Claims you may NOT make: that TTS improves test scores by any specific amount,
-// that TTS is superior to reading for studying, any specific study names unless
-// verified.
+// EDITORIAL AUDIT — 2026-09-28. Product claims reconciled with the release_v1.12
+// shipping source release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0
+// in loudreader/LoudReader_mac (product fact audit, source references below).
+// Release version verified using https://itunes.apple.com/lookup?id=6758149478&country=us.
+// This editorial review includes source inspection, not a runtime accessibility test.
+// LoudReader iOS/iPadOS app; compatible Apple Silicon Macs run the iPad build.
+// Word/sentence highlighting and replay: ContinuousReaderView.swift,
+// ContinuousReaderController.swift and HighlightSchedule.swift.
+// Premium speed; notes/highlights are free: Subscription/PaywallReason.swift118–148
+// and TTSPreferences.swift.
+// EPUB/PDF and local scanned-PDF OCR: PDFImportPipeline.swift90,155–218
+// plus release_v1.12 product audit; OCR/reading-order quality is not guaranteed.
+// Playback/background controls: PlayerService.swift and Info.plist audio mode.
+// Free access copy is imported from components/money/site.ts FREE_TIER.
+// Speech is generated locally after downloads; this is not a promise of no
+// diagnostics, analytics, networking, automatic sync or accessibility certification.
+// Source checked 2026-09-28: https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x
+// Practical routines are editorial suggestions, not measured learning outcomes.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does listening to a textbook work as well as reading it?",
-    a: "It depends on what you do with it. For initial exposure to a chapter or reviewing material you have already read, listening works well. Your brain processes the same content through a different channel, which can reinforce what you read. But for deep study that requires understanding diagrams, working through formulas, or taking detailed notes, reading print (or reading along while listening) is more effective than listening alone.",
+    "q": "Does listening to a textbook count as studying?",
+    "a": "It can be part of studying. Check whether you can explain the argument or answer a practice question afterwards; finishing the audio alone does not show understanding."
   },
   {
-    q: "What is dual-coding theory and why does it matter for studying?",
-    a: "Dual-coding theory is a well-established concept in cognitive psychology. It says that when you process information through two channels at once (visual and auditory), your brain creates two separate representations of the same material. That gives you two ways to retrieve it later. Reading while listening, which LoudReader supports with word-by-word highlighting, taps directly into this: your eyes anchor your ears, and your brain encodes through both channels at the same time.",
+    "q": "Does reading while listening guarantee better memory?",
+    "a": "No. It provides spoken words alongside the text and may make navigation easier, but that is not a guarantee of better recall. Try it on your actual material and check what you can explain."
   },
   {
-    q: "Is text to speech better than reading for reviewing?",
-    a: "For review, TTS can be genuinely better because it is easier to fit in. You can listen to a chapter recap while walking to class, doing laundry, or eating lunch. You probably were not going to sit down with a textbook during those moments anyway. The content gets into your head through a channel you already have available. The trade-off is that passive listening encodes less deeply than active rereading, but that is a trade worth making when the alternative is no review at all.",
+    "q": "Should I use TTS for formulas and diagrams?",
+    "a": "Keep the original visible and work through it directly. Narration and PDF extraction can miss layout, symbols and relationships shown in figures."
   },
   {
-    q: "What are the limits of using TTS for studying?",
-    a: "Three honest limits. First, diagrams, charts, and formulas do not translate to audio. If your material is visually dense, you need your eyes on it at some point. Second, TTS is a passive input channel. Active studying (note-taking, self-quizzing, explaining concepts out loud) produces stronger learning than passive listening. Third, if you multitask heavily while listening, comprehension drops. TTS works best for studying when you give it most of your attention.",
+    "q": "How can I make listening more active?",
+    "a": "Pause after a short section, describe the main idea without looking, then compare your account with the source. Use course questions or worked problems where appropriate."
   },
   {
-    q: "Can LoudReader help with active studying or just passive listening?",
-    a: "Both. LoudReader Premium includes notes and highlights, so you can mark passages and write thoughts as you listen or read. The word-by-word highlight keeps your eyes locked to the text, which gives you the dual-coding benefit of reading and listening at the same time. And because the app works fully on-device and private, your library never leaves your device, you can use it with study materials you would not want uploaded to a cloud service.",
-  },
-  {
-    q: "Should I use TTS for exam prep?",
-    a: "TTS is a good supplement, not a replacement. Listening to a chapter summary or your own notes read aloud is a great way to squeeze in an extra review session. But the research on learning consistently shows that active recall (testing yourself, answering practice questions) produces better retention than passive re-exposure. Use TTS to get more reps with the material, but do the active recall too.",
-  },
+    "q": "Which study features are paid in LoudReader?",
+    "a": "Speed control from 0.3x to 3.0x is a Premium feature. Notes, highlights and word-following highlighting are free. Word highlighting accompanies narration, and the app offers an eight-hour voice trial followed by its permanent free voice tier."
+  }
 ];

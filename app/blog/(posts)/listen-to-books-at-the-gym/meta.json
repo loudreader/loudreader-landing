@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-books-at-the-gym",
   "title": "How to Listen to Books at the Gym",
-  "description": "Lift weights, run the treadmill, and get through your reading list at the same time. LoudReader turns gym time into book time with natural offline voices.",
+  "description": "Prepare an offline book, test your controls and match listening to the session. Pause whenever form, equipment or instructions need your attention.",
   "publishedAt": "2026-08-27",
-  "lastModified": "2026-08-27",
+  "lastModified": "2026-09-28",
   "avatar": "Active/On-the-go",
-  "query": "listen to books at the gym"
+  "query": "listen to books at the gym",
+  "topic": "reading"
 }

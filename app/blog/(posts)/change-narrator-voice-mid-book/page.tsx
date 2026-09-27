@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,139 +6,40 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER, VOICES } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ChangeNarratorVoiceMidBookArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Yes, you can change the narrator voice partway through a book, and
-          you don&apos;t need to restart or wait for a chapter break.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) has a voice
-          button right in the player: tap it to cycle to the next narrator,
-          or press and hold to open a full picker of every voice, grouped by
-          language. The switch takes effect on the next sentence, so the line
-          currently playing finishes in the old voice and the very next one
-          starts in the new one. Your place in the book, your notes, and your
-          progress are untouched. {FREE_TIER.full} Switching among the full
-          roster after the trial needs Premium. See every narrator, and hear each
-          one read a real sample, on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>
-          .
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="One tap swaps the narrator without losing your place."
-      />
-
-      <QuestionSection question="Can you switch narrators without starting the book over?">
-        <p>
-          Yes. This is a genuinely common thing to want: you picked a voice
-          before hearing much of the book, and three chapters in it&apos;s not
-          working for you, or you just want a change. LoudReader is built for
-          this. The voice control sits in the player alongside play, pause,
-          and speed, not buried in a separate settings screen you have to
-          leave the book to reach.
-        </p>
-        <p>
-          A tap on the voice button cycles to the next available narrator in
-          the book&apos;s own language, one voice at a time. If you want to
-          jump straight to a specific narrator instead of cycling through
-          them, press and hold the same button. That opens a full picker with
-          every voice in the roster, organized by language, with a checkmark
-          showing which one is currently reading to you. Tap any voice in the
-          list and it takes over.
-        </p>
+      <Tldr><p>
+        Yes. In LoudReader, tap the reader’s voice button to cycle through available unlocked narrators for the book’s language, or press and hold to open the picker. A change takes effect on the next sentence; you do not need to restart the book or wait for a chapter break. The selected voice is an app-wide preference, so remember the change when returning to another book. Which voices appear depends on your device, library languages and language settings. {FREE_TIER.full} After the trial, switching remains possible within your free selection; locked voices require Premium.
+      </p></Tldr>
+      <ArticleIllustration variant="waveform" caption="Choose another narrator in the reader; the change takes effect for the next sentence." />
+      <QuestionSection question="How do I change the voice while reading?">
+        <ol className="list-decimal pl-6 space-y-2"><li><strong>Open the reader controls.</strong> Find the control showing the current voice.</li><li><strong>Tap to cycle.</strong> The quick cycle stays within the detected language of the book and uses voices you can currently access.</li><li><strong>Press and hold to choose directly.</strong> The picker groups voices by language and marks the active voice.</li><li><strong>Select the narrator and continue.</strong> If a voice is locked, the app offers the relevant upgrade instead of silently changing your selection.</li></ol>
+        <p>If a tap seems to do nothing, the book’s language may have only one available unlocked voice. Open the picker to inspect the options. You can hear the studio roster in the <Link href="/voices" className="text-loudBlue hover:underline">browser samples</Link>, but confirm availability on the device you will use.</p>
       </QuestionSection>
-
-      <QuestionSection question="When does the new voice actually start?">
-        <p>
-          On the next sentence, not the next chapter and not instantly
-          mid-word. Whatever sentence is playing when you make the switch
-          finishes in the original voice, and the sentence right after it
-          starts in the new one. That&apos;s a deliberate design choice: an
-          abrupt cut mid-sentence would sound broken, while waiting for a
-          whole chapter to end would make the feature feel too heavy to use
-          casually. A one-sentence handoff is the middle ground, and in
-          practice it&apos;s barely noticeable, just a change of narrator
-          between one line and the next.
-        </p>
+      <QuestionSection question="When will I hear the new narrator?">
+        <p>The player reflects your selection immediately, while the speech transition is scheduled for the next sentence. The sentence already playing finishes in the previous voice. Give it that boundary before assuming the change failed; a long sentence may make the delay more noticeable.</p>
+        <p>Changing the narrator does not require restarting or importing the book again. It changes the voice setting rather than creating a new copy of the book. You can select the previous voice again if you prefer it.</p>
       </QuestionSection>
-
-      <QuestionSection question="What if you pick a narrator in a different language?">
-        <p>
-          LoudReader checks with you before it does that. The one-tap cycle
-          deliberately stays inside the book&apos;s own language, so a casual
-          tap can&apos;t accidentally hand an English novel to a Spanish
-          narrator. If you use the full picker and choose a voice in a
-          different language on purpose, the app asks first, with a plain
-          confirmation: read this book in that language? Only if you confirm
-          does the switch happen. Language detection isn&apos;t perfect, and
-          being read to in a language you didn&apos;t expect, mid-chapter, is
-          the kind of surprise nobody wants, so this step exists to catch it
-          before it happens rather than after.
-        </p>
-        <p>
-          For readers actually looking for a narrator in a specific language
-          rather than switching by accident, the full roster and what&apos;s
-          available in each one is on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>
-          , where you can hear every narrator read a sample in their own
-          language before you go looking for them in the book.
-        </p>
+      <QuestionSection question="Why can I not see another language?">
+        <p>The list follows languages present in your library or selected in Settings, as well as device support. Check your reading-language settings if you expected more options. A studio roster of 23 narrators across ten languages does not mean every device and language has the same number of choices.</p>
+        <p>The quick cycle uses the book’s detected language. Choosing a different-language voice deliberately in the picker prompts for confirmation. That changes how the existing text is pronounced; it does <strong>not</strong> translate the book. If the detected language is wrong, inspect the book’s text and settings rather than using a foreign-language voice as a translation shortcut.</p>
       </QuestionSection>
-
-      <QuestionSection question="Do you need Premium to switch narrators mid-book?">
-        <p>
-          Not during your first eight hours: every studio narrator is available
-          to try, including mid-book switches; {FREE_TIER.afterTrial}. Switching
-          to another studio narrator after the trial requires Premium. If you
-          tap a locked voice in the full picker, LoudReader opens the paywall
-          instead of switching.
-        </p>
-        <p>
-          Premium unlocks {VOICES.premium}, along with playback speed from
-          0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes. If
-          you&apos;re trying to decide which narrator to pick before
-          upgrading,{" "}
-          <Link
-            href="/blog/best-voice-for-nonfiction-vs-fiction"
-            className="text-loudBlue hover:underline"
-          >
-            the guide to picking a voice for nonfiction vs fiction
-          </Link>{" "}
-          walks through what to listen for.
-        </p>
+      <QuestionSection question="Which voices can I switch between for free?">
+        <p>{FREE_TIER.full} The permanent choice is Stella or Rio, with Bella also available on supported devices. It is not an unrestricted choice of any studio narrator. Premium keeps the full voice selection supported by your device available after the trial.</p>
+        <p>The picker can show locked voices as well as usable ones, so visible does not always mean unlocked. Check the access indicator before assuming a missing switch is a playback error. Notes and ordinary word-following highlighting are not Premium-only features.</p>
       </QuestionSection>
-
-      <QuestionSection question="Does switching voices affect your progress or notes?">
-        <p>
-          No. The voice is purely how the book sounds, not what page
-          you&apos;re on. Your reading position, any notes or highlights
-          you&apos;ve added, and your listening history all stay exactly
-          where they were. Switching narrators is a low-stakes thing to try:
-          worst case, you tap it again and go back.
-        </p>
+      <QuestionSection question="Does each book remember its own narrator?">
+        <p>No. LoudReader stores the selected narrator as an app-wide preference. If you change it for a report, the new selection also affects subsequent listening elsewhere until you switch again. This differs from your saved place in each book.</p>
+        <p>If you are comparing several voices, use the same passage and choose one before changing playback speed. Our <Link href="/blog/how-to-choose-a-narrator-voice" className="text-loudBlue hover:underline">narrator selection guide</Link> explains what to listen for. The <Link href="/" className="text-loudBlue hover:underline">LoudReader app</Link> runs on iPhone and iPad, and on Apple Silicon Macs as an iPad app.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Switch narrators without losing your place"
-        subline={`One tap in the player changes the voice mid-book. ${FREE_TIER.full}`}
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

@@ -1,9 +1,10 @@
 {
   "slug": "are-offline-voices-as-good-as-cloud",
   "title": "Are Offline Voices as Good as Cloud Voices?",
-  "description": "The honest trade-off between on-device and cloud text-to-speech: quality, privacy, reliability, and latency compared side by side.",
+  "description": "Compare specific voices, then weigh offline access, document handling, device resources and cost. Processing location alone does not decide sound quality.",
   "publishedAt": "2026-08-21",
-  "lastModified": "2026-08-21",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "offline vs cloud tts quality"
+  "query": "offline vs cloud tts quality",
+  "topic": "voices"
 }

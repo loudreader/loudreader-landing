@@ -1,9 +1,10 @@
 {
   "slug": "are-text-to-speech-apps-safe",
-  "title": "Are Text-to-Speech Apps Safe? What Happens to Your Files",
-  "description": "When you read a document with cloud text to speech, the file leaves your device. What to check in a privacy policy, and the on-device alternative.",
+  "title": "Are Text-to-Speech Apps Safe? A Privacy Checklist",
+  "description": "Check where speech is generated, how files are stored and what diagnostics are collected. Learn why offline playback is not a complete privacy test.",
   "publishedAt": "2026-07-18",
-  "lastModified": "2026-07-18",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "are text to speech apps safe"
+  "query": "are text to speech apps safe",
+  "topic": "technology"
 }

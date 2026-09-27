@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,184 +6,94 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ListenToWikipediaArticlesArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Wikipedia gives you a clean PDF export for any article. Click
-          &quot;Download as PDF&quot; in the left sidebar on desktop (or under
-          Tools on mobile), save the file, and import it into{" "}
-          <strong>LoudReader</strong> on your iPhone or Mac. LoudReader reads
-          the article aloud with natural offline voices, remembers your place,
-          and works without an internet connection. It is fully on-device and
-          private, your library never leaves your device. This is useful for
-          long research deep dives where reading on screen leads to skimming,
-          for building a study queue of related articles, and for listening
-          while looking at maps or diagrams on a separate device.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Download as PDF, import, press play. Every Wikipedia article becomes a listening session."
-      />
-
-      <QuestionSection question="How do I get a Wikipedia article as a PDF?">
-        <p>
-          Wikipedia has a built-in PDF export that has been there for years and
-          works reliably. On a desktop browser, open any article and look at
-          the left sidebar. Scroll to the &quot;Print/export&quot; section and
-          click &quot;Download as PDF&quot;. Wikipedia generates a clean,
-          formatted PDF with the article text, main images, and a table of
-          contents. No ads, no donation banners, no edit buttons. The file
-          downloads immediately.
-        </p>
-        <p>
-          On mobile, scroll to the bottom of the article and look for the
-          Tools section. &quot;Download as PDF&quot; is usually there. If you
-          do not see it, switch to the desktop version of the site by tapping
-          &quot;Desktop&quot; at the very bottom of the page.
-        </p>
-        <p>
-          Once you have the PDF, open{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>
-          , import the file, and press play. The app reads from the title
-          through the references, in order, and remembers where you stopped.
-          For a general overview of making text into audio, see{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
+      <Tldr><p>
+        To listen to a Wikipedia article in LoudReader, try importing its
+        URL first. A PDF from Wikipedia’s download tool or your browser is
+        another route. Check the saved text before listening: infoboxes,
+        reference lists and tables are not the same as continuous prose.
+        Keep the original article open when a diagram or citation matters,
+        and record the version or access date for research notes. Narration
+        provides another way to read a source; it does not verify the
+        source’s claims or replace its references.
+      </p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Listen to the prose and keep the source available for figures and citations." />
+      <QuestionSection question="How do I save a Wikipedia article for listening?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Open the article and copy its URL.</li>
+          <li>Choose <strong>Paste a Link</strong> in <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>, or share the link to the app.</li>
+          <li>Compare the imported headings and final paragraph with the source.</li>
+          <li>If the extraction is not useful, try Wikipedia’s Download as PDF tool or a browser PDF export, then import that file.</li>
+        </ol>
+        <p>Wikipedia’s <a href="https://en.wikipedia.org/wiki/Help:Download_as_PDF" className="text-loudBlue hover:underline">PDF download help</a>{" "}
+        describes its export option. The location of the tool depends on
+        the site layout; use the desktop view if the control is not visible
+        in your mobile layout. Inspect the PDF instead of assuming every
+        interactive element or large table is preserved.</p>
+        <p>LoudReader runs on iPhone and iPad, and as an iPad app on compatible
+        Apple Silicon Macs. See <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">PDF listening on iPhone</Link>{" "}
+        for the file-import workflow.</p>
       </QuestionSection>
-
-      <QuestionSection question="What happens to tables, infoboxes, and references when it is read aloud?">
-        <p>
-          Wikipedia articles are dense with structured data, and the reading
-          order is not always what a human would choose. Here is what to
-          expect:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Infoboxes.</strong> The summary
-            box on the right side of most articles (dates, locations, key
-            facts) usually appears near the top of the PDF, and the TTS voice
-            reads it as a block of labels and values. &quot;Born: April 15,
-            1452. Died: May 2, 1519.&quot; It sounds like a list of facts,
-            which it is. It is not graceful, but you get the information.
-          </li>
-          <li>
-            <strong className="text-gray-900">Tables.</strong> Data tables
-            get read cell by cell, left to right, top to bottom. For a table
-            with many rows, this is hard to follow by ear. If an article has
-            large data tables you need to understand, look at them on screen
-            and listen to the prose sections.
-          </li>
-          <li>
-            <strong className="text-gray-900">References.</strong> Citation
-            numbers appear in brackets: [1], [2], [3]. The TTS voice reads
-            them out: &quot;bracket one bracket&quot;. In a heavily cited
-            article, this becomes a background noise of bracket numbers. Use
-            the &quot;Printable version&quot; link in the sidebar instead of
-            &quot;Download as PDF&quot;. The printable version often strips
-            citation markers. The result is a cleaner listening experience.
-          </li>
-          <li>
-            <strong className="text-gray-900">Images.</strong> Images appear
-            in the PDF but produce no audio. Captions get read, which gives
-            context. If an image contains essential information (a diagram,
-            a map), keep the PDF open and glance at it while listening, or
-            open the article on a separate screen.
-          </li>
-        </ul>
+      <QuestionSection question="What happens to citations, tables and infoboxes?">
+        <p>The answer depends on the imported representation. Structured
+        article HTML can identify a data table; a PDF can flatten the same
+        table into lines whose relationships are harder to recover.
+        LoudReader’s structured reader preserves data tables visually and
+        excludes them from linear narration. A PDF may instead produce a
+        sequence of labels and values.</p>
+        <p>Common citation-number markers are filtered from speech, but
+        that is not a guarantee that every reference format will disappear
+        or that every source will be narrated usefully. Do not rely on
+        hearing “[12]” to know which evidence supports a claim. Follow the
+        actual reference in Wikipedia when you need it.</p>
+        <p>For an infobox full of dates or measurements, inspect the original.
+        A smoothly spoken sentence does not tell you whether a value belonged
+        to the column beside it. Keep images, maps and equations as visual
+        checks rather than expecting speech to reconstruct them.</p>
       </QuestionSection>
-
-      <QuestionSection question="Why listen to a Wikipedia article instead of reading it?">
-        <p>
-          Listening is not better than reading. It is different, and it helps
-          in specific situations where reading is harder:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Long article fatigue.</strong>{" "}
-            Wikipedia articles on major topics (World War II, Quantum
-            Mechanics, Evolution) can run to 10,000 words or more. Reading on
-            screen leads to skimming. Listening forces you to hear every
-            section, which means you actually finish the article instead of
-            scrolling past the middle.
-          </li>
-          <li>
-            <strong className="text-gray-900">Building context before reading.</strong>{" "}
-            Listen to an article overview while doing something else. When you
-            sit down to read it closely, you already know the structure and
-            the key terms. The close read goes faster and sticks better.
-          </li>
-          <li>
-            <strong className="text-gray-900">Multimodal study.</strong>{" "}
-            Listen to the article text while looking at related images, maps,
-            or timelines on a separate screen. Your brain processes the
-            auditory and visual information through different channels, and
-            combining them can improve recall. This is especially useful for
-            topics with a strong visual component, like geography, art history,
-            or anatomy.
-          </li>
-        </ul>
-        <p>
-          If listening while reading helps you, LoudReader&apos;s word
-          highlighting shows each word as it is spoken. You can follow along
-          in the PDF while the voice reads. For a related approach, see{" "}
-          <Link
-            href="/blog/project-gutenberg-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            Project Gutenberg audiobooks
-          </Link>
-          , which covers listening to public domain books.
-        </p>
+      <QuestionSection question="How can I use this for research without losing the source?">
+        <p>Begin with a question you want the article to answer. Listen to
+        the relevant section, write down what remains unclear, and follow
+        the cited primary sources. Treat an overview as the beginning of
+        research, not the final authority for a technical, medical or
+        historical claim.</p>
+        <p>Keep the article title, URL and access date with your notes. If
+        version precision matters, use a permanent revision link from the
+        article’s history. A saved reading copy does not automatically
+        update when editors correct the live page.</p>
+        <p>Listening while looking at a map or diagram is a practical way
+        to keep the visual reference available. It is not a promise of
+        better memory or comprehension; pause and check your understanding
+        as you would with any other reading method.</p>
       </QuestionSection>
-
-      <QuestionSection question="Can I build a Wikipedia study queue?">
-        <p>
-          Yes, and the workflow is the same as building any PDF listening
-          queue. Download each article as a PDF, save them to a folder, and
-          import them all into LoudReader. The app lists them in its library
-          and you can play them in any order. Each article remembers its own
-          playback position, so you can jump between articles without losing
-          your place.
-        </p>
-        <p>
-          For students, this is especially useful during research. Download the
-          five or six Wikipedia articles that cover your topic from different
-          angles, import them as a batch, and listen through them while walking
-          or doing chores. You get a broad overview of the topic without
-          spending hours staring at a screen.
-        </p>
-        <p>
-          All of this runs offline once the PDFs are imported. LoudReader is
-          fully on-device and private, your library never leaves your device.
-          No internet, no account, no tracking.
-        </p>
+      <QuestionSection question="What if technical terms are pronounced strangely?">
+        <p>Names, abbreviations and specialist vocabulary may not sound as
+        expected. Compare the written term with what you heard, especially
+        when a pronunciation changes the apparent meaning. Try a voice
+        appropriate to the article’s language, but do not assume that a
+        fluent delivery establishes technical accuracy.</p>
+        <p>If you are preparing for an exam or presenting the material to
+        others, verify the terminology from a subject-specific source. The
+        listening copy is a convenience, not a pronunciation dictionary.</p>
       </QuestionSection>
-
+      <QuestionSection question="Can I prepare a small offline study queue?">
+        <p>Yes. Choose a few related articles, check their imports, and test
+        your selected voice without a connection. Fetching new pages still
+        needs internet access. Unlimited article saving is Premium after
+        the free allowance.</p>
+        <p>LoudReader generates speech on device, but also includes
+        diagnostics and usage analytics. Keep that distinction in mind when
+        choosing a workflow. For a broader collection of web sources, the{" "}
+        <Link href="/blog/listen-to-rss-feeds-aloud" className="text-loudBlue hover:underline">RSS listening guide</Link>{" "}
+        explains a manually selected article queue.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Turn Wikipedia deep dives into listening sessions"
-        subline="Download any article as PDF, import into LoudReader, and press play. Study hands-free, offline, no account."
-      />
+      <StoreCta headline="Try your own document in LoudReader" subline="Import a supported file and check a short passage before a longer listening session." />
     </ArticleLayout>
   );
 }

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,138 +6,44 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function HowLongToListenArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          A typical novel takes about 9 to 10 hours to listen to at normal
-          speed. That number comes from simple arithmetic, not a study: an
-          average novel runs around 90,000 words, and audiobook narration is
-          commonly cited at roughly 150 words per minute, which is 600
-          minutes, or 10 hours. To estimate any specific book, divide its word
-          count by 150, then divide by 60 for hours. Longer books, dense
-          non-fiction, and doorstop fantasy novels take a lot more. Playback
-          speed changes the total directly: a 10-hour book takes about 6.7
-          hours at 1.5x and about 5 hours at 2x, since doubling speed halves
-          time. LoudReader Premium supports playback speed from 0.3x to 3.0x,
-          for whatever pace actually holds your attention. None of this is a
-          guarantee for any one title, but it gives you a real number to work
-          from instead of a guess.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Word count divided by pace is the whole calculation."
-      />
-
-      <QuestionSection question="How long does an average book take to listen to?">
-        <p>
-          The short answer, worked out with real arithmetic: around 9 to 10
-          hours. A standard adult novel runs somewhere between 70,000 and
-          100,000 words, so 90,000 is a reasonable round middle. Audiobook
-          narration commonly runs around 150 words per minute. Divide 90,000
-          by 150 and you get 600 minutes, which is 10 hours. That is an
-          average, built from average inputs, not a measurement of any
-          specific book, but it gives you a real baseline instead of a
-          shrug.
-        </p>
+      <Tldr><p>
+        If an audiobook already lists its duration, divide that time by your playback speed. A ten-hour recording takes about six hours forty minutes at 1.5x, before pauses or rewinds. For a book read by text to speech, estimate from its word count and the pace of the voice you will use. For example, 90,000 words at an assumed 150 words per minute takes ten hours at 1x. Those are chosen inputs for an example, not the length or pace of an average book. A measured sample from your actual voice gives you a more useful starting point.
+      </p></Tldr>
+      <ArticleIllustration variant="waveform" caption="Use a listed recording duration when available; use measured voice pace for a TTS estimate." />
+      <QuestionSection question="How do I calculate time from a listed audiobook duration?">
+        <p className="font-mono text-sm bg-gray-50 border border-gray-200 rounded-lg p-4">listening time = original recording duration / playback multiplier</p>
+        <p>For an original ten-hour recording, the uninterrupted time is:</p>
+        <ul className="list-disc pl-6 space-y-2"><li>0.8x: 12 hours 30 minutes.</li><li>1x: 10 hours.</li><li>1.25x: 8 hours.</li><li>1.5x: about 6 hours 40 minutes.</li><li>2x: 5 hours.</li></ul>
+        <p>These examples assume the same audio is played throughout at a constant rate. Pauses, chapter skips and repeated sections change the time you actually spend. Check whether a player’s displayed remaining time already accounts for your selected speed before dividing it again.</p>
       </QuestionSection>
-
-      <QuestionSection question="How do you calculate listening time for a specific book?">
-        <p>The formula is the same one used above, applied to your actual book:</p>
-        <p className="font-mono text-sm bg-gray-50 border border-gray-200 rounded-lg p-4">
-          hours = (word count / words per minute) / 60
-        </p>
-        <p>A few worked examples at 150 words per minute:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            A 50,000-word novella: 50,000 / 150 = 333 minutes, about 5.6
-            hours.
-          </li>
-          <li>
-            A 90,000-word novel: 90,000 / 150 = 600 minutes, about 10 hours.
-          </li>
-          <li>
-            A 150,000-word epic fantasy doorstop: 150,000 / 150 = 1,000
-            minutes, about 16.7 hours.
-          </li>
-        </ul>
-        <p>
-          If you don't know a book's exact word count, page count times
-          roughly 275 words per page is a workable stand-in for a standard
-          printed page. None of this predicts an exact time for an exact
-          edition, but it gets you within a reasonable range before you press
-          play.
-        </p>
+      <QuestionSection question="What if my ebook has no recording or duration?">
+        <p>Estimate from words rather than pages:</p>
+        <p className="font-mono text-sm bg-gray-50 border border-gray-200 rounded-lg p-4">hours = word count / words per minute / 60 / playback multiplier</p>
+        <p>At an illustrative 150 words per minute and 1x, 50,000 words takes roughly 5 hours 33 minutes; 90,000 takes 10 hours; 150,000 takes roughly 16 hours 40 minutes. The pace here is an assumption for calculation, not a verified average for every narrator or language.</p>
+        <p>To estimate your own voice’s pace, time a representative passage at 1x and divide its word count by the elapsed minutes. Use a few samples if the book mixes prose, dialogue and numbers. Then apply your speed multiplier once. If you timed the sample at your intended speed already, do not divide by that multiplier again.</p>
       </QuestionSection>
-
-      <QuestionSection question="How much does playback speed actually save you?">
-        <p>
-          A lot, and the relationship is direct: double the speed, halve the
-          time, for the same book. Using the 10-hour example above:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>1x speed: 10 hours.</li>
-          <li>1.25x speed: 8 hours.</li>
-          <li>1.5x speed: about 6.7 hours.</li>
-          <li>2x speed: 5 hours.</li>
-        </ul>
-        <p>
-          LoudReader Premium lets you set speed anywhere from 0.3x to 3.0x, so
-          the same 10-hour book at the fast end works out to about 3.3 hours,
-          arithmetically. Whether that speed is actually useful depends on the
-          material and on you. Dense non-fiction you're taking notes on holds
-          up worse at high speed than light fiction you're following for
-          plot. Find the fastest speed where you're not rewinding, and that's
-          your real number, not the arithmetic ceiling.
-        </p>
+      <QuestionSection question="Why is page count a weak substitute?">
+        <p>A printed page can contain a few lines of dialogue, a dense block of text or a diagram with almost nothing to narrate. Ebook page counts also change with display settings. Multiplying every page by a fixed word count can create a precise-looking estimate with uncertain inputs.</p>
+        <p>If pages are all you have, count the words on several representative text pages and use their range to make a rough estimate. Label it as rough. A two-column textbook with tables needs a different treatment from a prose novel, and the reader may skip or mishandle text that does not extract cleanly.</p>
       </QuestionSection>
-
-      <QuestionSection question="Does book length track page count or word count better?">
-        <p>
-          Word count, not page count. Two books with the same page count can
-          have very different listening times if one uses a larger font,
-          wider margins, or shorter paragraphs with more white space. Word
-          count is the number that actually drives narration time, since it's
-          what the narrator, human or synthetic, is reading through minute by
-          minute. Page count is a reasonable stand-in only when you don't have
-          the real word count to work with.
-        </p>
+      <QuestionSection question="How do I turn the estimate into a reading plan?">
+        <p>Divide estimated listening minutes by the minutes you expect to listen each day. A remaining six hours is 360 minutes, or twelve sessions of thirty minutes. Add room for missed days, pauses and replays rather than promising yourself an exact finish date.</p>
+        <p>Choose the pace before optimising the calendar. Our <Link href="/blog/how-fast-should-you-listen-to-audiobooks" className="text-loudBlue hover:underline">playback pace guide</Link> covers comfortable listening; <Link href="/blog/best-playback-speed-for-comprehension" className="text-loudBlue hover:underline">the comprehension guide</Link> covers checking understanding for study.</p>
       </QuestionSection>
-
-      <QuestionSection question="Where does this arithmetic come from with LoudReader specifically?">
-        <p>
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          reads any DRM-free EPUB or PDF aloud with natural offline voices, so
-          the math above applies directly to books you already own, not just
-          ones with a commercial audiobook edition. It also has 70,000+
-          Project Gutenberg classics built in, browsable at{" "}
-          <Link href="/listen" className="text-loudBlue hover:underline">
-            /listen
-          </Link>
-          , where each catalog page shows the book's estimated listening
-          time so you don't have to run the calculation yourself. It's fully
-          on-device and private, your library never leaves your device, so
-          none of this depends on a subscription tier to try.
-        </p>
+      <QuestionSection question="How does this apply to LoudReader?">
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> generates speech for supported DRM-free EPUBs and PDFs on your device. A different narrator or extracted version of a document can change the duration, so use an estimate as a planning aid. Premium includes 0.3x–3.0x playback; book listening remains available free at normal speed.</p>
+        <p>The arithmetic does not rate how difficult a book will be. Ten hours of a familiar story and ten hours of material you need to annotate can occupy very different amounts of your week.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Do the math with a real book"
-        subline="Import any EPUB or PDF and see the estimate, then press play. Free, on-device, no account."
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

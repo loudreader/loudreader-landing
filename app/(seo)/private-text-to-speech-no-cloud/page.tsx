@@ -8,7 +8,7 @@ import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { FREE_TIER, MAC, PRIVACY, VOICES } from "@/components/money/site";
 
 import {
   COMPARISON_COLUMNS,
@@ -42,52 +42,27 @@ export default function PrivateTextToSpeechNoCloudPage() {
       <Tldr>
         <p>
           Private text to speech means the audio is generated on your own
-          device, so your text is never uploaded to anyone&apos;s server.
+          device, without uploading your text to a speech provider for narration.
           With any cloud TTS service, every sentence you listen to must be
           transmitted to the provider to be synthesized. With on-device TTS,
-          nothing leaves your machine. <strong>LoudReader</strong> is a
+          text does not need to be sent to a speech provider. <strong>LoudReader</strong> is a
           text-to-speech reader for Mac and iPhone built exactly this way:
-          it&apos;s fully on-device and private, your library never leaves
-          your device, it requires no account, and it reads EPUBs, PDFs, and
-          articles aloud with natural offline voices. The proof is simple:
-          turn on airplane mode and it keeps reading. That matters most for
+          speech is generated locally without a book upload. It requires no account and reads EPUBs, PDFs, and
+          articles aloud with natural offline voices. Once content and voices are ready, narration can work offline. That matters most for
           what you actually read, like contracts, medical records, unpublished
           manuscripts, and client documents.
         </p>
       </Tldr>
 
       <QuestionSection question="What makes a text-to-speech app private?">
-        <p>
-          Four things, and they&apos;re checkable rather than promises:
-        </p>
+        <p>Separate the speech engine from the rest of the app. Local synthesis avoids uploading your text for narration; it does not mean an application makes no network requests.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong>On-device synthesis.</strong> The speech engine runs on
-            your own hardware. If the voices work with the network off, your
-            text isn&apos;t being sent out to be spoken.
-          </li>
-          <li>
-            <strong>No account.</strong> An app that never asks who you are
-            can&apos;t tie your reading to an identity. LoudReader has no
-            sign-up, no login, and no profile.
-          </li>
-          <li>
-            <strong>No content collection.</strong> LoudReader collects no
-            personal data. Books, notes, highlights, and reading progress
-            stay on your device. The{" "}
-            <Link href="/privacy" className="text-loudBlue hover:underline">
-              privacy policy
-            </Link>{" "}
-            is two minutes long because there&apos;s almost nothing to
-            disclose.
-          </li>
-          <li>
-            <strong>Minimal network surface.</strong> The only network
-            requests LoudReader makes are downloads you ask for: free books
-            from the Project Gutenberg catalog, or an article link you paste
-            in.
-          </li>
+          <li><strong>Speech processing.</strong> LoudReader generates narration and recognises scanned text on your device.</li>
+          <li><strong>Account.</strong> No LoudReader account is required. That does not establish that an app collects no data.</li>
+          <li><strong>Diagnostics.</strong> {PRIVACY.summary}</li>
+          <li><strong>Downloads.</strong> Getting a book, saving a web article or making a purchase uses a connection.</li>
         </ul>
+        <p>The <Link href="/privacy" className="text-loudBlue hover:underline">privacy policy</Link> describes these flows.</p>
       </QuestionSection>
 
       <QuestionSection question="Why does cloud text to speech expose your documents?">
@@ -102,22 +77,15 @@ export default function PrivateTextToSpeechNoCloudPage() {
         </p>
         <p>
           On-device TTS removes the question instead of answering it.
-          There&apos;s no server-side copy to worry about because there&apos;s
-          no server-side anything. For a novel this may not matter much; for a
+          There is no speech-service copy of your document, but an app may still use external services for other purposes. For a novel this may not matter much; for a
           medical report, an unpublished manuscript, or a client&apos;s legal
           brief, it&apos;s the whole decision.
         </p>
       </QuestionSection>
 
       <QuestionSection question="How can I test whether TTS is really on-device?">
-        <p>
-          The airplane-mode test: switch off all connectivity and press play.
-          An app that keeps narrating with no connection is generating speech
-          locally, and there&apos;s no way to fake that. An app that stops,
-          errors, or degrades is calling home to synthesize. LoudReader passes
-          this test on both Mac and iPhone. It&apos;s the fastest honest answer
-          to &ldquo;is my text being uploaded?&rdquo; that exists.
-        </p>
+        <p>Download the voice resources, disconnect, and try a passage that has not already been rendered. That checks whether the app can generate new speech offline.</p>
+        <p>Offline playback alone is not proof of local synthesis: downloaded cloud audio also plays without a connection. It also says nothing about analytics sent when connectivity returns. Check the architecture and privacy disclosures separately.</p>
       </QuestionSection>
 
       <QuestionSection question="How does on-device TTS compare with cloud TTS?">
@@ -150,7 +118,7 @@ export default function PrivateTextToSpeechNoCloudPage() {
           the text, and your place is saved automatically. The free tier
           includes unlimited listening on every book, cover to cover, with no
           word quota. Private reading shouldn&apos;t be the expensive option.
-          It also ships with 70,000+ free Project Gutenberg classics, and the
+          Its built-in catalog lets you browse and download 70,000+ Project Gutenberg titles, subject to local copyright, and the
           same on-device narration works for{" "}
           <Link
             href="/listen-to-pdf-iphone"
@@ -187,24 +155,22 @@ export default function PrivateTextToSpeechNoCloudPage() {
             browser.
           </li>
           <li>
-            <strong>Extras.</strong> The cloud suites have AI summaries, voice
-            cloning, and browser extensions. LoudReader deliberately
-            doesn&apos;t.
+            <strong>Extras.</strong> Some cloud suites offer AI summaries and browser extensions. LoudReader focuses on reading and also includes on-device voice cloning, with a three-clone trial allowance.
           </li>
         </ul>
         <p>
-          If those outweigh privacy for your use, a cloud service is the
-          rational choice. If what you read is sensitive, or you just dislike
-          your reading being someone else&apos;s data, no-cloud is the only
-          architecture that settles the question.
+          Choose according to the documents, voices and controls you need. Local synthesis avoids a speech-provider upload; assess diagnostics, storage and your organisation’s requirements separately.
         </p>
       </QuestionSection>
+
+      <p>{MAC.precise} {VOICES.availability}</p>
+      <p>{FREE_TIER.full}</p>
 
       <FaqSection faqs={FAQS} />
 
       <StoreCta
-        headline="Text to speech that never phones home"
-        subline="Fully on-device narration for books, PDFs, and articles. No account, no uploads, no word quota."
+        headline="Speech generated on your own device"
+        subline="Local narration for books, PDFs, and saved articles. No LoudReader account or book-listening word quota."
       />
     </MoneyPageLayout>
   );

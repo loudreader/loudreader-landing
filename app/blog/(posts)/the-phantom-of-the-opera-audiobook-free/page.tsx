@@ -7,148 +7,33 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function PhantomOfTheOperaAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          The Phantom of the Opera novel is public domain, so a free
-          audiobook of it is one download away. <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) reads Gaston Leroux&apos;s original
-          1910 text aloud with a natural offline voice, no cost, no time
-          limit. One honest note first: this is a synthetic voice reading
-          Leroux&apos;s text on your device, not a studio-recorded
-          performance, and it is the novel, not the musical. At roughly
-          84,000 words, it runs about 9.5 hours. Hear a sample on the{" "}
-          <Link
-            href="/listen/the-phantom-of-the-opera"
-            className="text-loudBlue hover:underline"
-          >
-            The Phantom of the Opera catalog page
-          </Link>
-          , then open the app, where the book is already built in, and press
-          play.
-        </p>
+        <p>The free text linked by LoudReader is an English translation of Gaston Leroux’s The Phantom of the Opera, <a href="https://www.gutenberg.org/ebooks/175" className="text-loudBlue hover:underline">Gutenberg ebook 175</a>. It is the novel, not the musical’s songs or script. Gutenberg lists this edition as public domain in the USA. The US listing does not establish availability in other countries. LoudReader reads the ebook with generated speech; you can preview it on the <Link href="/listen/the-phantom-of-the-opera" className="text-loudBlue hover:underline">Phantom listening page</Link>. If you want the original French or a specific modern translation, select that edition separately rather than relying on the familiar English title.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="The original 1910 novel, read aloud on your device."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="The English novel and the stage musical are different listening choices." />
 
-      <QuestionSection question="Where can you listen to The Phantom of the Opera for free?">
-        <p>
-          Gaston Leroux died in 1927, and his novel has been public domain
-          for a long time. Project Gutenberg carries the complete text as
-          ebook #175, so nothing stands between you and the story except
-          finding someone, or something, to read it aloud. A plain Gutenberg
-          text file can&apos;t do that on its own.
-        </p>
-        <p>
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          does. The novel is already in the app&apos;s built-in library of
-          70,000+ free Gutenberg books, so there&apos;s nothing to find or
-          convert first. Open the app, search for it, press play. You can
-          hear the voice first on the{" "}
-          <Link
-            href="/listen/the-phantom-of-the-opera"
-            className="text-loudBlue hover:underline"
-          >
-            The Phantom of the Opera page
-          </Link>
-          , which has a rendered sample.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Which version is the catalogue using?"><p>Gutenberg identifies ebook 175 as an English translation. Its record does not name a translator, so we do not attribute one here. It should not be described as Leroux’s original French wording or assumed to match a modern English edition line for line.</p><p>For an assigned translation, use a supported DRM-free ebook of that version. Our <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">ebook listening guide</Link> explains how to import it. Compare the prologue and chapter list before settling into the reading; the title alone does not establish edition equivalence.</p></QuestionSection>
 
-      <QuestionSection question="Is this the musical, or something different?">
-        <p>
-          Something different, and stranger. Most people know Phantom of the
-          Opera through the long-running musical, which is a real thing but
-          not what this reading covers. Leroux&apos;s original novel frames
-          the whole story as investigative journalism, complete with
-          witness testimony and documents, which gives its gothic melodrama
-          a strange, convincing plausibility. Erik, the Phantom, is a
-          composer, an architect, and a ventriloquist as well as a monster,
-          and a far stranger and sadder figure on the page than any
-          adaptation has room for. If all you know is the show, the book is
-          a genuinely different experience of the same haunted opera house,
-          closer to a mystery novel with a monster in it than to a romance
-          with songs.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="What should you expect if you know the musical?"><p>The novel opens with an investigator-style account and uses testimony and documents to develop its mystery. Expect prose narration, not songs, orchestration or the musical’s scene order. The linked text has a prologue, numbered chapters, an epilogue and additional material about the opera house.</p><p>For a first listen, avoid treating an adaptation’s plot as a chapter guide. Follow the novel’s own headings and stop at a natural section break. If you lose track of who is recounting an event, look at the surrounding text rather than trying to match it to a remembered scene.</p></QuestionSection>
 
-      <QuestionSection question="What does the narration sound like?">
-        <p>
-          Direct answer: it&apos;s a synthetic voice, not a human actor.
-          LoudReader builds its narration from {"natural offline voices"},
-          generated live on your device as the book plays, with no separate
-          audio file created or downloaded. Christine, Raoul, and the
-          Phantom are all read in one consistent voice, the way any
-          text-to-speech reader works, rather than performed as separate
-          characters.
-        </p>
-        <p>
-          If a full-cast, dramatically performed audiobook is what you want,
-          a commercial edition will give you that, and this article
-          won&apos;t pretend LoudReader competes with it on that front. What
-          you get instead is the complete, unabridged novel, narrated for
-          free, with word-by-word highlighting tracking the text as it
-          reads, useful for keeping your place through Leroux&apos;s longer
-          descriptive passages beneath the Opera, including the sections
-          on the building&apos;s architecture that most adaptations skip
-          entirely.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How does the synthetic reading work?"><p>LoudReader generates speech in the voice you select. It does not sing passages or automatically cast Christine, Raoul and the Phantom as separate performers. Try names and a dialogue passage as well as the opening; pronunciation and emphasis can vary.</p><p>The catalogue’s approximately 9.5 hours is a text-length estimate for this English entry. It does not describe the length of the musical, the French novel in another voice, or every recorded translation. Compare runtime only after confirming which version each service is offering.</p></QuestionSection>
 
-      <QuestionSection question="How do you start listening right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Get{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>
-            . Free, no account required.
-          </li>
-          <li>
-            Search the built-in Gutenberg catalog inside the app for The
-            Phantom of the Opera. No file to hunt down, no conversion step,
-            and nothing to keep track of afterward.
-          </li>
-          <li>
-            Press play. LoudReader is{" "}
-            {"fully on-device and private, your library never leaves your device"},
-            so the whole 9.5 hours play without a connection once the book
-            is loaded.
-          </li>
-          <li>
-            Once you&apos;re used to the voice, Premium adds playback speed
-            from 0.3x to 3.0x if you want to move faster through the
-            slower stretches. The free tier plays at normal speed and stays
-            unlimited either way.
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for The Phantom of the Opera. The catalogue’s ebook 175 is in English; import a different supported edition separately if that is what you want. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Start The Phantom of the Opera tonight"
-        subline="It's already in LoudReader's free Gutenberg library. Import nothing, just press play."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

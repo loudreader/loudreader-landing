@@ -1,178 +1,51 @@
 import Link from "next/link";
-
-import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER, PRICING, REQUIREMENTS } from "@/components/money/site";
-
+import { FREE_TIER, REQUIREMENTS } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function TextToSpeechAppleSiliconArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Every Apple Silicon chip (M1 through M4) has a dedicated Neural
-          Engine, a processor designed for machine learning tasks like voice
-          generation. This is what makes high-quality, offline text-to-speech
-          possible without a cloud server. <strong>LoudReader</strong> (iPhone, iPad, and Mac) uses the Neural Engine to generate natural
-          voices entirely on your device. It is fully on-device and private,
-          your library never leaves your device. No internet connection is
-          needed, no text is sent to a server, and no account is required.
-          Intel Macs lack the Neural Engine and are not supported
-          ({REQUIREMENTS}). {FREE_TIER.full} Premium ({PRICING.premiumMonthly})
-          adds {PRICING.premiumFeatures}.
-        </p>
+        <p>Apple Silicon can run speech models locally, using the CPU, GPU or Neural Engine according to the model and runtime. That can remove a speech server from the listening workflow, but it does not automatically make an app faster, more private or better sounding. LoudReader&apos;s iPad app can run on compatible Apple Silicon Macs; it does not have a separate native macOS build. Developers can use the open-source Loudkit framework with several runtime options. Choose between those routes by what you want to do: read a document, add speech to software, or experiment with a model. Then check support on your exact device.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="offline"
-        caption="The Neural Engine on Apple Silicon runs voice models locally. No cloud, no latency, no privacy tradeoff."
-      />
-
-      <QuestionSection question="Why does the chip matter for text-to-speech?">
-        <p>
-          For most of the last decade, high-quality text-to-speech required a
-          server. The voice models were too computationally heavy to run on a
-          consumer device, so apps sent your text to a cloud server, which
-          generated the audio and streamed it back. This gave you good voices
-          at the cost of privacy, offline reliability, and latency.
-        </p>
-        <p>
-          Apple Silicon changed that, and the Neural Engine is the reason. The
-          M1 chip (2020) included a 16-core Neural Engine capable of 11
-          trillion operations per second, dedicated to machine learning. The
-          M2, M3, and M4 increased that capacity. For text-to-speech, this
-          means a chip on your desk or in your pocket can run the same class of
-          neural voice models that used to require a data center.
-        </p>
-        <p>
-          The practical upshot: a MacBook Air with an M1 chip can generate
-          natural-sounding voices locally, offline, with no server involved.
-          Intel Macs from 2019 and earlier cannot do this at the same quality
-          level because they lack the dedicated ML hardware. They either use
-          simpler voices or depend on a cloud service.
-        </p>
+      <ArticleIllustration variant="devices" caption="Choose a supported runtime, then test the voice and workload you need." />
+      <QuestionSection question="What does the Neural Engine actually do?">
+        <p>The Neural Engine is an accelerator for supported machine-learning operations. A speech pipeline includes several stages, and a runtime may distribute work rather than putting every operation on one processor. Apple&apos;s <a href="https://developer.apple.com/documentation/coreml/mlcomputeunits" className="text-loudBlue hover:underline">Core ML compute-unit documentation</a> describes options for the CPU, GPU and Neural Engine.</p>
+        <p>For a listener, the processor label is less useful than whether a long passage plays smoothly. For a developer, it matters which model operations the backend supports and how the pipeline behaves on the target device. Neither audience should read a chip&apos;s advertised capability as a measured speech benchmark.</p>
       </QuestionSection>
-
-      <QuestionSection question="How does LoudReader use Apple Silicon?">
-        <p>
-          LoudReader is built specifically for Apple silicon and uses the
-          Neural Engine for every voice it generates. On a Mac it is the iPad
-          app running in Apple&apos;s compatibility mode rather than a separate
-          Mac build, but the engine is the same and it runs on the Mac&apos;s
-          own Neural Engine. There are three practical benefits:
-        </p>
+      <QuestionSection question="What should I check before choosing an app?">
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">23 studio narrators, all local.</strong>{" "}
-            The voices are included in the app download and run on the Neural
-            Engine. You do not download voice packs separately, and you do not
-            need WiFi for the voices to work. {FREE_TIER.full}
-          </li>
-          <li>
-            <strong className="text-gray-900">Instant playback.</strong>{" "}
-            Press play and the voice starts immediately. There is no round
-            trip to a server, no buffering, and no latency spike when your
-            connection is slow. The text-to-speech pipeline lives entirely
-            inside the app and the chip.
-          </li>
-          <li>
-            <strong className="text-gray-900">Privacy by design.</strong>{" "}
-            LoudReader is fully on-device and private, your library never
-            leaves your device. The app has no account, no analytics, and no
-            cloud processing. The text you are reading stays on the chip that
-            is reading it. For anyone reading confidential documents, this is
-            the difference between a tool you can use and a tool you cannot.
-          </li>
+          <li><strong>Compatibility.</strong> Check the app&apos;s OS and hardware requirements, not just whether your Mac has an M-series chip.</li>
+          <li><strong>The actual voice.</strong> Try names, numbers, dialogue and a longer passage in the language you need.</li>
+          <li><strong>Setup requirements.</strong> Find out whether models need downloading and allow storage for them.</li>
+          <li><strong>Behaviour offline.</strong> Try a new passage after disconnecting, once setup is complete.</li>
+          <li><strong>Data handling.</strong> Read what the whole app sends, not only where speech generation happens.</li>
         </ul>
+        <p>These checks help you judge a finished workflow. They do not require buying a newer computer just because its accelerator has a larger number in a specification sheet.</p>
       </QuestionSection>
-
-      <QuestionSection question="Is on-device TTS on Apple Silicon as good as cloud TTS?">
-        <p>
-          The honest answer: it depends on the implementation. A well-built
-          on-device voice model running on the Neural Engine can sound very
-          close to a cloud voice. The Neural Engine has enough compute to run
-          sophisticated models. But cloud services have an advantage: they can
-          run much larger models on server GPUs, and their voices can be more
-          expressive in theory.
-        </p>
-        <p>
-          In practice, the difference is often smaller than you would expect.
-          LoudReader's neural voices are clear, natural, and comfortable for
-          hours of listening. Speechify's cloud voices are slightly more
-          expressive, but the difference is marginal for most people. The
-          tradeoff is not really about voice quality at this point. It is
-          about privacy, offline reliability, and latency. On-device wins all
-          three. Cloud wins on raw model size, which matters less as on-device
-          hardware improves.
-        </p>
-        <p>
-          If you want to hear the difference yourself, the test is simple:
-          download LoudReader (free), listen to a passage, then try a
-          cloud-based app with the same text. Your ears will tell you which
-          voice you prefer. For more on the offline vs. cloud comparison, see{" "}
-          <Link
-            href="/blog/are-offline-voices-as-good-as-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            are offline voices as good as cloud
-          </Link>
-          .
-        </p>
+      <QuestionSection question="How does LoudReader fit on a Mac?">
+        <p>LoudReader is for listening to your books and documents. Its iPad build can run on a compatible Apple Silicon Mac through Apple&apos;s compatibility mode. Published requirements are {REQUIREMENTS}. The <Link href="/blog/read-aloud-on-macbook" className="text-loudBlue hover:underline">MacBook guide</Link> explains the interface and the absence of automatic progress sync.</p>
+        <p>{FREE_TIER.full} Studio narrator availability depends on hardware, so check your installed voice picker. Narration is local, but version 1.12 also uses crash diagnostics and usage analytics enabled by default. That distinction matters more than calling the whole app “on the Neural Engine”.</p>
       </QuestionSection>
-
-      <QuestionSection question="What if I have an Intel Mac?">
-        <p>
-          LoudReader requires Apple Silicon ({REQUIREMENTS}) and will not run
-          on an Intel Mac. If you have an Intel Mac and want a read-aloud app,
-          your options are:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">macOS Spoken Content (built-in, free).</strong>{" "}
-            Works on Intel Macs with the system voice. Good for short passages.
-            No bookmarking or reading features.
-          </li>
-          <li>
-            <strong className="text-gray-900">Cloud-based apps.</strong>{" "}
-            Speechify, NaturalReader, and others run on Intel Macs through a
-            browser or Electron wrapper and stream voices from their servers.
-            You trade privacy and offline reliability for voice quality.
-          </li>
-          <li>
-            <strong className="text-gray-900">Use an iPhone or iPad.</strong>{" "}
-            All iPhones from the iPhone 8 and newer, and all iPads from 2018
-            and newer, have a Neural Engine. LoudReader runs on any iPhone or
-            iPad with iOS 18+, and it is the same app, with the same voices
-            and features, that you install on a Mac.
-          </li>
-        </ul>
-        <p>
-          For more on the Mac privacy angle,{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text-to-speech with no cloud
-          </Link>{" "}
-          covers why on-device processing matters.
-        </p>
+      <QuestionSection question="When would I use Loudkit instead?">
+        <p><a href="https://loudkit.loudreader.io/" className="text-loudBlue hover:underline">Loudkit</a> is the open-source speech framework for developers. It offers Python, Swift, Go, Rust and TypeScript SDKs with backend-specific requirements. Apple-oriented Core ML support is one route; other runtimes target CPU and GPU execution on other platforms.</p>
+        <p>Start with the <a href="https://loudkit.loudreader.io/supported/" className="text-loudBlue hover:underline">support matrix</a>, then follow the guide for your SDK. A runtime listed as supported is not a claim that every device, dependency version and long-form input has been measured. Test the same workload you plan to ship.</p>
       </QuestionSection>
-
+      <QuestionSection question="Does this mean Intel Macs cannot run good local speech?">
+        <p>No. LoudReader&apos;s Apple Silicon requirement describes that app, not a physical rule for every speech engine. Other local models and system voices have different requirements. Voice quality depends on the model, voice, language and text; performance also depends on the runtime and hardware.</p>
+        <p>We have not published a battery or quality comparison establishing that Apple Silicon always wins. Compare the tools you can run on the computer you already have. For a broader explanation of the architecture, see <Link href="/blog/on-device-text-to-speech-explained" className="text-loudBlue hover:underline">on-device text to speech explained</Link>.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear what Apple Silicon can do with your books"
-        subline="LoudReader uses the Neural Engine for natural voices that run entirely on your device. Private, offline, no account."
-      />
+      <StoreCta headline="Try a book in LoudReader" subline="Import a DRM-free EPUB or PDF and choose a voice available on your device." />
     </ArticleLayout>
   );
 }

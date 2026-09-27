@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,174 +6,23 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function IsTextToSpeechGoodForStudyingArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Text to speech is a solid study tool, but it is not a magic bullet.
-          The evidence shows it works best for review and initial exposure to
-          material, especially when combined with reading (dual-coding theory).
-          For deep study that requires note-taking, working through diagrams,
-          or active recall, TTS alone falls short. The honest take: use TTS to
-          get more reps with the material, not to replace active engagement.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads your
-          EPUBs and PDFs aloud with natural offline voices and word-by-word
-          highlighting, giving you the dual-channel benefit of reading while
-          listening. It is fully on-device and private, your library never
-          leaves your device. Free unlimited listening; notes and highlights
-          are part of {PRICING.premiumMonthly} Premium.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Eyes on the text, ears on the voice: two channels encode better than one."
-      />
-
-      <QuestionSection question="What does the research say about TTS and studying?">
-        <p>
-          A concept from cognitive psychology called dual-coding theory
-          explains why TTS can help. When you process information through two
-          channels at once (visual and auditory), your brain creates two
-          separate mental representations of the same material. That gives you
-          two paths to retrieve it later, which improves encoding and recall.
-          This is not a new or contested idea. It is a well-established
-          framework that has been studied for decades.
-        </p>
-        <p>
-          The practical implication: reading while listening, with synced
-          word-by-word highlighting like LoudReader provides, gives your brain
-          both channels simultaneously. For students who struggle to stay
-          focused on dense text, that second channel can be the difference
-          between finishing the chapter and zoning out after two paragraphs.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="When is TTS most effective for studying?">
-        <p>
-          TTS earns its keep in three studying scenarios:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Review.</strong> You already read
-            the chapter. Now you listen to it while walking to class or doing
-            laundry. The second pass through a different channel reinforces
-            what you learned, and you get it done in time that would otherwise
-            be dead.
-          </li>
-          <li>
-            <strong className="text-gray-900">Initial exposure.</strong> Some
-            students find it easier to absorb a chapter by listening first,
-            then reading in detail. The audio pass gives you the structure and
-            main ideas; the reading pass fills in the details. This works
-            especially well for narrative-heavy material like history or
-            literature.
-          </li>
-          <li>
-            <strong className="text-gray-900">Accessibility.</strong> For
-            students with dyslexia, ADHD, or visual fatigue, TTS removes the
-            friction of decoding text. The cognitive load shifts from
-            &ldquo;reading the words&rdquo; to &ldquo;understanding the
-            ideas,&rdquo; which is the part that actually matters.
-          </li>
-        </ul>
-      </QuestionSection>
-
-      <QuestionSection question="When does TTS fall short for studying?">
-        <p>
-          Three honest limits you should know before relying on TTS for exam
-          prep:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Diagrams, formulas, and
-            visuals.</strong> Audio cannot convey a chart, a chemical
-            structure, or a mathematical derivation. If your material is
-            visually dense, you need your eyes on it at some point.
-          </li>
-          <li>
-            <strong className="text-gray-900">Passive vs active learning.</strong>{" "}
-            Decades of research on learning consistently show that active
-            recall (testing yourself, explaining concepts, answering practice
-            questions) produces stronger, longer-lasting learning than passive
-            re-exposure. Listening to a chapter is passive. It helps, but it
-            does not replace active study methods.
-          </li>
-          <li>
-            <strong className="text-gray-900">Divided attention.</strong> If
-            you are multitasking while listening (scrolling, texting, doing
-            other work), comprehension drops. TTS works for studying when you
-            give it most of your attention, not when it is background noise.
-          </li>
-        </ul>
-        <p>
-          The honest strategy: use TTS as one tool in a larger study system.
-          Read the chapter first. Listen to it later for review. Take notes
-          actively. Quiz yourself. TTS multiplies your study reps; it does not
-          replace the ones that matter most.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you use LoudReader for studying?">
-        <p>
-          LoudReader is set up to support studying without adding friction:
-        </p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              Get it free from the App Store
-            </a>
-            , no account needed. Import any DRM-free EPUB or PDF textbook,
-            article, or set of notes.
-          </li>
-          <li>
-            Read normally with your eyes. Word-by-word highlighting is free
-            and shows you exactly where you are at all times.
-          </li>
-          <li>
-            When you want to study by ear, press play. The natural offline
-            voices pick up from where you left off. No conversion, no audio
-            files.
-          </li>
-          <li>
-            For active studying, {PRICING.premiumMonthly} Premium adds notes
-            and highlights. Mark key passages as you listen and build a
-            study guide right inside the book.
-          </li>
-        </ol>
-        <p>
-          The full picture of turning your study materials into audio is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          . And because everything is fully on-device and private, your
-          library never leaves your device, you can use it with sensitive
-          course materials without worrying about where your documents end up.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>Text to speech can make a chapter or your own notes easier to revisit. Whether that becomes useful study depends on what you do next: pause, explain the idea without the text, and check your answer. Listening time by itself is not evidence that you have learned the material. Reading along can help you locate a passage, but hearing and seeing the same words does not guarantee better memory. This guide separates useful study tasks from situations where audio needs support. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> can supply the narration for supported EPUBs and PDFs; it does not grade your understanding or replace a problem set.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Read, listen, pause and return to the passage you need." />
+<QuestionSection question="What does the research actually support?"><p>An often-repeated claim says reading while listening automatically creates two stronger memories. That is too simple a justification for choosing a study tool. The practical question is whether you can explain or use the material afterwards.</p><p>A relevant <a href="https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">2006 study by Roediger and Karpicke</a> compared recalling prose passages with studying them again. Recall practice led to better retention on delayed tests, although repeated study did better on an immediate test. It did not test LoudReader or establish that TTS improves grades. It supports adding a memory check after a passage instead of judging a session by how familiar the words feel.</p></QuestionSection>
+<QuestionSection question="Which study tasks suit listening?"><ul className="list-disc pl-6 space-y-2"><li><strong>Preview a prose chapter.</strong> Listen to an introduction to identify its question and structure, then decide what needs close reading.</li><li><strong>Revisit your own notes.</strong> Turn a summary into a short listening session. Pause at a heading and predict the next point before playing it.</li><li><strong>Read an assigned story.</strong> Keep the text available for quotations and page references. Narration can provide another way through a long reading assignment.</li><li><strong>Check writing by ear.</strong> Listen for missing words, repeated phrases or a sentence that becomes hard to follow. Verify suspected errors in the original.</li></ul><p>These are possible uses, not a ranking of study methods for every student. If the voice adds distraction, silent reading remains a useful option.</p></QuestionSection>
+<QuestionSection question="What should stay in front of you?"><p>Keep diagrams, charts, equations and code visible. A voice reading nearby prose cannot tell you everything represented by a graph, and a PDF may extract columns or footnotes in the wrong order. Listen to a short sample before treating its audio as reliable.</p><p>For a derivation, pause and work the next step yourself. For a historical argument, write its claim and the evidence. For vocabulary, try producing the meaning before looking. Match the activity to the skill the course expects you to demonstrate.</p></QuestionSection>
+<QuestionSection question="What does a useful twenty-minute session look like?"><ol className="list-decimal pl-6 space-y-2"><li>Choose one small section and write a question you want it to answer.</li><li>Read or listen for a few minutes. Keep the source open when figures or unfamiliar terms matter.</li><li>Pause and close or cover the text. Explain the main point in your own words, or attempt a relevant practice question.</li><li>Check your answer against the source. Mark the specific gap rather than replaying an entire chapter automatically.</li><li>Return to that question in a later session and see what you can still produce.</li></ol><p>Twenty minutes is a convenient example, not a scientifically optimal duration. Shorten it or take a break if you are no longer following the argument.</p></QuestionSection>
+<QuestionSection question="How does LoudReader fit into that routine?"><p>Import a supported DRM-free EPUB or PDF, then check the first page of extracted text. The current app can apply local OCR to scanned PDFs, but recognition and reading order still need checking, especially with formulas or several columns. The <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">book-to-audio guide</Link> covers the import flow.</p><p>Word highlighting and sentence replay help you return to a passage. Notes and highlights are included; Premium adds speed control from 0.3x to 3.0x. {FREE_TIER.full} Choose a pace at which you can explain what you just heard; faster playback is not a study target.</p><p>Narration is generated on the device after the required downloads. LoudReader runs on iPhone and iPad, with the iPad build available on compatible Apple Silicon Macs. For organising a whole reading list, see <Link href="/blog/text-to-speech-for-students" className="text-loudBlue hover:underline">the student workflow guide</Link>.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Study with your eyes and your ears"
-        subline="Natural offline voices, word-by-word highlighting, and unlimited free listening. Notes and highlights on Premium."
-      />
+      <StoreCta headline="Try a chapter in LoudReader" subline="Local narration and word highlighting. All voices free for the first 8 listening hours." />
     </ArticleLayout>
   );
 }

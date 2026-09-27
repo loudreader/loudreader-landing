@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -11,142 +10,42 @@ import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function WhyDoesTextToSpeechSoundRoboticArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          The robotic sound comes from how the audio gets built, not from a
-          voice being inherently mechanical. Older text-to-speech systems
-          generated words from fixed acoustic rules or spliced together small
-          pre-recorded fragments, and neither approach models how pitch and
-          rhythm flow across a real sentence, so the output comes out flat
-          with audible seams between sounds. Modern neural text-to-speech
-          generates the waveform from a model trained on human speech, which
-          captures much more of that natural flow, so a lot of what people
-          call &quot;robotic TTS&quot; today is really a different problem:
-          the system mispronouncing a number, an abbreviation, or an
-          ambiguous word. Clean source text and a modern voice engine mostly
-          solve the flat-monotone problem that made TTS sound obviously
-          synthetic for decades. <strong>LoudReader</strong> uses{" "}
-          natural offline voices for exactly this reason.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Old TTS followed rules. Modern TTS learns from real speech."
-      />
-
-      <QuestionSection question="What actually made old text to speech sound robotic?">
-        <p>
-          Two older approaches, and both have the same underlying limit.{" "}
-          <strong className="text-gray-900">Formant synthesis</strong> built
-          speech from scratch using acoustic rules, essentially a set of
-          instructions for how each sound should be shaped. It's efficient
-          and endlessly flexible, but it has no real model of how a human
-          voice's pitch rises and falls across a sentence, so it comes out
-          sounding mechanical by construction, which is exactly the sound
-          most people picture when they think of classic robotic TTS.{" "}
-          <strong className="text-gray-900">Concatenative synthesis</strong>{" "}
-          took the opposite approach: splicing together tiny recorded
-          fragments of real human speech. That fixed some of the
-          mechanical tone, but introduced a different flaw, audible seams
-          where fragments meet, because the fragments were recorded in
-          isolation and don't naturally flow into whatever word comes next.
-        </p>
-        <p>
-          Neither method has anything resembling a real understanding of the
-          sentence being spoken. They're following rules or gluing clips
-          together, not modeling how a person actually paces a thought out
-          loud.
-        </p>
+      <Tldr><p>
+        “Robotic” can mean several different problems: flat delivery, odd pauses, wrong pronunciation, a language mismatch or distortion at an extreme playback rate. First identify which one you are hearing. A newer voice may improve the delivery, but it cannot reliably rescue broken source text or every unfamiliar name. Try the same short passage with clean punctuation, the correct language and a normal playback rate before comparing voices. This guide explains common causes and a practical way to isolate them; it does not claim that every modern neural voice sounds human or that cloud processing guarantees better speech.
+      </p></Tldr>
+      <ArticleIllustration variant="waveform" caption="Listen for the specific fault: delivery, pronunciation, source text or playback." />
+      <QuestionSection question="Is it the voice, or the words it has been given?">
+        <p>If the sound is consistently flat across clean passages, the voice’s delivery may simply not suit you. If it stumbles at particular abbreviations, dates or symbols, the problem may be how written text is turned into spoken words. For example, a year and a page number can require different readings of the same digits.</p>
+        <p>This is a recognised engineering problem called <a href="https://research.google/pubs/transformer-based-models-of-text-normalization-for-speech-applications/" className="text-loudBlue hover:underline">text normalisation</a>. A voice can have a pleasant tone and still say a number incorrectly. Changing the narrator may help, but it is useful to inspect the text rather than treating every error as an acoustic problem.</p>
       </QuestionSection>
-
-      <QuestionSection question="Why do modern voices sound different?">
-        <p>
-          Modern neural text-to-speech is trained on large amounts of real
-          human speech, and it generates the audio waveform as a continuous
-          process rather than assembling it from rules or pre-recorded
-          pieces. That training lets it pick up the patterns that make speech
-          sound natural: how pitch tends to rise before a comma and fall at
-          the end of a sentence, where a speaker naturally pauses to breathe,
-          how stress shifts across a longer clause. None of that is hand-coded
-          the way it was in the older systems. It's learned from the data, in
-          the same general sense that any modern machine-learning system
-          learns patterns from examples rather than following an explicit
-          rulebook.
-        </p>
-        <p>
-          The practical effect is that the gap between old-style TTS and
-          modern neural TTS is a lot bigger than the gap between modern
-          neural TTS and an actual human voice. Whether that remaining gap
-          matters for a whole book is a separate question, one we answer
-          honestly in{" "}
-          <Link
-            href="/blog/are-ai-voices-good-enough-for-books"
-            className="text-loudBlue hover:underline"
-          >
-            are AI voices good enough for books
-          </Link>
-          . This article is about the cause of the robotic sound, not a
-          verdict on whether today's voices clear that bar.
-        </p>
+      <QuestionSection question="Why do neural voices sound different from older speech tools?">
+        <p>Speech systems use different methods to turn text into sound. Some older systems rely on hand-designed speech rules or assembled recordings; neural systems learn aspects of speech from training examples. Research such as <a href="https://research.google/pubs/tacotron-towards-end-to-end-speech-synthesis/" className="text-loudBlue hover:underline">this neural speech synthesis paper</a> describes learned generation from text.</p>
+        <p>That architectural difference does not provide a universal quality score. Older systems were not all incapable of modelling rhythm, and neural systems can still produce awkward pauses, pronunciation errors or inconsistent delivery. Choose based on the output you need, rather than assuming an engine label settles the listening experience.</p>
       </QuestionSection>
-
-      <QuestionSection question="If the voice is modern, why does it still stumble sometimes?">
-        <p>
-          Because a lot of what sounds &quot;robotic&quot; in a modern system
-          isn&apos;t the voice at all, it&apos;s the text confusing it.
-          Numbers, dates, and abbreviations have to be expanded into words
-          correctly (is &quot;Dr.&quot; a doctor or a street called
-          Drive?), and a wrong guess produces an odd-sounding word even from
-          an otherwise smooth voice. Homographs cause the same problem: a
-          word like &quot;read&quot; or &quot;lead&quot; is pronounced
-          differently depending on grammar the system has to infer from
-          context, and it doesn&apos;t always guess right. Messy source text,
-          a scanned PDF with broken line breaks, or an auto-generated
-          transcript with no real punctuation, gives the system fewer clues
-          to work with, and the result sounds rougher even though the
-          underlying voice hasn&apos;t changed. Clean, well-punctuated text
-          is the single biggest lever you have over how natural a passage
-          ends up sounding.
-        </p>
+      <QuestionSection question="What should I check when a passage sounds wrong?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li><strong>Match the voice language to the text.</strong> A voice intended for another language can pronounce ordinary words unexpectedly. Selecting it does not translate the passage.</li>
+          <li><strong>Inspect the extracted text.</strong> Look for broken words, missing punctuation, repeated headers or columns read in the wrong order. Scanned documents can contain OCR mistakes.</li>
+          <li><strong>Return to a normal playback rate.</strong> If the sound is stretched or rushed, establish whether the problem remains before changing voice.</li>
+          <li><strong>Compare a second voice on the same words.</strong> If both fail at the same abbreviation, the source or its interpretation may be the more useful thing to fix.</li>
+          <li><strong>Try a cleaner edition or a short corrected copy.</strong> Where you can edit the source, add the intended punctuation or expand an ambiguous abbreviation. Keep the meaning intact.</li>
+        </ol>
+        <p>Do not spend time polishing punctuation if the document’s reading order is wrong. For tables, equations and page layouts, reading the original visually may be more useful than forcing them into one stream of speech.</p>
       </QuestionSection>
-
-      <QuestionSection question="Does running the voice on-device instead of in the cloud make it worse?">
-        <p>
-          Not the way it used to. On-device voice quality has closed most of
-          the distance to cloud-based voices, largely because phones and
-          laptops now ship with dedicated hardware built for running these
-          models efficiently, without needing a data center behind them.
-          There can still be a small edge for cloud voices in expressiveness
-          and variety, since those models don&apos;t have to fit on a device.
-          We go through that trade in more detail in{" "}
-          <Link
-            href="/blog/are-offline-voices-as-good-as-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            are offline voices as good as cloud
-          </Link>
-          , but for straightforward narration, the difference is small enough
-          that most listeners couldn&apos;t reliably tell which is which. The
-          upside of staying on-device is a real trade you can weigh for
-          yourself: it&apos;s{" "}
-          fully on-device and private, your library never leaves your device,
-          and it keeps working with no connection at all.
-        </p>
+      <QuestionSection question="Does an offline voice have to sound more robotic?">
+        <p>No quality ranking follows just from local versus cloud processing. Voices differ in the languages, material and controls they support. Compare representative passages. Our <Link href="/blog/are-offline-voices-as-good-as-cloud" className="text-loudBlue hover:underline">offline and cloud comparison</Link> separates that listening choice from connectivity and data handling.</p>
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> generates narration locally and offers <Link href="/voices" className="text-loudBlue hover:underline">browser voice samples</Link>. Its studio roster spans ten languages, with availability depending on your device. Use your own book to check difficult names and formatting before deciding whether a voice works for you.</p>
       </QuestionSection>
-
+      <QuestionSection question="What if the voice still sounds wrong after those checks?">
+        <p>Try another narrator or a recorded audiobook if one exists. A voice that is intelligible may still be a voice you do not enjoy hearing for hours. That preference is a valid reason to change it.</p>
+        <p>For a longer test, listen to a chapter and note whether the delivery helps you follow the meaning. Our guide to <Link href="/blog/are-ai-voices-good-enough-for-books" className="text-loudBlue hover:underline">AI voices for whole books</Link> covers that decision beyond a short sample.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear a modern voice for yourself"
-        subline={FREE_TIER.full}
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

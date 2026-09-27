@@ -14,140 +14,26 @@ import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function HuckleberryFinnAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Adventures of Huckleberry Finn is public domain, so Mark Twain&apos;s
-          actual text is free to listen to with no purchase and no
-          subscription. LoudReader has the full novel built into its
-          catalog: open{" "}
-          <Link
-            href="/listen/adventures-of-huckleberry-finn"
-            className="text-loudBlue hover:underline"
-          >
-            its LoudReader page
-          </Link>{" "}
-          to hear the real opening read aloud right now, free, no account.
-          One honest note up front: this is a synthetic voice reading
-          Twain&apos;s text, including Huck&apos;s vernacular spelling, not a
-          performed audiobook with an actor doing a regional accent. It
-          reads clearly and steadily, sentence by sentence, exactly as
-          written. Free tier listening is unlimited, cover to cover, and
-          LoudReader is fully on-device and private, your library never
-          leaves your device. Since the book is already in the built-in
-          Project Gutenberg catalog, there's no file to import and no
-          connection required.
-        </p>
+        <p>You can listen to Adventures of Huckleberry Finn through a free volunteer recording or have the ebook read aloud. <a href="https://www.gutenberg.org/ebooks/76" className="text-loudBlue hover:underline">Gutenberg ebook 76</a> provides the English text and is listed as public domain in the USA. The US listing does not establish availability in other countries. LoudReader’s <Link href="/listen/adventures-of-huckleberry-finn" className="text-loudBlue hover:underline">catalogue sample</Link> demonstrates generated speech from the book. Before choosing it, try a passage of dialogue: Twain’s written dialect is a particular challenge for text-to-speech. The original also contains racist language and depictions of slavery; an unadapted reading carries that language into the audio.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Huck's own words, read aloud exactly as Twain wrote them."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="The text’s dialect and historical language need an edition-aware choice." />
 
-      <QuestionSection question="What does the Huckleberry Finn audiobook actually sound like?">
-        <p>
-          The fastest way to answer that is to listen. LoudReader&apos;s
-          catalog page for the book has a rendered sample of the real
-          opening, in the same voice you&apos;d hear in the app.{" "}
-          <Link
-            href="/listen/adventures-of-huckleberry-finn"
-            className="text-loudBlue hover:underline"
-          >
-            Play the sample
-          </Link>{" "}
-          before deciding whether it's for you.
-        </p>
-        <p>
-          It's a natural offline voice reading Twain&apos;s narration exactly
-          as written, including the phonetic spellings Twain used for Huck&apos;s
-          and Jim&apos;s speech. The voice does not attempt a regional accent
-          or dialect performance; it reads the actual text clearly and
-          steadily. One voice reads every character, so it doesn&apos;t
-          switch tone between Huck, Jim, and the Duke and King the way a
-          full-cast production would. If you want the real, unabridged text
-          read aloud at a pace you control, it does that well.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How does a reading handle Huck’s and Jim’s speech?"><p>The spelling on the page is part of Twain’s characterisation. A synthetic voice can mispronounce an unusual spelling, place emphasis oddly, or make two voices sound alike. We have not established that every dialect passage is rendered accurately, so an opening clip should be the start of your check, not a guarantee.</p><p>Read and listen to the same short exchange. If the audio changes how you understand a sentence, return to the text. For a class, an annotated edition may explain historical wording; text-to-speech does not provide that context automatically.</p></QuestionSection>
 
-      <QuestionSection question="How do you listen to it free right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Play the sample on{" "}
-            <Link
-              href="/listen/adventures-of-huckleberry-finn"
-              className="text-loudBlue hover:underline"
-            >
-              the book's catalog page
-            </Link>{" "}
-            to hear the voice first.
-          </li>
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            for iPhone, iPad, and Mac. Free, no account.
-          </li>
-          <li>
-            Search Adventures of Huckleberry Finn in the app&apos;s built-in
-            Project Gutenberg catalog. It's already there, nothing to import
-            or convert.
-          </li>
-          <li>
-            Press play. {FREE_TIER.full}
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="Is there a human recording I can compare?"><p>Yes. <a href="https://librivox.org/the-adventures-of-huckleberry-finn-by-mark-twain/" className="text-loudBlue hover:underline">LibriVox lists a volunteer recording</a> with downloadable sections. Preview it and check the listed readers and text source. Other recordings may be solo readings, collaborative readings or adaptations; a human voice does not by itself tell you which format you are getting.</p><p>For shared listening, review the text first, especially if children are involved. Do not assume that a familiar school-book title means the recording has been adapted or that offensive historical terms have been removed. Choose the edition that fits the discussion you intend to have.</p></QuestionSection>
 
-      <QuestionSection question="Why isn't there already a well-known free audiobook of this everywhere?">
-        <p>
-          There actually might be one you haven&apos;t found: LibriVox, the
-          volunteer human-narration project, likely has a recording of
-          Huckleberry Finn, and it's worth a look if a performed reading with
-          real character voices is what you're after.
-        </p>
-        <p>
-          What text-to-speech offers is different and simpler: the exact
-          Gutenberg text, read aloud on demand, in an app you already have
-          open, with no waiting on a library hold and no browsing for the
-          right recording. The general case for that approach is covered in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          . For this specific book, the file is already sitting in
-          LoudReader&apos;s catalog.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for Adventures of Huckleberry Finn. Check the title and edition before downloading. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
-      <QuestionSection question="What do you give up compared to a professionally narrated version?">
-        <p>
-          Worth saying plainly: a synthetic voice doesn&apos;t act. It won&apos;t
-          give the Duke and the King a different register than Huck, and it
-          won&apos;t build tension the way a skilled narrator paces the
-          river&apos;s dangers. What you get instead is the whole novel,
-          unabridged, right now, no purchase and no waiting. Premium adds
-          playback speed from 0.3x to 3.0x, so a dense passage can be slowed
-          down or a familiar chapter sped through.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you plan a longer read?"><p>The catalogue estimate is about 11.5 hours, derived from text length. It is not a measured duration for every narrator. Break the book into chapter-sized sessions and check the next chapter heading when you return. This is more reliable than lining up two different recordings by timestamp.</p><p>If you want to hear the same version you are studying, <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import your supported DRM-free ebook</Link> instead of switching editions mid-book. Retain your assigned print or digital text for quotations and page references.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear Huckleberry Finn read aloud, free"
-        subline="The full book is already in LoudReader's catalog. Press play, no download, no account."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,203 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function LearnEnglishByListeningToBooksArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Listening to books is a real way to learn English, with one
-          condition: <strong>read along while you listen</strong>.
-          Research on second-language learners has found that
-          reading-while-listening beats listening alone for building
-          vocabulary. Your ears get the pronunciation while your eyes get
-          the spelling, and in English those two disagree constantly.{" "}
-          <strong>LoudReader</strong> is built for exactly this loop. It
-          highlights each word the moment it is spoken, includes 70,000+
-          free Project Gutenberg classics built in as unlimited practice
-          material, and its natural offline voices run on iPhone, iPad, and Apple Silicon Macs with no account, no upload, and offline playback. One
-          honest note on the voices: English is the deepest part of the
-          roster, 11 narrators of the 23, which for this goal is exactly what
-          you want.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Eyes on the words, ears on the voice. The two channels teach each other."
-      />
-
-      <QuestionSection question="Is listening to books an effective way to learn English?">
-        <p>
-          Yes, and this is one of the corners of language learning where the
-          research is concrete. In{" "}
-          <a
-            href="https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            a 2008 study in <em>Reading in a Foreign Language</em>
-          </a>
-          , Brown, Waring and Donkaewbua had 35 Japanese university students
-          meet new words through three modes (reading,
-          reading-while-listening, and listening only) using graded readers.
-          On immediate translation tests, reading-while-listening came out on
-          top, about 16% of the target words learned, versus roughly 15% for
-          reading alone, while listening without text trailed far behind at
-          about 2%. Just as telling: across every mode, the words met most
-          often were the words most likely to stick.
-        </p>
-        <p>
-          Two practical rules fall straight out of that. First, keep the text
-          in front of you, because audio alone is the weakest mode for new
-          vocabulary. Second, volume matters more than perfection. The
-          repeated encounters do the teaching, so you want a method you can
-          keep up for months, and books are the cheapest source of repeated
-          encounters ever invented.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Why should you read along while you listen?">
-        <p>
-          Because English&apos;s hardest mapping is between spelling and
-          sound. <em>Though</em>, <em>through</em>, and <em>tough</em> share
-          four letters and no pronunciation. A learner who only reads never
-          hears the difference, and a learner who only listens never sees why
-          the words look different at all. Reading while listening welds the
-          two together, word by word.
-        </p>
-        <p>
-          The mechanical problem is keeping your place. Eyes drift, and the
-          moment they lose the narration the welding stops. Synced
-          highlighting solves that.{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          highlights each word at the exact moment the voice speaks it, so
-          your eyes and ears stay locked together and you never burn any
-          attention on navigation. Every sentence quietly becomes a
-          pronunciation lesson for words you thought you already knew.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Which books should you start with?">
-        <p>
-          Easier ones than you think. The method runs on comprehension. The
-          study above used graded readers precisely so learners understood
-          the stories, so the right level is one you can follow without
-          reaching for a dictionary every line. A good ladder from the free
-          Project Gutenberg catalog (LoudReader has 70,000+ free Project
-          Gutenberg classics built in):
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Starting out:</strong>{" "}
-            Aesop&apos;s fables and fairy-tale collections, with short
-            familiar plots and simple sentences.
-          </li>
-          <li>
-            <strong className="text-gray-900">Comfortable:</strong>{" "}
-            children&apos;s classics like <em>The Wonderful Wizard of Oz</em>{" "}
-            or <em>Alice&apos;s Adventures in Wonderland</em>.
-          </li>
-          <li>
-            <strong className="text-gray-900">Stretching:</strong> Sherlock
-            Holmes short stories, with adult vocabulary in self-contained,
-            plot-driven doses.
-          </li>
-        </ul>
-        <p>
-          The full import walkthrough, including your own EPUBs and PDFs,
-          is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          . If a book feels like homework three pages in, it is the wrong
-          level, not the wrong method. Drop down and keep going.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Should you slow the narration down?">
-        <p>
-          At the start, almost certainly. Native-speed English runs words
-          together (<em>going to</em> becomes <em>gonna</em> in everything
-          but spelling), and a learner&apos;s ear needs time to find the word
-          boundaries. LoudReader&apos;s playback speed goes from 0.3x to
-          3.0x. The low end is far below where most audiobook apps stop, slow
-          enough to hear every syllable land on its highlighted word.
-          (Honest pricing note: speed control is part of LoudReader Premium at
-          $7.99/month, $49.99/year, or $199.99 once. The free tier plays at
-          normal speed with unlimited listening.)
-        </p>
-        <p>
-          Why slower helps, and when to speed back up, gets its own article:{" "}
-          <Link
-            href="/blog/slow-down-audiobook-speed"
-            className="text-loudBlue hover:underline"
-          >
-            why slowing down audiobooks helps you understand more
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What does a simple daily routine look like?">
-        <p>Twenty minutes, most days, beats two hours on Sunday:</p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Open{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader
-            </a>{" "}
-            and pick up where the book left off. It remembers your place.
-          </li>
-          <li>
-            Listen with your eyes on the highlighted words. Don&apos;t stop for
-            every unknown word; if you can follow the story, keep moving.
-          </li>
-          <li>
-            When a sentence defeats you, replay it once, slower if you have
-            Premium. Then let it go. The study&apos;s frequency finding is on
-            your side, and important words will come back.
-          </li>
-          <li>
-            Optionally, re-listen to yesterday&apos;s chapter at a faster
-            speed. Familiar text at higher speed trains your ear for
-            connected speech safely.
-          </li>
-        </ol>
-        <p>
-          Questions about voices, formats, or the free tier are covered
-          honestly in the{" "}
-          <Link href="/faq" className="text-loudBlue hover:underline">
-            FAQ
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>Books can supply material for English listening practice, especially when the text is available to check an unfamiliar phrase. You do not have to read along at all times, and reading with audio is not proven to beat every other approach. Start with material you can mostly follow, try a short passage with the text, then decide what needs another listen or a dictionary check. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> provides narration and word highlighting for supported books; the learning work is noticing, checking and using the language. This guide focuses on building that routine over time, not on promises of fluency from passive listening.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Keep the text available to check what you heard, and revisit a few useful phrases." />
+<QuestionSection question="What does research on listening to stories tell us?"><p>In <a href="https://nflrc.hawaii.edu/rfl/item-detail/174" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">Brown, Waring and Donkaewbua’s 2008 study</a>, 35 Japanese university learners encountered vocabulary through reading, reading while listening and listening alone. Reading with audio did not significantly outperform reading alone on the vocabulary tests; most target words were not learned. The study used graded stories, not LoudReader or synthetic voices.</p><p>That is a reason for modest expectations. A story is useful language practice, but hearing a new word once is not a reliable vocabulary lesson. Use the format that lets you follow the passage, and deliberately revisit a few words that matter to you.</p></QuestionSection>
+<QuestionSection question="Should you keep the text visible?"><p>Try it when you are unsure which words you heard or how a phrase is spelt. The text lets you distinguish an unfamiliar word from familiar words running together. A moving highlight can make the narration position easier to find, but you can pause whenever the pace is unhelpful.</p><p>For a familiar passage, try listening with the text hidden, then reveal it to check the parts you missed. This is a practical way to identify a problem, not a rule that everyone must graduate from text to audio. Reading alone is still worthwhile language practice.</p></QuestionSection>
+<QuestionSection question="How do you choose material you will actually finish?"><p>Begin with a page or a complete short story, not a commitment to a long novel. After a sample, describe what happened. If you need a dictionary for nearly every sentence, choose a simpler text or a graded reader designed for your level.</p><p>Familiar plots can reduce the amount of new context you need to follow. Older children’s classics are available from Project Gutenberg, but children’s literature is not automatically beginner English: wordplay, historical phrasing and dialect can be difficult. The <Link href="/blog/easy-english-books-to-listen-to" className="text-loudBlue hover:underline">book shortlist</Link> explains those trade-offs and links specific editions.</p><p>A modern book you want to read may be a better choice than a classic you dislike. Use a compatible DRM-free edition you are entitled to import.</p></QuestionSection>
+<QuestionSection question="What does a repeatable practice session look like?"><ol className="list-decimal pl-6 space-y-2"><li>Choose a short passage and a task: follow the plot, identify unfamiliar phrases or practise listening without the text.</li><li>Read or listen once without interrupting every sentence. Pause when you lose the meaning, not simply whenever you see a new word.</li><li>Select a few useful unknown words or phrases. Check their meanings and, when necessary, a dictionary pronunciation.</li><li>Replay the passage and see whether it is easier to follow. Try explaining it in English or using one phrase in your own sentence.</li><li>At the next session, briefly revisit those phrases before moving on. Keep the amount small enough that practice remains manageable.</li></ol><p>Ten or twenty minutes is a convenient starting plan, not a tested prescription. Adjust it to the material and your available attention. Finishing every page is less useful than noticing when you have stopped following it.</p></QuestionSection>
+<QuestionSection question="How should you use speed and synthetic pronunciation?"><p>Start at a comfortable pace. If you need more time, pause between sentences or try a slower setting; extreme slowing can make phrasing less representative of conversation. Return to the original pace occasionally if your aim is to recognise speech at that pace.</p><p>Synthetic speech can mispronounce names, abbreviations or words whose pronunciation depends on context. For a pronunciation question, compare it with a dictionary recording, a teacher or suitable human speech. A narrator is a practice source, not an authority on every accent.</p><p>LoudReader Premium offers 0.3x to 3.0x playback speed. Normal-speed reading, word highlighting, sentence replay, notes and highlights can support a routine without Premium speed control.</p></QuestionSection>
+<QuestionSection question="What does LoudReader contribute?"><p>It narrates supported DRM-free EPUBs and PDFs and includes access to a downloadable Project Gutenberg catalogue. Speech runs locally after required resources are available, so a prepared book can be used offline. The app runs on iPhone and iPad, with its iPad build available on compatible Apple Silicon Macs.</p><p>{FREE_TIER.full} Voice availability depends on the device. Choose based on your own passage, and keep another pronunciation source available when accuracy matters. For a focused exercise rather than a reading habit, see <Link href="/blog/text-to-speech-for-esl-learners" className="text-loudBlue hover:underline">TTS exercises for English learners</Link>.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Practice English with 70,000+ free classics"
-        subline="Synced word highlighting, natural offline voices, unlimited free listening."
-      />
+      <StoreCta headline="Build a reading-and-listening routine" subline="Choose a manageable book, check the voice on your own text and practise at your pace." />
     </ArticleLayout>
   );
 }

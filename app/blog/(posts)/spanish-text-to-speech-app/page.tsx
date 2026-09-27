@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,140 +6,43 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, DIFFERENTIATORS, FREE_TIER } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function SpanishTextToSpeechAppArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
-          Spanish-language books and PDFs aloud with four Spanish narrators:
-          Sofía, Hector, Diego, and Valentina. That is the widest non-English
-          voice roster in the app. Every other language it supports besides
-          English, from German to Polish to Portuguese, has exactly one
-          narrator, so if Spanish is what you need, you have more choice than
-          any other language gets. All four voices are natural offline
-          voices that run entirely on your device, so there&apos;s nothing to
-          upload and nothing that needs a connection once a book is imported.
-          You can hear each one read a real sample on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          before you commit. Honest note: this article covers narration of
-          Spanish text, not a Spanish-language version of the app&apos;s own
-          menus, which isn&apos;t claimed here.
-        </p>
+        <p>LoudReader&apos;s Spanish studio roster has four narrators: Sofía, Hector, Diego and Valentina. Compare their <Link href="/voices" className="text-loudBlue hover:underline">browser samples</Link>, then try a passage from the Spanish book or document you actually want to hear. Voice availability depends on the device. Add Spanish to your reading languages in Settings or import a Spanish book to include the language in the picker. All four are part of the initial allowance when available on your hardware; continued Spanish studio narration requires Premium afterwards. These are narration choices, not a promise of four named regional accents, a translated interface or automatic translation of an English book.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Four Spanish narrators, ready for any Spanish EPUB or PDF."
-      />
-
-      <QuestionSection question="Does LoudReader actually read Spanish text aloud?">
-        <p>
-          Yes. Import any DRM-free Spanish-language EPUB or PDF into{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          and one of its four Spanish narrators reads it, with the same
-          player, the same word highlighting, and the same offline behavior
-          as an English book gets. The app is {DIFFERENTIATORS.private}, so
-          the text of a Spanish novel or a Spanish-language PDF never leaves
-          the device it&apos;s read on. If you&apos;re learning Spanish, or
-          you already read it and just prefer listening, that privacy model
-          is the same either way: nothing about the book gets sent anywhere
-          to be narrated.
-        </p>
+      <ArticleIllustration variant="waveform" caption="Compare the same Spanish passage before choosing a narrator for a long book." />
+      <QuestionSection question="How should you compare the four voices?">
+        <p>Begin with the samples for Sofía, Hector, Diego and Valentina on the voices page. Listen for the qualities that matter to you: whether you can follow the phrasing, whether the tone suits the material and whether you want to hear it for more than a short demo.</p>
+        <p>Next, compare the same passage in the app using the available voices. A familiar paragraph helps separate your opinion of the voice from difficulty with the text. If the book contains dialogue, include dialogue; if it contains technical vocabulary, include that too.</p>
+        <p>We do not assign these voices to specific Spanish-speaking countries. If a regional pronunciation is central to your goal, compare with an appropriate human recording or course resource. A pleasant sample alone does not establish pronunciation accuracy across a whole book.</p>
       </QuestionSection>
-
-      <QuestionSection question="How many Spanish voices are there, and who are they?">
-        <p>
-          Four: Sofía, Hector, Diego, and Valentina. Each one has its own
-          character, described the same way LoudReader describes it in the
-          app itself, in Spanish: Sofía is c&aacute;lida y clara (warm and
-          clear), Hector is grave y pausada (deep, unhurried), Diego is firme
-          con buen ritmo (steady, good pace), and Valentina is suave y muy
-          cercana (soft, close to the mic). Four is a genuinely useful number
-          of options: it&apos;s enough to find one that fits a given book,
-          without turning the picker into a chore.
-        </p>
-        <p>
-          For comparison, every other non-English language in the app, German,
-          French, Italian, Dutch, Polish, Portuguese, Swedish, and Danish,
-          ships exactly one narrator. Spanish is the one language outside
-          English where LoudReader gives you an actual choice, and that&apos;s
-          worth knowing before you assume every language gets the same
-          treatment.
-        </p>
+      <QuestionSection question="Why might Spanish be missing from the picker?">
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> builds its language list from your library and your reading-language choices in Settings. Select Spanish there before importing if you want to inspect the voices first.</p>
+        <p>Language selection and device support are separate. The app runs on iPhone and iPad and can run on compatible Apple Silicon Macs as an iPad app; the studio roster is not guaranteed on every device. Check the options on the device you intend to use.</p>
       </QuestionSection>
-
-      <QuestionSection question="Can you hear the Spanish voices before choosing one?">
-        <p>
-          Yes, and you should, rather than guessing from a description. The{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          plays every narrator in the app reading a real sample, in their own
-          language, right in the browser. Pull up Sofía, Hector, Diego, and
-          Valentina back to back, listen to a few seconds of each, and pick
-          the one whose pace and tone actually fits the book you have in
-          mind. It&apos;s the same page LoudReader points every reader to for
-          any language, and for Spanish it&apos;s the fastest way to settle a
-          choice between four real options instead of one.
-        </p>
+      <QuestionSection question="What Spanish material can you import?">
+        <p>Use supported DRM-free EPUBs and PDFs: novels, your own documents or study material you can legitimately download into another reader. Protected files from a separate book platform cannot be unlocked by LoudReader.</p>
+        <p>Check the imported text for accents, ñ, punctuation and reading order. PDF import can attempt on-device OCR for scans, but unclear print, columns and footnotes may produce errors. Keep the original for tables or diagrams and verify names, dates and specialist terms.</p>
+        <p>A Spanish narrator reads the supplied text; choosing one does not translate an English book. For a document that switches languages, test the mixed passage itself instead of assuming that one voice will pronounce everything as intended.</p>
       </QuestionSection>
-
-      <QuestionSection question="Is a Spanish voice available on the free tier?">
-        <p>
-          Try {FREE_TIER.trial}. That includes Sofía, Hector, Diego, and
-          Valentina, so you can try every Spanish narrator with your own
-          books before choosing a plan.
-        </p>
-        <p>
-          After the trial, continuing with the Spanish narrators requires
-          Premium. Free users choose one keepable voice from the eligible
-          English lineup and retain unlimited listening, with no word quota.
-          Premium keeps all 23 narrators available and adds playback speed
-          from 0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes.
-        </p>
+      <QuestionSection question="How can learners use the narration?">
+        <p>Take a short section you mostly understand. Listen while following the text, pause to explain the meaning, and replay a sentence when you want to inspect its phrasing. Use another source to check unfamiliar pronunciation rather than learning an uncertain synthetic rendering by repetition.</p>
+        <p>Keep human conversations and recordings in your practice as well. Four synthetic voices do not cover the range of speakers, situations or accents you may encounter. LoudReader does not listen to your response or assess your Spanish.</p>
       </QuestionSection>
-
-      <QuestionSection question="What Spanish content can you import?">
-        <p>
-          Anything you have as a DRM-free EPUB or PDF: novels, textbooks,
-          manuscripts, or Spanish-language documents you&apos;re working
-          through for study.{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            Download LoudReader
-          </a>
-          , share the file to it from the Files app, Safari, or Mail, and
-          it&apos;s in your library, ready for one of the four Spanish
-          narrators the moment it&apos;s a Spanish-language book.
-          LoudReader&apos;s built-in Project Gutenberg catalog is
-          English-heavy, so classic Spanish-language literature isn&apos;t
-          guaranteed to be in it; the reliable path for Spanish reading
-          material is importing your own files.
-        </p>
+      <QuestionSection question="What is free, and what needs a connection?">
+        <p>Try {FREE_TIER.trial}. Sofía, Hector, Diego and Valentina require Premium after that allowance. Free book listening continues with an English voice selection. Playback-speed adjustment from 0.3x to 3.0x is also Premium; the voice allowance should not be confused with access to every paid control.</p>
+        <p>Narration runs locally once the required files are available. Import or download the book and check the desired voice before testing offline playback. Books are not uploaded to a speech server for narration, but the app also has separate diagnostics and analytics.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear four Spanish narrators before you pick one"
-        subline="Hear Sofía, Hector, Diego and Valentina on the voices page, then try all 23 narrators free for your first 8 hours in the app."
-      />
+      <StoreCta headline="Find the Spanish narrator that suits your book" subline="Compare the samples, check your device and test a real passage during the initial voice allowance." />
     </ArticleLayout>
   );
 }

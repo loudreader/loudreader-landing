@@ -1,9 +1,10 @@
 {
   "slug": "text-to-speech-for-writers",
-  "title": "Text to Speech for Writers: Hear What You Wrote",
-  "description": "Why listening to your draft catches errors your eyes miss. How writers use text-to-speech proofreading to tighten sentences and catch repetition.",
+  "title": "Text to Speech for Writers: A Revision Workflow",
+  "description": "Use separate listening passes for structure, dialogue and sentence rhythm. Keep versioned exports and combine audio with a visual and human edit.",
   "publishedAt": "2026-08-25",
-  "lastModified": "2026-08-25",
+  "lastModified": "2026-09-28",
   "avatar": "Writer Proofreading by Ear",
-  "query": "text to speech for writers"
+  "query": "text to speech for writers",
+  "topic": "formats"
 }

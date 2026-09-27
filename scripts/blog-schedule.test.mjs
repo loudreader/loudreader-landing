@@ -9,11 +9,11 @@ const compiled = ts.transpileModule(
   readFileSync(new URL("../components/blog/articles.ts", import.meta.url), "utf8"),
   { compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true } }
 ).outputText;
-const module = { exports: {} };
+const compiledModule = { exports: {} };
 new Function("require", "module", "exports", compiled)(
-  createRequire(import.meta.url), module, module.exports
+  createRequire(import.meta.url), compiledModule, compiledModule.exports
 );
-const { getAllArticles, isArticlePublished } = module.exports;
+const { ARTICLE_TOPICS, getAllArticles, getRelatedArticles, isArticlePublished } = compiledModule.exports;
 const engine = "introducing-loudkit";
 const agents = "loudkit-voice-notes-for-agents";
 
@@ -55,4 +55,24 @@ test("announcements remain distinguished from existing guides", () => {
   const guide = articles.find((entry) => entry.slug === "on-device-text-to-speech-explained");
   assert.ok(guide);
   assert.notEqual(guide.kind, "release");
+});
+
+test("every article has a recognised reader-facing topic", () => {
+  const articles = getAllArticles("9999-12-31");
+  assert.equal(articles.length, 152);
+  assert.ok(articles.every((article) => Object.hasOwn(ARTICLE_TOPICS, article.topic)));
+});
+
+test("related guides prioritise the topic and never leak a held article", () => {
+  const date = "2026-09-28";
+  const articles = getAllArticles(date);
+  for (const topic of Object.keys(ARTICLE_TOPICS)) {
+    const current = articles.find((article) => article.topic === topic && article.kind !== "release");
+    assert.ok(current, topic);
+    const related = getRelatedArticles(current.slug, 3, date);
+    assert.equal(related.length, 3, topic);
+    assert.ok(related.every((article) => article.slug !== current.slug && article.topic === topic && article.publishedAt <= date), topic);
+  }
+  const releaseRelated = getRelatedArticles(agents, 3, "2026-10-14");
+  assert.equal(releaseRelated[0].slug, engine);
 });

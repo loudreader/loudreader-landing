@@ -3,7 +3,8 @@
   "title": "On-Device Text to Speech, Explained",
   "description": "How on-device text to speech works, its practical trade-offs, and when to use the LoudReader app, Loudkit framework, or agents preview.",
   "publishedAt": "2026-07-26",
-  "lastModified": "2026-09-27",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "what is on-device text to speech"
+  "query": "what is on-device text to speech",
+  "topic": "technology"
 }

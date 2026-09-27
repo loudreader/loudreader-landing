@@ -27,16 +27,21 @@
 
 import type { ComparisonRow } from "@/components/money/ComparisonTable";
 import type { Faq } from "@/components/money/FaqSection";
+import { FEATURES, FREE_TIER, LIBRARY, MAC, PRICING, PRIVACY, REQUIREMENTS, VOICES } from "@/components/money/site";
+
+// LoudReader product facts checked against shipping release 1.12 and Apple's
+// live US listing on 2026-09-28. See docs/product-facts-2026-09-28.md.
+// Competitor evidence remains dated 2026-07-14; it was not rechecked here.
 
 export const SLUG = "voice-dream-reader-alternative";
 
-export const LAST_UPDATED = "2026-07-14";
+export const LAST_UPDATED = "2026-09-28";
 export const FACTS_CHECKED_NOTE =
-  "Voice Dream facts checked against voicedream.com (Reader page, subscription pricing update) and its App Store listing on July 14, 2026";
+  "Voice Dream facts checked against voicedream.com (Reader page, subscription pricing update) and its App Store listing on July 14, 2026. LoudReader 1.12 product facts checked on September 28, 2026; competitor facts were not rechecked";
 
 export const PAGE_TITLE = "Voice Dream Reader Alternative: Modern & Offline";
 export const PAGE_DESCRIPTION =
-  "Looking for a Voice Dream Reader alternative? LoudReader reads EPUBs and PDFs aloud with natural offline voices. Free tier, $49.99/year, or $199.99 lifetime.";
+  "LoudReader narrates DRM-free EPUBs and PDFs offline. Compare its free book listening and US$49.99/year Premium plan with Voice Dream Reader.";
 
 export const H1 = "A Voice Dream Reader alternative with modern offline voices";
 
@@ -46,53 +51,53 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Price",
     cells: [
-      "Free tier with unlimited listening; Premium $7.99/month, $49.99/year, or $199.99 once (lifetime)",
+      `Free book listening; Premium ${PRICING.premiumMonthly}, ${PRICING.premiumYearly}, or ${PRICING.premiumLifetime}; storefront prices vary`,
       "Subscription. $79.99/year regular price, covering the iOS and Mac apps",
     ],
   },
   {
     label: "One-time purchase",
     cells: [
-      "Yes, $199.99 lifetime",
+      `Yes, ${PRICING.premiumLifetime}`,
       "No longer sold. Retired with the May 2024 switch to subscriptions (existing owners keep their features)",
     ],
   },
   {
     label: "Free tier",
     cells: [
-      "Unlimited listening on every book, cover to cover; every voice free for your first 8 hours",
+      `${FREE_TIER.full} ${FREE_TIER.choice}`,
       "Free download with built-in iOS voices; the subscription adds the premium voices and features",
     ],
   },
   {
     label: "Account required",
     cells: [
-      "No, no sign-up at all",
+      "No LoudReader account required to import and listen",
       "Subscription features sync by logging into the same account on your devices",
     ],
   },
   {
     label: "Works offline",
     cells: [
-      "100%, all speech is generated on-device",
+      FEATURES.onDevice,
       "Yes. Voice Dream also works without an internet connection",
     ],
   },
   {
     label: "Voices",
     cells: [
-      "23 natural offline voices across 10 languages (modern neural TTS)",
+      `${VOICES.headline} (neural TTS). ${VOICES.availability}`,
       "200+ premium voices in 30 languages, from classic TTS vendors such as Acapela",
     ],
   },
   {
     label: "Languages",
-    cells: ["10 languages, each with a native narrator", "30 languages"],
+    cells: [`10 studio-voice languages. ${VOICES.availability}`, "30 languages"],
   },
   {
     label: "Formats",
     cells: [
-      "EPUB and PDF",
+      `${FEATURES.imports}; ${FEATURES.ocr}`,
       "PDF, EPUB (DRM-free), DAISY text and audio, Word, PowerPoint, web pages, plain text",
     ],
   },
@@ -106,27 +111,27 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Platforms",
     cells: [
-      "iPhone, iPad, and Apple Silicon Macs",
+      MAC.precise,
       "iOS, iPadOS, macOS, plus a companion Apple Watch app",
     ],
   },
   {
     label: "Built-in catalogs",
     cells: [
-      "70,000+ free Project Gutenberg classics",
+      LIBRARY.gutenberg,
       "Project Gutenberg and Bookshare integrations",
     ],
   },
   {
     label: "Requirements",
-    cells: ["macOS 15+ on Apple Silicon; iOS 18+", "iOS 15+; Mac app included in the subscription"],
+    cells: [REQUIREMENTS, "iOS 15+; Mac app included in the subscription"],
   },
 ];
 
 export const FAQS: Faq[] = [
   {
     q: "Is LoudReader a good Voice Dream Reader alternative?",
-    a: "Yes, if you want books and documents read aloud with modern AI voices, privately, on Mac and iPhone. LoudReader is fully on-device and private, your library never leaves your device. Its free tier has unlimited listening, and paid plans are $49.99/year or $199.99 once versus Voice Dream's $79.99/year subscription. If you depend on Bookshare, DAISY, Word or PowerPoint files, an Apple Watch app, or 30 languages, Voice Dream Reader remains the stronger choice.",
+    a: `Yes, if you want on-device narration without uploading books to a speech server. ${FREE_TIER.full} LoudReader Premium is ${PRICING.premiumYearly} or ${PRICING.premiumLifetime}, with prices varying by storefront, versus Voice Dream's cited $79.99/year subscription. If you depend on Bookshare, DAISY, Word or PowerPoint files, an Apple Watch app, or 30 languages, Voice Dream Reader remains the stronger choice.`,
   },
   {
     q: "Did Voice Dream Reader become a subscription?",
@@ -134,18 +139,18 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does LoudReader work offline like Voice Dream Reader?",
-    a: "Yes, both apps work offline, and that deserves to be said plainly. LoudReader generates all speech on your device in real time, so it works with zero connectivity; Voice Dream also states it does not require an internet connection. LoudReader also requires no account of any kind.",
+    a: `LoudReader narrates books already on your device offline; install and open the app, then test your desired book and voice before travelling. Voice Dream also states it does not require an internet connection. No LoudReader account is required to listen. ${PRIVACY.summary} Usage analytics is enabled by default.`,
   },
   {
     q: "Does LoudReader support DAISY or Bookshare?",
-    a: "No. LoudReader reads EPUB and PDF files and the built-in Project Gutenberg catalog. If you need DAISY books or a Bookshare integration, Voice Dream Reader is the better tool for you.",
+    a: `No. LoudReader supports ${FEATURES.imports}, including ${FEATURES.ocr}, and downloads from the Project Gutenberg catalog. If you need DAISY books or a Bookshare integration, Voice Dream Reader is the better tool for you.`,
   },
   {
     q: "Does LoudReader have a one-time purchase?",
-    a: "Yes. Premium is $7.99/month or $49.99/year, and there's a $199.99 lifetime option. Pay once, keep it forever. Voice Dream no longer sells a one-time purchase to new users.",
+    a: `Yes. Premium is ${PRICING.premiumMonthly} or ${PRICING.premiumYearly}, with a ${PRICING.premiumLifetime} option. These are US listing prices; other storefronts may vary. Voice Dream no longer sells a one-time purchase to new users.`,
   },
   {
     q: "Can LoudReader read EPUBs and PDFs aloud on both Mac and iPhone?",
-    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs (iPad too). Import any DRM-free EPUB or PDF and it is read aloud with natural offline voices and word-by-word highlighting, so you can read along as you listen.",
+    a: `Yes. ${MAC.precise} Import DRM-free EPUBs or PDFs for on-device narration and word-by-word highlighting. Scanned PDFs use on-device text recognition; results depend on scan quality and layout. ${VOICES.availability}`,
   },
 ];

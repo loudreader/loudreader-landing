@@ -1,49 +1,33 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-08-25 against:
-//   - data/voices.ts (the /voices roster source, audited 2026-08-20 against
-//     the shipping app's studio voice enum): Italian has exactly one
-//     narrator, Marco. There is no second Italian voice to choose between.
-//   - components/money/site.ts VOICES.lazyLanguages: narrators for a language
-//     appear in the picker once there is a book in that language in the
-//     library. This is stated plainly, not as a workaround.
-//   - components/money/site.ts PRICING, DIFFERENTIATORS, VOICES: pricing,
-//     the free tier, on-device/private phrasing, and the 10-language count
-//     come from here verbatim, not retyped from memory.
-//   - components/money/site.ts FREE_TIER: all 23 narrators are free for
-//     the first 8 hours. After that, the one keepable free voice is chosen
-//     from the eligible English lineup; this language narrator needs Premium.
-// App-behavior claims used: on-device, no account, imports EPUB/PDF,
-// 70,000+ Project Gutenberg books, free tier = unlimited listening, Premium
-// adds all voices + speed (0.3x to 3.0x) + sleep timer + soundscapes + notes.
-// Claims NOT made: CarPlay, Android, Windows, OCR of scanned/image-only PDFs,
-// a choice of Italian narrators, or a regional-accent setting (the app does
-// not expose one; not claimed).
+// EDITORIAL REVIEW — 2026-09-28. Sources for the material revision:
+// - LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), Engines/ChatterboxVoice.swift — named studio roster and language mapping; canonical source audit 2026-09-28.
+// - LoudReader_mac release_v1.12, VoiceRegistry.swift:105–119 and ReadingLanguagesSheet.swift — library languages plus Settings selection; inspected 2026-09-28.
+// - LoudReader_mac release_v1.12, SubscriptionAccess.swift and SubscriptionManager.swift — 8 cumulative listening hours, English free selection afterwards; source audit 2026-09-28.
+// - LoudReader_mac release_v1.12, DeviceCapability.swift, PDFImportPipeline.swift and PaywallReason.swift — device-dependent studio access, fallible OCR and Premium speed; source audit 2026-09-28.
+// - data/voices.ts and public/voices — narrator names and browser sample references checked 2026-09-28.
+// Practical routines are suggestions, not measured learning or medical outcomes.
+// No unpublished future-verification dates, independent runtime tests or network audit are claimed.
 
 import type { Faq } from "@/components/money/FaqSection";
-import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does LoudReader read Italian text aloud?",
-    a: "Yes. LoudReader has one Italian narrator, Marco, and it reads any DRM-free Italian EPUB or PDF aloud on your iPhone or Mac. The voice runs entirely on the device, so it works offline once the book is imported.",
+    "q": "How many Italian studio voices does LoudReader offer?",
+    "a": "One, named Marco. Check that studio narration is supported on your device. There is no selectable range of Italian regional accents."
   },
   {
-    q: "How many Italian voices does LoudReader offer?",
-    a: "One. Marco is the only Italian narrator in the app. If you were hoping to compare a few Italian voices against each other, LoudReader doesn't offer that today. English has 11 voices and Spanish has 4, but most other languages, Italian included, ship with a single narrator.",
+    "q": "Can I try Italian before importing a book?",
+    "a": "Yes. Add Italian to your reading languages in Settings to include it in the voice list, subject to device support. The website also has a browser sample."
   },
   {
-    q: "Can I hear the Italian voice before I download the app?",
-    a: "Yes. The voices page plays a real recorded sample of every narrator, including Marco reading in Italian, with no download or account required. It's the fastest way to check the voice fits your ear before you commit to anything.",
+    "q": "Can Marco teach or assess my Italian pronunciation?",
+    "a": "No. You can listen and repeat a passage, but the app does not assess your speech. Synthetic pronunciation can be wrong; use human recordings, a dictionary or a teacher when accuracy matters."
   },
   {
-    q: "Do I need an account to use the Italian voice?",
-    a: "No. There is no account and no sign-up. Import a book and the Italian narrator becomes available once your library has an Italian-language book in it.",
+    "q": "Does the Italian voice remain free after the trial?",
+    "a": "Marco requires Premium after the first eight hours of cumulative voice listening. Free book listening continues with a limited English selection. Speed adjustment is a separate Premium feature."
   },
   {
-    q: "Is the Italian voice free to use?",
-    a: `Try ${FREE_TIER.trial}. After that, continuing with Marco, the Italian narrator, requires Premium. Free users choose one keepable voice from the eligible English lineup and retain unlimited listening on every book, with no account or word quota. Premium includes all 23 studio narrators across 10 languages, playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and notes and highlights.`,
-  },
-  {
-    q: "Can LoudReader read an Italian PDF that's a scan of a printed page?",
-    a: "No. LoudReader reads the actual text layer in an EPUB or PDF. A scanned page saved as an image has no text layer for the app to read, in Italian or any other language.",
-  },
+    "q": "Can I import a scanned Italian PDF?",
+    "a": "LoudReader can attempt on-device OCR during PDF import. Check accents, punctuation and reading order against the original. Complex layouts and poor scans may need a better source file."
+  }
 ];

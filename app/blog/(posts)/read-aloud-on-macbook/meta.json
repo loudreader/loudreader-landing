@@ -1,9 +1,10 @@
 {
   "slug": "read-aloud-on-macbook",
   "title": "How to Read Aloud on MacBook",
-  "description": "Your MacBook has built-in spoken content, but a dedicated app adds natural voices, place bookmarking, and offline playback. LoudReader reads EPUBs and PDFs aloud on your Mac, offline.",
+  "description": "Use Mac speech controls or the LoudReader iPad app on Apple Silicon. Check imports, saved progress, compatibility and laptop sleep before listening.",
   "publishedAt": "2026-08-11",
-  "lastModified": "2026-08-11",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "read aloud on macbook"
+  "query": "read aloud on macbook",
+  "topic": "technology"
 }

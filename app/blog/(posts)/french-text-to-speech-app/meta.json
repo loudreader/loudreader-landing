@@ -1,9 +1,10 @@
 {
   "slug": "french-text-to-speech-app",
   "title": "French Text to Speech App",
-  "description": "LoudReader reads French EPUBs and PDFs aloud with one on-device narrator. Free, private, no account. Here is exactly what it offers and what it doesn't.",
+  "description": "Set up French narration in LoudReader, audition Antoine, check regional pronunciation and scanned PDFs, and understand trial and offline limits.",
   "publishedAt": "2026-10-04",
   "lastModified": "2026-10-04",
-  "avatar": "English Language Learner",
-  "query": "french text to speech app"
+  "avatar": "French reader or learner",
+  "query": "french text to speech app",
+  "topic": "learning"
 }

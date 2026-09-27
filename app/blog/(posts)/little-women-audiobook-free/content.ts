@@ -1,45 +1,47 @@
-// FACT PROVENANCE. Every claim verified on 2026-08-25 against:
-//   - Book facts (author, listening-hours estimate, word count):
-//     data/gutenberg-catalog.json, entry slug "little-women" (Project
-//     Gutenberg ebook #37106, Louisa May Alcott, "Little Women; Or, Meg, Jo,
-//     Beth, and Amy", ~185,600 words, 20.5-hour listening estimate).
-//     Publication years (Part First 1868, Part Second 1869) are the book's
-//     well-documented publishing history and are not in the JSON, so nothing
-//     more specific is claimed.
-//   - Catalog page /listen/little-women: confirmed present in
-//     data/catalog-slugs.json and as a real route under
-//     app/listen/[slug]/page.tsx before linking to it.
-//   - LoudReader claims: components/money/site.ts (DIFFERENTIATORS, VOICES,
-//     PRICING) and app FAQ, same source as every other article on this site.
-//     Free tier = unlimited listening, one voice; Premium unlocks all 23
-//     narrators and speed 0.3x to 3.0x.
-//   - Honesty note: the /listen page and this article both state plainly
-//     that the reading is a synthetic voice, not a performed narration, per
-//     the cluster's hard requirement.
-// Claims you may NOT make until verified: any specific edition/abridgment
-// detail beyond "the Gutenberg text", LibriVox-specific detail, CarPlay.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Read the previous page.tsx, content.ts and meta.json in full before revision.
+// Primary edition/catalog sources checked 2026-09-28:
+//   - https://www.gutenberg.org/ebooks/37106
+//   - https://www.gutenberg.org/cache/epub/37106/pg37106-images.html
+//   - https://www.gutenberg.org/policy/permission.html
+//   - data/gutenberg-catalog.json: current catalogue entry little-women,
+//     ebook 37106. Listening hours, where used, are catalogue estimates,
+//     not measured audio runtimes. No comparative voice test was performed.
+//   - data/audio-samples.ts confirms the shipped opening sample lookup.
+//   - /listen/little-women: catalogue/sample route, not a full audiobook.
+// Product facts: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0)
+// in the LoudReader app source, reviewed by the shared 2026-09-28
+// source audit (docs/product-facts-2026-09-28.md): SubscriptionAccess.swift,
+// SubscriptionManager.swift, VoiceRegistry.swift, PaywallReason.swift,
+// ProjectGutenbergService, ContentView.swift file importer, Xcode target configuration.
+// FREE_TIER imports the updated shared wording: eight cumulative listening hours,
+// then a free English voice selection (not any studio narrator), unlimited listening.
+// iPad compatibility on Apple Silicon is not a native Mac app; no device sync promise.
+// Local speech is not a claim of zero diagnostics, analytics or network use.
+// Edition and voice-selection advice is editorial guidance, not a tested superiority claim.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is Little Women free as an audiobook?",
-    a: "Yes. The novel is public domain and free on Project Gutenberg as text. LoudReader has that edition built in and reads it aloud with a natural offline voice, free, with unlimited listening. It's a synthetic voice reading the real text, not a purchased recording.",
+    q: "Does this Little Women edition contain both parts?",
+    a: "Yes. Gutenberg ebook 37106 includes Part First and Part Second, with 47 chapters in total. Part Second starts at chapter 24.",
   },
   {
-    q: "Is the voice reading it a real narrator?",
-    a: "No, and this article says so upfront. LoudReader generates the reading on your device from the actual Gutenberg text using a natural offline voice. It is not a performed audiobook narration with distinct voices for Jo, Meg, Beth, and Amy. If a dramatized performance matters to you for this particular book, a library app or audiobook store is worth checking too.",
+    q: "Is the sample a human narrator?",
+    a: "No. The LoudReader sample demonstrates synthetic speech. The app reads the selected ebook rather than playing a purchased studio recording.",
   },
   {
-    q: "How long is Little Women as an audiobook?",
-    a: "About 20.5 hours at a typical narration pace, based on the novel's roughly 185,600 words. That includes both parts (Meg, Jo, Beth, and Amy as girls, and their lives afterward), which Alcott originally published a year apart and which most modern editions, including the Gutenberg text, present as one continuous novel.",
+    q: "How long does the whole book take?",
+    a: "The catalogue estimates about 20.5 hours from text length. That is not a measured recording duration, and your chosen voice and speed can change it.",
   },
   {
-    q: "Do I need to find and download an audio file?",
-    a: "No. You need the LoudReader app, free on the App Store for iPhone and Mac. The Gutenberg catalog is built in, so you search for the book and press play, with no separate file to manage.",
+    q: "Can I finish both parts without paying?",
+    a: FREE_TIER.full,
   },
   {
-    q: "Can I read along while listening?",
-    a: "Yes. LoudReader highlights each word as it is spoken, so the text stays in sync with the audio, and your place is saved automatically between sessions.",
+    q: "Do I need to download it before a trip?",
+    a: "Yes. Download the book and required voice files while connected, then check playback. The catalogue is browsable in the app, but that does not mean every book is already stored on your device.",
   },
 ];

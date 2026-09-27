@@ -1,31 +1,44 @@
-// FACT PROVENANCE. All app-behavior claims verified against the LoudReader app
-// source (LoudReader_mac repo, main branch). The 70,000+ Gutenberg book count
-// is derived from the actual Project Gutenberg catalog available in-app.
-// Pricing and features from components/money/site.ts (single source of truth).
-// LibriVox claims are general descriptions of the well-known volunteer
-// audiobook project. No invented stats, reviews, or testimonials.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
+// Official source checked 2026-09-28: https://www.gutenberg.org/policy/permission.html
+// Official source checked 2026-09-28: https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term
+// Official source checked 2026-09-28: https://wiki.librivox.org/index.php/Copyright_and_Public_Domain
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "What is Project Gutenberg?",
-    a: "Project Gutenberg is a digital library of over 70,000 free ebooks whose copyrights have expired in the United States. It includes almost every major classic of world literature alongside lesser-known works. The books are public domain and freely redistributable. LoudReader includes the entire catalog built in.",
+    "q": "Is every Project Gutenberg book public domain worldwide?",
+    "a": "No. Gutenberg follows US copyright rules, and some items are included under permission. Check the specific ebook notice and the position in your country."
   },
   {
-    q: "Why would I listen to a classic through TTS when LibriVox recordings exist?",
-    a: "Availability. LibriVox has high-quality human recordings of many classics, but only a fraction of Gutenberg's catalog. For well-known classics, LibriVox recordings are often excellent. For deeper catalog works, lesser-known authors, and niche titles, LibriVox simply does not have a recording. TTS fills that gap.",
+    "q": "Is TTS the same as a recorded audiobook?",
+    "a": "No. TTS generates speech from the text you provide. A recording captures a particular narrator’s performance and may use another edition."
   },
   {
-    q: "Does LoudReader require a subscription to read Gutenberg books?",
-    a: "No. The free tier gives you unlimited listening on every book, cover to cover, including all 70,000+ Gutenberg classics. No account, no word quota. You can browse, search, and start listening immediately.",
+    "q": "Can I listen offline?",
+    "a": "Download the recording, or import the ebook and prepare the required local voice resources, before leaving your connection. Test the selected book first."
   },
   {
-    q: "Can I listen to Gutenberg books offline?",
-    a: "Yes. LoudReader is fully on-device and private, your library never leaves your device. Once you open a Gutenberg book, it downloads the text once and then plays offline forever. No internet needed for subsequent listening sessions.",
-  },
-  {
-    q: "Are LibriVox recordings better than TTS for classics?",
-    a: "For well-known classics, LibriVox volunteer narrators often deliver great performances. A human reading Pride and Prejudice or Moby Dick brings understanding and nuance that TTS cannot match. But recording quality varies widely between volunteers, and many books have no recording at all. TTS is consistent and covers everything.",
-  },
+    "q": "Which translation should I choose?",
+    "a": "Use the translator and edition required by your course or reading group, or compare sample passages. An author’s original text being public domain does not settle the status of a later translation."
+  }
 ];

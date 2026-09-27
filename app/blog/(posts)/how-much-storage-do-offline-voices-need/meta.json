@@ -1,9 +1,10 @@
 {
   "slug": "how-much-storage-do-offline-voices-need",
   "title": "How Much Storage Do Offline Voices Need?",
-  "description": "Offline text to speech voices have to live on your device somewhere. Here's what actually takes up space, and what doesn't, verified against the app itself.",
+  "description": "Understand voice models, books and cached audio, check LoudReader’s storage on your device and make room without losing important files.",
   "publishedAt": "2026-10-21",
   "lastModified": "2026-10-21",
   "avatar": "Privacy-Conscious Professional",
-  "query": "how much space do offline voices take"
+  "query": "how much space do offline voices take",
+  "topic": "technology"
 }

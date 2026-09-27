@@ -1,240 +1,90 @@
-# Article contract (blog)
+# Blog editing and publication
 
-How to add a persona-driven article (GROWTH_PROMPT Part C1.5) to
-`loudreader.io/blog`. Follow this exactly and you will not need to touch
-**any shared file** — articles can be written in parallel without merge
-conflicts. The `/blog` listing, the "Keep reading" block, and the sitemap all
-discover articles automatically from the files you create.
+Each article lives in `app/blog/(posts)/<slug>/` with `page.tsx`, `content.ts`
+and `meta.json`. The existing slug is a public URL: preserve it when correcting
+or retitling an article. The manifest discovers articles automatically.
 
-Reference implementation (complete sample article):
-`app/blog/(posts)/listen-to-books-while-driving/`.
+## Read and verify before editing
 
-This is the blog sibling of `docs/money-page-contract.md` — money pages own
-the high-intent commercial queries; articles own the persona/informational
-queries. Check both existing surfaces before choosing a query, to avoid
-cannibalization.
+Read all three files, including FAQ answers and metadata. An accurate body with
+an obsolete description or FAQ is still an inaccurate article. Use
+`docs/product-facts-2026-09-28.md` and `components/money/site.ts` for the
+release-verified product baseline. Recheck them against the shipping release
+when the app changes; a dirty checkout, source comment or old marketing page
+is not by itself proof of current behaviour.
 
-## The one rule
+Import shared facts such as `FREE_TIER`, `VOICES`, `PRICING`, `CLONING`, `MAC`
+and `PRIVACY` rather than transcribing them. Device-dependent availability,
+trial limits, normal offline listening, and network diagnostics are distinct
+facts. Do not describe the iPad build as a native Mac app, notes as Premium-only,
+or local narration as proof that the app sends no telemetry.
 
-**One article = one folder** under `app/blog/(posts)/`, containing exactly
-three files:
+Verify changing competitor claims against current official sources. Use
+primary research for scientific claims, and accurately state what a study
+actually measured. Do not invent listening tests, exact quality scores,
+medical benefits, adoption figures, authors, testimonials or future verification
+dates. Remove a claim that cannot be supported. Public-domain status depends
+on territory and the particular edition, translation and recording.
 
-```
-app/blog/(posts)/<slug>/
-├── page.tsx      # assembles shared components, server-rendered
-├── content.ts    # fact-provenance comment + FAQ data (and any local copy constants)
-└── meta.json     # single source of truth for title/description/dates — feeds
-                  # the page <head>, the /blog listing, "Keep reading" cards,
-                  # BlogPosting JSON-LD, and the sitemap. Never edit app/sitemap.ts.
-```
+Record what you checked, the source and check date in the provenance comment
+at the top of `content.ts`. A real runtime test and a source-code inspection
+are different evidence; identify which one was done.
 
-The `(posts)` route group does not appear in the URL: the folder name **is**
-the slug (`app/blog/(posts)/listen-to-books-while-driving/` →
-`https://loudreader.io/blog/listen-to-books-while-driving`).
+## Write for the reader
 
-Each article targets **ONE customer avatar and ONE search query** — record
-both in `meta.json` (`avatar`, `query`). They are internal targeting
-metadata, never rendered on the page.
+Answer the article's own practical question first. Explain useful steps,
+choices and limitations. Keep distinct jobs distinct: choosing an app,
+checking an edition, troubleshooting a PDF and deciding on a voice should not
+all become the same sales pitch. Avoid repeated generic paragraphs, made-up
+precision, unsupported superiority and claims that everyone learns or listens
+the same way.
 
-## Hard rules (non-negotiable)
+LoudReader is the reading app; Loudkit is the open-source developer framework;
+Loudkit for agents is a separate companion preview. Link to the developer
+products where they help the reader. Consumer articles do not all need an
+agent pitch. Product announcements should link to the relevant docs, source
+or setup page; an App Store CTA is only appropriate for the reading app.
 
-1. **Server-rendered copy.** No `"use client"` in `page.tsx` or `content.ts`.
-   All visible copy must be in server components — AI crawlers don't execute
-   JS. The only client code allowed is the existing leaf
-   (`components/money/QrFallback.tsx`, already wired into `StoreCta`).
-2. **No fabrication.** No invented testimonials, user comments, reviews,
-   statistics, studies, team members, or features. No `aggregateRating` in
-   any JSON-LD. If you cite a study, it must be real, findable, and relevant
-   — record the citation in the fact-provenance comment. If you cannot
-   verify a claim, do not make it.
-3. **Verify app-behavior claims against the app source or in-app** before
-   writing them, and record what you checked in the fact-provenance comment
-   at the top of `content.ts` (see the sample: background audio and
-   lock-screen controls are verified against `Info.plist` and
-   `PlayerService.swift`; CarPlay is explicitly noted as NOT claimable).
-4. **Differentiators verbatim.** Weave the exact strings from
-   `components/money/site.ts` (`DIFFERENTIATORS`) into the copy where
-   natural — consistency across pages is what AI answer engines echo:
-   - "fully on-device and private — your library never leaves your device"
-   - "natural offline voices"
-   - "runs on iPhone, iPad, and Apple Silicon Macs" (the iPad build runs on
-     compatible Macs; do not call it a native Mac app)
-5. **No new dependencies.** The shared components cover everything an
-   article needs, including illustrations (inline SVG — see below).
-6. **Date honesty.** `publishedAt` is the day the article went live and
-   never changes. `lastModified` is the date of the last REAL content edit —
-   never `new Date()`, never bumped without an edit. The `LastUpdated` stamp,
-   BlogPosting JSON-LD `dateModified`, and the sitemap all read
-   `meta.json.lastModified`, so there is exactly one place to keep honest.
-7. **No fake authors.** The only byline is the shared `Byline` component
-   ("Built by the developer of LoudReader") — `ArticleLayout` renders it
-   automatically. Do not invent staff writers.
+When a comparison recommends LoudReader, put the shared `Disclosure` component
+near the first recommendation, normally in `Tldr`. The shared `Byline` names
+the real developer. Do not invent a reviewer or imply independent testing.
 
-## Shared components
+## Page structure and metadata
 
-Blog-specific (import from `@/components/blog/…`):
+Use the existing server-rendered `ArticleLayout`, `Tldr`, `QuestionSection`,
+`FaqSection`, `ArticleIllustration` and appropriate CTA components. No new
+client-side content dependency or package is needed. FAQ answers must agree
+with the body; `FaqSection` produces their structured data automatically.
+Use concise titles and descriptions that accurately describe the article,
+not a second sales pitch. Keep the existing typography and colours.
 
-| Component | Purpose | Key props |
-|---|---|---|
-| `ArticleLayout` | Full shell: money-page chrome + breadcrumb, H1, byline, "Last updated", BlogPosting JSON-LD, and the manifest-driven "Keep reading" block after your body | `meta` (pass the `meta.json` import), `children` |
-| `ArticleIllustration` | Decorative inline SVG vignette (no raster images in this pipeline) | `variant`, `caption?` |
+`meta.json` contains the slug, title, description, publication and modification
+dates, plus optional internal avatar/query fields. Reader-facing `topic` is
+one of: `reading`, `formats`, `voices`, `learning`, `comparisons`, `classics`,
+`technology`. This drives blog sections and the related-article selection.
+Product announcements additionally use `kind: release`; `featured: true`
+gives important releases priority. Existing guides may omit `kind`.
 
-`ArticleIllustration` variants: `waveform` (text becomes sound),
-`book-to-audio` (import/TTS), `drive` (car/commute), `offline`
-(on-device/private/no cloud), `devices` (native Mac + iPhone). Pick the one
-that matches the article's topic; 1–2 per article is plenty. Need a new
-variant? That is a shared-file edit — do it as its own change, never inside
-an article PR.
+- Keep `publishedAt` unchanged when refreshing an existing article.
+- Set `lastModified` only for a real edit. A fresh build or review alone does
+  not justify a new modification date.
+- A held article initially uses its intended publication date for both dates;
+  record the earlier drafting/verification date in the source provenance.
+- All dates use `YYYY-MM-DD`. Slug must match the folder name.
+- Link to existing, published destinations. A post may link to an earlier
+  scheduled post that will be public by its own publication date, but not a
+  later one. Use a currently live product landing page when appropriate.
 
-Reused from money pages (import from `@/components/money/…`):
+## Publication and checks
 
-| Component | Purpose | Key props |
-|---|---|---|
-| `Tldr` | Direct-answer callout, place first inside `ArticleLayout` | `children` (~100–150 words) |
-| `QuestionSection` | Question-form `<h2>` section | `question`, `id?`, `children` |
-| `FaqSection` | Visible FAQ **and** FAQPage JSON-LD from the same data | `faqs: {q, a}[]` (answers plain strings), `title?` |
-| `StoreCta` | Platform-aware App Store CTA (badge + QR on non-Apple desktops) | `headline?`, `subline?` |
-| `ComparisonTable` | Scrollable comparison table (if the article needs one) | `caption`, `columns`, `rows` |
+The manifest excludes future posts from the blog, related links and sitemap.
+`ArticleLayout` returns404 for their direct URLs until a rebuild on or after
+their publication date. Vercel's existing daily08:00UTC cron calls
+`/api/cron/rollout`; the production `DEPLOY_HOOK_URL` rebuilds `main`.
+Publication follows a successful build, not midnight or an exact-minute promise.
+Verify that cron and hook remain active; do not add a competing publisher.
 
-Shared constants in `components/money/site.ts`: `APP_STORE_URL`, `SITE_URL`,
-`DIFFERENTIATORS`, `PRICING`, `REQUIREMENTS`, `SUPPORT_EMAIL`. Import these
-instead of retyping facts.
-
-## Content requirements per article
-
-- **TL;DR first**: the first ~100–150 words answer the article's one query
-  completely and stand alone.
-- **Question-form H2s** (`QuestionSection`) — phrase them the way the avatar
-  searches.
-- **Quotable standalone sentences** — write so single sentences survive
-  being lifted out of context by an AI answer engine.
-- **FAQ section at the bottom** (4–6 Q&As) — `FaqSection` emits the FAQPage
-  JSON-LD automatically; answers must be plain text.
-- **≥2 internal links** in body copy — at least one money page
-  (see `app/(seo)/*/`) or the home page; siblings under `/blog/` also count.
-- **Inline CTAs**: `StoreCta` at the bottom at minimum; mid-page text links
-  to `APP_STORE_URL` are encouraged.
-- **1–2 `ArticleIllustration`s**, content-relevant, with captions.
-- **Honesty over reach**: concede what LoudReader does not do (DRM, CarPlay,
-  languages) when the topic raises it — concessions are rewarded, and they
-  are the brand.
-
-## File templates
-
-### `meta.json`
-
-```json
-{
-  "slug": "my-article-slug",
-  "title": "Question or How-To Title",
-  "description": "≤160 chars; used for meta description, /blog cards, and Keep-reading cards.",
-  "publishedAt": "2026-07-14",
-  "lastModified": "2026-07-14",
-  "avatar": "One Customer Avatar",
-  "query": "the one search query this article targets"
-}
-```
-
-- `slug` must equal the folder name (the build fails loudly if not).
-- `title` ≤ ~55 chars; the root layout appends " · LoudReader".
-- Optional sitemap overrides: `"changeFrequency": "weekly" | "monthly" | "yearly"`
-  (default `monthly`), `"priority"` (default `0.6`).
-- Product announcements use `"kind": "release"` and can use `"featured": true`.
-  They appear in the blog's Product news section. Articles without a kind
-  remain guides. A release CTA should lead to that product's docs, source or
-  setup page; an App Store CTA is only appropriate for the reader app.
-- Scheduled posts use the intended first publication date in `publishedAt`
-  and initially in `lastModified`; record the drafting/verification date in
-  `content.ts`. After publication, update `lastModified` only for real edits.
-  The shared manifest excludes future posts from the index, related links
-  and sitemap; `ArticleLayout` returns 404 for their direct URLs until a
-  rebuild on or after that date. Do not link a published post to a held post.
-- Vercel's existing daily `0 8 * * *` cron calls `/api/cron/rollout` and the
-  production `DEPLOY_HOOK_URL` rebuilds `main`. Publication follows that
-  day's successful build, not midnight. Verify the cron and hook are active
-  when scheduling content; do not create a second publishing mechanism.
-- Run `node --test scripts/blog-schedule.test.mjs` to check the October 2026
-  announcement boundaries, then `npm run build` for all routes.
-- `components/blog/articles.ts` validates all of this at build time —
-  `npm run build` is your schema check.
-
-### `content.ts` (skeleton)
-
-```ts
-// FACT PROVENANCE — every app-behavior claim verified on YYYY-MM-DD against:
-//   - <app source file / in-app screen / official page> (what you verified)
-//   - ...
-// Claims you may NOT make until verified: <list them so the next editor knows>
-
-import type { Faq } from "@/components/money/FaqSection";
-
-export const FAQS: Faq[] = [
-  { q: "…?", a: "Plain-text answer — emitted verbatim into FAQPage JSON-LD." },
-  // 4–6 total
-];
-```
-
-### `page.tsx` (skeleton)
-
-```tsx
-import Link from "next/link";
-
-import ArticleIllustration from "@/components/blog/ArticleIllustration";
-import ArticleLayout from "@/components/blog/ArticleLayout";
-import { articleMetadata } from "@/components/blog/articles";
-import FaqSection from "@/components/money/FaqSection";
-import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
-import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
-import { FAQS } from "./content";
-import meta from "./meta.json";
-
-export const metadata = articleMetadata(meta);
-
-export default function MyArticle() {
-  return (
-    <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>{/* 100–150 word direct answer */}</p>
-      </Tldr>
-
-      <ArticleIllustration variant="waveform" caption="…" />
-
-      <QuestionSection question="…?">
-        <p>{/* body copy; <Link href="/…"> internal links */}</p>
-      </QuestionSection>
-
-      {/* … more QuestionSections … */}
-
-      <FaqSection faqs={FAQS} />
-      <StoreCta headline="…" subline="…" />
-    </ArticleLayout>
-  );
-}
-```
-
-That is the entire wiring: `ArticleLayout` adds the breadcrumb, H1, byline,
-"Last updated" stamp, BlogPosting JSON-LD, and "Keep reading" — all from
-`meta`. The listing page, related-article cards, and sitemap pick the
-article up from `meta.json` automatically at build time.
-
-## Styling conventions (match the existing site)
-
-Same as money pages: body text `text-gray-600`, emphasis `text-gray-900`,
-links `text-loudBlue hover:underline`, lists `list-disc pl-6 space-y-2` /
-`list-decimal pl-6 space-y-2`. Don't invent new colors or fonts; don't use
-framer-motion on these pages.
-
-## Verify before handing off
-
-1. `npm run build` passes (this also validates your `meta.json`).
-2. `curl -s http://localhost:3000/blog/<slug>` (after `npm run start`) —
-   strip scripts, confirm all body copy is present in the raw HTML.
-3. `http://localhost:3000/blog` lists the article;
-   `http://localhost:3000/sitemap.xml` contains `/blog/<slug>`.
-4. FAQPage JSON-LD present exactly once, BlogPosting JSON-LD present exactly
-   once; no `aggregateRating` anywhere.
-5. Every app-behavior claim and citation in the page appears in the
-   fact-provenance comment in `content.ts` with its source.
+Run `node --test scripts/blog-schedule.test.mjs` and `npm run build`. Check
+rendered HTML, metadata and JSON-LD as well as source syntax. Confirm held
+articles still return404 and stay out of discovery. When doing an archive
+pass, keep a per-article audit record so every article is accounted for.

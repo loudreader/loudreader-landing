@@ -1,49 +1,49 @@
-// FACT PROVENANCE. Verified 2026-08-24 against:
-//   - Lewis Carroll published Alice's Adventures in Wonderland in 1865; it is
-//     in the public domain everywhere. The Project Gutenberg edition is
-//     catalog ID 11, listed as "Alice's Adventures in Wonderland" / "Lewis
-//     Carroll" per data/catalog-slugs.json (slug:
-//     "alices-adventures-in-wonderland").
-//   - The book's LoudReader catalog page
-//     (/listen/alices-adventures-in-wonderland) exists in
-//     data/catalog-slugs.json and renders a real, rendered audio sample
-//     (data/audio-samples.ts, "alices-adventures-in-wonderland" entry,
-//     13.2 seconds), the same flagship reference voice used across the
-//     catalog.
-//   - LoudReader app-behavior claims (free unlimited listening, no account,
-//     70,000+ built-in Gutenberg catalog, on-device, word-by-word
-//     highlighting, natural offline voices, iPhone, iPad, and Apple Silicon Macs) come
-//     from components/money/site.ts, the single source of truth.
-//   - LibriVox as a free human-narrated alternative: general, verifiable
-//     description only (volunteer readers, MP3 downloads).
-// Claims NOT made: no invented word count, no invented listening-time figure,
-// no "best narrator" ranking, no CarPlay, no Android.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Read the previous page.tsx, content.ts and meta.json in full before revision.
+// Primary edition/catalog sources checked 2026-09-28:
+//   - https://www.gutenberg.org/ebooks/11
+//   - https://librivox.org/alices-adventures-in-wonderland-by-lewis-carroll-5
+//   - https://www.gutenberg.org/ebooks/12
+//   - https://www.gutenberg.org/policy/permission.html
+//   - data/gutenberg-catalog.json: current catalogue entry alices-adventures-in-wonderland,
+//     ebook 11. Listening hours, where used, are catalogue estimates,
+//     not measured audio runtimes. No comparative voice test was performed.
+//   - data/audio-samples.ts confirms the shipped opening sample lookup.
+//   - /listen/alices-adventures-in-wonderland: catalogue/sample route, not a full audiobook.
+//   - https://www.gutenberg.org/cache/epub/11/pg11-images.html (text/contents checked).
+// Product facts: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0)
+// in the LoudReader app source, reviewed by the shared 2026-09-28
+// source audit (docs/product-facts-2026-09-28.md): SubscriptionAccess.swift,
+// SubscriptionManager.swift, VoiceRegistry.swift, PaywallReason.swift,
+// ProjectGutenbergService, ContentView.swift file importer, Xcode target configuration.
+// FREE_TIER imports the updated shared wording: eight cumulative listening hours,
+// then a free English voice selection (not any studio narrator), unlimited listening.
+// iPad compatibility on Apple Silicon is not a native Mac app; no device sync promise.
+// Local speech is not a claim of zero diagnostics, analytics or network use.
+// Edition and voice-selection advice is editorial guidance, not a tested superiority claim.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is there a free audiobook of Alice's Adventures in Wonderland?",
-    a: "Yes. Alice's Adventures in Wonderland is public domain, so nobody holds an exclusive audiobook right to it. Project Gutenberg hosts the full text free, and LoudReader reads it aloud on your Mac or iPhone with natural offline voices, free with unlimited listening and no account.",
+    q: "Is there a free Alice in Wonderland audiobook?",
+    a: "Yes. LibriVox has volunteer recordings, and a text-to-speech app can read the English ebook. Project Gutenberg lists ebook 11 as public domain in the USA; availability elsewhere needs a local check.",
   },
   {
-    q: "Is the free Alice in Wonderland audiobook read by a human narrator?",
-    a: "No. LoudReader reads the Gutenberg text with a synthetic voice, not a performed audiobook by a human narrator. It reads Carroll's wordplay and nonsense verse clearly and consistently, but it doesn't voice each character the way a trained narrator might. If a human performance matters most, look for a LibriVox recording instead.",
+    q: "Does the ebook include Through the Looking-Glass?",
+    a: "The linked Gutenberg entry is Alice’s Adventures in Wonderland. Through the Looking-Glass is a separate book, so check collection contents rather than relying on a shortened cover title.",
   },
   {
-    q: "Where can I hear a sample before installing the app?",
-    a: "The LoudReader catalog page for Alice's Adventures in Wonderland plays a short rendered sample of the opening in your browser, using the same voice heard across the app. You can check it works for you before installing anything.",
+    q: "Does LoudReader use a human narrator?",
+    a: "LoudReader generates speech from the ebook on your device. It is not the LibriVox recording. Preview dialogue and verse to judge whether its delivery suits this book.",
   },
   {
-    q: "Do I need to find or convert a file to listen in LoudReader?",
-    a: "No. Alice's Adventures in Wonderland is one of the 70,000+ Project Gutenberg books already built into LoudReader's catalog. You find it inside the app and press play, with nothing to download or convert first.",
+    q: "What stays free in LoudReader?",
+    a: FREE_TIER.full,
   },
   {
-    q: "Can I listen to Alice in Wonderland offline?",
-    a: "Yes. LoudReader is fully on-device and private, your library never leaves your device, so playback works without a connection once the book is open, wherever the signal drops.",
-  },
-  {
-    q: "Is a free public-domain audiobook of Alice in Wonderland legal?",
-    a: "Yes. Lewis Carroll's copyright expired long ago, so the text is public domain and free to read, adapt, or read aloud by anyone, including a text-to-speech app. There's no licensing question involved.",
+    q: "Can I listen offline?",
+    a: "Yes, after downloading the book and required voice files. Download them while connected and check playback before a journey. The full reading takes place in the app, not in the website’s short sample.",
   },
 ];

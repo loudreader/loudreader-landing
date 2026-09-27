@@ -8,7 +8,7 @@ import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, MAC, PRIVACY, VOICES } from "@/components/money/site";
 
 import {
   COMPARISON_COLUMNS,
@@ -51,8 +51,7 @@ export default function OfflineTextToSpeechMacPage() {
           <strong>LoudReader</strong>, which runs on Apple Silicon Macs and whose neural
           text-to-speech engine runs entirely on your Mac, with natural
           offline voices that sound like an audiobook rather than a screen
-          reader. LoudReader is fully on-device and private, your library
-          never leaves your device, needs no account, and its free tier
+          reader. LoudReader generates narration locally, needs no account, and its free tier
           includes unlimited listening with no word quota.
         </p>
       </Tldr>
@@ -101,8 +100,7 @@ export default function OfflineTextToSpeechMacPage() {
           turns any EPUB, PDF, or article into an audiobook with natural
           offline voices. It runs on iPhone, iPad, and Apple Silicon Macs, not a web
           wrapper, and every word of speech is generated on your device by a
-          modern neural TTS engine. It&apos;s fully on-device and private, your
-          library never leaves your device. There&apos;s no account and no
+          modern neural TTS engine. Books are not uploaded for narration. There&apos;s no account and no
           sign-up.
         </p>
         <p>
@@ -140,17 +138,15 @@ export default function OfflineTextToSpeechMacPage() {
           <li>
             <strong>It works everywhere.</strong> Planes, trains, tethered
             laptops, flaky hotel Wi-Fi: narration generated on your own
-            machine can&apos;t buffer or drop out.
+            machine does not depend on a live speech server. Device speed and resource availability can still affect playback.
           </li>
           <li>
             <strong>No quotas.</strong> Cloud TTS services meter usage
             because synthesis costs them server time. When the engine runs on
-            your Mac, there&apos;s nothing to meter, and LoudReader has no word
-            limits on any tier.
+            your Mac, there&apos;s nothing to meter, and LoudReader has no book-listening word limits on any tier.
           </li>
           <li>
-            <strong>Privacy.</strong> Offline synthesis means your text is
-            never transmitted to anyone. What you read stays yours. See{" "}
+            <strong>Privacy.</strong> Local synthesis avoids sending your text to a speech provider. Other app data flows need separate consideration. See{" "}
             <Link
               href="/private-text-to-speech-no-cloud"
               className="text-loudBlue hover:underline"
@@ -161,7 +157,7 @@ export default function OfflineTextToSpeechMacPage() {
             <Link href="/privacy" className="text-loudBlue hover:underline">
               privacy policy
             </Link>{" "}
-            for what LoudReader does (almost nothing) with data.
+            for its diagnostics and analytics disclosures.
           </li>
         </ul>
       </QuestionSection>
@@ -193,6 +189,10 @@ export default function OfflineTextToSpeechMacPage() {
           covers that decision honestly.
         </p>
       </QuestionSection>
+
+      <p>{MAC.precise} {VOICES.availability}</p>
+      <p>{FREE_TIER.full}</p>
+      <p>{PRIVACY.summary}</p>
 
       <FaqSection faqs={FAQS} />
 

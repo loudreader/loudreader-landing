@@ -1,9 +1,10 @@
 {
   "slug": "convert-kindle-books-to-audio",
   "title": "Can You Convert Kindle Books to Audio?",
-  "description": "Most Kindle books are locked with DRM and can't be converted. For DRM-free ebooks you own, convert to EPUB and import into LoudReader for natural offline text-to-speech playback.",
+  "description": "Check whether your Kindle purchase offers an EPUB or PDF download, then choose a read-aloud route. DRM-protected titles need a different approach.",
   "publishedAt": "2026-08-26",
-  "lastModified": "2026-08-26",
+  "lastModified": "2026-09-28",
   "avatar": "Time-Starved Book Lover",
-  "query": "convert kindle books to audio"
+  "query": "convert kindle books to audio",
+  "topic": "formats"
 }

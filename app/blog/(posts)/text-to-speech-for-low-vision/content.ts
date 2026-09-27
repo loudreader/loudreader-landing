@@ -1,42 +1,44 @@
-import { FREE_TIER } from "@/components/money/site";
-
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-11-01 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - LoudReader is NOT a screen reader: it does not read UI elements, menus,
-//     buttons, or system interfaces. It reads the content of imported EPUB
-//     and PDF files only.
-//   - Natural offline voices: Apple speech synthesis, all processing local.
-//   - Word-by-word highlighting: free (ReaderStylesheet.swift).
-//   - Speed 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed).
-//   - Voice selection: 23 studio narrators in 10 languages, all free for first 8 hours, 1 free
-//     thereafter. Premium includes all 8 (site.ts PRICING).
-//   - Free tier unlimited listening, no account: SubscriptionAccess.swift.
-// NO claims about: accessibility certification, WCAG compliance, VoiceOver
-// integration, magnification features, contrast controls, or any screen-reader
-// functionality. The article honestly positions TTS as a complementary tool,
-// not a replacement for dedicated assistive technology.
+// EDITORIAL AUDIT — 2026-09-28. Product claims reconciled with the release_v1.12
+// shipping source release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0
+// in loudreader/LoudReader_mac (product fact audit, source references below).
+// Release version verified using https://itunes.apple.com/lookup?id=6758149478&country=us.
+// This editorial review includes source inspection, not a runtime accessibility test.
+// LoudReader iOS/iPadOS app; compatible Apple Silicon Macs run the iPad build.
+// Word/sentence highlighting and replay: ContinuousReaderView.swift,
+// ContinuousReaderController.swift and HighlightSchedule.swift.
+// Premium speed; notes/highlights are free: Subscription/PaywallReason.swift118–148
+// and TTSPreferences.swift.
+// EPUB/PDF and local scanned-PDF OCR: PDFImportPipeline.swift90,155–218
+// plus release_v1.12 product audit; OCR/reading-order quality is not guaranteed.
+// Playback/background controls: PlayerService.swift and Info.plist audio mode.
+// Free access copy is imported from components/money/site.ts FREE_TIER.
+// Speech is generated locally after downloads; this is not a promise of no
+// diagnostics, analytics, networking, automatic sync or accessibility certification.
+// Source checked 2026-09-28: https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios
+// Source checked 2026-09-28: https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios
+// Practical routines are editorial suggestions, not measured learning outcomes.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is LoudReader a screen reader?",
-    a: "No. A screen reader reads everything on your screen: menus, buttons, settings, system dialogs. LoudReader reads the books and documents you import into it. It does not help you navigate your phone, open apps, or interact with the operating system. For that, iPhone has built-in VoiceOver and Mac has its own screen reader. LoudReader is for reading books, not for reading screens.",
+    "q": "Is LoudReader a screen reader?",
+    "a": "No. It narrates supported books and documents. VoiceOver is Apple’s system screen reader for navigation and spoken feedback and can also read content."
   },
   {
-    q: "What does LoudReader actually do for low-vision readers?",
-    a: "It reads any DRM-free EPUB or PDF aloud with natural offline voices, highlighting each word as it goes. That means you can listen to books, articles, and personal documents without needing to see the text at all. The app remembers your place, plays with the screen locked, and needs no account. It turns the books you already own into something you can consume by ear.",
+    "q": "Has LoudReader been fully tested with VoiceOver?",
+    "a": "This guide does not claim an end-to-end VoiceOver test or accessibility certification. Check import, playback, navigation and error recovery using the setup you depend on before relying on the app."
   },
   {
-    q: "Can I adjust the reading speed?",
-    a: "Yes. Speed control from 0.3x to 3.0x is a Premium feature in LoudReader; the free tier plays at normal speed. Slower speeds help with dense or unfamiliar material, and faster speeds let you move through lighter reading quickly. The full range is available on both the Mac and iPhone apps.",
+    "q": "Can I listen without keeping the screen on?",
+    "a": "Yes, LoudReader supports background playback and system lock-screen media controls. This does not guarantee that every in-app setup action is accessible without sight."
   },
   {
-    q: "What file types can I listen to?",
-    a: "DRM-free EPUB and PDF files. You import them through the iOS Share sheet or the Mac file picker. The app also includes 70,000+ free Project Gutenberg classics built in. Everything stays local: the app is fully on-device and private, your library never leaves your device.",
+    "q": "Can it read a scanned PDF?",
+    "a": "The current app includes local OCR for scanned PDFs. Recognition and reading order depend on the document, and images, diagrams or poor scans may still need an accessible alternative."
   },
   {
-    q: "How do I pick the clearest voice?",
-    a: `LoudReader offers 23 studio narrators across 10 languages. ${FREE_TIER.full} Premium keeps all 23 available after the trial. Try them at the speed you read and pick the one that fatigues you least. Clarity matters more than personality for extended listening sessions.`,
-  },
+    "q": "Can I use the same library on iPhone and Mac automatically?",
+    "a": "No automatic library or reading-position sync is provided. Compatible Apple Silicon Macs run the iPad build; import the files separately on the devices you use."
+  }
 ];

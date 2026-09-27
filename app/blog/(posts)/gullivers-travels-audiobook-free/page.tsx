@@ -7,144 +7,33 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function GulliversTravelsAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Gulliver&apos;s Travels is public domain, so a free audiobook of it
-          is one download away. <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads Jonathan Swift&apos;s complete text aloud with a
-          natural offline voice, all four voyages, no cost, no time limit.
-          One honest note up front: this is a synthetic voice reading
-          Swift&apos;s text on your device, not a studio-recorded
-          performance. At roughly 52,000 words, it runs about 6 hours, short
-          enough for a few commutes. Hear a sample on the{" "}
-          <Link
-            href="/listen/gullivers-travels"
-            className="text-loudBlue hover:underline"
-          >
-            Gulliver&apos;s Travels catalog page
-          </Link>
-          , then open the app, where the book is already built in, and press
-          play.
-        </p>
+        <p>Before choosing a free Gulliver’s Travels audiobook, check which edition it reads. The <Link href="/listen/gullivers-travels" className="text-loudBlue hover:underline">LoudReader catalogue entry</Link> points to <a href="https://www.gutenberg.org/ebooks/17157" className="text-loudBlue hover:underline">Gutenberg ebook 17157</a>, an abridged school edition edited by Thomas M. Balliet. It contains the Lilliput and Brobdingnag voyages, not all four. For the four-voyage text, start with <a href="https://www.gutenberg.org/ebooks/829" className="text-loudBlue hover:underline">Gutenberg ebook 829</a>. Both are English ebooks that a text-to-speech app can read; neither listing is itself a human audiobook recording. Gutenberg marks these editions public domain in the USA. The US listing does not establish availability in other countries.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="The full 1726 text, all four voyages, read aloud on your device."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="With Gulliver, the contents page matters more than the cover title." />
 
-      <QuestionSection question="Where can you listen to Gulliver's Travels for free?">
-        <p>
-          Jonathan Swift died in 1745, and Gulliver&apos;s Travels has been
-          public domain for a very long time. Project Gutenberg carries the
-          complete text as ebook #17157, so there&apos;s no cost or paywall
-          standing between you and the book. What a plain Gutenberg file
-          can&apos;t do is read itself to you.
-        </p>
-        <p>
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          does that part. Gulliver&apos;s Travels is already in the
-          app&apos;s built-in library of 70,000+ free Gutenberg books, so
-          there&apos;s nothing to find or convert. Open the app, search for
-          it, press play. You can hear the voice first on the{" "}
-          <Link
-            href="/listen/gullivers-travels"
-            className="text-loudBlue hover:underline"
-          >
-            Gulliver&apos;s Travels page
-          </Link>
-          , which has a rendered sample.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="What is missing from the catalogue edition?"><p>Ebook 17157 is explicitly labelled an abridged school edition. Its contents cover the voyages to Lilliput and Brobdingnag, and the editor’s preface describes omissions and changes to the wording. Calling it the complete novel would be misleading, even if an app reads every word in that file.</p><p>It can still suit a reader deliberately looking for those two adventures. The important thing is to make that choice knowingly. For a course or a book group discussing the later satire, it is the wrong file.</p></QuestionSection>
 
-      <QuestionSection question="Is this the whole book, or just the Lilliput part?">
-        <p>
-          The whole book. A lot of people only know the Lilliput voyage,
-          because it&apos;s the section most abridged children&apos;s
-          editions keep and the rest get cut. The complete novel has three
-          more voyages: Brobdingnag, where Gulliver is the tiny one and a
-          giant king delivers one of literature&apos;s harshest verdicts on
-          humanity; the flying island of Laputa, populated by useless
-          philosophers; and finally the land of the Houyhnhnms, rational
-          horses who rule over filthy, greedy creatures that look exactly
-          like us. Swift&apos;s satire gets darker and stranger as it goes,
-          and the full text this reading uses is exactly as Project
-          Gutenberg has it, unabridged.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you get all four voyages?"><p>Open <a href="https://www.gutenberg.org/ebooks/829" className="text-loudBlue hover:underline">ebook 829’s download page</a> and select EPUB. Its contents include Lilliput, Brobdingnag, the voyage that includes Laputa, and the country of the Houyhnhnms. Import that EPUB into your reading app and check the four parts appear before starting.</p><p>If you already have an assigned edition, a supported DRM-free EPUB is another option. Use <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">the ebook import guide</Link> for the workflow. Match the actual text rather than assuming every file with Swift’s title is interchangeable.</p></QuestionSection>
 
-      <QuestionSection question="What does the narration sound like?">
-        <p>
-          Direct answer: it&apos;s a synthetic voice, not a human actor.
-          LoudReader builds its narration from {"natural offline voices"},
-          generated live on your device as the book plays, with no separate
-          audio file to download or store. It reads the whole novel in one
-          consistent voice, Gulliver&apos;s deadpan reporting included,
-          rather than performing distinct characters.
-        </p>
-        <p>
-          That deadpan tone is actually a decent fit for how the book is
-          written. Swift&apos;s joke is that Gulliver narrates the most
-          absurd things in the flat, matter-of-fact voice of a ship&apos;s
-          log, and a synthetic reader doesn&apos;t editorialize either. Still,
-          if what you want is a performed audiobook with dramatic emphasis
-          and a distinct voice actor, a commercial edition will give you
-          that, and this app won&apos;t pretend to compete with it on that
-          front. What it gives you instead is the whole book, free, on
-          demand.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Will a synthetic voice suit Swift’s satire?"><p>Try a passage of Gulliver’s formal narration, then one with unfamiliar place names. Long sentences and invented names can expose awkward phrasing that a short opening sample misses. If you are using the book for study, keep the printed wording visible when a sentence sounds puzzling.</p><p>Do not choose purely by total hours. The catalogue’s approximately six-hour estimate belongs to the abridged entry and must not be used to plan the four-voyage edition. A short runtime can be a clue to check the contents, but it is not proof of an abridgment on its own.</p></QuestionSection>
 
-      <QuestionSection question="How do you start listening right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Get{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>
-            . Free, no account required.
-          </li>
-          <li>
-            Search the built-in Gutenberg catalog inside the app for
-            Gulliver&apos;s Travels. No file to hunt down, no conversion
-            step.
-          </li>
-          <li>
-            Press play. LoudReader is{" "}
-            {"fully on-device and private, your library never leaves your device"},
-            so the whole book plays without a connection once it&apos;s
-            loaded.
-          </li>
-          <li>
-            If you&apos;d rather push through the four voyages faster once
-            you&apos;re used to the voice, Premium adds playback speed from 0.3x
-            to 3.0x. The free tier plays at normal speed.
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for Gulliver’s Travels. Choose ebook 17157 only if you want the school abridgment; import ebook 829 separately for all four voyages. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Start Gulliver's Travels tonight"
-        subline="It's already in LoudReader's free Gutenberg library. Import nothing, just press play."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

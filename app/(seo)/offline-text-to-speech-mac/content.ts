@@ -1,3 +1,5 @@
+// LoudReader product facts refreshed against release_v1.12 on 2026-09-28.
+// See docs/product-facts-2026-09-28.md. Older third-party check dates below remain unchanged.
 // Local content constants for /offline-text-to-speech-mac.
 // One page = one file pair (page.tsx + content.ts) + meta.json.
 // See docs/money-page-contract.md for the contract.
@@ -18,12 +20,13 @@
 
 import type { ComparisonRow } from "@/components/money/ComparisonTable";
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER, MAC, PRICING, VOICES } from "@/components/money/site";
 
 export const SLUG = "offline-text-to-speech-mac";
 
-export const LAST_UPDATED = "2026-07-14";
+export const LAST_UPDATED = "2026-09-28";
 export const FACTS_CHECKED_NOTE =
-  "macOS Spoken Content facts checked against Apple's macOS User Guide (support.apple.com) on July 14, 2026";
+  "LoudReader 1.12 product facts checked September 28, 2026; macOS Spoken Content facts checked against Apple's macOS User Guide (support.apple.com) on July 14, 2026";
 
 export const PAGE_TITLE = "Offline Text to Speech on Mac: No Cloud Needed";
 export const PAGE_DESCRIPTION =
@@ -51,7 +54,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "23 natural offline voices across 10 languages, modern neural TTS generated on your Mac",
+      `${VOICES.headline}. ${VOICES.availability}`,
       "System voices, with more downloadable in Accessibility settings",
     ],
   },
@@ -86,7 +89,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Price",
     cells: [
-      "Free tier with unlimited listening; Premium from $7.99/month or $199.99 once",
+      `Free book listening. ${FREE_TIER.full} Premium ${PRICING.premiumMonthly} or ${PRICING.premiumLifetime} in the US`,
       "Free, included with macOS",
     ],
   },
@@ -99,7 +102,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is LoudReader's text to speech really offline?",
-    a: "Yes, 100%. The neural text-to-speech engine runs on your Mac's own hardware and generates every word locally. The simplest proof: switch off Wi-Fi and it keeps reading. The only thing that needs internet is downloading free books from the built-in Project Gutenberg catalog.",
+    a: "Yes: downloaded content can be narrated by local voices without a connection. Prepare the book and voice first, then test a passage offline. Downloads, purchases and the app’s diagnostics and analytics are separate network activities; offline playback is not proof that an app never sends data.",
   },
   {
     q: "Which Macs can run LoudReader?",
@@ -111,14 +114,14 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does offline text to speech on Mac cost anything?",
-    a: "The macOS Spoken Content feature is free with every Mac. LoudReader's free tier includes unlimited listening on every book cover to cover with no word quota and no account; Premium (all 23 studio narrators, playback speed 0.3x to 3.0x, sleep timer, soundscapes, notes) is $7.99/month, $49.99/year, or $199.99 once.",
+    a: `macOS Speak selection is included with macOS. LoudReader offers free book listening. ${FREE_TIER.full} Premium adds ${PRICING.premiumFeatures}. US prices are ${PRICING.premiumMonthly}, ${PRICING.premiumYearly} or ${PRICING.premiumLifetime}; storefront prices can vary.`,
   },
   {
     q: "Why choose offline TTS over a cloud service like Speechify?",
-    a: "Three reasons: it works anywhere (planes, trains, dead zones), there are no word quotas or metering because nothing runs on someone else's servers, and it's private. With LoudReader, your library never leaves your device. Cloud services counter with more languages and voices, so it depends on what you read.",
+    a: "Three reasons: it works anywhere (planes, trains, dead zones), LoudReader places no word quota on book listening, and it's private. LoudReader does not upload books for narration; it also sends diagnostics and usage analytics. Cloud services counter with more languages and voices, so it depends on what you read.",
   },
   {
     q: "Is LoudReader a native Mac app?",
-    a: "No, and it is worth being precise about it. LoudReader is an iPhone and iPad app. On an Apple Silicon Mac you install it from the Mac App Store's 'iPhone & iPad Apps' tab, and it runs in Apple's compatibility mode: a fixed-size window rather than a resizable Mac one, and no menu bar. There is no separate Mac build. What is not a compromise is the engine underneath. Speech is generated on your Mac's own silicon, offline, and nothing is uploaded. It needs macOS 15 or later on Apple Silicon; Intel Macs are not supported.",
+    a: MAC.precise,
   },
 ];

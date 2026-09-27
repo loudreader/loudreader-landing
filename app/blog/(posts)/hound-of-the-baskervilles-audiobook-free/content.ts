@@ -1,45 +1,27 @@
-// FACT PROVENANCE. Every claim verified on 2027-01-01 against:
-//   - The Hound of the Baskervilles is public domain and on Project
-//     Gutenberg (Arthur Conan Doyle, Gutenberg ebook #2852):
-//     https://www.gutenberg.org/ebooks/2852
-//   - Author dates, catalog entry, and the listening-time estimate (about
-//     7 hours) come from data/gutenberg-catalog.json, the same dataset
-//     that renders the /listen/the-hound-of-the-baskervilles catalog page
-//     on this site. Listening hours are computed from word count, not
-//     measured from a recording, so this article calls it an estimate.
-//   - LoudReader app-behavior claims come from components/money/site.ts
-//     (single source of truth): 70,000+ Gutenberg books browsable in the
-//     app, free tier = one natural offline voice with unlimited listening,
-//     Premium adds all 23 studio narrators, playback speed 0.3x to 3.0x,
-//     sleep timer, soundscapes, and notes. Word-by-word highlighting is a
-//     real, non-gated feature per the reference article in this repo
-//     (app/blog/(posts)/app-that-highlights-words-while-reading/content.ts).
-//   - /listen/the-hound-of-the-baskervilles exists in
-//     data/catalog-slugs.json and ships a rendered audio sample.
-// Claims you may NOT make until verified: CarPlay, Android, a human
-// narrator, or any claim that the app exports audio files to keep.
+// FACT PROVENANCE — checked 2026-09-28.
+//   - https://www.gutenberg.org/ebooks/2852
+//   - https://www.gutenberg.org/cache/epub/2852/pg2852-images.html
+//   - https://librivox.org/the-hound-of-the-baskervilles-by-arthur-conan-doyle/
+//   - https://www.gutenberg.org/policy/permission.html
+//   - data/gutenberg-catalog.json and data/audio-samples.ts: catalogue ID and preview mapping.
+//   - components/money/site.ts: FREE_TIER, updated from shipping release_v1.12.
+//   - the LoudReader app source at release_v1.12
+//     (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), source audit 2026-09-28:
+//     LoudReader/Subscription/SubscriptionAccess.swift (free listening),
+//     LoudReader/Subscription/PaywallReason.swift (speed/timer gates),
+//     ProjectGutenbergService (catalogue downloads), BookImportService (EPUB),
+//     iOS Xcode target (iPad compatibility on Apple Silicon Mac).
+//     No automatic library/progress sync is implemented; offline playback requires local files.
+// Practical listening suggestions are editorial advice, not comprehension/test claims.
+// No universal copyright clearance, guaranteed pronunciation, cross-device sync, or zero-telemetry claim.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
-  {
-    q: "Is The Hound of the Baskervilles free to listen to?",
-    a: "Yes. Arthur Conan Doyle's novel is public domain, free on Project Gutenberg, and LoudReader reads the full text aloud with a natural offline voice at no cost. The free tier is unlimited listening, not a trial.",
-  },
-  {
-    q: "Is this a professionally performed audiobook?",
-    a: "No, and this article says so upfront. LoudReader's narration is a synthetic voice generated on your device as the book plays, not a human actor's recording. If you specifically want a performed reading of Holmes and Watson with distinct character voices, a commercial audiobook edition will give you that. This gives you the complete, unabridged novel, free, whenever you want it.",
-  },
-  {
-    q: "Is it the full novel or an abridged version?",
-    a: "The complete original text, exactly as Project Gutenberg carries it under ebook #2852. This is the most celebrated of the Sherlock Holmes novels, and this reading covers all of it, not a shortened retelling.",
-  },
-  {
-    q: "How long is The Hound of the Baskervilles as an audiobook?",
-    a: "About 7 hours, based on the novel's roughly 65,000 words. That fits in a handful of evenings or one long drive, on the shorter side for a full novel.",
-  },
-  {
-    q: "Can I listen on my iPhone and my Mac?",
-    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, both reading the same imported book and remembering your place, so you can switch devices without losing where you were.",
-  },
+  { q: "Is there a free human recording?", a: "Yes. The linked LibriVox edition is read by Laurie Anne Walden. Its catalogue page provides samples and downloads; check its territorial notice." },
+  { q: "How long is the audiobook?", a: "Laurie Anne Walden’s linked LibriVox recording is listed at 5:52:59. Other recordings and generated narration have different runtimes." },
+  { q: "Do I need to read other Sherlock Holmes stories first?", a: "You can start with this case. The opening establishes Holmes, Watson and the mystery; a complete-series chronology is not required to follow it." },
+  { q: "Is LoudReader free for the whole novel?", a: FREE_TIER.full },
+  { q: "Will my place automatically follow me to another device?", a: "Do not rely on automatic cross-device progress sync. If you change devices or editions, note your chapter and passage so you can resume in the right place." },
 ];

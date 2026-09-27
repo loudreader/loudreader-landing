@@ -5,7 +5,6 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
 
 import { FAQS } from "./content";
@@ -13,139 +12,41 @@ import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function BestTtsForClassicLiteratureArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Text to speech works fine on classic literature, with two honest
-          caveats. Older prose runs long, sometimes a full paragraph in one
-          sentence strung together with semicolons, which gives a synthetic
-          voice fewer natural places to pause. And archaic spelling and
-          vocabulary, words like &quot;thou&quot;, &quot;shew&quot;, or a name
-          out of a saga, are more likely than ordinary modern words to get
-          mispronounced by any voice, not just one app&apos;s. Neither problem
-          makes a book unlistenable. Slowing playback down helps with long
-          sentences, and reading along with word highlighting catches the
-          rare mispronunciation before it derails you. <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) has a built-in catalog of 70,000+
-          Project Gutenberg classics, reads them aloud with natural offline
-          voices, and it&apos;s fully on-device and private, your library
-          never leaves your device.
-        </p>
+        <p>The best voice for a classic is the one you can follow through that particular edition. Test a descriptive paragraph, a conversation and a passage with unfamiliar names before committing to a long book. Older spelling, verse, footnotes and long sentences can all need attention, but no single rule covers every author or speech engine. A TTS reader lets you hear an accessible ebook; a recorded performance may offer the interpretation you want. The text matters as much as the voice: check the translation, abridgement and formatting, not just the title on the cover.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Old sentences, read the way a narrator would break them."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Test the edition as well as the voice." />
 
-      <QuestionSection question="What does old prose actually do to a synthetic voice?">
-        <p>
-          Two specific things, and they&apos;re worth naming instead of
-          hand-waving. The first is sentence length. Writers before roughly
-          the mid-twentieth century used the semicolon and the comma far more
-          freely than modern style guides recommend, so a single sentence in{" "}
-          <em>Moby Dick</em> or <em>Middlemarch</em> can run for several
-          lines with three or four clauses stacked on top of each other. A
-          text-to-speech engine mostly finds its pauses at punctuation, so a
-          long, comma-heavy sentence reads as one long breath rather than a
-          series of shorter, easier-to-follow phrases. It&apos;s not wrong,
-          exactly, it&apos;s just more to hold in your head at once.
-        </p>
-        <p>
-          The second is vocabulary. Any synthetic voice is best at the words
-          it&apos;s heard most, which means modern, common English. Archaic
-          spelling (&quot;shew&quot; for &quot;show&quot;), archaic pronouns
-          (&quot;thou&quot;, &quot;thee&quot;), invented character and place
-          names, and the occasional Latin or French phrase left untranslated
-          are all more likely to come out slightly wrong than an everyday
-          sentence would. That&apos;s true of every synthetic voice on the
-          market, not a quirk of one app.
-        </p>
+      <QuestionSection question="What should a useful voice test include?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Choose a page from the middle of the book as well as the opening. A title page is a poor test of a novel.</li>
+          <li>Listen for who is speaking in dialogue. Check whether quotation marks and paragraph breaks produce pauses you can follow.</li>
+          <li>Try a long sentence and an unfamiliar name. Keep the text visible to distinguish a pronunciation problem from an unfamiliar word.</li>
+          <li>Listen for several minutes. Pick the voice you find comfortable over a passage, rather than judging only its first sentence.</li>
+        </ol><p>These are listening checks, not a claim that one app has measured accuracy on every classic. A name pronounced consistently but incorrectly may be tolerable for casual listening and unacceptable for language study.</p>
       </QuestionSection>
 
-      <QuestionSection question="Does that mean classics are a bad fit for text to speech?">
-        <p>
-          No. It means classics are a slightly harder fit than a contemporary
-          thriller, the same way a dense legal contract is harder to read
-          aloud than a text message. The overwhelming majority of any classic
-          novel is ordinary narrative prose that reads perfectly well. The
-          rough spots are a handful of long sentences and the occasional
-          unfamiliar word, not the book from cover to cover.
-        </p>
-        <p>
-          A narrator would run into the exact same two problems, and human
-          audiobook narrators do slow down for dense passages and occasionally
-          stumble over an unusual name on a first read. Text to speech
-          doesn&apos;t get tired on page 300, but it also doesn&apos;t
-          rehearse. Knowing the trade-off going in is the whole point of this
-          article.
-        </p>
+      <QuestionSection question="Why does the edition matter?">
+        <p>Different editions can change spelling, paragraph breaks and notes. A translation can change the prose more substantially. A scan may contain recognition errors; an ebook may insert footnotes into the sentence being spoken. Before changing voices repeatedly, look at the text where playback goes wrong.</p><p>For verse, plays or heavily annotated editions, keep the page nearby. Line breaks, speaker labels and notes carry information that speech may not make clear. A reflowable EPUB is often a convenient listening copy, but check a sample instead of assuming its formatting is sound.</p>
       </QuestionSection>
 
-      <QuestionSection question="How do you make long, old-fashioned sentences easier to follow?">
-        <p>
-          Slow down. That single change does more for comprehension than
-          anything else. LoudReader Premium lets you set playback speed
-          anywhere from 0.3x to 3.0x, and for eighteenth and nineteenth
-          century prose, dropping below your usual speed gives your brain
-          time to track a long sentence&apos;s clauses instead of losing the
-          thread halfway through. The free tier plays at normal speed, which
-          is still perfectly listenable for most classics; the speed control
-          is for when a specific book or a specific chapter is fighting you.
-        </p>
-        <p>
-          Reading along helps too. LoudReader highlights each word on screen
-          as it&apos;s spoken, so if a voice mispronounces an archaic word or
-          a name, you can see the correct spelling right there instead of
-          guessing what you just heard. It also means you never lose your
-          place: the app remembers exactly where you stopped, down to the
-          word, across sessions.
-        </p>
+      <QuestionSection question="How can I handle dense passages?">
+        <p>Pause at a paragraph boundary and say to yourself what happened or what the sentence claims. If it is unclear, replay the passage with the text visible. Try a slower pace if your player offers it, but do not expect speed alone to resolve unfamiliar vocabulary or an argument you need to think through.</p><p>LoudReader includes word-following highlighting and saved position; adjustable playback speed is a Premium feature. The <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import guide</Link> explains how to test your own EPUB or PDF.</p>
       </QuestionSection>
 
-      <QuestionSection question="Where do you actually find classic books to listen to?">
-        <p>
-          LoudReader has a built-in catalog of 70,000+ Project Gutenberg
-          books, all public domain, browsable by genre and author from inside
-          the app with no separate download or file conversion step. You can
-          also see a curated slice of it, with real listening-time estimates,
-          on{" "}
-          <Link href="/listen" className="text-loudBlue hover:underline">
-            the free classics catalog
-          </Link>
-          . If a book isn&apos;t in the built-in list, you can still import
-          any DRM-free EPUB or PDF and get the same treatment, covered in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
+      <QuestionSection question="Where should I get a classic ebook?">
+        <p>Start with a specific edition from a publisher, library or catalogue, then check that you can use its file in your reader. LoudReader provides in-app Gutenberg browsing, while <Link href="/listen" className="text-loudBlue hover:underline">our classics catalogue</Link> is a smaller selection with links and estimated listening times.</p><p>Project Gutenberg applies US copyright rules. Availability there does not establish that the same edition, translation or illustrations are unrestricted in your country. Read the ebook notice and <a href="https://www.gutenberg.org/policy/permission" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">Gutenberg’s permissions guidance</a> before downloading or reusing it.</p>
       </QuestionSection>
 
-      <QuestionSection question="Is a synthetic voice as good as a professional audiobook narrator for a classic?">
-        <p>
-          For a book that already has a great recorded performance, honestly,
-          often not. A skilled narrator brings interpretation, character
-          voices, and pacing choices a synthetic voice doesn&apos;t attempt.
-          Where text to speech wins is coverage: the vast majority of public
-          domain books never got a professional recording at all, and never
-          will. For those, the choice isn&apos;t between a synthetic voice
-          and a great narrator. It&apos;s between a synthetic voice and not
-          listening at all.
-        </p>
+      <QuestionSection question="When would I choose a recorded performance instead?">
+        <p>If interpretation is the attraction—comic timing, dramatic dialogue, poetry or a narrator you particularly enjoy—sample a recording. TTS is useful when you want to hear the ebook itself, choose a voice or follow its text as it is spoken. Neither choice has to cover every book you read.</p><p>This guide is published by the developer of <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>. We suggest trying the actual edition in whichever tool you already have before buying anything. A clean import and a voice you like are more useful than a universal “best voice” claim.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear the classics your way"
-        subline="Browse 70,000+ free public-domain books, press play, and slow it down when a sentence earns it."
-      />
     </ArticleLayout>
   );
 }

@@ -1,40 +1,30 @@
-import { FREE_TIER } from "@/components/money/site";
-
-// FACT PROVENANCE. Every claim verified on 2026-11-01 against:
-//   - Three routes to ebook listening (official audiobooks, TTS apps, built-in
-//     options) are generic categories with honest trade-offs. No specific pricing
-//     or feature claims about third-party services that could go stale.
-//   - Audible, Apple Books, Libby, Hoopla, Spotify: generic descriptions of
-//     well-known services with no specific pricing or feature claims.
-//   - LoudReader features from site.ts: imports EPUB/PDF, 70,000+ Gutenberg,
-//     natural offline voices, word-by-word highlighting, free unlimited listening,
-//     fully on-device, iPhone, iPad, and Apple Silicon Macs, Premium features.
-//   - macOS Spoken Content: a real built-in feature; described generically.
-//   - No fabricated study claims, testimonials, or statistics.
-// Claims you may NOT make: specific pricing for third-party services, that any
-// one route is best for everyone, DRM removal capabilities.
+// FACT PROVENANCE — editorial verification 2026-09-28.
+// App-source audit on 2026-09-28: LoudReader release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0, released 2026-09-22 (Apple lookup id6758149478). Sources: LoudReader/PlayerService.swift (saved position, background audio, remote controls); ContentView.swift and BookImportService.swift (EPUB/PDF imports); Subscription/SubscriptionAccess.swift, SubscriptionManager.swift and Subscription/PaywallReason.swift (8-hour eligible-voice allowance, limited free English selection thereafter, paid speed/timer, free notes); LoudReaderApp.swift and Analytics.swift (diagnostics and usage analytics); PDFImportPipeline.swift (local OCR with limits). Source review, not new runtime testing.
+// Primary source checked 2026-09-28: https://support.apple.com/guide/iphone/hear-whats-on-the-screen-or-typed-iph96b214f0/ios
+// Primary source checked 2026-09-28: https://www.overdrive.com/apps/libby
+// Practical workflows are editorial suggestions, not measured outcomes or medical promises.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "What is the easiest way to listen to an ebook?",
-    a: "If the book has an official audiobook edition, buying or borrowing it is the easiest route. You get a professionally recorded human narration, no setup, and it just works in whatever audiobook app you already use. The catch: most books do not have audiobook editions, and the ones that do cost money. If your book has no recording or you already own it as an EPUB or PDF, a TTS app is the easiest second route.",
+    "q": "Is a recorded audiobook always better than text-to-speech?",
+    "a": "No universal ranking is useful. Choose a recording for a performance you like; choose TTS when you want narration of an accessible text or another voice choice. Sample the actual material."
   },
   {
-    q: "How do TTS apps compare to official audiobooks?",
-    a: "Official audiobooks win on quality: a human narrator with performance skill, produced in a studio. TTS apps win on availability: anything you can get as a DRM-free EPUB or PDF becomes an audiobook instantly. TTS voices are natural enough now that for non-fiction and most fiction, the difference is small. For books where the narration is part of the art, human recordings are still better. The honest trade is quality vs universality.",
+    "q": "Do iPhone’s built-in speech tools support highlighting?",
+    "a": "Yes. Apple documents highlighting alongside Speak Screen and Speak Selection, with voice and rate settings. Exact availability and behaviour depend on the OS and source app."
   },
   {
-    q: "Can I use my phone's built-in text-to-speech for ebooks?",
-    a: "Yes, but it is basic. iPhones and Macs have Spoken Content, a system-level feature that reads selected text aloud. It is free and works offline, but it was built for accessibility, not book reading. It does not remember your place in a book, does not highlight words as it reads, does not handle EPUB or PDF navigation well, and the built-in voices are older and less natural than modern neural TTS. It works in a pinch, but a dedicated app is a much better experience for book-length listening.",
+    "q": "Can a dedicated reader open every store purchase?",
+    "a": "No. LoudReader needs a supported DRM-free EPUB or PDF. Check the title’s authorised download options or use the original service’s listening features."
   },
   {
-    q: "What does LoudReader do that the built-in options do not?",
-    a: `LoudReader is purpose-built for book listening. It imports EPUBs and PDFs directly, remembers your place, highlights each word as it speaks, and uses natural offline voices powered by Apple Silicon's Neural Engine. It comes with 70,000+ free Project Gutenberg classics. It runs fully on-device and private, your library never leaves your device, so there is no internet dependency and no account to create. ${FREE_TIER.full}`,
+    "q": "Does LoudReader require a subscription for notes?",
+    "a": "No. Notes and highlights are free. Adjustable playback speed, the sleep timer and soundscapes are Premium features."
   },
   {
-    q: "Do I need to convert my EPUBs to audio files?",
-    a: "Not with a TTS reader like LoudReader. You import the EPUB or PDF once and press play. The narration is generated live on your device, so there are no audio files to manage and no conversion step. Your place is saved automatically whether you read or listen, and you can switch between reading and listening in the same book at any time.",
-  },
+    "q": "Can I use more than one listening method?",
+    "a": "Yes. A recording, built-in speech and a dedicated reader can serve different books and situations. There is no need to choose one for every use."
+  }
 ];

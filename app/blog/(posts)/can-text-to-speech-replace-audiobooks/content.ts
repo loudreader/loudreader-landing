@@ -1,48 +1,41 @@
-// FACT PROVENANCE. Verified 2026-08-25 against the LoudReader app source
-// (LoudReader_mac repo, main branch) and components/money/site.ts:
-//   - Pricing, free tier, voice roster and Premium feature list come
-//     verbatim from PRICING and VOICES in site.ts (single source of truth,
-//     synced with the App Store listing).
-//   - On-device voice cloning (Voice Studio) verified against CLONING in
-//     site.ts: "about ten seconds" of recorded speech, and the recording,
-//     model, and voice never leave the device.
-//   - Playback speed range (0.3x to 3.0x), sleep timer, ambient soundscapes,
-//     and notes and highlights are Premium features per PRICING.premiumFeatures.
-//   - Statements about commercial audiobook services (Audible, Apple Books,
-//     Spotify, library apps like Libby and Hoopla) and about what
-//     professional narration involves (character voices, multi-cast
-//     productions, director-guided performance) are deliberately generic,
-//     well-known descriptions with no invented pricing, statistics, or
-//     reviews attached.
-// This article does not repeat the feature-by-feature product comparison in
-// /blog/audible-vs-text-to-speech; it answers a narrower question (can TTS
-// substitute for an audiobook at all) rather than comparing two products.
-// Claims NOT made: no claim that TTS narration equals or exceeds a trained
-// human narrator's performance, no invented benchmark or listener study, no
-// specific competitor per-credit or per-book audiobook price (the FAQ price
-// comparison stays qualitative, since no competitor price is sourced here).
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Can text to speech replace audiobooks for every book?",
-    a: "No. For a book where the performance is the point, a full-cast production, a memoir read by its author, a novel built around distinct character voices, a trained human narrator does something text to speech does not attempt. For every other book, especially the huge majority that were never recorded at all, text to speech is not a downgrade from an audiobook. It is the only audiobook that book will ever have.",
+    "q": "Can TTS reproduce a favourite audiobook performance?",
+    "a": "No. It generates a new reading and does not reproduce the particular actor’s direction or the production around a recorded edition."
   },
   {
-    q: "Does text to speech sound as good as a human narrator?",
-    a: "Not in performance terms. Modern on-device voices sound natural for sustained listening, but they narrate rather than perform. A skilled narrator makes acting choices, character voices, comic timing, emotional shading, that a TTS engine does not attempt to replicate. If narration quality alone decides the format for you, a professionally narrated audiobook wins.",
+    "q": "Is TTS only useful when no recording exists?",
+    "a": "No. You may want the exact edition or draft you already have, or prefer another voice. Availability is one reason to use it."
   },
   {
-    q: "What can text to speech do that audiobooks can't?",
-    a: "Read anything you already have. Most books, including backlist titles, academic texts, manuscripts, self-published novels, and public domain classics, were never recorded as audiobooks and never will be. Text to speech also lets you adjust speed continuously instead of a few fixed presets, and it works on the exact file you own with no separate purchase.",
+    "q": "Does TTS guarantee accurate pronunciation?",
+    "a": "No. Check names, abbreviations, dates and specialist terms. Errors may also come from the source file or OCR."
   },
   {
-    q: "Is text to speech cheaper than audiobooks?",
-    a: "Often, yes, though it depends how you already buy audiobooks. LoudReader's free tier plays every book you import with unlimited listening at no cost, and Premium, which adds every studio voice and speed control, costs $7.99 a month or $49.99 a year rather than a per-book price. For the books that have no audiobook edition at all, the comparison does not apply anyway, since there is nothing to buy.",
-  },
-  {
-    q: "Can I mix the two, audiobooks for some books and text to speech for others?",
-    a: "Yes, and that is how most people who try both end up using them. Reach for a professionally narrated audiobook when a specific performance is what you want. Reach for text to speech for the books that have no recording, the ones you already own as files, or the ones you want to read faster than a fixed narration speed allows.",
-  },
+    "q": "Are notes and highlights paid in LoudReader?",
+    "a": "Notes and highlights are free. Playback speed control is Premium; the free voice policy and local purchase prices are shown in the app."
+  }
 ];

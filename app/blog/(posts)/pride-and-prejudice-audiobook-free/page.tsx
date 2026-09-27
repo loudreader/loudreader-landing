@@ -7,146 +7,33 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function PrideAndPrejudiceAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Pride and Prejudice is public domain, so a free full-length
-          audiobook of it is one tap away in <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac). One honest note first: this is a
-          synthetic voice reading Jane Austen&apos;s actual text, generated
-          on your device, not a professionally performed recording with a
-          human narrator. If that&apos;s what you&apos;re after, open the app,
-          find{" "}
-          <Link
-            href="/listen/pride-and-prejudice"
-            className="text-loudBlue hover:underline"
-          >
-            Pride and Prejudice
-          </Link>{" "}
-          in the built-in Project Gutenberg catalog, and press play. No
-          purchase, no library hold, no account. It runs on natural offline
-          voices and works with no connection once it&apos;s open, because
-          LoudReader is fully on-device and private, your library never
-          leaves your device.
-        </p>
+        <p><a href="https://www.gutenberg.org/ebooks/1342" className="text-loudBlue hover:underline">Project Gutenberg ebook 1342</a> provides Jane Austen’s Pride and Prejudice in English and lists it as public domain in the USA. The US listing does not establish availability in other countries. You can have that text read aloud in LoudReader, which generates speech on your device, or choose a separately recorded audiobook. The <Link href="/listen/pride-and-prejudice" className="text-loudBlue hover:underline">LoudReader sample</Link> previews its synthetic delivery. If you are reading for a course or book group, start by matching the text edition; if you are listening for pleasure, try a conversation scene before settling on the voice.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Elizabeth Bennet and Mr. Darcy, read aloud for free."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Austen’s conversations reward a voice you can follow comfortably." />
 
-      <QuestionSection question="Is there really a free Pride and Prejudice audiobook?">
-        <p>
-          Yes, and it&apos;s not a trick or a trial. Jane Austen died in 1817
-          and Pride and Prejudice was published in 1813, so the copyright
-          expired long ago and the full text sits free on Project Gutenberg
-          for anyone to read. LoudReader has it built into its free catalog
-          already, so you never touch a file. You can hear a sample of the
-          opening lines directly on the{" "}
-          <Link
-            href="/listen/pride-and-prejudice"
-            className="text-loudBlue hover:underline"
-          >
-            Pride and Prejudice catalog page
-          </Link>{" "}
-          before you even open the app, to check the voice suits you.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="What matters when choosing a reading of Austen?"><p>Dialogue often carries the point of a scene. In a sample, listen for whether you can distinguish who is speaking from the wording and punctuation, without depending on separate character voices. A synthetic reading uses your selected voice; a human recording may use subtle changes in delivery, but need not be a dramatisation.</p><p>Do not judge only from the familiar opening. Try a conversation with several participants or a letter embedded in the story. The question is whether that reading helps you follow the text, not whether it meets a universal standard of naturalness.</p></QuestionSection>
 
-      <QuestionSection question="What does the free version actually sound like?">
-        <p>
-          It sounds like a computer reading, clearly and evenly, not like a
-          BBC radio drama. LoudReader&apos;s narration is a synthetic voice,
-          generated on your device with natural offline voices, and it will
-          not do a different register for Mr. Collins&apos; obsequiousness or
-          Lady Catherine&apos;s condescension the way a skilled human narrator
-          would. What it does well is deliver Austen&apos;s sentences at a
-          steady pace with a real place kept and a word-by-word highlight
-          synced to the audio, so you can follow along on the page while you
-          listen. If you want the full performed version with distinct
-          voices for every character, look at a commercial audiobook edition
-          instead. If you want the whole novel read aloud for free, today,
-          this does that.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Will it match the copy I am studying?"><p>The linked Gutenberg text is one edition of the novel. Page numbers, notes and introductions will differ from a classroom paperback. Use the chapter number and opening words to locate a passage, then take page citations from the edition your course requires.</p><p>If the exact ebook is available to you as a supported DRM-free EPUB or PDF, you can <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import that copy</Link> instead. A locked ebook from another reading platform is not automatically transferable. A free older text also does not include a modern editor’s commentary by default.</p></QuestionSection>
 
-      <QuestionSection question="How do you play it in LoudReader?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone or Mac. Free, no account.
-          </li>
-          <li>
-            Open the built-in Project Gutenberg catalog and browse by title
-            or author, or jump straight to the{" "}
-            <Link
-              href="/listen/pride-and-prejudice"
-              className="text-loudBlue hover:underline"
-            >
-              Pride and Prejudice
-            </Link>{" "}
-            page to preview the sample first.
-          </li>
-          <li>Tap the book. It downloads once, then it&apos;s yours offline.</li>
-          <li>
-            Press play. LoudReader remembers exactly where you stopped, every
-            time you come back.
-          </li>
-        </ol>
-        <p>
-          Free listening on Pride and Prejudice is unlimited, cover to cover.
-          Premium adds playback speed from 0.3x to 3.0x, a sleep timer, and
-          every other voice in the app, but none of that is required to
-          finish the book.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for Pride and Prejudice. Check the title and edition before downloading. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
-      <QuestionSection question="How long is the Pride and Prejudice audiobook?">
-        <p>
-          Roughly 14.5 hours, based on the novel&apos;s length of about
-          128,700 words. That&apos;s an estimate from the text, not a
-          measured recording, the same figure LoudReader shows on the
-          book&apos;s own catalog page. It&apos;s a long book by the standards
-          of this list, but the dialogue-heavy chapters move fast, so it
-          splits comfortably across a week or two of commutes.
-        </p>
-        <p>
-          If you&apos;re working through the wider Austen shelf or other free
-          classics, the full walkthrough of what&apos;s available is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How long should you plan to listen?"><p>The catalogue’s estimate of about 14.5 hours comes from text length, not a timed recording. Voices, pauses and speed settings affect duration. Work out a plan after listening to a chapter, rather than assuming every chapter or commute will take the same time.</p><p>For a reading group, agree on the next chapter boundary instead of an audio timestamp. Different performances and text-to-speech voices will not reach a passage at the same time. Keeping a note of the last chapter you completed also makes switching between print and audio less confusing.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Press play on Pride and Prejudice"
-        subline="Free, built into the app, no account. Natural offline voices, on Mac and iPhone."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

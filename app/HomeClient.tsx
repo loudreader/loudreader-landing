@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRef, useState, useEffect, useCallback } from "react";
 
 import NarratorPlayer from "@/components/listen/NarratorPlayer";
+import { APP_STORE_URL, CLONING, FREE_TIER, VOICES } from "@/components/money/site";
 
 /* ─── Touch detection ─── */
 function useIsMobile() {
@@ -32,7 +33,7 @@ function useReveal(threshold = 0.1) {
   return { ref, visible };
 }
 
-const appStoreUrl = "https://apps.apple.com/app/loudreader/id6758149478";
+const appStoreUrl = APP_STORE_URL;
 
 /* ─── App Store Button ───
    `source` feeds the store_click event's source dimension via the site-wide
@@ -272,7 +273,7 @@ export default function Home() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-loudBlue opacity-60" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-loudBlue" />
                   </span>
-                  Start for free &middot; No limits &middot; No quotas
+                  Free book listening &middot; No word quotas
                 </span>
               </div>
               <h1
@@ -285,7 +286,7 @@ export default function Home() {
                 className="animate-fade-in-up delay-200 text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-10 leading-relaxed transition-colors duration-[1200ms]"
                 style={{ color: heroDimmed ? "rgba(255,255,255,0.5)" : "#9ca3af" }}
               >
-                Natural AI voices read any book aloud, every word highlighted in sync. All 23 voices are free for your first 8 hours. After that, the free tier keeps one natural voice with unlimited listening. No account, fully private, completely offline.
+                Natural AI voices read your books aloud, with words highlighted in sync. {FREE_TIER.full} Speech is generated on your device.
               </p>
               <div className="animate-fade-in-up delay-300 flex flex-col items-center lg:items-start gap-4">
                 <AppStoreButton dark={heroDimmed} source="home-hero" />
@@ -293,7 +294,7 @@ export default function Home() {
                   className="text-[13px] tracking-wide transition-colors duration-[1200ms]"
                   style={{ color: heroDimmed ? "rgba(255,255,255,0.3)" : "#9ca3af" }}
                 >
-                  Unlimited listening, free &middot; Offline &middot; Private
+                  Free book listening &middot; On-device voices
                 </p>
               </div>
             </div>
@@ -351,13 +352,13 @@ export default function Home() {
               </svg>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.05]">
-              Nothing leaves<br />your phone.
+              Narration stays<br />on your device.
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed max-w-xl mx-auto mb-4">
-              Work memos. Legal documents. Personal letters. Whatever you&apos;re reading, it stays on your device. Every voice, every word of processing happens locally.
+              Books. Work memos. Personal letters. Speech is generated on your device, without uploading your text to a speech server. No LoudReader account is needed.
             </p>
             <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto font-medium">
-              No cloud. No accounts. No servers. Just you and your books.
+              The app sends crash and performance diagnostics and usage analytics. <Link href="/privacy" className="text-loudBlue hover:underline">Read our privacy policy.</Link>
             </p>
           </div>
         </section>
@@ -378,13 +379,13 @@ export default function Home() {
                 Voices worth<br />listening to.
               </h2>
               <p className="text-lg text-gray-400 leading-relaxed max-w-md mx-auto lg:mx-0 mb-3">
-                23 studio narrators across 10 languages. Eleven of them in English. All running entirely on your device.
+                {VOICES.headline}. Eleven of them in English. Voice availability depends on your device, and speech runs locally.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed max-w-md mx-auto lg:mx-0 mb-3">
-                Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish books get a narrator who actually speaks the language — not an English voice with an accent. They appear in the picker once you have a book in that language.
+                Find narrators for Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish alongside English. In the picker, {VOICES.lazyLanguages}.
               </p>
               <p className="text-sm text-gray-500 max-w-md mx-auto lg:mx-0">
-                No internet. No data leaves your phone.
+                Offline narration, without uploading books to a speech service.
               </p>
               <NarratorPlayer />
               <p className="mt-6 text-sm text-gray-500 max-w-md mx-auto lg:mx-0">
@@ -409,10 +410,10 @@ export default function Home() {
               Or read it<br />in your own voice.
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed max-w-xl mx-auto mb-4">
-              Read a few sentences aloud — about ten seconds — and LoudReader builds a narrator out of it. Then any book in your library can be read in that voice.
+              {CLONING.long}
             </p>
             <p className="text-lg text-gray-500 leading-relaxed max-w-xl mx-auto font-medium">
-              The recording never leaves your phone. Neither does the voice. Delete it and the files go with it.
+              Create up to three voices during your all-voices allowance. Premium removes that creation limit; voices you have already created stay stored but lock when the allowance ends.
             </p>
           </div>
         </section>
@@ -433,7 +434,7 @@ export default function Home() {
                 Your library,<br />always with you.
               </h2>
               <p className="text-lg text-gray-500 leading-relaxed max-w-md mx-auto lg:mx-0">
-                Import any EPUB or PDF. Or browse 70,000+ free classics from Project Gutenberg.
+                Import DRM-free EPUBs and PDFs, including scans with on-device text recognition, or save web articles. Browse 70,000+ Project Gutenberg classics, subject to local copyright.
               </p>
             </div>
           </div>
@@ -466,7 +467,7 @@ export default function Home() {
                 Never short of<br />something to read.
               </h2>
               <p className="text-lg text-gray-500 max-w-lg mx-auto leading-relaxed">
-                Over 100 hand-picked classics sit on the home shelf. Pull down to shuffle it and deal a new hand, or hit Surprise Me and start listening to something you never would have picked. All free, all offline.
+                Explore the curated classics shelf, shuffle the selection, or let Surprise Me choose your next read. Browse more titles in Project Gutenberg, download a book, and listen offline.
               </p>
             </div>
             <div className="flex justify-center items-end gap-3 md:gap-5">
@@ -512,7 +513,7 @@ export default function Home() {
               Start for free. Go further.
             </h2>
             <p className="text-lg text-gray-400 text-center mb-16 max-w-md mx-auto">
-              Unlimited listening never expires and never runs out. All 23 voices are free for your first 8 hours — after that, the free tier keeps one natural voice, and Premium unlocks the rest.
+              {FREE_TIER.full}
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -522,11 +523,11 @@ export default function Home() {
                 <p className="text-sm text-gray-400 mb-6">No account needed</p>
                 <ul className="space-y-3 text-[15px] text-gray-500">
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited listening, cover to cover</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited library, import all you like</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Every voice free for your first 8 hours</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>After that, one natural voice — still unlimited</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>100+ curated classics, plus all of Project Gutenberg</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Night mode, chapters, background play</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited library and individual book imports</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Every available voice for your first 8 hours</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Then a free English voice selection, with unlimited book listening</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Curated classics and Project Gutenberg browsing</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Notes, highlights, night mode and background play</span></li>
                 </ul>
               </div>
 
@@ -536,15 +537,15 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">Premium</h3>
                 <p className="text-2xl font-bold text-gray-900 mt-2 mb-1">$7.99<span className="text-sm font-normal text-gray-400">/month</span></p>
-                <p className="text-sm text-gray-400 mb-1">First month free. Cancel anytime.</p>
-                <p className="text-[13px] text-gray-400 mb-6">or $49.99/year &middot; $199.99 once, yours for life</p>
+                <p className="text-sm text-gray-400 mb-1">One-month introductory offer for eligible subscribers.</p>
+                <p className="text-[13px] text-gray-400 mb-6">or $49.99/year &middot; $199.99 lifetime. US prices; storefronts may differ.</p>
                 <ul className="space-y-3 text-[15px] text-gray-500">
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>All 23 studio narrators, 10 languages</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Clone your own voice, on device</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Every available studio narrator, across 10 languages</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>On-device voice cloning without the trial creation limit</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Variable speed (0.3x to 3.0x)</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Sleep timer to drift off to</span></li>
                   <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Ambient soundscapes</span></li>
-                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Notes, highlights &amp; reading styles</span></li>
+                  <li className="flex items-start gap-3"><span className="text-loudBlue mt-0.5">&#10003;</span><span>Unlimited article saving and bulk-import usage</span></li>
                 </ul>
               </div>
             </div>
@@ -563,7 +564,7 @@ export default function Home() {
             <div className="flex flex-col items-center gap-4">
               <AppStoreButton dark source="home-cta-footer" />
               <p className="text-[13px] text-gray-600 tracking-wide">
-                Start for free &middot; Offline &middot; Private
+                Start for free &middot; On-device voices
               </p>
             </div>
           </div>

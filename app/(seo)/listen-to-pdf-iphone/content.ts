@@ -1,3 +1,5 @@
+// LoudReader product facts refreshed against release_v1.12 on 2026-09-28.
+// See docs/product-facts-2026-09-28.md. Older third-party check dates below remain unchanged.
 // Local content constants for /listen-to-pdf-iphone.
 // One page = one file pair (page.tsx + content.ts) + meta.json.
 // See docs/money-page-contract.md for the contract.
@@ -14,20 +16,21 @@
 // listing, and the app source (background audio + lock-screen controls:
 // UIBackgroundModes "audio" in Info.plist + MPRemoteCommandCenter in
 // PlayerService.swift; PDF import reads the PDF's embedded text layer. See
-// PDFImportPipeline.swift, which uses PDFKit text extraction, no OCR).
+// PDFImportPipeline.swift in 1.12 uses PDFKit text extraction and Apple Vision OCR.
 
 import type { ComparisonRow } from "@/components/money/ComparisonTable";
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER, PRICING, PRIVACY, VOICES } from "@/components/money/site";
 
 export const SLUG = "listen-to-pdf-iphone";
 
-export const LAST_UPDATED = "2026-07-14";
+export const LAST_UPDATED = "2026-09-28";
 export const FACTS_CHECKED_NOTE =
-  "iOS Spoken Content facts checked against Apple's iPhone User Guide (support.apple.com) on July 14, 2026";
+  "LoudReader 1.12 product facts checked September 28, 2026; iOS Spoken Content facts checked against Apple's iPhone User Guide (support.apple.com) on July 14, 2026";
 
 export const PAGE_TITLE = "How to Listen to a PDF on iPhone (Free & Offline)";
 export const PAGE_DESCRIPTION =
-  "Two ways to listen to a PDF on your iPhone: LoudReader reads any PDF aloud with natural offline voices and no word quota, or use the built-in Speak Screen. Step-by-step guide.";
+  "Two ways to listen to a PDF on your iPhone: LoudReader reads supported PDFs aloud with natural offline voices and no word quota, or use the built-in Speak Screen. Step-by-step guide.";
 
 export const H1 = "How to listen to a PDF on your iPhone";
 
@@ -44,7 +47,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "23 natural offline voices across 10 languages, generated on-device",
+      `${VOICES.headline}. ${VOICES.availability}`,
       "System voices (Siri and other Apple voices)",
     ],
   },
@@ -79,14 +82,14 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Privacy",
     cells: [
-      "Fully on-device, your library never leaves your device",
+      "Local speech synthesis; diagnostics and usage analytics also run",
       "On-device (it is an iOS accessibility feature)",
     ],
   },
   {
     label: "Price",
     cells: [
-      "Free, with unlimited listening and no word quota; Premium from $7.99/month for all voices and speed control",
+      `Free book listening. ${FREE_TIER.full} Premium ${PRICING.premiumMonthly} in the US`,
       "Free, included with iOS",
     ],
   },
@@ -95,15 +98,15 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
 export const FAQS: Faq[] = [
   {
     q: "How do I get a PDF into LoudReader on my iPhone?",
-    a: "Open the PDF in the Files app, Mail, Safari, or any app with a share button, tap Share, and choose LoudReader. You can also use the import button inside the app. The PDF appears in your library instantly, ready to play.",
+    a: "Share the PDF from Files, Mail or Safari to LoudReader, or use its import button. Wait for import and any text recognition to finish, then open the document and press Play.",
   },
   {
     q: "Can I listen to a PDF on my iPhone for free?",
-    a: "Yes. LoudReader's free tier includes unlimited listening on every document, cover to cover, with no word quota and no account. iOS also includes Speak Screen for free under Settings → Accessibility → Spoken Content.",
+    a: `Yes. Book and PDF listening has no word quota and needs no LoudReader account. ${FREE_TIER.full}`,
   },
   {
     q: "Does listening to a PDF work offline, like on a plane?",
-    a: "Yes, 100%. LoudReader generates all speech on your iPhone in real time, so it works with zero connectivity, airplane mode included.",
+    a: "Yes, after the document and required voice resources are on your device. Speech is generated locally. Test the chosen PDF and voice without connectivity before travelling.",
   },
   {
     q: "Can I keep listening with the screen locked?",
@@ -111,10 +114,10 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can my iPhone read a scanned PDF aloud?",
-    a: "Only if the PDF has a text layer. LoudReader reads the text embedded in the PDF; a scan that is just photographs of pages has no text to read. Run the scan through an OCR tool first, then import the result.",
+    a: "LoudReader 1.12 can recognise text locally in image-based PDFs. It attempts OCR when much of a document lacks text, with up to 300 OCR pages per import. Legibility and layout affect results; check the imported text and any partial-import message before relying on it.",
   },
   {
     q: "Is it private to listen to a confidential PDF this way?",
-    a: "With LoudReader, yes. The app is fully on-device and private, your library never leaves your device. The PDF is never uploaded anywhere, there is no account, and the app works with the network switched off.",
+    a: `The PDF is not uploaded to a speech service for narration. ${PRIVACY.summary} Check your organisation’s requirements before importing sensitive work documents.`,
   },
 ];

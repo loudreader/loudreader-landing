@@ -1,49 +1,33 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against:
-//   - data/voices.ts (the /voices roster source, audited 2026-08-20 against
-//     the shipping app's studio voice enum): German has exactly one narrator,
-//     Klaus. There is no second German voice to choose between.
-//   - components/money/site.ts VOICES.lazyLanguages: narrators for a language
-//     appear in the picker once there is a book in that language in the
-//     library. This is stated plainly, not as a workaround.
-//   - components/money/site.ts PRICING, DIFFERENTIATORS, VOICES: pricing,
-//     the free tier, on-device/private phrasing, and the 10-language count
-//     come from here verbatim, not retyped from memory.
-//   - components/money/site.ts FREE_TIER: all 23 narrators are free for
-//     the first 8 hours. After that, the one keepable free voice is chosen
-//     from the eligible English lineup; this language narrator needs Premium.
-// App-behavior claims used: on-device, no account, imports EPUB/PDF,
-// 70,000+ Project Gutenberg books, free tier = unlimited listening, Premium
-// adds all voices + speed (0.3x to 3.0x) + sleep timer + soundscapes + notes.
-// Claims NOT made: CarPlay, Android, Windows, OCR of scanned/image-only PDFs,
-// a choice of German narrators, Swiss or Austrian German as a selectable
-// accent (the app does not expose that distinction; not claimed).
+// EDITORIAL REVIEW — 2026-09-28. Sources for the material revision:
+// - LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), Engines/ChatterboxVoice.swift — named studio roster and language mapping; canonical source audit 2026-09-28.
+// - LoudReader_mac release_v1.12, VoiceRegistry.swift:105–119 and ReadingLanguagesSheet.swift — library languages plus Settings selection; inspected 2026-09-28.
+// - LoudReader_mac release_v1.12, SubscriptionAccess.swift and SubscriptionManager.swift — 8 cumulative listening hours, English free selection afterwards; source audit 2026-09-28.
+// - LoudReader_mac release_v1.12, DeviceCapability.swift, PDFImportPipeline.swift and PaywallReason.swift — device-dependent studio access, fallible OCR and Premium speed; source audit 2026-09-28.
+// - data/voices.ts and public/voices — narrator names and browser sample references checked 2026-09-28.
+// Practical routines are suggestions, not measured learning or medical outcomes.
+// No unpublished future-verification dates, independent runtime tests or network audit are claimed.
 
 import type { Faq } from "@/components/money/FaqSection";
-import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does LoudReader read German text aloud?",
-    a: "Yes. LoudReader has one German narrator, Klaus, and it reads any DRM-free German EPUB or PDF aloud on your iPhone or Mac. The voice runs entirely on the device, so it works offline once the book is imported.",
+    "q": "How many German studio voices are there?",
+    "a": "One: Klaus. Availability depends on device support. The app does not expose selectable Austrian, Swiss and standard-German versions of this voice."
   },
   {
-    q: "How many German voices does LoudReader offer?",
-    a: "One. Klaus is the only German narrator in the app. If you're hoping to pick between several German voices, LoudReader won't offer that today. English has 11 voices and Spanish has 4, but most other languages, German included, ship with a single narrator.",
+    "q": "Why is German missing from my voice list?",
+    "a": "Add German to your reading languages in Settings or import a German-language book. Also check whether your device supports studio voices; language selection does not remove a hardware limitation."
   },
   {
-    q: "Does the German voice sound Austrian, Swiss, or standard German?",
-    a: "The app doesn't split that out as a setting. Klaus is simply labeled the German narrator. If a specific accent matters for your material, listen to the sample on the voices page before you rely on the app for a specific project.",
+    "q": "Is the German voice free forever?",
+    "a": "No. Available voices can be tried during the first eight hours of cumulative listening. Klaus requires Premium afterwards; the ongoing free selection is English."
   },
   {
-    q: "Do I need an account to use the German voice?",
-    a: "No. There is no account and no sign-up. Import a book and the German narrator becomes available once your library has a German-language book in it.",
+    "q": "Can LoudReader read a scanned German PDF?",
+    "a": "It can attempt on-device text recognition during PDF import. Check spelling, reading order and numbers against the original, especially in old or unclear scans. Recognition is not guaranteed."
   },
   {
-    q: "Is the German voice free to use?",
-    a: `Try ${FREE_TIER.trial}. After that, continuing with Klaus, the German narrator, requires Premium. Free users choose one keepable voice from the eligible English lineup and retain unlimited listening on every book, with no account or word quota. Premium includes all 23 studio narrators across 10 languages, playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and notes and highlights.`,
-  },
-  {
-    q: "Can LoudReader read a German PDF that's a scan of a printed page?",
-    a: "No. LoudReader reads the actual text layer in an EPUB or PDF. A scanned page saved as an image has no text layer for the app to read, in German or any other language.",
-  },
+    "q": "Will choosing German translate an English book?",
+    "a": "No. This feature narrates text; choosing a German narrator is not a translation workflow. Import German-language material."
+  }
 ];

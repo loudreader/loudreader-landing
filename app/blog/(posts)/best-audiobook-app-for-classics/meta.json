@@ -1,9 +1,10 @@
 {
   "slug": "best-audiobook-app-for-classics",
-  "title": "Best App for Public Domain Classics: Gutenberg, LibriVox, and TTS Compared",
-  "description": "LoudReader's built-in Gutenberg catalog gives you 70,000+ classics ready to listen. Compare with LibriVox's human recordings and the trade-offs between performance and availability.",
+  "title": "Choosing an App for Public Domain Classics",
+  "description": "Compare a volunteer recording, a commercial audiobook and a TTS reader by edition, narrator and offline setup, with country-specific rights in mind.",
   "publishedAt": "2026-08-26",
-  "lastModified": "2026-08-26",
+  "lastModified": "2026-09-28",
   "avatar": "Time-Starved Book Lover",
-  "query": "best app for public domain classics"
+  "query": "best app for public domain classics",
+  "topic": "classics"
 }

@@ -1,190 +1,56 @@
 import Link from "next/link";
-
-import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER, PRICING } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function TextToSpeechAirplaneModeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Cloud-based text-to-speech apps stop working the moment you switch to
-          airplane mode because they need a server to generate audio.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) runs
-          entirely on your device. The voices are built in, the processing
-          happens on the Neural Engine, and the library lives on your phone. It
-          is fully on-device and private, your library never leaves your
-          device. Import your books before the flight, enable airplane mode,
-          and listen for the entire trip. No WiFi, no cellular, no account.
-          {" "}{FREE_TIER.full} Premium adds {PRICING.premiumFeatures}.
-        </p>
+        <p>For a flight, the important question is whether your chosen book and voice work without a connection. A local speech engine can generate new audio offline; a cloud-based app may instead play audio you prepared and downloaded earlier. Both can be useful, but they need different preparation. LoudReader narrates imported books on the device. Before travelling, open the app, prepare the voice you want, import your books and test a fresh passage with Wi-Fi and cellular disconnected. Do this before boarding, not after the aircraft door closes. Offline playback says something about availability; it does not prove that an app never sends diagnostics when it reconnects.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="offline"
-        caption="Import before you board. Airplane mode does not touch LoudReader."
-      />
-
-      <QuestionSection question="Why do most TTS apps fail in airplane mode?">
-        <p>
-          There are two kinds of text-to-speech apps, and only one survives a
-          flight:
-        </p>
+      <ArticleIllustration variant="offline" caption="Check the book, voice and headphones before boarding." />
+      <QuestionSection question="What needs to be ready before I leave?">
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Cloud-based apps.</strong> When
-            you press play, the app sends your text to a remote server. The
-            server runs a high-quality voice model, generates the audio, and
-            streams it back. This gives you the best possible voice quality,
-            but it requires a constant internet connection. In airplane mode,
-            the server is unreachable. The app either shows a loading spinner
-            forever or plays nothing at all.
-          </li>
-          <li>
-            <strong className="text-gray-900">On-device apps.</strong> The
-            voice model lives inside the app and runs on your phone or
-            laptop's processor. No text is sent anywhere. No audio is
-            streamed. The app works the same at 35,000 feet as it does on the
-            ground, because it never needed a connection in the first place.
-          </li>
+          <li><strong>The actual file.</strong> A book title in a cloud drive is not enough if its contents have not downloaded.</li>
+          <li><strong>A working voice.</strong> Open the selected narrator and wait for any setup to finish. Do not assume a newly installed app has every resource ready.</li>
+          <li><strong>An entitlement that works.</strong> If a narrator or control depends on Premium, check it before losing the connection.</li>
+          <li><strong>Your audio route.</strong> Pair the headphones you plan to use and check their charge as well as the phone&apos;s.</li>
         </ul>
-        <p>
-          The distinction is not always obvious from the App Store listing.
-          Many apps call themselves &quot;offline&quot; but still require a
-          connection for voice generation, caching, or license checks. The only
-          way to be sure is to test it: enable airplane mode, press play. If
-          audio comes out, the app is genuinely offline.
-        </p>
+        <p>Keep an alternative book ready if one document has an awkward layout. A scan can contain recognition errors even when it imports successfully.</p>
       </QuestionSection>
-
-      <QuestionSection question="How do I prepare LoudReader for a flight?">
-        <p>
-          The prep takes a few minutes and there is no last-minute scramble for
-          WiFi at the gate:
-        </p>
+      <QuestionSection question="How do I make a useful offline test?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Import your books while online.</strong>{" "}
-            Add EPUBs and PDFs from your Files app, iCloud Drive, or any other
-            source. Browse the built-in Project Gutenberg catalog (70,000+
-            free classics) and download the ones you want. Gutenberg browsing
-            requires internet, so do this before you leave.
-          </li>
-          <li>
-            <strong className="text-gray-900">Test playback.</strong> Open
-            each book, press play for a few seconds, and confirm it reads
-            correctly. Catching an import issue at home is better than
-            discovering a blank book at cruising altitude.
-          </li>
-          <li>
-            <strong className="text-gray-900">Charge your phone.</strong>{" "}
-            If your flight has no power outlets, a full battery gives you
-            many hours of listening with the screen off. Airplane mode saves
-            additional battery by disabling the radios.
-          </li>
-          <li>
-            <strong className="text-gray-900">Enable airplane mode and press play.</strong>{" "}
-            That is it. No offline mode toggle, no downloaded voice packs, no
-            pre-caching step. LoudReader's voices are part of the app install.
-          </li>
+          <li>Import the book and start narration while you still have internet access.</li>
+          <li>Disconnect Wi-Fi and cellular. Airplane mode can leave or allow Wi-Fi enabled, so check the actual connection state.</li>
+          <li>Jump to a passage you have not played. This helps distinguish fresh local generation from previously cached audio.</li>
+          <li>Lock the phone, listen briefly and test pause/resume with your headphones.</li>
+          <li>Reopen the book and make sure you can find your place.</li>
         </ol>
-        <p>
-          If you share a flight with someone who watches you do this and asks
-          how, the{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            guide to turning any book into an audiobook
-          </Link>{" "}
-          covers the full import-and-play workflow.
-        </p>
+        <p>This is a readiness check for your setup, not a certification of every feature. For a phone-focused introduction, see <Link href="/blog/text-to-speech-without-internet-iphone" className="text-loudBlue hover:underline">offline text to speech on iPhone</Link>.</p>
       </QuestionSection>
-
-      <QuestionSection question="Does airplane mode affect voice quality?">
-        <p>
-          No. This is a common question because many apps degrade their quality
-          when offline, falling back to a robotic backup voice. LoudReader's
-          neural voices are the same voices online and offline because they
-          always run on your device. The Neural Engine on Apple Silicon chips
-          handles the voice generation, and it does not care whether the WiFi
-          radio is on or off.
-        </p>
-        <p>
-          The tradeoff is that on-device voices use storage space and
-          processing power, which is why many apps choose to run them in the
-          cloud instead. LoudReader includes the voices in the app download,
-          and the app is larger than a cloud-only reader as a result. The
-          benefit is that quality is consistent everywhere: on a plane, in a
-          subway tunnel, in a rural area with no signal, and at home on WiFi.
-        </p>
+      <QuestionSection question="What can LoudReader do during the flight?">
+        <p>It can generate speech from ready, imported books without a speech server. Word highlighting and local progress do not require downloading a new book. The available narrator does not become a different model simply because you disconnected.</p>
+        <p>{FREE_TIER.full} Premium features, such as adjustable speed and the sleep timer, remain subject to your purchase state and device support. Downloading books or articles, making purchases and restoring purchases are tasks to handle while connected.</p>
       </QuestionSection>
-
-      <QuestionSection question="What about other offline scenarios besides flying?">
-        <p>
-          The airplane test is a good proxy for any situation where the
-          internet is unreliable or unavailable:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Subways and tunnels.</strong>{" "}
-            Your commute probably has dead zones. Cloud-based TTS drops out in
-            every one of them. On-device TTS does not notice.
-          </li>
-          <li>
-            <strong className="text-gray-900">Rural areas and road trips.</strong>{" "}
-            Long stretches of highway with no cell coverage. An on-device
-            reader keeps the book going while the streaming apps buffer into
-            silence.
-          </li>
-          <li>
-            <strong className="text-gray-900">International travel without a data plan.</strong>{" "}
-            Roaming data is expensive and often slow. Load your books at home
-            on WiFi and listen offline for the entire trip.
-          </li>
-          <li>
-            <strong className="text-gray-900">Privacy-sensitive situations.</strong>{" "}
-            If you do not want your reading activity visible to any network or
-            service, airplane mode plus an on-device reader is the most private
-            setup available. See{" "}
-            <Link
-              href="/blog/text-to-speech-without-internet-iphone"
-              className="text-loudBlue hover:underline"
-            >
-              text-to-speech without internet on iPhone
-            </Link>{" "}
-            for the privacy details.
-          </li>
-        </ul>
-        <p>
-          For a broader look at offline reading on Mac,{" "}
-          <Link
-            href="/offline-text-to-speech-mac"
-            className="text-loudBlue hover:underline"
-          >
-            offline text-to-speech on Mac
-          </Link>{" "}
-          covers the desktop side.
-        </p>
+      <QuestionSection question="What about an app that normally uses cloud voices?">
+        <p>Check whether it offers complete audio downloads or advance generation. If it does, confirm the entire chapter or book is available offline; hearing the first few seconds could mean only the opening is cached. A downloaded recording does not need a live speech service to play.</p>
+        <p>Do not choose between local and cloud tools on the word “offline” alone. Ask whether you can change the text or voice while disconnected, how much audio you must prepare, and how much storage the download uses.</p>
       </QuestionSection>
-
+      <QuestionSection question="What can still interrupt listening?">
+        <p>A flat battery, disconnected headphones, an unreadable document or an audio interruption can stop playback even when the speech engine is local. We have not published a flight-length battery benchmark. Charge your devices, test a representative listening session and allow for other phone use.</p>
+        <p>Follow the crew&apos;s instructions for devices and headphones. When connectivity returns, other app services may resume: LoudReader 1.12 includes crash diagnostics and usage analytics enabled by default. Our <Link href="/privacy" className="text-loudBlue hover:underline">privacy policy</Link> explains that separately from local narration. If you need to import a book for the first time, use the <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">file-import walkthrough</Link> before travelling.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your flight just got a lot more interesting"
-        subline="Import your books before you board. LoudReader works in airplane mode, no WiFi needed. Natural voices, fully offline."
-      />
+      <StoreCta headline="Prepare your next listen" subline="Import a book and test the voice offline before your trip." />
     </ArticleLayout>
   );
 }

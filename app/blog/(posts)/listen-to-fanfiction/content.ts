@@ -1,50 +1,42 @@
-// FACT PROVENANCE. Every claim verified on 2026-07-14 against:
-//   - AO3 download flow: archiveofourown.org/faq/downloading-fanworks (the
-//     Download button near the top of every work page offers AZW3, EPUB,
-//     MOBI, PDF, and HTML; no account needed; multi-chapter works download
-//     as one file). Cross-checked against ao3wiki.com/guides/download-fics/.
-//   - Royal Road: royalroad.com has no official EPUB download button; offline
-//     chapter downloads are a feature of their Premium subscription inside
-//     their own app. Third-party tools (WebToEpub browser extension) are how
-//     readers commonly package Royal Road stories as EPUBs.
-//   - EPUB/PDF import: LoudReader_mac Info.plist declares CFBundleDocumentTypes
-//     for org.idpf.epub-container and com.adobe.pdf with
-//     LSSupportsOpeningDocumentsInPlace, so EPUBs open from the Files app /
-//     "Open in" flows; AddContentSheet.swift has "Import EPUB/PDF File".
-//   - URL/article import: LinkImportSheet.swift ("Drop in a URL and LoudReader
-//     will fetch and add it to your library"). Free tier caps article reads
-//     and saves at 30 each (SubscriptionManager.swift, SubscriptionAccess.swift).
-//     Imported EPUB books are NOT capped (baseFreeFraction = 1.0,
-//     canImportBook always true).
-//   - Word-by-word highlighting: ReaderStylesheet.swift (.tts-word-highlight)
-//     + Engines/HighlightSchedule.swift. Not premium-gated.
-//   - Offline playback / privacy: all TTS runs on-device (no cloud TTS in the
-//     app); background audio via Info.plist UIBackgroundModes = ["audio"].
-//   - Speed control 0.3x to 3.0x is Premium: components/money/site.ts PRICING.
-// Claims you may NOT make until verified: CarPlay; reading DRM'd files;
-// languages other than English; any official Royal Road EPUB export.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
+// Official AO3 German FAQ checked 2026-09-28 (English endpoint unavailable): https://archive.transformativeworks.org/faq/downloading-fanworks?language_id=de
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "How do I download a fanfic from AO3 as an EPUB?",
-    a: "Open the work on archiveofourown.org and look for the Download button near the top of the page. It offers EPUB, PDF, MOBI, AZW3, and HTML, so choose EPUB. You do not need an AO3 account, and a multi-chapter fic downloads as a single file with every chapter in order.",
+    "q": "Does an AO3 download include future chapters?",
+    "a": "No. It is a snapshot of chapters available when downloaded. Download an updated copy for later additions."
   },
   {
-    q: "Can I listen to fanfiction offline?",
-    a: "Yes. Once the EPUB is imported into LoudReader, the narration is generated entirely on your device, so there is no stream to drop. Listening works on the subway, on a plane, and in airplane mode, with playback continuing while the screen is locked.",
+    "q": "Do I always need an AO3 account?",
+    "a": "Access depends on the work. Restricted works can require signing in; do not assume every work is available anonymously."
   },
   {
-    q: "Does anyone see what I import into LoudReader?",
-    a: "No. LoudReader is fully on-device and private, your library never leaves your device. There is no account, no upload, and no server that ever receives your files, so nobody sees which fics, ships, or tags you read.",
+    "q": "Is local narration completely invisible?",
+    "a": "No. Speech is local, but LoudReader includes diagnostics and default-enabled usage analytics. Browsing, storage, transfers and access to your device are separate considerations."
   },
   {
-    q: "Can I speed up or slow down fanfic narration?",
-    a: "Playback speed control from 0.3x to 3.0x is part of LoudReader Premium; the free tier plays at normal speed. Everything else in this guide (importing EPUBs, word-by-word highlighting, offline listening) works on the free tier with no word quota.",
-  },
-  {
-    q: "Does this work for Royal Road and other web fiction?",
-    a: "Partly. Royal Road has no official EPUB download button, and offline chapters are a feature of its own Premium app, so readers typically use a third-party tool such as the WebToEpub browser extension to package a story as an EPUB, which then imports into LoudReader like any other book. You can also paste a chapter URL into LoudReader and it fetches the page as an article, though the free tier caps articles while imported EPUB books are unlimited.",
-  },
+    "q": "Can I keep the old position in an updated EPUB?",
+    "a": "Do not assume so. Note the chapter and a short phrase before importing a new version, and check the new copy before removing the old one."
+  }
 ];

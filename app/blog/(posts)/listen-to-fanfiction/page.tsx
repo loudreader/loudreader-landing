@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,187 +6,25 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ListenToFanfictionArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          The cleanest way to listen to fanfiction is hiding in plain sight:
-          every work on AO3 has a <strong>Download</strong> button near the top
-          of the page, and one of the formats it offers is EPUB. Download the
-          fic, open it in <strong>LoudReader</strong> (iPhone, iPad, and Mac), and the whole work (every chapter, in order) becomes an
-          audiobook with natural offline voices and word-by-word highlighting.
-          No account on either side and no word quota. LoudReader is fully
-          on-device and private, your library never leaves your device, so
-          nobody sees what you read. It works in airplane mode, keeps your
-          place across a 300k-word longfic, and beats browser extensions that
-          re-read the page you happen to have open.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="One EPUB download turns a whole longfic into an audiobook."
-      />
-
-      <QuestionSection question="How do you download a fanfic from AO3?">
-        <p>
-          AO3 ships this feature itself, with no extension, no converter site,
-          and no account. On any work page:
-        </p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Find the <strong className="text-gray-900">Download</strong> button
-            near the top of the work, next to the bookmark and comment actions.
-          </li>
-          <li>
-            Pick <strong className="text-gray-900">EPUB</strong> from the
-            format list (AO3 also offers PDF, MOBI, AZW3, and HTML, and EPUB
-            is the one ebook readers handle best).
-          </li>
-          <li>
-            Save the file. A multi-chapter fic downloads as a{" "}
-            <em>single file</em> containing every posted chapter in reading
-            order, plus the tags, summary, and author notes.
-          </li>
-        </ol>
-        <p>
-          That one file is the entire work, frozen at the moment you downloaded
-          it. That is also the quiet strength of this flow: the fic stays
-          readable even if the author later locks, orphans, or deletes it, and
-          even when AO3 itself is down.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you turn that EPUB into an audiobook?">
-        <p>
-          This is the short part.{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            Download LoudReader from the App Store
-          </a>{" "}
-          (free, no sign-up), then import the fic: open the EPUB from the Files
-          app or your Downloads folder, or use{" "}
-          <strong className="text-gray-900">Import EPUB/PDF File</strong>{" "}
-          inside the app. Press play.
-        </p>
-        <p>
-          The narration is generated live on your device with natural offline
-          voices, each word highlights as it is spoken, and your position is
-          saved, so a slow-burn longfic behaves exactly like an audiobook you
-          bought, minus the part where nobody will ever record an audiobook of
-          it. The same flow works on the Mac; the full walkthrough is in{" "}
-          <Link href="/read-epub-aloud-mac" className="text-loudBlue hover:underline">
-            how to read an EPUB aloud on a Mac
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Why is an EPUB import better than a browser extension?">
-        <p>
-          Most &quot;listen to fanfiction&quot; guides point you at a
-          text-to-speech browser extension. That works, but it reads the{" "}
-          <em>web page</em>, not the <em>work</em>, and the difference shows
-          on anything longer than a one-shot:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">One file, whole fic.</strong> An
-            extension reads the chapter you have open; the EPUB contains all of
-            them, so 40 chapters play straight through without you touching
-            next-chapter links.
-          </li>
-          <li>
-            <strong className="text-gray-900">No page cruft.</strong>{" "}
-            Extensions happily narrate navigation menus, kudos counts, and
-            comment threads. The EPUB is just the story and the author&apos;s
-            own notes.
-          </li>
-          <li>
-            <strong className="text-gray-900">Offline and durable.</strong> A
-            page needs a connection every time; the EPUB is yours, readable on
-            the subway and after the fic goes dark.
-          </li>
-          <li>
-            <strong className="text-gray-900">A real reading position.</strong>{" "}
-            A book keeps your place; a browser tab keeps a scroll offset,
-            badly.
-          </li>
-        </ul>
-        <p>
-          Honest caveat: for a 2,000-word one-shot you are already reading in
-          the browser, an extension is perfectly fine. The EPUB flow wins the
-          moment a fic is long enough that you will come back to it, which,
-          in fanfiction, is most of the fics worth listening to.
-        </p>
-      </QuestionSection>
-
-      <ArticleIllustration
-        variant="offline"
-        caption="No account, no upload. Your fic library stays on your device."
-      />
-
-      <QuestionSection question="Is your fanfic library private?">
-        <p>
-          Fanfiction is exactly the kind of reading people prefer to keep to
-          themselves, and this is where the architecture matters. Cloud TTS
-          apps upload your text to a server to generate audio. LoudReader is
-          fully on-device and private, your library never leaves your device.
-          There is no account to create, nothing is uploaded, and the app works
-          with the network off entirely. The tags you read are between you and
-          your phone. If that is a deciding factor for you,{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            it is the reason LoudReader exists
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What about Royal Road and other web fiction?">
-        <p>
-          AO3 is the gold standard here, and its built-in EPUB button is
-          genuinely rare. Elsewhere, the honest picture:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Royal Road</strong> has no
-            official EPUB download; offline chapters are a perk of its own
-            Premium app. Readers commonly use a third-party tool such as the
-            WebToEpub browser extension to package a story into an EPUB, which
-            then imports into LoudReader like any book.
-          </li>
-          <li>
-            <strong className="text-gray-900">Individual chapters or
-            articles</strong> can be pasted into LoudReader as a URL, and it
-            fetches the page and adds it to your library. Note the free tier
-            caps articles, while imported EPUB books have no cap.
-          </li>
-          <li>
-            <strong className="text-gray-900">Anything you can save as an
-            EPUB or PDF</strong>{" "}
-            (newsletters, serials, your own drafts) imports the same way.
-          </li>
-        </ul>
-      </QuestionSection>
-
+      <Tldr><p>For an AO3 work you can access, use its Download menu to save an EPUB, then import that file into a compatible reader. The download is a snapshot of the work’s available chapters; it will not update when the author adds more. LoudReader can narrate supported EPUBs locally and keep a reading position in the imported copy. Restricted works may require an AO3 login, and a local narration app does not make your browsing, downloads or device backups invisible.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="A downloaded work is a snapshot; keep a note when you update it." />
+      <QuestionSection question="How do you get the EPUB from AO3?"><ol className="list-decimal pl-6 space-y-2"><li>Open the work while signed in if access requires it.</li><li>Choose Download, then EPUB.</li><li>Save the file somewhere you can find again, such as Files or Downloads.</li><li>Keep the work’s title, author and source link with the file.</li></ol><p>AO3’s <a href="https://archive.transformativeworks.org/faq/downloading-fanworks?language_id=de" className="text-loudBlue hover:underline">official download FAQ</a> explains the format choices and the difference between a work download and later updates. Do not mistake a downloaded login or access-warning page for the story itself.</p></QuestionSection>
+      <QuestionSection question="How do you listen to the downloaded file?"><p>Import the EPUB into <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>, choose an available voice and test a passage. Check unusual names, acronyms and dialogue before settling in for a long session. TTS may pronounce fandom-specific vocabulary differently from how you imagine it.</p><p>LoudReader runs on iPhone and iPad; its iPad build also runs on compatible Apple Silicon Macs. The reader highlights spoken text and stores a reading position. Once the file and necessary resources are local, narration works offline. The <Link href="/read-epub-aloud-mac" className="text-loudBlue hover:underline">Mac EPUB guide</Link> covers the compatible iPad-app workflow.</p><p>{FREE_TIER.full}</p></QuestionSection>
+      <QuestionSection question="Why use a file rather than a live web page?"><p>A file can be useful for a long work because you can return to the same local copy without relying on the current page. A browser’s own reading feature may be sufficient for a short passage; its behaviour depends on the browser and page, so there is no universal winner.</p><p>An EPUB can still include author notes and other material around the story. Check the chapter list and start where you intend. A work’s availability for download is not a reason to repost it elsewhere or disregard the author’s wishes.</p></QuestionSection>
+      <QuestionSection question="What happens when a work in progress updates?"><p>AO3 downloads contain the chapters available at the time of downloading. To get newer chapters, download an updated copy. Record your chapter and a short phrase before importing it; do not assume that a changed file will preserve the old copy’s exact reading position.</p><p>Keep the old copy until you have checked the new one. Use clear filenames or dates to avoid opening the wrong version. That is local file management, not automatic subscription tracking.</p></QuestionSection>
+      <QuestionSection question="What is private about local narration?"><p>Speech is generated on device. That does not mean the whole app is network-free: LoudReader uses Sentry crash diagnostics and TelemetryDeck analytics. File transfers, device backups and any services you use before importing are separate parts of the workflow. In release 1.12, usage analytics is enabled by default and there is no in-app switch to disable it. Offline playback demonstrates that speech can run without a connection; it does not prove that no data is sent when the app is online.</p><p>Other people with access to your device, lock-screen notifications or shared storage may still see reading-related information. Choose storage and device settings that fit your situation.</p></QuestionSection>
+      <QuestionSection question="What about other fiction sites?"><p>Use the author’s or site’s offered download where available, or its own supported reading feature. Check the site’s current access rules before choosing a third-party exporter. We do not promise an official EPUB export, universal URL import or automatic chapter updates for every platform.</p><p>If you already have an authorised compatible EPUB or PDF, the same import workflow applies.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your longfic backlog, narrated"
-        subline="Download the EPUB from AO3, import it, press play. Free, on-device, no account, and nobody sees your tags."
-      />
+      <StoreCta headline="Give an accessible EPUB a listening pass" subline="Import the file, check a sample and keep track of the edition you downloaded." />
     </ArticleLayout>
   );
 }

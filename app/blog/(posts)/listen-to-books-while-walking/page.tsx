@@ -5,170 +5,48 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ListenToBooksWhileWalkingArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Walking is the easiest way to fit books into your day because you are
-          already doing it. The daily dog walk, the lunch loop around the block,
-          the stroll after dinner. Those minutes add up, and your ears are free
-          the whole time.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
-          DRM-free EPUB or PDF into an audiobook with natural offline voices. It
-          is fully on-device and private, your library never leaves your device,
-          so playback works on trails, in parks with spotty signal, and anywhere
-          you walk. Your phone stays in your pocket. The lock screen gives you
-          play, pause, and 15-second skip, and your headphone button handles the
-          rest. Walk, listen, and your reading list shrinks one mile at a time.
-        </p>
+        <p>For a listening walk, prepare the book before leaving and choose a route where you can give your surroundings the attention they need. Test play and pause with the phone in your pocket; stop somewhere suitable before looking at the screen. A familiar story or short chapter can be easy to return to after crossings and conversations. You do not need to listen for the entire walk. LoudReader can narrate a prepared book locally on iPhone, but check the actual file, voice and battery before relying on it away from a connection.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="devices"
-        caption="Your walk is reading time. Pocket the phone and press play."
-      />
+      <ArticleIllustration variant="devices" caption="Prepare the book first. Keep the walk responsive to your surroundings." />
 
-      <QuestionSection question="Why turn your walk into reading time?">
-        <p>
-          Most people walk every day and barely notice the minutes. A 20-minute
-          lunch walk, a 15-minute dog loop, another 15 minutes in the evening.
-          That is nearly an hour of movement with nothing occupying your ears
-          except maybe music or a podcast. Substituting a book turns that same
-          hour into reading you did not have to schedule.
-        </p>
-        <p>
-          The real win is not the hour itself. It is that walking-and-listening
-          does not compete with anything else. You were going to walk anyway.
-          Now you finish a chapter while you do it. No extra time carved out of
-          the day, no trade-off between exercise and reading. The walk stays the
-          walk. The book fits into the gaps your eyes could not use.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What kind of setup works best on a walk?">
-        <p>
-          Simpler is better. The less you touch your phone mid-walk, the more
-          you stay in the book and aware of your surroundings.
-        </p>
+      <QuestionSection question="What should I prepare before I leave?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone. Free, no account.
-          </li>
-          <li>
-            Import any DRM-free EPUB or PDF, or pick one of the 70,000+ free
-            Project Gutenberg classics built in.
-          </li>
-          <li>
-            Connect your headphones or earbuds. A single earbud in one ear
-            keeps you aware of traffic and your surroundings.
-          </li>
-          <li>
-            Press <strong>play</strong>, lock the screen, put the phone in your
-            pocket, and walk.
-          </li>
-        </ol>
+          <li>Choose the next passage and check that the book is present on the phone, not only in an online catalogue.</li>
+          <li>Open the desired voice and test playback. If you expect poor signal, try it briefly offline before leaving.</li>
+          <li>Test your headphones’ actual pause control, then lock the screen and put the phone in your pocket.</li>
+          <li>Check battery level for your planned outing and other needs such as navigation. Do not infer a battery-life promise from offline playback.</li>
+        </ol><p>If you are importing an ebook, <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">test the EPUB or PDF</Link> before setting off. An extraction problem is easier to diagnose at a desk than on a pavement.</p>
       </QuestionSection>
 
-      <QuestionSection question="How do you control playback without touching your phone?">
-        <p>
-          Three ways, ranked by how much they keep you in the walk instead of on
-          a screen:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Headphone button.</strong> Most
-            earbuds and headphones have a single button. Tap once to pause,
-            once to resume. That is the whole interface and it is the best one.
-          </li>
-          <li>
-            <strong className="text-gray-900">Lock screen controls.</strong> If
-            you do pull your phone out, the lock screen shows play, pause, and
-            15-second skip. You never need to unlock it.
-          </li>
-          <li>
-            <strong className="text-gray-900">15-second skip back.</strong> If
-            a loud truck, a chatty neighbor, or a stray thought made you miss a
-            sentence, tap skip back. No re-finding your place.
-          </li>
-        </ul>
+      <QuestionSection question="How much of the walk should be listening time?">
+        <p>Only the parts that suit it. Pause near crossings, busy paths, unfamiliar terrain or when another person needs your attention. An open-ear design or one earbud may change what you can hear, but neither guarantees awareness of everything around you.</p><p>Leave some of the walk silent if you prefer. The walk does not have to justify itself by finishing a chapter, and listening is not a substitute for watching where you are going.</p>
       </QuestionSection>
 
-      <QuestionSection question="What if you lose signal on a trail or in a park?">
-        <p>
-          It does not matter. LoudReader&apos;s voices run entirely on your
-          iPhone. There is no stream to drop, no audio file to pre-download, and
-          no cloud dependency of any kind. The app is fully on-device and
-          private, your library never leaves your device, so playback continues
-          through the deepest patch of trees and the deadest dead zone on your
-          route. The only thing a dropped signal means is that your messages
-          will wait. Your book will not.
-        </p>
+      <QuestionSection question="How do I recover a missed sentence without staring at the screen?">
+        <p>Use a pause or skip control you tested in advance when it is appropriate to do so. If you need to inspect the text or change settings, stop somewhere suitable away from the flow of people and traffic. Rejoin the story at a passage you recognise.</p><p>On iPhone, <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> can continue narration with the screen locked and exposes system playback controls. The exact gestures on headphones vary by accessory; do not assume a single tap always means the same command.</p>
       </QuestionSection>
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="Battery and a book. That's all you need."
-      />
+      <QuestionSection question="Which books suit a walk?">
+        <p>Try a book whose thread you can recover after a pause. That might be a novel, a memoir, an essay collection or a reread. Short chapters are convenient stopping points, but there is no genre that automatically works for everybody.</p><p>If the text repeatedly asks you to examine a figure, compare spellings or make detailed notes, give it a stationary session. The <Link href="/blog/read-and-listen-at-the-same-time" className="text-loudBlue hover:underline">read-and-listen setup</Link> is a better fit for those passages.</p>
+      </QuestionSection>
 
-      <QuestionSection question="What kind of books work best on a walk?">
-        <p>
-          Narrative-driven books tend to be the easiest to follow while you are
-          moving. Fiction of any kind, memoirs, narrative history and narrative
-          non-fiction, and any writing that tells a story rather than builds an
-          argument. The thread pulls you forward without demanding you stop and
-          think through a diagram.
-        </p>
-        <p>
-          Dense textbooks, reference-heavy non-fiction, and anything that relies
-          on tables or figures is tougher. You cannot flip back to check a chart
-          while walking, and stopping to re-read a passage means pausing your
-          walk. Save those for desk reading. Use your walks for the books that
-          work best at a steady forward pace.
-        </p>
-        <p>
-          For more on picking the right material, see{" "}
-          <Link
-            href="/blog/how-fast-should-you-listen-to-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            how fast should you listen to audiobooks
-          </Link>{" "}
-          and the guide on{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            turning any book into an audiobook
-          </Link>
-          .
-        </p>
+      <QuestionSection question="What should I expect offline and on a long outing?">
+        <p>Existing books can be narrated without streaming speech when the necessary voice resources are available. Book and resource downloads still need to happen beforehand, so test rather than assuming every voice is already ready.</p><p>Power use depends on the device, voice, settings, battery condition and other apps. This guide has no measured “hours per charge” result. For a longer outing, plan power around the phone functions you need and treat the book as optional. If the routine works for you, <Link href="/blog/how-to-build-a-reading-habit" className="text-loudBlue hover:underline">build on one suitable walk</Link> instead of trying to fill every journey with audio.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Turn your walk into a chapter"
-        subline="Import any EPUB or PDF, press play, and walk. Free, on-device, no account."
-      />
     </ArticleLayout>
   );
 }

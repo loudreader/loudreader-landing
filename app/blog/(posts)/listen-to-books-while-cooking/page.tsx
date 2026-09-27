@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,159 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ListenToBooksWhileCookingArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Cooking is hands-on work that leaves your ears completely free. Dinner
-          prep, baking, meal prepping for the week. Those 30 to 60 minutes every
-          evening are prime reading time your eyes could never use.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
-          DRM-free EPUB or PDF into an audiobook with natural offline voices,
-          fully on-device and private, your library never leaves your device. A
-          Bluetooth speaker on the counter or a pair of earbuds is all you need.
-          Press play, lock the screen, and let the book run while you chop,
-          stir, and wash. The lock screen and headphone button handle pause
-          without you touching the screen. One press pauses the book when the
-          pan needs your full attention. Kitchen time becomes reading time and
-          dinner still gets made.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="devices"
-        caption="The kitchen counter is a reading nook. Phone stays locked, speaker does the work."
-      />
-
-      <QuestionSection question="Why does cooking pair so well with audiobooks?">
-        <p>
-          Cooking is repetitive manual work that mostly runs on habit. Chopping
-          vegetables, stirring a pot, monitoring a timer. Your hands know what
-          to do and your brain has bandwidth to spare. The same cannot be said
-          for new recipes or multi-step dishes that require constant attention,
-          but the everyday cooking that fills most weeknights is the perfect
-          audiobook backdrop.
-        </p>
-        <p>
-          The time adds up fast. If you cook dinner five nights a week and spend
-          an average of 40 minutes in the kitchen each time, that is over three
-          hours of potential listening every week. Three hours is a solid chunk
-          of a novel or a healthy portion of a non-fiction book. You were going
-          to be in the kitchen anyway.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What is the best audio setup for the kitchen?">
-        <p>
-          A small Bluetooth speaker is the right tool. Place it on a counter or
-          on top of the fridge, away from splashes and spills, and the narration
-          fills the room. You do not wear anything, so you can hear timers, the
-          sizzle of a pan, and someone calling from the other room.
-        </p>
-        <p>
-          Earbuds work too, but they isolate you from kitchen sounds that matter.
-          The oven timer, the boiling pot, the knock at the door. If you go the
-          earbud route, keep one ear open or use a transparency mode so you stay
-          aware of what is happening around you.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you set up LoudReader before cooking?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone. Free, no account.
-          </li>
-          <li>
-            Import any DRM-free EPUB or PDF, or pick one of the 70,000+ free
-            Project Gutenberg classics built right in.
-          </li>
-          <li>
-            Connect to your Bluetooth speaker, set the volume, and press{" "}
-            <strong>play</strong>.
-          </li>
-          <li>
-            Lock the screen and put the phone on a counter away from water and
-            heat. The book keeps playing. Your hands stay on the food.
-          </li>
-        </ol>
-      </QuestionSection>
-
-      <QuestionSection question="How do you handle the noisy moments in the kitchen?">
-        <p>
-          Kitchens are loud in bursts, not continuously. The blender runs for 30
-          seconds. The vent hood hums while you sear. Water runs while you wash
-          greens. The pattern that works is simple:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Pause before the loud part.</strong>{" "}
-            Tap the speaker or headphone button once. The book pauses at the
-            current word.
-          </li>
-          <li>
-            <strong className="text-gray-900">Resume after.</strong> Tap again.
-            The narration picks up exactly where you left it.
-          </li>
-          <li>
-            <strong className="text-gray-900">Skip back if you missed
-            something.</strong> The lock screen has a 15-second skip-back button.
-            If a sizzling pan drowned out the narrator for a few seconds, tap it
-            and catch what you lost.
-          </li>
-        </ul>
-        <p>
-          Grouping noisy prep steps helps too. Blend everything at once, sear
-          everything at once, then settle into the quieter simmering and
-          stirring phase where the book runs uninterrupted.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What kind of books work best in the kitchen?">
-        <p>
-          Light narrative is the sweet spot. Fiction that does not demand heavy
-          concentration, memoirs, food writing (fittingly), popular science,
-          history that tells a story rather than arguing a thesis. Books where
-          missing thirty seconds while you drain pasta does not lose you the
-          thread.
-        </p>
-        <p>
-          Complex non-fiction that builds a dense argument, textbooks, and
-          anything that expects you to stop and mentally re-read a paragraph are
-          harder. Your attention splits between the recipe and the reasoning. If
-          you want to take notes or mark passages for later, that is what{" "}
-          <Link
-            href="/blog/read-and-listen-at-the-same-time"
-            className="text-loudBlue hover:underline"
-          >
-            reading and listening at the same time
-          </Link>{" "}
-          is for. Kitchen listening is for books that flow forward.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>A book can fit around familiar kitchen tasks, but it needs an easy pause button. Start playback before your hands are occupied, keep the phone away from heat and splashes, and stop the narration when a recipe or noisy appliance needs your attention. Choose a section you can return to after interruptions. A listening timer is not a cooking timer, and finishing a chapter should never decide when you check the food.</p></Tldr>
+      <ArticleIllustration variant="devices" caption="Set up first, and let the book pause around the cooking." />
+      <QuestionSection question="Which part of cooking works for listening?"><p>Try a familiar preparation or washing-up task first. A new recipe with several pans, measurements or timed steps may leave little attention for a story. Pause and continue later instead of letting whole paragraphs pass unheard.</p><p>A short essay, a familiar novel or a story with clear chapter breaks may suit the interruptions. Technical material that needs diagrams or notes is easier to save for a different setting. This is about matching the book to your routine, not a promise that multitasking improves either activity.</p></QuestionSection>
+      <QuestionSection question="How should you place the phone and speaker?"><p>Set the equipment up before you begin. Put the phone on a stable surface away from water, heat and food preparation. If you use a separate speaker, check that you can pause it without handling the phone with wet or messy hands.</p><p>Keep narration at a level where you can still notice timers and people around you. A louder speaker does not guarantee intelligible speech over an extractor or blender. Pausing is often simpler than competing with the noise.</p></QuestionSection>
+      <QuestionSection question="What should you do before pressing play?"><ol className="list-decimal pl-6 space-y-2"><li>Open the book and choose the section you want to hear.</li><li>Check the audio output: make sure it is playing on the intended speaker or headphones.</li><li>Test the device’s play/pause control; gestures vary.</li><li>Set any cooking timer separately, using the recipe and the appropriate appliance.</li><li>Start the book, then leave the phone somewhere stable and accessible.</li></ol><p>If you are using <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> for your own supported EPUB or PDF, prepare the file and selected voice resources first. Its iPhone playback can continue with the screen locked. Once the book and required voice resources are available on the device, narration works offline. Downloads and web imports still need a connection.</p></QuestionSection>
+      <QuestionSection question="How do you recover after missing a passage?"><p>Pause at the first convenient moment and go back to a sentence you remember. Avoid repeatedly rewinding while the same task keeps taking your attention; leave the book paused until that step is finished.</p><p>Do not reorganise a recipe to serve the audiobook. Keep the cooking sequence you intended, and let listening fit into the quieter parts. The book can wait.</p></QuestionSection>
+      <QuestionSection question="What can LoudReader’s timer and controls do?"><p>LoudReader’s sleep timer is a Premium listening feature. It stops audio after a chosen interval, but it should not replace an alarm you rely on for cooking. Standard media controls support pausing and resuming; test your particular speaker or headphones.</p><p>LoudReader runs on iPhone and iPad; its iPad build also runs on compatible Apple Silicon Macs. Notes and highlights are free if you want to mark a passage later. For a quieter session with the text visible, see <Link href="/blog/read-and-listen-at-the-same-time" className="text-loudBlue hover:underline">reading and listening together</Link>.</p><p>{FREE_TIER.full}</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Dinner and a chapter, every night"
-        subline="Import any EPUB or PDF, connect a speaker, and cook. Free, on-device, no account."
-      />
+      <StoreCta headline="Keep a book ready for a quiet kitchen task" subline="Import a supported file and test the controls before you start." />
     </ArticleLayout>
   );
 }

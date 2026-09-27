@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,188 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function TextToSpeechForLowVisionArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          This guide is honest about what text-to-speech can and cannot do
-          for low-vision readers. LoudReader is not a screen reader. It does
-          not read menus, buttons, or system interfaces. What it does is
-          read the books, articles, and documents you import into it.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
-          DRM-free EPUB or PDF into spoken audio with natural offline voices,
-          highlighting each word as it goes. It is fully on-device and
-          private, your library never leaves your device. No account, no
-          uploads, no cloud. The free tier gives unlimited listening on every
-          book with no word quota. All 23 studio narrators are free to try for the first
-          8 hours. It is a reading tool for books, not a replacement for
-          VoiceOver or dedicated assistive technology. If you need a screen
-          reader, your device already has one built in. If you want to listen
-          to a book, this guide covers the practical path.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="devices"
-        caption="Listen on whatever device is nearby. iPhone, iPad, or Mac: same library, same voices."
-      />
-
-      <QuestionSection question="Is text-to-speech a screen reader?">
-        <p>
-          No, and the distinction matters. A screen reader like Apple's
-          VoiceOver reads everything on your screen: app icons, settings
-          menus, notification banners, web page navigation, and system
-          dialogs. It is the tool you use to operate your device when you
-          cannot see the interface.
-        </p>
-        <p>
-          A text-to-speech app like LoudReader reads the content of documents
-          you import into it. It reads your EPUB novel, your PDF article, your
-          downloaded book. It does not help you open apps, configure settings,
-          or navigate your phone. Both types of tool are useful, but they solve
-          different problems. You would not use a book reader to check your
-          email, and you would not use a screen reader just to listen to a
-          novel.
-        </p>
-        <p>
-          The honest recommendation: use your device's built-in screen reader
-          (VoiceOver on iPhone and iPad, or the built-in screen reader on Mac)
-          for system navigation. Use a TTS reader like LoudReader for the
-          reading itself. They complement each other rather than compete.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What can I actually read with LoudReader?">
-        <p>
-          Three categories of content, all imported locally:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">
-              EPUB and PDF files you own.
-            </strong>{" "}
-            Books bought outside of Kindle and Apple Books ecosystems
-            generally come as DRM-free EPUBs or PDFs. Import them into
-            LoudReader through the Share sheet or file picker, and the app
-            reads them aloud. This includes technical books, self-published
-            novels, and documents saved as PDF.
-          </li>
-          <li>
-            <strong className="text-gray-900">
-              70,000+ free classic books.
-            </strong>{" "}
-            Project Gutenberg's catalog is built into the app. No import
-            needed, just pick a title and press play. These are public-domain
-            works: Austen, Dickens, Dostoevsky, and tens of thousands more.
-          </li>
-          <li>
-            <strong className="text-gray-900">
-              Articles and personal documents.
-            </strong>{" "}
-            Save a web article as PDF, import it, and listen. Family members
-            can send you documents the same way. If it is a PDF with
-            selectable text, LoudReader can read it.
-          </li>
-        </ul>
-        <p>
-          For a full walkthrough of turning your existing books into audio,
-          see{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do I use LoudReader if I cannot see the screen well?">
-        <p>
-          The core interaction is simple enough that visual precision is not
-          required. Import a book (through the Share sheet from another app,
-          which you may already navigate with VoiceOver), then press play.
-          That is the whole loop. Playback continues with the screen locked,
-          and the lock screen gives you large play, pause, and skip controls
-          that are easier to hit than navigating inside an app.
-        </p>
-        <p>
-          Features that matter for low-vision use:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Lock-screen controls.</strong>{" "}
-            Play, pause, and skip forward or back 15 seconds. No need to
-            open the phone or find the right button in the app.
-          </li>
-          <li>
-            <strong className="text-gray-900">Word-by-word highlighting.</strong>{" "}
-            The current word is lit on screen. If you have partial vision,
-            the highlight is a reference point that tells you exactly where
-            the narration is.
-          </li>
-          <li>
-            <strong className="text-gray-900">Voice selection.</strong>{" "}
-            Pick the clearest voice for extended listening. {FREE_TIER.full}
-            Premium keeps the full roster available after the trial.
-          </li>
-        </ul>
-      </QuestionSection>
-
-      <QuestionSection question="What about speed control?">
-        <p>
-          Speed matters more for audio-only reading than it does for
-          dual-channel reading. Slower speeds (0.8x to 1.0x) give you more
-          time to process each sentence, which helps with dense material or
-          if you are new to listening instead of reading. Faster speeds work
-          for re-reading or lighter material.
-        </p>
-        <p>
-          In LoudReader, speed control from 0.3x to 3.0x is a Premium
-          feature; the free tier plays at normal speed. The full range
-          includes genuinely slow speeds that are useful for careful
-          listening, not just fast speeds for skimming.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Does this work with VoiceOver?">
-        <p>
-          LoudReader uses standard iOS and macOS interface elements that are
-          compatible with VoiceOver, but the app itself is not a screen
-          reader and we do not claim accessibility certification. If you
-          navigate your phone with VoiceOver, you should be able to import
-          books and control playback. The lock-screen controls are standard
-          iOS media controls and work with the system's existing
-          accessibility features.
-        </p>
-        <p>
-          For readers with dyslexia, the word-by-word highlighting and
-          dual-channel reading mechanics overlap with what helps there. We
-          covered that in{" "}
-          <Link
-            href="/blog/text-to-speech-dyslexia"
-            className="text-loudBlue hover:underline"
-          >
-            text to speech for dyslexia
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>Text to speech can turn suitable book text into audio, but choosing an accessible reading setup involves more than voice quality. You also need to find a file, import it, start playback and return to the right place. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> is a book and document reader, not a system screen reader. We have not verified its complete import-to-playback workflow with VoiceOver, so this guide does not promise independent operation for every reader. It explains what to test before relying on the app, how it differs from built-in accessibility tools and which file problems can affect narration.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Assess the whole reading workflow, from finding a book to returning to a passage." />
+<QuestionSection question="How is a book reader different from VoiceOver?"><p><a href="https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">Apple’s VoiceOver guide</a> describes using spoken feedback and gestures to navigate iPhone. A document reader focuses on the content of a book or article. VoiceOver can also read content; you do not necessarily need a separate app to listen to a novel.</p><p>Apple also provides <a href="https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">Read &amp; Speak controls</a> for spoken content. Start with the tools you already use. Consider a separate reader when its library, narration or position controls solve a particular problem, and assess the whole workflow before paying.</p></QuestionSection>
+<QuestionSection question="What should you test in a reading app?"><ul className="list-disc pl-6 space-y-2"><li><strong>Finding a book.</strong> Can you identify and open the title you want with your normal accessibility settings?</li><li><strong>Importing a document.</strong> Can you complete the file-picker or share-sheet flow and recognise whether import succeeded?</li><li><strong>Starting and stopping.</strong> Can you locate play and pause, choose a voice and understand the state of playback?</li><li><strong>Returning to a passage.</strong> Can you move back after an interruption and resume at a useful location?</li><li><strong>Handling a problem.</strong> Is an unsupported or failed import explained in a way you can access?</li><li><strong>Reading with your display settings.</strong> If you use visible text, test the actual font size, contrast and magnification settings you rely on.</li></ul><p>Try these with one familiar short document. The test is whether they work with your device and interaction method, not whether an app description calls the interface simple.</p></QuestionSection>
+<QuestionSection question="Which documents can LoudReader narrate?"><p>It imports DRM-free EPUB and PDF files. Do not assume a purchased ebook is exportable; check whether the seller supplies a compatible file. The app also offers a Project Gutenberg catalogue, with downloads subject to local copyright rules. Availability on one device does not automatically copy a library to another.</p><p>Text-based PDFs can have reading-order issues in columns, tables and footnotes. The current app includes local text recognition for scanned PDFs, but OCR may misread poor scans or omit information. Images and diagrams do not become full descriptions merely because surrounding text can be spoken.</p><p>If important content is inaccessible, ask its provider for an accessible edition or an alternative format. The <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import guide</Link> describes the supported book workflow.</p></QuestionSection>
+<QuestionSection question="What is verified about LoudReader’s listening controls?"><p>The app supports narration with the screen locked and system media controls for playback. It remembers a reading position within the app. Word-following highlighting indicates the spoken location for readers who can use it, and notes and highlights are available on the free tier.</p><p>These features do not establish complete VoiceOver compatibility. We have not run an end-to-end accessibility test of selecting a book, importing it, choosing a voice and recovering from an error. If a control is inaccessible in your setup, treat that as a limitation of the app, not something you should have to work around.</p></QuestionSection>
+<QuestionSection question="How should you choose a voice and speed?"><p>Use a passage with ordinary prose, names and punctuation from the kind of material you read. Check whether words remain clear over several paragraphs and whether unexpected pronunciation interrupts the meaning. A brief polished sample is useful, but your own document is a better fit check.</p><p>LoudReader advertises 23 studio narrators across 10 languages, with availability depending on the device. {FREE_TIER.full} Premium keeps the full available selection and adds speed control from 0.3x to 3.0x. Try normal speed first; use a pace that is comfortable for the material rather than a target number.</p></QuestionSection>
+<QuestionSection question="What about offline use and different devices?"><p>Speech generation and scanned-PDF text recognition happen locally. Make the book and required voice resources available, then check the desired setup before depending on it without a connection. Local narration is not a promise that the entire app has no networking or diagnostics.</p><p>LoudReader is an iPhone and iPad app. Compatible Apple Silicon Macs can run its iPad build; it is not a separate native Mac app, and it does not automatically sync libraries or positions between devices. See the <Link href="/faq" className="text-loudBlue hover:underline">product FAQ</Link> for current platform and feature details.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Listen to your books, no screen required"
-        subline="Import any EPUB or PDF and press play. Lock-screen controls, natural voices, and nothing leaves your device. Free, no account."
-      />
+      <StoreCta headline="Check your own reading setup" subline="Try a familiar document and the controls you rely on before choosing a reader." />
     </ArticleLayout>
   );
 }

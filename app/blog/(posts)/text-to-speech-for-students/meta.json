@@ -1,9 +1,10 @@
 {
   "slug": "text-to-speech-for-students",
-  "title": "Text to Speech for Students: Study Smarter by Listening",
-  "description": "How students use text-to-speech to get through textbooks, papers, and assigned reading faster. Dual-channel reading for comprehension and focus.",
+  "title": "Text to Speech for Students: A Reading Workflow",
+  "description": "Plan which readings to hear, check PDF extraction and turn listening into useful notes. A practical student workflow with clear limits.",
   "publishedAt": "2026-08-04",
-  "lastModified": "2026-08-04",
+  "lastModified": "2026-09-28",
   "avatar": "Neurodivergent Student",
-  "query": "text to speech for students"
+  "query": "text to speech for students",
+  "topic": "learning"
 }

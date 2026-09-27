@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,212 +6,51 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function EnglishShadowingPracticeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Shadowing is a speaking exercise. You play natural English audio and
-          repeat it out loud almost at the same time, copying the
-          speaker&apos;s rhythm, stress, and intonation. You can do it with any
-          book instead of hunting for podcast transcripts.{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          (iPhone, iPad, and Mac) reads any book aloud with natural
-          offline voices while highlighting each word, so your eyes, ears, and
-          mouth stay on the same sentence, and tapping any sentence replays it
-          from the start. Premium adds playback speed from 0.3x to 3.0x for
-          slow, careful passes. One honest limit up front: LoudReader models
-          natural English pronunciation for you to imitate, but it doesn&apos;t
-          listen to you or grade your speech. A dedicated pronunciation app
-          does that.
-        </p>
+        <p>Shadowing means repeating spoken language shortly after the speaker, trying to follow the rhythm, stress and phrasing. For a first session, choose a short passage you already understand, listen once, then try speaking along. If keeping up is difficult, pause after each sentence and repeat it before attempting continuous shadowing. A book gives you the text to check. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> can narrate supported EPUBs and PDFs with highlighting and sentence replay; Premium adds speed control. Its synthetic narration can also make pronunciation mistakes, and it does not assess your speaking. Use reliable human recordings or a teacher when you need a pronunciation model or feedback.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Shadowing: your voice runs half a second behind the narrator's, copying its shape."
-      />
-
-      <QuestionSection question="What is the shadowing technique and why does it work?">
-        <p>
-          Shadowing is simple to describe and surprisingly hard to do. You
-          play spoken audio and <strong>speak along with it</strong>, staying
-          about half a second behind the voice. You copy the words and the
-          melody underneath them: which syllables the speaker leans on, where
-          the pitch rises, how words run together. It has long been used in
-          interpreter training, and language learners use it because it
-          attacks the part of speaking that silent study never touches, the
-          physical habit of English rhythm.
-        </p>
-        <p>
-          Reading grammar rules won&apos;t make your mouth produce
-          &ldquo;com-FOR-ta-ble&rdquo; as two-and-a-half quick syllables
-          instead of four careful ones. Repeating a native-paced voice, dozens
-          of times, will. That&apos;s the whole trick. Shadowing is
-          pronunciation practice disguised as listening.
-        </p>
+      <ArticleIllustration variant="waveform" caption="Listen first, then follow a short passage with your own voice." />
+      <QuestionSection question="How is shadowing different from repeating a sentence?">
+        <p>In shadowing, the recording continues while you speak just behind it. In listen-and-repeat practice, you pause the recording and say the sentence afterwards. Both are usable exercises; the second gives you more time to work out unfamiliar sounds and wording.</p>
+        <p>Do not worry about achieving a precise half-second delay. Choose a short phrase, notice where the speaker stresses a word or pauses, and try to reproduce that feature. If you are dropping whole words, use a shorter phrase or listen again without speaking. The purpose is deliberate practice, not keeping the audio moving at all costs.</p>
       </QuestionSection>
-
-      <QuestionSection question="Why shadow with a book instead of a podcast?">
-        <p>
-          Most shadowing guides point you at podcast snippets. Those work, but
-          books have three practical advantages for deliberate practice:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">The full text is in front of you.</strong>{" "}
-            No transcript hunting. In LoudReader each word highlights as it is
-            spoken, so you always know exactly which word the voice is on, and
-            when your mouth falls behind, your eyes catch you up.
-          </li>
-          <li>
-            <strong className="text-gray-900">Sentences repeat on demand.</strong>{" "}
-            A tricky sentence can be replayed from its exact start, five times
-            in a row, without scrubbing a timeline hoping to land in the right
-            place.
-          </li>
-          <li>
-            <strong className="text-gray-900">You choose the difficulty.</strong>{" "}
-            A children&apos;s classic gives you short, clean sentences; a
-            novel gives you longer ones. Our list of{" "}
-            <Link
-              href="/blog/easy-english-books-to-listen-to"
-              className="text-loudBlue hover:underline"
-            >
-              easy English books you can listen to for free
-            </Link>{" "}
-            is a good source of shadowing material.
-          </li>
-        </ul>
-        <p>
-          The honest trade-off: books give you narrative English, not
-          conversation. Podcasts contain hesitations, slang, and interruptions
-          that no novel has. Shadow books for clean, deliberate practice, and
-          keep listening to real conversations too.
-        </p>
+      <QuestionSection question="What kind of material should you choose?">
+        <p>Choose a paragraph you can mostly understand without a dictionary. Dialogue, a short explanation or a familiar story can work. Check that the language is relevant to the situations you want to speak in: an older novel may contain wording you would not use in a current conversation.</p>
+        <p>A book provides a stable text and an easy place to return to. A recording of a real conversation exposes you to interruptions, different speakers and informal phrasing. Neither replaces the other. Synthetic narration is convenient for your own text, but names, unusual spellings and regional pronunciation deserve checking against a reliable recording or dictionary.</p>
+        <p>Our <Link href="/blog/easy-english-books-to-listen-to" className="text-loudBlue hover:underline">English book suggestions</Link> can help you find reading material. Pick a passage for its language and difficulty, rather than assuming a children&apos;s classic must be easy.</p>
       </QuestionSection>
-
-      <QuestionSection question="How do you run a shadowing session in LoudReader?">
+      <QuestionSection question="What does a short practice session look like?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Get{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            (free, no account) and open a book: import any DRM-free EPUB or
-            PDF, or pick one of the 70,000+ free Project Gutenberg classics
-            built in.
-          </li>
-          <li>
-            <strong>Pick a short passage.</strong> A paragraph is plenty. New
-            material should be slightly easy for you, because the challenge is
-            supposed to be in your mouth, not your vocabulary.
-          </li>
-          <li>
-            <strong>Listen once without speaking</strong>, following the
-            highlighted words, so you know where the sentence is going.
-          </li>
-          <li>
-            <strong>Play it again and speak along</strong>, half a second
-            behind the voice. Match the stress and the melody, not the words
-            alone. Mumbling counts at first, and precision comes with
-            repetition.
-          </li>
-          <li>
-            <strong>Repeat the hard sentences.</strong> Tap a sentence to jump
-            playback back to its start. (While playing with the controls
-            hidden, the first tap just brings the control bar back, so tap the
-            sentence after that.) The 15-second back button also always lands
-            at the start of a sentence, on screen and on the lock screen.
-          </li>
+          <li><strong>Prepare the passage.</strong> Read it once and check the meaning of words that would otherwise stop you mid-sentence.</li>
+          <li><strong>Listen without speaking.</strong> Follow the text and notice one feature, such as which word receives the strongest stress.</li>
+          <li><strong>Repeat one sentence.</strong> Pause and say it in your own voice. Return to the recording when you are unsure.</li>
+          <li><strong>Try shadowing.</strong> Play the passage again and speak slightly behind it. A few sentences are enough for a first attempt.</li>
+          <li><strong>Compare one feature.</strong> If you choose to record yourself in a separate recording app, compare the stress or phrasing you were practising. Ask a teacher or fluent speaker when you cannot hear the difference.</li>
+          <li><strong>Use the language.</strong> Make your own sentence with one useful phrase. Copying a recording and producing a new thought are different tasks.</li>
         </ol>
-        <p>
-          The narration is fully on-device and private, your library never
-          leaves your device. The whole loop works offline: on a plane, on the
-          subway, anywhere you&apos;re willing to talk to yourself quietly.
-        </p>
+        <p>Five or ten minutes is a reasonable starting plan, not a researched prescription. Stop when the practice becomes rushed or uncomfortable, and return to a shorter passage next time.</p>
       </QuestionSection>
-
-      <QuestionSection question="What speed should you shadow at?">
-        <p>
-          Slower than feels impressive. If word endings are dropping off, so
-          you get &ldquo;walk&rdquo; instead of &ldquo;walked&rdquo;, the audio
-          is too fast to be teaching you anything. A common pattern is to start
-          a new passage around 0.6x to 0.8x and climb back to 1.0x as it
-          becomes familiar. Some learners then push a mastered passage slightly
-          above 1.0x as a finishing stretch. Why slower playback helps
-          comprehension, and when it stops helping, is covered in{" "}
-          <Link
-            href="/blog/slow-down-audiobook-speed"
-            className="text-loudBlue hover:underline"
-          >
-            how to slow down audiobook speed
-          </Link>
-          .
-        </p>
-        <p>
-          Honesty about the product: playback speed control (0.3x to 3.0x) is
-          part of LoudReader Premium, and the free tier plays at normal speed.
-          If you&apos;re on the free tier, choose material with short, simple
-          sentences instead of slowing the voice. That&apos;s exactly why
-          children&apos;s classics make good shadowing texts. More on choosing
-          the right difficulty in{" "}
-          <Link
-            href="/blog/reading-english-books-non-native"
-            className="text-loudBlue hover:underline"
-          >
-            reading English books as a non-native speaker
-          </Link>
-          .
-        </p>
+      <QuestionSection question="How do sentence replay and speed work in LoudReader?">
+        <p>Import a supported DRM-free EPUB or PDF, open it and start narration. The app highlights the text as it plays. Tap a sentence to return to its start. When the controls are hidden during playback, the first tap reveals them; then tap the sentence you want to hear.</p>
+        <p>The backward skip seeks by sentences around the requested interval, so it is useful for a quick replay but is not a precise loop button. There is no dedicated automatic sentence-repeat exercise. For concentrated practice, tap the specific sentence again.</p>
+        <p>Playback-speed control from 0.3x to 3.0x requires Premium. Begin near normal speed and reduce it if necessary, keeping in mind that the version you eventually want to follow is natural-paced speech. Free playback uses normal speed, so a shorter sentence may be more useful than a difficult paragraph. See <Link href="/blog/slow-down-audiobook-speed" className="text-loudBlue hover:underline">the playback-speed guide</Link> for the controls.</p>
       </QuestionSection>
-
-      <QuestionSection question="What will shadowing with LoudReader not do?">
-        <p>
-          Two honest limits. First, LoudReader gives you a consistent, natural
-          English model to imitate, but it doesn&apos;t listen to your voice,
-          and it can&apos;t tell you that your &ldquo;th&rdquo; came out as
-          &ldquo;z&rdquo;. Apps built for pronunciation coaching record your
-          speech and score it. If you want that feedback loop, use one
-          alongside shadowing. Second, shadowing trains fluency and
-          pronunciation, not conversation. It&apos;ll make the sentences you
-          can already build sound better, but only real interaction teaches you
-          to build new ones under pressure.
-        </p>
-        <p>
-          Within those limits, it&apos;s one of the highest-return exercises in
-          language learning: ten minutes, any book, no partner required. And
-          it pairs naturally with the listening-first approach in{" "}
-          <Link
-            href="/blog/learn-english-by-listening-to-books"
-            className="text-loudBlue hover:underline"
-          >
-            learn English by listening to books
-          </Link>
-          . Shadow a passage, then let the rest of the chapter wash over you.
-        </p>
+      <QuestionSection question="What can the app help with, and what is missing?">
+        <p>LoudReader supplies repeatable narration and a visible text. It does not listen to your shadowing, score an accent or tell you whether you produced a sound correctly. Voice cloning is a separate feature and is not pronunciation assessment. A successful imitation of one passage also does not establish that you can hold a conversation on a new topic.</p>
+        <p>{FREE_TIER.full} The app is for iPhone and iPad; its iPad build also runs on compatible Apple Silicon Macs. Download or import what you need before an offline session. Speech generation is on-device, while the app also has separate diagnostics and analytics.</p>
+        <p>Combine focused speaking practice with the broader reading routine in <Link href="/blog/reading-english-books-non-native" className="text-loudBlue hover:underline">reading English books as a non-native speaker</Link>.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Shadow any book, anywhere"
-        subline="Natural offline voices with word-by-word highlighting. Tap any sentence to repeat it. Free, no account."
-      />
+      <StoreCta headline="Practise with a passage you want to read" subline="Use highlighting and sentence replay. Playback-speed adjustment requires Premium." />
     </ArticleLayout>
   );
 }

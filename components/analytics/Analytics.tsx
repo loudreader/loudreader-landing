@@ -16,8 +16,8 @@
  *      LoudReader's whole positioning is privacy; a declined visitor who
  *      opens the network tab must see no Google traffic.
  *
- * The LoudReader APP has no analytics of any kind. This island is
- * website-only, and the banner copy says so.
+ * This consent choice controls website GA4 only. App usage analytics and
+ * reliability diagnostics are separate and described in the privacy policy.
  *
  * EVENTS (contract: docs/analytics-events.md, update it when touching this)
  * -------------------------------------------------------------------------
@@ -99,7 +99,8 @@ function loadGa(gaId: string) {
     analytics_storage: "denied",
   });
   // Visitor accepted analytics. Ad-related consent stays denied forever.
-  // This site runs no ads and shares nothing with Google's ad products.
+  // The tag configuration below also disables Google Signals and
+  // advertising-personalisation signals.
   gtag("consent", "update", { analytics_storage: "granted" });
 
   gtag("js", new Date());
@@ -215,11 +216,12 @@ export default function Analytics({ gaId }: { gaId: string }) {
     >
       <p className="text-sm text-gray-700 leading-relaxed">
         <span className="font-semibold text-gray-900">
-          Allow anonymous visit stats?
+          Allow website analytics?
         </span>{" "}
-        This website (only) uses Google Analytics to count visits and App
-        Store clicks. The LoudReader app itself has no analytics. Your
-        library never leaves your device. Decline and nothing loads.
+        Google Analytics uses cookies to measure visits, App Store clicks
+        and website interactions. Decline and Google Analytics will not load.
+        This choice is separate from analytics and diagnostics in the app.{" "}
+        <a href="/privacy" className="underline">Privacy details</a>.
       </p>
       <div className="mt-4 flex items-center gap-3">
         <button

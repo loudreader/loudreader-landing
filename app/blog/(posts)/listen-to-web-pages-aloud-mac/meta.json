@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-web-pages-aloud-mac",
   "title": "How to Listen to Web Pages Aloud on Mac",
-  "description": "Safari can read articles aloud but the voice is system-level. For natural voices and offline listening, save the page as PDF and import into LoudReader on your Mac.",
+  "description": "Use macOS speech for selected text, or import an article into LoudReader for local listening. Includes link imports, PDF fallbacks and Apple Silicon limits.",
   "publishedAt": "2026-08-11",
-  "lastModified": "2026-08-11",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "listen to web pages aloud mac"
+  "query": "listen to web pages aloud mac",
+  "topic": "formats"
 }

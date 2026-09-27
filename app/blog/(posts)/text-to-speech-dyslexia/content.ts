@@ -1,67 +1,35 @@
-// FACT PROVENANCE, every claim verified on 2026-07-14 against:
-//   - Research citation: Wood, S. G., Moxley, J. H., Tighe, E. L., &
-//     Wagner, R. K. (2018). "Does Use of Text-to-Speech and Related
-//     Read-Aloud Tools Improve Reading Comprehension for Students With
-//     Reading Disabilities? A Meta-Analysis." Journal of Learning
-//     Disabilities, 51(1), 73 to 84. DOI 10.1177/0022219416688170. Random
-//     effects model: average weighted effect size .35 (95% CI .14 to .56,
-//     p < .01) on reading comprehension. Verified via
-//     journals.sagepub.com/doi/10.1177/0022219416688170 and PubMed 28112580.
-//     This is the ONLY study cited; framed as moderate/assistive, not a cure.
-//   - Microsoft Immersive Reader concession: support.microsoft.com pages
-//     ("Use Immersive Reader in Word", Edge learning center). Free, built
-//     into Word/OneNote/Outlook/Teams/Edge; "Read Aloud highlights each word
-//     as it reads your document"; Line Focus; text spacing; syllables.
-//   - Read&Write concession: texthelp.com / everway.com Read&Write for
-//     Education pages. Literacy support toolbar, TTS with dual-color
-//     highlighting, school/LMS deployments, free for K-12 teachers.
-//   - Speechify facts: reuse of this repo's provenance in
-//     app/(seo)/speechify-alternative-for-mac/content.ts (checked 2026-07-14
-//     against speechify.com/pricing and /usage-limits): free tier = 10
-//     standard voices at up to 1.5x speed; Premium $29/month; Premium word
-//     allowance metered (1,000,000 words/month guaranteed for 2026;
-//     150,000/month contractual baseline). Word-for-word highlighting:
-//     speechify.com blog "How do I enable text highlighting" + App Store
-//     listing ("active text highlighting").
-//   - LoudReader word-by-word highlighting is free: LoudReader_mac
-//     ReaderStylesheet.swift (.tts-word-highlight + .tts-sentence-highlight),
-//     Engines/HighlightSchedule.swift (per-word timing). No paywall gate on
-//     highlighting (PaywallReason.swift gates voices, speed, sleep timer,
-//     ambient, notes, reading style, not read-along highlighting).
-//   - Free tier = unlimited listening, no word quota: SubscriptionAccess.swift
-//     (baseFreeFraction = 1.0, canImportBook always true) + site.ts PRICING.
-//   - Voice trial: all voices free for the first 8 hours of listening, then
-//     one free voice (SubscriptionAccess.voiceTrialLimitSeconds = 8h).
-//   - PDF support: PDFImportPipeline.swift converts PDFs with a selectable
-//     text layer to the reader format (scanned image-only PDFs are rejected
-//     with a "no text layer" error).
-//   - Speed 0.3x to 3.0x is Premium: site.ts PRICING.
-// Claims you may NOT make until verified: that TTS remediates/improves
-// decoding skill; that highlighting specifically (vs read-aloud generally)
-// has strong independent evidence; languages other than English; OCR claims
-// beyond "PDFs need a text layer".
+// EDITORIAL REVIEW — 2026-09-28. Sources for the material revision:
+// - LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), SubscriptionAccess.swift, SubscriptionManager.swift and PaywallReason.swift — free voice allowance, unrestricted book listening, speed/timer gates and free notes; checked via canonical 2026-09-28 source audit and PaywallReason source inspection.
+// - LoudReader_mac release_v1.12, PDFImportPipeline.swift:150–218 — OCR fallback, 300-page OCR cap and reported partial results; inspected 2026-09-28.
+// - LoudReader_mac release_v1.12, Info.plist, PlayerService.swift and app target — background audio and iPad-app compatibility on Apple Silicon, not a native Mac build; canonical source audit 2026-09-28.
+// - LoudReader_mac release_v1.12, LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local narration plus Sentry diagnostics/TelemetryDeck analytics; no exposed analytics opt-out is promised. Source audit 2026-09-28; no independent network audit.
+// - https://pubmed.ncbi.nlm.nih.gov/28112580/ — Wood et al. (2018) meta-analysis, effect 0.35 and limitations; checked 2026-09-28.
+// - https://support.microsoft.com/en-US/edge/use-immersive-reader-in-microsoft-edge — Read aloud and pace controls; checked 2026-09-28.
+// - https://www.everway.com/products/read-and-write-education/ — product scope and text-to-speech; checked 2026-09-28.
+// Practical routines are suggestions, not measured learning or medical outcomes.
+// No unpublished future-verification dates, independent runtime tests or network audit are claimed.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does text to speech actually help with dyslexia?",
-    a: "The best available evidence says yes, moderately. A 2018 meta-analysis in the Journal of Learning Disabilities (Wood, Moxley, Tighe & Wagner) found text-to-speech and related read-aloud tools improved reading comprehension for students with reading disabilities, with an average effect size of .35. TTS is assistive, not a cure. It does not teach decoding, and it works best alongside proper reading instruction, not instead of it.",
+    "q": "Does text-to-speech cure dyslexia?",
+    "a": "No. It can provide spoken access to text, but it is not a cure or a substitute for reading instruction. Benefits and preferences vary, so test it with the learner and their actual task."
   },
   {
-    q: "Why does word highlighting matter for dyslexic readers?",
-    a: "Because it locks eyes and ears together. When each word lights up as it is spoken, the reader always knows exactly where they are in the text. No losing the line, no expensive re-finding after a glance away. The printed word is paired with its sound on every single word, which is exactly the connection dyslexia makes effortful.",
+    "q": "Is word highlighting essential?",
+    "a": "No single display is essential for every reader. Highlighting can show the current word or passage, but try it rather than assuming it improves everyone’s comprehension or decoding."
   },
   {
-    q: "Is LoudReader's word highlighting free?",
-    a: "Yes. Word-by-word highlighting works on every book on the free tier, and free listening is unlimited: whole books, cover to cover, with no word quota. What is paid: Premium adds all 23 studio narrators, playback speed control, sleep timer, soundscapes, and notes. After an 8-hour all-voices trial, free users keep one natural offline voice.",
+    "q": "How do I judge whether a tool helps?",
+    "a": "Use a representative passage, check understanding and ask about effort and comfort. Make sure the reader can pause and replay independently. For school accommodations, involve the relevant support team."
   },
   {
-    q: "What reading speed should a dyslexic student start with?",
-    a: "Start at normal speed (1.0x) or slower, and let comfort decide. The goal is comprehension, not throughput. Many readers nudge the speed up as the voice becomes familiar. In LoudReader, speed control from 0.3x to 3.0x is a Premium feature, and the free tier plays at normal speed.",
+    "q": "Is LoudReader speed control free?",
+    "a": "No. Speed adjustment from 0.3x to 3.0x is Premium. Basic book listening and read-along highlighting do not require Premium; voice availability changes after the initial allowance."
   },
   {
-    q: "Does LoudReader work for school PDFs and textbooks?",
-    a: "Yes, if the PDF has selectable text. LoudReader converts the text layer into its reader format, and the same word-by-word highlighting applies. The honest exception is scanned, image-only PDFs with no text layer. Those cannot be read aloud as-is. DRM-protected school platform books also cannot be imported.",
-  },
+    "q": "Can it read scanned school PDFs?",
+    "a": "It can attempt on-device OCR during PDF import. Check recognition and reading order against the original, and keep diagrams or equations available visually. DRM-protected platform books cannot be unlocked by the app."
+  }
 ];

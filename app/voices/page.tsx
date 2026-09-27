@@ -6,7 +6,7 @@ import StoreCta from "@/components/money/StoreCta";
 import VoiceRoster from "@/components/voices/VoiceRoster";
 import { ALL_VOICES, VOICE_LANGUAGES } from "@/data/voices";
 import { faqAnchor } from "@/app/faq/faq-data";
-import { APP_NAME, CLONING, SITE_URL, VOICES } from "@/components/money/site";
+import { APP_NAME, CLONING, FREE_TIER, PRIVACY, SITE_URL, VOICES } from "@/components/money/site";
 
 /*
  * /voices: every narrator, grouped by language, each one playable.
@@ -33,7 +33,7 @@ const languageCount = VOICE_LANGUAGES.length;
 const voiceCount = ALL_VOICES.length;
 
 const title = `All ${voiceCount} ${APP_NAME} Narrators: Hear Every Voice`;
-const description = `Listen to all ${voiceCount} offline narrators in ${APP_NAME}, across ${languageCount} languages — English, Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish. Every narrator reads in their own language. Play any of them right here, then ${CLONING.short}.`;
+const description = `Preview ${voiceCount} ${APP_NAME} studio narrators across ${languageCount} languages. Hear samples in each narrator's language, explore on-device voice cloning, and check voice availability in the app.`;
 
 export const metadata: Metadata = {
   title,
@@ -69,15 +69,16 @@ export default function VoicesPage() {
           Hear every narrator
         </h1>
         <p className="text-gray-600 text-[17px] leading-relaxed">
-          {APP_NAME} ships {VOICES.headline}, and all of them run entirely on
-          your device — no account, no connection, nothing sent anywhere. Press
-          play on any name below. Each narrator introduces themselves in the
-          language they read, because a Spanish book should get a narrator who
-          speaks Spanish, not an English voice with an accent.
+          {APP_NAME} offers {VOICES.headline}. Speech is generated on your
+          device; your books are not uploaded for narration. Press play on any
+          name below to hear a sample in that narrator&apos;s language.
         </p>
         <p className="text-gray-500 text-[15px] leading-relaxed">
-          In the app, {VOICES.lazyLanguages} — so the picker stays short while
-          this page shows the whole roster at once.
+          {VOICES.availability} In the app, {VOICES.lazyLanguages}, while this
+          page shows the studio roster at once.
+        </p>
+        <p className="text-gray-500 text-[15px] leading-relaxed">
+          {PRIVACY.summary}
         </p>
         <nav aria-label="Languages" className="flex flex-wrap gap-2 mt-2">
           {VOICE_LANGUAGES.map((language) => (
@@ -100,12 +101,11 @@ export default function VoicesPage() {
           Or clone your own
         </h2>
         <p className="mt-3 text-gray-600 text-[17px] leading-relaxed">
-          {CLONING.long} Then any book in your library can be read in that
-          voice — including the {voiceCount} above, which stay right where they
-          are.
+          {CLONING.long} Use your clone to narrate books in your library
+          alongside the studio voices available on your device.
         </p>
         <p className="mt-3 text-gray-500 text-[15px]">
-          Voice cloning is part of Premium.{" "}
+          {CLONING.trial}{" "}
           <Link
             href={`/faq#${faqAnchor(CLONING_QUESTION)}`}
             className="text-loudBlue hover:underline"
@@ -118,14 +118,14 @@ export default function VoicesPage() {
 
       <StoreCta
         headline={`Get ${APP_NAME} and hear them read a book`}
-        subline={`All ${voiceCount} narrators are free for your first 8 hours. After that the free tier keeps one natural voice, with unlimited listening.`}
+        subline={FREE_TIER.full}
         source="voices-cta"
       />
 
       <p className="text-[13px] text-gray-400 leading-relaxed">
-        These clips are rendered by the same on-device engine the app runs, from
-        the same narrator files it ships. What you hear here is what the app
-        reads with.
+        These clips are sample previews of the studio narrators. Playback in
+        the current app can differ with the text, language, voice settings and
+        app version. Check the in-app voice list for your device&apos;s options.
       </p>
     </MoneyPageLayout>
   );

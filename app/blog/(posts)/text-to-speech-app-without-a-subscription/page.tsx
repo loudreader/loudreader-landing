@@ -1,138 +1,51 @@
 import Link from "next/link";
-
-import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
-
+import { FREE_TIER, PRICING } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function NoSubscriptionArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          <strong>LoudReader</strong> has a free tier with no subscription at
-          all: {PRICING.free} If you want more than that, Premium adds{" "}
-          {PRICING.premiumFeatures}, and you can pay for it either as a
-          recurring plan ({PRICING.premiumMonthly} or {PRICING.premiumYearly}
-          ) or as a {PRICING.premiumLifetime} purchase that never renews. The
-          lifetime option exists specifically for people who don't want a
-          subscription: you pay once and the app is yours. No account is
-          required for either tier, and the free tier isn't a time-limited
-          trial, it's the permanent free version of the app.
-        </p>
+        <p>You can use LoudReader without a subscription: the free tier continues to read imported books after the introductory voice allowance ends. If you want Premium features without recurring billing, there is also a one-time lifetime purchase. These are different choices. Free listening has a limited English voice selection; Premium unlocks additional available narrators and controls. The monthly and yearly Premium plans do renew, so read the App Store purchase sheet before confirming one. A lifetime purchase avoids those renewal charges, but it should still be judged against the features you need and the devices you expect to use.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="offline"
-        caption="Free with no subscription, or a one-time price with no renewal."
-      />
-
-      <QuestionSection question="What does 'text to speech with no subscription' actually mean?">
-        <p>
-          People searching this usually mean one of two things: an app with a
-          genuinely free tier that isn't a trial in disguise, or an app that
-          offers a one-time purchase instead of forcing a recurring charge.
-          A lot of text-to-speech apps only offer the second thing after
-          making the first thing nearly unusable, gating basic listening
-          behind a word count that runs out in a chapter or two.
-        </p>
-        <p>
-          LoudReader answers both versions of the question. The free tier is{" "}
-          {PRICING.free} And Premium, if you want it, can be bought as a
-          one-time purchase instead of a subscription.
-        </p>
+      <ArticleIllustration variant="book-to-audio" caption="Compare what stays free with what the one-time purchase actually adds." />
+      <QuestionSection question="What stays free after the introductory allowance?">
+        <p>{FREE_TIER.full} The eight hours are cumulative listening time, not eight hours after you install the app. They are also not an eight-hour cap on book listening. After the allowance, supported devices keep Bella alongside your choice of Stella or Rio; older devices have the eligible lighter voice choice.</p>
+        <p>Ordinary book imports and whole-book listening remain unrestricted. Free playback runs at normal speed. Do not confuse those features with every optional workflow: article saving and bulk-import usage have their own limits, and additional controls are part of Premium.</p>
       </QuestionSection>
-
-      <QuestionSection question="What do you actually get for free, permanently?">
-        <p>
-          {PRICING.free} That's not a seven-day trial or a fixed word
-          allowance. You can import a book, read the entire thing, start
-          another one, and keep going, with{" "}
-          <Link href="/blog/best-free-text-to-speech-app" className="text-loudBlue hover:underline">
-            no subscription and no meter running out
-          </Link>
-          . {FREE_TIER.full} Free playback runs at normal speed. It's fully on-device
-          and private, your library never leaves your device, on the free
-          tier exactly as much as on Premium.
-        </p>
+      <QuestionSection question="What does the one-time purchase unlock?">
+        <p>Premium includes the full narrator selection available to your device, adjustable speed from 0.3× to 3.0×, a sleep timer, soundscapes and unlimited article saving. Voice Studio also has a trial creation allowance; Premium removes that creation quota. Notes and normal word highlighting are not Premium-only.</p>
+        <p>The lifetime option is a one-time Premium purchase. It is not ownership of the app&apos;s source code, a promise about future hardware support, or a purchase of the ebooks you import. The separate <a href="https://loudkit.loudreader.io/" className="text-loudBlue hover:underline">Loudkit framework</a> is open-source developer software; it is a different product.</p>
       </QuestionSection>
-
-      <QuestionSection question="What does Premium cost if you don't want a subscription?">
-        <p>
-          Premium adds {PRICING.premiumFeatures}. You can pay for that three
-          ways: {PRICING.premiumMonthly}, {PRICING.premiumYearly}, or a{" "}
-          {PRICING.premiumLifetime} purchase. The lifetime price is the
-          answer if a recurring charge is the thing you're trying to avoid.
-          Pay once, and there's no renewal date to remember and no
-          subscription to cancel later.
-        </p>
-        <p>
-          Worth saying plainly: the monthly and yearly options are, in fact,
-          subscriptions. LoudReader isn't pretending otherwise. The honest
-          pitch is that you have a real choice, including one that isn't a
-          subscription at all, which is more than most apps in this category
-          offer.
-        </p>
+      <QuestionSection question="How much does it cost?">
+        <p>At the US storefront prices checked on 28 September 2026, Premium is {PRICING.premiumMonthly}, {PRICING.premiumYearly}, or {PRICING.premiumLifetime}. Prices and available offers vary by storefront. The purchase sheet in the app gives the current price and terms for your account.</p>
+        <p>A subscription introductory offer, where available, is separate from the eight-hour voice allowance. Read what renews, when it renews and at what price. No LoudReader account is required, but App Store purchases use your Apple Account.</p>
       </QuestionSection>
-
-      <QuestionSection question="How does this compare to apps that only offer a subscription?">
-        <p>
-          Most text-to-speech apps in this category, including{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            the better-known ones
-          </a>
-          , structure pricing around a recurring plan with no meaningful free
-          option and no one-time alternative. If you read in bursts, a few
-          books over a couple of months and then nothing for a while, a
-          forced monthly subscription is a bad fit: you either pay for
-          months you don't use or cancel and lose your setup. LoudReader's
-          free tier covers casual reading without asking for a subscription
-          at all, and the lifetime price covers the other end, heavy readers
-          who want everything without an ongoing bill.
-        </p>
+      <QuestionSection question="When is a one-time purchase better value?">
+        <p>Use the billing option you would otherwise choose as the comparison. At those US prices, $199.99 is a little more than 25 payments of $7.99, or about four payments of $49.99. That arithmetic describes payments avoided; it does not predict how long you will use an app.</p>
+        <p>If the free voice selection already suits you, the cost of staying free is zero. If you are unsure about the Premium voices, file import or Mac compatibility, try those first. Paying once only helps when the product remains useful to you.</p>
       </QuestionSection>
-
-      <QuestionSection question="When does the lifetime price actually pay off?">
-        <p>
-          Simple math, not a sales pitch: {PRICING.premiumLifetime} divided by
-          {" "}{PRICING.premiumMonthly.replace("/month", "")} a month works out
-          to a little over two years of the monthly plan. If you expect to
-          use LoudReader Premium for longer than that, the lifetime price is
-          the cheaper choice as well as the one with no ongoing commitment.
-          If you're not sure yet whether you'll stick with it, the monthly
-          plan costs less to try and you can switch to lifetime later. Either
-          way, nothing about the free tier changes: it stays{" "}
-          {PRICING.free.toLowerCase()}
-        </p>
-        <p>
-          If you're weighing LoudReader against other apps on price at all,{" "}
-          <Link href="/speechify-alternative-for-mac" className="text-loudBlue hover:underline">
-            the full comparison
-          </Link>{" "}
-          covers voices, platforms, and privacy alongside cost.
-        </p>
+      <QuestionSection question="What should I check in any no-subscription app?">
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Does “free” mean a permanent tier, a timed trial, or a monthly allowance?</li>
+          <li>Which voices and languages remain available after the introductory period?</li>
+          <li>Does the one-time purchase cover the features and devices you need?</li>
+          <li>Are there separate charges or limits for characters, exports or other services?</li>
+          <li>Can you restore the purchase using the same store account?</li>
+        </ul>
+        <p>Compare the actual terms instead of assuming every competing app uses the same subscription model. For a broader route through the options, see <Link href="/blog/best-free-text-to-speech-app" className="text-loudBlue hover:underline">our free-app guide</Link>. The <Link href="/" className="text-loudBlue hover:underline">LoudReader home page</Link> shows the reader itself so you can judge the workflow as well as the billing.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Try it free, no subscription required"
-        subline="Unlimited listening on every book. Upgrade later with a one-time price if you want."
-      />
+      <StoreCta headline="Try listening before choosing a plan" subline="Start with a book and the available voices. Premium is optional." />
     </ArticleLayout>
   );
 }

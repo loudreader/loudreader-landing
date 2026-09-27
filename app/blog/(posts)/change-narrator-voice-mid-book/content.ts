@@ -1,52 +1,19 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - LoudReader/ReaderView.swift, toggleVoice(): the player control button
-//     cycles to the next unlocked voice within the book's own language on a
-//     tap. Comment: "The one-tap cycle stays inside the language of the
-//     BOOK... a tap could hand an English novel to a Spanish narrator, a
-//     change nobody asked for and no obvious way back."
-//   - LoudReader/ReaderView.swift, voiceMenuContent: a long press on the same
-//     button opens a full picker, grouped by language, with a checkmark on
-//     the active voice; tapping any unlocked voice in a DIFFERENT language
-//     from the book triggers a confirm alert ("Read this book in
-//     [language]?") before switching, rather than switching silently.
-//   - LoudReader/ReaderView.swift, displayedVoiceIdentifier: comment reads
-//     "Playback voice transition still occurs on the next sentence" -
-//     confirms the new voice does not interrupt the sentence being read, it
-//     takes over starting the next one.
-//   - LoudReader/ReaderView.swift, voiceMenuContent: an unlocked-for-Premium
-//     voice tapped on the free tier calls
-//     subscriptionManager.presentPaywall(.voiceSelection) instead of
-//     switching, so locked voices are visible but gated, not hidden.
-//   - components/money/site.ts (VOICES, FREE_TIER, PRICING): all voices are
-//     available for eight hours, then one chosen voice with unlimited listening;
-//     Premium keeps all 23 studio narrators available afterward
-//     across 10 languages.
-// Claim NOT made: whether switching mid-sentence is possible (it is not -
-// the app finishes the current sentence in the old voice by design).
+// FACT PROVENANCE — editorial review 2026-09-28.
+//   - LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), source audit 2026-09-28, not a runtime test.
+//     Product facts: SubscriptionAccess.swift / SubscriptionManager.swift / PaywallReason.swift (trial and gates),
+//     VoiceRegistry.swift / ChatterboxVoice.swift / DeviceCapability.swift (roster and support),
+//     PDFImportPipeline.swift (on-device OCR), Xcode iOS target (Mac compatibility).
+//   - LoudReader/ReaderView.swift at release_v1.12 inspected 2026-09-28: lines189–192 selection display vs next sentence,1746–1792 voice cycle and picker,607+ foreign-language confirmation
+//   - LoudReader/TTSPreferences.swift at release_v1.12: app-wide selectedVoiceIdentifier UserDefaults setting
+// Practical listening checks are editorial suggestions, not measured learning outcomes.
+// No universal quality ranking, listening-speed threshold, or clinical benefit is claimed.
 
 import type { Faq } from "@/components/money/FaqSection";
-import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
-  {
-    q: "Can you change the narrator voice partway through a book?",
-    a: "Yes. LoudReader lets you switch narrators from inside the player at any point while reading, not just before you start. There's a voice button in the player controls: tap it to cycle to the next voice, or press and hold it to open a full picker of every narrator, grouped by language, with a checkmark on the one currently reading to you.",
-  },
-  {
-    q: "Does the new voice start immediately or wait for the chapter to end?",
-    a: "It starts on the next sentence, not the next chapter. The sentence already playing finishes in the old voice, and the very next one picks up in the new voice, so there's no need to wait or rewind to a chapter break.",
-  },
-  {
-    q: "Can I switch to a narrator in a different language?",
-    a: "You can, but LoudReader checks with you first. Picking a narrator whose language differs from the book's own language shows a confirmation prompt asking whether you actually want to read the book in that language, rather than switching instantly. This exists because language detection can be wrong, and being read to in an unexpected language partway through a chapter is jarring.",
-  },
-  {
-    q: "Do I need Premium to switch narrators mid-book?",
-    a: `Not during your first eight hours: you can switch among all 23 studio narrators for free; ${FREE_TIER.afterTrial}. Switching to another studio narrator after the trial requires Premium; tapping a locked voice in the picker opens the paywall rather than switching.`,
-  },
-  {
-    q: "Will switching voices lose my place in the book?",
-    a: "No. Switching narrators changes only which voice reads to you. Your position in the book, your notes, and your listening history are untouched.",
-  },
+  { q: "Can I change narrator partway through a book?", a: "Yes. Tap the reader’s voice control to cycle through accessible voices for the book’s language, or press and hold to choose from the picker. You do not need to restart the book." },
+  { q: "Why do I still hear the old voice immediately after choosing another?", a: "The selection display changes immediately, but narration switches at the next sentence. The sentence already playing finishes in the previous voice." },
+  { q: "Does choosing a voice in another language translate the book?", a: "No. It changes the narrator, not the written text. The picker asks for confirmation if the selected voice language differs from the book’s language." },
+  { q: "Do I need Premium for every mid-book voice change?", a: "No. You can switch among voices your access allows. After the trial, the free selection is Stella or Rio, with Bella also available on supported devices. Locked studio voices require Premium." },
+  { q: "Is the chosen voice saved separately for each book?", a: "No. The selected narrator is an app-wide preference. Changing it affects subsequent listening until you switch again." },
 ];

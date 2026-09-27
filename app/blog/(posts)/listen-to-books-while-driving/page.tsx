@@ -5,181 +5,49 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ListenToBooksWhileDrivingArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          If the book you want has an audiobook edition, an audiobook store or
-          a library app is the easiest way to listen in the car. The gap is
-          every book that doesn&apos;t: most books you own as EPUB or PDF files
-          were never recorded at all. A text-to-speech reader closes that gap.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
-          DRM-free EPUB or PDF into an audiobook with natural offline voices.
-          It is fully on-device and private, your library never leaves your
-          device, so playback doesn&apos;t care about tunnels or dead zones on
-          your route. Set everything up before you drive: import the book,
-          press play, lock the screen. Playback continues, and play, pause,
-          and 15-second skips work from the lock screen and your car&apos;s
-          Bluetooth controls.
-        </p>
+        <p>Choose and test your audio while safely parked, then put the phone away before driving. Use an audiobook recording or a TTS reader for a compatible ebook, and pause whenever the story competes with attention to the road. LoudReader can generate narration on an iPhone and play through its connected audio output with the screen locked. It has no dedicated CarPlay interface. Bluetooth controls depend on the vehicle and connection, so test them first. Offline playback is useful on a route with poor signal, but neither hands-free controls nor a familiar road makes listening free of distraction.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="drive"
-        caption="Your commute is reading time, no connection required."
-      />
+      <ArticleIllustration variant="drive" caption="Choose the book and test the controls while safely parked." />
 
-      <QuestionSection question="What are your options for listening to books in the car?">
-        <p>
-          There are three honest routes, and they complement each other rather
-          than compete:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Commercial audiobooks.</strong>{" "}
-            Stores and streaming services like Audible, Apple Books, and
-            Spotify offer professionally narrated recordings. When the book
-            you want exists as an audiobook and a human performance matters to
-            you, this is the premium option. You pay per book or through a
-            subscription.
-          </li>
-          <li>
-            <strong className="text-gray-900">Library apps.</strong> Apps like
-            Libby and Hoopla let you borrow audiobooks free with a library
-            card. The catalog depends on your library and popular titles often
-            have waiting lists, but the price is unbeatable.
-          </li>
-          <li>
-            <strong className="text-gray-900">Text-to-speech.</strong> For
-            books that have no audiobook edition, or books you already own as
-            files, a TTS reader narrates the text itself. This is the route
-            the rest of this guide covers, because it is the one that works
-            for <em>any</em> book.
-          </li>
-        </ul>
+      <QuestionSection question="Should I use a recording or text-to-speech?">
+        <p>A recording is convenient when you already have the audiobook in your usual player. TTS is another route when you have an accessible ebook, including one without a recording you want to use. Pick the option whose playback and controls you understand before the journey.</p><p>For LoudReader, use a DRM-free EPUB or PDF and inspect its first pages at home. A complex layout or mispronounced name is something to resolve before driving, not a reason to open the reader in traffic. The <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import guide</Link> covers this step.</p>
       </QuestionSection>
 
-      <QuestionSection question="What if your book has no audiobook edition?">
-        <p>
-          This is the real gap in car listening. Only a small fraction of
-          books ever get a recorded edition. Backlist titles, technical
-          books, niche non-fiction, self-published novels, public-domain
-          classics, and the EPUBs and PDFs already sitting in your files
-          mostly never will. If your reading list lives in those categories,
-          no audiobook store can help you.
-        </p>
-        <p>
-          A text-to-speech reader can.{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          reads any DRM-free EPUB or PDF aloud with natural offline voices,
-          highlights each word as it goes, and remembers your place, so the
-          book behaves like an audiobook from the moment you import it. There
-          is no conversion step and no audio files to manage; the narration is
-          generated live on your device. The full walkthrough is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          , but the short version is: import the file, press play.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you set up LoudReader before you drive?">
-        <p>
-          Everything on this list happens <strong>before</strong> you start
-          the engine. That is the whole safety model, and it takes about a
-          minute:
-        </p>
+      <QuestionSection question="What should I check while safely parked?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone (iOS 18+). Free, no account.
-          </li>
-          <li>
-            Import the book. Share an EPUB or PDF to LoudReader from the
-            Files app, Safari, or Mail, or pick one of the 70,000+ free
-            Project Gutenberg classics built in.
-          </li>
-          <li>
-            Connect your phone to the car&apos;s audio the way you would for
-            music or podcasts, over Bluetooth or a cable. LoudReader plays
-            through whatever your iPhone is connected to, like any audio app.
-            (One honest note: there is no dedicated CarPlay app today.)
-          </li>
-          <li>
-            Press <strong>play</strong>, then lock the screen and put the
-            phone away. Playback continues, and the lock screen shows play,
-            pause, and 15-second skip controls; play/pause also works from
-            standard Bluetooth controls such as steering-wheel buttons.
-          </li>
-        </ol>
+          <li>Open the book and set a comfortable voice, pace and volume. Choose material you can leave unfinished if the road needs your attention.</li>
+          <li>Connect the iPhone to the car audio and verify which output is active. Test a short passage.</li>
+          <li>Test pause on the vehicle’s supported media control. Standard Bluetooth commands can work, but exact buttons and skip behaviour vary.</li>
+          <li>Lock the phone and put it away. Check that narration continues before setting off.</li>
+          <li>If playback needs troubleshooting during the trip, leave it paused until you are safely parked again.</li>
+        </ol><p>LoudReader supports background audio and system media controls. Those do not amount to a dedicated CarPlay app or a promise that every car displays the same controls.</p>
       </QuestionSection>
 
-      <QuestionSection question="What happens in tunnels and dead zones?">
-        <p>
-          Nothing, and that is the point. LoudReader&apos;s voices run
-          entirely on your iPhone, so there is no stream to drop. The app is
-          fully on-device and private, your library never leaves your device,
-          so the narration keeps going through tunnels, parking garages,
-          rural stretches, and airplane mode. If your commute has a dead zone
-          that reliably kills streaming audio, an on-device reader simply does
-          not have that failure mode.
-        </p>
+      <QuestionSection question="How do I prepare for a route with no signal?">
+        <p>Install and open the app, import the book and load the voice before travelling. While still parked, disable your connection briefly and test the exact book and voice you intend to use. Local synthesis means an existing, ready-to-use book does not need a speech stream from a server.</p><p>Downloads, purchases and other services may need a connection. “Offline narration” does not mean the entire application never uses the network. Keep enough battery for the journey and any other phone functions you need.</p>
       </QuestionSection>
 
-      <QuestionSection question="How do you keep it safe and legal?">
-        <p>
-          The honest version, without pretending to be legal advice:
-          listening to audio while driving is generally treated like
-          listening to the radio and is legal in most places. What traffic
-          laws actually restrict is <em>handling your phone</em>. Many
-          jurisdictions ban handheld phone use outright, and the rules differ
-          by country and state, so check what applies where you drive.
-        </p>
-        <p>The practical rules that keep you inside both the law and common sense:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Set up the book, the voice, and the volume before you drive.</li>
-          <li>
-            Control playback only from the lock screen, your car&apos;s
-            buttons, or not at all. Never unlock the phone in traffic.
-          </li>
-          <li>Pull over if you want to switch books or change settings.</li>
-          <li>
-            Keep the playback speed comfortable enough that following the
-            book takes no effort. The road always wins the attention
-            contest.
-          </li>
-        </ul>
+      <QuestionSection question="Can I use the lock screen while driving?">
+        <p>Keep the phone out of your hands. In the UK, <a href="https://www.gov.uk/using-mobile-phones-when-driving-the-law" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">GOV.UK guidance</a> says holding and using a phone while driving is illegal, including at traffic lights and in queues. A locked screen or offline mode does not create an exemption. Hands-free use also does not remove the duty to stay in control.</p><p>Rules vary by country and region, so check the official guidance where you drive. For this setup, make phone changes only when safely parked. If even a supported car control would distract you, leave it alone and stop listening when you can do so safely.</p>
+      </QuestionSection>
+
+      <QuestionSection question="What if the book needs too much attention?">
+        <p>Pause it. Complex junctions, poor conditions, navigation decisions or a demanding story are reasons to prioritise the road. Do not increase speed or choose denser material just because a route is familiar. Missing a passage is inconsequential compared with missing something on the road.</p><p>For listening without the driving task, consider <Link href="/blog/listen-to-books-while-walking" className="text-loudBlue hover:underline">a suitable walk</Link> or a quiet break. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> saves a playback position so the book can wait until a better moment.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Turn your drive into reading time"
-        subline="Import any EPUB or PDF and press play before you pull out. Free, on-device, no account."
-      />
     </ArticleLayout>
   );
 }

@@ -1,38 +1,41 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Lock-screen controls via MPRemoteCommandCenter: PlayerService.swift
-//     configures play, pause, toggle, skip forward/backward (15 sec).
-//   - Background audio: Info.plist UIBackgroundModes = ["audio"].
-//   - Bluetooth controls: same MPRemoteCommandCenter responds to standard
-//     Bluetooth play/pause commands.
-//   - On-device voices: speech synthesis runs locally, no internet.
-//   - Pricing: components/money/site.ts PRICING.
-//   - Free tier unlimited listening: SubscriptionAccess.swift
-//     baseFreeFraction = 1.0.
-// Claims you may NOT make: any gym performance benefit, fitness statistics,
-// or that audiobooks improve workout quality (no verified source).
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Can I actually focus on a book during a workout?",
-    a: "It depends on the exercise. Steady cardio like the treadmill, elliptical, or stationary bike is ideal: your body runs on autopilot and your brain follows the book. Heavy lifts where you need to count reps and focus on form are tougher. A good approach: listen during warm-up, cardio, and cool-down. Switch to music during your big sets.",
+    "q": "Can I listen during heavy lifts?",
+    "a": "Pause whenever the lift, counting, form or instructions need your concentration. You can keep the book for another part of the session."
   },
   {
-    q: "Does LoudReader work with gym WiFi that requires a sign-in?",
-    a: "It does not matter. LoudReader runs fully on-device and private, your library never leaves your device, and the voices work with no internet connection at all. Captive portal WiFi, spotty gym signal, or airplane mode. None of it affects playback.",
+    "q": "Does gym Wi-Fi matter?",
+    "a": "Not for prepared offline playback. Download the recording or import the book and required local voice resources first."
   },
   {
-    q: "Can I control playback from my watch or headphones?",
-    a: "Bluetooth headphone controls work for play and pause. The lock screen on your iPhone shows play, pause, and 15-second skip. Apple Watch integration specifically for LoudReader is not a current feature, but the standard Now Playing controls on the watch work for pausing and resuming like any audio app.",
+    "q": "Will every headphone gesture work?",
+    "a": "No universal mapping is promised. Test play/pause and skip functions on your own device and headphones."
   },
   {
-    q: "What kind of books actually work at the gym?",
-    a: "Action-heavy fiction, thrillers, and fast-paced narrative non-fiction tend to pair best with a workout. The pacing matches the energy. Dense philosophy or technical material is harder because your attention is split. If you would read it on a plane, it works at the gym. If you would read it with a highlighter at a desk, it probably does not.",
-  },
-  {
-    q: "Does the free tier actually let me listen to whole books?",
-    a: "Yes. LoudReader's free tier is unlimited listening on every book, cover to cover. No word quota, no time limit, no account required. Premium adds all 23 studio narrators, speed control (0.3x to 3.0x), sleep timer, soundscapes, and notes.",
-  },
+    "q": "Does listening improve my workout?",
+    "a": "This article makes no fitness or performance claim. It describes an optional way to spend time with a book."
+  }
 ];

@@ -1,9 +1,10 @@
 {
   "slug": "reduce-screen-time-with-audiobooks",
   "title": "How to Reduce Screen Time by Listening to Books",
-  "description": "Swap eye time for ear time. LoudReader turns your EPUBs and PDFs into audiobooks with natural offline voices, so you can close your eyes and keep reading.",
+  "description": "Move a chosen reading session off the display, test background playback and check whether your total screen use changes. Keep the goal specific.",
   "publishedAt": "2026-08-07",
-  "lastModified": "2026-08-07",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "reduce screen time reading"
+  "query": "reduce screen time reading",
+  "topic": "reading"
 }

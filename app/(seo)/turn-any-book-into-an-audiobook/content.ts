@@ -1,3 +1,5 @@
+// LoudReader product facts refreshed against release_v1.12 on 2026-09-28.
+// See docs/product-facts-2026-09-28.md. Older third-party check dates below remain unchanged.
 // Local content constants for /turn-any-book-into-an-audiobook.
 // One page = one file pair (page.tsx + content.ts) + meta.json.
 // See docs/money-page-contract.md for the contract.
@@ -19,16 +21,17 @@
 
 import type { ComparisonRow } from "@/components/money/ComparisonTable";
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER, PRICING } from "@/components/money/site";
 
 export const SLUG = "turn-any-book-into-an-audiobook";
 
-export const LAST_UPDATED = "2026-07-14";
+export const LAST_UPDATED = "2026-09-28";
 export const FACTS_CHECKED_NOTE =
-  "Product facts checked against the App Store listing and loudreader.io on July 14, 2026";
+  "LoudReader 1.12 product facts checked September 28, 2026";
 
 export const PAGE_TITLE = "Turn Any Book Into an Audiobook on Mac & iPhone";
 export const PAGE_DESCRIPTION =
-  "Turn any DRM-free EPUB or PDF into an audiobook in about a minute: import it into LoudReader and press play. Natural offline voices, no file conversion, no uploads.";
+  "Listen to DRM-free EPUBs and PDFs in LoudReader with local narration, saved progress and word highlighting. Compare real-time speech with recorded audiobooks.";
 
 export const H1 = "How to turn any book into an audiobook";
 
@@ -59,7 +62,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Cost per book",
     cells: [
-      "Free tier: unlimited listening on every book; Premium from $7.99/month",
+      `Free book listening. ${FREE_TIER.full} Premium ${PRICING.premiumMonthly} in the US`,
       "Typically purchased per title or via subscription credits",
     ],
   },
@@ -73,7 +76,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Privacy",
     cells: [
-      "Fully on-device and private, your library never leaves your device; no account",
+      "No account or book upload for narration; diagnostics and usage analytics also run",
       "Store account required; purchases tracked to it",
     ],
   },
@@ -86,19 +89,19 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
 export const FAQS: Faq[] = [
   {
     q: "How do I turn a book into an audiobook?",
-    a: "Install LoudReader on your Mac or iPhone, import the book (any DRM-free EPUB or PDF, shared from Files, Safari, or Mail, or added with the import button), and press play. Natural offline voices read it aloud in real time with word-by-word highlighting. There's no file conversion and nothing to export.",
+    a: "Install LoudReader on iPhone or iPad, or its iPad build on a compatible Apple Silicon Mac. Import a DRM-free EPUB or PDF, wait for processing, choose an available voice and press Play. No separate MP3 export is required.",
   },
   {
     q: "Do I need to convert my EPUB or PDF into MP3 files?",
-    a: "No. LoudReader narrates the book in real time on your device, so there are no audio files to generate or keep in sync. You keep the highlighting, your reading position, and the ability to switch voice or speed whenever you want.",
+    a: "No. LoudReader generates narration on your device while you listen, so you do not have to export an audiobook. It still uses storage for voice resources, imported documents and cached audio. Available voices depend on your device and tier; playback-speed control is Premium.",
   },
   {
     q: "Can I turn Kindle books into audiobooks?",
-    a: "Not directly. Kindle purchases are locked with DRM, and LoudReader can't open DRM-protected files. It reads standard, DRM-free EPUBs and PDFs. Any legitimate text-to-speech reader has the same limit.",
+    a: "Not directly. Kindle purchases are locked with DRM, and LoudReader can't open DRM-protected files. It reads standard, DRM-free EPUBs and PDFs. For protected purchases, check the store app’s own reading and accessibility features.",
   },
   {
     q: "Is it free to turn a book into an audiobook this way?",
-    a: "Yes. The free tier includes unlimited listening on every book, cover to cover, with no word quota and no account, plus 70,000+ free Project Gutenberg classics built in. Premium adds all 23 studio narrators, playback speed (0.3x to 3.0x), a sleep timer, soundscapes, and notes & highlights for $7.99/month, $49.99/year, or $199.99 once.",
+    a: `Yes. ${FREE_TIER.full} Premium adds ${PRICING.premiumFeatures}. US prices are ${PRICING.premiumMonthly}, ${PRICING.premiumYearly} or ${PRICING.premiumLifetime}; storefront prices can vary.`,
   },
   {
     q: "How long does a book take to listen to?",

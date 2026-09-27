@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-google-docs-aloud",
   "title": "How to Listen to Google Docs Aloud",
-  "description": "Google Docs doesn't have a built-in read-aloud feature. Export your doc as PDF or EPUB, then import into LoudReader to hear it with natural offline voices on iPhone or Mac.",
+  "description": "Listen in Google Docs with eligible Gemini audio features, or export a snapshot to LoudReader for local playback and a practical proofreading workflow.",
   "publishedAt": "2026-08-27",
-  "lastModified": "2026-08-27",
+  "lastModified": "2026-09-28",
   "avatar": "Writer Proofreading by Ear",
-  "query": "listen to google docs"
+  "query": "listen to google docs",
+  "topic": "formats"
 }

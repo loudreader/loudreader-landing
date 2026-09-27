@@ -1,33 +1,41 @@
-import { FREE_TIER } from "@/components/money/site";
-
-// FACT PROVENANCE. All app-behavior claims verified against the LoudReader app
-// source (LoudReader_mac repo, main branch). Pricing and features from
-// components/money/site.ts (single source of truth).
-// Claims about competing apps and TTS voice quality are general descriptions
-// based on publicly available information as of late 2026.
-// No invented stats, voice quality studies, or testimonials.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Can any TTS voice sound like a real person?",
-    a: "The best modern neural voices can sound extremely close to a human reading aloud, especially for non-fiction and informational content. They handle pacing, sentence flow, and basic expression well. But they do not perform. A narrated novel with character voices and emotional range is still beyond what TTS does. It reads; it does not act.",
+    "q": "Can a natural voice still make mistakes?",
+    "a": "Yes. Smooth delivery can hide mispronunciations, number errors or incorrect extracted text. Compare difficult passages with the original."
   },
   {
-    q: "Does 'natural' mean the same thing across apps?",
-    a: "No. Every app picks its own voices and voice engine. Some use cloud processing for richer expressiveness. Others use on-device engines that are slightly less expressive but work offline and cost nothing per word. 'Natural' is a marketing word, not a technical standard. The only reliable way to judge is to listen.",
+    "q": "Are cloud voices always better than offline voices?",
+    "a": "No universal ranking is claimed here. Compare the particular voice, language and text that matter to you."
   },
   {
-    q: "Do free apps have natural-sounding voices?",
-    a: `It depends. Apple's built-in Spoken Content voices have improved dramatically and sound natural for short-form listening. LoudReader offers unlimited book listening. ${FREE_TIER.full} Cloud-based apps like Speechify and NaturalReader offer higher-quality natural voices in their paid tiers.`,
+    "q": "Do browser samples run LoudReader’s engine?",
+    "a": "No. They play sample audio. Use the app with your own text to judge the complete reading workflow."
   },
   {
-    q: "Why do cloud-based voices sometimes sound better?",
-    a: "Cloud servers have more processing power and can run larger, more complex voice models. They can add subtle expressiveness that on-device engines skip to stay efficient. The trade-off is that cloud voices need internet, your text leaves your device, and the developer pays per word, which is why those apps tend to have word quotas.",
-  },
-  {
-    q: "Do I need premium voices for book-length listening?",
-    a: `Not necessarily. LoudReader's free voice is a neural voice optimized for reading. Many users listen to full novels with it comfortably. ${FREE_TIER.full} Premium keeps the complete narrator roster available after the trial, but the free voice is not a robotic placeholder. It is a real, natural-sounding voice.`,
-  },
+    "q": "Must I pay for comfortable long-form listening?",
+    "a": "Not necessarily. Try the available free choices before paying for a voice or feature. Personal preference and device support matter."
+  }
 ];

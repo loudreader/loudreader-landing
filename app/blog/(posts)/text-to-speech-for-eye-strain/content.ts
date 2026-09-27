@@ -1,39 +1,35 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-11-01 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Word-by-word highlighting: free, not gated (ReaderStylesheet.swift +
-//     HighlightSchedule.swift).
-//   - Background playback / lock screen: Info.plist UIBackgroundModes = ["audio"];
-//     MPRemoteCommandCenter in PlayerService.swift (play, pause, 15s skip).
-//   - On-device voices: Apple speech synthesis, no cloud dependency.
-//   - Speed 0.3x to 3.0x: Premium (PaywallReason.playbackSpeed).
-//   - Sleep timer: Premium (PaywallReason.sleepTimer).
-//   - Soundscapes: Premium (PaywallReason.soundscapes).
-//   - Free tier unlimited listening: SubscriptionAccess.swift.
-// NO claims about: medical advice for eye conditions, ergonomic certifications,
-// blue-light filtering, or clinical claims about eye strain reduction.
-// Eye strain discussion is practical and experiential, not clinical.
+// EDITORIAL REVIEW — 2026-09-28. Sources for the material revision:
+// - LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), SubscriptionAccess.swift, SubscriptionManager.swift and PaywallReason.swift — free voice allowance, unrestricted book listening, speed/timer gates and free notes; checked via canonical 2026-09-28 source audit and PaywallReason source inspection.
+// - LoudReader_mac release_v1.12, PDFImportPipeline.swift:150–218 — OCR fallback, 300-page OCR cap and reported partial results; inspected 2026-09-28.
+// - LoudReader_mac release_v1.12, Info.plist, PlayerService.swift and app target — background audio and iPad-app compatibility on Apple Silicon, not a native Mac build; canonical source audit 2026-09-28.
+// - LoudReader_mac release_v1.12, LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local narration plus Sentry diagnostics/TelemetryDeck analytics; no exposed analytics opt-out is promised. Source audit 2026-09-28; no independent network audit.
+// - https://www.nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work/keep-your-eyes-healthy — 20-20-20 guidance; checked 2026-09-28.
+// - https://aao.org/eye-health/tips-prevention/blue-light-digital-eye-strain — prolonged device discomfort and screen adjustments; checked 2026-09-28.
+// - https://www.nhs.uk/symptoms/dry-eyes/ — seek care for persistent symptoms; checked 2026-09-28.
+// Practical routines are suggestions, not measured learning or medical outcomes.
+// No unpublished future-verification dates, independent runtime tests or network audit are claimed.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does listening instead of reading actually reduce eye strain?",
-    a: "Subjectively, yes, and the logic is straightforward: eye strain comes from focusing on a screen or page for hours. Switching to audio removes the visual focus entirely. Your eyes can rest, close, or look at something distant while the book continues. It is not a medical treatment, it is just giving your eyes the break they are asking for.",
+    "q": "Does text-to-speech cure eye strain?",
+    "a": "No. It can let you access text without continually viewing it, but it does not identify or treat the cause of eye symptoms. Get eye-care advice for persistent or recurring discomfort."
   },
   {
-    q: "When in the day should I switch to listening?",
-    a: "Most screen-heavy workers find the last hour or two of the day is when their eyes protest the loudest. Switching to audio for evening reading lets you finish the chapter without pushing through discomfort. Some people also use listening for the post-lunch slump, when focus dips and staring at text feels heavier than usual.",
+    "q": "Can I replace regular screen breaks with audio?",
+    "a": "Audio can be one way to spend time away from a visible document, but it should not become a reason to skip breaks or keep working when you need rest. Continuing to scroll another screen does not meet that aim."
   },
   {
-    q: "Can I listen with the screen off?",
-    a: "Yes. On iPhone, playback continues with the screen locked, and lock-screen controls give you play, pause, and 15-second skip. On Mac, you can minimize the app or turn off the display. The voices run locally, so no connection is needed. This is the core use case: the book in your ears while your eyes get the rest of the night off.",
+    "q": "What documents work well without a screen?",
+    "a": "Try continuous prose first. Keep the original available for charts, tables, equations and important details that require visual verification."
   },
   {
-    q: "What if I get eye strain from work but still want to read at night?",
-    a: "That is exactly the gap text-to-speech fills. You spent eight hours on a work screen. Reading for pleasure should not feel like overtime for your eyes. Import your book into LoudReader, pick a comfortable voice, and listen. The iPhone, iPad, and Mac apps give you the same experience on whatever device is nearby when your eyes give out.",
+    "q": "Can LoudReader continue with the screen locked?",
+    "a": "Yes, on iPhone and iPad. Prepare the book and voice beforehand and test pause and resume. Background listening is separate from the Premium sleep timer and speed controls."
   },
   {
-    q: "Does the sleep timer help?",
-    a: "Yes, and it is a Premium feature. Set the timer for 30 or 60 minutes, listen in the dark, and the narration fades out on its own. Combined with ambient soundscapes (also Premium), it is a way to read before sleep without any light hitting your eyes at all.",
-  },
+    "q": "Does local speech make every work document appropriate to import?",
+    "a": "No. Follow your organisation’s policies. Local narration means books are not uploaded for speech generation; the app also has diagnostics and analytics, and that is not a compliance certification."
+  }
 ];

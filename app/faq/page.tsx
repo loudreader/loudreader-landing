@@ -7,7 +7,7 @@ import FAQItem from "./FAQItem";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers about LoudReader: importing EPUB and PDF books, on-device text-to-speech, offline listening, voices, Premium pricing, and privacy.",
+    "Answers about LoudReader: EPUB, PDF and web article imports, scan recognition, offline voices, free listening, Premium pricing, and app diagnostics.",
   alternates: { canonical: "/faq" },
 };
 

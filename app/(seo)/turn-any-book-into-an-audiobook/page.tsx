@@ -8,7 +8,7 @@ import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, MAC, PRICING, PRIVACY, VOICES } from "@/components/money/site";
 
 import {
   COMPARISON_COLUMNS,
@@ -41,16 +41,15 @@ export default function TurnAnyBookIntoAnAudiobookPage() {
 
       <Tldr>
         <p>
-          You can turn any book you own into an audiobook in about a minute,
-          with no file conversion and no waiting for a narrator. Install{" "}
+          You can listen to a supported DRM-free ebook without first exporting
+          a separate audiobook file. Install{" "}
           <strong>LoudReader</strong> (iPhone, iPad, and Mac), import the
           book (any DRM-free EPUB or PDF), and press play: natural offline
           voices read it aloud in real time while each word highlights on the
           page. There&apos;s nothing to export and no MP3 files to manage. The
-          app narrates the actual book and remembers your place. It&apos;s
-          fully on-device and private, your library never leaves your device.
+          app narrates the actual book and remembers your place. The book is not uploaded to a speech service for narration.
           The free tier includes unlimited listening on every book, cover to
-          cover, plus 70,000+ free Project Gutenberg classics built in. Two
+          cover, plus in-app browsing and downloading of 70,000+ Project Gutenberg titles, subject to local copyright. Two
           honest limits: DRM-locked purchases (like Kindle books) can&apos;t be
           imported, and a human narrator&apos;s performance is still better
           art.
@@ -86,7 +85,7 @@ export default function TurnAnyBookIntoAnAudiobookPage() {
           That&apos;s the whole process. The book behaves like an audiobook
           from then on: playback continues with the screen locked on iPhone,
           your position is saved automatically, and on Premium you can switch
-          among all 23 studio narrators and adjust speed from 0.3x to 3.0x.
+          among the studio narrators available on your device and adjust speed from 0.3x to 3.0x.
         </p>
       </QuestionSection>
 
@@ -99,11 +98,10 @@ export default function TurnAnyBookIntoAnAudiobookPage() {
           narration live, on your device, as you listen.
         </p>
         <p>
-          Real-time narration is genuinely better than exported audio files.
+          Real-time narration keeps the reading controls tied to the text.
           The text and audio stay together (so you get word-by-word
           highlighting and can switch between reading and listening
-          mid-chapter), you can change the voice or speed at any moment, and a
-          12-hour book takes zero storage beyond the book itself.
+          mid-chapter). You can choose an available voice; playback-speed control is Premium. The app generates speech as needed, and voice resources and cached audio still use storage.
         </p>
       </QuestionSection>
 
@@ -113,14 +111,10 @@ export default function TurnAnyBookIntoAnAudiobookPage() {
           and LoudReader can&apos;t open DRM-protected files. It reads
           standard, DRM-free EPUBs and PDFs, the formats you get from DRM-free
           stores, direct-from-author sales, technical publishers, your own
-          documents, and public-domain libraries. Any legitimate
-          text-to-speech reader has the same limitation.
+          documents, and public-domain libraries. Check the store app’s own reading and accessibility features for protected purchases.
         </p>
         <p>
-          The good news is how much DRM-free reading exists. LoudReader ships
-          with the entire Project Gutenberg catalog (70,000+ classics, free),
-          and many publishers and authors sell EPUBs without DRM precisely so
-          you can read them in the app of your choice.
+          LoudReader’s catalog lets you browse and download 70,000+ Project Gutenberg titles, subject to local copyright. Many publishers and authors also sell EPUBs without DRM so you can use a compatible reader of your choice.
         </p>
       </QuestionSection>
 
@@ -151,57 +145,22 @@ export default function TurnAnyBookIntoAnAudiobookPage() {
       </QuestionSection>
 
       <QuestionSection question="Is it private to listen to my own books this way?">
-        <p>
-          Completely. LoudReader is fully on-device and private, your library
-          never leaves your device. The speech engine runs locally, so nothing
-          you read is uploaded, and the app works in airplane mode.
-          There&apos;s no account and no sign-up. That extends beyond novels:
-          manuscripts, contracts, and work documents get the same treatment.
-          See{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text to speech with no cloud
-          </Link>{" "}
-          for details, or the{" "}
-          <Link href="/privacy" className="text-loudBlue hover:underline">
-            privacy policy
-          </Link>{" "}
-          for the two-minute read. And if the book you want to hear is a PDF
-          on your phone, the{" "}
-          <Link
-            href="/listen-to-pdf-iphone"
-            className="text-loudBlue hover:underline"
-          >
-            listen to a PDF on iPhone
-          </Link>{" "}
-          guide walks through it.
-        </p>
+        <p>Narration is generated locally, without uploading the book to a speech service. {PRIVACY.summary}</p>
+        <p>The <Link href="/privacy" className="text-loudBlue hover:underline">privacy policy</Link> explains diagnostics and analytics. For PDF import, see the <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">iPhone PDF guide</Link>.</p>
       </QuestionSection>
 
       <QuestionSection question="What does it cost?">
-        <p>
-          The free tier is the audiobook part: unlimited listening on every
-          book, cover to cover, with no word quota, an unlimited library,
-          word-by-word highlighting, and the full Project Gutenberg catalog.
-          Every voice is free for your first 8 hours; after that, free users
-          keep the default voice. Premium adds all 23 studio narrators, playback speed
-          (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes
-          &amp; highlights for $7.99/month, $49.99/year, or $199.99 once,
-          yours for life. Details in the{" "}
-          <Link href="/faq" className="text-loudBlue hover:underline">
-            FAQ
-          </Link>
-          .
-        </p>
+        <p>{FREE_TIER.full} Individual book imports, notes and highlights are free.</p>
+        <p>Premium adds {PRICING.premiumFeatures}. US prices are {PRICING.premiumMonthly}, {PRICING.premiumYearly} or {PRICING.premiumLifetime}; storefront prices may vary. See the <Link href="/faq" className="text-loudBlue hover:underline">FAQ</Link>.</p>
       </QuestionSection>
+
+      <p>{MAC.precise} {VOICES.availability}</p>
 
       <FaqSection faqs={FAQS} />
 
       <StoreCta
         headline="Turn your first book into an audiobook now"
-        subline="Import any EPUB or PDF and press play. Free, on-device, no account, no word quota."
+        subline="Import a supported DRM-free EPUB or PDF and press play. Free, on-device, no account, no word quota."
       />
     </MoneyPageLayout>
   );

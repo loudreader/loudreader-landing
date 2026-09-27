@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,7 +6,8 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import Disclosure from "@/components/blog/Disclosure";
+import { FREE_TIER, PRICING } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,129 +19,107 @@ export default function IsSpeechifyWorthItArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          Speechify is worth $29/month if you actually use what makes it a
-          suite: 60+ languages, 1000+ voices, camera scanning of physical
-          books, AI summaries, and apps on iOS, Android, web, and Chrome. It
-          is a harder sell if you mainly want English books and PDFs read
-          aloud, because even Premium meters premium-voice listening by a
-          monthly word allowance (1,000,000 words guaranteed for 2026,
-          dropping to a 150,000/month baseline after), and a long novel can
-          run past that on its own. The free plan covers light use with 10
-          standard voices at up to 1.5x speed. If your reading is narrower
-          than the suite, apps like <strong>LoudReader</strong> cover the same
-          core job (books and PDFs read aloud, fully on-device and private,
-          your library never leaves your device) for less, without a word
-          cap.
+          Speechify is worth considering if its reading tools solve a problem
+          you regularly have: moving between devices, scanning documents,
+          using a particular language or working with browser content.
+          Its advertised US Premium price was $29 per month when checked on
+          28 September 2026. Whether that is good value depends on the
+          features you actually use and the offer at checkout. Try a realistic
+          reading session before committing to an annual plan; a large voice
+          catalogue alone does not tell you how well your own documents will work.
         </p>
       </Tldr>
+      <ArticleIllustration variant="waveform" caption="Judge the subscription against your normal reading week." />
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="What $29 a month actually buys, and what it doesn't."
-      />
-
-      <QuestionSection question="What does Speechify actually do well?">
+      <QuestionSection question="What are you buying beyond basic read-aloud?">
         <p>
-          Speechify built its reputation on breadth, and it delivers on it.
-          60+ languages, 1000+ voices including celebrity options, a mobile
-          camera that scans physical book pages, a Chrome extension for
-          reading the web, AI summaries and chats layered on top of your
-          documents, and native apps across iOS, Android, and a Mac app that
-          needs sign-in. If your reading spans multiple languages, or you
-          want voice typing and AI features alongside text-to-speech, that
-          combination is genuinely hard to find bundled anywhere else.
+          <a href="https://speechify.com/pricing/" className="text-loudBlue hover:underline">Speechify&apos;s current Premium page</a>
+          lists scanning, AI summaries and chat, cloud-drive integrations and
+          a larger voice/language selection. Its free plan lists ten basic
+          voices and a maximum speed of 1.5×. That is a feature distinction,
+          not evidence that the free voices cannot read a whole book.
+        </p>
+        <p>
+          Make a short list of the features you would miss without it.
+          Scanning is valuable if your reading arrives on paper. Browser
+          tools matter if your queue is mostly web pages. A preferred voice
+          may justify paying if you listen for hours each week. Features that
+          sound interesting but never enter your routine add little value.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Where does the price stop making sense?">
+      <QuestionSection question="Does Premium mean unlimited premium voices?">
         <p>
-          The catch is in the metering, and it is easy to miss until you hit
-          it. Even on the $29/month Premium plan, listening with the premium
-          voices is capped by a monthly word allowance: 1,000,000 words
-          guaranteed for 2026, with a contractual baseline of 150,000
-          words/month after that. A single long novel can run past 150,000
-          words on its own, so a reader who listens to several books a month
-          can feel that ceiling on a plan they are already paying for.
+          Speechify&apos;s <a href="https://speechify.com/usage-limits/" className="text-loudBlue hover:underline">usage policy</a>
+          guarantees a total of 1,000,000 premium-voice words per month during
+          2026 and also states a 150,000-word contractual baseline. The smaller
+          number is not the current 2026 cap. Do not assume either figure is
+          the final offer for a later year: recheck the current policy before renewing.
         </p>
         <p>
-          The free plan is more limited still: 10 standard voices at speeds
-          up to 1.5x, workable for short reading but not built around
-          listening to whole books regularly.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Who is Speechify worth it for?">
-        <p>
-          Honestly, plenty of people. If any of these is true for you, $29 a
-          month is a reasonable trade: you read across multiple languages and
-          want native voices for each; you want the largest possible voice
-          catalog to pick a favorite from; you use the camera scanner on
-          physical books regularly; or the AI summary and podcast features
-          save you real time. Speechify built those features because people
-          pay for them, and if you are one of those people, the price buys
-          real capability.
+          For ordinary use, the useful question is whether your own reading
+          approaches the applicable allowance. Look at your actual usage in
+          the app. A single long book does not automatically exhaust a
+          million-word allowance, and hypothetical maximum usage is a poor
+          reason to reject an app that comfortably handles your real month.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="When is a narrower app the better trade?">
+      <QuestionSection question="How can you test the value before subscribing?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Import one ordinary document and one difficult one, such as a scan or multi-column report.</li>
+          <li>Listen with your preferred voice for a full chapter, checking names and numbers.</li>
+          <li>Try the exact workflow you need: browser import, switching devices, or prepared offline listening.</li>
+          <li>Check which of those actions require Premium in your account.</li>
+          <li>Read the total billed amount, renewal date and cancellation instructions.</li>
+        </ol>
         <p>
-          If your actual use case is simpler than the suite, mostly books and
-          PDFs, read privately, with no monthly word cap to watch, you can pay
-          less and get exactly that. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>{" "}
-          (iPhone, iPad, and Mac)
-          reads any DRM-free EPUB or PDF aloud with natural offline voices,
-          fully on-device and private, your library never leaves your device.
-          The free tier is unlimited listening on every book, cover to cover,
-          with no word quota, and Premium is {PRICING.premiumMonthly},{" "}
-          {PRICING.premiumYearly}, or a {PRICING.premiumLifetime} one-time
-          purchase, which is less than two months of Speechify Premium.
-        </p>
-        <p>
-          The trade goes the other way too: LoudReader covers 10 languages
-          against Speechify&apos;s 60+, and has nowhere near 1000+ voices or a
-          camera scanner. For the full feature-by-feature comparison, see{" "}
-          <Link
-            href="/speechify-alternative-for-mac"
-            className="text-loudBlue hover:underline"
-          >
-            the Speechify alternative for Mac breakdown
-          </Link>
-          , which lays out price, privacy, offline behavior, and platform
-          support side by side.
+          Compare the result with a free tool you already have. If you only
+          needed selected paragraphs spoken aloud, a system reading feature
+          may be sufficient. If you repeatedly lose time importing and
+          managing documents, a paid workflow that fixes that friction may
+          matter more than saving a few dollars.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="So, is it worth it?">
+      <QuestionSection question="When might LoudReader fit instead?">
+        <Disclosure />
         <p>
-          There is no single answer, and anyone who gives you one is selling
-          something. Speechify is worth it when you use the breadth: the
-          languages, the voice count, the camera, the AI extras. It is not
-          worth it if your actual habit is narrower than that, in which case
-          you are paying a suite price for a single-app job. Read the two
-          questions above honestly about your own reading, and the answer
-          for your case falls out on its own.
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>
+          {" "}focuses on local narration of books and saved articles. It runs
+          on iPhone and iPad, and as an iPad app on compatible Apple Silicon
+          Macs. {FREE_TIER.full} The current US Premium choices are
+          {" "}{PRICING.premiumMonthly}, {PRICING.premiumYearly}, or
+          {" "}{PRICING.premiumLifetime}.
+        </p>
+        <p>
+          The trade-offs matter: LoudReader does not automatically sync your
+          library across devices, and narrator availability depends on
+          hardware. Its free voice selection is English. Premium is needed
+          for controls such as adjustable speed and the sleep timer.
+          Compare these details with your needs, not just the subscription price.
+        </p>
+        <p>
+          Books are not uploaded for narration, but LoudReader sends
+          crash/performance diagnostics and usage analytics. Release 1.12 has
+          no visible in-app switch for them. Our
+          <Link href="/speechify-alternative-for-mac" className="text-loudBlue hover:underline"> Mac alternative guide</Link>
+          {" "}explains the platform distinction in more detail.
         </p>
       </QuestionSection>
 
+      <QuestionSection question="What is a sensible decision rule?">
+        <p>
+          Subscribe when a feature you have tested improves a task you do
+          often enough to justify its total cost. Stay free when the free
+          voices and controls already cover your reading. If you are unsure,
+          avoid paying for a long billing period merely because the monthly
+          equivalent looks lower. No reader is worth paying for solely on
+          the strength of a comparison article, including this one.
+        </p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Just books and PDFs, no word cap"
-        subline={`Free tier is unlimited listening on every book. Premium is ${PRICING.premiumMonthly} or a one-time ${PRICING.premiumLifetime}.`}
-      />
-
-      <p className="text-sm text-gray-500">
-        Get LoudReader from the{" "}
-        <a
-          href={APP_STORE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-loudBlue hover:underline"
-        >
-          App Store
-        </a>
-        .
-      </p>
+      <StoreCta headline="Compare with LoudReader on your own books" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

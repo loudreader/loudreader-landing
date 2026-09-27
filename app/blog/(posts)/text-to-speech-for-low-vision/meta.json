@@ -1,9 +1,10 @@
 {
   "slug": "text-to-speech-for-low-vision",
-  "title": "Text to Speech for Low Vision: An Honest Guide",
-  "description": "What text-to-speech can and cannot do for low-vision readers. An honest look at how listening complements assistive tools without overclaiming.",
+  "title": "Text to Speech for Low Vision: Choosing a Setup",
+  "description": "How to assess a book-reading app alongside VoiceOver, test navigation and file quality, and choose a voice without assuming accessibility support.",
   "publishedAt": "2026-08-29",
-  "lastModified": "2026-08-29",
+  "lastModified": "2026-09-28",
   "avatar": "Senior / Low Vision",
-  "query": "text to speech for low vision"
+  "query": "text to speech for low vision",
+  "topic": "learning"
 }

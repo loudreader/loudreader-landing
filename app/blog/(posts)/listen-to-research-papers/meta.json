@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-research-papers",
   "title": "How to Listen to Research Papers",
-  "description": "Turn papers into audio for the commute: what reads well aloud, what doesn't, and why unpublished drafts and review copies should stay on your device.",
+  "description": "Test a paper’s PDF reading order, OCR, citations and figures before listening. Use audio for suitable sections and return to the source for verification.",
   "publishedAt": "2026-07-24",
-  "lastModified": "2026-07-24",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "listen to research papers"
+  "query": "listen to research papers",
+  "topic": "formats"
 }

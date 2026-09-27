@@ -1,46 +1,47 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-11-01 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Word-by-word highlighting: LoudReader_mac ReaderStylesheet.swift
-//     (.tts-word-highlight + .tts-sentence-highlight) and
-//     Engines/HighlightSchedule.swift. Free, not gated.
-//   - Playback speed 0.3x to 3.0x is Premium; free tier plays at normal speed:
-//     components/money/site.ts PRICING + PaywallReason.playbackSpeed.
-//   - Free tier unlimited listening, no word quota: SubscriptionAccess.swift
-//     (baseFreeFraction = 1.0) + site.ts PRICING.
-//   - Voice trial: all voices free for the first 8 listening hours, then one
-//     free voice. Premium = all 23 studio narrators.
-//   - Background playback / lock screen: Info.plist UIBackgroundModes = ["audio"];
-//     MPRemoteCommandCenter in PlayerService.swift.
-//   - EPUB/PDF import + 70,000+ Gutenberg: verified in-app.
-//   - Notes & highlights: Premium feature per PaywallReason.
-// NO claims about: study efficacy stats, grade improvements, learning outcomes
-// that would need an RCT. No claims about screen-reader certification.
+// EDITORIAL AUDIT — 2026-09-28. Product claims reconciled with the release_v1.12
+// shipping source release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0
+// in loudreader/LoudReader_mac (product fact audit, source references below).
+// Release version verified using https://itunes.apple.com/lookup?id=6758149478&country=us.
+// This editorial review includes source inspection, not a runtime accessibility test.
+// LoudReader iOS/iPadOS app; compatible Apple Silicon Macs run the iPad build.
+// Word/sentence highlighting and replay: ContinuousReaderView.swift,
+// ContinuousReaderController.swift and HighlightSchedule.swift.
+// Premium speed; notes/highlights are free: Subscription/PaywallReason.swift118–148
+// and TTSPreferences.swift.
+// EPUB/PDF and local scanned-PDF OCR: PDFImportPipeline.swift90,155–218
+// plus release_v1.12 product audit; OCR/reading-order quality is not guaranteed.
+// Playback/background controls: PlayerService.swift and Info.plist audio mode.
+// Free access copy is imported from components/money/site.ts FREE_TIER.
+// Speech is generated locally after downloads; this is not a promise of no
+// diagnostics, analytics, networking, automatic sync or accessibility certification.
+
+// Practical routines are editorial suggestions, not measured learning outcomes.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does listening to a textbook work the same as reading it?",
-    a: "It works differently, and for many students it works better. Studies on dual-channel reading (listening while following highlighted text) show moderate comprehension gains over eyes-only reading, particularly for dense material. The practical difference for a student is that audio keeps the pace: you cannot stall on one paragraph for five minutes the way you can with eyes alone. The book moves, and you move with it.",
+    "q": "Can TTS replace reading a textbook?",
+    "a": "It can read suitable prose, but keep diagrams, equations and source references available. Use the format that lets you understand and complete the assignment."
   },
   {
-    q: "Can I speed up playback for skimming?",
-    a: "Yes. Checking a textbook chapter you already read for exam review works well at 1.5x to 2.0x. First-read material usually wants a slower speed so comprehension stays solid, but the key is having the dial. In LoudReader, speed control from 0.3x to 3.0x is a Premium feature; the free tier plays at normal speed.",
+    "q": "Can LoudReader handle scanned textbook PDFs?",
+    "a": "The current app supports local OCR for scanned PDFs. Check recognition and reading order against the original; scans with equations, columns or poor image quality may need another format."
   },
   {
-    q: "Does text-to-speech work on PDF textbooks?",
-    a: "Yes, if the PDF has selectable text. LoudReader reads both EPUB and PDF files aloud with natural offline voices. A scanned-image PDF with no text layer will not work, but most modern textbook PDFs and journal articles are text-based and read fine. The app handles the text extraction on-device, no conversion step needed.",
+    "q": "Is faster playback a better study strategy?",
+    "a": "Not necessarily. Use a speed at which you can explain the material. LoudReader’s speed control is a Premium feature; normal-speed narration is available on the free tier."
   },
   {
-    q: "Can I listen to papers while walking between classes?",
-    a: "Yes. Playback continues with the screen locked, and lock-screen controls give you play, pause, and 15-second skip. The voices run entirely on your iPhone, so you can walk across campus with no signal and the narration keeps going. Those ten-minute walks between lectures add up to real reading time over a semester.",
+    "q": "Can I listen offline between classes?",
+    "a": "Yes, after importing or downloading the book and required voice assets. Background playback and lock-screen controls allow listening with the screen locked."
   },
   {
-    q: "Is this allowed with academic accommodations?",
-    a: "Many schools include text-to-speech in their accessibility accommodations, but policies vary. Check with your disability services office. LoudReader is a general-purpose reading tool, not a certified assistive device, but it provides the core features (read-aloud with highlighting, speed control) that accommodations commonly specify.",
+    "q": "Can I use LoudReader in an exam?",
+    "a": "Check the rules with your institution in advance. This article does not establish exam permission or accessibility approval for a particular course."
   },
   {
-    q: "What about taking notes while I listen?",
-    a: "LoudReader Premium includes notes and highlights. You can highlight passages as the audio plays and come back to them later. For heavy study sessions, many students use the app as the reading layer and keep a separate note-taking tool open, pausing when they hit something worth capturing.",
-  },
+    "q": "Can I take notes while listening?",
+    "a": "Yes. Pause to record a claim, evidence and source location in your preferred notes tool. LoudReader also includes notes and highlights on the free tier."
+  }
 ];

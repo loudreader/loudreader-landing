@@ -7,132 +7,33 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function DraculaAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Dracula is public domain, so a free full-length audiobook of it is
-          already built into <strong>LoudReader</strong> (iPhone, iPad, and Mac). One honest note first: this is a synthetic voice
-          reading Bram Stoker&apos;s actual text on your device, not a
-          professionally performed recording with a human narrator. If
-          that&apos;s enough for you, open the app, find{" "}
-          <Link
-            href="/listen/dracula"
-            className="text-loudBlue hover:underline"
-          >
-            Dracula
-          </Link>{" "}
-          in the built-in Project Gutenberg catalog, and press play. No
-          purchase, no account, natural offline voices, and it works with no
-          connection because LoudReader is fully on-device and private, your
-          library never leaves your device.
-        </p>
+        <p>For a free text of Dracula, start with <a href="https://www.gutenberg.org/ebooks/345" className="text-loudBlue hover:underline">Project Gutenberg ebook 345</a>, Bram Stoker’s English novel, listed as public domain in the USA. The US listing does not establish availability in other countries. LoudReader can download that text from its catalogue and read it aloud on your device. This is generated speech, rather than a cast performing the diaries and letters. Hear the <Link href="/listen/dracula" className="text-loudBlue hover:underline">opening sample</Link> before choosing a voice. For this particular book, keeping track of who is writing each document matters as much as the sound of the narrator.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Diaries, letters, and a count who doesn't die, read aloud for free."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Dates and document headings help you follow Dracula’s changing viewpoints." />
 
-      <QuestionSection question="Is there really a free Dracula audiobook?">
-        <p>
-          Yes. Bram Stoker published Dracula in 1897, and the copyright
-          expired long ago, so the full text is free on Project Gutenberg for
-          anyone to read or listen to. LoudReader has it built into the free
-          catalog already, so there&apos;s no file to download or convert.
-          You can hear a sample of the opening on the{" "}
-          <Link
-            href="/listen/dracula"
-            className="text-loudBlue hover:underline"
-          >
-            Dracula catalog page
-          </Link>{" "}
-          before you open the app.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you keep track of the different narrators?"><p>Dracula moves between journals, correspondence and other documents. Treat a heading as part of the story: it tells you whose account you are hearing and when it was written. A change of speaker may happen within a chapter, so a chapter boundary is not the only place to pay attention.</p><p>If you return after a few days, revisit the latest document heading before resuming. That is often more useful than replaying an arbitrary minute. Keep a small list of the names you have met if they are blending together; you do not need a spoiler-filled plot summary to do this.</p></QuestionSection>
 
-      <QuestionSection question="What does the free version actually sound like?">
-        <p>
-          It sounds like a computer reading, clearly and steadily, not like a
-          radio horror production. LoudReader&apos;s narration is a synthetic
-          voice, generated on your device with natural offline voices.
-          Dracula is told through Jonathan Harker&apos;s journal, Mina&apos;s
-          letters, Dr. Seward&apos;s phonograph diary, and newspaper
-          clippings, an ensemble of documents in the original text, and
-          LoudReader reads all of it in one consistent voice rather than a
-          distinct cast per character. It won&apos;t build the slow dread the
-          way a skilled full-cast production would. What it gives you is the
-          entire epistolary novel narrated, start to finish, for free.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Should you choose a single voice or a cast?"><p>LoudReader reads the selected text in your chosen synthetic voice. It does not assign an actor to each correspondent. A recorded edition may use one reader, several readers or a dramatised script; check the listing instead of treating all human audiobooks as full-cast productions.</p><p>For comparison, sample a passage with a document change. Ask whether you can hear the heading clearly and follow the next speaker. Dramatisation can be enjoyable, but if you need Stoker’s text for study, check that the recording is unabridged rather than a radio adaptation.</p></QuestionSection>
 
-      <QuestionSection question="How do you play it in LoudReader?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone or Mac. Free, no account.
-          </li>
-          <li>
-            Open the built-in Project Gutenberg catalog and search the
-            title, or go straight to the{" "}
-            <Link
-              href="/listen/dracula"
-              className="text-loudBlue hover:underline"
-            >
-              Dracula
-            </Link>{" "}
-            page to hear the sample first.
-          </li>
-          <li>Tap the book. It downloads once, then plays offline after that.</li>
-          <li>Press play. LoudReader remembers your exact place every time.</li>
-        </ol>
-        <p>
-          Free listening on Dracula is unlimited, cover to cover. Premium
-          adds playback speed from 0.3x to 3.0x, a sleep timer, and every
-          other voice in the app, none of it required to finish the book.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for Dracula. Check the title and edition before downloading. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
-      <QuestionSection question="How long is the Dracula audiobook, and can you listen on a commute?">
-        <p>
-          Around 16.5 hours, based on the novel&apos;s roughly 148,400 words.
-          That&apos;s a word-count estimate, not a measured recording time,
-          the same figure shown on the book&apos;s own catalog page. It&apos;s
-          one of the longer titles on this list, so it works well spread
-          across a couple of weeks of commutes rather than one sitting. See{" "}
-          <Link
-            href="/blog/listen-to-books-while-driving"
-            className="text-loudBlue hover:underline"
-          >
-            how to listen to books while driving
-          </Link>{" "}
-          for the setup: import or open the book before you start the car,
-          then control it entirely from the lock screen.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How much time should you allow?"><p>The LoudReader catalogue gives a rough 16.5-hour estimate based on text length. It is not a measured recording length or a guarantee for your chosen voice. Pauses and playback speed change the result. Plan by chapters or documents first, then use your own first session to estimate the time you need.</p><p>For a commute, finish setup before travelling and leave the text view for when you are stationary. Our <Link href="/blog/listen-to-books-while-driving" className="text-loudBlue hover:underline">car-listening setup guide</Link> covers the practical preparation. On foot or at home, reading a heading on screen can help you rejoin the story without guessing who is speaking.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Press play on Dracula"
-        subline="Free, built into the app, no account. Natural offline voices, on Mac and iPhone."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

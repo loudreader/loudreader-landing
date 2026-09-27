@@ -5,171 +5,48 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ReduceScreenTimeWithAudiobooksArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          If reading is part of your screen time, switching from eyes to ears
-          cuts that block to zero. The same chapter, the same book, but the
-          screen is off and locked the entire time.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
-          DRM-free EPUB or PDF aloud with natural offline voices. It is fully
-          on-device and private, your library never leaves your device. Press
-          play, lock the screen, and listen. The lock screen shows play, pause,
-          and 15-second skip, so you control playback without opening the phone.
-          The best move: read with your eyes when your screen budget allows, and
-          switch to listening when it does not. One book, one saved position, no
-          progress lost. Your eyes get a break and the chapter keeps moving.
-        </p>
+        <p>Listening can reduce the time you spend looking at a display if it replaces reading or scrolling with the screen off. Adding audio while continuing to use another screen does not make that swap. Choose one session, prepare the book, lock the phone and see whether you can leave it alone for the interval you intended. Count setup, notes and other devices honestly if you track the result. This guide is about how you spend screen time, not a claim that audio improves eye health, sleep or concentration.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="Same book, screen off. Your eyes rest while the chapter continues."
-      />
+      <ArticleIllustration variant="waveform" caption="Measure the session you changed, including the moments you look back." />
 
-      <QuestionSection question="Why swap reading off a screen?">
-        <p>
-          Reading on a phone, tablet, or laptop is still screen time. It may be
-          a better use of screen time than scrolling a feed, but your eyes are
-          still staring at a backlit display doing close-up focus work. If you
-          are trying to reduce total screen hours for eye comfort, sleep
-          quality, or just the mental weight of being on a device all day,
-          reading is a block you can move off the screen without giving up the
-          material.
-        </p>
-        <p>
-          The swap is simpler than most screen-time changes because you do not
-          lose the content. The same chapter, the same argument, the same story.
-          It enters through your ears instead of your eyes. The screen is off.
-          The phone can sit across the room. The book is still being read.
-        </p>
+      <QuestionSection question="Which screen-time goal am I trying to change?">
+        <p>“Less phone use”, “fewer interruptions” and “a break from looking at a display” are related but different goals. Listening while browsing a laptop might reduce phone use without reducing time looking at screens. A silent paperback may suit a display break just as well.</p><p>Pick one observable aim, such as putting the phone down during a particular reading session. You do not need to label all screen use as bad or all audio time as good to make that choice.</p>
       </QuestionSection>
 
-      <QuestionSection question="How does listening with the screen off actually work?">
-        <p>
-          It is a three-step habit, not a technical hurdle:
-        </p>
+      <QuestionSection question="How do I set up a session with the screen locked?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone. Free, no account.
-          </li>
-          <li>
-            Import any DRM-free EPUB or PDF, or pick a free classic from the
-            70,000+ built-in Project Gutenberg library.
-          </li>
-          <li>
-            Press <strong>play</strong>, lock the screen, and put the phone
-            down. The narration runs with the screen locked and off. The lock
-            screen shows basic controls if you need them.
-          </li>
-        </ol>
-        <p>
-          There is no streaming and no cloud dependency. The voices run locally
-          on your device, and the app is fully on-device and private, your
-          library never leaves your device. Screen-off playback is not a power
-          user feature. It is the default.
-        </p>
+          <li>Select the book and starting passage in advance. Finish downloads and voice setup before the session.</li>
+          <li>Press play and lock the phone. Check once that playback continues through your chosen speaker or headphones.</li>
+          <li>Put the device somewhere convenient for listening but not automatically in your hand.</li>
+          <li>If you need to look at a diagram or make a note, pause and do it deliberately, then decide whether to resume with the screen locked.</li>
+        </ol><p>On iPhone, <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> supports background narration and system playback controls. A locked phone can still show notifications or an always-on display depending on your device settings; locking it is not a promise that the display stays dark in every configuration.</p>
       </QuestionSection>
 
-      <QuestionSection question="Can you read with your eyes and then switch to listening?">
-        <p>
-          Yes, and this is the version of screen-time reduction that gives you
-          the best of both approaches. Use your screen-time reading budget during
-          the day or early evening. Read with your eyes while the screen budget
-          is available. When it runs out, or when your eyes are done focusing,
-          press play and listen with the screen locked.
-        </p>
-        <p>
-          The book you read and the book that is narrated are the same imported
-          file in LoudReader. Position is saved regardless of which mode you
-          last used. Read chapter three with your eyes. Listen to chapter four
-          with the screen off. No syncing step, no two-edition problem.
-        </p>
-        <p>
-          For more on this dual-mode approach, see{" "}
-          <Link
-            href="/blog/read-and-listen-at-the-same-time"
-            className="text-loudBlue hover:underline"
-          >
-            how to read and listen at the same time
-          </Link>
-          .
-        </p>
+      <QuestionSection question="How can I tell whether the change worked?">
+        <p>Compare the particular session you meant to change. Did you look at a screen less, keep picking it up, or move to another device? Use your device’s activity summary if helpful, but combine it with what actually happened rather than treating one app’s total as the whole story.</p><p>For example, replacing a 20-minute ebook session with 15 minutes of listening and five minutes of on-screen notes changes that session; it does not prove a 20-minute reduction in your whole day. Keep the example separate from a promised outcome.</p>
       </QuestionSection>
 
-      <QuestionSection question="Does listening also reduce screen time for other activities?">
-        <p>
-          Indirectly, yes, and this is the bonus most people do not expect.
-          Putting a book on while you cook, clean, fold laundry, or walk means
-          your phone is playing audio with the screen locked and off. Your hands
-          are busy with something non-screen. The phone is not in your hand. You
-          cannot absentmindedly open a feed while it is across the room narrating
-          a chapter.
-        </p>
-        <p>
-          The secondary cut to screen time comes from the habit itself. A
-          listening session replaces whatever phone activity you might have
-          drifted into during that time. For a deeper dive on the habit side,{" "}
-          <Link
-            href="/blog/listen-to-books-instead-of-scrolling"
-            className="text-loudBlue hover:underline"
-          >
-            listen to books instead of scrolling
-          </Link>{" "}
-          goes into the swap in detail.
-        </p>
+      <QuestionSection question="Can I still follow difficult passages on screen?">
+        <p>Yes. A screen-time goal need not prohibit useful reading. Keep visual sections—tables, maps, illustrations, unfamiliar spellings—for times when you want to look at them. In a TTS reader, you can return to the same text instead of hunting through a separate audio edition.</p><p>The <Link href="/blog/read-and-listen-at-the-same-time" className="text-loudBlue hover:underline">read-and-listen guide</Link> covers sessions where seeing the text is the point. If the main difficulty is automatically reopening a feed, <Link href="/blog/listen-to-books-instead-of-scrolling" className="text-loudBlue hover:underline">try one planned scrolling swap</Link> rather than measuring only reading-app minutes.</p>
       </QuestionSection>
 
-      <QuestionSection question="What about reading in the dark or before bed?">
-        <p>
-          Evening reading is the biggest screen-time cut most people can make.
-          If you currently read on a phone or tablet in bed, switching that
-          session to listening with the screen off eliminates a block of
-          close-range screen exposure right before sleep. Your phone goes on the
-          nightstand, locked and dark. The book plays through a speaker or quiet
-          earbuds. Your eyes close when they are ready.
-        </p>
-        <p>
-          Night mode in LoudReader is free, so if you do read on screen in low
-          light, one tap switches to a dark color scheme. But the bigger win is
-          turning the screen off entirely. For more on evening listening habits,
-          see{" "}
-          <Link
-            href="/blog/too-tired-to-read"
-            className="text-loudBlue hover:underline"
-          >
-            listening when you are too tired to read
-          </Link>
-          .
-        </p>
+      <QuestionSection question="What about an evening screen break?">
+        <p>Prepare the session before settling down, choose audio you are content to stop and keep the display out of the routine. If you expect to drift off, a timer can limit how far playback continues; LoudReader’s timer is Premium. See <Link href="/blog/fall-asleep-to-audiobooks" className="text-loudBlue hover:underline">the bedtime listening setup</Link>.</p><p>Do not force an extra chapter because it is now screen-free. If you want to stop reading, stop. The useful outcome is a routine that suits your goal, not replacing one compulsory activity with another.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Turn the screen off and keep reading"
-        subline="Import any EPUB or PDF, press play, and close your eyes. Free, on-device, no account."
-      />
     </ArticleLayout>
   );
 }

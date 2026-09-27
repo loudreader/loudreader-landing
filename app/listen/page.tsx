@@ -4,7 +4,7 @@ import Link from "next/link";
 import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import StoreCta from "@/components/money/StoreCta";
 import BookCover from "@/components/listen/BookCover";
-import { APP_NAME, SITE_URL } from "@/components/money/site";
+import { APP_NAME, FREE_TIER, SITE_URL } from "@/components/money/site";
 import {
   formatListeningTime,
   genreAnchor,
@@ -20,7 +20,7 @@ import {
 const bookCount = getAllBooks().length;
 
 const PAGE_TITLE = `${bookCount} Free Audiobook Classics: Listen on Mac and iPhone`;
-const PAGE_DESCRIPTION = `Browse ${bookCount} public-domain classics by genre. Every one is a free audiobook in ${APP_NAME}, read with natural offline voices on Mac and iPhone. No account, no quota.`;
+const PAGE_DESCRIPTION = `Browse ${bookCount} Gutenberg classics, hear synthetic samples and find an edition to read aloud in ${APP_NAME}. Check copyright where you live.`;
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -58,7 +58,7 @@ export default function ListenIndexPage() {
           Free audiobook classics
         </h1>
         <p className="text-gray-600 text-[17px] leading-relaxed">
-          Every book below is in the public domain, courtesy of{" "}
+          These books are listed as public domain in the USA by{" "}
           <a
             href="https://www.gutenberg.org"
             target="_blank"
@@ -66,15 +66,15 @@ export default function ListenIndexPage() {
             className="text-loudBlue hover:underline"
           >
             Project Gutenberg
-          </a>{" "}
-          and every one is a free audiobook in {APP_NAME}. Download the app,
-          pick a title from the built-in catalog, and press play: natural
-          offline voices read it with word-by-word highlighting, fully
-          on-device and private, your library never leaves your device.{" "}
-          {APP_NAME} runs on iPhone, iPad, and Apple Silicon Macs, and listening is
-          unlimited on the free tier. These {bookCount} classics are a curated
-          start. The app itself carries the whole 70,000+ book catalog.
+          </a>. Check the edition, translation and copyright rules where you live.
+          Hear an opening sample, then download a permitted ebook to listen
+          in {APP_NAME}. Speech is generated locally without uploading the book
+          for narration. The app runs on iPhone and iPad, and on compatible
+          Apple Silicon Macs as an iPad app. These {bookCount} classics are a
+          curated starting point; the app also offers online browsing and
+          downloading from the larger Gutenberg catalogue.
         </p>
+        <p className="text-gray-600 text-[17px] leading-relaxed">{FREE_TIER.full}</p>
         <nav aria-label="Genres" className="flex flex-wrap gap-2 mt-2">
           {groups.map(({ genre, books }) => (
             <a

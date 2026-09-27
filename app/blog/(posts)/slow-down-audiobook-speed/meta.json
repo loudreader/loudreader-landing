@@ -1,9 +1,10 @@
 {
   "slug": "slow-down-audiobook-speed",
-  "title": "Why Slowing Down Audiobooks Helps You Understand More",
-  "description": "Everyone preaches 2x listening. For learners and dense books, slower wins, and LoudReader goes down to 0.3x, far below most apps' floors.",
+  "title": "How to Slow Down Audiobook Playback",
+  "description": "A practical replay-and-read workflow for difficult passages, where to find speed controls, and why the slowest setting is not always clearest.",
   "publishedAt": "2026-07-28",
-  "lastModified": "2026-07-28",
+  "lastModified": "2026-09-28",
   "avatar": "English Language Learner",
-  "query": "slow down audiobook speed"
+  "query": "slow down audiobook speed",
+  "topic": "voices"
 }

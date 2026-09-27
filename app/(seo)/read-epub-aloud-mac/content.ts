@@ -1,3 +1,5 @@
+// LoudReader product facts refreshed against release_v1.12 on 2026-09-28.
+// See docs/product-facts-2026-09-28.md. Older third-party check dates below remain unchanged.
 // Local content constants for /read-epub-aloud-mac.
 // One page = one file pair (page.tsx + content.ts) + meta.json.
 // See docs/money-page-contract.md for the contract.
@@ -24,12 +26,13 @@
 
 import type { ComparisonRow } from "@/components/money/ComparisonTable";
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER, MAC, PRICING, PRIVACY, VOICES } from "@/components/money/site";
 
 export const SLUG = "read-epub-aloud-mac";
 
-export const LAST_UPDATED = "2026-07-14";
+export const LAST_UPDATED = "2026-09-28";
 export const FACTS_CHECKED_NOTE =
-  "Third-party facts checked against Apple's macOS User Guide, speechify.com, and elevenreader.io on July 14, 2026";
+  "LoudReader 1.12 product facts checked September 28, 2026; Third-party facts checked against Apple's macOS User Guide, speechify.com, and elevenreader.io on July 14, 2026";
 
 export const PAGE_TITLE = "How to Read an EPUB Aloud on Mac (3 Ways)";
 export const PAGE_DESCRIPTION =
@@ -47,7 +50,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Price",
     cells: [
-      "Free tier with unlimited listening; Premium $7.99/month, $49.99/year, or $199.99 once",
+      `Free book listening. ${FREE_TIER.full} Premium ${PRICING.premiumMonthly}, ${PRICING.premiumYearly} or ${PRICING.premiumLifetime} in the US`,
       "Free, built into macOS",
       "Speechify Premium: $29/month; ElevenReader Ultra: $11/month",
     ],
@@ -87,7 +90,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Your book stays on your device",
     cells: [
-      "Yes, fully on-device and private",
+      "Books are not uploaded for narration; diagnostics and usage analytics also run",
       "Yes, a built-in accessibility feature with nothing to upload",
       "No. Files are uploaded to the service to be converted or synced",
     ],
@@ -103,7 +106,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "23 natural offline voices across 10 languages",
+      `${VOICES.headline}. ${VOICES.availability}`,
       "The system voices installed on your Mac",
       "1000+ cloud voices (Speechify: 60+ languages)",
     ],
@@ -121,7 +124,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
 export const FAQS: Faq[] = [
   {
     q: "What is the easiest way to read an EPUB aloud on a Mac?",
-    a: "Use a dedicated reader app. LoudReader opens any DRM-free EPUB and reads it aloud with natural offline voices and word-by-word highlighting. You import the book, press play, and it remembers your position. It's fully on-device and private, your library never leaves your device, and the free tier includes unlimited listening with no account.",
+    a: "Use a dedicated reader app. LoudReader opens any DRM-free EPUB and reads it aloud with natural offline voices and word-by-word highlighting. You import the book, press play, and it remembers your position. Narration is generated locally. The free tier includes unlimited book listening with a limited voice selection after the initial allowance, and no LoudReader account is required.",
   },
   {
     q: "Does macOS have built-in text to speech for EPUBs?",
@@ -129,11 +132,11 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is it free to have a Mac read an EPUB aloud?",
-    a: "Yes, two ways. macOS Speak selection is free and built in. LoudReader's free tier is also genuinely free for books: unlimited listening on every book, cover to cover, with no account and no word quota.",
+    a: `macOS Speak selection is included with macOS. LoudReader also offers free book listening. ${FREE_TIER.full}`,
   },
   {
     q: "Can I listen to DRM-protected EPUBs from Apple Books or Kindle?",
-    a: "No, and not in any other third-party reader either. DRM-protected books can only be opened by the store app that sold them. LoudReader reads DRM-free EPUBs and PDFs: Project Gutenberg titles, DRM-free store purchases, and your own files. It also ships with 70,000+ free Project Gutenberg classics built in.",
+    a: "LoudReader cannot import DRM-protected books. Use the store’s supported reading app and check its accessibility options. LoudReader reads DRM-free EPUBs and PDFs: Project Gutenberg titles, DRM-free store purchases, and your own files. Its catalog lets you browse and download 70,000+ Project Gutenberg titles, subject to local copyright.",
   },
   {
     q: "What Mac do I need for LoudReader?",
@@ -141,10 +144,10 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Do I have to upload my EPUB somewhere to hear it?",
-    a: "Not with LoudReader. All speech is generated on your Mac, so nothing is uploaded and it works completely offline. Cloud apps like ElevenReader work the other way: you upload the file and the service converts it to audio.",
+    a: `LoudReader does not upload your EPUB to a speech service: narration is generated on your device. ${PRIVACY.summary}`,
   },
   {
     q: "Is LoudReader a native Mac app?",
-    a: "No, and it is worth being precise about it. LoudReader is an iPhone and iPad app. On an Apple Silicon Mac you install it from the Mac App Store's 'iPhone & iPad Apps' tab, and it runs in Apple's compatibility mode: a fixed-size window rather than a resizable Mac one, and no menu bar. There is no separate Mac build. What is not a compromise is the engine underneath. Speech is generated on your Mac's own silicon, offline, and nothing is uploaded. It needs macOS 15 or later on Apple Silicon; Intel Macs are not supported.",
+    a: MAC.precise,
   },
 ];

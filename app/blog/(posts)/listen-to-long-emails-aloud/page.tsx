@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,183 +6,89 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ListenToLongEmailsAloudArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Your mail app can save any email as a PDF. On Mac: File then Export
-          as PDF. On iPhone: tap the reply button, find Print, pinch outward
-          on the preview to open it as a PDF, then save or share to{" "}
-          <strong>LoudReader</strong>. Import the PDF and press play. LoudReader
-          reads the email aloud with natural offline voices, remembers your
-          place, and works with the screen locked. It is fully on-device and
-          private, your library never leaves your device. There is no mailbox
-          integration and no account. For long emails, detailed threads, and
-          email newsletters, this turns a screen-only task into something you
-          can do while walking, commuting, or giving your eyes a rest.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="offline"
-        caption="Save the email as a PDF, import it, and listen. The email never touches a server."
-      />
-
-      <QuestionSection question="How do I listen to a long email without staring at the screen?">
-        <p>
-          Most people do not think of emails as something to listen to because
-          most emails are short. But some emails are not: project briefs,
-          detailed feedback, legal summaries, board updates, investor letters,
-          and detailed technical explanations can run to several printed pages.
-          Reading those on screen leads to skimming after the first few
-          paragraphs.
-        </p>
-        <p>
-          The export-and-import workflow takes about 15 seconds and you get a
-          proper listening experience instead of a screen skim:
-        </p>
+      <Tldr><p>
+        For an occasional long email, try your device’s read-aloud controls
+        first. To keep a listening copy in LoudReader, save the message as a
+        PDF, check that its text is complete, and import it. Apple Mail on
+        Mac provides <strong>File → Export as PDF</strong>. Other mail apps
+        may offer a print-to-PDF route. LoudReader does not connect to your
+        mailbox or keep the saved copy updated. The useful preparation is
+        deciding which part of a thread you need to hear and removing
+        duplicate quoted replies from a separate working copy.
+      </p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Keep the original email; prepare a separate copy for listening." />
+      <QuestionSection question="How do I save an email I can listen to?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Export the email as PDF.</strong>{" "}
-            On Mac, open the email in Apple Mail and go to File then Export as
-            PDF. Save it somewhere you can find it. On iPhone, open the email,
-            tap the reply arrow, scroll to Print, and pinch outward on the
-            print preview thumbnail. This opens the email as a PDF. Tap the
-            share button and save it to Files or share it directly to
-            LoudReader.
-          </li>
-          <li>
-            <strong className="text-gray-900">Import into LoudReader.</strong>{" "}
-            Open{" "}
-            <Link href="/" className="text-loudBlue hover:underline">
-              LoudReader
-            </Link>{" "}
-            on your iPhone or Mac, tap the import button, find the PDF, and
-            press play. The app reads from the top of the email (including the
-            subject line and sender) through the body text.
-          </li>
+          <li>Open the message or conversation and expand the parts you need.</li>
+          <li>In Mail on Mac, select the message and use File → Export as PDF. In another app, inspect its print or export options.</li>
+          <li>Open the saved PDF. Check that the body text, ending and relevant sender/date information are present.</li>
+          <li>Import the PDF into <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> and listen to a short sample.</li>
         </ol>
-        <p>
-          This manual workflow is a reasonable tradeoff for emails you
-          genuinely want to absorb, especially when the alternative is
-          half-reading them on screen and missing details.
-        </p>
+        <p>Apple’s <a href="https://support.apple.com/guide/mail/mlhlp1044/mac" className="text-loudBlue hover:underline">Mail export instructions</a>{" "}
+        distinguish PDF exports from message files such as EML. LoudReader’s
+        file importer accepts EPUB and PDF, not an EML mailbox archive.</p>
+        <p>The app runs on iPhone and iPad, and as an iPad app on compatible
+        Apple Silicon Macs. For a phone workflow, see <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">PDF listening on iPhone</Link>.
+        Prepare the file and selected voice before relying on offline listening.</p>
       </QuestionSection>
-
-      <QuestionSection question="Is this safe for confidential or work emails?">
-        <p>
-          Yes, and the safety is worth understanding in detail because it is
-          one of the few areas where a manual workflow outclasses a cloud-based
-          one.
-        </p>
-        <p>
-          When you save an email as a PDF on your device, the operation is
-          local. The PDF is a file on your disk with whatever encryption your
-          device uses. When you import it into LoudReader, the file stays on
-          your device. LoudReader is fully on-device and private, your library
-          never leaves your device. There is no account, no cloud sync, no
-          analytics, and no text uploaded to a server for processing. The voice
-          generation runs on your device&apos;s neural engine.
-        </p>
-        <p>
-          Compare this to forwarding a confidential email to a cloud
-          text-to-speech service. That email passes through your mail server,
-          the service&apos;s ingestion pipeline, and their text extraction
-          layer. They may log it, train on it, or retain it. The manual PDF
-          route skips all of that. For professionals reading legal documents,
-          HR communications, financial reports, or anything covered by an NDA,
-          the manual route is the only route that preserves confidentiality.
-        </p>
-        <p>
-          For more on the privacy model, see{" "}
-          <Link
-            href="/blog/listen-to-confidential-documents"
-            className="text-loudBlue hover:underline"
-          >
-            listening to confidential documents
-          </Link>
-          .
-        </p>
+      <QuestionSection question="How do I stop a reply chain from repeating itself?">
+        <p>A thread can contain the same original message inside every
+        reply. If you hear the discussion several times, the exported text
+        may actually contain those repetitions. Narration does not know
+        which quotation you intended to skip.</p>
+        <p>For a long discussion, make a separate reading copy with the
+        messages in chronological order. Keep sender names and dates, remove
+        repeated quoted material, and retain any qualification that changes
+        the meaning. Do not overwrite the original correspondence. If the
+        thread is part of a formal record, listen to the unchanged copy and
+        accept the repetition rather than treating an edited version as evidence.</p>
+        <p>There is no promise of different speaker voices for different
+        correspondents. Short labels such as “Tuesday, reply from Sam” are
+        easier to follow than an unexplained jump between messages.</p>
       </QuestionSection>
-
-      <QuestionSection question="How well does TTS handle email formatting?">
-        <p>
-          Emails are messier than books. The TTS engine reads what is in the
-          PDF in document order, and emails have a lot of non-prose content.
-          Here is what to expect:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Headers.</strong> The subject
-            line, sender name, date, and recipient appear at the top of the
-            PDF and get read first. This is actually useful because it tells
-            you which email you are listening to.
-          </li>
-          <li>
-            <strong className="text-gray-900">Threaded replies.</strong> If
-            you export an entire thread, quoted replies appear as indented text
-            with the sender&apos;s name and a timestamp prefix. The voice
-            reads through them in order. There is no audio cue for &quot;now
-            a different person is talking,&quot; which can get confusing in a
-            long thread with multiple participants. Listen to threads in
-            chronological order (oldest first) rather than reverse
-            chronological.
-          </li>
-          <li>
-            <strong className="text-gray-900">Signatures and disclaimers.</strong>{" "}
-            Email signatures (name, title, phone, company boilerplate) and
-            legal disclaimers get read as part of the email body. They sound
-            like noise appended to every message. If you are exporting a batch
-            of emails, consider trimming the PDF in Preview before importing
-            to remove repeated signature blocks.
-          </li>
-          <li>
-            <strong className="text-gray-900">Inline images.</strong>{" "}
-            Images in the email body appear in the PDF but produce no audio.
-            Alt text and captions get read if the sender included them.
-          </li>
-        </ul>
+      <QuestionSection question="Are attachments and screenshots included?">
+        <p>Not necessarily. An email PDF may show an attachment’s name or
+        icon without including its contents. Save a supported attachment
+        separately and import it as its own document. Review a chart or
+        screenshot visually if it carries information absent from the body.</p>
+        <p>Likewise, do not assume an image’s alt text will appear in the
+        PDF. Check the exported text. A visible caption can help, but it is
+        not a description of every detail inside an image.</p>
       </QuestionSection>
-
-      <QuestionSection question="What about email newsletters?">
-        <p>
-          Email newsletters are the best fit for this workflow because they
-          are essentially long articles delivered by email. Save the newsletter
-          as a PDF and import it into LoudReader, and you are listening to a
-          long-form article with natural voices. The same privacy advantages
-          apply: the newsletter PDF stays on your device, and no third party
-          knows you opened it or how much of it you listened to.
-        </p>
-        <p>
-          This works alongside the web-based export approach described in other
-          guides. Some newsletters are easier to open in a browser and export
-          from Safari Reader. Others are easier to save directly as a PDF from
-          your mail app. The result is the same: a PDF in LoudReader that reads
-          aloud. For more on the privacy side of text-to-speech, see{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text-to-speech with no cloud
-          </Link>
-          .
-        </p>
+      <QuestionSection question="What should I consider for work or confidential mail?">
+        <p>First check whether you may save that message in another app.
+        Local speech generation is useful, but it does not by itself make
+        a workflow compliant with an employer’s rules. The email provider,
+        any cloud folder used for transfer, device backups and the extra
+        saved copy all have separate implications.</p>
+        <p>LoudReader generates speech on device and does not upload the
+        email PDF to a speech server for narration. It also includes crash
+        and performance diagnostics and usage analytics. Avoid interpreting
+        “local narration” as “the app sends no data.” More context is in
+        the <Link href="/private-text-to-speech-no-cloud" className="text-loudBlue hover:underline">local speech privacy guide</Link>.</p>
+        <p>When finished, remove unneeded listening copies from the places
+        where you saved them. Deleting one PDF does not delete the source
+        email or a separate cloud copy.</p>
       </QuestionSection>
-
+      <QuestionSection question="When is this worth the preparation?">
+        <p>A single detailed brief, essay-length newsletter or draft message
+        can be a good candidate. A thread dominated by tables, screenshots
+        and short acknowledgements often needs more visual context than
+        narration provides.</p>
+        <p>For newsletters, a public “view in browser” link may be easier
+        to import than the email itself. Private links can contain access
+        tokens, so treat them as part of the message rather than publishing
+        or forwarding them casually. See <Link href="/blog/listen-to-substack-newsletters" className="text-loudBlue hover:underline">newsletter listening options</Link>{" "}
+        for the choice between built-in audio, links and saved PDFs.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Listen to long emails instead of skimming them"
-        subline="Save any email as a PDF, import into LoudReader, and absorb every word. Private, offline, no account."
-      />
+      <StoreCta headline="Try your own document in LoudReader" subline="Import a supported file and check a short passage before a longer listening session." />
     </ArticleLayout>
   );
 }

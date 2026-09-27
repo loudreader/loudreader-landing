@@ -1,50 +1,34 @@
-import { FREE_TIER } from "@/components/money/site";
-
-// FACT PROVENANCE. Every claim verified on 2026-07-14 against:
-//   - iOS Speak Screen / Spoken Content: Apple iPhone User Guide
-//     https://support.apple.com/guide/iphone/iph96b214f0/ios
-//     ("Hear iPhone speak the screen, selected text, and typing feedback".
-//     Settings → Accessibility → Spoken Content; two-finger swipe down from
-//     the top of the screen; on-screen speech controller; optional content
-//     highlighting). Same source already used by /listen-to-pdf-iphone.
-//   - VoiceOver described only at a high level (Apple's built-in screen
-//     reader, changes standard touch gestures), no step-by-step claims.
-//   - Kindle Assistive Reader: Amazon Customer Service page "Use Assistive
-//     Reader to Read Aloud in Kindle Apps"
-//     https://www.amazon.com/gp/help/customer/display.html?nodeId=TqLHvK6eo6O7DJVQoZ
-//     (exists in Kindle apps, uses the device's OS text-to-speech engines,
-//     i.e. system voices, with synchronized highlighting; works with
-//     Enhanced Typesetting titles).
-//   - LoudReader claims: components/money/site.ts + app/faq/faq-data.ts
-//     (pricing, free tier, 70,000+ Gutenberg catalog, word-by-word
-//     highlighting, narrators in 10 languages) and the app source
-//     (background audio: UIBackgroundModes "audio" in Info.plist;
-//     lock-screen controls: MPRemoteCommandCenter in PlayerService.swift).
-// Claims you may NOT make until verified: CarPlay support, any specific
-// Speak Screen auto-page-turn behavior per app (it varies by app, and the
-// copy deliberately says so), non-English LoudReader voices.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Shipping app: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+// the LoudReader app source, read through git show, not local HEAD.
+// Canonical audit: docs/product-facts-2026-09-28.md. Source review,
+// not a new runtime test. Local speech does not imply no diagnostics:
+// LoudReaderApp.swift initialises Sentry and Analytics.swift TelemetryDeck;
+// SettingsSheet.showsUsageStatisticsChoice is false in this shipping release.
+// SubscriptionAccess/SubscriptionManager verify 8 cumulative listening hours,
+// then Stella or Rio plus Bella on capable devices; whole-book listening stays
+// free. Notes/highlights are not Premium-only. Studio availability varies.
+// Xcode target is iOS/iPadOS; on Apple Silicon Macs it is the iPad build.
+// No automatic library/progress sync; iCloud file import is not app sync.
+// https://support.apple.com/guide/iphone/iph96b214f0/ios — checked2026-09-28: current Read & Speak menu, Speak Screen gesture, voice and rate controls; older releases call it Spoken Content.
+// Shipping1.12 PDFImportPipeline.swift: on-device OCR; Info.plist and PlayerService.swift: background audio; SubscriptionManager.swift: entitlements.
 
 import type { Faq } from "@/components/money/FaqSection";
-
 export const FAQS: Faq[] = [
   {
-    q: "How do I turn on Speak Screen on iPhone?",
-    a: "Go to Settings → Accessibility → Spoken Content and turn on Speak Screen. Then, on any page you want read aloud, swipe down from the top of the screen with two fingers. An on-screen controller lets you pause and adjust the speaking rate. It reads what's currently on screen using the system voice.",
+    "q": "What is the quickest built-in route?",
+    "a": "Enable Speak Screen in Accessibility settings, then try it on a page whose text the app exposes. Menu names vary by iOS version; Apple’s current guide calls the settings Read & Speak."
   },
   {
-    q: "Why does the built-in iPhone voice sound robotic?",
-    a: "Speak Screen and most reading features use the system text-to-speech voices, which are built for accessibility and announcements rather than long-form narration. They're perfectly intelligible, but over a whole book the flat pacing wears on you. Purpose-built reading apps ship their own neural voices. LoudReader's natural offline voices are generated on-device and built specifically for books.",
+    "q": "Does every ebook import into LoudReader?",
+    "a": "No. Import DRM-free EPUB or PDF files. A book locked to a store or borrowing app must be used through an authorised reading route there."
   },
   {
-    q: "Can my iPhone read Kindle books aloud?",
-    a: "Yes, two ways: the Kindle app's built-in Assistive Reader reads Kindle books with synchronized highlighting using your iPhone's system voices, or iOS Speak Screen can read whatever page is open. Kindle purchases are DRM-locked, so they can't be imported into third-party apps like LoudReader. Only Amazon's own app can open them.",
+    "q": "Can it read a scanned PDF?",
+    "a": "LoudReader includes on-device text recognition for scanned PDFs. Check the recognised words and reading order, especially in columns, tables and poor-quality scans."
   },
   {
-    q: "Does LoudReader work without internet on iPhone?",
-    a: "Yes, 100%. LoudReader's voices run entirely on your iPhone, so reading, listening, and highlighting all work in airplane mode. It's fully on-device and private, your library never leaves your device. You only need a connection to browse and download new books from the built-in Project Gutenberg catalog.",
-  },
-  {
-    q: "Does the free version of LoudReader limit how much it reads?",
-    a: `No. The free tier is unlimited listening on every book, cover to cover, with no word quota, no monthly cap, and no account. ${FREE_TIER.full} Premium keeps all 23 studio narrators plus speed control, a sleep timer, soundscapes, and notes & highlights.`,
-  },
+    "q": "Do I need a subscription?",
+    "a": "No. Book listening remains free with a limited English voice selection after the first eight cumulative listening hours. Premium unlocks additional eligible voices and features such as playback speed and the sleep timer."
+  }
 ];

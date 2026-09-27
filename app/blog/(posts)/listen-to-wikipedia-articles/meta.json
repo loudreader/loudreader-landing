@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-wikipedia-articles",
   "title": "How to Listen to Wikipedia Articles",
-  "description": "Wikipedia articles are long and dense. Export any article as a PDF and import into LoudReader to hear it with natural offline voices. Great for research deep dives and studying.",
+  "description": "Import a Wikipedia article link or PDF for listening, then check references and visuals separately. Build a useful study queue without losing source context.",
   "publishedAt": "2026-08-02",
-  "lastModified": "2026-08-02",
+  "lastModified": "2026-09-28",
   "avatar": "Neurodivergent Student",
-  "query": "listen to wikipedia articles"
+  "query": "listen to wikipedia articles",
+  "topic": "formats"
 }

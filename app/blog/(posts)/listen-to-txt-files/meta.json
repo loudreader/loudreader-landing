@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-txt-files",
   "title": "Text to Speech for TXT Files",
-  "description": "Plain text files are the simplest format to read aloud. Save your .txt as a PDF and import it into LoudReader to hear it read with natural offline voices. Works for drafts, notes, and logs.",
+  "description": "Convert a TXT file to PDF for listening in LoudReader. Steps for Mac and iPhone, plus checks for encoding, line breaks, transcripts and long drafts.",
   "publishedAt": "2026-08-19",
-  "lastModified": "2026-08-19",
+  "lastModified": "2026-09-28",
   "avatar": "Writer Proofreading by Ear",
-  "query": "text to speech for txt files"
+  "query": "text to speech for txt files",
+  "topic": "formats"
 }

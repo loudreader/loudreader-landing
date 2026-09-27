@@ -1,9 +1,10 @@
 {
   "slug": "how-many-books-can-you-read-in-a-year",
   "title": "How Many Books Can You Read in a Year?",
-  "description": "Listening-time math: how commuting, chores, and speed adjustments add up to way more books than you think.",
+  "description": "Estimate a reading goal from your actual listening minutes and chosen book lengths. Worked examples include missed weeks, playback speed and rereading.",
   "publishedAt": "2026-08-22",
-  "lastModified": "2026-08-22",
+  "lastModified": "2026-09-28",
   "avatar": "Time-Starved Book Lover",
-  "query": "how many books can you read in a year"
+  "query": "how many books can you read in a year",
+  "topic": "reading"
 }

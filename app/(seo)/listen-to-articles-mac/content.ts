@@ -1,3 +1,5 @@
+// LoudReader product facts refreshed against release_v1.12 on 2026-09-28.
+// See docs/product-facts-2026-09-28.md. Older third-party check dates below remain unchanged.
 // Local content constants for /listen-to-articles-mac.
 // One page = one file pair (page.tsx + content.ts) + meta.json.
 // See docs/money-page-contract.md for the contract.
@@ -21,12 +23,13 @@
 
 import type { ComparisonRow } from "@/components/money/ComparisonTable";
 import type { Faq } from "@/components/money/FaqSection";
+import { MAC, PRICING, PRIVACY, VOICES } from "@/components/money/site";
 
 export const SLUG = "listen-to-articles-mac";
 
-export const LAST_UPDATED = "2026-07-14";
+export const LAST_UPDATED = "2026-09-28";
 export const FACTS_CHECKED_NOTE =
-  "macOS Spoken Content facts checked against Apple's macOS User Guide (support.apple.com) on July 14, 2026";
+  "LoudReader 1.12 product facts checked September 28, 2026; macOS Spoken Content facts checked against Apple's macOS User Guide (support.apple.com) on July 14, 2026";
 
 export const PAGE_TITLE = "How to Listen to Articles on Your Mac";
 export const PAGE_DESCRIPTION =
@@ -61,7 +64,7 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Voices",
     cells: [
-      "23 natural offline voices across 10 languages, with word-by-word highlighting",
+      `${VOICES.headline}. ${VOICES.availability}`,
       "System voices; optional highlighting while speaking",
     ],
   },
@@ -75,14 +78,14 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Privacy",
     cells: [
-      "Fully on-device and private, your library never leaves your device",
+      "Local speech synthesis; diagnostics and usage analytics also run",
       "On-device (a macOS accessibility feature)",
     ],
   },
   {
     label: "Price",
     cells: [
-      "Free, with unlimited listening and no word quota; Premium from $7.99/month",
+      `Free book listening; up to 30 saved articles. Premium ${PRICING.premiumMonthly} in the US`,
       "Free, included with macOS",
     ],
   },
@@ -103,18 +106,18 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Do articles count against a word limit?",
-    a: "No. LoudReader has no word quota on any tier. The speech engine runs on your Mac, so there's nothing to meter. Listen to your whole backlog.",
+    a: "There is no word quota for listening. Free use includes up to 30 saved articles; Premium removes the article-save limit. Individual book imports and book listening remain unlimited. Try every available voice for your first 8 hours of listening; afterwards a free English voice selection remains.",
   },
   {
     q: "Is listening to articles private?",
-    a: "Yes. The only network request is fetching the article you asked for. The narration itself is generated on-device. LoudReader is fully on-device and private, your library never leaves your device, and it requires no account.",
+    a: `Fetching an article contacts its website. Narration is generated locally, without uploading the article to a speech service. ${PRIVACY.summary}`,
   },
   {
     q: "Can I listen to the same article on my iPhone?",
-    a: "LoudReader runs on iPhone too, with the same paste-or-share flow and background playback. One honest note: because everything stays on-device by design, libraries don't sync through a cloud, so add the article on the device you plan to listen on.",
+    a: "LoudReader runs on iPhone too, with the same paste-or-share flow and background playback. Libraries and reading positions do not sync automatically, so add the article on the device where you plan to listen.",
   },
   {
     q: "Is LoudReader a native Mac app?",
-    a: "No, and it is worth being precise about it. LoudReader is an iPhone and iPad app. On an Apple Silicon Mac you install it from the Mac App Store's 'iPhone & iPad Apps' tab, and it runs in Apple's compatibility mode: a fixed-size window rather than a resizable Mac one, and no menu bar. There is no separate Mac build. What is not a compromise is the engine underneath. Speech is generated on your Mac's own silicon, offline, and nothing is uploaded. It needs macOS 15 or later on Apple Silicon; Intel Macs are not supported.",
+    a: MAC.precise,
   },
 ];

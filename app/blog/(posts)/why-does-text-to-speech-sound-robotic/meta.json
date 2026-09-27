@@ -1,9 +1,10 @@
 {
   "slug": "why-does-text-to-speech-sound-robotic",
   "title": "Why Does Text to Speech Sound Robotic?",
-  "description": "The real, mechanical reasons some synthetic voices sound flat or mechanical, and why modern neural voices mostly don't anymore.",
+  "description": "Identify flat delivery, pronunciation errors, broken source text and playback artefacts, then test language, formatting, speed and another voice.",
   "publishedAt": "2026-10-16",
   "lastModified": "2026-10-16",
   "avatar": "Time-Starved Book Lover",
-  "query": "why does text to speech sound robotic"
+  "query": "why does text to speech sound robotic",
+  "topic": "voices"
 }

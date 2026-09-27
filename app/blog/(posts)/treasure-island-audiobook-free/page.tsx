@@ -14,135 +14,26 @@ import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function TreasureIslandAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Treasure Island is public domain, so a free audiobook of it already
-          exists as text on Project Gutenberg, and any text-to-speech app can
-          read it aloud. LoudReader has the full book built into its catalog:
-          open <Link href="/listen/treasure-island" className="text-loudBlue hover:underline">
-            its LoudReader page
-          </Link>{" "}
-          to hear the opening read aloud right now, free, no account. One
-          honest note up front: this is a synthetic voice reading Robert
-          Louis Stevenson&apos;s text, not a performed audiobook with an actor
-          doing Long John Silver in character. It is clear and natural to
-          listen to on a walk or a commute, and the free tier plays the whole
-          book, cover to cover, at no cost. LoudReader is fully on-device and
-          private, your library never leaves your device, so import is
-          instant and works offline because the book is already in the
-          built-in Project Gutenberg catalog.
-        </p>
+        <p>For a free Treasure Island reading, you can choose recorded audio or speech generated from an ebook. <a href="https://www.gutenberg.org/ebooks/120" className="text-loudBlue hover:underline">Gutenberg ebook 120</a> provides Robert Louis Stevenson’s English text and lists it as public domain in the USA. The US listing does not establish availability in other countries. LoudReader offers that text in its catalogue, with an <Link href="/listen/treasure-island" className="text-loudBlue hover:underline">opening sample</Link> on the website. There is also a free LibriVox dramatic reading. Compare a passage before deciding: the difference here is the reading format you prefer, not whether one option alone gives you access to the story.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Stevenson's text, read aloud, no download required."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Choose a cast performance or follow Stevenson’s text in a single selected voice." />
 
-      <QuestionSection question="What does the Treasure Island audiobook actually sound like?">
-        <p>
-          Before anything else: press play and find out. LoudReader&apos;s
-          catalog page for the book has a rendered sample of the actual
-          opening, read aloud by the same voice you&apos;d hear in the app.
-          That is the honest way to answer &quot;what does it sound
-          like,&quot; better than any description here could.{" "}
-          <Link href="/listen/treasure-island" className="text-loudBlue hover:underline">
-            Listen to the Treasure Island sample
-          </Link>{" "}
-          before you decide whether this is for you.
-        </p>
-        <p>
-          What you will hear is a synthetic, natural offline voice reading
-          Jim Hawkins&apos; narration exactly as Stevenson wrote it, sentence
-          by sentence, with no abridgment. It is not a dramatized reading:
-          one voice reads every character, including Long John Silver, the
-          squire, and the doctor. If you are picturing a full-cast production
-          with different actors for each pirate, this isn&apos;t that. If you
-          want the actual text read aloud, clearly and at whatever pace suits
-          you, it does the job well.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Where is a free dramatic reading?"><p><a href="https://librivox.org/treasure-island-dramatic-reading-by-robert-louis-stevenson/" className="text-loudBlue hover:underline">LibriVox’s Treasure Island, version 3</a> is explicitly labelled a dramatic reading. Its page lists the sections and participants and provides audio downloads. That is a concrete option if hearing different character voices is part of the appeal for you.</p><p>Preview a section with dialogue and check the format before downloading. A dramatic reading, a solo reading and an adapted audio play can all appear under the same novel title. Their labels and contents matter more than a promise that one is the best narrator.</p></QuestionSection>
 
-      <QuestionSection question="How do you listen to Treasure Island free right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Play the sample on{" "}
-            <Link href="/listen/treasure-island" className="text-loudBlue hover:underline">
-              the Treasure Island catalog page
-            </Link>{" "}
-            to hear the voice before you commit to anything.
-          </li>
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            for iPhone, iPad, and Mac. Free, no account.
-          </li>
-          <li>
-            Open the app and search Treasure Island in the built-in Project
-            Gutenberg catalog. There is nothing to import or convert; the
-            book is already there.
-          </li>
-          <li>
-            Press play. {FREE_TIER.full}
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="What should you watch for when following the ebook?"><p>Much of the story is told by Jim Hawkins, but the narrative temporarily passes to Dr Livesey. The chapter heading announces that change. If you hear the same synthetic voice throughout, the words in that heading are your cue that the viewpoint has moved.</p><p>Keep the text available when a nautical term or an unfamiliar name catches you out. Looking at a word can resolve a confusing pronunciation without replaying the whole scene. A generated reading follows the selected text; it does not supply a glossary or explain the ship’s layout.</p></QuestionSection>
 
-      <QuestionSection question="Why doesn't Treasure Island already have a free audiobook everywhere?">
-        <p>
-          It does, in a sense, and it doesn&apos;t. The book&apos;s copyright
-          expired long ago, so nothing stops anyone from recording or reading
-          it aloud for free. LibriVox, the volunteer human-narration project,
-          likely has a recording of it, and that is worth checking if a
-          performed reading is what you want.
-        </p>
-        <p>
-          What a lot of people actually want is simpler than a curated
-          performance: press play on the actual text, on their own schedule,
-          in an app they already have open. That is the gap text-to-speech
-          fills, and it is covered in more general terms in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          . For Treasure Island specifically, the book is already sitting in
-          LoudReader&apos;s catalog, so there is no conversion step at all.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for Treasure Island. Check the title and edition before downloading. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
-      <QuestionSection question="What do you give up compared to a professionally narrated version?">
-        <p>
-          Being straight about this matters more than selling it. A
-          synthetic voice does not do character acting. It won&apos;t give
-          Long John Silver a different register than Jim Hawkins, it won&apos;t
-          build suspense the way a skilled narrator paces a reveal, and it
-          reads footnotes and section breaks plainly rather than
-          dramatically. What you get in exchange is availability: no waiting
-          for a library hold, no purchase, and the entire book right now,
-          plus control most performed audiobooks don&apos;t give you.
-          Premium adds playback speed from 0.3x to 3.0x, so you can slow down
-          a dense passage or speed through a chapter you already know.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you plan the listening time?"><p>The catalogue estimates about 7.5 hours from text length. A recorded cast performance or a different voice can take a different amount of time, so do not use that number to compare completeness. Check the contents and edition details instead.</p><p>For travel, prepare the book and voice before you leave and try playback. If you already own a supported DRM-free illustrated edition, <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import that ebook</Link> to listen from it. Audio does not replace a map or illustration, so keep those visible when they help you follow the action.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear Treasure Island read aloud, free"
-        subline="The full book is already in LoudReader's catalog. Press play, no download, no account."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

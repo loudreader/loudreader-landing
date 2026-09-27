@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,138 +6,48 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function PolishTextToSpeechAppArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
-          Polish EPUBs and PDFs aloud with one Polish narrator, Tomasz. One
-          voice, not a roster to pick from, and it's worth saying that
-          plainly instead of implying a choice that isn't there. The narrator
-          runs entirely on your device, so it's fully on-device and private,
-          your library never leaves your device, and it works offline once
-          you've imported a book. Import any DRM-free Polish EPUB or PDF, or
-          grab a Polish classic from the 70,000+ free Project Gutenberg books
-          built into the app, and the voice shows up in the narrator picker
-          once your library has a Polish book in it. You can hear Tomasz
-          before you install anything on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>
-          , where every narrator has a real audio sample.
-        </p>
+        <p>Tomasz is LoudReader&apos;s Polish studio narrator, available on devices that support studio voices. You can use him for supported DRM-free Polish EPUBs and PDFs, whether you want to listen to a book or hear a document you are checking. Start with the <Link href="/voices" className="text-loudBlue hover:underline">browser sample</Link>, then test text containing your own names, numbers and specialist vocabulary. Add Polish in the app&apos;s reading-language settings or import a Polish book to include the language in the voice list. Polish studio narration requires Premium after the initial voice allowance. Narration reads the supplied wording; it is not a translation, grammar checker or guarantee of correct pronunciation.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Polish text, read aloud, on your device."
-      />
-
-      <QuestionSection question="Does LoudReader actually speak Polish?">
-        <p>
-          Yes. <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          ships a Polish narrator named Tomasz as part of its 10-language
-          roster. Import a DRM-free Polish EPUB or PDF and the app reads it
-          aloud, word by word, with the same import-and-play flow it uses for
-          English books. There's no separate Polish app or mode to find. It's
-          built into the same reader, and the narrator appears in the voice
-          picker automatically once your library has a Polish-language book
-          in it.
-        </p>
+      <ArticleIllustration variant="waveform" caption="Check both the Polish text and how the narrator reads it." />
+      <QuestionSection question="How do you find Tomasz?">
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> uses languages in your library plus the reading languages you choose in Settings. Select Polish there if you want to see the options before importing a book. There is one Polish studio narrator, not a choice of regional voices.</p>
+        <p>The app supports iPhone and iPad and can run as an iPad app on compatible Apple Silicon Macs. Studio voices have additional hardware requirements. If Tomasz is unavailable after selecting Polish, check your device&apos;s voice support before purchasing specifically for Polish narration.</p>
       </QuestionSection>
-
-      <QuestionSection question="How many Polish voices can I choose from?">
-        <p>
-          One. That's worth saying plainly rather than letting you assume
-          there's a lineup. English has 11 narrators and Spanish has 4, but
-          Polish, like German, French, Italian, Dutch, Portuguese, Swedish,
-          and Danish, ships with a single voice. If you want to hear exactly
-          what Tomasz sounds like before you commit to anything, the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          has a real recorded sample, not a description. Listening beats
-          reading an adjective like "calm" or "clear" and hoping it matches
-          your ear.
-        </p>
+      <QuestionSection question="What should you check in a Polish file?">
+        <p>Compare a paragraph in the reader with the original before judging the voice. Incorrect extraction can make correct narration sound wrong because the text itself has changed.</p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Diacritics:</strong> check letters such as ą, ć, ę, ł, ń, ó, ś, ź and ż after PDF extraction or OCR.</li>
+          <li><strong>Line endings:</strong> watch for words split by line-break hyphens or sentences interrupted by page headers.</li>
+          <li><strong>Names and abbreviations:</strong> test the actual examples in your document, not only a generic sample.</li>
+          <li><strong>Numbers and references:</strong> verify dates, units, legal references or citations visually when precision matters.</li>
+        </ul>
+        <p>A familiar paragraph makes these checks easier. For unfamiliar terms, consult a reliable reference or fluent speaker rather than assuming synthetic output is authoritative.</p>
       </QuestionSection>
-
-      <QuestionSection question="Is Polish text to speech hard to get right?">
-        <p>
-          Polish has a reputation among language learners for consonant
-          clusters and a case system that changes word endings constantly,
-          which is a fair reason to worry about whether a synthetic voice can
-          keep up. The honest answer is that you should listen and judge for
-          yourself rather than take a marketing claim about it. The{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          plays Tomasz reading real Polish sentences, so you can hear how it
-          handles your language before you rely on it for study or for a
-          Polish-language book you actually want to finish.
-        </p>
+      <QuestionSection question="Can you use it to proofread Polish writing?">
+        <p>Hearing a passage can give you another way to inspect it. For example, you may notice a repeated sentence or an awkward transition when you listen. Pause and compare the passage with your editable source document before making a change.</p>
+        <p>The voice does not determine whether grammar, spelling or meaning is correct. Some mistakes are audible, some are not, and a pronunciation error can originate in the synthesiser rather than your writing. Keep a visual proofreading pass and any subject-specific checks you need.</p>
+        <p>If you are learning Polish, listening and repeating can be one exercise. It does not replace conversation or feedback from someone who can hear and assess your speaking.</p>
       </QuestionSection>
-
-      <QuestionSection question="What can you actually import and listen to?">
-        <p>
-          LoudReader reads any DRM-free EPUB or PDF, in Polish or any of its
-          other languages. That covers books you already own as files,
-          documents you write yourself, and study material. It also has
-          70,000+ free Project Gutenberg books built in, including
-          Polish-language classics, so you can test the Polish voice on a
-          real book without hunting down your own file first. One concession
-          worth making here: LoudReader reads the text layer of a document. A
-          PDF that's really a scanned image of a printed page has no text for
-          the app to read, in Polish or anything else.
-        </p>
+      <QuestionSection question="What about scanned Polish books?">
+        <p>LoudReader&apos;s PDF import can use on-device OCR when a scan lacks usable text. Check the recognised text before a long session, especially on faint pages, older typefaces and multi-column documents. A cleaner scan or a digital edition can give a better starting point.</p>
+        <p>DRM-free EPUBs and PDFs are the file formats to use. A protected ebook from another service is not made importable by choosing a Polish voice. Charts, tables and other visual information still need the original page.</p>
       </QuestionSection>
-
-      <QuestionSection question="What does the Polish voice cost?">
-        <p>
-          Try {FREE_TIER.trial}. After that, continuing with Tomasz requires
-          Premium. Free users choose one keepable voice from the eligible
-          English lineup and retain unlimited listening, with no account or
-          word quota. Premium includes all 23 studio narrators across 10
-          languages, playback speed from 0.3x to 3.0x, a sleep timer,
-          soundscapes, and notes and highlights. Either way, the
-          Polish narrator itself never streams anything to a server. It runs
-          on your phone or Mac, so listening stays fully on-device and
-          private, your library never leaves your device.
-        </p>
-        <p>
-          Download{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader from the App Store
-          </a>{" "}
-          to try it, or listen to Tomasz first on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>
-          .
-        </p>
+      <QuestionSection question="Is Polish narration free or offline?">
+        <p>Try {FREE_TIER.trial}. After that, Tomasz requires Premium. Ongoing free book listening uses an English selection, so it should not be advertised as unlimited free Polish studio narration. Adjustable speed from 0.3x to 3.0x is also Premium.</p>
+        <p>Speech is generated on your device rather than by uploading the book for narration. Have the book and desired voice ready, then test playback without a connection before travel. This local speech path is separate from the app&apos;s diagnostics and analytics.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear the Polish narrator for yourself"
-        subline="One voice, real samples, no account needed to listen."
-      />
+      <StoreCta headline="Try Tomasz with your own Polish text" subline="Check a short passage and your device’s voice availability before committing to a longer book." />
     </ArticleLayout>
   );
 }

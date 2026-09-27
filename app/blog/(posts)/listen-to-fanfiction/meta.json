@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-fanfiction",
-  "title": "How to Listen to Fanfiction (AO3 and Beyond)",
-  "description": "Every AO3 fic has a built-in EPUB download. Import it into LoudReader and it becomes an audiobook with natural offline voices. Private, free, works offline.",
+  "title": "How to Listen to Fanfiction from an EPUB",
+  "description": "Download an accessible AO3 work as EPUB, keep track of updates and listen locally. A practical workflow with realistic privacy and access limits.",
   "publishedAt": "2026-07-23",
-  "lastModified": "2026-07-23",
+  "lastModified": "2026-09-28",
   "avatar": "Time-Starved Book Lover",
-  "query": "listen to fanfiction"
+  "query": "listen to fanfiction",
+  "topic": "formats"
 }

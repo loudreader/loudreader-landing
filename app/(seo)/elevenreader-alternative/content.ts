@@ -22,18 +22,23 @@
 
 import type { ComparisonRow } from "@/components/money/ComparisonTable";
 import type { Faq } from "@/components/money/FaqSection";
+import { CLONING, FEATURES, FREE_TIER, LIBRARY, MAC, PRICING, PRIVACY, REQUIREMENTS, VOICES } from "@/components/money/site";
+
+// LoudReader product facts checked against shipping release 1.12 and Apple's
+// live US listing on 2026-09-28. See docs/product-facts-2026-09-28.md.
+// Competitor evidence remains dated 2026-07-14; it was not rechecked here.
 
 export const SLUG = "elevenreader-alternative";
 
-export const LAST_UPDATED = "2026-07-14";
+export const LAST_UPDATED = "2026-09-28";
 export const FACTS_CHECKED_NOTE =
-  "ElevenReader facts checked against elevenreader.io, elevenlabs.io, and the ElevenReader App Store listing on July 14, 2026";
+  "ElevenReader facts checked against elevenreader.io, elevenlabs.io, and the ElevenReader App Store listing on July 14, 2026. LoudReader 1.12 product facts checked on September 28, 2026; competitor facts were not rechecked";
 
 export const PAGE_TITLE = "ElevenReader Alternative: Private & Offline";
 export const PAGE_DESCRIPTION =
-  "Looking for an ElevenReader alternative? LoudReader reads EPUBs and PDFs aloud with natural offline voices, no upload, no account, no hourly listening quota.";
+  "LoudReader narrates DRM-free EPUBs and PDFs on your device, without uploading books for speech. Compare free listening and features with ElevenReader.";
 
-export const H1 = "The ElevenReader alternative that never uploads your reading";
+export const H1 = "The ElevenReader alternative that narrates on your device";
 
 export const COMPARISON_COLUMNS = ["LoudReader", "ElevenReader"];
 
@@ -41,21 +46,21 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   {
     label: "Premium price",
     cells: [
-      "$7.99/month, $49.99/year, or $199.99 once (lifetime)",
+      `${PRICING.premiumMonthly}, ${PRICING.premiumYearly}, or ${PRICING.premiumLifetime}; storefront prices vary`,
       "Ultra: $11/month, or $99/year (about $8.25/month billed annually)",
     ],
   },
   {
     label: "One-time purchase",
     cells: [
-      "Yes, $199.99 lifetime",
+      `Yes, ${PRICING.premiumLifetime}`,
       "No, subscription only (plus per-book audiobook purchases)",
     ],
   },
   {
     label: "Free tier",
     cells: [
-      "Unlimited listening on every book, cover to cover; every voice free for your first 8 hours",
+      `${FREE_TIER.full} ${FREE_TIER.choice}`,
       "10 hours of text-to-audio per month. ElevenLabs describes it as \"about a 400-page book every month\"",
     ],
   },
@@ -68,58 +73,58 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
   },
   {
     label: "Account required",
-    cells: ["No, no sign-up at all", "Yes, sign-up required to start listening"],
+    cells: ["No LoudReader account required to import and listen", "Yes, sign-up required to start listening"],
   },
   {
     label: "Privacy",
     cells: [
-      "Fully on-device and private, your library never leaves your device",
+      `Books are not uploaded for narration. ${PRIVACY.summary} Usage analytics is enabled by default.`,
       "Cloud service. You upload your files to convert them to audio (\"Simply upload and press play\")",
     ],
   },
   {
     label: "Works offline",
     cells: [
-      "100%, all speech is generated on-device",
+      FEATURES.onDevice,
       "Offline listening via downloads, an Ultra plan feature",
     ],
   },
   {
     label: "Voices",
     cells: [
-      "23 natural offline voices across 10 languages",
+      `${VOICES.headline}. ${VOICES.availability}`,
       "1,000+ voices, including licensed \"Iconic\" celebrity voices and custom voices you design",
     ],
   },
   {
     label: "Voice cloning",
     cells: [
-      "On device. Read a few sentences aloud, about ten seconds, and the narrator is built on your phone. The recording is never uploaded.",
+      `${CLONING.long} ${CLONING.trial}`,
       "In the cloud. Your recording is uploaded and the voice lives on ElevenLabs' servers.",
     ],
   },
   {
     label: "Languages",
-    cells: ["10 languages, each with a native narrator", "30+ languages"],
+    cells: [`10 studio-voice languages. ${VOICES.availability}`, "30+ languages"],
   },
   {
     label: "Platforms",
     cells: [
-      "iPhone, iPad, and Apple Silicon Macs",
+      MAC.precise,
       "iOS, Android, web app, Chrome extension, no Mac app",
     ],
   },
   {
     label: "Built-in library",
     cells: [
-      "70,000+ free Project Gutenberg classics",
+      LIBRARY.gutenberg,
       "Thousands of free classic audiobooks, plus a 200,000+ premium audiobook store on Ultra",
     ],
   },
   {
     label: "Requirements",
     cells: [
-      "macOS 15+ on Apple Silicon; iOS 18+",
+      REQUIREMENTS,
       "iOS 18+, Android, or any modern browser",
     ],
   },
@@ -128,26 +133,26 @@ export const COMPARISON_ROWS: ComparisonRow[] = [
 export const FAQS: Faq[] = [
   {
     q: "Is LoudReader a good ElevenReader alternative?",
-    a: "Yes, if you mainly want books and documents read aloud without uploading them. LoudReader is fully on-device and private, your library never leaves your device, and the free tier has no listening meter, so you can listen to entire books cover to cover, every month, without paying. If you want 1,000+ cloud voices, 30+ languages, an audiobook store, or Android support, ElevenReader is the better fit.",
+    a: `Yes, if you mainly want books and documents narrated on your device without uploading them to a speech server. ${FREE_TIER.full} If you want 1,000+ cloud voices, 30+ languages, an audiobook store, or Android support, ElevenReader is the better fit.`,
   },
   {
-    q: "Does LoudReader upload my books or PDFs anywhere?",
-    a: "No. All text-to-speech runs on your Mac or iPhone, so your files are never uploaded to any server. ElevenReader works the other way around: you upload your files to the ElevenLabs cloud, which converts them to audio.",
+    q: "Does LoudReader upload my books or PDFs for narration?",
+    a: `No. LoudReader generates speech on your device rather than sending books to a speech server. ${PRIVACY.summary} Usage analytics is enabled by default. ElevenReader converts uploaded files in the ElevenLabs cloud.`,
   },
   {
     q: "Is there a listening limit in LoudReader's free tier?",
-    a: "No. LoudReader's free tier includes unlimited listening on every book, cover to cover, with no hourly or word quota. ElevenReader's free plan meters text-to-audio at 10 hours per month; unlimited conversion of your own imports requires Ultra at $11/month or $99/year.",
+    a: `There is no hourly or word quota on book listening. ${FREE_TIER.full} ${FREE_TIER.choice} ElevenReader's free plan meters text-to-audio at 10 hours per month; unlimited conversion of your own imports requires Ultra at $11/month or $99/year.`,
   },
   {
     q: "Does ElevenReader have a Mac app?",
-    a: "No. ElevenReader ships iOS and Android apps, a web app, and a Chrome extension, so on a Mac you use it in the browser. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, so you can listen on the Mac itself with word-by-word highlighting, rather than in a browser tab.",
+    a: `The July 14, 2026 comparison found iOS and Android apps, a web app and a Chrome extension, with browser access on Mac. ${MAC.precise}`,
   },
   {
     q: "Do I need an account to use LoudReader?",
-    a: "No. There's no sign-up, no login, and no profile. You download the app and start listening. ElevenReader requires creating an account before you can start listening.",
+    a: "No LoudReader account is required to import books and listen. App Store purchases use your Apple ID. ElevenReader requires creating an account before you can start listening.",
   },
   {
     q: "What does ElevenReader offer that LoudReader doesn't?",
-    a: "A lot, honestly: 1,000+ voices including licensed celebrity voices, custom voices you can design from a text prompt, 30+ languages, GenFM AI podcasts generated from your content, a 200,000+ premium audiobook store, and Android and web apps. LoudReader is deliberately narrower, a private, offline reader for books and documents on Mac and iPhone.",
+    a: "A lot, honestly: 1,000+ voices including licensed celebrity voices, custom voices you can design from a text prompt, 30+ languages, GenFM AI podcasts generated from your content, a 200,000+ premium audiobook store, and Android and web apps. LoudReader focuses on on-device narration of books and documents on Apple devices.",
   },
 ];

@@ -1,49 +1,56 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against:
-//   - data/voices.ts (the /voices roster source, audited 2026-08-20 against
-//     the shipping app's studio voice enum): French has exactly one narrator,
-//     Antoine. There is no second French voice to choose between.
-//   - components/money/site.ts VOICES.lazyLanguages: narrators for a language
-//     appear in the picker once there is a book in that language in the
-//     library. This is stated plainly, not as a workaround.
-//   - components/money/site.ts PRICING, DIFFERENTIATORS, VOICES: pricing,
-//     the free tier, on-device/private phrasing, and the 10-language count
-//     come from here verbatim, not retyped from memory.
-//   - components/money/site.ts FREE_TIER: all 23 narrators are free for
-//     the first 8 hours. After that, the one keepable free voice is chosen
-//     from the eligible English lineup; this language narrator needs Premium.
-// App-behavior claims used: on-device, no account, imports EPUB/PDF,
-// 70,000+ Project Gutenberg books, free tier = unlimited listening, Premium
-// adds all voices + speed (0.3x to 3.0x) + sleep timer + soundscapes + notes.
-// Claims NOT made: CarPlay, Android, Windows, OCR of scanned/image-only PDFs,
-// a choice of French narrators, Quebec or Belgian French as a selectable
-// accent (the app does not expose that distinction; not claimed).
+// FACT PROVENANCE — reviewed 2026-09-28; editorial guidance is not a runtime test.
+// Shipping source: loudreader/LoudReader_mac release_v1.12,
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 (not the dirty checkout HEAD).
+// - LoudReader/Engines/ChatterboxVoice.swift:27-59,95-108: studio language
+//   catalogue and narrator identities; internal QA voices are not counted.
+// - LoudReader/ReadingLanguages.swift, SettingsSheet.swift:347-378 and
+//   VoiceRegistry.swift:105-119: languages from library OR Settings marks;
+//   "Languages You Read" adds voices without changing paid entitlements.
+// - LoudReader/PDFImportPipeline.swift:88-96,155-218: local Vision OCR,
+//   recognition limits and partial-import warnings. No claim of perfect OCR.
+// - LoudReader/Subscription/SubscriptionAccess.swift:4-11,
+//   SubscriptionManager.swift:280-297 and Subscription/PaywallReason.swift:
+//   8 listening-hour allowance; post-trial English selection; paid studio
+//   voices/speed/timer/soundscapes; notes and highlights are not paid-only.
+//   Free-tier wording comes from shared FREE_TIER.full to keep device-specific
+//   selection details consistent; studio availability depends on hardware
+//   (DeviceCapability.swift:47-73).
+// - LoudReader/LoudReaderApp.swift:62,244 and local TTS implementation:
+//   speech synthesis is local, but Sentry diagnostics and usage analytics
+//   exist. No "no telemetry", "no network", or user opt-out UI claim is made.
+// - Official Apple version lookup https://itunes.apple.com/lookup?id=6758149478&country=us
+//   and https://apps.apple.com/us/app/loudreader-text-to-speech/id6758149478:
+//   release 1.12, iPhone/iPad app; compatible Macs run its iPad build.
+//   Version/platform findings also checked in the canonical product audit
+//   dated 2026-09-28. Public marketing privacy copy is stale and not evidence.
+// - https://loudreader.io/voices (checked 2026-09-28), data/voices.ts:
+//   public sample destination and language/voice catalogue only, not privacy.
+// Not claimed: a selectable regional accent, automatic code-switching,
+// translation, guaranteed pronunciation, DRM removal or all studio voices
+// on every device. Suggested sample checks are reader guidance, not test results.
 
 import type { Faq } from "@/components/money/FaqSection";
 import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does LoudReader read French text aloud?",
-    a: "Yes. LoudReader has one French narrator, Antoine, and it reads any DRM-free French EPUB or PDF aloud on your iPhone or Mac. The voice runs entirely on the device, so it works offline once the book is imported.",
+    q: "How do I find the French voice in LoudReader?",
+    a: "Import a French-language book or mark French in Settings → Languages You Read, then choose Antoine in the narrator picker. Studio voice availability depends on your device, and French requires a remaining voice trial or Premium.",
   },
   {
-    q: "How many French voices does LoudReader offer?",
-    a: "One. Antoine is the only French narrator in the app. If you're hoping to choose between several French voices, LoudReader won't offer that today. English has 11 voices and Spanish has 4, but most other languages, French included, ship with a single narrator.",
+    q: "Does LoudReader offer Quebec or Belgian French?",
+    a: "Antoine is listed as a French narrator without a regional-accent selector. Listen to the voice sample and a passage from your own material. If a particular regional variety is essential, compare it with an explicitly identified spoken reference.",
   },
   {
-    q: "Does the French voice sound Parisian, Quebecois, or Belgian?",
-    a: "The app doesn't split that out as a setting. Antoine is simply labeled the French narrator. If a specific accent matters for your material, listen to the sample on the voices page before you rely on the app for a specific project.",
+    q: "Can LoudReader read a scanned French PDF?",
+    a: "Yes, the current app can recognise text from scanned PDF pages on your device. OCR can misread words or leave pages incomplete. Check import warnings and compare the recognised text with the original before a long listen.",
   },
   {
-    q: "Do I need an account to use the French voice?",
-    a: "No. There is no account and no sign-up. Import a book and the French narrator becomes available once your library has a French-language book in it.",
+    q: "Is the French narrator free?",
+    a: `${FREE_TIER.full} Continuing with Antoine after the voice trial requires Premium. Notes and highlights are available without Premium; adjustable playback speed, the sleep timer and soundscapes require Premium.`,
   },
   {
-    q: "Is the French voice free to use?",
-    a: `Try ${FREE_TIER.trial}. After that, continuing with Antoine, the French narrator, requires Premium. Free users choose one keepable voice from the eligible English lineup and retain unlimited listening on every book, with no account or word quota. Premium includes all 23 studio narrators across 10 languages, playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and notes and highlights.`,
-  },
-  {
-    q: "Can LoudReader read a French PDF that's a scan of a printed page?",
-    a: "No. LoudReader reads the actual text layer in an EPUB or PDF. A scanned page saved as an image has no text layer for the app to read, in French or any other language.",
+    q: "Can I listen to French books without internet?",
+    a: "Speech is generated locally. Install the app, import the book and ensure the required voice resources are ready, then test offline playback before travelling. Downloads and other online features still need a connection; the app also uses diagnostics and analytics.",
   },
 ];

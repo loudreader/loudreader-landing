@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-rss-feeds-aloud",
   "title": "How to Listen to RSS Feeds Aloud",
-  "description": "RSS readers don't have text-to-speech built in. Save articles as PDFs from Safari Reader, then import into LoudReader to hear them with natural offline voices on iPhone or Mac.",
+  "description": "Build a small listening queue from RSS articles using direct links or saved PDFs. Keep feed subscriptions separate from LoudReader’s local narration.",
   "publishedAt": "2026-08-15",
-  "lastModified": "2026-08-15",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "listen to rss feeds aloud"
+  "query": "listen to rss feeds aloud",
+  "topic": "formats"
 }

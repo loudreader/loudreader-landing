@@ -5,161 +5,53 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function WhatIsTheBestWayToListenToEbooksArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          There are three routes to listening to ebooks, and they serve
-          different needs. Official audiobooks (Audible, Apple Books, Libby)
-          give you professional human narration but only for books that got a
-          recording. Text-to-speech apps like <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) turn any DRM-free EPUB or PDF into an
-          audiobook instantly with natural offline voices, fully on-device and
-          private, your library never leaves your device. Built-in system
-          tools (Spoken Content on Mac and iPhone) are free and basic but lack
-          book-specific features like place-saving and word highlighting. The
-          best way depends on what books you have and what you value most:
-          performance quality, universality, or cost.
-        </p>
+        <p>The best route depends on the book and the job. Choose an audiobook recording if you want that performance; try your device’s built-in speech for accessible text you already have open; use a dedicated reader when you want an imported ebook library and convenient book playback. Check file access before comparing voices: a store purchase may not be an exportable EPUB or PDF. Then test a chapter transition, pause/resume, offline readiness and the passages that matter to you. No category guarantees the best voice or supports every protected book. This guide is published by LoudReader’s developer.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="devices"
-        caption="Three routes to audio: official recordings, TTS apps, and built-in tools."
-      />
+      <ArticleIllustration variant="devices" caption="Test the book, the controls and the terms—not only the voice demo." />
 
-      <QuestionSection question="What are my options for listening to ebooks?">
-        <p>
-          Three categories, each with different trade-offs:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Official audiobooks.</strong>{" "}
-            Professionally recorded human narration, sold through stores like
-            Audible and Apple Books or borrowed through library apps like Libby
-            and Hoopla. Best quality by far, but only available for a fraction
-            of all books, and you pay per book or through a subscription.
-          </li>
-          <li>
-            <strong className="text-gray-900">Text-to-speech apps.</strong>{" "}
-            Apps that read any text aloud using AI voices. Works on any
-            DRM-free EPUB or PDF you own. No recording needs to exist. Quality
-            is good enough for hours of listening, especially for non-fiction.
-            Free options exist (LoudReader's unlimited free tier), with premium
-            voices and features available for a subscription or one-time
-            purchase.
-          </li>
-          <li>
-            <strong className="text-gray-900">Built-in system tools.</strong>{" "}
-            macOS and iOS have Spoken Content, a built-in feature that reads
-            selected text aloud. Free, works offline, but limited: no
-            place-saving across sessions, no EPUB navigation, no word
-            highlighting, and the voices are older and less natural than modern
-            neural TTS. Fine in a pinch, but not a great book-listening
-            experience.
-          </li>
-        </ul>
+      <QuestionSection question="When is an existing audiobook the straightforward option?">
+        <p>When there is a recording you like and you can obtain it on terms that suit you. Sample the narration, check whether the edition is complete and decide whether you want to buy, subscribe or borrow. A performance with deliberate character voices may be a reason to choose that edition.</p><p>A participating library may offer ebooks and audiobooks through <a href="https://www.overdrive.com/apps/libby" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">Libby</a>. Access depends on your library and its collection. Check availability rather than assuming every title is included or immediately borrowable.</p>
       </QuestionSection>
 
-      <QuestionSection question="When should you buy the official audiobook?">
-        <p>
-          When the book has one, and the performance matters. A great narrator
-          does not just read a book. They interpret it. They give characters
-          distinct voices, modulate emotion, and use timing for dramatic
-          effect. For literary fiction, beloved series, and books where the
-          listening experience is part of the enjoyment, a professional
-          recording is worth the money.
-        </p>
-        <p>
-          The trade-off: most books do not have audiobook editions. Backlist
-          titles, niche non-fiction, self-published works, academic books, and
-          your own EPUBs and PDFs were never recorded. If your reading list
-          skews toward these, the audiobook store is not an option. That is
-          where TTS apps earn their keep.
-        </p>
+      <QuestionSection question="When should I try built-in speech first?">
+        <p>If the text is already accessible in an app and you only need to hear a passage, start with your device’s speech tools. Apple’s <a href="https://support.apple.com/guide/iphone/hear-whats-on-the-screen-or-typed-iph96b214f0/ios" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">iPhone speech guide</a> documents Speak Screen, Speak Selection, highlighting, voice choice and speaking-rate controls. These tools should not be dismissed as lacking highlighting or useful settings.</p><p>Feature names vary by OS version, and results depend on what the source app exposes. Test the actual book, a page transition and what happens when you leave or lock the app. Do not assume system speech can open a protected file in a different reader.</p>
       </QuestionSection>
 
-      <QuestionSection question="When is a TTS app the better choice?">
-        <p>
-          TTS apps win when universality matters more than performance quality.
-          Any DRM-free EPUB or PDF becomes an audiobook in seconds. No waiting
-          for a recording to exist. No paying per book. No managing audio
-          files. The voice is generated live on your device from the text.
-          Modern neural TTS voices are natural enough that for non-fiction and
-          most fiction, the listening experience is genuinely good.
-        </p>
-        <p>
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader
-          </a>{" "}
-          is built for this use case. Import any EPUB or PDF, or pick from
-          70,000+ free Project Gutenberg classics, and press play. Natural
-          offline voices run fully on-device and private, your library never
-          leaves your device. {FREE_TIER.full} Keeping all 23 studio narrators
-          after the trial, speed control from 0.3x to 3.0x, sleep
-          timer, soundscapes, and notes are part of {PRICING.premiumMonthly}{" "}
-          Premium.
-        </p>
+      <QuestionSection question="What is a dedicated ebook reader useful for?">
+        <p>An app that imports and organises books can keep the text, navigation and playback together. Evaluate the workflow you need: saved position, chapter handling, visible text, notes and access without a connection. A pleasant ten-second voice demo tells you little about those longer-session details.</p><p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> is one option for DRM-free EPUBs and PDFs. Speech and OCR are processed locally; scans and complex layouts still need checking. It runs on iPhone and iPad, and on compatible Apple Silicon Macs as an iPad app. It does not automatically sync its library or position between devices.</p>
       </QuestionSection>
 
-      <QuestionSection question="What about borrowing audiobooks from the library?">
-        <p>
-          Library apps like Libby and Hoopla are fantastic if your local
-          library has a good digital collection. You borrow audiobooks for
-          free with a library card, listen in their app, and they return
-          automatically. The limitations: availability depends on your
-          library's catalog and budget, popular titles often have waiting
-          lists, and you are still limited to books that got a recording.
-        </p>
-        <p>
-          Library apps pair well with TTS readers. Use Libby for the
-          bestsellers that got a recording. Use LoudReader for everything else.
-          Together they cover more books than either alone.
-        </p>
+      <QuestionSection question="What should I check before choosing or paying?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Confirm that the exact title or file is available to you. A store login and an importable ebook are different things.</li>
+          <li>Sample a few minutes with the names, dialogue or technical language your book contains.</li>
+          <li>Test a chapter transition and pause/resume. For PDFs, compare reading order with the page.</li>
+          <li>Check the free allowance, recurring or one-off purchase terms, and which controls require payment.</li>
+          <li>If privacy or offline use matters, inspect the processing policy and test the prepared book offline. Do not use a disconnected playback test as proof of no telemetry.</li>
+        </ol><p>LoudReader generates speech without uploading the book for narration, while also including crash/performance diagnostics and usage analytics. Usage analytics is enabled by default, and version 1.12 has no visible switch to disable it. Its <Link href="/faq" className="text-loudBlue hover:underline">FAQ</Link> covers the current feature boundaries.</p>
       </QuestionSection>
 
-      <QuestionSection question="How do built-in tools compare to dedicated apps?">
-        <p>
-          Every Mac and iPhone has Spoken Content, a system-level feature that
-          reads selected text aloud. It is free, works offline, and requires
-          zero setup beyond enabling it in Accessibility settings. For reading
-          a short article or a single web page, it does the job.
-        </p>
-        <p>
-          For book-length listening, the gaps are significant. Spoken Content
-          does not save your place across sessions. It does not navigate EPUB
-          chapters. It does not highlight words as it reads. The voices are
-          older, less natural, and were designed for accessibility use cases,
-          not immersive reading. A dedicated app like LoudReader handles all of
-          these: place-saving, EPUB and PDF navigation, word-by-word
-          highlighting, and natural offline voices running on Apple Silicon's
-          Neural Engine. The difference between a system tool and a
-          purpose-built reader is the difference between functional and
-          enjoyable.
-        </p>
+      <QuestionSection question="What is free in LoudReader?">
+        <p>Try every available voice for your first 8 hours of listening. Afterwards, a free English voice selection remains available with unlimited book listening. The free selection is limited; it is not a promise to keep any studio narrator you choose. Notes and highlights are free, while full available-voice access, adjustable playback speed, sleep timer and soundscapes are Premium features.</p><p>Check the in-app purchase sheet for your storefront’s current price. You can test imports and ordinary listening before deciding whether a paid control matters for your routine.</p>
+      </QuestionSection>
+
+      <QuestionSection question="Can one approach cover everything?">
+        <p>You do not need it to. Use a recorded performance for one novel, system speech for a short accessible passage and a dedicated reader for your own files. If an ebook cannot be exported, check the original service’s available listening options rather than expecting another app to unlock it.</p><p>For the import route, start with <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">the EPUB/PDF walkthrough</Link>. Choose the tool that handles the book in front of you, then reuse it when the same need comes up.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="The best way to listen to any ebook"
-        subline="Import any EPUB or PDF and press play. Natural offline voices, free unlimited listening, no account."
-      />
     </ArticleLayout>
   );
 }

@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-scanned-pdf-books",
   "title": "How to Listen to Scanned PDF Books",
-  "description": "Scanned PDFs need a text layer to work with text-to-speech. Image-only scans produce no audio. For PDFs with selectable text, LoudReader reads them aloud with natural offline voices.",
+  "description": "Listen to scanned PDF books with on-device OCR. Check recognition errors, incomplete pages and the 300-page OCR limit before a long listen.",
   "publishedAt": "2026-08-06",
-  "lastModified": "2026-08-06",
+  "lastModified": "2026-09-28",
   "avatar": "Senior / Low Vision",
-  "query": "listen to scanned pdf"
+  "query": "listen to scanned pdf",
+  "topic": "formats"
 }

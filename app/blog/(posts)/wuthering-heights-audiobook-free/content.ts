@@ -1,46 +1,44 @@
-// FACT PROVENANCE. Verified 2026-08-24 against:
-//   - Emily Bronte published Wuthering Heights in 1847; it is in the public
-//     domain everywhere. The Project Gutenberg edition is catalog ID 768,
-//     listed as "Wuthering Heights" / "Emily Bronte" per
-//     data/catalog-slugs.json (slug: "wuthering-heights").
-//   - The book's LoudReader catalog page (/listen/wuthering-heights) exists
-//     in data/catalog-slugs.json and renders a real, rendered audio sample
-//     (data/audio-samples.ts, "wuthering-heights" entry, 23.3 seconds), the
-//     same flagship reference voice used across the catalog.
-//   - LoudReader app-behavior claims (free unlimited listening, no account,
-//     70,000+ built-in Gutenberg catalog, on-device, word-by-word
-//     highlighting, natural offline voices, iPhone, iPad, and Apple Silicon Macs) come
-//     from components/money/site.ts, the single source of truth.
-//   - LibriVox as a free human-narrated alternative: general, verifiable
-//     description only (volunteer readers, MP3 downloads).
-// Claims NOT made: no invented word count, no invented listening-time figure,
-// no "best narrator" ranking, no CarPlay, no Android.
+// FACT PROVENANCE — reviewed 2026-09-28.
+//   - https://www.gutenberg.org/ebooks/768
+//   - https://www.gutenberg.org/cache/epub/768/pg768-images.html
+//   - https://www.gutenberg.org/policy/permission.html
+//   - Edition/translator claims use the linked primary catalog record and text,
+//     not its automatically generated synopsis. US status is not global clearance.
+//   - data/catalog-slugs.json and data/audio-samples.ts: catalog route and sample.
+//   - components/money/site.ts: FREE_TIER and Premium playback features.
+//   - Product claims cross-checked against the 2026-09-28 shipping-source audit:
+//     LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+//     SubscriptionAccess.swift, SubscriptionManager.swift, KittenVoice.swift,
+//     VoiceRegistry.swift, PaywallReason.swift, ProjectGutenbergService.swift
+//     and the Xcode iOS target. Compatible Macs run the iPad app; catalog
+//     discovery, ebook download and required voice setup are distinct.
+//     No runtime/network test was performed for this article revision.
+// Do not claim: worldwide copyright clearance, a fixed measured runtime,
+// identical modern translations, human/cast performance, no network or telemetry,
+// no downloads, automatic cross-device reading sync, or every feature free.
+// Practical listening suggestions are editorial advice, not measured outcomes.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is there a free audiobook of Wuthering Heights?",
-    a: "Yes. Wuthering Heights is public domain, so nobody holds an exclusive audiobook right to it. Project Gutenberg hosts the full text free, and LoudReader reads it aloud on your Mac or iPhone with natural offline voices, free with unlimited listening and no account.",
+    "q": "Which text is linked in this guide?",
+    "a": "The English text of Emily Brontë’s Wuthering Heights in Project Gutenberg ebook #768. Check your assigned edition if you need matching wording or references."
   },
   {
-    q: "Is the free Wuthering Heights audiobook read by a human narrator?",
-    a: "No. LoudReader reads the Gutenberg text with a synthetic voice, not a performed audiobook by a human narrator. It's clear and consistent through the novel's shifting narrators (Lockwood, then Nelly Dean), but it doesn't act the dialogue the way a trained narrator would. If a human performance matters most, look for a LibriVox recording instead.",
+    "q": "Is every recording of Wuthering Heights free?",
+    "a": "No. The underlying novel and a particular recording are separate. Check the recording’s provider, terms and territorial availability."
   },
   {
-    q: "Where can I hear a sample before installing the app?",
-    a: "The LoudReader catalog page for Wuthering Heights plays a short rendered sample of the opening in your browser, using the same voice heard across the app. You can check it works for you before installing anything.",
+    "q": "Will the synthetic voice act Lockwood and Nelly separately?",
+    "a": "Do not expect distinct actors for each storyteller. Follow the text’s narrative transitions, and sample a human recording if performed characterisation is important to you."
   },
   {
-    q: "Do I need to find or convert a file to listen in LoudReader?",
-    a: "No. Wuthering Heights is one of the 70,000+ Project Gutenberg books already built into LoudReader's catalog. You find it inside the app and press play, with nothing to download or convert first.",
+    "q": "What must be downloaded for offline listening?",
+    "a": "The ebook and required voice resources must be ready on the device. Check playback with the selected voice before you travel; a catalog entry is not an offline copy."
   },
   {
-    q: "Can I listen to Wuthering Heights offline?",
-    a: "Yes. LoudReader is fully on-device and private, your library never leaves your device, so playback works without a connection once the book is open, on a train, a plane, or anywhere else the signal drops.",
-  },
-  {
-    q: "Is a free public-domain audiobook of Wuthering Heights legal?",
-    a: "Yes. Emily Bronte's copyright expired long ago, so the text is public domain and free to read, adapt, or read aloud by anyone, including a text-to-speech app. There's no licensing question involved.",
-  },
+    "q": "Is free listening limited to a short preview?",
+    "a": "LoudReader offers every available voice for the first 8 hours of listening. After that, listening remains unlimited with a limited free English voice selection. Premium features are separate."
+  }
 ];

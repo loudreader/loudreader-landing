@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,161 +6,37 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, DIFFERENTIATORS, FREE_TIER } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function MaleOrFemaleNarratorArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          There&apos;s no right answer to male or female narrator, and be
-          skeptical of anyone claiming otherwise. It&apos;s a preference, not
-          a science, and the preference is yours to make, not ours to argue
-          for. What actually settles it is listening to both and noticing
-          which one you keep listening to without thinking about it.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) has 11
-          English narrators, a genuine mix of both, plus{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            23 studio narrators across 10 languages
-          </Link>{" "}
-          in total, every one playable right on that page. It is{" "}
-          {DIFFERENTIATORS.private}. {FREE_TIER.full} You can compare
-          narrators in the app during those first eight hours. Premium keeps
-          the full roster available afterward.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Listen to both. Your ear already knows the answer."
-      />
-
-      <QuestionSection question="Is a male or female narrator objectively better?">
-        <p>
-          No, and any confident answer to that question should make you
-          suspicious of it. There&apos;s no reliable research showing that
-          one gender of narrator is better at holding attention,
-          comprehension, or anything else that matters to a listener. If you
-          see a specific percentage or study cited to back up a preference in
-          either direction, it&apos;s worth checking where it actually came
-          from.
-        </p>
-        <p>
-          What&apos;s real is that individual voices vary enormously within
-          each group, and your reaction to any one narrator is personal. A
-          voice that another reader loves might not work for you at all, and
-          that has more to do with pace, tone, and how the two of you happen
-          to fit than with gender.
-        </p>
+      <Tldr><p>
+        Choose the voice you prefer hearing on the book, rather than treating male or female as a quality ranking. These catalogue labels can help you narrow a search, but they do not tell you how a narrator handles pronunciation, pauses, dialogue or pace. You may have a strong preference, no preference, or a different one for each book. Compare a few voices using the same passage and include at least one you would not normally pick. This article offers a listening method; it does not claim that research proves one category better, or that no relevant research exists.
+      </p></Tldr>
+      <ArticleIllustration variant="waveform" caption="Compare individual voices on the same passage; a category label is only a starting point." />
+      <QuestionSection question="What am I choosing when I choose a male or female voice?">
+        <p>Usually you are choosing among voices a library presents under those labels. The sound you prefer may involve pitch, texture, accent, delivery or familiarity. A label alone cannot tell you whether a particular voice will be clear or comfortable for a long session.</p>
+        <p>Try describing what you like more precisely. Is it a lower pitch, a gentler delivery, sharper consonants or longer pauses? That can help you find another suitable voice without assuming every narrator in one category will sound alike.</p>
       </QuestionSection>
-
-      <QuestionSection question="Does the narrator need to match the book or the author?">
-        <p>
-          Not really. Plenty of narration works well across the match, a
-          female narrator reading a male protagonist&apos;s first-person
-          voice, or the reverse, without the listener losing the thread.
-          Matching can feel natural when it happens, but it isn&apos;t a
-          requirement for a reading to work. If the pacing, clarity, and tone
-          suit the material, the narrator&apos;s gender rarely gets in the
-          way.
-        </p>
+      <QuestionSection question="Does the narrator have to match the author or protagonist?">
+        <p>You can use that as a preference, especially when you have a particular first-person voice in mind, but it need not be a rule. Hear a scene before deciding. With a recorded audiobook, consider whether the performance works for you; with TTS, check whether the selected voice makes the dialogue easy to follow.</p>
+        <p>A text-to-speech voice selection also does not promise a different actor for each character. Listen to a passage with several speakers and decide whether the single narrator suits it. If a performed cast is what you want, check recorded editions separately.</p>
       </QuestionSection>
-
-      <QuestionSection question="So how do you actually decide?">
-        <p>
-          By listening, not by reading opinions about it, including this one.
-          Descriptions of a voice are a poor substitute for hearing it. The
-          fastest way to settle male-or-female for yourself is to play a
-          couple of narrators of each and notice which one you stop paying
-          attention to as a &quot;narrator&quot; and just start following as
-          the book.
-        </p>
-        <p>
-          LoudReader makes that easy: every narrator in the app is playable
-          at{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            /voices
-          </Link>
-          , right in your browser, no download or account required. The
-          English roster has 11 voices with real range on both sides, so you
-          can go back and forth until one clicks. That page is the actual
-          answer to this article&apos;s question. The rest is just context
-          for why there isn&apos;t a shortcut around listening.
-        </p>
+      <QuestionSection question="How do I compare without choosing from the label alone?">
+        <ol className="list-decimal pl-6 space-y-2"><li><strong>Shortlist a few voices.</strong> Keep the language appropriate for the book and include a contrast to your usual choice.</li><li><strong>Use the same passage.</strong> Pick ordinary prose plus some dialogue or unfamiliar names. Compare at comfortable volume and a similar pace.</li><li><strong>Note what helped.</strong> Describe clarity, pauses and enjoyment rather than assigning a score to a gender.</li><li><strong>Try a longer section.</strong> A favourite short sample may not remain your favourite through a chapter.</li></ol>
+        <p>You can stop once a voice works for you. This is a preference check, not an obligation to exhaust every option. For the broader process, see <Link href="/blog/how-to-choose-a-narrator-voice" className="text-loudBlue hover:underline">choosing a narrator voice</Link>.</p>
       </QuestionSection>
-
-      <QuestionSection question="What about other languages?">
-        <p>
-          English and Spanish (4 voices) both have a mix of male and female
-          narrators to choose between. German, French, Italian, Dutch,
-          Polish, Portuguese, Swedish, and Danish each have exactly one
-          narrator right now, so there&apos;s no gender choice in those
-          languages yet, just the single voice available. It&apos;s honest to
-          say that plainly rather than imply a lineup that doesn&apos;t
-          exist. Hear which gender that one narrator is at{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            /voices
-          </Link>{" "}
-          before you commit to reading in that language.
-        </p>
+      <QuestionSection question="What can I try in LoudReader?">
+        <p><Link href="/voices" className="text-loudBlue hover:underline">LoudReader’s voice page</Link> has playable samples of its 23 studio narrators across ten languages. English and Spanish have multiple studio voices; German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish have one each. Hear the available voice rather than assuming each language offers every kind of voice.</p>
+        <p>Availability in the app depends on your device, language settings and access. {FREE_TIER.full} Voice selection is an app-wide preference, so changing narrator affects subsequent listening until you change it again; it is not stored separately for each title.</p>
+        <p>If you are still deciding whether synthetic narration suits long reading at all, <Link href="/blog/are-ai-voices-good-enough-for-books" className="text-loudBlue hover:underline">test it on a chapter</Link>. That question is separate from which voice category you normally choose.</p>
       </QuestionSection>
-
-      <QuestionSection question="Can you switch once you've picked?">
-        <p>
-          Yes, any time, from the reader controls. It&apos;s a single
-          app-wide setting rather than something saved per book, so switching
-          from one gender of narrator to the other changes what plays next
-          across your whole library, not just the book you&apos;re currently
-          in. That makes it cheap to experiment: try a male narrator for one
-          book, a female narrator for the next, and settle into whichever
-          side you keep reaching for.
-        </p>
-        <p>
-          Download{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader from the App Store
-          </a>{" "}
-          to try it on your own book, or start with the samples first.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Does the quality gap between synthetic voices matter more than gender?">
-        <p>
-          For a lot of listeners, yes. How natural a voice sounds, how well
-          it paces itself, whether it disappears into the background or
-          keeps drawing attention to itself, tends to matter more than
-          whether the narrator is male or female. If you&apos;re weighing
-          synthetic narration in general against a performed audiobook, the
-          honest comparison is covered in{" "}
-          <Link
-            href="/blog/are-ai-voices-good-enough-for-books"
-            className="text-loudBlue hover:underline"
-          >
-            are AI voices good enough for books
-          </Link>
-          . But once you&apos;ve decided synthetic narration works for you,
-          gender is just one more knob to turn until the voice fits, and
-          it&apos;s the easiest one to test, because you can hear the
-          difference in seconds.
-        </p>
-      </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Skip the debate and just listen"
-        subline={`${FREE_TIER.full} Hear all 11 English narrators at /voices.`}
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

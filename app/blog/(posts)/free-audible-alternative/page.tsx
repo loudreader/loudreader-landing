@@ -1,17 +1,15 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
 export default function FreeAudibleAlternativeArticle() {
@@ -19,161 +17,107 @@ export default function FreeAudibleAlternativeArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          There are three genuinely free alternatives to Audible, and they
-          cover different situations. <strong>Library apps</strong> (Libby,
-          Hoopla) lend professionally narrated audiobooks free with a library
-          card. <strong>LibriVox</strong> offers 20,000+ volunteer-read
-          recordings of public-domain classics. And{" "}
-          <strong>LoudReader</strong> covers everything else: it turns any
-          DRM-free EPUB or PDF you already own into an audiobook with natural
-          offline voices (unlimited listening, no credits, no subscription, no
-          account), and ships with 70,000+ free Project Gutenberg classics
-          built in. It&apos;s fully on-device and private, your library never
-          leaves your device. The honest catch: none of these gets you
-          Audible&apos;s catalog. DRM-locked purchases stay locked, and a
-          great human narrator is still a performance TTS doesn&apos;t
-          replace.
+          There are several ways to listen without an audiobook subscription.
+          Your library may lend recordings through Libby, Hoopla or another
+          service. LibriVox offers volunteer recordings of works it treats as
+          public domain in the United States. A free text-to-speech tier can
+          read suitable ebook files you already have; LoudReader is one option
+          on Apple devices. Each route has limits: library eligibility and loans,
+          the availability of a particular recording, or access to readable text.
+          Start with the title you want, then choose the route that actually
+          offers it. A free trial of a paid subscription is a different proposition.
         </p>
+        <Disclosure />
       </Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Borrow a recording, choose a volunteer edition, or listen to a file you already have." />
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="The books you already own are the free audiobook catalog nobody talks about."
-      />
-
-      <QuestionSection question="What are the genuinely free alternatives to Audible?">
+      <QuestionSection question="How do I get audiobooks through my library?">
         <p>
-          Skip the listicles padded with free trials. If &quot;free&quot;
-          means <em>actually free</em>, there are three routes, and each is
-          best at something different:
+          Look at your library&apos;s website for its digital services and
+          membership requirements. If it uses Libby, add the library card, search
+          for the audiobook format, and borrow an available copy or place a hold.
+          A title being listed does not mean a copy is immediately available.
+          Libby&apos;s <a href="https://help.libbyapp.com/en-us/6289.htm" className="text-loudBlue hover:underline">quick-start guide</a>{" "}
+          explains the process; mobile loans can be downloaded before a journey.
         </p>
+        <p>
+          Hoopla also depends on a participating library. Its{" "}
+          <a href="https://theloop.hoopladigital.com/support/articles/getting-started/borrow-flex-titles-for-popular-books/" className="text-loudBlue hover:underline">Instant and Flex explanation</a>{" "}
+          matters: Instant titles have no title waitlist but use a monthly
+          allowance, while Flex titles can have holds. Local borrowing and budget
+          limits still apply. Check the allowance shown on your own account;
+          another reader&apos;s library may offer a different deal.
+        </p>
+        <p>
+          Before starting a long book, check the loan period and your place in
+          any queue. Save a second available title for the gap rather than
+          assuming an expired loan will renew immediately. You are borrowing
+          access, so keep the loan in its supported player.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="When is LibriVox the useful option?">
+        <p>
+          For a classic with a volunteer recording, LibriVox lets you choose an
+          audio edition without buying a book subscription. Search the author
+          and title, then check the language and reader credits. Some recordings
+          use one reader throughout; collaborative editions can change readers
+          between chapters. If the first sample does not suit you, look for a
+          different edition before abandoning the service.
+        </p>
+        <p>
+          LibriVox&apos;s <a href="https://librivox.org/pages/public-domain/" className="text-loudBlue hover:underline">public-domain policy</a>{" "}
+          is based on the United States. If you live elsewhere, check the status
+          of the particular work and translation locally before downloading.
+          A familiar story can have a much newer translation. Our{" "}
+          <Link href="/blog/librivox-alternative" className="text-loudBlue hover:underline">LibriVox guide</Link>{" "}
+          focuses on finding a suitable edition and when TTS is useful instead.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="What can a free TTS app add?">
+        <p>
+          TTS supplies the voice, not a licence to a commercial book. It is
+          useful for DRM-free ebooks you already own, your own writing, and
+          documents you are allowed to use. You need a readable supported file;
+          a protected bookstore download or a badly extracted PDF is not the
+          same thing. Check one representative chapter before importing a large
+          collection.
+        </p>
+        <p>
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>{" "}
+          reads supported EPUBs and PDFs on iPhone and iPad, with the iPad build
+          also available on compatible Apple Silicon Macs. Speech generation
+          happens on the device. The app includes a way to discover Project
+          Gutenberg books, but books need downloading and the relevant edition
+          still needs to be available for you to use. The catalogue is not a
+          preinstalled library of every title.
+        </p>
+        <p>
+          {FREE_TIER.full} Premium adds continuing access to the full studio
+          voice roster and features such as adjustable speed and a sleep timer.
+          Decide whether the continuing free voice suits you, not just whether
+          you like a trial voice. The <Link href="/faq" className="text-loudBlue hover:underline">FAQ</Link>{" "}
+          sets out the current offer and supported devices.
+        </p>
+      </QuestionSection>
+
+      <QuestionSection question="What does free listening not include?">
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">
-              Library apps (Libby, Hoopla).
-            </strong>{" "}
-            Borrow real, professionally narrated audiobooks free with a
-            library card. The catalog depends on your library system and
-            popular titles often have waiting lists. But when the book you
-            want is available, this is the best free listening there is.
-          </li>
-          <li>
-            <strong className="text-gray-900">LibriVox.</strong> Over 20,000
-            volunteer-read recordings of public-domain books, free to
-            download and keep. Narration quality varies recording to
-            recording. It&apos;s a volunteer project and proud of it.
-          </li>
-          <li>
-            <strong className="text-gray-900">LoudReader.</strong> A
-            different idea entirely: instead of finding a recording, it reads
-            the book itself. Import any DRM-free EPUB or PDF and natural
-            offline voices narrate it in real time, with word-by-word
-            highlighting. Free means unlimited listening on every book, cover
-            to cover, with no credits and no monthly cap.
-          </li>
+          <li><strong className="text-gray-900">A universal book catalogue.</strong> A library may not license your title; a volunteer recording may not exist; a readable ebook may cost money.</li>
+          <li><strong className="text-gray-900">Imported store entitlements.</strong> An Audible purchase is a recording for its supported service, not an EPUB. LoudReader cannot remove protection from other stores&apos; files.</li>
+          <li><strong className="text-gray-900">Every voice and control.</strong> A continuing free tier may limit voice choice or features even when listening itself has no word allowance.</li>
+          <li><strong className="text-gray-900">Automatic offline readiness.</strong> Download loans, books and required voices before travelling. Try playback without a connection while you still have time to fix setup.</li>
         </ul>
         <p>
-          These complement each other. Use the library for new bestsellers,
-          LibriVox when you want a human voice on a classic, and{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader
-          </a>{" "}
-          for every book that has no audiobook edition at all.
+          Offline playback also says nothing by itself about diagnostics,
+          analytics or account data when an app is connected. Treat those as
+          separate privacy questions rather than assuming “free and offline”
+          means “collects no data”.
         </p>
       </QuestionSection>
-
-      <QuestionSection question="Why are audiobooks so expensive?">
-        <p>
-          Because every commercial audiobook is a produced recording. A
-          narrator performs the entire book in a studio, and each finished
-          hour of audio carries more hours of recording, editing, and
-          proofing behind it. A long novel is a serious production, and the
-          price reflects that. Audiobooks are expensive for the same reason
-          films are more expensive to make than scripts.
-        </p>
-        <p>
-          That economics also explains the gap free listeners keep hitting:
-          publishers only record books they expect to sell. Backlist titles,
-          technical books, niche non-fiction, self-published novels, and most
-          public-domain classics never get a recording. No store can sell you
-          an audiobook that was never made. That is exactly the gap
-          text-to-speech fills, by generating the narration from the text
-          instead of waiting for a production.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How does LoudReader turn books you already own into audiobooks?">
-        <p>
-          LoudReader is one of the few{" "}
-          <Link href="/" className="text-loudBlue hover:underline">iPhone, iPad, and Mac apps</Link>{" "}
-          built around this idea: import the file, press play. There&apos;s no
-          conversion step and no audio files to manage. The narration is
-          generated live on your device by natural offline voices, each word
-          highlighted as it&apos;s read, your place remembered across sessions.
-          Because everything runs locally, it&apos;s fully on-device and
-          private, your library never leaves your device, and playback works in
-          airplane mode.
-        </p>
-        <p>
-          You have two free sources of books: any DRM-free EPUB or PDF you
-          already own (shared from Files, Safari, or Mail), and the built-in
-          Project Gutenberg catalog of 70,000+ public-domain classics. Browse
-          by genre, download, listen. The step-by-step walkthrough is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What can't a free Audible alternative do?">
-        <p>The honest limits, so you know them before you switch:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">
-              No Audible or Kindle catalog.
-            </strong>{" "}
-            DRM-locked purchases can only be opened by the store that sold
-            them. LoudReader can&apos;t import them, and neither can any other
-            legitimate reader.
-          </li>
-          <li>
-            <strong className="text-gray-900">
-              A human narrator is still a performance.
-            </strong>{" "}
-            Modern neural voices are natural enough to disappear into the
-            story, but if a professional recording of your book exists and
-            narration-as-art matters to you, buy it.
-          </li>
-          <li>
-            <strong className="text-gray-900">
-              Some LoudReader features are Premium.
-            </strong>{" "}
-            {FREE_TIER.full} Keeping all 23 studio narrators after the trial,
-            playback speed control, the sleep timer, ambient soundscapes, and
-            notes &amp; highlights are Premium. Details are on the{" "}
-            <Link href="/faq" className="text-loudBlue hover:underline">
-              FAQ page
-            </Link>
-            .
-          </li>
-        </ul>
-      </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your bookshelf is already an audiobook library"
-        subline="Import any EPUB or PDF, or pick from 70,000+ free classics. Unlimited listening, no credits, no account."
-      />
+      <StoreCta headline="Listen to a book file you already have" subline="Try LoudReader with a supported DRM-free EPUB or PDF. The continuing free tier has limited voice choice." />
     </ArticleLayout>
   );
 }

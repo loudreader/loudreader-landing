@@ -1,40 +1,41 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - On-device voices, no internet: speech synthesis runs locally.
-//     Works in airplane mode, tunnels, basements.
-//   - Lock-screen controls via MPRemoteCommandCenter: PlayerService.swift
-//     configures play, pause, toggle, skip (15 sec).
-//   - Background audio: Info.plist UIBackgroundModes = ["audio"].
-//   - Free tier unlimited listening: SubscriptionAccess.swift
-//     baseFreeFraction = 1.0, site.ts PRICING.
-//   - 70,000+ Gutenberg books built in.
-//   - Import: EPUB and PDF (DRM-free), ContentView.swift
-//     .fileImporter(allowedContentTypes: [.epub, .pdf]).
-//   - Pricing: components/money/site.ts PRICING.
-// Claims you may NOT make: specific transit statistics, that TTS is
-// allowed on all airlines (check your airline's policy), CarPlay support.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does LoudReader work on the subway with no signal?",
-    a: "Yes. The voices are fully on-device and private, your library never leaves your device, and nothing streams. No signal needed. Tunnels, underground stations, and dead zones make no difference. The book you imported at home plays all the way to your stop.",
+    "q": "Will a book play underground?",
+    "a": "Prepared local narration or a downloaded recording can play without signal. Test the chosen title and voice before leaving."
   },
   {
-    q: "Can I listen on a plane in airplane mode?",
-    a: "Yes. Switch to airplane mode after takeoff, open LoudReader, and press play. The voices run entirely on your iPhone with no internet connection. Import your EPUBs and PDFs before the flight, or pick from the 70,000+ built-in Gutenberg classics, and you have a whole library in the air.",
+    "q": "Can I download a Gutenberg title after losing signal?",
+    "a": "No. Fetch the book while connected, along with any required voice resources, before relying on offline listening."
   },
   {
-    q: "What is different about listening on a commute versus at home?",
-    a: "Two things. First, background noise means you need headphones or earbuds, and noise-cancelling ones make a real difference on trains and buses. Second, you cannot stop to highlight or take notes as easily while standing in a crowded train car, but the basic controls, play, pause, and 15-second skip, work perfectly from the lock screen.",
+    "q": "Should I listen through transfers and announcements?",
+    "a": "Pause when navigation, announcements or the surroundings need your attention. Continue once you are settled."
   },
   {
-    q: "Is it better than podcasts for a commute?",
-    a: "Different thing. Podcasts are great for quick hits and current events. Books are for longer arcs. A 30-minute commute each way adds up to 5 hours a week, which is most of a novel or a solid chunk of non-fiction. The math on commute reading is hard to argue with.",
-  },
-  {
-    q: "What if my commute involves walking between transfers?",
-    a: "Same setup works. The narration keeps going, and you control it from the lock screen or your headphone button. If you are navigating city streets, keep one earbud out or the volume low enough to hear traffic. Bone-conduction headphones are a solid option for the walk-and-listen commute.",
-  },
+    "q": "Is this also a driving guide?",
+    "a": "No. This page focuses on passenger travel. Set up any driving audio before moving and follow applicable rules and road conditions."
+  }
 ];

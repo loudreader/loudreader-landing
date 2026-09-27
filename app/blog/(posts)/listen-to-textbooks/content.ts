@@ -1,49 +1,36 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Import formats: ContentView.swift / HomeView.swift use
-//     .fileImporter(allowedContentTypes: [.epub, .pdf]), EPUB and PDF only.
-//   - PDF reading: PDFImportPipeline.swift extracts the PDF's embedded text
-//     layer via PDFKit. There is NO OCR. A scanned, image-only PDF has no
-//     text to read. The article and FAQ say so explicitly.
-//   - Word-by-word highlighting: ContinuousReaderController.swift
-//     (highlightWord(for:) driven by the speech engine's word-boundary
-//     callbacks; wordHighlightWillChange publisher consumed by
-//     ContinuousReaderView.swift).
-//   - Offline playback: TTS voices run on-device (the Core ML synthesis
-//     engines in the app source); no network needed for narration.
-//   - Background playback with the screen locked: Info.plist declares
-//     UIBackgroundModes = ["audio"]; lock-screen controls via
-//     MPRemoteCommandCenter in PlayerService.swift.
-//   - Position memory / resume: PlayerService.swift + reader controllers
-//     persist and restore the reading position (same claim as the money
-//     pages and the driving article).
-//   - Pricing and free-tier facts: components/money/site.ts (single source
-//     of truth, synced with the App Store listing). Free tier is unlimited
-//     listening with no word quota; playback speed (0.3x to 3.0x) is Premium.
-// Claims deliberately NOT made: OCR of scanned pages, DOCX/PPT import,
-// annotation/flashcard features, multi-language voices (10 languages).
+// EDITORIAL REVIEW — 2026-09-28. Sources for the material revision:
+// - LoudReader_mac release_v1.12, LoudReader/PDFImportPipeline.swift:150–218 — on-device OCR triggers, 300 OCR-page cap and partial results; inspected 2026-09-28.
+// - LoudReader_mac release_v1.12, LoudReader/ContentView.swift fileImporter and PDFImportPipeline locked-PDF check — EPUB/PDF imports and DRM/locked-file limits; source audit reviewed 2026-09-28.
+// - LoudReader_mac release_v1.12, Info.plist and PlayerService.swift — background audio; source audit reviewed 2026-09-28.
+// - Shipping app product audit, 2026-09-28: LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), not the older checkout HEAD. No runtime test was performed for this editorial pass.
+// - LoudReader/Subscription/SubscriptionAccess.swift and SubscriptionManager.swift — eight cumulative listening hours, limited English free selection afterwards, unrestricted book imports/listening.
+// - LoudReader/Subscription/PaywallReason.swift:125–148 — Premium speed and timer; notes/highlights are not Premium-only. Source inspected 2026-09-28.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local speech plus diagnostics/analytics; no exposed analytics opt-out promised. Source-auditor report reviewed 2026-09-28.
+// - App target and App Store record — iPhone/iPad, iPad compatibility on Apple Silicon Macs. Studio voice availability depends on hardware; no native macOS claim.
+// Practical routines are suggestions, not measured learning or medical outcomes.
+// No unpublished future-verification dates, independent runtime tests or network audit are claimed.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Can an app read my textbook PDF aloud?",
-    a: "Yes, as long as the PDF contains real text rather than photographed pages. LoudReader imports any DRM-free PDF or EPUB and reads it aloud with natural offline voices, highlighting each word as it's spoken. Listening is free and unlimited, with no word quota and no account, and it works on both Mac and iPhone.",
+    "q": "Can an app read my textbook PDF aloud?",
+    "a": "Often, if you have a supported, DRM-free file. Check the imported text and reading order on a sample page. Keep the original for figures, equations and exercises that speech cannot fully convey."
   },
   {
-    q: "What if my textbook is a scanned PDF?",
-    a: "A scanned PDF that's just images of pages has no text layer, so no text-to-speech app can read it directly, LoudReader included. Run the scan through an OCR tool first (many scanner apps and PDF editors include one), then import the OCR'd file. If you can select and copy text in the PDF, it'll read fine.",
+    "q": "What if my textbook is scanned?",
+    "a": "LoudReader includes an on-device OCR fallback during PDF import. OCR processes at most 300 pages per import and may return partial results. Check the recognised text against the scan: numbers, specialist terms and complex layouts can be wrong. A clean digital or accessible edition may work better."
   },
   {
-    q: "Can I speed up textbook narration for revision?",
-    a: "Playback speed control from 0.3x to 3.0x is part of LoudReader Premium ($7.99/month, $49.99/year, or $199.99 lifetime). The free tier plays at normal speed with unlimited listening. Slower speeds help when the material is dense, and faster speeds work well for re-listening to chapters you already know.",
+    "q": "Can I speed up textbook narration?",
+    "a": "Playback-speed control from 0.3x to 3.0x requires LoudReader Premium. Choose speed based on whether you can explain the material, and pause for examples or unfamiliar concepts."
   },
   {
-    q: "Does LoudReader cost anything for students?",
-    a: "The core is free. That's unlimited listening on every book or document, cover to cover, with no word quota and no account. Premium is optional and adds all 23 studio narrators, playback speed control, a sleep timer, ambient soundscapes, and notes & highlights.",
+    "q": "Can I import a textbook from a protected course platform?",
+    "a": "Only if the platform or publisher provides a file that can be used in another reader. LoudReader does not remove DRM. Ask your course team or accessibility service about an accessible copy when necessary."
   },
   {
-    q: "Can I listen to a chapter again offline before an exam?",
-    a: "Yes. The voices run entirely on your device, so nothing is streamed. Narration works on the subway, on a plane, or anywhere without signal. LoudReader remembers your position, and you can jump back to any chapter and re-listen as many times as you want, free.",
-  },
+    "q": "Will listening prepare me for an exam?",
+    "a": "Audio can be part of revision, but finishing playback is not evidence of understanding. Use course questions, practice problems and explanations in your own words to check what you know."
+  }
 ];

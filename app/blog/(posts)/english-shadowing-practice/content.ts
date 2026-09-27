@@ -1,50 +1,35 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Tap a sentence to jump playback to its start: ContinuousReaderView.swift
-//     ("tappedContent" message handler calls controller.play(fromSentenceId:)).
-//     Nuance also verified there: while playing with the control bar hidden,
-//     the FIRST tap only reveals the controls; the next tap on a sentence
-//     jumps playback. The article describes both.
-//   - 15-second skips seek by whole sentences and always land at the start of
-//     a sentence: ContinuousReaderController.swift skipForward/skipBackward →
-//     sentenceCountForDuration (minimum 1 sentence).
-//   - Lock-screen 15-second skip controls: PlayerService.swift configures
-//     MPRemoteCommandCenter skip commands with preferredIntervals = [15].
-//   - Word-by-word and sentence highlighting during narration:
-//     ContinuousReaderController word/sentence highlight publishers rendered
-//     by ContinuousReaderView.
-//   - Playback speed 0.3x to 3.0x is Premium, and the free tier plays at
-//     normal speed: components/money/site.ts PRICING (single source of truth).
-//   - Voices cover 10 languages (11 English narrators of 23): consistent with
-//     app/(seo)/private-text-to-speech-no-cloud.
-//   - LoudReader has NO pronunciation-scoring or speech-recording feature.
-//     The article states this as an honest concession, not a capability.
-// Claims you may NOT make until verified: a dedicated "repeat sentence"
-// button (does not exist, repetition is done by tapping the sentence),
-// any pronunciation feedback, any non-English voices.
-// No studies are cited in this article.
+// EDITORIAL REVIEW — 2026-09-28. Sources for the material revision:
+// - LoudReader_mac release_v1.12, LoudReader/ContinuousReaderView.swift:1662–1682 — sentence tap and first-tap chrome reveal; source inspected 2026-09-28.
+// - LoudReader_mac release_v1.12, LoudReader/ContinuousReaderController.swift:2412–2448 — approximately timed, sentence-based skips; source inspected 2026-09-28.
+// - Shipping app product audit, 2026-09-28: LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), not the older checkout HEAD. No runtime test was performed for this editorial pass.
+// - LoudReader/Subscription/SubscriptionAccess.swift and SubscriptionManager.swift — eight cumulative listening hours, limited English free selection afterwards, unrestricted book imports/listening.
+// - LoudReader/Subscription/PaywallReason.swift:125–148 — Premium speed and timer; notes/highlights are not Premium-only. Source inspected 2026-09-28.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local speech plus diagnostics/analytics; no exposed analytics opt-out promised. Source-auditor report reviewed 2026-09-28.
+// - App target and App Store record — iPhone/iPad, iPad compatibility on Apple Silicon Macs. Studio voice availability depends on hardware; no native macOS claim.
+// Practical routines are suggestions, not measured learning or medical outcomes.
+// No unpublished future-verification dates, independent runtime tests or network audit are claimed.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "What is the shadowing technique?",
-    a: "Shadowing means you play spoken audio and repeat it out loud almost at the same time. You stay about half a second behind the voice, copying its rhythm, stress, and intonation as closely as you can. Interpreters train with it, and language learners use it to make their spoken English sound more natural. It's a speaking exercise, not a listening one. What matters is what your mouth does, not what your ears take in.",
+    "q": "What is English shadowing?",
+    "a": "You repeat spoken English shortly after the speaker while the recording continues, paying attention to rhythm, stress and phrasing. If that is too difficult, pause after a short sentence and repeat it first."
   },
   {
-    q: "Is shadowing with books better than with podcasts?",
-    a: "They train different things, so the honest answer is to use both. A book gives you the full text in front of you, sentence-by-sentence repetition, and control over difficulty, so you can shadow the same paragraph five times. Podcasts give you modern conversational English, hesitations and all, which books rarely contain. Books are the better tool for deliberate pronunciation practice, and podcasts are better for real-world listening.",
+    "q": "Are books better than podcasts for shadowing?",
+    "a": "A book gives you an exact text to consult. Human conversation recordings offer a different kind of speech, with interruptions and varied speakers. Choose material that matches your goal and use more than one source."
   },
   {
-    q: "What speed should I shadow at as a beginner?",
-    a: "Slow enough that you can keep up without dropping word endings. For many beginners that's around 0.6x to 0.8x, climbing back toward 1.0x as a passage gets familiar. In LoudReader, playback speed from 0.3x to 3.0x is part of Premium, and the free tier plays at normal speed. If you're on the free tier, pick short, simple sentences instead of slowing the voice down.",
+    "q": "What speed should a beginner use?",
+    "a": "Choose a pace you can follow without losing words. Shorten the passage or try listen-and-repeat before slowing it heavily. LoudReader speed adjustment requires Premium; free playback uses normal speed."
   },
   {
-    q: "How do I repeat the same sentence in LoudReader?",
-    a: "Tap the sentence in the text and playback jumps to the start of that sentence. Tap it again when it ends to hear it once more, as many times as you want. If the control bar is hidden while playing, the first tap brings the controls back, then tap the sentence. The 15-second back button also always lands at the start of a sentence, so it works as a quick 'say that again' control too.",
+    "q": "How do I repeat a sentence in LoudReader?",
+    "a": "Tap the sentence to return playback to its start. If playback controls are hidden, first tap to reveal them, then tap the sentence. This is manual replay, not an automatic repeat-sentence mode."
   },
   {
-    q: "How long should a daily shadowing session be?",
-    a: "There's no researched magic number, so here's the practical one: 5 to 15 focused minutes beats a long unfocused slog. Shadowing only works while you're genuinely imitating, so the moment you slip into mumbling along on autopilot, stop or take a break. A short daily session you actually keep doing is worth more than an ambitious plan you abandon in a week.",
-  },
+    "q": "Will LoudReader correct my pronunciation?",
+    "a": "No. It does not assess your shadowing or grade pronunciation. Synthetic narration can also mispronounce words. Use a teacher, fluent speaker or suitable human recording for feedback and pronunciation checks."
+  }
 ];

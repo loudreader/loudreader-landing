@@ -7,159 +7,33 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function BrothersKaramazovAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          The Brothers Karamazov is public domain, so a free audiobook of it
-          already exists, you just have to generate it. <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) reads the full Constance Garnett
-          translation aloud with a natural offline voice, free, with no word
-          limit and no time trial. One honest note up front: this is a
-          synthetic voice reading Dostoyevsky&apos;s text on your device, not
-          a professional actor&apos;s performance. It runs about 38 hours,
-          based on the novel&apos;s roughly 340,000 words. Open the{" "}
-          <Link
-            href="/listen/the-brothers-karamazov"
-            className="text-loudBlue hover:underline"
-          >
-            The Brothers Karamazov catalog page
-          </Link>{" "}
-          to hear a sample first, then get the app, import the book (it&apos;s
-          already built into LoudReader&apos;s Gutenberg catalog), and press
-          play.
-        </p>
+        <p>The free English text linked by LoudReader is Constance Garnett’s translation of The Brothers Karamazov, <a href="https://www.gutenberg.org/ebooks/28054" className="text-loudBlue hover:underline">Gutenberg ebook 28054</a>. Gutenberg lists that edition as public domain in the USA. The US listing does not establish availability in other countries. This detail matters: a different translation can sound and read differently, even when the cover title is identical. LoudReader generates speech from the ebook rather than supplying an actor’s recording. Hear the <Link href="/listen/the-brothers-karamazov" className="text-loudBlue hover:underline">opening sample</Link> and inspect the translation before committing to a long reading.</p>
+        <p className="text-sm">This guide is published by LoudReader, the developer of the reading app described below.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="A public-domain text becomes a spoken audiobook, on your device."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Choose the translation first; choose the listening pace second." />
 
-      <QuestionSection question="Where can you actually listen to The Brothers Karamazov for free?">
-        <p>
-          Fyodor Dostoyevsky died in 1881, which means the novel has been out
-          of copyright for well over a century. Project Gutenberg carries the
-          Constance Garnett translation as ebook #28054, and that same text is
-          what most free digital editions of the book use. The gap is that a
-          Gutenberg text file is silent. Someone still has to read it to you.
-        </p>
-        <p>
-          That&apos;s what{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          does. The book is already in the app&apos;s built-in library of
-          70,000+ free Gutenberg titles, so there&apos;s no file to hunt down
-          and no conversion step. You open the app, find The Brothers
-          Karamazov, and press play. You can hear what the voice actually
-          sounds like first on the{" "}
-          <Link
-            href="/listen/the-brothers-karamazov"
-            className="text-loudBlue hover:underline"
-          >
-            The Brothers Karamazov page
-          </Link>
-          , which has a rendered sample.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Which translation will you hear?"><p>The Gutenberg record explicitly credits Constance Garnett. It is not a modern translation simply made free by Dostoyevsky’s age. Check the translator on any recording or ebook you compare. If your book group is using another translation, shared chapter titles may help you navigate, but individual phrases can differ.</p><p>If you have a supported DRM-free copy of the translation you want, <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import your own EPUB or PDF</Link> instead. Do not choose an unidentified file on the assumption that all English versions are interchangeable. Use your chosen edition consistently for quotations.</p></QuestionSection>
 
-      <QuestionSection question="Is it a real narrator, or a robot voice?">
-        <p>
-          Neither word is quite right, so here&apos;s the honest answer.
-          LoudReader&apos;s voices are synthetic, not recordings of a human
-          actor, but they aren&apos;t the flat, choppy text-to-speech you
-          might remember from a decade ago either. They&apos;re{" "}
-          {"natural offline voices"}, generated live on your device as you
-          listen, with no separate audio files to download or manage.
-        </p>
-        <p>
-          What that means for a 900-page novel like this one: you get a
-          single, consistent narrator reading Dmitri&apos;s outbursts, Ivan&apos;s
-          arguments, and Father Zosima&apos;s sermons in the same voice,
-          because that&apos;s how text-to-speech works. It&apos;s not doing
-          separate character voices. If a full-cast dramatization matters to
-          you more than getting the whole book read for free right now, a
-          commercial audiobook edition will do that and this won&apos;t. What
-          LoudReader gives you instead is the complete, unabridged text,
-          narrated on demand, at no cost.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you keep track of names while listening?"><p>Make a short name list as characters appear, using the spellings in your edition. Russian names can appear in several forms, and an unfamiliar spoken name is easier to place when you have seen it written. Avoid a detailed plot guide if you want to keep the story’s revelations intact.</p><p>When a passage becomes difficult to follow, pause and look at the text rather than merely increasing the speed. LoudReader highlights the spoken words. That can help locate the current sentence, but it does not explain an argument or guarantee that every Russian name is pronounced as you expect.</p></QuestionSection>
 
-      <QuestionSection question="How long is the listen, and how do you get through it?">
-        <p>
-          The Brothers Karamazov runs about 38 hours as audio, an estimate
-          based on its roughly 340,000 words. That puts it among the longest
-          books most people ever listen to, well past most audiobook
-          runtimes and closer to binging a full drama series. Realistically,
-          you&apos;re listening over weeks, not a weekend.
-        </p>
-        <p>
-          A few things make that easier. LoudReader remembers your exact
-          place in the book, so picking it back up after a few days off costs
-          nothing. Word-by-word highlighting tracks along as it reads, which
-          helps during the novel&apos;s densest passages, the courtroom
-          scenes and the Grand Inquisitor chapter especially, where losing
-          the thread for a sentence can cost you a paragraph of argument.
-          And Premium adds speed control from 0.3x to 3.0x, so once you&apos;re
-          used to the voice you can push the pace on the parts that read
-          slower than they need to.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you plan a book of this length?"><p>The catalogue’s roughly 38 hours is a text-length estimate for this entry, not a measured performance. Use it as a broad commitment rather than a promise. Choose manageable chapter or section boundaries and note where you stop, particularly if you alternate with a print copy.</p><p>Try both narrative and a sustained dialogue before settling on a voice. A sample of the opening cannot tell you how comfortable that delivery will feel for every kind of passage. There is no need to finish on a prescribed schedule; repeated passages are part of a long read, not a failure of it.</p></QuestionSection>
 
-      <QuestionSection question="What do you need to start listening right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Get{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>
-            . It&apos;s free, with no account required.
-          </li>
-          <li>
-            Open the built-in Gutenberg catalog inside the app and search for
-            The Brothers Karamazov. No file to download, no conversion.
-          </li>
-          <li>
-            Press play. The app is {" "}
-            {"fully on-device and private, your library never leaves your device"},
-            so the whole 38 hours plays without needing a connection once
-            the book is loaded.
-          </li>
-          <li>
-            If you already own a different translation as an EPUB or PDF,
-            import that instead. LoudReader reads any DRM-free file you give
-            it, not just the built-in catalog. The full walkthrough is in{" "}
-            <Link
-              href="/turn-any-book-into-an-audiobook"
-              className="text-loudBlue hover:underline"
-            >
-              how to turn any book into an audiobook
-            </Link>
-            .
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="How do you listen in LoudReader?"><p>Install <a href={APP_STORE_URL} className="text-loudBlue hover:underline">LoudReader from the App Store</a> on iPhone or iPad. The iPad app also runs on compatible Apple Silicon Macs. Search the Gutenberg catalogue for The Brothers Karamazov. Check that the edition credits Constance Garnett if you want the catalogue’s translation. Download the book and the voice you want while connected, then start playback.</p><p>{FREE_TIER.full} Premium adds features including playback speed from 0.3x to 3.0x and a sleep timer.</p><p>For offline listening, finish those downloads and try a chapter before leaving. Speech is generated on your device; catalogue browsing and downloads need a connection. The website sample is a preview, not the full audiobook.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Start The Brothers Karamazov tonight"
-        subline="It's already in LoudReader's free Gutenberg library. Import nothing, just press play."
-      />
+      <StoreCta headline="Try the ebook in LoudReader" subline="Preview a voice, choose your edition and download before listening offline." />
     </ArticleLayout>
   );
 }

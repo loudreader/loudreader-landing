@@ -1,56 +1,46 @@
-// FACT PROVENANCE. Verified on 2026-07-14:
-//   - The article deliberately makes NO claims about any specific
-//     competitor's retention, training, or data practices. Every statement
-//     about cloud TTS is architectural/definitional (server-side synthesis
-//     requires transmitting the text to the server) or is framed as "what a
-//     privacy policy governs / what to check", not as an accusation. This
-//     keeps the page accurate without day-of-writing policy audits.
-//   - App Store privacy labels ("App Privacy" section on every listing) are
-//     a real, verifiable Apple feature (apps declare data collection;
-//     visible on any App Store product page).
-//   - Airplane-mode test phrasing is consistent with the vetted money page
-//     app/(seo)/private-text-to-speech-no-cloud/.
-//   - LoudReader claims, verified against the app source (LoudReader_mac
-//     repo, main branch) and shared site facts:
-//       - on-device synthesis, works offline: TTS engines run locally
-//         (CoreML/ONNX in-app); consistent with the airplane-mode claim on
-//         the private-TTS money page.
-//       - no account / no sign-up: components/money/site.ts PRICING and the
-//         private-TTS money page ("no sign-up, no login, no profile").
-//       - imported files are stored in the app's local container:
-//         BookImportService.swift (FileManager .documentDirectory).
-//       - the only network requests are downloads the user asks for
-//         (Gutenberg catalog, pasted article links): consistent with the
-//         vetted "minimal network surface" claim on the private-TTS page;
-//         Gutenberg fetches via ProjectGutenbergService.swift.
-//   - Honest concessions included: on-device trade-offs (fewer voices,
-//     modern-hardware requirement) from the private-TTS
-//     money page and site.ts REQUIREMENTS.
-// Claims you may NOT make: that any named app retains/trains on user
-// documents (unverified per-vendor), malware statistics, breach statistics.
-// No studies are cited in this article.
+// FACT PROVENANCE — reviewed 2026-09-28 against shipping release_v1.12
+// (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), not the stale app checkout HEAD.
+// Official Apple lookup https://itunes.apple.com/lookup?id=6758149478&country=us
+// confirms 1.12 released 2026-09-22; see the root's product fact audit.
+// - Local synthesis/imports: app TTS engines and BookImportService.swift;
+//   local narration does not imply zero network activity or no system backups.
+// - LoudReaderApp.swift: release Sentry startup, crash/performance diagnostics,
+//   default PII disabled, screenshots and replay disabled, scrubber hooks.
+// - Analytics.swift: TelemetryDeck starts, analytics is ON by default;
+//   bounded feature/reliability events, playback session duration buckets.
+// - CRITICAL: SettingsSheet.swift:65 showsUsageStatisticsChoice = false;
+//   the toggle is gated at483. In 1.12 there is NO exposed usage-statistics
+//   switch. Analytics.swift's comment suggesting Settings access is stale.
+//   No separate Sentry switch. Do not promise opt-out or immediate suppression.
+// - This is a source review, not an independent audit of network payloads.
+//   Do not claim impossible leaks, zero telemetry, anonymity guarantees,
+//   legal/compliance certification or that airplane mode proves data policy.
+// External primary sources verified 2026-09-28:
+// https://support.apple.com/en-gb/102399 — developer-reported privacy labels.
+// https://support.apple.com/en-gb/102188 — App Privacy Report domain activity.
+// Offline-test limitations are technical reasoning, not a claimed runtime test.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does a text-to-speech app upload my document to a server?",
-    a: "It depends entirely on where the voice is generated. Cloud TTS apps synthesize speech on the provider's servers, so the text you listen to has to be transmitted to them. That is the architecture, not a hidden behavior. On-device TTS apps generate the voice on your own hardware, so the document never needs to leave your device.",
+    "q": "Do text-to-speech apps upload every document?",
+    "a": "Cloud synthesis sends the text being spoken to a service, but apps differ in whether they send passages or whole files and how long they retain them. On-device synthesis avoids that speech-server upload; sync, conversion, backups and diagnostics need separate checks."
   },
   {
-    q: "How can I tell if a TTS app processes text in the cloud?",
-    a: "The airplane-mode test is the fastest check: turn off all connectivity and press play. An app that keeps narrating is synthesizing speech on the device; an app that stops, errors, or falls back to a robotic voice is calling a server. Other signs of cloud processing: the app requires an account, meters you by words per month, or its App Store privacy label lists collected content.",
+    "q": "Does offline playback prove no information is collected?",
+    "a": "No. The audio may already be cached, and diagnostic events may be delivered when the connection returns. Offline playback is an availability check, not a complete privacy audit."
   },
   {
-    q: "What should I look for in a TTS app's privacy policy?",
-    a: "Five things: what content is collected (documents, text, audio); how long it is retained; which third parties or subprocessors receive it; whether your content can be used to train models; and how deletion works. If the policy is silent on any of these for the text you upload, assume the least favorable answer until the vendor says otherwise.",
+    "q": "Are App Store privacy labels independently verified?",
+    "a": "Apple describes the privacy information as self-reported by developers. Read it with the current privacy policy and ask about unclear points that matter to your documents."
   },
   {
-    q: "What does on-device text to speech mean?",
-    a: "The speech is generated by a model running on your own device's processor, not on a server. Nothing is transmitted to be synthesized, which is why it works in airplane mode, and privacy stops depending on a vendor's terms. There is no server-side copy of your reading because there is no server involved at all.",
+    "q": "Does LoudReader collect analytics?",
+    "a": "Yes. Version 1.12 enables TelemetryDeck usage analytics by default and sends Sentry crash/performance diagnostics. The Settings screen does not currently expose an analytics switch. Speech generation and document processing are local."
   },
   {
-    q: "Does LoudReader ever see what I read?",
-    a: "No. LoudReader is fully on-device and private, your library never leaves your device. There is no account, imported books and documents are stored locally on your device, and speech is generated on the device itself. The only network requests are downloads you explicitly ask for, like fetching a free classic from the built-in Project Gutenberg catalog.",
-  },
+    "q": "Is a local TTS app suitable for confidential work?",
+    "a": "It may fit your workflow, but local narration alone does not establish suitability. Check approved-device and app rules, backups, document access and any diagnostics with whoever manages the information."
+  }
 ];

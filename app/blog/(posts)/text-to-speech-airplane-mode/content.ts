@@ -1,35 +1,34 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14
-// against the LoudReader app source (LoudReader_mac repo, main branch):
-//   - All voice models run on-device via the Neural Engine. No network
-//     calls are made during speech generation. Verified by inspecting
-//     the TTS pipeline in the app source.
-//   - Offline behavior tested: playback continues with Airplane Mode
-//     enabled on both iOS and macOS.
-//   - Pricing, free-tier, and voice facts from components/money/site.ts.
-// Claims you may NOT make: that all TTS apps work offline (many don't).
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Shipping app: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+// the LoudReader app source, read through git show, not local HEAD.
+// Canonical audit: docs/product-facts-2026-09-28.md. Source review,
+// not a new runtime test. Local speech does not imply no diagnostics:
+// LoudReaderApp.swift initialises Sentry and Analytics.swift TelemetryDeck;
+// SettingsSheet.showsUsageStatisticsChoice is false in this shipping release.
+// SubscriptionAccess/SubscriptionManager verify 8 cumulative listening hours,
+// then Stella or Rio plus Bella on capable devices; whole-book listening stays
+// free. Notes/highlights are not Premium-only. Studio availability varies.
+// Xcode target is iOS/iPadOS; on Apple Silicon Macs it is the iPad build.
+// No automatic library/progress sync; iCloud file import is not app sync.
+// Shipping1.12 local TTS, ProjectGutenbergService, StoreKit and instrumentation audit.
+// https://support.apple.com/en-us/108785 — Apple airplane mode guidance: Wi-Fi/Bluetooth can be used while enabled.
 
 import type { Faq } from "@/components/money/FaqSection";
-import { FREE_TIER } from "@/components/money/site";
-
 export const FAQS: Faq[] = [
   {
-    q: "Does LoudReader work in airplane mode?",
-    a: "Yes, completely. LoudReader is fully on-device and private, your library never leaves your device. All voice generation runs on the iPhone or Mac's Neural Engine with no internet connection needed. Import your books while online, switch to airplane mode, and listen for the entire flight.",
+    "q": "Can LoudReader generate speech in airplane mode?",
+    "a": "Yes, from an imported book with a ready voice on a supported device. Open the app and test the particular book and narrator offline before travelling."
   },
   {
-    q: "Do I need to download voices before going offline?",
-    a: `No. The voices are built into the app. There is no separate voice download step and no voice packs to manage. When you install LoudReader from the App Store, the voices are included. ${FREE_TIER.full} The included narrators work offline during the trial and with Premium, and your chosen free voice also remains available offline.`,
+    "q": "Do cloud voices always stop on a flight?",
+    "a": "Not if the app has already generated and downloaded the audio. Fresh cloud generation needs connectivity, but a complete local recording can play offline."
   },
   {
-    q: "What about cloud-based TTS apps on a plane?",
-    a: "Cloud-based text-to-speech apps send your text to a server, which generates the audio and streams it back. In airplane mode, the server is unreachable. These apps either stop working entirely or fall back to a lower-quality on-device voice, if they have one. Before a flight, check whether your TTS app works offline. The test is simple: enable airplane mode, press play. If you hear audio, it works. If not, find an offline alternative before you board.",
+    "q": "Does airplane mode prove that an app is private?",
+    "a": "No. It tests behaviour without a connection. An app can collect or queue diagnostics and send them later, and Wi-Fi can be enabled while airplane mode is on."
   },
   {
-    q: "Can I import new books while in airplane mode?",
-    a: "Yes, if the files are already on your device. You can import EPUBs and PDFs from the Files app, iCloud Drive (if synced before going offline), or any local storage. You cannot browse the built-in Project Gutenberg catalog while offline because it fetches book data from Gutenberg's servers. Download your Gutenberg picks before the flight.",
-  },
-  {
-    q: "How many hours of listening does a full battery give in airplane mode?",
-    a: "A typical iPhone on a full charge can play many hours of audio with the screen off and airplane mode enabled. The Neural Engine is power-efficient for voice generation. Airplane mode itself saves battery by disabling the cellular and WiFi radios. Exact hours depend on your iPhone model and battery health, but a long-haul flight is well within range.",
-  },
+    "q": "Can I import another book while offline?",
+    "a": "You can try a supported EPUB or PDF already stored locally. A cloud-only file, catalogue download or web article still needs a connection."
+  }
 ];

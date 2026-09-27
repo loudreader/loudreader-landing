@@ -1,48 +1,44 @@
-// FACT PROVENANCE. Verified on 2026-07-14:
-//   - Study citation: Hu, M. & Nation, P. (2000), "Unknown vocabulary
-//     density and reading comprehension", Reading in a Foreign Language,
-//     13(1). Verified via web search on 2026-07-14; the journal's own page
-//     hosts it at https://nflrc.hawaii.edu/rfl/item/43 (the URL linked in
-//     the article). Finding used: adequate unassisted comprehension of a
-//     fiction text generally required knowing about 98% of the running
-//     words; the article converts that to "roughly one unknown word in
-//     fifty" and keeps the framing as "a widely cited threshold".
-//     No other numbers are attributed to the study.
-//   - Word-by-word highlighting + tap-a-sentence-to-replay: LoudReader app
-//     source (LoudReader_mac repo, main branch), ContinuousReaderView.swift
-//     "tappedContent" handler calls controller.play(fromSentenceId:), and the
-//     word/sentence highlight publishers in ContinuousReaderController.swift.
-//   - Built-in Project Gutenberg catalog: ProjectGutenbergService.swift /
-//     ProjectGutenbergBrowserView.swift.
-//   - Free tier = unlimited listening, no word quota; playback speed
-//     (0.3x to 3.0x) is Premium: components/money/site.ts PRICING.
-//   - Voices cover 10 languages (11 English narrators of 23): consistent with
-//     app/(seo)/private-text-to-speech-no-cloud.
-// Claims you may NOT make until verified: any CEFR/Lexile mapping, any
-// claim that listening-while-reading is proven to improve outcomes (the
-// article frames it as practical scaffolding, not cited research).
+// EDITORIAL AUDIT — 2026-09-28. Product claims reconciled with the release_v1.12
+// shipping source release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0
+// in loudreader/LoudReader_mac (product fact audit, source references below).
+// Release version verified using https://itunes.apple.com/lookup?id=6758149478&country=us.
+// This editorial review includes source inspection, not a runtime accessibility test.
+// LoudReader iOS/iPadOS app; compatible Apple Silicon Macs run the iPad build.
+// Word/sentence highlighting and replay: ContinuousReaderView.swift,
+// ContinuousReaderController.swift and HighlightSchedule.swift.
+// Premium speed; notes/highlights are free: Subscription/PaywallReason.swift118–148
+// and TTSPreferences.swift.
+// EPUB/PDF and local scanned-PDF OCR: PDFImportPipeline.swift90,155–218
+// plus release_v1.12 product audit; OCR/reading-order quality is not guaranteed.
+// Playback/background controls: PlayerService.swift and Info.plist audio mode.
+// Free access copy is imported from components/money/site.ts FREE_TIER.
+// Speech is generated locally after downloads; this is not a promise of no
+// diagnostics, analytics, networking, automatic sync or accessibility certification.
+// Source checked 2026-09-28: https://nflrc.hawaii.edu/rfl/item/43
+// Source checked 2026-09-28: https://onlinelibrary.wiley.com/doi/full/10.1111/lang.12622
+// Practical routines are editorial suggestions, not measured learning outcomes.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "How many unknown words per page is too many?",
-    a: "A widely cited threshold from second-language reading research (Hu & Nation, 2000, Reading in a Foreign Language) is that comfortable unassisted reading needs roughly 98% of words known, about one unknown word in fifty. On a typical 300-word page that's around six unknown words. If you're hitting ten or more per page, the book will fight you, so pick an easier one or scaffold it with audio and highlighting.",
+    "q": "Is 98% familiar vocabulary a rule for choosing books?",
+    "a": "No. It is a frequently discussed research estimate, not a universal threshold. Sample the actual book and check whether you can explain the passage, including the connections between ideas."
   },
   {
-    q: "Should I look up every word I don't know?",
-    a: "No, that's the fastest way to abandon a book. Look a word up only if it blocks the plot or if you've now met it several times. Everything else, let go: most unknown words either become clear from context or never matter. A dictionary is a tool for the second encounter, not the first.",
+    "q": "Should I look up every unfamiliar word?",
+    "a": "For pleasure reading, prioritise words that block meaning or recur usefully. For study or technical instructions, precision may require more checking. Do not assume a guessed meaning is correct."
   },
   {
-    q: "Does listening while reading make English books easier?",
-    a: "It removes two specific frictions. The narration keeps you moving at a steady pace, so you physically can't stall on every unknown word, and it gives you the real pronunciation of words you'd otherwise guess silently (and often wrongly). In LoudReader each word highlights as it's spoken, so your eyes never lose the line.",
+    "q": "Does narration make a hard book easy?",
+    "a": "It provides spoken text and can support pronunciation or pacing, but it does not explain unknown concepts or vocabulary. A simpler edition may still be the better choice."
   },
   {
-    q: "How do I stay motivated through a long English novel?",
-    a: "Pick a shorter book first. Finishing a 40,000-word classic this month builds more momentum than being 15% into a masterpiece forever. Read or listen in small daily sessions, count chapters rather than pages, and give yourself permission to abandon a book that isn't working. Sticking with the same author for a second book also helps: their vocabulary repeats, so it reads noticeably easier.",
+    "q": "Should I finish a book I keep abandoning?",
+    "a": "You can change the book, edition or session size. Interest, background knowledge and difficulty all affect whether a particular book fits your current purpose."
   },
   {
-    q: "Are older classics harder for learners than modern books?",
-    a: "Often, honestly, yes. A book from 1890 carries some vocabulary and phrasing you'll never hear in conversation. But the difficulty varies wildly: The Wonderful Wizard of Oz or Black Beauty read plainer than many modern literary novels. Since classics are free and instantly available with audio, they're the cheapest possible practice material, so just choose the plain-prose ones and skip the ornate ones until later.",
-  },
+    "q": "Are all old classics good for beginners?",
+    "a": "No. Wordplay, dialect and historical language can be difficult. Compare a sample with a graded reader or a modern book on a familiar subject before choosing."
+  }
 ];

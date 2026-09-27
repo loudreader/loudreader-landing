@@ -1,49 +1,60 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against:
-//   - data/voices.ts (the /voices roster source, audited 2026-08-20 against
-//     the shipping app's studio voice enum): Portuguese has exactly one
-//     narrator, Rafael. There is no second Portuguese voice to choose between.
-//   - components/money/site.ts VOICES.lazyLanguages: narrators for a language
-//     appear in the picker once there is a book in that language in the
-//     library. This is stated plainly, not as a workaround.
-//   - components/money/site.ts PRICING, DIFFERENTIATORS, VOICES: pricing,
-//     the free tier, on-device/private phrasing, and the 10-language count
-//     come from here verbatim, not retyped from memory.
-//   - components/money/site.ts FREE_TIER: all 23 narrators are free for
-//     the first 8 hours. After that, the one keepable free voice is chosen
-//     from the eligible English lineup; this language narrator needs Premium.
-// App-behavior claims used: on-device, no account, imports EPUB/PDF,
-// 70,000+ Project Gutenberg books, free tier = unlimited listening, Premium
-// adds all voices + speed (0.3x to 3.0x) + sleep timer + soundscapes + notes.
-// Claims NOT made: CarPlay, Android, Windows, OCR of scanned/image-only PDFs,
-// a choice of Portuguese narrators, Brazilian vs European Portuguese as a
-// selectable option (the app does not expose that distinction; not claimed).
+// FACT PROVENANCE — reviewed 2026-09-28; editorial guidance is not a runtime test.
+// Shipping source: loudreader/LoudReader_mac release_v1.12,
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 (not the dirty checkout HEAD).
+// - LoudReader/Engines/ChatterboxVoice.swift:27-59,95-108: studio language
+//   catalogue and narrator identities; internal QA voices are not counted.
+// - LoudReader/ReadingLanguages.swift, SettingsSheet.swift:347-378 and
+//   VoiceRegistry.swift:105-119: languages from library OR Settings marks;
+//   "Languages You Read" adds voices without changing paid entitlements.
+// - LoudReader/PDFImportPipeline.swift:88-96,155-218: local Vision OCR,
+//   recognition limits and partial-import warnings. No claim of perfect OCR.
+// - LoudReader/Subscription/SubscriptionAccess.swift:4-11,
+//   SubscriptionManager.swift:280-297 and Subscription/PaywallReason.swift:
+//   8 listening-hour allowance; post-trial English selection; paid studio
+//   voices/speed/timer/soundscapes; notes and highlights are not paid-only.
+//   Free-tier wording comes from shared FREE_TIER.full to keep device-specific
+//   selection details consistent; studio availability depends on hardware
+//   (DeviceCapability.swift:47-73).
+// - LoudReader/LoudReaderApp.swift:62,244 and local TTS implementation:
+//   speech synthesis is local, but Sentry diagnostics and usage analytics
+//   exist. No "no telemetry", "no network", or user opt-out UI claim is made.
+// - Official Apple version lookup https://itunes.apple.com/lookup?id=6758149478&country=us
+//   and https://apps.apple.com/us/app/loudreader-text-to-speech/id6758149478:
+//   release 1.12, iPhone/iPad app; compatible Macs run its iPad build.
+//   Version/platform findings also checked in the canonical product audit
+//   dated 2026-09-28. Public marketing privacy copy is stale and not evidence.
+// - https://loudreader.io/voices (checked 2026-09-28), data/voices.ts:
+//   public sample destination and language/voice catalogue only, not privacy.
+// Not claimed: a selectable regional accent, automatic code-switching,
+// translation, guaranteed pronunciation, DRM removal or all studio voices
+// on every device. Suggested sample checks are reader guidance, not test results.
 
 import type { Faq } from "@/components/money/FaqSection";
 import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does LoudReader read Portuguese text aloud?",
-    a: "Yes. LoudReader has one Portuguese narrator, Rafael, and it reads any DRM-free Portuguese EPUB or PDF aloud on your iPhone or Mac. The voice runs entirely on the device, so it works offline once the book is imported.",
+    q: "Is Rafael Brazilian or European Portuguese?",
+    a: "The app labels Rafael as Portuguese and does not offer a Brazilian/European accent switch. Audition the sample and your own passage before relying on it for a specific regional pronunciation task.",
   },
   {
-    q: "How many Portuguese voices does LoudReader offer?",
-    a: "One. Rafael is the only Portuguese narrator in the app. If you want a choice of Portuguese voices, LoudReader will not give you that today. English has 11 voices and Spanish has 4, but most other languages, Portuguese included, ship with a single narrator.",
+    q: "Why is the Portuguese voice missing from my picker?",
+    a: "Voices follow the languages in your library or those marked in Settings → Languages You Read. Mark Portuguese or import a Portuguese book, then look for Rafael. Studio availability also depends on the device, and listening needs a remaining voice trial or Premium.",
   },
   {
-    q: "Is LoudReader's Portuguese voice Brazilian or European Portuguese?",
-    a: "The app does not expose that as a separate setting. Rafael is simply labeled the Portuguese narrator. If the distinction matters for your material, listen to the sample on the voices page before you rely on the app for a specific project.",
+    q: "Can I listen to a scanned Portuguese PDF?",
+    a: "LoudReader can use local OCR to recognise text in scanned PDF pages. Recognition can be incomplete, so inspect the imported text and warnings. A clean EPUB or selectable-text PDF is a useful alternative if a scan produces errors.",
   },
   {
-    q: "Do I need an account to use the Portuguese voice?",
-    a: "No. There is no account and no sign-up. Import a book and the Portuguese narrator is available the moment your library has a Portuguese-language book in it.",
+    q: "Is Portuguese narration included in the free tier?",
+    a: `${FREE_TIER.full} After the voice trial, Rafael requires Premium. The current price is shown in the app for your storefront.`,
   },
   {
-    q: "Is the Portuguese voice free to use?",
-    a: `Try ${FREE_TIER.trial}. After that, continuing with Rafael, the Portuguese narrator, requires Premium. Free users choose one keepable voice from the eligible English lineup and retain unlimited listening on every book, with no account or word quota. Premium includes all 23 studio narrators across 10 languages, playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and notes and highlights.`,
+    q: "Does Portuguese narration work offline?",
+    a: "It can work offline after the book and required voice resources are available. Test the exact book and voice without a connection before travel. Speech processing is local, but that does not mean every app service is offline or that the app has no diagnostics or analytics.",
   },
   {
-    q: "Can LoudReader read a Portuguese PDF that's a scan of a printed page?",
-    a: "No. LoudReader reads the actual text layer in an EPUB or PDF. A scanned page saved as an image has no text layer for the app to read, in Portuguese or any other language.",
+    q: "Will LoudReader translate my book into Portuguese?",
+    a: "No. It narrates the text you provide; it does not translate an English book into Portuguese or assess your spoken Portuguese.",
   },
 ];

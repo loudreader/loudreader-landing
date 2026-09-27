@@ -1,38 +1,18 @@
-// FACT PROVENANCE. Original app-source audit: 2026-07-14. Editorial refresh:
-// 2026-09-27 against components/money/site.ts (current roster, requirements,
-// and documented app-source provenance), plus:
-//   - https://loudkit.loudreader.io/ and loudkit/README.md: Apache-2.0
-//     framework, SDKs, CLI, 28 voices, model download followed by local speech.
-//   - https://loudkit.loudreader.io/agents/ and site/src/pages/agents.astro:
-//     developer preview on Apple Silicon Mac, local speech after setup;
-//     messenger/model may use network; local providers tested, full messenger
-//     delivery still unverified. These are NOT LoudReader app capabilities.
-//   - https://arxiv.org/abs/1609.03499 rechecked 2026-09-27. It supports the
-//     history of neural waveform generation, not a current product ranking.
-// Original evidence retained below; no new app runtime audit is claimed:
-//   - WaveNet (the 2016 neural-TTS turning point) is a real, findable paper:
-//     van den Oord et al., "WaveNet: A Generative Model for Raw Audio",
-//     arXiv:1609.03499, https://arxiv.org/abs/1609.03499 (verified via web
-//     search 2026-07-14; also published by DeepMind, Sept 2016). The article
-//     cites it only for what it says: neural waveform generation that
-//     substantially narrowed the gap to human-sounding speech, initially at
-//     high computational cost.
-//   - Pre-neural offline TTS being concatenative/formant-based is standard,
-//     uncontroversial TTS history; described generically with no invented
-//     numbers.
-//   - LoudReader as the working example: voice models are BUNDLED in the app
-//     and executed locally via Core ML with the Apple Neural Engine.
-//     The model seeder ships a bundled model set with
-//     `DownloadUtils.enforceOffline = true` into the ANE model directory, and
-//     the synthesis backend reads from there. The engine can never download at
-//     runtime; that is enforced in code, not just policy.
-//   - Apple Silicon requirement: components/money/site.ts REQUIREMENTS
-//     ("iOS 18.0+, iPadOS 18.0+, macOS 15.0+ (Apple Silicon)").
-//   - Voice count and language spread: components/money/site.ts (VOICES)
-//     PRICING and existing money pages (consistent phrasing).
-// Claims you may NOT make: any specific latency/RTF benchmark numbers, any
-// claim that on-device quality has "matched" cloud quality (say "narrowed"),
-// parameter counts of specific models (not published on this site).
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Shipping app: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+// the LoudReader app source, read through git show, not local HEAD.
+// Canonical audit: docs/product-facts-2026-09-28.md. Source review,
+// not a new runtime test. Local speech does not imply no diagnostics:
+// LoudReaderApp.swift initialises Sentry and Analytics.swift TelemetryDeck;
+// SettingsSheet.showsUsageStatisticsChoice is false in this shipping release.
+// SubscriptionAccess/SubscriptionManager verify 8 cumulative listening hours,
+// then Stella or Rio plus Bella on capable devices; whole-book listening stays
+// free. Notes/highlights are not Premium-only. Studio availability varies.
+// Xcode target is iOS/iPadOS; on Apple Silicon Macs it is the iPad build.
+// No automatic library/progress sync; iCloud file import is not app sync.
+// https://arxiv.org/abs/1609.03499 rechecked2026-09-28: neural waveform generation history, not a current voice-quality ranking.
+// https://developer.apple.com/documentation/coreml/mlcomputeunits checked2026-09-28: execution options, not every operation guaranteed on Neural Engine.
+// Local loudkit docs/supported.md and agents landing checked2026-09-28:28voices,fiveSDKs,agentpreview limits.
 
 import type { Faq } from "@/components/money/FaqSection";
 
@@ -51,7 +31,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Why does LoudReader need Apple Silicon on a Mac?",
-    a: "LoudReader requires macOS 15 or later on Apple Silicon because its app and speech runtime target that hardware. This is a LoudReader requirement, not a rule for all on-device TTS: other engines and system voices have different hardware support. Check the requirements of the exact app or SDK you want to use.",
+    a: "LoudReader runs its iPad build on compatible Apple Silicon Macs with macOS 15 or later; there is no separate native Mac build. This is a LoudReader requirement, not a rule for all on-device TTS: other engines and system voices have different hardware support. Check the requirements of the exact app or SDK you want to use.",
   },
   {
     q: "Is on-device voice quality catching up to cloud voices?",

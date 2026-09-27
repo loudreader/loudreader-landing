@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,170 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function DoAudiobooksHelpYouReadMoreArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Yes, audiobooks help you read more in the most practical sense: they
-          turn dead time into reading time. Commuting, chores, exercise, and
-          errands are minutes your eyes cannot use for a book but your ears
-          can. That increases total book consumption without finding extra
-          hours in the day. Listening is a different cognitive experience than
-          reading print (more passive, more linear), but both count as engaging
-          with books. For people with limited sit-down time, audio is not a
-          compromise. It is the difference between reading some books and
-          reading none.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
-          DRM-free EPUB or PDF into an audiobook with natural offline voices,
-          fully on-device and private, your library never leaves your device.
-          Free unlimited listening on the free tier.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="devices"
-        caption="Dead time becomes reading time. The math is simple."
-      />
-
-      <QuestionSection question="Do audiobooks actually increase the number of books you finish?">
-        <p>
-          The math says yes, and the math is not complicated. Most people have
-          1 to 2 hours per day where their body is busy but their mind is free:
-          driving to work, walking the dog, cooking, cleaning, exercising. Fill
-          those hours with books instead of music or podcasts and your book
-          count goes up. Dramatically.
-        </p>
-        <p>
-          A 30-minute-each-way commute alone is 5 hours of reading time per
-          week, or about 260 hours per year. At an average book length of 9
-          hours, that is roughly 29 books. Add in chores and exercise and you
-          can hit 50+ books without finding a single new minute. The full
-          breakdown is in{" "}
-          <Link
-            href="/blog/how-many-books-can-you-read-in-a-year"
-            className="text-loudBlue hover:underline"
-          >
-            how many books can you read in a year
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Is listening different from reading?">
-        <p>
-          Yes, in ways that matter. Reading print is an active, self-paced
-          process. You control the rhythm. You pause, reread, and sit with a
-          sentence as long as you want. Listening is more passive and linear.
-          The narration moves forward whether you are ready or not. You can
-          pause and rewind, but the default mode is continuous flow.
-        </p>
-        <p>
-          The cognitive experience is different too. Research has found that
-          listening comprehension is roughly similar to reading comprehension
-          for narrative and informational texts, so you understand the book
-          either way. But reading print engages visual processing and gives you
-          spatial memory of where information lives on a page. Listening
-          engages auditory processing and trains your ability to follow a
-          thread without visual anchors. Both are valid. Neither is cheating.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Does listening instead of reading affect how much you retain?">
-        <p>
-          For the kinds of books most people read for enjoyment and general
-          knowledge, retention is similar. Your brain builds the same mental
-          model of the story or argument whether the input was visual or
-          auditory. The fuller look at this research is in{" "}
-          <Link
-            href="/blog/is-listening-to-audiobooks-reading"
-            className="text-loudBlue hover:underline"
-          >
-            does listening to audiobooks count as reading
-          </Link>
-          .
-        </p>
-        <p>
-          The practical difference is not in comprehension but in attention. It
-          is easier to zone out while listening than while reading, because
-          your eyes keep a fixed point while your ears process a stream. Good
-          listening habits (giving the book most of your attention, not
-          multitasking heavily) close the retention gap. Bad listening habits
-          (audiobook as background noise for demanding tasks) widen it.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What is the best way to fit more books into your life?">
-        <p>
-          Use both formats for what they are best at. Read print when you have
-          dedicated sit-down time and want the full active experience. Listen
-          when you are on the move or doing routine physical tasks. Switch
-          between them for the same book using a TTS reader like LoudReader
-          that keeps one position across both modes.
-        </p>
-        <p>
-          The best way to read more is not to choose between print and audio.
-          It is to recognize that they are not competing formats. They are
-          complementary tools that cover different parts of your day. Together
-          they give you reading time you did not know you had.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How does LoudReader help you read more?">
-        <p>
-          LoudReader removes the barriers between you and more books:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Any book becomes an audiobook.</strong>{" "}
-            Import any DRM-free EPUB or PDF, or pick from 70,000+ free
-            Project Gutenberg classics. No waiting for a recording to exist.
-          </li>
-          <li>
-            <strong className="text-gray-900">One position, both modes.</strong>{" "}
-            Read with your eyes, then press play when you need to go hands-free.
-            The narration picks up from where you are. Switch back anytime.
-            Same book, same file, same place.
-          </li>
-          <li>
-            <strong className="text-gray-900">Natural offline voices.</strong>{" "}
-            Listen anywhere, no internet needed. Fully on-device and private,
-            your library never leaves your device. Works in dead zones, on
-            airplanes, and anywhere you go.
-          </li>
-          <li>
-            <strong className="text-gray-900">Free unlimited listening.</strong>{" "}
-            No word quota, no time limit, no account. You can read as many
-            books as you want without a meter running.
-          </li>
-        </ul>
-        <p>
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            Get LoudReader from the App Store
-          </a>{" "}
-          and turn your commute, chores, and downtime into reading time
-          starting today.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>Audiobooks can give you another time and place to engage with a book: a quiet walk, a train journey or a familiar household task. Whether that leads to more reading depends on your attention, the material and whether you enjoy the habit. Adding playback minutes is not the same as finishing or understanding more books. Try one regular slot for a week, notice what you remember, and keep it only if it helps. You do not need to turn every spare minute into a reading target.</p></Tldr>
+      <ArticleIllustration variant="devices" caption="Try one listening slot and see whether it helps your reading." />
+      <QuestionSection question="What does “more reading” mean for you?"><p>Choose a useful measure before changing your routine. You might want to finish a novel you keep putting down, spend more time with books, or understand one difficult chapter. Book count alone treats a short story and a long history as equal, so it may not reflect your goal.</p><p>Write down the goal in ordinary terms: “I want to enjoy twenty minutes with this book on the train.” That is easier to evaluate than a promise to become a fifty-book-a-year reader.</p></QuestionSection>
+      <QuestionSection question="Where could a listening session fit?"><p>Pick a slot where you can pause freely. A passenger journey or folding laundry may work; a new recipe, navigation or a demanding task may compete with the text. If you repeatedly lose the thread, change the activity, the book or the pace.</p><p>For illustration, twenty minutes on five days gives you one hour and forty minutes a week. That is potential listening time, before pauses and missed days. It is not a prediction of how many books you will finish. Our <Link href="/blog/how-many-books-can-you-read-in-a-year" className="text-loudBlue hover:underline">listening-time calculation guide</Link> shows how to make your own estimate.</p></QuestionSection>
+      <QuestionSection question="How can you tell whether you are following the book?"><p>At a natural stopping point, try describing what just happened or the main point in a sentence. If you cannot, go back without treating it as a failure. Some chapters need a quieter setting or the text in front of you.</p><p>This is a practical self-check, not a comprehension test. We are not claiming that audio and print produce identical learning outcomes or that listening trains your attention. Your experience with this book matters more than a general slogan.</p></QuestionSection>
+      <QuestionSection question="Can you alternate between listening and reading?"><p>Yes, when your tools and editions support it. In a TTS reader, the displayed text and narration come from the same imported file. In <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>, a supported EPUB or PDF can be read and heard in one app. LoudReader runs on iPhone and iPad; its iPad build also runs on compatible Apple Silicon Macs.</p><p>With a separately purchased audiobook and ebook, chapter divisions and translations may differ. Keep a chapter title or short note as a reference instead of assuming the two copies synchronise.</p></QuestionSection>
+      <QuestionSection question="What should you try this week?"><ol className="list-decimal pl-6 space-y-2"><li>Choose one book you want to spend time with, not one you feel obliged to count.</li><li>Prepare its download or local voice resources before your listening slot.</li><li>Try a short session at a comfortable speed.</li><li>Pause when the surroundings or task need your attention.</li><li>At the end of the week, decide whether the habit added enjoyment, understanding or useful continuity.</li></ol><p>If you use LoudReader for your own files, once the book and required voice resources are available on the device, narration works offline. downloads and web imports still need a connection.</p><p>{FREE_TIER.full}</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Read more books by filling the time you already have"
-        subline="Turn any EPUB or PDF into an audiobook. Natural offline voices, free unlimited listening, no account."
-      />
+      <StoreCta headline="Add a listening option to your reading" subline="Use a supported ebook and try a short session at your own pace." />
     </ArticleLayout>
   );
 }

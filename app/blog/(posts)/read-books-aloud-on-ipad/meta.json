@@ -1,9 +1,10 @@
 {
   "slug": "read-books-aloud-on-ipad",
   "title": "How to Read Books Aloud on iPad",
-  "description": "An iPad is the best screen for following along while a book is read aloud. LoudReader reads EPUBs and PDFs with natural offline voices and word highlighting on the big screen.",
+  "description": "Import EPUBs and PDFs on iPad, follow highlighted text and plan a useful listening session. Includes voice availability and scanned-PDF limits.",
   "publishedAt": "2026-08-24",
-  "lastModified": "2026-08-24",
+  "lastModified": "2026-09-28",
   "avatar": "Time-Starved Book Lover",
-  "query": "read books aloud on ipad"
+  "query": "read books aloud on ipad",
+  "topic": "technology"
 }

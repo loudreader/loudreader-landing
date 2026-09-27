@@ -5,165 +5,52 @@ import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
-import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ProjectGutenbergAudiobooksArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Every Project Gutenberg book can be a free audiobook. The only
-          question is which of three routes fits you. The{" "}
-          <strong>Open Audiobook Collection</strong> offers about 5,000
-          titles as synthetic-voice recordings you can download or stream.{" "}
-          <strong>LibriVox</strong> offers 20,000+ human, volunteer-read
-          recordings as MP3s. Both are audio files that cover a fraction of the
-          catalog. <strong>LoudReader</strong> covers all of it. The full
-          70,000+ Gutenberg catalog is built into the app, browsable by genre
-          and author, and any title is read aloud on demand with natural
-          offline voices and word-by-word highlighting. It's free, with
-          unlimited listening, no account, and fully on-device and private,
-          your library never leaves your device. Download a book once and
-          everything works offline.
-        </p>
+        <p>There are several ways to hear a Project Gutenberg title. Look for a volunteer recording on LibriVox, check the Open Audiobook Collection for a synthetic recording, or download a suitable ebook and use text-to-speech. The first two give you an existing performance or recording; a reader such as LoudReader generates speech from the text you import. Start with the title and edition you want, then choose the format. Project Gutenberg’s availability is based on US rules, so check the ebook notice and the position in your country rather than assuming every listed work is unrestricted worldwide.</p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="70,000+ public-domain books, every one of them a potential audiobook."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Choose a particular edition, then choose how you want to hear it." />
 
-      <QuestionSection question="What is the Project Gutenberg Open Audiobook Collection?">
-        <p>
-          In 2023, researchers from MIT and Microsoft used neural
-          text-to-speech to convert about 5,000 Project Gutenberg titles
-          into free audiobooks, released as audio files and podcast-style
-          streams.{" "}
-          <a
-            href="https://techcrunch.com/2023/09/19/project-gutenberg-puts-5000-audiobooks-online-for-free-using-synthetic-speech/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            TechCrunch covered the launch
-          </a>
-          . It's a genuinely important project. Thousands of classics got a
-          listenable edition overnight, at zero cost to anyone.
-        </p>
-        <p>Its limits are just as plain, and worth stating honestly:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Coverage:</strong> ~5,000
-            titles against a catalog of 70,000+, so most Gutenberg books
-            aren't in it.
-          </li>
-          <li>
-            <strong className="text-gray-900">Fixed recordings:</strong> the
-            voices are 2023-era synthesis, frozen at generation time. No
-            voice choice, and no speed beyond what your player offers.
-          </li>
-          <li>
-            <strong className="text-gray-900">Audio only:</strong> they're
-            files, not a reading experience, with no synced text, no library,
-            and no saved place tied to the book.
-          </li>
-        </ul>
+      <QuestionSection question="When should I choose a volunteer recording?">
+        <p><a href="https://librivox.org/pages/about-librivox/" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">LibriVox</a> publishes free recordings made by volunteers. Search for the title, language and reader, then sample a chapter. Some projects use one reader, while others divide chapters among several; choose the presentation you prefer.</p><p>A recording is convenient if you want audio files for an existing player. Check the edition and whether it is complete, especially if you intend to follow a separate ebook. The text and recording may use different translations or chapter divisions.</p>
       </QuestionSection>
 
-      <QuestionSection question="What are all the ways to listen to Project Gutenberg for free?">
-        <p>Three honest routes, each with a different shape:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">
-              The Open Audiobook Collection
-            </strong>{" "}
-            is the ~5,000 synthetic recordings above. Best when you want free
-            audio files of a covered title with zero setup.
-          </li>
-          <li>
-            <strong className="text-gray-900">LibriVox</strong> has 20,000+
-            recordings read by human volunteers, downloadable as MP3s and
-            hosted on the Internet Archive. Human warmth, with the honest
-            trade-off that quality varies and narrators can change
-            chapter to chapter. The full comparison is in our{" "}
-            <Link
-              href="/blog/librivox-alternative"
-              className="text-loudBlue hover:underline"
-            >
-              LibriVox alternative guide
-            </Link>
-            .
-          </li>
-          <li>
-            <strong className="text-gray-900">LoudReader</strong> isn't a
-            set of recordings. It's a reader with the whole catalog inside.
-            Any of the 70,000+ titles is read aloud on demand, with the text
-            on screen and each word highlighted as it's spoken.
-          </li>
-        </ul>
+      <QuestionSection question="What is the Open Audiobook Collection?">
+        <p>The <a href="https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/index.html" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">Project Gutenberg Open Audiobook Collection</a> is a collaboration involving Project Gutenberg, Microsoft and MIT. Its project page describes thousands of free, open audiobooks made with neural text-to-speech and automated ebook parsing.</p><p>It is a collection of existing recordings, so search for your title and sample the result. The project itself notes possible parsing and pronunciation errors. Playback functions such as saved position and speed depend on the player you use; they are not properties of an MP3 file.</p>
       </QuestionSection>
 
-      <QuestionSection question="How does LoudReader turn the whole catalog into audiobooks?">
-        <p>
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader
-          </a>{" "}
-          ships with the entire Project Gutenberg catalog built in. Browse
-          by genre, search by author, download any title, press play.
-          Natural offline voices generate the narration in real time on your
-          device. That's why coverage is total rather than a curated
-          subset, and why nothing was frozen in 2023: the book is read
-          fresh, with your choice of voice, every time. It works the same
-          way for books you import yourself, and the walkthrough is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
-        <p>
-          Listening is free and unlimited (every book, cover to cover, no
-          word quota, no account) on iPhone, iPad, and Apple Silicon Macs. The honest
-          concession: narration is generated live, so there are no MP3s to
-          export. If downloadable files are the requirement, the two
-          collections above are the right tools.
-        </p>
+      <QuestionSection question="When is reading an ebook aloud a better fit?">
+        <p>A TTS reader is useful when you want the text on screen, a selectable voice or an ebook for which you have not found a recording you like. It speaks the imported text rather than requiring a matching audio edition. The result still depends on the file and voice, especially around poetry, notes and unusual names.</p><p>This article is published by the developer of <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>. Our app includes Gutenberg browsing and downloads and can narrate supported EPUBs and PDFs locally. It does not mean the entire Gutenberg catalogue is already stored on your phone or that every title and language has been tested.</p>
       </QuestionSection>
 
-      <QuestionSection question="Can you read along while you listen?">
-        <p>
-          This is the practical difference the MP3 collections can't
-          bridge. In LoudReader the full text is on screen and each word
-          highlights in sync with the narration, so you can glance down
-          mid-sentence and land exactly where the voice is. It keeps names
-          and places straight in dense classics, and it gives drifting
-          attention somewhere to re-attach. Audio files can sit next to an
-          open ebook, but nothing holds them together. A synced reader is a
-          different experience from a recording, and for long, unfamiliar
-          books it's the better one.
-        </p>
+      <QuestionSection question="What should I check about copyright and editions?">
+        <p>Read the notice in the exact ebook, not just the age of the author. <a href="https://www.gutenberg.org/policy/license" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">Gutenberg’s licence guidance</a> explains its US basis and that some items are distributed with permission rather than being unrestricted. A translation, introduction or illustration can have a different status from the underlying work. Check local rules before using the file.</p><p>Keep an edition note if you are following a class or book group: title, translator or editor, and catalogue link. The same novel can have substantially different wording in another edition, even when both covers use the same title.</p>
+      </QuestionSection>
+
+      <QuestionSection question="How do I start with LoudReader?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Find the book through in-app Gutenberg browsing or obtain a supported DRM-free EPUB/PDF you are entitled to use.</li>
+          <li>Download or import it while online. Test several paragraphs and a chapter transition before a long session.</li>
+          <li>Choose an available voice and check pronunciation of names. Keep the text visible if the edition has notes or unusual formatting.</li>
+          <li>Before an offline trip, open the required voice and test the book without a connection.</li>
+        </ol><p>Try every available voice for your first 8 hours of listening. Afterwards, a free English voice selection remains available with unlimited book listening. Speed adjustment and the sleep timer are Premium features. The <Link href="/listen" className="text-loudBlue hover:underline">website’s classics catalogue</Link> is a curated starting point, separate from the broader in-app catalogue.</p>
+      </QuestionSection>
+
+      <QuestionSection question="What if I specifically need an audio file?">
+        <p>Start with a recording source and confirm that it offers the format your player accepts. Playing an ebook inside a TTS reader is not the same as obtaining an MP3 you can move between players. This guide does not promise audio export from LoudReader.</p><p>For the text-import route, see <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">turning an ebook into a listening copy</Link>. For classics with difficult prose, <Link href="/blog/read-and-listen-at-the-same-time" className="text-loudBlue hover:underline">following the text while listening</Link> can help you locate a word the voice made unclear.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="The whole Gutenberg catalog, read aloud"
-        subline="Browse 70,000+ free classics and press play. Natural offline voices, synced highlighting, unlimited free listening."
-      />
     </ArticleLayout>
   );
 }

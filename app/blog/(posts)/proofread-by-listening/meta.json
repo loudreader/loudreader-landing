@@ -1,9 +1,10 @@
 {
   "slug": "proofread-by-listening",
-  "title": "Proofread by Listening: Text-to-Speech Editing Guide",
-  "description": "Your ears catch what your eyes autocorrect. A practical TTS proofreading workflow: export, listen, pause-fix-resume, with your draft staying on-device.",
+  "title": "Proofread by Listening: A Practical Editing Pass",
+  "description": "Make a dated listening copy, check extraction, mark changes in the source and re-export. Audio complements a visual proofread; it does not update your draft.",
   "publishedAt": "2026-07-26",
-  "lastModified": "2026-07-26",
+  "lastModified": "2026-09-28",
   "avatar": "Writer Proofreading by Ear",
-  "query": "text to speech proofreading"
+  "query": "text to speech proofreading",
+  "topic": "formats"
 }

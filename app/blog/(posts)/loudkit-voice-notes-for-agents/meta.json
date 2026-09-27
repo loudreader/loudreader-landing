@@ -7,5 +7,6 @@
   "avatar": "People using their own AI agent",
   "query": "Loudkit voice notes for agents",
   "kind": "release",
-  "featured": true
+  "featured": true,
+  "topic": "technology"
 }

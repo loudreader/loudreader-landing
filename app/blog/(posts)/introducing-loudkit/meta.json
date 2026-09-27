@@ -7,5 +7,6 @@
   "avatar": "Developer building an application with local speech",
   "query": "Loudkit open source text to speech",
   "kind": "release",
-  "featured": true
+  "featured": true,
+  "topic": "technology"
 }

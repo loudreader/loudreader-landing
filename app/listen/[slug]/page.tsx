@@ -6,7 +6,7 @@ import StoreCta from "@/components/money/StoreCta";
 import BookCover from "@/components/listen/BookCover";
 import SamplePlayer from "@/components/listen/SamplePlayer";
 import { bookSample } from "@/data/audio-samples";
-import { APP_NAME, SITE_URL } from "@/components/money/site";
+import { APP_NAME, FREE_TIER, SITE_URL, VOICES } from "@/components/money/site";
 import {
   booksByAuthor,
   formatListeningTime,
@@ -46,7 +46,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const book = getBook(slug)!;
   const title = `Listen to ${book.title} by ${book.author}: Free Audiobook`;
-  const description = `${book.hook} Listen to this free public-domain audiobook with natural offline voices in ${APP_NAME} on Mac and iPhone.`;
+  const description = `${book.hook} Preview synthetic narration and find a Gutenberg edition to read aloud in ${APP_NAME}. Check copyright where you live.`;
   return {
     title,
     description,
@@ -261,7 +261,7 @@ export default async function ListenBookPage({
           </p>
           <p className="text-lg font-semibold text-gray-900">Free</p>
           <p className="text-xs text-gray-400 mt-1">
-            public domain &middot;{" "}
+            Gutenberg US listing &middot;{" "}
             <a
               href={gutenbergUrl(book)}
               target="_blank"
@@ -276,7 +276,7 @@ export default async function ListenBookPage({
 
       <StoreCta
         headline="Listen free on Mac and iPhone"
-        subline={`${book.title} is in the built-in catalog. Get ${APP_NAME} and press play: natural offline voices, word-by-word highlighting, no account.`}
+        subline={`Find ${book.title} in the catalog, download a permitted edition and choose an available voice. Word-by-word highlighting, no LoudReader account.`}
         source="listen-book-top"
         icon="play"
       />
@@ -313,8 +313,7 @@ export default async function ListenBookPage({
         </h2>
         <div className="text-gray-600 text-[17px] leading-relaxed space-y-4">
           <p>
-            {book.title} is in the public domain, so the complete text is free
-            on{" "}
+            The edition linked here is available from{" "}
             <a
               href={gutenbergUrl(book)}
               target="_blank"
@@ -323,11 +322,13 @@ export default async function ListenBookPage({
             >
               Project Gutenberg
             </a>{" "}
-            and {APP_NAME} has the entire Project Gutenberg catalog built in.
-            To listen:
+            under its US public-domain listing. Check the edition, translation,
+            completeness and copyright rules where you live. {APP_NAME} lets
+            you browse and download Gutenberg books; they are not all stored
+            on installation. To listen:
           </p>
           <ol className="list-decimal pl-6 space-y-2">
-            <li>Download {APP_NAME} for Mac or iPhone (free, no account).</li>
+            <li>Install {APP_NAME} on iPhone or iPad, or its iPad app on a compatible Apple Silicon Mac.</li>
             <li>
               Search for &ldquo;{book.title}&rdquo; in the built-in catalog and
               add it to your library.
@@ -339,10 +340,9 @@ export default async function ListenBookPage({
             </li>
           </ol>
           <p>
-            {APP_NAME} reads with natural offline voices, so the whole book
-            works on a plane or underground. It is fully on-device and
-            private, your library never leaves your device. Listening is
-            unlimited on the free tier.
+            Speech is generated locally without uploading the book for narration.
+            Download the book and check your chosen voice before travelling offline.
+            {" "}{VOICES.availability} {FREE_TIER.full}
           </p>
         </div>
       </section>
@@ -413,7 +413,7 @@ export default async function ListenBookPage({
 
       <StoreCta
         headline="Listen free on Mac and iPhone"
-        subline={`${book.title} is ready to play in ${APP_NAME}'s built-in Project Gutenberg catalog. Natural offline voices, word-by-word highlighting, no account.`}
+        subline={`Browse for ${book.title}, check the edition and add a permitted copy to your library. Local narration, word-by-word highlighting, no LoudReader account.`}
       />
     </MoneyPageLayout>
   );

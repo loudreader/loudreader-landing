@@ -1,48 +1,48 @@
-// FACT PROVENANCE. Every claim verified on 2026-08-24 against:
-//   - Book facts (author, public domain status, Gutenberg availability):
-//     data/gutenberg-catalog.json, entry slug "treasure-island"
-//     (gutenberg_id 120, author Robert Louis Stevenson, author_years
-//     1850 to 1894). Same source that powers the /listen/treasure-island
-//     page, so the facts here match that page exactly.
-//   - The "about 7.5 hours" listening estimate is LoudReader's own
-//     word-count-derived estimate for this title (listening_hours: 7.5 in
-//     the same catalog entry), stated as an estimate, not a measured
-//     duration and not a claim about any other narration.
-//   - Rendered opening sample on /listen/treasure-island: confirmed present
-//     via components/listen/catalog.ts bookSample() lookup for this slug.
-//   - LoudReader app claims: components/money/site.ts (single source of
-//     truth), every voice free for the first 8 hours, then one chosen voice
-//     with unlimited listening. Premium keeps all 23 studio narrators across 10 languages, playback speed 0.3x to
-//     3.0x, on-device processing (DIFFERENTIATORS.private), iPhone, iPad and Apple Silicon Macs, no account, imports EPUB/PDF, 70,000+ Gutenberg catalog
-//     built in.
-//   - No audio export: LoudReader generates narration live on-device and
-//     does not produce a downloadable MP3 file (consistent with the same
-//     honest note in app/blog/(posts)/best-audiobook-app-for-classics).
-// Claims you may NOT make until verified: any claim about how Treasure
-// Island's LibriVox or other human recordings sound or compare in quality.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Read the previous page.tsx, content.ts and meta.json in full before revision.
+// Primary edition/catalog sources checked 2026-09-28:
+//   - https://www.gutenberg.org/ebooks/120
+//   - https://librivox.org/treasure-island-dramatic-reading-by-robert-louis-stevenson/
+//   - https://www.gutenberg.org/policy/permission.html
+//   - data/gutenberg-catalog.json: current catalogue entry treasure-island,
+//     ebook 120. Listening hours, where used, are catalogue estimates,
+//     not measured audio runtimes. No comparative voice test was performed.
+//   - data/audio-samples.ts confirms the shipped opening sample lookup.
+//   - /listen/treasure-island: catalogue/sample route, not a full audiobook.
+//   - https://www.gutenberg.org/cache/epub/120/pg120-images.html (text/contents checked).
+// Product facts: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0)
+// in the LoudReader app source, reviewed by the shared 2026-09-28
+// source audit (docs/product-facts-2026-09-28.md): SubscriptionAccess.swift,
+// SubscriptionManager.swift, VoiceRegistry.swift, PaywallReason.swift,
+// ProjectGutenbergService, ContentView.swift file importer, Xcode target configuration.
+// FREE_TIER imports the updated shared wording: eight cumulative listening hours,
+// then a free English voice selection (not any studio narrator), unlimited listening.
+// iPad compatibility on Apple Silicon is not a native Mac app; no device sync promise.
+// Local speech is not a claim of zero diagnostics, analytics or network use.
+// Edition and voice-selection advice is editorial guidance, not a tested superiority claim.
 
 import type { Faq } from "@/components/money/FaqSection";
 import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is there a free audiobook of Treasure Island?",
-    a: "Yes. Treasure Island is in the public domain, so you can listen to it free with no purchase and no subscription. LoudReader reads the full Project Gutenberg text aloud with a natural offline voice, at no cost on the free tier, and you can hear the opening read aloud right now on the book's LoudReader catalog page.",
+    q: "Is there a free human Treasure Island audiobook?",
+    a: "Yes. LibriVox’s version 3 is a volunteer dramatic reading with downloadable sections. Check the cast and preview a section to decide whether that format suits you.",
   },
   {
-    q: "Is this a real narrator or a synthetic voice?",
-    a: "It is a synthetic voice, not a professional narrator. LoudReader turns the public-domain text of Treasure Island into audio using an on-device text-to-speech voice. It is clear and natural to listen to, but it is not a performed audiobook with a human actor doing the character voices. If that distinction matters to you, LibriVox may have a volunteer-read version, and this is not that.",
+    q: "Does LoudReader use that recording?",
+    a: "No. LoudReader generates speech from its ebook text using the voice you select. The LibriVox performance is a separate audio edition.",
   },
   {
-    q: "Do I need an account or subscription to listen?",
-    a: `No. ${FREE_TIER.full} Import is instant because Treasure Island is already in LoudReader's built-in Project Gutenberg catalog of 70,000+ books, so there's no file to find or convert.`,
+    q: "Does Jim Hawkins narrate every chapter?",
+    a: "No. Dr Livesey narrates part of the novel. Follow the chapter heading when the viewpoint changes, especially if the reading uses one voice throughout.",
   },
   {
-    q: "Can I listen to Treasure Island offline, like on a flight or a hike?",
-    a: "Yes. LoudReader is fully on-device and private, your library never leaves your device, so once the book is open, playback works with no internet connection at all.",
+    q: "How long is the audiobook?",
+    a: "The catalogue’s approximately 7.5 hours is an estimate based on text length, not a measured duration for every recording or synthetic voice.",
   },
   {
-    q: "How long is the Treasure Island audiobook?",
-    a: "LoudReader's own estimate, based on the book's word count, puts it at about 7.5 hours at normal speed. That is an estimate for this synthetic reading, not a measured runtime of any other edition, and Premium's speed control (0.3x to 3.0x) changes it either direction.",
+    q: "Can I finish the book on the free tier?",
+    a: FREE_TIER.full,
   },
 ];

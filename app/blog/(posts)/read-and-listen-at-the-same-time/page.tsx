@@ -1,208 +1,55 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
-import ComparisonTable from "@/components/money/ComparisonTable";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
+import Disclosure from "@/components/blog/Disclosure";
 
-import { COMPARISON_COLUMNS, COMPARISON_ROWS, FAQS } from "./content";
+import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ReadAndListenAtTheSameTimeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Reading and listening at the same time (your eyes follow the text
-          while a voice reads it aloud, with the current word highlighted)
-          is usually called <strong>immersion reading</strong>. There are two
-          ways to get it. Amazon&apos;s Whispersync pairs a Kindle ebook with
-          its Audible audiobook, which is beautifully polished but means
-          buying two editions of every book. The other way is a
-          text-to-speech reader with synced highlighting.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
-          DRM-free EPUB or PDF aloud with natural offline voices and
-          highlights each word as it speaks. It's free, with unlimited
-          listening, no account, and fully on-device and private, your
-          library never leaves your device.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="One book, two channels: eyes on the words, ears on the voice."
-      />
-
-      <QuestionSection question="What is immersion reading?">
-        <p>
-          Immersion reading is the simplest study trick that most people have
-          never tried: the text and the narration are the same book, playing
-          at the same time, with a highlight tying them together. Your eyes
-          anchor your ears; your ears pace your eyes.
-        </p>
-        <p>
-          The people who swear by it are usually the ones for whom plain
-          reading is hard work: readers with dyslexia or ADHD, language
-          learners, and anyone whose attention slides off the page after a
-          paragraph. The moving highlight gives wandering attention a place
-          to snap back to. The moment your mind drifts, the highlight shows
-          you exactly where the voice is, and you rejoin the sentence instead
-          of hunting for it. Whether it also boosts test scores is a more
-          nuanced question, covered honestly below, but as a way to stay
-          <em> in</em> a book, it works from the first minute.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How does Kindle + Audible Whispersync work, and what does it cost?">
-        <p>
-          Amazon&apos;s version is the best-known one. If a title is sold as
-          both a Kindle ebook and an Audible audiobook, owning both turns on
-          immersion reading in the Kindle app: the professional narration
-          plays while the text highlights along.
-        </p>
-        <p>
-          Credit where due, it's a polished experience. The narration is a
-          professionally recorded human performance, the sync is tight,
-          and if you already live in the Kindle ecosystem there's nothing to
-          set up. The honest costs are structural:
-        </p>
+      <Tldr><p>
+        To read and listen together, use matching text and narration and keep the reading view visible. A text-to-speech reader can generate speech from your own supported ebook and highlight the current words. A paired ebook and audiobook can instead provide a recorded performance with synchronised text, where that combination is supported. You can also follow a print book manually, although it will not highlight or turn pages for you. Choose the route that fits the edition you have, then try a short section. Read-along is a way to use a book, not a promise that two channels will always improve learning.
+      </p><Disclosure /></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Match the text to the narration before trying to follow both together." />
+      <QuestionSection question="What are the practical ways to read along?">
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Two purchases per book.</strong>{" "}
-            You need the ebook <em>and</em> the audiobook. The audiobook
-            add-on is often discounted, but reading this way across a
-            semester or a series adds up fast.
-          </li>
-          <li>
-            <strong className="text-gray-900">Catalog limits.</strong> It only
-            exists for titles sold in both formats. Your own PDFs, EPUBs from
-            other stores, web-fiction exports, course materials, and most
-            backlist or niche titles are simply not eligible.
-          </li>
+          <li><strong>Generate speech from an ebook.</strong> A TTS reader uses the same imported text for narration and highlighting. You need a supported, readable file and a voice that works for its language.</li>
+          <li><strong>Use a supported ebook/audiobook pair.</strong> This preserves the purchased recording’s performance, with text synchronisation when the service supports those editions.</li>
+          <li><strong>Follow a matching print or digital edition manually.</strong> This can work without a special feature. Check that the audio is unabridged and that the wording matches, especially for translations.</li>
         </ul>
+        <p>Abridged recordings, different translations and editions with different introductions can drift apart. If you repeatedly lose your place, check that mismatch before trying to concentrate harder.</p>
       </QuestionSection>
-
-      <QuestionSection question="How do you read and listen free on any EPUB or PDF?">
-        <p>
-          A text-to-speech reader with synced highlighting gives you the same
-          eyes-plus-ears experience on any book you can get as a file. With{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader
-          </a>{" "}
-          the whole setup is three steps:
-        </p>
+      <QuestionSection question="How do I set up read-along in LoudReader?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Import a DRM-free EPUB or PDF, or pick one of the 70,000+ free
-            Project Gutenberg classics built into the app.
-          </li>
-          <li>Press play. Natural offline voices read the book aloud.</li>
-          <li>
-            Follow the highlight: each word lights up as it's spoken, on Mac
-            and iPhone alike.
-          </li>
+          <li><strong>Import a supported DRM-free EPUB or PDF.</strong> For a scan, let the on-device OCR finish and inspect the text. A poor scan or complex layout can produce the wrong words or reading order.</li>
+          <li><strong>Choose a suitable available voice.</strong> Use the book’s language. The voice list follows languages in your library or languages selected in Settings.</li>
+          <li><strong>Press play with the reading view open.</strong> Follow the current sentence and word highlight. Try a comfortable text size and pause whenever you want to inspect a passage.</li>
+          <li><strong>Try one short section first.</strong> If the moving highlight distracts you, try listening alone or reading quietly instead. There is no obligation to use both at once.</li>
         </ol>
-        <p>
-          There's no second edition to buy and no conversion step. The book
-          you already own <em>is</em> the audiobook, which is the same idea
-          behind{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            turning any book into an audiobook
-          </Link>
-          . The trade against Whispersync is honest in both directions: you
-          give up a human performance, and you gain every book you own.
-        </p>
-        <ComparisonTable
-          caption="Immersion reading with LoudReader compared to Kindle + Audible Whispersync"
-          columns={COMPARISON_COLUMNS}
-          rows={COMPARISON_ROWS}
-        />
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> runs on iPhone and iPad, and on Apple Silicon Macs as an iPad app. Word-following highlighting is free. {FREE_TIER.full} Speed adjustment is Premium. For choosing between tools, see <Link href="/blog/app-that-highlights-words-while-reading" className="text-loudBlue hover:underline">apps with spoken-word highlighting</Link>.</p>
       </QuestionSection>
-
-      <QuestionSection question="Does reading while listening actually improve comprehension?">
-        <p>
-          The research deserves a straight summary rather than a sales pitch.
-          For skilled adult readers,{" "}
-          <a
-            href="https://journals.sagepub.com/doi/10.1177/2158244016669550"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            Rogowsky, Calhoun and Tallal (2016)
-          </a>{" "}
-          gave the same non-fiction chapter to groups who read it, listened
-          to it, or did both, and found no significant comprehension
-          difference between any of them. For beginner language learners the
-          picture is brighter:{" "}
-          <a
-            href="https://www.sciencedirect.com/science/article/abs/pii/S0346251X15000846"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            Chang and Millett (2015)
-          </a>{" "}
-          followed 64 students for 26 weeks and found the
-          reading-while-listening group improved reading rates and
-          comprehension substantially more than the silent-reading group.
-        </p>
-        <p>
-          So the fair claim isn't &ldquo;doing both makes you remember
-          more&rdquo;. It's that doing both keeps you <em>reading</em>:
-          more focus, less re-reading, and for developing readers, real
-          measured gains. The fuller look at the modality research is in{" "}
-          <Link
-            href="/blog/is-listening-to-audiobooks-reading"
-            className="text-loudBlue hover:underline"
-          >
-            does listening to audiobooks count as reading
-          </Link>
-          .
-        </p>
+      <QuestionSection question="Can I do this with Kindle and Audible?">
+        <p>Audible now calls Whispersync for Voice <a href="https://www.audible.com/ep/read-listen" className="text-loudBlue hover:underline">Read &amp; Listen</a>. Supported ebook/audiobook pairs can show synchronised text in the Kindle or Audible app. You need both matching editions, and eligibility varies by title and marketplace. In Audible, look for the Read &amp; Listen badge and player toggle. Check eligibility before buying an additional edition; simply finding the same title in both stores is not enough.</p>
+        <p>That route is useful when you want the existing recording. A TTS reader instead narrates supported text you import, without requiring a matching commercial audiobook. Neither route unlocks DRM-protected files for import into another app.</p>
       </QuestionSection>
-
-      <QuestionSection question="How do you make the habit stick?">
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Start with fiction.</strong> A
-            novel&apos;s forward pull carries the habit while it forms; dense
-            non-fiction can come later.
-          </li>
-          <li>
-            <strong className="text-gray-900">Let the voice set the pace.</strong>{" "}
-            Resist the urge to read ahead of the highlight. The point is one
-            locked pace, not a race between channels.
-          </li>
-          <li>
-            <strong className="text-gray-900">Use it where you actually drift.</strong>{" "}
-            Evening reading when your eyes are tired, or study sessions where
-            attention frays. That's where the second channel earns its keep.
-          </li>
-        </ul>
+      <QuestionSection question="Will reading and listening together help me learn more?">
+        <p>It may suit your preferences, but a universal memory claim would go beyond the evidence. In <a href="https://journals.sagepub.com/doi/10.1177/2158244016669550" className="text-loudBlue hover:underline">Rogowsky, Calhoun and Tallal’s 2016 adult study</a>, the groups that read, listened, or did both did not differ significantly on comprehension and retention for the tested nonfiction material. That is one study, not a verdict for every learner or task.</p>
+        <p>Try a short reading goal: follow an argument, locate an unfamiliar word or finish a scene. Afterwards, check whether you can explain it and whether the method felt manageable. If study is the aim, leave time for notes and review. Moving your eyes with a highlight is not itself evidence that you understood the text.</p>
       </QuestionSection>
-
+      <QuestionSection question="What if the text and audio stop matching?">
+        <p>Pause and compare the visible sentence with what you heard. In a TTS reader, inspect import or OCR errors. With a separate recording, check the edition and whether chapters, footnotes or introductory material differ. Restart from a sentence you can identify in both rather than trying to catch a running voice.</p>
+        <p>For difficult phrasing, <Link href="/blog/slow-down-audiobook-speed" className="text-loudBlue hover:underline">reduce the speed briefly or pause</Link>. A clean source and an appropriate voice often matter more than finding a special read-along setting.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Immersion reading on any book you own"
-        subline="EPUB, PDF, or a free classic. Read along with synced word-by-word highlighting. Free, no account."
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

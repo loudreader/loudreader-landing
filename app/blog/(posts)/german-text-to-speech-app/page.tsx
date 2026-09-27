@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -8,126 +7,46 @@ import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
 import { FREE_TIER } from "@/components/money/site";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function GermanTextToSpeechAppArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
-          German EPUBs and PDFs aloud with one German narrator, Klaus. One
-          voice, not a roster to pick from, and it's worth saying that plainly
-          instead of implying a choice that isn't there. The narrator runs
-          entirely on your device, so it's fully on-device and private, your
-          library never leaves your device, and it works offline once you've
-          imported a book. Import any DRM-free German EPUB or PDF, or grab a
-          German classic from the 70,000+ free Project Gutenberg books built
-          into the app, and the voice shows up in the narrator picker once
-          your library has a German book in it. You can hear Klaus before you
-          install anything on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>
-          , where every narrator has a real audio sample.
-        </p>
+        <p>Klaus is LoudReader&apos;s German studio narrator. On devices that support studio voices, you can use him to listen to supported DRM-free German EPUBs and PDFs. Hear the browser sample on the <Link href="/voices" className="text-loudBlue hover:underline">voices page</Link>, then test a passage from your own book: a sample cannot establish how every name, abbreviation or specialised term will sound. German can be added to your reading languages in Settings; importing a German book is another way to make the language appear. Studio availability depends on the device, and continuing with Klaus after the initial voice allowance requires Premium. The app does not offer a choice of German regional accents.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="German text, read aloud, on your device."
-      />
-
-      <QuestionSection question="Does LoudReader actually speak German?">
-        <p>
-          Yes. LoudReader reads books aloud with natural offline voices, and
-          Klaus, the German narrator, is one of them. He&apos;s part of the
-          app&apos;s 10-language roster. Import a DRM-free German EPUB or PDF
-          and the app
-          reads it aloud, word by word, with the same import-and-play flow it
-          uses for English books. There's no separate German app or mode to
-          find. It's built into the same reader, and the narrator appears in
-          the voice picker automatically once your library has a
-          German-language book in it.
-        </p>
+      <ArticleIllustration variant="waveform" caption="Check the voice with the German material you actually want to hear." />
+      <QuestionSection question="How do you find the German narrator?">
+        <p>In <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>, the voice list reflects languages in your library and languages you select in Settings. Add German there if you want to inspect the available voices before importing a book. If Klaus is missing, check your device&apos;s studio-voice support as well as the language selection.</p>
+        <p>The app runs on iPhone and iPad, and its iPad build can run on compatible Apple Silicon Macs. That platform support does not mean every device exposes the same narrators. Use the in-app list to establish what is available on your hardware before purchasing for a particular voice.</p>
       </QuestionSection>
-
-      <QuestionSection question="How many German voices can I choose from?">
-        <p>
-          One. That's worth saying plainly rather than letting you assume
-          there's a lineup. English has 11 narrators and Spanish has 4, but
-          German, like French, Italian, Dutch, Polish, Portuguese, Swedish,
-          and Danish, ships with a single voice. If you want to hear exactly
-          what Klaus sounds like before you commit to anything, the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          has a real recorded sample, not a description. Listening beats
-          reading an adjective like "calm" or "clear" and hoping it matches
-          your ear.
-        </p>
+      <QuestionSection question="Is Klaus a standard, Austrian or Swiss German voice?">
+        <p>Klaus is listed as a German narrator, without a selectable regional-accent setting. There is one German studio voice. We do not label it as a substitute for every regional variety or an authoritative pronunciation model for an exam.</p>
+        <p>If accent is important, compare the sample with the speech you need to understand or produce. A course recording, dictionary audio or teacher can be a better reference for a particular pronunciation. Narration is useful for hearing a text repeatedly; it does not provide language coaching or correct your speaking.</p>
       </QuestionSection>
-
-      <QuestionSection question="Is it standard German, Austrian, or Swiss German?">
-        <p>
-          The app doesn't split that out as a setting. Klaus is labeled the
-          German narrator, full stop, with no toggle for regional accent. If
-          that distinction is important for your project, say studying for an
-          exam or proofing German copy by ear, the honest move
-          is to listen to the sample on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          and judge it against your own ear rather than assume either way.
-        </p>
+      <QuestionSection question="What should you test in a German book?">
+        <p>Use a paragraph containing the features that matter in your actual material. For a novel, that may be dialogue and character names. For a report, include abbreviations, dates and numbers. For a technical chapter, include the specialist vocabulary rather than testing only its introduction.</p>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Import the file and compare the first passage with the original.</li>
+          <li>Check that umlauts, ß and punctuation have survived extraction.</li>
+          <li>Listen for places where a name, abbreviation or long word needs checking.</li>
+          <li>Keep the original available for tables, figures and footnotes.</li>
+        </ol>
+        <p>A voice that suits one novel may be less useful for a specialist document. It is better to discover that in a short sample than halfway through a long listening session.</p>
       </QuestionSection>
-
-      <QuestionSection question="What can you actually import and listen to?">
-        <p>
-          LoudReader reads any DRM-free EPUB or PDF, in German or any of its
-          other languages. That covers books you already own as files,
-          documents you write yourself, and study material. It also has
-          70,000+ free Project Gutenberg books built in, including
-          German-language classics, so you can test the German voice on a real
-          book without hunting down your own file first. One concession worth
-          making here: LoudReader reads the text layer of a document. A PDF
-          that's really a scanned image of a printed page has no text for the
-          app to read, in German or anything else.
-        </p>
+      <QuestionSection question="Can you use scanned German PDFs or translated books?">
+        <p>LoudReader imports DRM-free EPUBs and PDFs. PDF import includes on-device text recognition for scans, but recognition errors can change spelling or reading order. Old typefaces, unclear scans and complex layouts need checking; a clean digital edition is often easier to use.</p>
+        <p>Selecting a German voice does not translate a book into German. Start with German text. Likewise, narration does not turn a chart into a spoken explanation of its meaning. Review any visually structured material separately.</p>
       </QuestionSection>
-
-      <QuestionSection question="What does the German voice cost?">
-        <p>
-          Try {FREE_TIER.trial}. After that, continuing with Klaus requires
-          Premium. Free users choose one keepable voice from the eligible
-          English lineup and retain unlimited listening, with no account or
-          word quota. Premium includes all 23 studio narrators across 10
-          languages, playback speed from 0.3x to 3.0x, a sleep timer,
-          soundscapes, and notes and highlights. Either way, the German
-          narrator itself never streams anything to a server. It runs on your
-          phone or Mac, so listening stays fully on-device and private, your
-          library never leaves your device. If you're learning German rather
-          than just reading it, our notes on{" "}
-          <Link
-            href="/blog/text-to-speech-for-esl-learners"
-            className="text-loudBlue hover:underline"
-          >
-            using text-to-speech to learn a language
-          </Link>{" "}
-          cover pacing and repetition tricks that apply here too.
-        </p>
+      <QuestionSection question="What does German narration cost, and does it work offline?">
+        <p>Try {FREE_TIER.trial}. Continuing with Klaus afterwards requires Premium; the ongoing free English voice selection is separate from German studio access. Speed adjustment from 0.3x to 3.0x also requires Premium. Check the current in-app price for your storefront.</p>
+        <p>Speech is generated on your device rather than by uploading the book for narration. Download or import the book and make sure the desired voice is available before testing offline playback. The app also has diagnostics and analytics, so local speech should not be confused with an app that never uses the network.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear the German narrator for yourself"
-        subline="One voice, real samples, no account needed to listen."
-      />
+      <StoreCta headline="Try German narration with a real passage" subline="Listen to the sample, then check Klaus on your device. German studio access requires Premium after the voice allowance." />
     </ArticleLayout>
   );
 }

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,154 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function HowManyBooksCanYouReadInAYearArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          The math is straightforward: a 30-minute-each-way commute gives you
-          5 hours of listening per week, about 260 hours per year. At 1x speed
-          with an average book running 9 hours, that is roughly 29 books. At
-          1.5x speed, your effective listening time jumps to about 390 hours,
-          or roughly 43 books. Add in chores, walks, and exercise, and the
-          number climbs further. This is rough math, not a promise, but it
-          shows how dead time adds up.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) turns any
-          DRM-free EPUB or PDF into an audiobook with natural offline voices,
-          fully on-device and private, your library never leaves your device.
-          Speed control from 0.3x to 3.0x is part of {PRICING.premiumMonthly}{" "}
-          Premium; the free tier gives you unlimited listening at normal speed.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="devices"
-        caption="260 hours a year from commuting alone. That is the math, not a stretch goal."
-      />
-
-      <QuestionSection question="How many books can you realistically listen to in a year?">
-        <p>
-          Let us work through the math. Start with the time you already have:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Commuting:</strong> 30 minutes
-            each way, 5 days a week, 50 weeks a year (accounting for
-            vacation). That is 250 hours.
-          </li>
-          <li>
-            <strong className="text-gray-900">Chores:</strong> cooking, cleaning,
-            laundry. Conservatively, 2 hours per week. Another 100 hours a year.
-          </li>
-          <li>
-            <strong className="text-gray-900">Exercise and walks:</strong> 3
-            hours per week. 150 hours a year.
-          </li>
-        </ul>
-        <p>
-          Total: 500 hours of listening time per year, from activities you are
-          already doing. At an average book length of 9 hours, that is about
-          55 books at 1x speed. At 1.5x, your effective time becomes 750
-          hours, or about 83 books. These are rough estimates. Your actual
-          numbers depend on your schedule, book lengths, and speed choices.
-          But the core insight holds: most people have 1 to 2 hours of usable
-          listening time every day without changing a single thing about their
-          routine.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How much does speed adjustment add?">
-        <p>
-          A lot. Going from 1x to 1.5x effectively gives you 50 percent more
-          reading time from the same real-world minutes. A 12-hour book becomes
-          an 8-hour listen. Over a year of 500 listening hours, that is the
-          difference between 55 books and 83 books. The trade is comprehension,
-          and the research on that is covered in our companion guide to{" "}
-          <Link
-            href="/blog/best-playback-speed-for-comprehension"
-            className="text-loudBlue hover:underline"
-          >
-            best playback speed for comprehension
-          </Link>
-          . For light fiction and familiar non-fiction, 1.5x is a free upgrade
-          that costs you almost nothing in understanding.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Where do people actually find the time?">
-        <p>
-          The trick is not adding new time. It is stacking books onto time
-          you already spend doing other things. Most people have 1 to 2 hours
-          per day where their body is busy but their mind is underutilized:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>The daily commute, whether driving or on transit</li>
-          <li>Walking the dog or going for a run</li>
-          <li>Cooking dinner and cleaning up after</li>
-          <li>Folding laundry or doing household chores</li>
-          <li>Waiting in lines, at appointments, or during errands</li>
-        </ul>
-        <p>
-          None of these require adding anything to your day. They just require
-          swapping the default (music, podcasts, silence) for a book. That
-          swap is where the math works. You do not need more hours. You need
-          to fill the hours you already have.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Is a book a week actually realistic?">
-        <p>
-          Math-wise, yes. A typical novel runs 8 to 12 audio hours. Nine hours
-          per week of listening gets you there. That is a 30-minute-each-way
-          commute plus one hour of weekend chores or walking. If you listen at
-          1.5x, a 9-hour book becomes 6 hours, and you only need 6 hours of
-          listening per week.
-        </p>
-        <p>
-          The harder part is not the math. It is finding books that hold your
-          attention, avoiding the temptation to scroll instead, and building
-          the habit. But the time is there, waiting to be filled. A book a
-          week is less about ambition and more about swapping audio sources.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What about the books that have no audiobook edition?">
-        <p>
-          The math above assumes every book you want exists as an audiobook.
-          It does not. Most books ever written were never recorded, including
-          backlist titles, niche non-fiction, self-published works, and the
-          EPUBs and PDFs already on your hard drive. A text-to-speech reader
-          like LoudReader closes that gap entirely. Import any DRM-free EPUB
-          or PDF and press play. Natural offline voices narrate it from start
-          to finish, fully on-device and private, your library never leaves
-          your device. Your entire library becomes available for your 500
-          annual hours, not just the fraction that got a studio recording.
-        </p>
-        <p>
-          The full walkthrough is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>Estimate from your own schedule, not an “average reader” target. Multiply usable listening minutes per week by the number of weeks you expect to listen, divide by sixty, then compare that time with the lengths of your chosen books. Playback speed changes the arithmetic, while pauses, rereading and missed sessions reduce the result. For example, 100 minutes a week over 46 weeks is about 77 hours. If the books you choose each take ten hours, that is capacity for roughly seven complete books, with time left over—not a promise.</p></Tldr>
+      <ArticleIllustration variant="devices" caption="Use your own minutes, weeks and book lengths." />
+      <QuestionSection question="How do you find a realistic weekly number?"><p>For one ordinary week, note when you actually listened and for how long. Include only time when you could follow the book. Do not count a full commute if half of it involved transfers, conversations or navigation. Avoid counting the same half-hour under both walking and commuting.</p><p>Use that total as a starting point, then choose how many weeks to plan for. Holidays, illness, deadlines and changing interests are normal. A plan with spare time is more useful than one requiring a perfect year.</p></QuestionSection>
+      <QuestionSection question="What is the calculation?"><p><strong>Annual hours = minutes per week × listening weeks ÷ 60.</strong> Then divide those hours by the normal-speed duration of the books you intend to read. For a mixed list, add their actual durations rather than assuming that every book has the same length.</p><ul className="list-disc pl-6 space-y-2"><li>100 minutes × 46 weeks ÷ 60 = 76.7 hours.</li><li>At ten hours per selected book, 76.7 ÷ 10 = 7.67 book-lengths.</li><li>At twenty hours per selected book, the same time is only 3.83 book-lengths.</li></ul><p>These ten- and twenty-hour lengths are chosen examples, not measured averages. Count complete books separately from spare hours, and leave room for repeating a chapter.</p></QuestionSection>
+      <QuestionSection question="How does playback speed change the estimate?"><p>For a fixed recording, listening time is approximately its listed duration divided by the speed multiplier. A twelve-hour recording at 1.5× takes eight hours before pauses. The reverse calculation is available time multiplied by speed, then divided by the book’s normal duration.</p><p>A higher speed does not guarantee that you understand the same amount in less time. If you pause and rewind more, the saving may disappear. TTS duration also varies with the voice and how the text is spoken, so a catalogue estimate is only a guide.</p></QuestionSection>
+      <QuestionSection question="What would a book a week require?"><p>First choose what “a book” means in this plan. One ten-hour book each week would require ten hours weekly at normal speed. A five-hour commute plus two one-hour weekend sessions totals seven hours, not ten. Choose shorter books, allow more time or set a lower target.</p><p>Short stories, poetry and long novels all deserve a place without becoming a contest over counts. You might prefer a minutes-per-week target or a list of a few books you care about finishing.</p></QuestionSection>
+      <QuestionSection question="How can you use this without turning reading into work?"><p>Review the estimate after a month. If you enjoyed the books but finished fewer than planned, adjust the plan. If you were playing audio without following it, reduce the pace or find a quieter slot. For practical habits, see <Link href="/blog/do-audiobooks-help-you-read-more" className="text-loudBlue hover:underline">whether audio helps you read more</Link>.</p><p>For supported ebooks in <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>, speed control from 0.3× to 3× is Premium. Use your real listening experience, not the maximum setting, in the calculation.</p><p>{FREE_TIER.full}</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your commute is hundreds of books waiting to happen"
-        subline="Natural offline voices, speed control, and unlimited free listening. Fill the time you already have."
-      />
+      <StoreCta headline="Make room for the books you choose" subline="Try a manageable session before setting an annual target." />
     </ArticleLayout>
   );
 }

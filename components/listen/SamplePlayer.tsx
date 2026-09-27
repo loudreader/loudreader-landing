@@ -79,7 +79,7 @@ export default function SamplePlayer({
           </p>
         ) : (
           <p className="mt-1 text-gray-400">
-            In the app the whole book reads like this, offline.
+            Preview the voice, then try your book in the app. Available voices depend on your device.
           </p>
         )}
       </div>

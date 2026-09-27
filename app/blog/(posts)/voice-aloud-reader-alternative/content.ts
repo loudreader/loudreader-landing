@@ -1,33 +1,31 @@
-import { FREE_TIER } from "@/components/money/site";
-
-// FACT PROVENANCE. All app-behavior claims verified against the LoudReader app
-// source (LoudReader_mac repo, main branch). Pricing and features from
-// components/money/site.ts (single source of truth).
-// @Voice Aloud Reader claims are based on publicly available information
-// about the app on the Google Play Store as of late 2026.
-// No invented stats, reviews, or testimonials.
+// FACT PROVENANCE — reviewed 2026-09-28, not a comparative listening test.
+// LoudReader shipping release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+// audited in docs/product-facts-2026-09-28.md:
+// SubscriptionAccess.swift and SubscriptionManager.swift: 8 cumulative listening
+// hours, limited free English voice selection thereafter; book listening stays free.
+// PaywallReason.swift: speed/timer/unlimited article saving are Premium;
+// notes/highlights are not Premium-only. ArticleImportPipeline + share extension:
+// direct saved-web-article workflow. BookImportService + PDFImportPipeline:
+// DRM-free EPUB/PDF, local OCR with layout/legibility limitations.
+// Xcode iOS target: iPad compatibility on Apple Silicon, no native macOS target.
+// App-group entitlement only: no automatic library or reading-position sync.
+// LoudReaderApp.swift and Analytics.swift: local narration plus Sentry diagnostics
+// and usage analytics. The opt-out control is hidden in release1.12; do not
+// promise a visible Settings toggle or call usage collection opt-in.
+// No independent network audit, universal voice-quality ranking or hands-on
+// competitor benchmark is claimed. Prices/features can vary by storefront.
+// Official competitor sources retrieved 2026-09-28:
+// - https://hyperionics.com/atvoice/index.asp — Android, supported inputs, free-with-ads and permanent Premium licence.
+// - https://hyperionics.com/atVoice/features/cloud-tts-voices-android.asp — installed engines and optional cloud voices.
+// - https://www.hyperionics.com/atvoice/AppFeatures.html — pronunciation, reading lists, bookmarks, sync and export formats; no LoudReader interoperability claimed.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
-  {
-    q: "Does LoudReader work on Android?",
-    a: "No. LoudReader runs on iPhone, iPad, and Apple Silicon Macs only. There is no Android version and no plans to build one. If you are on Android, @Voice Aloud Reader is a solid choice for offline EPUB and PDF reading with good customization options.",
-  },
-  {
-    q: "How is LoudReader different from @Voice Aloud Reader?",
-    a: "Both apps read EPUBs and PDFs offline with no account required. The biggest difference is platform: @Voice is Android-only, LoudReader is Apple-only. LoudReader also offers more modern on-device neural voices and a built-in catalog of 70,000+ free classic books from Project Gutenberg.",
-  },
-  {
-    q: "Can I transfer my @Voice files to LoudReader?",
-    a: "Yes, if your files are standard DRM-free EPUBs or PDFs. Just move them to your iPhone or Mac through AirDrop, iCloud, or any file transfer method, then import them into LoudReader.",
-  },
-  {
-    q: "Is there a LoudReader free tier like @Voice's free version?",
-    a: `Yes. LoudReader's free tier provides unlimited listening on every book, cover to cover, with no word quota, no time limit, and no account. ${FREE_TIER.full} Premium adds all 23 studio narrators, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, and notes and highlights.`,
-  },
-  {
-    q: "Does LoudReader read web pages like @Voice does?",
-    a: "LoudReader is built for books and focuses on EPUB and PDF. It does not read web pages directly. You can save a web article as PDF and import it, which gives you offline listening with your place saved. It is an extra step compared to @Voice's direct web reading.",
-  },
+  { q: "Can I use LoudReader on Android?", a: "No. LoudReader runs on iPhone and iPad, and as an iPad app on compatible Apple Silicon Macs. @Voice Aloud Reader is an Android app." },
+  { q: "Can I improve @Voice without changing reader?", a: "Often the first thing to try is a different installed TTS engine or voice. @Voice supports installed Android engines and optional cloud configurations; their costs and offline requirements can differ." },
+  { q: "Can LoudReader import my @Voice bookmarks?", a: "There is no automatic transfer of @Voice bookmarks, pronunciation rules or reading position. Import original DRM-free EPUB/PDF files and note your place before moving." },
+  { q: "Does LoudReader support articles as well as books?", a: "Yes. It saves web articles from links or the share extension and imports EPUB/PDF books. Free article saving has a 30-save allowance; Premium unlocks unlimited saving." },
+  { q: "What stays free in LoudReader?", a: `${FREE_TIER.full} Notes and highlights remain available without Premium. Controls such as adjustable speed and the sleep timer require Premium.` }
 ];

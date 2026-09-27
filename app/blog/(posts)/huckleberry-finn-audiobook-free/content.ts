@@ -1,51 +1,48 @@
-// FACT PROVENANCE. Every claim verified on 2026-08-24 against:
-//   - Book facts (author, public domain status, Gutenberg availability):
-//     data/gutenberg-catalog.json, entry slug "adventures-of-huckleberry-finn"
-//     (gutenberg_id 76, author Mark Twain, author_years 1835 to 1910). Same
-//     source that powers the /listen/adventures-of-huckleberry-finn page,
-//     so the facts here match that page exactly.
-//   - The "about 11.5 hours" listening estimate is LoudReader's own
-//     word-count-derived estimate for this title (listening_hours: 11.5 in
-//     the same catalog entry), stated as an estimate, not a measured
-//     duration of any other edition.
-//   - Rendered opening sample on /listen/adventures-of-huckleberry-finn:
-//     confirmed present via components/listen/catalog.ts bookSample()
-//     lookup for this slug.
-//   - LoudReader app claims: components/money/site.ts (single source of
-//     truth), every voice free for the first 8 hours, then one chosen voice
-//     with unlimited listening. Premium keeps all 23 studio narrators across 10 languages, playback speed 0.3x to
-//     3.0x, on-device processing (DIFFERENTIATORS.private), iPhone, iPad and Apple Silicon Macs, no account, imports EPUB/PDF, 70,000+ Gutenberg catalog
-//     built in.
-//   - No audio export: LoudReader generates narration live on-device and
-//     does not produce a downloadable MP3 file.
-// Claims you may NOT make until verified: any claim about how LibriVox's or
-// any other recorded version of this book sounds or compares in quality.
-// This article does not attempt to represent Huck's regional dialect
-// spellings as anything the synthetic voice performs differently; it states
-// plainly that one voice reads the whole text as written.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Read the previous page.tsx, content.ts and meta.json in full before revision.
+// Primary edition/catalog sources checked 2026-09-28:
+//   - https://www.gutenberg.org/ebooks/76
+//   - https://librivox.org/the-adventures-of-huckleberry-finn-by-mark-twain/
+//   - https://www.gutenberg.org/policy/permission.html
+//   - data/gutenberg-catalog.json: current catalogue entry adventures-of-huckleberry-finn,
+//     ebook 76. Listening hours, where used, are catalogue estimates,
+//     not measured audio runtimes. No comparative voice test was performed.
+//   - data/audio-samples.ts confirms the shipped opening sample lookup.
+//   - /listen/adventures-of-huckleberry-finn: catalogue/sample route, not a full audiobook.
+//   - https://www.gutenberg.org/cache/epub/76/pg76-images.html (text/contents checked).
+// Product facts: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0)
+// in the LoudReader app source, reviewed by the shared 2026-09-28
+// source audit (docs/product-facts-2026-09-28.md): SubscriptionAccess.swift,
+// SubscriptionManager.swift, VoiceRegistry.swift, PaywallReason.swift,
+// ProjectGutenbergService, ContentView.swift file importer, Xcode target configuration.
+// FREE_TIER imports the updated shared wording: eight cumulative listening hours,
+// then a free English voice selection (not any studio narrator), unlimited listening.
+// iPad compatibility on Apple Silicon is not a native Mac app; no device sync promise.
+// Local speech is not a claim of zero diagnostics, analytics or network use.
+// Edition and voice-selection advice is editorial guidance, not a tested superiority claim.
 
 import type { Faq } from "@/components/money/FaqSection";
 import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is there a free audiobook of Adventures of Huckleberry Finn?",
-    a: "Yes. Mark Twain's novel is in the public domain, so a free audiobook of the actual text is available with no purchase and no subscription. LoudReader has the full book in its built-in catalog and reads it aloud with a natural offline voice on the free tier, and you can hear the opening read aloud on the book's LoudReader page before installing anything.",
+    q: "Is there a free human audiobook of Huckleberry Finn?",
+    a: "Yes. LibriVox lists volunteer recordings of the book. Check the readers, edition and sample on the recording’s page before downloading.",
   },
   {
-    q: "Is the narration a real person or a synthetic voice?",
-    a: "It's a synthetic voice, not a professional narrator. LoudReader converts Twain's public-domain text into audio using an on-device text-to-speech voice. It reads the whole book, including Huck's vernacular narration, exactly as Twain wrote it, in one consistent voice rather than a dramatized performance with a different voice for each character. If a human reading matters to you, LibriVox may have a volunteer-narrated version worth checking.",
+    q: "Does LoudReader perform the dialect accurately?",
+    a: "Text-to-speech pronunciation of Twain’s unusual spellings can vary. Try dialogue passages with the text visible; we do not promise an accurate regional performance.",
   },
   {
-    q: "Does the synthetic voice handle Huck's dialect and spelling well?",
-    a: "It reads the text as written, including Twain's phonetic spellings for Huck's and Jim's speech. A synthetic voice doesn't perform a regional accent the way a human narrator might, but it does read every word of the actual text rather than a simplified or modernized version.",
+    q: "Is the original suitable for children without preparation?",
+    a: "The original includes racist language, slavery and violence. Review the edition and recording before shared listening; an unadapted text is not automatically softened for a younger audience.",
   },
   {
-    q: "Do I need an account or subscription to listen?",
-    a: `No. ${FREE_TIER.full} Adventures of Huckleberry Finn is already in the app's built-in Project Gutenberg catalog of 70,000+ books, so there's no file to find or convert.`,
+    q: "How long is the reading?",
+    a: "The catalogue’s approximately 11.5 hours is a word-count estimate. A chosen voice, recording and playback speed may give a different runtime.",
   },
   {
-    q: "How long is the audiobook?",
-    a: "LoudReader's own estimate, based on the book's word count, is about 11.5 hours at normal speed. That's an estimate for this synthetic reading, not a measured runtime of any other version, and Premium's speed control (0.3x to 3.0x) changes it either direction.",
+    q: "Is unlimited listening free?",
+    a: FREE_TIER.full,
   },
 ];

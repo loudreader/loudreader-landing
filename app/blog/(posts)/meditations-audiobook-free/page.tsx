@@ -1,144 +1,37 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function MeditationsAudiobookFreeArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Meditations is public domain, and Project Gutenberg hosts an
-          English translation of Marcus Aurelius&apos;s private notebook, so
-          it's free to listen to with no purchase and no subscription.
-          LoudReader has the full text built into its catalog: open{" "}
-          <Link href="/listen/meditations" className="text-loudBlue hover:underline">
-            its LoudReader page
-          </Link>{" "}
-          to hear the opening read aloud right now, free, no account. One
-          honest note up front: this is a synthetic voice reading the
-          public-domain English text, not a performed audiobook with a
-          narrator's dramatic pacing. That actually suits the material.
-          Meditations has no plot, so a steady, even reading works well for
-          dipping in on a walk or a commute. Free tier listening is
-          unlimited, and LoudReader is fully on-device and private, your
-          library never leaves your device. Since the book is already in
-          the built-in Project Gutenberg catalog, there's no file to import
-          and no connection required.
-        </p>
+        <p>A free English reading of <em>Meditations</em> is a reading of a particular translation, not a single definitive version of Marcus Aurelius. LoudReader’s catalogue points to <a href="https://www.gutenberg.org/ebooks/2680" className="text-loudBlue hover:underline">Project Gutenberg ebook #2680</a>. Its notes identify <strong>Meric Casaubon’s translation</strong>; it is not the George Long translation or a recent English edition. You can hear a generated-voice sample on the <Link href="/listen/meditations" className="text-loudBlue hover:underline">LoudReader book page</Link>. Start by checking whether this older English wording suits you. If you already own another supported, DRM-free edition, you can use that instead.</p>
+        <Disclosure />
       </Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="A short section, a pause and the text beside you: one way to listen to Meditations." />
+      <QuestionSection question="Which translation is the free text?"><p>The notes in <a href="https://www.gutenberg.org/ebooks/2680" className="text-loudBlue hover:underline">Gutenberg #2680</a> describe a text prepared from editions of Casaubon’s translation. Its older forms of English are part of that choice of text. A different translation may express the same passage differently, so check the translator when a familiar quotation does not match what you hear.</p><p>The antiquity of Marcus Aurelius’s writing does not make every modern English translation free. Gutenberg lists #2680 as public domain in the USA; check the edition’s status in your country. For a recording elsewhere, check both the translator credit and the reader rather than relying on the title alone.</p></QuestionSection>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Short entries, read aloud, easy to drop into anywhere."
-      />
+      <QuestionSection question="Where should you begin listening?"><p>This ebook contains an introduction, twelve books, an appendix, notes and a glossary. If you want to begin with Marcus’s reflections, use the contents to find Book I rather than assuming the first audio is the main work. You can return to the introductory material when you want more context.</p><p>A useful first session is one short section followed by a pause. Put the point into your own words and check the text if an old expression is unclear. You do not have to finish a whole book in one sitting, and there is no benefit in increasing speed merely to reach the end.</p></QuestionSection>
 
-      <QuestionSection question="What does the Meditations audiobook actually sound like?">
-        <p>
-          The fastest way to answer that is to listen. LoudReader&apos;s
-          catalog page for the book has a rendered sample of the real
-          opening, in the same voice you&apos;d hear in the app.{" "}
-          <Link href="/listen/meditations" className="text-loudBlue hover:underline">
-            Play the sample
-          </Link>{" "}
-          before deciding whether it's for you.
-        </p>
-        <p>
-          It's a natural offline voice reading the public-domain English
-          translation of Marcus Aurelius&apos;s notes to himself, clearly and
-          at a steady pace. There's no dialogue or cast of characters here,
-          just one voice moving through short, self-contained entries, so
-          the flat, even delivery isn't a limitation the way it might be for
-          a novel; it's closer to how the book was actually meant to be
-          read.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Does the lack of a plot make it effortless to follow?"><p>No. Short reflections can still make demanding arguments. Missing a sentence may change how you understand the next one. Treat listening as a way to return to the ideas, not background sound that guarantees comprehension.</p><ul className="list-disc pl-6 space-y-2"><li>Keep the book and section reference when a passage interests you.</li><li>Replay a complete section before isolating a sentence as a quotation.</li><li>When wording is obscure, read it on screen or compare another translation you can access. A different voice cannot remove difficulty in the source text.</li></ul><p>For notes shared with a reading group, include the translator’s name. That gives others a chance to find your passage even when their wording and section divisions differ.</p></QuestionSection>
 
-      <QuestionSection question="How do you listen to it free right now?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Play the sample on{" "}
-            <Link href="/listen/meditations" className="text-loudBlue hover:underline">
-              the book's catalog page
-            </Link>{" "}
-            to hear the voice first.
-          </li>
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            for iPhone, iPad, and Mac. Free, no account.
-          </li>
-          <li>
-            Search Meditations in the app&apos;s built-in Project Gutenberg
-            catalog. It's already there, nothing to import or convert.
-          </li>
-          <li>
-            Press play. {FREE_TIER.full}
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="How do you prepare a local reading in LoudReader?"><ol className="list-decimal pl-6 space-y-2"><li>Install LoudReader on iPhone or iPad; compatible Apple Silicon Macs can run the iPad build.</li><li>While connected, download Meditations from the Gutenberg catalogue and finish any required voice download.</li><li>Open the contents and choose the section you want. Play a short passage before taking the book offline.</li><li>If you prefer another legally obtained DRM-free EPUB, import it and check the translator credit and contents after import.</li></ol><p>{FREE_TIER.full} Premium includes speed control and the sleep timer. The <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">ebook-to-speech guide</Link> covers the same preparation for other supported books.</p></QuestionSection>
 
-      <QuestionSection question="Is Meditations a good book to listen to instead of read?">
-        <p>
-          Yes, arguably better suited to listening than most books.
-          Meditations has no plot and no characters to track, so there's
-          nothing to lose by drifting in and out of attention the way you
-          might on a walk or a commute. Marcus Aurelius wrote these notes for
-          himself, not for an audience, coaching himself toward patience and
-          steadiness in the middle of running an empire. You can start
-          anywhere, skip around, and come back later without losing your
-          place in a story, because there isn't one.
-        </p>
-        <p>
-          For more on listening to classic public-domain works like this
-          one, see{" "}
-          <Link
-            href="/blog/best-audiobook-app-for-classics"
-            className="text-loudBlue hover:underline"
-          >
-            the best audiobook app for classics
-          </Link>
-          . This page is about this one book specifically: pressing play on
-          it today.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What do you give up compared to a professionally narrated version?">
-        <p>
-          Worth saying plainly: a synthetic voice doesn&apos;t bring
-          interpretive weight to a passage the way an experienced narrator
-          might, choosing where to pause for effect on a particularly sharp
-          line. What you get instead is the whole text, available instantly,
-          with no purchase and no waiting on a library hold. Premium adds
-          playback speed from 0.3x to 3.0x, useful for slowing down a dense
-          passage or moving quickly through entries you've read before.
-        </p>
-      </QuestionSection>
-
+      <QuestionSection question="Should you choose a synthetic or human reading?"><p>Try a passage that you find difficult on the page. A recorded reader’s phrasing may help, while generated speech gives you a reading of your chosen ebook with a selected voice. Pronunciation, pauses and your tolerance for the sound matter more than a general claim that philosophy suits one kind of narrator.</p><p>A total runtime is less useful here than a repeatable session you actually follow. Front matter and notes can also account for a substantial difference between editions. Check what is included before treating two durations as a comparison of reading speed.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear Meditations read aloud, free"
-        subline="The full text is already in LoudReader's catalog. Press play, no download, no account."
-      />
+      <StoreCta headline="Try the ebook with a voice you choose" subline="Download the book and voice first, then listen on your device." />
     </ArticleLayout>
   );
 }

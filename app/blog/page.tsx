@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { formatArticleDate, getAllArticles, type ArticleMeta } from "@/components/blog/articles";
+import { ARTICLE_TOPICS, formatArticleDate, getAllArticles, type ArticleMeta } from "@/components/blog/articles";
 import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 
 export const metadata: Metadata = {
@@ -29,6 +29,11 @@ export default function BlogIndexPage() {
     .filter((article) => article.kind === "release")
     .sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)));
   const guides = articles.filter((article) => article.kind !== "release");
+  const topics = Object.entries(ARTICLE_TOPICS).map(([id, title]) => ({
+    id,
+    title,
+    articles: guides.filter((article) => (article.topic ?? "reading") === id),
+  })).filter((topic) => topic.articles.length > 0);
   const startingPoints = [
     "on-device-text-to-speech-explained",
     "best-local-ai-apps-mac",
@@ -83,10 +88,22 @@ export default function BlogIndexPage() {
 
       <section aria-labelledby="guides" className="flex flex-col gap-5">
         <h2 id="guides" className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900">Listening & building guides</h2>
-        <div className="flex flex-col gap-4">
-          {guides.map((article) => <ArticleCard key={article.slug} article={article} />)}
-        </div>
+        <nav aria-label="Article topics" className="flex flex-wrap gap-3">
+          {topics.map((topic) => (
+            <a key={topic.id} href={`#topic-${topic.id}`} className="rounded-full border border-gray-200 px-4 py-2 text-sm text-gray-700 hover:border-loudBlue hover:text-loudBlue">
+              {topic.title} <span className="text-gray-400">({topic.articles.length})</span>
+            </a>
+          ))}
+        </nav>
       </section>
+      {topics.map((topic) => (
+        <section key={topic.id} aria-labelledby={`topic-${topic.id}`} className="flex flex-col gap-5">
+          <h2 id={`topic-${topic.id}`} className="scroll-mt-8 text-2xl md:text-3xl font-bold tracking-tight text-gray-900">{topic.title}</h2>
+          <div className="flex flex-col gap-4">
+            {topic.articles.map((article) => <ArticleCard key={article.slug} article={article} />)}
+          </div>
+        </section>
+      ))}
     </MoneyPageLayout>
   );
 }

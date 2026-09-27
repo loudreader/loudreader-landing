@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,166 +6,83 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ListenToMediumArticlesArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Medium has no built-in text-to-speech button for articles. A few
-          authors record their own narrations, and those articles show a Listen
-          button at the top. For every other Medium article, the path is: open
-          it in Safari, activate Reader view to strip the Medium interface,
-          export as PDF, and import into <strong>LoudReader</strong> (iPhone, iPad, and Mac). LoudReader reads the article aloud with natural
-          offline voices, remembers your place, and works offline. It is fully
-          on-device and private, your library never leaves your device. If the
-          article is behind Medium&apos;s member paywall, you need an active
-          membership and you must be logged in when you export. Otherwise the
-          PDF captures the paywall preview, not the full text.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Safari Reader strips the noise. LoudReader reads the article. The paywall still applies."
-      />
-
-      <QuestionSection question="Does Medium let me listen to articles?">
-        <p>
-          It depends on the author. In 2020, Medium added the ability for
-          writers to record audio narrations of their own articles. When an
-          author does this, a Listen button appears at the top of the article
-          page, and you can play the recording in the browser or the Medium
-          app. The quality depends on the author&apos;s recording setup. It is
-          a human reading, not TTS.
-        </p>
-        <p>
-          For the vast majority of Medium articles, there is no Listen button
-          because the author did not record one. Medium does not automatically
-          generate audio from article text. If you want to hear those articles,
-          you need to bring your own text-to-speech tool.
-        </p>
+      <Tldr><p>
+        Medium already has a Listen feature: its current help page describes
+        computer-generated narration for English stories, available with an
+        active membership. Try that first if you want to stay inside Medium.
+        LoudReader is another route when you want to keep a local reading
+        copy: try importing the article link, or save a readable PDF from
+        your browser and import that. Neither route bypasses a paywall, and
+        a successful import should be checked for missing paragraphs.
+      </p><p className="text-sm">We make LoudReader. Medium’s own audio may be all you need.</p></Tldr>
+      <ArticleIllustration variant="waveform" caption="Use Medium’s player, or prepare a local article copy for another reader." />
+      <QuestionSection question="How do I use Medium’s own Listen button?">
+        <p>Look for Listen near the story title in the browser or app. Medium
+        provides voice and playback-speed controls. If the button is missing,
+        check your membership and the story’s language; the help page currently
+        specifies English. <a href="https://help.medium.com/hc/en-us/articles/4635049283351-About-audio" className="text-loudBlue hover:underline">Medium’s audio instructions</a>{" "}
+        are the source for current availability.</p>
+        <p>That is the shortest route for someone already reading within
+        Medium. You avoid maintaining a second copy, and you can return to the
+        original page for links, comments and any later corrections.</p>
       </QuestionSection>
-
-      <QuestionSection question="How do I listen to a Medium article step by step?">
-        <p>
-          The workflow takes about 30 seconds per article once you know the
-          steps:
-        </p>
+      <QuestionSection question="Can I send a Medium link to LoudReader?">
+        <p>LoudReader has a <strong>Paste a Link</strong> option and a share
+        extension. Try the article URL while online, then open the imported
+        text and compare its beginning and ending with the original. This
+        uses the ordinary web-article importer, not a dedicated Medium
+        integration.</p>
+        <p>An article that is readable in your signed-in browser may not be
+        readable by a separate downloader. A paywall, a sign-in requirement,
+        or a page that requires JavaScript can leave only a preview or cause
+        an import error. Do not assume that sharing the URL also shares your
+        browser’s membership session.</p>
+      </QuestionSection>
+      <QuestionSection question="When is a PDF a better fallback?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Open the article in Safari.</strong>{" "}
-            Use Safari on iPhone or Mac rather than the Medium app. If the
-            article requires a Medium membership, make sure you are logged
-            into your Medium account in Safari.
-          </li>
-          <li>
-            <strong className="text-gray-900">Activate Reader view.</strong>{" "}
-            Tap or click the Reader button in Safari&apos;s address bar.
-            Reader view strips the Medium clap button, the sidebar, the
-            &quot;Keep reading&quot; prompts, and the footer. You get a clean
-            page with just the title and the article text.
-          </li>
-          <li>
-            <strong className="text-gray-900">Export as PDF.</strong> On Mac:
-            File then Export as PDF. On iPhone: tap the share button, find
-            Print, pinch outward on the preview to open it as a PDF, then
-            save it to Files or share it directly to LoudReader.
-          </li>
-          <li>
-            <strong className="text-gray-900">Import into LoudReader.</strong>{" "}
-            Open LoudReader, tap the import button, find the PDF, and press
-            play. The app reads the article aloud from headline to final
-            paragraph.
-          </li>
+          <li>Open the story in your browser with the access your account provides.</li>
+          <li>If Reader view is available, use it to reduce page furniture.</li>
+          <li>Use the browser’s print or PDF export command. Inspect the preview and saved file: check that the ending is present.</li>
+          <li>Import the PDF into <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> and play a short passage.</li>
         </ol>
-        <p>
-          For more on the import workflow, see{" "}
-          <Link
-            href="/listen-to-pdf-iphone"
-            className="text-loudBlue hover:underline"
-          >
-            listening to PDFs on iPhone
-          </Link>
-          .
-        </p>
+        <p>A PDF can preserve content already available to you, but it is
+        still an extraction of a page. It may contain duplicated pull quotes,
+        newsletter prompts, page numbers or missing embeds. If the saved
+        file contains only a preview, the narrator cannot recover the rest.</p>
+        <p>The <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">PDF import guide</Link>{" "}
+        covers listening on iPhone. The same app is available for iPad and
+        runs as an iPad app on compatible Apple Silicon Macs.</p>
       </QuestionSection>
-
-      <QuestionSection question="What about Medium's member paywall?">
-        <p>
-          Medium lets non-members read a limited number of articles per month
-          for free. After that, articles show a truncated preview and a
-          &quot;Keep reading with a Medium membership&quot; prompt. When you
-          export the page as PDF, the PDF captures whatever is visible on the
-          screen. If you are a member and logged in, the PDF contains the full
-          article. If you are not a member, the PDF contains the paywall
-          preview.
-        </p>
-        <p>
-          LoudReader does not bypass the paywall. It reads the PDF you give it.
-          There is no Medium integration, no special access, and no workaround.
-          If the content matters to you, a Medium membership gives you the
-          articles plus the ability to capture them as full-text PDFs for
-          listening.
-        </p>
+      <QuestionSection question="What should I check before listening away from the screen?">
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Completeness:</strong> compare a paragraph near the middle and the last paragraph, not just the headline.</li>
+          <li><strong>Visual arguments:</strong> open charts, screenshots and code examples separately. Extracted captions are not full image descriptions.</li>
+          <li><strong>Duplicate passages:</strong> a pull quote can repeat a sentence already present in the body.</li>
+          <li><strong>Freshness:</strong> an imported copy does not update when the writer edits the story.</li>
+        </ul>
+        <p>Keep the source URL with any research notes. If a claim matters,
+        follow the author’s references from the live page rather than treating
+        a spoken copy as a complete research record.</p>
       </QuestionSection>
-
-      <QuestionSection question="Can I queue up a week's worth of Medium articles?">
-        <p>
-          Yes, and the queue is a folder of PDFs. Here is a workflow that works
-          well for people who follow a lot of Medium writers:
-        </p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            During the week, use Medium&apos;s bookmark feature to save
-            articles you want to read later.
-          </li>
-          <li>
-            Once or twice a week, open your saved articles, export each one
-            as a PDF from Safari Reader, and save them to a dedicated folder.
-          </li>
-          <li>
-            Import the folder into LoudReader. The app lists the PDFs in its
-            library, and you can play them in any order. Each one remembers
-            its own playback position.
-          </li>
-          <li>
-            Listen through the queue during commutes, walks, or chores.
-            Delete each PDF from LoudReader when you are done, or keep them
-            as a reference archive.
-          </li>
-        </ol>
-        <p>
-          This is a manual queue. It is not automatic and it takes a few
-          minutes of prep per batch. But it keeps your reading fully offline
-          and private. LoudReader is fully on-device and private, your library
-          never leaves your device. No service knows which articles you saved
-          or how much of each one you listened to.
-        </p>
-        <p>
-          If you listen to books this way too, the{" "}
-          <Link
-            href="/blog/listen-to-books-while-driving"
-            className="text-loudBlue hover:underline"
-          >
-            guide to listening while driving
-          </Link>{" "}
-          covers the playback side in more detail.
-        </p>
+      <QuestionSection question="Can I keep an offline article queue?">
+        <p>Save a small set of articles and test the chosen voice without a
+        connection before travelling. LoudReader synthesises speech locally;
+        fetching new links still requires internet access. Article saving has
+        a free allowance, while unlimited article saving requires Premium.</p>
+        <p>Local narration also does not mean that every part of the app is
+        network-free: LoudReader includes diagnostics and usage analytics.
+        Browser access and the publisher’s own services are separate from
+        the local reading copy. See the <Link href="/blog/listen-to-web-pages-aloud-mac" className="text-loudBlue hover:underline">Mac web-reading workflow</Link>{" "}
+        for the broader choice between a browser and a saved library.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your Medium reading list, out loud"
-        subline="Export articles as PDFs, import into LoudReader, and listen offline with natural voices. No account needed."
-      />
+      <StoreCta headline="Try your own document in LoudReader" subline="Import a supported file and check a short passage before a longer listening session." />
     </ArticleLayout>
   );
 }

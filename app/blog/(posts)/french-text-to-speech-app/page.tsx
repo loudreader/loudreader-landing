@@ -19,115 +19,101 @@ export default function FrenchTextToSpeechAppArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads
-          French EPUBs and PDFs aloud with one French narrator, Antoine. One
-          voice, not a roster to pick from, and it's worth saying that plainly
-          instead of implying a choice that isn't there. The narrator runs
-          entirely on your device, so it's fully on-device and private, your
-          library never leaves your device, and it works offline once you've
-          imported a book. Import any DRM-free French EPUB or PDF, or grab a
-          French classic from the 70,000+ free Project Gutenberg books built
-          into the app, and the voice shows up in the narrator picker once
-          your library has a French book in it. You can hear Antoine before
-          you install anything on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>
-          , where every narrator has a real audio sample.
+          LoudReader reads French books and documents aloud with Antoine, its
+          French studio narrator. Start with the <Link href="/voices" className="text-loudBlue hover:underline">voice sample</Link>,
+          then try a page from the material you actually want to hear: a novel,
+          a university handout or your own writing. The app offers one French
+          studio voice and no regional-accent selector. Studio voice availability depends on your device. French narration is
+          available during the voice trial and requires Premium afterwards.
+          LoudReader runs on iPhone and iPad; its iPad build also runs on
+          compatible Apple Silicon Macs. Speech is generated locally and can
+          work offline after the book and required voice resources are ready.
         </p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="French text, read aloud, on your device."
-      />
+      <ArticleIllustration variant="waveform" caption="Test a French passage you know before committing to a whole book." />
 
-      <QuestionSection question="Does LoudReader actually speak French?">
+      <QuestionSection question="How do I find the French narrator?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Import a DRM-free French EPUB or PDF you have permission to use.</li>
+          <li>Open the narrator picker and look for Antoine. A French-language book in your library makes the French narrator available.</li>
+          <li>If the voice is missing, open Settings → Languages You Read and mark French. You can do this before importing a book, too.</li>
+          <li>Select Antoine and play a short passage while following the text.</li>
+        </ol>
         <p>
-          Yes. LoudReader reads books aloud with natural offline voices, and
-          Antoine, the French narrator, is one of them. He&apos;s part of the
-          app&apos;s 10-language roster. Import a DRM-free French EPUB or PDF
-          and the app
-          reads it aloud, word by word, with the same import-and-play flow it
-          uses for English books. There's no separate French app or mode to
-          find. It's built into the same reader, and the narrator appears in
-          the voice picker automatically once your library has a
-          French-language book in it.
+          Adding French to the list makes the narrator visible; it does not
+          unlock Premium or translate an English book. For the broader list of
+          supported languages, see <Link href="/voices" className="text-loudBlue hover:underline">all narrators and samples</Link>.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How many French voices can I choose from?">
+      <QuestionSection question="What should I listen for in a French sample?">
         <p>
-          One. That's worth saying plainly rather than letting you assume
-          there's a lineup. English has 11 narrators and Spanish has 4, but
-          French, like German, Italian, Dutch, Polish, Portuguese, Swedish,
-          and Danish, ships with a single voice. If you want to hear exactly
-          what Antoine sounds like before you commit to anything, the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          has a real recorded sample, not a description. Listening beats
-          reading an adjective like "measured" or "clear" and hoping it
-          matches your ear.
+          Use two different passages. Choose a straightforward paragraph first,
+          then a trickier one with dialogue, names, dates or abbreviations. Check
+          whether pauses follow the meaning, whether recurring names remain
+          understandable and whether you can follow a few minutes comfortably.
+          A pleasant opening sentence cannot tell you how a narrator will handle
+          the rest of your document.
+        </p>
+        <p>
+          If you are learning French, compare unfamiliar pronunciations with
+          audio from your course or a trusted dictionary. Synthetic narration
+          is useful for replaying material, but it should not be your only
+          pronunciation reference. Our <Link href="/blog/text-to-speech-for-esl-learners" className="text-loudBlue hover:underline">language-learning listening routine</Link>
+          {' '}suggests ways to alternate listening and reading without treating
+          faster playback as the goal.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Is it Parisian French, Quebecois, or Belgian French?">
+      <QuestionSection question="Can I choose French from France, Quebec or Belgium?">
         <p>
-          The app doesn't split that out as a setting. Antoine is labeled the
-          French narrator, full stop, with no toggle for regional accent. If
-          that distinction is important for your project, say studying for an
-          exam or proofing French copy by ear, the honest move
-          is to listen to the sample on the{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            voices page
-          </Link>{" "}
-          and judge it against your own ear rather than assume either way.
+          Antoine is listed as a French narrator; the app does not offer a
+          France, Quebec or Belgium switch. Listen to the sample and your own
+          test passage before relying on it for a regional pronunciation task.
+          If matching a particular variety is essential, choose a service or
+          recorded source that explicitly identifies that variety and audition
+          it with the same passage.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What can you actually import and listen to?">
+      <QuestionSection question="Will it read a scanned French PDF?">
         <p>
-          LoudReader reads any DRM-free EPUB or PDF, in French or any of its
-          other languages. That covers books you already own as files,
-          documents you write yourself, and study material. It also has
-          70,000+ free Project Gutenberg books built in, including
-          French-language classics, so you can test the French voice on a real
-          book without hunting down your own file first. One concession worth
-          making here: LoudReader reads the text layer of a document. A PDF
-          that's really a scanned image of a printed page has no text for the
-          app to read, in French or anything else.
+          The current app can use on-device optical character recognition
+          (OCR) to extract text from scanned PDF pages. Prefer a clean EPUB or
+          selectable-text PDF when you have one: a scan can introduce missing
+          accents, joined words or a confusing reading order. Before a long
+          listen, compare the imported text with a page containing accents,
+          apostrophes and any footnotes. Read import warnings about incomplete
+          recognition rather than assuming every page was recovered.
+        </p>
+        <p>
+          If the displayed text is wrong, that is an import problem to resolve
+          before judging the narrator. If the displayed text is correct but the
+          spoken result is awkward, test another sentence containing the same
+          word. LoudReader does not remove DRM from protected ebooks.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What does the French voice cost?">
+      <QuestionSection question="What does French listening cost, and what works offline?">
         <p>
-          Try {FREE_TIER.trial}. After that, continuing with Antoine requires
-          Premium. Free users choose one keepable voice from the eligible
-          English lineup and retain unlimited listening, with no account or
-          word quota. Premium includes all 23 studio narrators across 10
-          languages, playback speed from 0.3x to 3.0x, a sleep timer,
-          soundscapes, and notes and highlights. Either way, the French
-          narrator itself never streams anything to a server. It runs on your
-          phone or Mac, so listening stays fully on-device and private, your
-          library never leaves your device. If you're learning French rather
-          than just reading it, our notes on{" "}
-          <Link
-            href="/blog/text-to-speech-for-esl-learners"
-            className="text-loudBlue hover:underline"
-          >
-            using text-to-speech to learn a language
-          </Link>{" "}
-          cover pacing and repetition tricks that apply here too.
+          {FREE_TIER.full} Continuing with Antoine after the trial requires
+          Premium. Premium also includes adjustable playback speed, the sleep
+          timer and ambient soundscapes; notes and highlights do not require
+          Premium. Check the in-app offer for pricing in your storefront.
+        </p>
+        <p>
+          Download your material and finish voice setup while connected, then
+          test a chapter offline before travelling. Local speech processing is
+          separate from app diagnostics and analytics, which the app also uses.
+          It is not a promise that every app feature makes no network requests.
+          The <Link href="/" className="text-loudBlue hover:underline">LoudReader overview</Link>
+          {' '}covers the reader beyond French narration.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear the French narrator for yourself"
-        subline="One voice, real samples, no account needed to listen."
-      />
+      <StoreCta headline="Try French narration with your own text" subline="Hear Antoine first, then test a page from the book you want to read." />
     </ArticleLayout>
   );
 }

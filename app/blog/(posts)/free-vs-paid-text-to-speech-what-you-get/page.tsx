@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,7 +6,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING, VOICES } from "@/components/money/site";
+import { FREE_TIER, PRICING } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,114 +18,109 @@ export default function FreeVsPaidTextToSpeechArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          LoudReader&apos;s free tier is genuinely unlimited on listening
-          time: {PRICING.free} The line sits on voices, not on words or
-          chapters. Every free user gets an eight hour, one-time trial of all
-          23 studio narrators, counted as cumulative listening and not tied
-          to a calendar day. After those eight hours, the app settles you
-          onto {VOICES.free}, permanently, at no cost. Finish your first book
-          and you get a one-time 3 hour bonus of all-voice listening as a
-          thank-you, no review required. LoudReader Premium adds{" "}
-          {PRICING.premiumFeatures}. It costs {PRICING.premiumMonthly},{" "}
-          {PRICING.premiumYearly}, or {PRICING.premiumLifetime}. There is no
-          middle tier and no word quota hiding behind the free label.
+          LoudReader&apos;s free plan can read a whole imported book; paying
+          changes your choice of voices and controls. {FREE_TIER.full}
+          Premium adds {PRICING.premiumFeatures}. Notes, highlights and normal
+          background listening are not Premium-only features. This guide is
+          specifically about LoudReader, rather than a promise that every
+          text-to-speech app divides its plans the same way.
         </p>
       </Tldr>
+      <ArticleIllustration variant="waveform" caption="Separate access to your books from the voices and controls used to read them." />
 
-      <ArticleIllustration
-        variant="waveform"
-        caption="Free plays the whole book. Premium is about voices, speed, and extras."
-      />
-
-      <QuestionSection question="What can you actually do on the free tier?">
+      <QuestionSection question="What can you do on the permanent free plan?">
         <p>
-          Everything that matters for finishing a book. LoudReader&apos;s
-          free tier plays a book start to finish with no word count and no
-          chapter cap, because {PRICING.free} You can import as many EPUBs
-          and PDFs as you want, on your Mac or your iPhone, and none of them
-          are locked partway through waiting for a subscription. If you have
-          ever hit a text-to-speech app that reads the first few pages and
-          then stops, that is not how LoudReader&apos;s free tier works.{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            Download it from the App Store
-          </a>{" "}
-          and you can test every claim in this article in a few minutes.
+          Import DRM-free EPUBs and PDFs and listen through to the end. There
+          is no chapter paywall or word quota on book listening. The app saves
+          your reading position on the device where you are reading, and can
+          continue playback in the background. It does not automatically sync
+          your library or position between devices.
+        </p>
+        <p>
+          Ordinary word-following highlighting, notes and highlights do not
+          require Premium. Some ways of adding content do have separate
+          limits: free users can save up to 30 articles and use bulk import
+          five times. That is a limit on batch-import actions, not a cap of
+          five books in your library. Individual book imports remain unrestricted.
+        </p>
+        <p>
+          LoudReader is an iPhone and iPad app; compatible Apple Silicon Macs
+          run the iPad version. Try it with your own files on the device you
+          plan to use, particularly if a PDF has columns, scans or tables.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Where does the free tier actually stop?">
+      <QuestionSection question="How does the eight-hour voice allowance work?">
         <p>
-          Voice variety. Every free user starts with an eight hour trial of
-          all 23 studio narrators across 10 languages, and that number is
-          cumulative listening time, not a daily allowance and not a
-          calendar window. You can spread it across a week or burn through it
-          in a weekend. Once you have listened for eight hours total, the app
-          moves you onto {VOICES.free}. You keep it forever, and it keeps
-          reading everything you import, but the other 22 narrators go behind
-          Premium.
+          The allowance counts cumulative listening, rather than eight hours
+          from installation or eight hours every month. It lets you try every
+          voice available on your device. The advertised studio roster is 23
+          narrators across 10 languages, but hardware affects availability.
         </p>
         <p>
-          There is one small, honest sweetener: finish your first book on
-          LoudReader and you get a one-time 3 hour bonus of all-voice
-          listening added on top of the trial. It is not tied to leaving a
-          review, and it is not a marketing trick, it is a thank-you for
-          reaching the end of something.
+          After the allowance, you choose Stella or Rio as a free English
+          voice; supported devices also retain Bella. Listening continues,
+          but you do not get to keep any arbitrary studio narrator for free.
+          If you read in a different language, evaluate its available voices
+          during the trial and check Premium before planning ongoing use.
+        </p>
+        <p>
+          The current release also offers a one-time three-hour voice bonus
+          when you finish your first book. That bonus is separate from the
+          standard allowance and does not require a review. A subscription
+          introductory offer, if shown by the App Store, is a different offer
+          with its own eligibility and renewal terms.
         </p>
       </QuestionSection>
 
       <QuestionSection question="What does Premium add?">
         <p>
-          Premium adds {PRICING.premiumFeatures}. The narrator roster is the
-          same 23 voices across 10 languages you sampled during the trial,{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            listed with audio samples here
-          </Link>
-          . On-device voice cloning lets you build a narrator from about ten
-          seconds of your own recorded speech, and that recording never
-          leaves your device.
+          Premium unlocks the full available narrator selection, playback
+          speed from 0.3× to 3.0×, a sleep timer, soundscapes, unlimited article
+          saving and uncapped bulk-import use. Browse the
+          <Link href="/voices" className="text-loudBlue hover:underline"> voice samples</Link>
+          {" "}and check the choices actually offered on your device before buying.
         </p>
         <p>
-          One feature is metered rather than simply included: generating a
-          book&apos;s audio ahead of time for offline listening. That is
-          Premium-only because it costs real processing and battery on your
-          own phone, not because the words themselves are being held back.
+          Voice Studio can create a narrator from about ten seconds of your
+          own or permissioned speech. During the voice allowance you can
+          create up to three clones; Premium removes that creation quota.
+          Existing clones remain stored but become locked if your voice
+          allowance ends without Premium. Do not mistake trial access for
+          permanent free access to the cloned voice.
+        </p>
+        <p>
+          Generating audio in advance is separate from normal offline
+          narration. Some preparation features require Premium and a suitable
+          installed engine. You do not need Premium merely to have the app
+          generate ordinary narration locally from an existing book.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Is Premium worth it, or is the free tier enough?">
+      <QuestionSection question="When is paying worthwhile?">
         <p>
-          If one voice reading every book you own sounds fine, the free tier
-          is a complete product, not a stripped-down demo. It is{" "}
-          <Link
-            href="/blog/text-to-speech-app-without-a-subscription"
-            className="text-loudBlue hover:underline"
-          >
-            a real subscription-free option
-          </Link>
-          , and it is fully on-device and private, your library never leaves
-          your device, on the free tier exactly as much as on Premium. Where
-          Premium earns its price is variety and control: a different voice
-          for fiction than for a dense report, a faster speed for a familiar
-          book, a sleep timer so the narration stops when you doze off, and a
-          voice cloned from your own or someone else&apos;s speech. None of
-          that changes whether the book gets read to you, only how well the
-          listening fits the book and fits your day. At{" "}
-          {PRICING.premiumMonthly} a month, that is a small bet if voice
-          variety and speed control are things you actually want.
+          Stay free if the English voice selection and standard playback
+          suit your reading. Consider Premium for a particular narrator,
+          another language, speed adjustment, bedtime controls or regular
+          article saving. Test that feature in your own routine; a longer
+          list of features is not itself a reason to buy.
+        </p>
+        <p>
+          The current US prices are {PRICING.premiumMonthly},{" "}
+          {PRICING.premiumYearly}, or {PRICING.premiumLifetime}. Other
+          storefronts can differ. Compare the total billed amount and renewal
+          terms on the purchase sheet, especially when evaluating the
+          <Link href="/blog/text-to-speech-app-without-a-subscription" className="text-loudBlue hover:underline"> one-time purchase option</Link>.
+        </p>
+        <p>
+          Both plans generate speech on your device. Neither price tier
+          means the app has no telemetry: crash/performance diagnostics and
+          usage analytics are separate from book narration.
+          Release 1.12 has no visible in-app switch for these services.
         </p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Try every voice, then keep one for free"
-        subline={`Download LoudReader from the App Store. ${PRICING.free}`}
-      />
+      <StoreCta headline="Try the voices before choosing a plan" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

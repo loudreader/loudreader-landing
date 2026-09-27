@@ -1,37 +1,35 @@
-// FACT PROVENANCE. Every claim verified on 2026-07-14.
-//   - Apple Silicon's Neural Engine is a hardware component in M-series
-//     chips. Its existence and purpose are publicly documented by Apple.
-//   - LoudReader's use of the Neural Engine for voice generation is
-//     verified from the app source (TTS pipeline uses Apple's on-device
-//     ML APIs).
-//   - The claim that on-device TTS is private (no text sent to servers)
-//     is verified: LoudReader has no network calls during speech generation.
-//   - Intel Macs lack a Neural Engine. This is a public hardware fact.
-//   - Pricing, free-tier, and voice facts from components/money/site.ts.
-// Claims you may NOT make: specific Neural Engine benchmarks,
-// comparisons to other chips.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Shipping app: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+// the LoudReader app source, read through git show, not local HEAD.
+// Canonical audit: docs/product-facts-2026-09-28.md. Source review,
+// not a new runtime test. Local speech does not imply no diagnostics:
+// LoudReaderApp.swift initialises Sentry and Analytics.swift TelemetryDeck;
+// SettingsSheet.showsUsageStatisticsChoice is false in this shipping release.
+// SubscriptionAccess/SubscriptionManager verify 8 cumulative listening hours,
+// then Stella or Rio plus Bella on capable devices; whole-book listening stays
+// free. Notes/highlights are not Premium-only. Studio availability varies.
+// Xcode target is iOS/iPadOS; on Apple Silicon Macs it is the iPad build.
+// No automatic library/progress sync; iCloud file import is not app sync.
+// https://developer.apple.com/documentation/coreml/mlcomputeunits — checked2026-09-28 compute-unit selection.
+// Local loudkit site/src/content/docs/supported.md and guides/01-getting-started.md checked2026-09-28: five SDKs and distinct runtimes.
+// Shipping1.12 Xcode target,DeviceCapability,VoiceRegistry and instrumentation audit.
 
 import type { Faq } from "@/components/money/FaqSection";
-
 export const FAQS: Faq[] = [
   {
-    q: "What is the Neural Engine on Apple Silicon?",
-    a: "The Neural Engine is a specialized processor inside every M-series chip (M1, M2, M3, M4) designed for machine learning tasks. It handles voice generation, image recognition, and other AI workloads efficiently without taxing the main CPU cores. For text-to-speech, the Neural Engine converts text into natural-sounding audio using neural network models that run locally on the chip.",
+    "q": "Does local speech always run on the Neural Engine?",
+    "a": "No. A speech pipeline may use the CPU, GPU or Neural Engine, depending on the model and runtime. Core ML offers compute-unit options; not every operation necessarily runs on the same processor."
   },
   {
-    q: "Does text-to-speech on Apple Silicon sound better than on Intel Macs?",
-    a: "It can, because the Neural Engine runs more sophisticated voice models than older Intel Macs could handle locally. On an Intel Mac, high-quality TTS usually required streaming from a cloud server. On Apple Silicon, those same neural voice models run on-device. The difference is that an M-series Mac generates natural voices locally while an Intel Mac either uses a simpler voice or sends your text to a server.",
+    "q": "Will an M-series chip make every voice sound better?",
+    "a": "No. Sound depends on the voice model and its handling of your language and material. Hardware affects performance, but its name is not a quality score."
   },
   {
-    q: "Which TTS apps use the Neural Engine on Mac?",
-    a: "LoudReader uses the Neural Engine for all voice generation. Apple's own Spoken Content can use downloaded neural voices that run on the Neural Engine. Voice Dream Reader uses Apple's speech API, which also leverages the Neural Engine. Cloud-based apps like Speechify and NaturalReader stream voices from their servers and do not use the local Neural Engine for their best voices.",
+    "q": "Does LoudReader have a separate native Mac build?",
+    "a": "No. Compatible Apple Silicon Macs run its iPad app. Check App Store compatibility and available voices on your device."
   },
   {
-    q: "Is text-to-speech on Apple Silicon private?",
-    a: "Yes, when the app runs the voices on-device. The Neural Engine processes text and generates audio inside the chip, with no data leaving the device. LoudReader is fully on-device and private, your library never leaves your device. Apple's Spoken Content is also on-device. Cloud-based TTS apps send your text to a server, which processes it remotely. Whether that matters depends on what you are reading.",
-  },
-  {
-    q: "Does on-device TTS use a lot of battery?",
-    a: "The Neural Engine is purpose-built for machine learning workloads and is more power-efficient than running the same models on the CPU or GPU. On a MacBook, TTS voice generation adds some battery draw, but it is modest compared to the display or active CPU work. You can listen for hours on battery without a noticeable hit. On an iPhone, screen-off listening with the Neural Engine is especially efficient because the display (the biggest power draw) is off.",
-  },
+    "q": "Is Loudkit only for Apple Silicon?",
+    "a": "No. The developer framework has several backends and platform paths. Check its support matrix and SDK guide, then validate your target runtime."
+  }
 ];

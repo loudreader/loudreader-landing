@@ -1,0 +1,3689 @@
+{
+  "reviewDate": "2026-09-28",
+  "baseCommit": "6a76591cf546a351aca107e5df8d09c4546ae3bd",
+  "articlesRead": 152,
+  "articlesMateriallyRevised": 150,
+  "articles": [
+    {
+      "slug": "a-tale-of-two-cities-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Universal public-domain claim",
+        "Claimed built-in text needed no connection/download",
+        "Speculative LibriVox availability",
+        "Guaranteed narration quality and stale privacy promise"
+      ],
+      "changes": [
+        "Added a verified human recording alongside TTS",
+        "Added three-book structure and chapter-based listening advice",
+        "Qualified edition/territory and download prerequisites",
+        "Replaced quality guarantees and corrected free-tier copy"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/98",
+        "https://www.gutenberg.org/cache/epub/98/pg98-images.html",
+        "https://librivox.org/a-tale-of-two-cities-by-charles-dickens-2/",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "alice-in-wonderland-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Worldwide public-domain guarantee and unlimited-rights language",
+        "No-download and immediate-offline promises",
+        "Repeated untested voice-quality claims",
+        "Did not distinguish Alice books or visual wordplay"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/11",
+        "https://librivox.org/alices-adventures-in-wonderland-by-lewis-carroll-5",
+        "https://www.gutenberg.org/ebooks/12",
+        "https://www.gutenberg.org/policy/permission.html",
+        "https://www.gutenberg.org/cache/epub/11/pg11-images.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "app-that-highlights-words-while-reading",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Stale competitor prices and unsourced judgments",
+        "English-only claim",
+        "Scans rejected/no OCR claim",
+        "Highlighting presented as universal focus/clinical benefit",
+        "Broad privacy/sync implications"
+      ],
+      "changes": [
+        "Rebuilt as tool-selection checklist with current official feature docs",
+        "Removed stale pricing and unsupported Voice Dream detail",
+        "Clarified OCR, device compatibility, free tier and no automatic sync"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "https://support.microsoft.com/en-us/accessibility/word/use-immersive-reader-in-word (opened 2026-09-28: word-level Read Aloud)",
+        "https://help.naturalreaders.com/en/articles/11585617-display-and-reading-appearance-personal-version (opened 2026-09-28: word/sentence/combined controls and Text View)",
+        "https://speechify.com/chrome/ (opened 2026-09-28: text highlighting feature)",
+        "LoudReader reader highlighting source provenance retained from original; no claim of exact timing accuracy or therapeutic efficacy"
+      ]
+    },
+    {
+      "slug": "are-ai-voices-good-enough-for-books",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Prior 27 September rewrite was substantively sound; roster availability still implied every device gets every voice"
+      ],
+      "changes": [
+        "Preserved long-form listening checklist and framework/agent distinction",
+        "Qualified studio roster and Premium selection by device support; supported file wording"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "Existing 2026-09-27 provenance for framework/agent links and website voice samples retained"
+      ]
+    },
+    {
+      "slug": "are-offline-voices-as-good-as-cloud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Invented 92% quality score",
+        "Universal cloud superiority and local latency/battery superiority",
+        "False no-telemetry and no-cloud-caching implications",
+        "Final shipping-source audit: the analytics Settings opt-out comment is stale; SettingsSheet hides that control in 1.12"
+      ],
+      "changes": [
+        "Added fair listening checklist",
+        "Separated synthesis from diagnostics and usage analytics",
+        "Removed unmeasured quality, battery and latency rankings",
+        "Corrected body and FAQ to default-enabled analytics with no user-facing disable switch in 1.12; removed optional claim"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "LoudReader/Analytics.swift and LoudReaderApp.swift release_v1.12 as audited in canonical fact sheet: optional usage analytics default on plus crash/performance diagnostics",
+        "No comparative listener, latency or battery benchmark exists for this article",
+        "LoudReader/SettingsSheet.swift:65,483 at release_v1.12: showsUsageStatisticsChoice=false hides opt-out control; canonical fact sheet corrected 2026-09-28"
+      ]
+    },
+    {
+      "slug": "are-text-to-speech-apps-safe",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Airplane-mode playback falsely asserted proof of no uploads; cached audio and delayed requests ignored",
+        "Unsupported malware safety equivalence and universal cloud-versus-device dichotomy",
+        "Only-user-download network claim, impossible cannot-leak CTA, privacy-policy length treated as proof"
+      ],
+      "changes": [
+        "Reframed as actionable processing/storage/diagnostic evaluation",
+        "Distinguished cloud passages from whole-document uploads and hybrid voice options",
+        "Added accurate shipping1.12 analytics/diagnostics disclosure and no exposed opt-out",
+        "Explained offline test and App Privacy Report limitations; removed absolutes"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (corrected privacy row, shipping 1.12)",
+        "release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0): LoudReaderApp.swift, Analytics.swift, ErrorReporting.swift, SettingsSheet.swift:65,483",
+        "https://support.apple.com/en-gb/102399 (verified 2026-09-28)",
+        "https://support.apple.com/en-gb/102188 (verified 2026-09-28)"
+      ]
+    },
+    {
+      "slug": "audible-vs-text-to-speech",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported universal narrator superiority and largest-catalogue claims",
+        "Incorrect implication Audible purchases vanish on cancellation",
+        "Unverified credit-price arithmetic and limitless file compatibility",
+        "Blanket privacy and no-fatigue assertions"
+      ],
+      "changes": [
+        "Separated recorded-edition choice from file-based TTS",
+        "Corrected purchase vs subscription entitlements with official source",
+        "Added file, edition, cost and library decision checklist",
+        "Updated FAQ, metadata and vendor disclosure"
+      ],
+      "sources": [
+        "https://help.audible.com/s/article/cancel-membership?language=en_US",
+        "https://help.audible.com/s/article/before-you-cancel-your-audible-membership?language=en_US",
+        "https://help.libbyapp.com/en-us/6289.htm"
+      ]
+    },
+    {
+      "slug": "audiobooks-for-busy-parents",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Invented future verification date",
+        "Unsafe child-sound masking and lock-screen-driving advice",
+        "Unfounded book-per-week and parent comparisons",
+        "Absolute privacy and generic Mac claims"
+      ],
+      "changes": [
+        "Reframed around interruptions and optional listening slots",
+        "Separated supervision, bedtime and parked car setup",
+        "Corrected timer stopping vs sleep position and free tier"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "best-audiobook-app-for-classics",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Worldwide public-domain and entire-catalogue claims",
+        "Unsupported quality and catalogue superiority",
+        "Notes incorrectly Premium; absolute privacy"
+      ],
+      "changes": [
+        "What should you check before choosing an app?",
+        "When is a LibriVox recording a good starting point?",
+        "When is text to speech useful for a classic?",
+        "When should you choose a commercial audiobook?",
+        "What is a sensible way to try the options?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts",
+        "https://www.gutenberg.org/policy/permission.html",
+        "https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term",
+        "https://wiki.librivox.org/index.php/Copyright_and_Public_Domain"
+      ]
+    },
+    {
+      "slug": "best-free-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimed only two genuinely free readers and that cloud free plans cannot read whole books.",
+        "Incorrectly denied Apple highlighting/speed controls; used absolute privacy and free-forever promises."
+      ],
+      "changes": [
+        "Reframed as a practical free-plan selection guide; corrected Apple Read & Speak and recognised NaturalReader system Free Voices.",
+        "Added sample-file checklist, developer disclosure, accurate free English tier and diagnostics/analytics nuance."
+      ],
+      "sources": [
+        "https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios",
+        "https://support.apple.com/en-au/guide/mac-help/mh27448/26/mac/26",
+        "https://help.naturalreaders.com/en/articles/8823770-voices-languages-and-tts-limits-personal-version",
+        "https://speechify.com/pricing/",
+        "https://elevenreader.io/pricing",
+        "LoudReader release_v1.12 / docs/product-facts-2026-09-28.md; SubscriptionAccess.swift directly checked for first-book bonus"
+      ]
+    },
+    {
+      "slug": "best-local-ai-apps-mac",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Recent refresh already balanced but claimed every voice bundled without archive proof",
+        "LoudReader row omitted diagnostics/analytics important to privacy-focused reader"
+      ],
+      "changes": [
+        "Retained useful five-workflow guide and separate framework/agent context",
+        "Added explicit local-speech vs diagnostics boundary and vendor disclosure",
+        "Rechecked official tools sources and removed blanket bundled-voice statement"
+      ],
+      "sources": [
+        "https://lmstudio.ai/docs/app/offline",
+        "https://docs.ollama.com/faq",
+        "https://www.macwhisper.com/",
+        "https://drawthings.ai/",
+        "https://loudkit.loudreader.io/",
+        "https://loudkit.loudreader.io/agents/"
+      ]
+    },
+    {
+      "slug": "best-offline-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "False Voice Dream has no Mac claim",
+        "False LoudReader iCloud library/position sync",
+        "Unsupported best/better voice and accessibility rankings",
+        "Incorrect macOS no-highlighting claim; privacy conflated with offline"
+      ],
+      "changes": [
+        "Changed focus to testable offline workflow and preparation",
+        "Corrected Mac availability and removed sync promise",
+        "Added representative-file and assistive-control evaluation",
+        "Explicitly distinguished diagnostics from local synthesis and updated FAQ"
+      ],
+      "sources": [
+        "https://www.voicedream.com/",
+        "https://apps.apple.com/us/app/voice-dream-reader/id972112040?mt=12",
+        "https://support.apple.com/en-gb/guide/mac-help/mh27448/mac",
+        "https://www.gutenberg.org/help/copyright.html"
+      ]
+    },
+    {
+      "slug": "best-playback-speed-for-comprehension",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Uncited universal research thresholds",
+        "Unsupported human-versus-TTS prosody ranking",
+        "Biological claim that 1x is evolved speech speed"
+      ],
+      "changes": [
+        "Replaced genre speed prescriptions with understanding and delayed-recall checks",
+        "Cited and bounded one actual lecture-video study",
+        "Separated study intent from everyday listening article"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "https://castel.psych.ucla.edu/wp-content/uploads/sites/111/2021/11/ACP-Lecture-Speed-Murphy-2021-in-press.pdf (opened 2026-09-28, abstract and Experiment 1; lecture videos, not universal audiobook results)",
+        "LoudReader/TTSPreferences.swift at release_v1.12: minRate=0.3,maxRate=3.0; Premium gate from canonical audit"
+      ]
+    },
+    {
+      "slug": "best-read-aloud-app-mac",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimed strongest privacy without evidence and no analytics",
+        "Mislabelled Speechify as browser/Electron rather than dedicated Mac app",
+        "Made false English-only and native-Mac LoudReader claims",
+        "Dismissed Apple controls and implied universal text access",
+        "Confused NaturalReader desktop and web pricing and implied lifetime offers were rare"
+      ],
+      "changes": [
+        "Rebuilt as documented neutral shortlist with explicit publisher disclosure",
+        "Corrected app/voice/telemetry and Mac-compatibility claims from shipping 1.12 audit",
+        "Added practical document, desktop-control, listening, offline and annual-cost comparisons",
+        "Rewrote metadata and all FAQs; retained original URL and publication date"
+      ],
+      "sources": [
+        "https://speechify.com/mac/",
+        "https://www.voicedream.com/",
+        "https://www.naturalreaders.com/software.html",
+        "https://speechcentral.net/",
+        "https://support.apple.com/en-gb/guide/mac-help/mh27448/mac",
+        "LoudReader shipping release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 (root source audit, 2026-09-28)",
+        "https://itunes.apple.com/lookup?id=6758149478&country=us"
+      ]
+    },
+    {
+      "slug": "best-text-to-speech-app-iphone",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported competitor voice ranking and privacy superlatives",
+        "Incorrect no analytics, English-only and no web article import LoudReader descriptions",
+        "False or unfair offline limitations for Speechify and NaturalReader",
+        "Incorrect Premium-only notes claim",
+        "Oversimplified Apple speech features as basic and working everywhere"
+      ],
+      "changes": [
+        "Created practical phone-specific shortlist and disclosed publisher interest",
+        "Corrected LoudReader language, OCR/article import, telemetry and feature-gating facts",
+        "Distinguished downloaded Speechify audio from local speech generation",
+        "Added same-passage, Files/share, screen-off offline and paywall checks",
+        "Rewrote metadata and all FAQs; retained publication date"
+      ],
+      "sources": [
+        "https://speechify.com/ios/",
+        "https://www.voicedream.com/",
+        "https://www.naturalreaders.com/",
+        "https://speechcentral.net/",
+        "https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios",
+        "LoudReader shipping release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 (root source audit, 2026-09-28)",
+        "https://itunes.apple.com/lookup?id=6758149478&country=us"
+      ]
+    },
+    {
+      "slug": "best-text-to-speech-for-classic-literature",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Universal claims about archaic vocabulary and engine training",
+        "Claims that most classics lack recordings",
+        "Worldwide Gutenberg assumption",
+        "Unqualified all-PDF/privacy claims"
+      ],
+      "changes": [
+        "Added edition-first voice test and annotation checks",
+        "Retained classics-specific listening guidance without universal quality ranking",
+        "Added territory, translation and edition limits"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/policy/permission",
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "best-voice-for-nonfiction-vs-fiction",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Genre preferences presented as universal performance/comprehension rules",
+        "Provenance asserted hands-on use without test record",
+        "All voices/everydevice and paidnotes/generalprivacy implications"
+      ],
+      "changes": [
+        "Replaced genre stereotypes with practical sample-specific listening checks",
+        "Kept distinct nonfiction vs fiction purposes with uncertainty",
+        "Added fair comparison procedure and hardware/free-tier limits",
+        "Preserved future publication date2026-09-29 and updatedFAQ without fake test claims",
+        "Removed link to Sep30 post from Sep29 scheduled article"
+      ],
+      "sources": [
+        "LoudReader release_v1.12 source audit dated2026-09-28",
+        "https://loudreader.io/voices"
+      ]
+    },
+    {
+      "slug": "book-not-on-audible-what-to-do",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "False no-reader-request policy",
+        "Missing-title implies no recording",
+        "OCR denied; DRM/legal overreach"
+      ],
+      "changes": [
+        "Could the recording exist under another listing?",
+        "Where should you look next?",
+        "Can you listen to the ebook instead?",
+        "What if the title is a classic?",
+        "What should you expect from synthetic narration?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts",
+        "https://help.audible.co.uk/s/article/understand-error-codes?language=en_GB",
+        "https://www.gutenberg.org/policy/permission.html",
+        "https://wiki.librivox.org/index.php/Copyright_and_Public_Domain"
+      ]
+    },
+    {
+      "slug": "can-i-listen-to-ebooks-i-already-own",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Future Jan2027 provenance",
+        "Outdated blanket Kindle/store restriction",
+        "Calibre failure presented as conclusive DRM test",
+        "Speak Screen claimed to work in any locked app",
+        "Public domain equated to DRM-free file and redistribution rights"
+      ],
+      "changes": [
+        "Rebuilt as file entitlement and compatibility checklist",
+        "Added official Jan2026 Amazon download change and Kobo distinction",
+        "Removed legal speculation and universal system-access promise"
+      ],
+      "sources": [
+        "https://kdp.amazon.com/en_US/help/topic/GDDXGH9VR22ACM8U",
+        "https://help.kobo.com/hc/en-us/articles/360019527954-Download-books-from-your-Kobo-account-to-export-to-another-device-or-app",
+        "https://manual.calibre-ebook.com/drm.html",
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "can-text-to-speech-read-footnotes",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Guaranteed every footnote spoken exactly once",
+        "Said data tables deleted rather than retained visually",
+        "Obsolete no-OCR claim",
+        "Overgeneralised EPUB rules to PDF and figure references"
+      ],
+      "changes": [
+        "Verified release1.12 note popovers/end-section behaviour with explicit recognition limits",
+        "Explained visual tables/prose heuristic/PDF distinction",
+        "Updated OCR and practical source verification"
+      ],
+      "sources": [
+        "release_v1.12:LoudReader/ContentFilter.swift — extractAndRemoveFootnotes, preserveReadingTables, speechNormalized",
+        "release_v1.12:LoudReader/ContinuousReaderView.swift — footnotesHTML and appendFootnotesIfNeeded",
+        "release_v1.12:LoudReader/PDFImportPipeline.swift — local OCR and text extraction"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "can-text-to-speech-replace-audiobooks",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Universal human/TTS and unavailable-catalogue claims",
+        "Unpermissioned celebrity voice reference",
+        "Incorrect notes paywall and price comparison"
+      ],
+      "changes": [
+        "When does the recording matter?",
+        "When is TTS especially useful?",
+        "What can go wrong when a file becomes speech?",
+        "How should you compare the cost?",
+        "Can you mix the two approaches?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "can-you-learn-from-audiobooks",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported universal comprehension equivalence and mental-model claims",
+        "Misapplied dual-coding explanation and uncited speed thresholds",
+        "Claimed automatic learning while multitasking",
+        "Future-dated provenance and absolute privacy wording"
+      ],
+      "changes": [
+        "Added bounded primary-study summary",
+        "Replaced efficacy promises with recall-and-check routine",
+        "Distinguished diagrams and worked tasks from narrative prose",
+        "Corrected platform and privacy scope"
+      ],
+      "sources": [
+        "https://journals.sagepub.com/doi/10.1177/2158244016669550 — Rogowsky et al. (2016), study design and bounded comprehension result; checked 2026-09-28.",
+        "Shipping app product audit, 2026-09-28: LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), not the older checkout HEAD. No runtime test was performed for this editorial pass.",
+        "LoudReader/Subscription/SubscriptionAccess.swift and SubscriptionManager.swift — eight cumulative listening hours, limited English free selection afterwards, unrestricted book imports/listening.",
+        "LoudReader/Subscription/PaywallReason.swift:125–148 — Premium speed and timer; notes/highlights are not Premium-only. Source inspected 2026-09-28.",
+        "LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local speech plus diagnostics/analytics; no exposed analytics opt-out promised. Source-auditor report reviewed 2026-09-28.",
+        "App target and App Store record — iPhone/iPad, iPad compatibility on Apple Silicon Macs. Studio voice availability depends on hardware; no native macOS claim."
+      ]
+    },
+    {
+      "slug": "catch-typos-in-your-own-writing",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported deterministic cognitive explanation",
+        "Synthetic speech claimed to read exactly verbatim and bypass all typo blindness",
+        "Overstated spellchecker limitations",
+        "Privacy no-upload argument ignored telemetry"
+      ],
+      "changes": [
+        "Replaced pseudo-science with practical primary writing-centre guidance",
+        "Added homophone, number, layout and synthesis limits",
+        "Separated source correction from listening copy",
+        "Applied final 1.12 analytics correction: default enabled, no visible opt-out switch; removed stale Settings→Privacy promise"
+      ],
+      "sources": [
+        "https://writingcenter.unc.edu/tips-and-tools/editing-and-proofreading/",
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "change-narrator-voice-mid-book",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Implied full picker always contains every language and voice",
+        "Incorrect claim every additional voice after trial needs Premium",
+        "Sold notes as Premium-only",
+        "Cross-language choice risked implying translation"
+      ],
+      "changes": [
+        "Verified cycle/picker/sentence transition against shipping source",
+        "Added missing-language and single-available-voice troubleshooting",
+        "Explained free selection precisely and app-wide setting",
+        "Clarified narrator language is not translation"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "LoudReader/ReaderView.swift at release_v1.12 inspected 2026-09-28: lines189–192 selection display vs next sentence,1746–1792 voice cycle and picker,607+ foreign-language confirmation",
+        "LoudReader/TTSPreferences.swift at release_v1.12: app-wide selectedVoiceIdentifier UserDefaults setting"
+      ]
+    },
+    {
+      "slug": "convert-kindle-books-to-audio",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Every Kindle purchase incorrectly described as DRM-protected",
+        "Obsolete Download and Transfer via USB steps",
+        "Universal publisher and worldwide public-domain assertions",
+        "Dismissive unsupported accessibility comparisons"
+      ],
+      "changes": [
+        "Replaced premise with title-specific 2026 EPUB/PDF availability",
+        "Separated export eligibility, legacy conversion, and in-app narration",
+        "Removed Kindle integration and audio-export implications; added disclosure"
+      ],
+      "sources": [
+        "https://kdp.amazon.com/en_US/help/topic/GDDXGH9VR22ACM8U",
+        "https://manual.calibre-ebook.com/faq.html#what-formats-does-calibre-support-conversion-to-from",
+        "release_v1.12:LoudReader/BookImportService.swift — EPUB/PDF detection and protected-book error path",
+        "release_v1.12:LoudReader/Subscription/SubscriptionAccess.swift — unrestricted book listening",
+        "release_v1.12:LoudReader.xcodeproj/project.pbxproj — iOS target, iPad compatibility on Mac"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "crime-and-punishment-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimed English text public domain everywhere",
+        "FAQ did not identify translator",
+        "No-download/offline conflation",
+        "Unsupported quality guarantees and suggestion free audiobook searches mean piracy"
+      ],
+      "changes": [
+        "Named Garnett and explained translation matching",
+        "Added verified human option",
+        "Added practical name-list and part/chapter guidance",
+        "Removed worldwide and quality claims; corrected download/free-tier requirements"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/2554",
+        "https://www.gutenberg.org/cache/epub/2554/pg2554-images.html",
+        "https://librivox.org/crime-and-punishment-by-fyodor-dostoyevsky/",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "do-audiobooks-help-you-read-more",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsourced cognitive equivalence and attention training",
+        "Invented typical time and guaranteed completion",
+        "False November verification date"
+      ],
+      "changes": [
+        "What does “more reading” mean for you?",
+        "Where could a listening session fit?",
+        "How can you tell whether you are following the book?",
+        "Can you alternate between listening and reading?",
+        "What should you try this week?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "does-text-to-speech-drain-your-battery",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported hierarchy naming screen and radio as universally larger than synthesis",
+        "Cloud speech presented as always streaming continuously",
+        "Every generated sentence claimed permanently cached with podcast-identical power use",
+        "Absolute no-network/privacy and unverified battery advantage language"
+      ],
+      "changes": [
+        "Reframed around repeatable user battery checks without fabricated benchmark",
+        "Explained local generation versus cached or batched cloud delivery",
+        "Qualified finite cache reuse and removed component-power rankings",
+        "Linked Apple battery and brightness guidance; marked sleep timer Premium",
+        "Preserved future publication and modification date 2026-10-20"
+      ],
+      "sources": [
+        "release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0): AudioCacheManager.swift:69,306–374; Info.plist; LoudReaderApp.swift:820; Subscription/PaywallReason.swift:125–148",
+        "https://support.apple.com/en-gb/102432",
+        "https://support.apple.com/en-gb/109351",
+        "docs/product-facts-2026-09-28.md"
+      ]
+    },
+    {
+      "slug": "dracula-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Absolute library privacy claims",
+        "No initial download contradiction",
+        "Same-voice vs full-cast false binary",
+        "Duration presented with false precision and generic commute advice"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/345",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "easy-english-books-to-listen-to",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported claims of measured word counts; listening times did not match the stated 150-wpm arithmetic.",
+        "Children’s classics described as universally easy, with worldwide-free implications.",
+        "Peter Pan introduces a UK rights complication; an “any PDF” import claim was too broad.",
+        "Voice/free-tier and privacy copy was obsolete."
+      ],
+      "changes": [
+        "Replaced dubious counts with eight linked editions and specific editorial difficulty/content notes.",
+        "Removed Peter Pan from this beginner shortlist; kept the other eight substantive recommendations.",
+        "Added edition, territory and translation boundaries, sample comprehension checks and variable listening times.",
+        "Updated voice-trial scope and synthetic-pronunciation limitations."
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/14838",
+        "https://www.gutenberg.org/ebooks/21",
+        "https://www.gutenberg.org/ebooks/55",
+        "https://www.gutenberg.org/ebooks/11",
+        "https://www.gutenberg.org/ebooks/271",
+        "https://www.gutenberg.org/ebooks/215",
+        "https://www.gutenberg.org/ebooks/1661",
+        "https://www.gutenberg.org/ebooks/45",
+        "https://www.gutenberg.org/policy/permission.html",
+        "Shipping release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Subscription/SubscriptionAccess.swift; SubscriptionManager.swift; Subscription/PaywallReason.swift; PDFImportPipeline.swift; product audit dated 2026-09-28."
+      ]
+    },
+    {
+      "slug": "english-shadowing-practice",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Guaranteed pronunciation and fluency claims",
+        "Unjustified superiority of books and high-return exercise claim",
+        "Any-book and absolute privacy phrasing",
+        "Confused speech recording absence with voice-cloning capability"
+      ],
+      "changes": [
+        "Added graded listen-repeat-shadow routine",
+        "Explained synthetic model and assessment limits",
+        "Retained verified sentence-tap details and Premium speed distinction",
+        "Removed universal learning guarantees"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12, LoudReader/ContinuousReaderView.swift:1662–1682 — sentence tap and first-tap chrome reveal; source inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, LoudReader/ContinuousReaderController.swift:2412–2448 — approximately timed, sentence-based skips; source inspected 2026-09-28.",
+        "Shipping app product audit, 2026-09-28: LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), not the older checkout HEAD. No runtime test was performed for this editorial pass.",
+        "LoudReader/Subscription/SubscriptionAccess.swift and SubscriptionManager.swift — eight cumulative listening hours, limited English free selection afterwards, unrestricted book imports/listening.",
+        "LoudReader/Subscription/PaywallReason.swift:125–148 — Premium speed and timer; notes/highlights are not Premium-only. Source inspected 2026-09-28.",
+        "LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local speech plus diagnostics/analytics; no exposed analytics opt-out promised. Source-auditor report reviewed 2026-09-28.",
+        "App target and App Store record — iPhone/iPad, iPad compatibility on Apple Silicon Macs. Studio voice availability depends on hardware; no native macOS claim."
+      ]
+    },
+    {
+      "slug": "fall-asleep-to-audiobooks",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Sleep effects asserted despite no-science disclaimer",
+        "Timer falsely implied to save sleep onset and fade narration",
+        "Hardcoded prices and paid notes",
+        "Blanket privacy claims"
+      ],
+      "changes": [
+        "Made routine optional rather than prescriptive",
+        "Explained timer cutoff versus remembered passage",
+        "Verified 15/30/60 source and corrected free notes"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "finish-the-books-you-start",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "False majority reason for abandonment",
+        "Listening guarantees completion",
+        "Sleep timer claims understanding position"
+      ],
+      "changes": [
+        "Why did this particular book stall?",
+        "How can you make restarting easier?",
+        "When is switching to audio worth trying?",
+        "What does a realistic two-format routine look like?",
+        "Should you force yourself to finish?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "frankenstein-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Original-edition FAQ evaded 1818 versus 1831",
+        "Unqualified worldwide availability",
+        "Fixed estimate framed as general runtime",
+        "Offline and no-cost claims omitted downloads/free-tier terms"
+      ],
+      "changes": [
+        "Linked clearly identified 1818/1831 texts",
+        "Added framing-narrator listening guidance",
+        "Added edition-labelled human recording",
+        "Removed guaranteed duration and app capability overclaims"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/84",
+        "https://www.gutenberg.org/ebooks/41445",
+        "https://www.gutenberg.org/ebooks/42324",
+        "https://librivox.org/frankenstein-edition-1831-by-mary-shelley-wollstonecraft/",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "free-audible-alternative",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Library/LibriVox/current-free-tier limits obscured",
+        "All Gutenberg catalogue claimed bundled and free worldwide",
+        "Absolute DRM legality and private/no-network implications",
+        "Generic sales framing instead of finding a free title"
+      ],
+      "changes": [
+        "Added practical library workflow and Instant/Flex distinction",
+        "Explained solo recordings, territory/translation and downloads",
+        "Clarified TTS supplies a voice, not catalogue rights",
+        "Removed brittle catalogue counts and added disclosure"
+      ],
+      "sources": [
+        "https://help.libbyapp.com/en-us/6289.htm",
+        "https://theloop.hoopladigital.com/support/articles/getting-started/borrow-flex-titles-for-popular-books/",
+        "https://librivox.org/pages/public-domain/",
+        "https://wiki.librivox.org/index.php/Recording_%26_Text_Policies",
+        "https://www.gutenberg.org/help/copyright.html"
+      ]
+    },
+    {
+      "slug": "free-vs-paid-text-to-speech-what-you-get",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Described permanent access as one of the 23 narrators and notes/highlights as Premium.",
+        "Called advance preparation metered and oversold free feature breadth; cloning consent and platform limits incomplete."
+      ],
+      "changes": [
+        "Made article explicitly LoudReader Free vs Premium; explained eight cumulative hours, Stella/Rio plus Bella, hardware availability and clone trial.",
+        "Clarified free notes/highlights, separate article/batch limits, no sync, local narration and actual Premium controls; retained verified first-book bonus."
+      ],
+      "sources": [
+        "LoudReader release_v1.12 / docs/product-facts-2026-09-28.md; SubscriptionAccess.swift directly checked for first-book bonus"
+      ]
+    },
+    {
+      "slug": "french-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Repeated single-voice disclaimer crowded out setup advice.",
+        "Obsolete no-OCR claim in body and FAQ.",
+        "Absolute no-data-leaves promise, broad Mac wording, missing Settings language selection.",
+        "Old free-tier wording and notes/highlights incorrectly called Premium-only.",
+        "Metadata said free/private although ongoing French voice use is Premium."
+      ],
+      "changes": [
+        "Added concrete Antoine setup and Settings → Languages You Read fallback.",
+        "Added two-passage audition method and regional French limitation without inventing an accent.",
+        "Explained scanned-PDF OCR, import warnings and checking accented extracted text.",
+        "Replaced broad privacy with local speech and diagnostics/analytics distinction; qualified compatible Mac mode and device availability.",
+        "Used FREE_TIER.full and updated FAQ/description; preserved Oct4 publication and modification dates."
+      ],
+      "sources": [
+        "Shipping release_v1.12, commit5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Engines/ChatterboxVoice.swift, ReadingLanguages.swift, SettingsSheet.swift, VoiceRegistry.swift.",
+        "Shipping PDFImportPipeline.swift:88-96,155-218 — local Vision OCR and partial results.",
+        "Canonical product audit docs/product-facts-2026-09-28.md — entitlement, device availability, platform and offline claims from release1.12; no runtime test.",
+        "https://loudreader.io/voices checked2026-09-28: sample destination/roster only; stale privacy ignored.",
+        "Shipping LoudReaderApp.swift:62,244 — Sentry and analytics; no opt-out Settings claim."
+      ]
+    },
+    {
+      "slug": "german-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Repeated promotional filler instead of a language-specific workflow",
+        "Language picker incorrectly limited to imported books",
+        "Wrong no-OCR claim",
+        "Free trial and hardware limitations obscured",
+        "Absolute privacy wording and uncertain all-Mac voice promises"
+      ],
+      "changes": [
+        "Added practical language-specific import and pronunciation checks",
+        "Explained Settings language selection and device-dependent studio availability",
+        "Corrected OCR and the continuing cost of non-English studio narration",
+        "Kept future publication date and replaced stale provenance"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), Engines/ChatterboxVoice.swift — named studio roster and language mapping; canonical source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, VoiceRegistry.swift:105–119 and ReadingLanguagesSheet.swift — library languages plus Settings selection; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, SubscriptionAccess.swift and SubscriptionManager.swift — 8 cumulative listening hours, English free selection afterwards; source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, DeviceCapability.swift, PDFImportPipeline.swift and PaywallReason.swift — device-dependent studio access, fallible OCR and Premium speed; source audit 2026-09-28.",
+        "data/voices.ts and public/voices — narrator names and browser sample references checked 2026-09-28."
+      ]
+    },
+    {
+      "slug": "gullivers-travels-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Severe edition error: abridged17157 claimed complete four-voyage text",
+        "Six-hour shortened-text estimate applied to full novel",
+        "Invented future provenance date",
+        "Unverified seamless cross-device sync"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/17157",
+        "https://www.gutenberg.org/ebooks/829",
+        "https://www.gutenberg.org/cache/epub/17157/pg17157-images.html",
+        "https://www.gutenberg.org/cache/epub/829/pg829-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "hear-your-novel-read-aloud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Guaranteed catches and neutral narration treated as objective manuscript judgement",
+        "Absolute no-server privacy/security claim",
+        "PDF always works claim",
+        "Unfounded universal never-upload prescription"
+      ],
+      "changes": [
+        "Created separate scene and sentence listening passes",
+        "Added versioned export and searchable issue log",
+        "Explained synthesis/artistic limits and current privacy boundary",
+        "Applied final 1.12 analytics correction: default enabled, no visible opt-out switch; removed stale Settings→Privacy promise"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "hound-of-the-baskervilles-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Invented cross-device progress-sync FAQ",
+        "Future provenance date 2027-01-01",
+        "Claimed no files downloaded/stored",
+        "Generic fixed seven-hour promise and unsupported superiority"
+      ],
+      "changes": [
+        "Removed sync claim and corrected provenance date",
+        "Added verified named recording with edition-specific runtime",
+        "Added fifteen-chapter completeness check and spoiler-free guidance",
+        "Corrected download requirements, Mac description and free tier"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/2852",
+        "https://www.gutenberg.org/cache/epub/2852/pg2852-images.html",
+        "https://librivox.org/the-hound-of-the-baskervilles-by-arthur-conan-doyle/",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "how-does-an-app-read-math-aloud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported claims most competitors delete equations",
+        "Implied MathML in ordinary PDFs and source parsing",
+        "Obsolete no-OCR statement",
+        "Claimed fallback completeness and every expression humanlike"
+      ],
+      "changes": [
+        "Preserved concrete fraction/root/exponent examples but scoped them to structured MathML",
+        "Explained local OCR versus equation recognition",
+        "Added fallback/display/language limitations and source-comparison workflow"
+      ],
+      "sources": [
+        "release_v1.12:LoudReader/MathSpeech.swift — word tables, speech(for:), render subset",
+        "release_v1.12:LoudReader/ContentFilter.swift — convertMathForSpeech replaces MathML with text",
+        "release_v1.12:LoudReader/PDFImportPipeline.swift — Vision OCR is ordinary text recognition"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "how-fast-should-you-listen-to-audiobooks",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Repeated unsupported cognition thresholds",
+        "Invented thinking-versus-speaking pace comparison",
+        "Overlapped comprehension article almost entirely"
+      ],
+      "changes": [
+        "Focused on everyday listening and enjoyment",
+        "Added relative multiplier explanation and arithmetic time example",
+        "Removed universal genre and human/TTS rules"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "LoudReader/TTSPreferences.swift at release_v1.12: playback limits; all example times are duration divided by multiplier, not measured sessions"
+      ]
+    },
+    {
+      "slug": "how-long-does-it-take-to-listen-to-a-book",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unverified average novel length and pace disguised as arithmetic",
+        "Fixed 275 words-per-page shortcut",
+        "Unverified whole-book estimate claim for catalog",
+        "Broad import and privacy promises"
+      ],
+      "changes": [
+        "Separated recording duration from TTS estimates",
+        "Labelled all numerical inputs illustrative",
+        "Added measurement and double-counting cautions, session planning"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "Arithmetic checked 2026-09-28: duration/multiplier and words/pace/60; example pace and word counts are assumptions, not empirical averages"
+      ]
+    },
+    {
+      "slug": "how-many-books-can-you-read-in-a-year",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Inconsistent 250/260-hour arithmetic",
+        "False 5+2=9 hours",
+        "Unsupported average length and no-comprehension-cost speed claims"
+      ],
+      "changes": [
+        "How do you find a realistic weekly number?",
+        "What is the calculation?",
+        "How does playback speed change the estimate?",
+        "What would a book a week require?",
+        "How can you use this without turning reading into work?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "how-much-do-text-to-speech-apps-cost",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Reused dated pricing as current proof, inferred one Voice Dream offer and treated every premium quota as a hard listening cap.",
+        "Confused VoiceOver with selected-text reading; claimed one-time purchases rare while missing NaturalReader desktop."
+      ],
+      "changes": [
+        "Kept a dated billing table with official links and precise billing-period comparison; left Voice Dream variable instead of choosing an unproven price.",
+        "Added annual-cost arithmetic, generation-versus-replay distinction, NaturalReader perpetual desktop edition and storefront caveats."
+      ],
+      "sources": [
+        "https://speechify.com/pricing/",
+        "https://elevenreader.io/",
+        "https://help.naturalreaders.com/en/articles/8854700-plans-pricing-personal-version",
+        "https://apps.apple.com/us/app/voice-dream-natural-reader/id496177674",
+        "https://www.naturalreaders.com/software.html",
+        "https://help.elevenlabs.io/hc/en-us/articles/35971782968465-How-do-ElevenReader-hours-work",
+        "https://speechify.com/usage-limits/",
+        "https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios",
+        "https://support.apple.com/en-au/guide/mac-help/mh27448/26/mac/26.",
+        "LoudReader release_v1.12 / docs/product-facts-2026-09-28.md; SubscriptionAccess.swift directly checked for first-book bonus"
+      ]
+    },
+    {
+      "slug": "how-much-storage-do-offline-voices-need",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unverified guarantee of all voices bundled and no future resource downloads",
+        "170 MB clone-enrolment packaging asserted from development comments",
+        "Unloading RAM conflated with device storage",
+        "Denied storage growth despite library and generated-audio cache",
+        "App Store size described as authoritative total installed footprint"
+      ],
+      "changes": [
+        "Separated app/models, library, generated audio and saved clones",
+        "Added on-device before/after storage measurement steps and Apple cached-data caveat",
+        "Explained offload versus delete with preserve-important-files guidance",
+        "Removed precise footprint and guaranteed bundled-model assertions",
+        "Preserved future publication and modification date 2026-10-21"
+      ],
+      "sources": [
+        "release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0): AudioCacheManager.swift:306–374; AppPreferences.swift:160,270–292; Engines/ClonedVoiceStore.swift:132,163–166; AudioCacheSettingsView.swift",
+        "https://support.apple.com/en-gb/108429",
+        "docs/product-facts-2026-09-28.md"
+      ]
+    },
+    {
+      "slug": "how-to-build-a-reading-habit",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Future verification and vague behavioural-science authority",
+        "Willpower/failure certainty and shaming missed sessions",
+        "Unsafe start-while-driving phrasing",
+        "No trial expiry implication and blanket network claims"
+      ],
+      "changes": [
+        "Framed as one-week practical experiment without habit science",
+        "Added obstacle diagnosis and optional frequency",
+        "Separated initial habit setup from queue and scrolling articles"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "how-to-choose-a-narrator-voice",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Universal genre/personality preferences and competitor superiority",
+        "Implied all voices on all hardware",
+        "Incomplete language discovery",
+        "Cloning described only as Premium and privacy extrapolated to all app behaviour"
+      ],
+      "changes": [
+        "Replaced arbitrary genre rules with same-passage checks",
+        "Kept useful roster detail with availability caveat",
+        "Verified app-wide preference and switching against release source",
+        "Added current trial clone and consent limits"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "LoudReader/TTSPreferences.swift and ReaderView.swift at release_v1.12 inspected 2026-09-28: single UserDefaults voice setting, cycle/picker and next-sentence transition",
+        "data/voices.ts and app/voices/page.tsx: browser roster samples; studio counts cross-checked by canonical release audit"
+      ]
+    },
+    {
+      "slug": "how-to-listen-to-public-domain-books-legally",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "False all-Gutenberg-public-domain statement",
+        "Worldwide/private-listening legal guarantees",
+        "Text versus recording/translation confusion"
+      ],
+      "changes": [
+        "What does Project Gutenberg’s listing tell you?",
+        "Why does your country matter?",
+        "What should you check about the edition?",
+        "Does a recording have the same status as its text?",
+        "How does personal text-to-speech listening fit in?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts",
+        "https://www.gutenberg.org/policy/permission.html",
+        "https://www.gutenberg.org/help/copyright.html",
+        "https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term",
+        "https://www.gov.uk/copyright/how-long-copyright-lasts",
+        "https://wiki.librivox.org/index.php/Copyright_and_Public_Domain"
+      ]
+    },
+    {
+      "slug": "huckleberry-finn-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Guaranteed clear dialect pronunciation without testing",
+        "Ignored historical slurs in family-facing pitch",
+        "Speculated LibriVox likely exists",
+        "No-download/offline and absolute privacy claims"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/76",
+        "https://librivox.org/the-adventures-of-huckleberry-finn-by-mark-twain/",
+        "https://www.gutenberg.org/policy/permission.html",
+        "https://www.gutenberg.org/cache/epub/76/pg76-images.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "introducing-loudkit",
+      "readFull": true,
+      "changed": false,
+      "issues": [],
+      "changes": [
+        "Retained freshly reviewed announcement: product-specific scope, explicit integration limits, sources, appropriate docs/source CTA and scheduled publication date remain accurate"
+      ],
+      "sources": [
+        "Local Loudkit site/src/content/docs/supported.md",
+        "Local Loudkit site/src/content/docs/guides/01-getting-started.md",
+        "Local Loudkit site/src/pages/agents.astro",
+        "Existing pinned companion verification provenance c984e6394596430a754340d481d686d1c4e95384"
+      ]
+    },
+    {
+      "slug": "is-elevenreader-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Treated generation hours as a universal listening cutoff; said Ultra was the only way past it.",
+        "Omitted Ultra daily import limit and separate catalogue allowance; denied useful Mac access and invented LoudReader device sync."
+      ],
+      "changes": [
+        "Explained generation versus replay, extra-hour packs and actual Ultra restrictions with primary sources.",
+        "Replaced native-Mac inference with web access, distinguished offline preparation, and corrected local-reader privacy and no-sync claims."
+      ],
+      "sources": [
+        "https://help.elevenlabs.io/hc/en-us/articles/35971782968465-How-do-ElevenReader-hours-work",
+        "https://elevenreader.io/",
+        "https://elevenreader.io/pricing",
+        "https://help.elevenlabs.io/hc/en-us/sections/26165356474897-ElevenReader",
+        "LoudReader release_v1.12 / docs/product-facts-2026-09-28.md; SubscriptionAccess.swift directly checked for first-book bonus"
+      ]
+    },
+    {
+      "slug": "is-listening-to-audiobooks-reading",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "No-significance treated as universal equivalence",
+        "Unsupported attention claims for highlighting",
+        "Broad dyslexia/learning claims beyond necessary scope",
+        "Research used as app endorsement"
+      ],
+      "changes": [
+        "Kept and reverified two primary studies with limits",
+        "Separated personal reading label, task skills and assessments",
+        "Added practical self-check and no app-study disclaimer"
+      ],
+      "sources": [
+        "https://journals.sagepub.com/doi/10.3102/00346543211060871",
+        "https://journals.sagepub.com/doi/10.1177/2158244016669550",
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "is-speechify-worth-it",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Treated 150k baseline as imminent definite reduction and compared one long book to the wrong cap.",
+        "Claimed $199.99 lifetime was less than two $29 payments; unsupported feature/voice superiority and obsolete no-OCR claim."
+      ],
+      "changes": [
+        "Kept value-for-money focus using a document/feature trial checklist, current price and fair explanation of 2026 usage extension.",
+        "Removed bad arithmetic and speculative superiority; compared actual local-reader limitations and added disclosure."
+      ],
+      "sources": [
+        "https://speechify.com/pricing/",
+        "https://speechify.com/usage-limits/",
+        "LoudReader release_v1.12 / docs/product-facts-2026-09-28.md; SubscriptionAccess.swift directly checked for first-book bonus"
+      ]
+    },
+    {
+      "slug": "is-text-to-speech-good-for-studying",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Incorrect dual-coding theory framed as settled TTS evidence",
+        "Future-dated provenance and obsolete 8-voice claim",
+        "Absolute privacy and learning claims"
+      ],
+      "changes": [
+        "Replaced pseudo-science with bounded primary retrieval-practice evidence",
+        "Added actionable session and visual-material limits",
+        "Updated free-tier, OCR and platform scope"
+      ],
+      "sources": [
+        "https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x",
+        "Shipping release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Subscription/SubscriptionAccess.swift; SubscriptionManager.swift; Subscription/PaywallReason.swift; PDFImportPipeline.swift; product audit dated 2026-09-28."
+      ]
+    },
+    {
+      "slug": "italian-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Repeated promotional filler instead of a language-specific workflow",
+        "Language picker incorrectly limited to imported books",
+        "Wrong no-OCR claim",
+        "Free trial and hardware limitations obscured",
+        "Absolute privacy wording and uncertain all-Mac voice promises",
+        "Framed a single narrator as pedagogically superior without evidence"
+      ],
+      "changes": [
+        "Added practical language-specific import and pronunciation checks",
+        "Explained Settings language selection and device-dependent studio availability",
+        "Corrected OCR and the continuing cost of non-English studio narration",
+        "Kept future publication date and replaced stale provenance",
+        "Separated repeatable narration from pronunciation coaching and varied human input"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), Engines/ChatterboxVoice.swift — named studio roster and language mapping; canonical source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, VoiceRegistry.swift:105–119 and ReadingLanguagesSheet.swift — library languages plus Settings selection; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, SubscriptionAccess.swift and SubscriptionManager.swift — 8 cumulative listening hours, English free selection afterwards; source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, DeviceCapability.swift, PDFImportPipeline.swift and PaywallReason.swift — device-dependent studio access, fallible OCR and Premium speed; source audit 2026-09-28.",
+        "data/voices.ts and public/voices — narrator names and browser sample references checked 2026-09-28."
+      ]
+    },
+    {
+      "slug": "jane-eyre-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Public domain everywhere/legal certainty",
+        "Unverified flawless narration and fastest-option claims",
+        "No-download promise",
+        "No useful guidance for edition or study needs"
+      ],
+      "changes": [
+        "Added verified human option and accurate edition identification",
+        "Added first-person/sample and study-reference guidance",
+        "Replaced quality rankings with a practical sample check",
+        "Corrected territory, Mac and download/free-tier descriptions"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/1260",
+        "https://www.gutenberg.org/cache/epub/1260/pg1260-images.html",
+        "https://librivox.org/jane-eyre-by-charlotte-bront/",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "learn-english-by-listening-to-books",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Brown et al. did not support the claimed superiority of reading with audio over reading alone.",
+        "Automatic brain/spelling mapping and “best-researched” language overstated the evidence.",
+        "Free-voice terms, globally hard-coded prices and privacy claims were stale.",
+        "Arbitrary routine timing and perfect-pronunciation implications lacked support."
+      ],
+      "changes": [
+        "Corrected the primary-study scope and no-significant-difference finding.",
+        "Built a sustainable routine with deliberate vocabulary work and choice of listening/reading modes.",
+        "Added synthetic-pronunciation limits and current hardware/free-tier facts."
+      ],
+      "sources": [
+        "https://nflrc.hawaii.edu/rfl/item-detail/174",
+        "https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.pdf",
+        "Shipping release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Subscription/SubscriptionAccess.swift; SubscriptionManager.swift; Subscription/PaywallReason.swift; PDFImportPipeline.swift; product audit dated 2026-09-28."
+      ]
+    },
+    {
+      "slug": "librivox-alternative",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Stale catalogue counts and mismatched languages",
+        "Collaborative narrator changes generalised to every title",
+        "All Gutenberg titles said identical to LibriVox and free worldwide",
+        "Synthetic superiority/constant quality and absolute privacy claims"
+      ],
+      "changes": [
+        "Added solo-edition search workflow before recommending switch",
+        "Separated downloadable recordings from live text narration",
+        "Replaced misleading catalogue table with workflow comparison",
+        "Added local copyright/translation cautions, current free tier and disclosure"
+      ],
+      "sources": [
+        "https://wiki.librivox.org/index.php/Recording_%26_Text_Policies",
+        "https://librivox.org/pages/public-domain/",
+        "https://www.gutenberg.org/help/copyright.html",
+        "https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/index.html",
+        "https://www.microsoft.com/en/customers/story/1646266241611394912-project-gutenberg-nonprofit-azure-synapse-analytics-azure-ai-services"
+      ]
+    },
+    {
+      "slug": "listen-to-books-at-the-gym",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Autopilot and fitness-adjacent assumptions",
+        "Universal headphone/watch claims",
+        "Streaming straw man, privacy absolutes and notes paywall"
+      ],
+      "changes": [
+        "Which parts of a session suit a book?",
+        "What should you prepare before leaving home?",
+        "How does LoudReader fit this workflow?",
+        "How should you handle interruptions and noise?",
+        "What makes a good first choice?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "listen-to-books-instead-of-scrolling",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported reward-psychology and guaranteed habit claims",
+        "Moralising feed-worthlessness language",
+        "Notes/highlights falsely Premium",
+        "Absolute privacy and offline model assumptions"
+      ],
+      "changes": [
+        "Made one-slot swap an optional measurable experiment",
+        "Added reason-specific adjustments and permission to stop",
+        "Corrected free notes and separated screen measurement"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "listen-to-books-on-your-commute",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Implied no-preparation offline capability",
+        "Guaranteed book counts",
+        "Absolute privacy and streaming-only alternative"
+      ],
+      "changes": [
+        "How much listening time do you actually have?",
+        "How do you prepare for tunnels and unreliable signal?",
+        "How can LoudReader read your own ebook on the journey?",
+        "What happens at transfers or interruptions?",
+        "Can you switch between the page and audio?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "listen-to-books-while-cleaning",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Cleaning described as cognitively effortless",
+        "Unfounded productivity/book-count claims",
+        "Plastic-bag control advice and false auto-pause on app switch",
+        "Guaranteed noise-cancelling and voice-quality claims"
+      ],
+      "changes": [
+        "Added task suitability and dry setup",
+        "Corrected accessory-dependent controls and explicit pause",
+        "Kept book-choice guidance with individual limits"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "listen-to-books-while-cooking",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Hands-free without touch contradiction",
+        "False iPad compatibility-only statement",
+        "Speaker solves all noise and cooking timer confusion"
+      ],
+      "changes": [
+        "Which part of cooking works for listening?",
+        "How should you place the phone and speaker?",
+        "What should you do before pressing play?",
+        "How do you recover after missing a passage?",
+        "What can LoudReader’s timer and controls do?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "listen-to-books-while-driving",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsafe lock-screen while-driving instructions in body and FAQ",
+        "Unverified worldwide legality claim",
+        "All-car control and instant setup promises",
+        "TTS works for any book and no-network absolutes"
+      ],
+      "changes": [
+        "Added parked-only phone setup and verified UK guidance",
+        "Distinguished remote audio controls from dedicated CarPlay",
+        "Explained offline preparation and distraction boundary"
+      ],
+      "sources": [
+        "https://www.gov.uk/using-mobile-phones-when-driving-the-law",
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "listen-to-books-while-running",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsourced brain-processing/run-rhythm claims",
+        "Airplane mode recommendation ignores communications",
+        "Encouraged mid-stride screen use and zero-network claims"
+      ],
+      "changes": [
+        "What is a useful first experiment?",
+        "How do you prepare offline playback?",
+        "How does LoudReader work on a run?",
+        "What should you do at crossings or interruptions?",
+        "How do you keep your place between runs?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "listen-to-books-while-walking",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "One-earbud safety guarantee",
+        "Guaranteed long-walk battery and largest-display-drain assertion",
+        "No cloud dependency of any kind",
+        "Assumed effortless attention and universal headphone gesture"
+      ],
+      "changes": [
+        "Added prepare/test/offline and battery checks",
+        "Made route awareness and pauses explicit",
+        "Replaced book-count productivity tone with optional listening"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "listen-to-confidential-documents",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Local TTS presented as blanket approval for confidential files and complete secure boundary",
+        "Airplane-mode audit and guaranteed deletion overclaimed",
+        "Obsolete no-OCR assertion; Mac native/platform ambiguity; no diagnostic disclosure"
+      ],
+      "changes": [
+        "Kept practical workflow but added approved-device/app check, harmless sample, layout verification, headphones and copy management",
+        "Updated to shipping local OCR with300-page cap/recognition limits",
+        "Distinguished app deletion from source files/backups and refused secure-erasure guarantee",
+        "Disclosed current diagnostic services and hidden usage switch; accurate iPad-on-Mac wording"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (corrected privacy row, shipping 1.12)",
+        "release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0): LoudReaderApp.swift, Analytics.swift, ErrorReporting.swift, SettingsSheet.swift:65,483",
+        "release_v1.12: PDFImportPipeline.swift:90,155–218; BookImportService.swift deleteBook"
+      ]
+    },
+    {
+      "slug": "listen-to-fanfiction",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Every-work/no-account overclaim",
+        "Unverified Royal Road scraping advice",
+        "No-third-party privacy claim",
+        "Unsupported browser-extension superiority"
+      ],
+      "changes": [
+        "How do you get the EPUB from AO3?",
+        "How do you listen to the downloaded file?",
+        "Why use a file rather than a live web page?",
+        "What happens when a work in progress updates?",
+        "What is private about local narration?",
+        "What about other fiction sites?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts",
+        "https://archive.transformativeworks.org/faq/downloading-fanworks?language_id=de"
+      ]
+    },
+    {
+      "slug": "listen-to-google-docs-aloud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Denied current Google Docs native Gemini audio",
+        "Dismissed screen readers with unsupported voice claims",
+        "False universals about extension tracking and comprehension",
+        "Incorrect native Mac claim and table/alt-text guarantees"
+      ],
+      "changes": [
+        "Added current eligible-plan Docs audio with full-tab versus summary distinction",
+        "Preserved practical export workflow and added source/version controls",
+        "Qualified extraction, document permissions and local/cloud privacy boundaries"
+      ],
+      "sources": [
+        "https://support.google.com/docs/answer/16386234?hl=en",
+        "https://support.google.com/docs/answer/49114?hl=en",
+        "release_v1.12:LoudReader/BookImportService.swift — EPUB/PDF import",
+        "release_v1.12:LoudReader/ContentFilter.swift; PDFImportPipeline.swift — structure-specific extraction",
+        "release_v1.12:LoudReader/Analytics.swift; LoudReaderApp.swift — telemetry",
+        "release_v1.12:LoudReader.xcodeproj/project.pbxproj — iPad app on Mac"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-long-emails-aloud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "No-analytics and never-touches-server claims",
+        "Guarantees of confidentiality/NDA suitability",
+        "Unsupported lock-screen claims about iOS speech and exact15-second workflow",
+        "Guaranteed chronological thread order and alt-text capture"
+      ],
+      "changes": [
+        "Added PDF-versus-EML distinction and source checks",
+        "Practical duplicate-thread, attachments and retention guidance",
+        "Narrowed privacy to local narration and removed unsupported superiority"
+      ],
+      "sources": [
+        "https://support.apple.com/guide/mail/mlhlp1044/mac",
+        "release_v1.12:LoudReader/BookImportService.swift — file types; no mailbox connector",
+        "release_v1.12:LoudReader/PDFImportPipeline.swift — extracted document order",
+        "release_v1.12:LoudReader/Analytics.swift; LoudReaderApp.swift — telemetry"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-markdown-files",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Incorrect Obsidian community-plugin requirement",
+        "Pandoc PDF command omitted engine dependency",
+        "Invented real-draft example and broad cognitive claims",
+        "Guaranteed code/table/alt-text narration and perfect rendering"
+      ],
+      "changes": [
+        "Added practical EPUB option and documented PDF dependency",
+        "Separated prose proofreading from code validation",
+        "Added export/version checks and accurate local-speech boundary"
+      ],
+      "sources": [
+        "https://pandoc.org/MANUAL.html",
+        "release_v1.12:LoudReader/BookImportService.swift — EPUB/PDF input",
+        "release_v1.12:LoudReader/ContentFilter.swift; PDFImportPipeline.swift — structure handling",
+        "release_v1.12:LoudReader/Analytics.swift; LoudReaderApp.swift — telemetry"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-medium-articles",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Falsely denied Medium TTS and claimed author recordings only",
+        "Denied shipping URL import/share extension",
+        "No-analytics and guaranteed full-extraction claims",
+        "Unsupported folder/batch import and fixed-time assertions"
+      ],
+      "changes": [
+        "Native Medium audio first with official evidence",
+        "Added current link-first/PDF-fallback workflow and authenticated-page limitation",
+        "Added extraction checklist, snapshot distinction and Premium article-saving boundary"
+      ],
+      "sources": [
+        "https://help.medium.com/hc/en-us/articles/4635049283351-About-audio",
+        "release_v1.12:LoudReader/AddContentSheet.swift; LinkImportSheet.swift — Paste a Link",
+        "release_v1.12:LoudReader/BookImportService.swift; ArticleImportPipeline.swift — HTML extraction and quality failures",
+        "release_v1.12:LoudReader/Subscription/SubscriptionAccess.swift — article allowance",
+        "release_v1.12:LoudReader/Analytics.swift; LoudReaderApp.swift — telemetry exists"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-mobi-files",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimed all Kindle purchases locked and most commercial MOBI protected",
+        "Guaranteed clean/seconds-long conversions",
+        "Conflated container conversion with audio production",
+        "Blanket privacy slogan"
+      ],
+      "changes": [
+        "Focused on legacy library workflow and inspection checkpoints",
+        "Removed publisher/public-domain generalisations",
+        "Linked separate current Kindle eligibility guide and clarified platform/offline setup"
+      ],
+      "sources": [
+        "https://manual.calibre-ebook.com/faq.html#what-formats-does-calibre-support-conversion-to-from",
+        "https://kdp.amazon.com/en_US/help/topic/GDDXGH9VR22ACM8U",
+        "release_v1.12:LoudReader/BookImportService.swift — EPUB/PDF detection",
+        "release_v1.12:LoudReader.xcodeproj/project.pbxproj — iPad compatibility on Mac"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-research-papers",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Obsolete no-OCR claim",
+        "Unsupported majority-of-modern-PDF accuracy claim",
+        "No-equal privacy and confidential-after-listening guarantee",
+        "Stale competitor/cloud comparison",
+        "Overstated extraction cleanliness"
+      ],
+      "changes": [
+        "Reframed as exact-file import QA",
+        "Added verified local OCR and partial-result limit",
+        "Separated prose first pass from equation/table/source verification",
+        "Disclosed telemetry without claiming compliance",
+        "Applied final 1.12 analytics correction: default enabled, no visible opt-out switch; removed stale Settings→Privacy promise"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "listen-to-rss-feeds-aloud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Universal claims RSS apps lack TTS",
+        "Obsolete Pocket recommendation and false cloud/account generalisations",
+        "Denied actual URL importer",
+        "False no-analytics/private-everything claims and summary/full-page confusion"
+      ],
+      "changes": [
+        "Link-first workflow distinguishes feed URL from article URL",
+        "Replaced unverified competitor survey with user-directed selection check",
+        "Added queue curation and offline/network/plan limits"
+      ],
+      "sources": [
+        "release_v1.12:LoudReader/AddContentSheet.swift; LinkImportSheet.swift — article URL imports",
+        "release_v1.12:LoudReader/ArticleImportPipeline.swift — extraction quality gate",
+        "release_v1.12:LoudReader/Subscription/SubscriptionAccess.swift — article saving allowance",
+        "release_v1.12:LoudReader/Analytics.swift; LoudReaderApp.swift — telemetry"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-scanned-pdf-books",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Body, FAQ and metadata falsely denied shipping OCR.",
+        "Invalid tesseract command passed a PDF directly.",
+        "Unsupported99% accuracy and reliable-source generalisations.",
+        "Text selection test treated as definitive and perfect readability promised."
+      ],
+      "changes": [
+        "Explained release1.12 local OCR trigger,300-page limit and partial-result notices.",
+        "Kept practical scan-quality, sampling and external-OCR advice with a verified OCRmyPDF command.",
+        "Added camera OCR with supported-device qualification and narrowed privacy FAQ."
+      ],
+      "sources": [
+        "release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: BookImportService.swift, PDFImportPipeline.swift, DocumentScanImport.swift, LoudReaderApp.swift, Analytics.swift; canonical audit docs/product-facts-2026-09-28.md",
+        "https://ocrmypdf.readthedocs.io/en/latest/cookbook.html"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-substack-newsletters",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Denied existing Substack TTS",
+        "Invented workflow attributed to several users",
+        "Denied URL/share import and overstated no-tracking",
+        "Guaranteed PDF completeness and precise export times"
+      ],
+      "changes": [
+        "Separated built-in TTS, writer voiceovers, public-link imports and subscriber email copies",
+        "Replaced fabricated user anecdote with practical queue steps",
+        "Added content verification and honest privacy/plan boundaries"
+      ],
+      "sources": [
+        "https://support.substack.com/hc/en-us/articles/7265753724692-How-do-I-listen-to-a-Substack-post",
+        "https://support.substack.com/hc/en-us/articles/7265784112916-How-do-I-add-a-voiceover-to-my-Substack-post",
+        "release_v1.12:LoudReader/AddContentSheet.swift; LinkImportSheet.swift — links",
+        "release_v1.12:LoudReader/ArticleImportPipeline.swift — extraction limits",
+        "release_v1.12:LoudReader/Subscription/SubscriptionAccess.swift — article allowance",
+        "release_v1.12:LoudReader/Analytics.swift; LoudReaderApp.swift — diagnostics and usage analytics"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-textbooks",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Incorrect claim that app and every TTS app lack OCR",
+        "Guarantees about highlighting, learning and import speed",
+        "Free-tier and absolute privacy overstatements",
+        "Textbook-as-lecture equivalence and missing visual limits"
+      ],
+      "changes": [
+        "Built a file-inspection and chapter-revision workflow",
+        "Explained OCR as fallible fallback",
+        "Added DRM/accessibility-copy limits",
+        "Separated prose from diagrams and exercises",
+        "Clarified 300-page OCR cap and free notes/highlights"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12, LoudReader/PDFImportPipeline.swift:150–218 — on-device OCR triggers, 300 OCR-page cap and partial results; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, LoudReader/ContentView.swift fileImporter and PDFImportPipeline locked-PDF check — EPUB/PDF imports and DRM/locked-file limits; source audit reviewed 2026-09-28.",
+        "LoudReader_mac release_v1.12, Info.plist and PlayerService.swift — background audio; source audit reviewed 2026-09-28.",
+        "Shipping app product audit, 2026-09-28: LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), not the older checkout HEAD. No runtime test was performed for this editorial pass.",
+        "LoudReader/Subscription/SubscriptionAccess.swift and SubscriptionManager.swift — eight cumulative listening hours, limited English free selection afterwards, unrestricted book imports/listening.",
+        "LoudReader/Subscription/PaywallReason.swift:125–148 — Premium speed and timer; notes/highlights are not Premium-only. Source inspected 2026-09-28.",
+        "LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local speech plus diagnostics/analytics; no exposed analytics opt-out promised. Source-auditor report reviewed 2026-09-28.",
+        "App target and App Store record — iPhone/iPad, iPad compatibility on Apple Silicon Macs. Studio voice availability depends on hardware; no native macOS claim."
+      ]
+    },
+    {
+      "slug": "listen-to-txt-files",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported direct Notes TXT workflow and conversion timing.",
+        "Unqualified privacy guarantee, perfect format preservation and huge-file claims.",
+        "Proofreading and log-listening benefits overstated."
+      ],
+      "changes": [
+        "Added verified TextEdit PDF export and copy-to-Pages workflow.",
+        "Added encoding, line-wrap, transcript and versioned proofreading checks.",
+        "Explained editor storage/sync separately from local narration and analytics."
+      ],
+      "sources": [
+        "release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: BookImportService.swift, PDFImportPipeline.swift, DocumentScanImport.swift, LoudReaderApp.swift, Analytics.swift; canonical audit docs/product-facts-2026-09-28.md",
+        "https://support.apple.com/guide/textedit/create-open-and-convert-documents-txtee6663a0e/mac",
+        "https://support.apple.com/en-ca/guide/pages-iphone/tan78c0ddfdb/ios"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-web-pages-aloud-mac",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Denied current link and share imports",
+        "Confused macOS speech with Safari-specific Listen to Page",
+        "Falsely claimed no controller rate controls",
+        "Native-Mac implications and absolute privacy"
+      ],
+      "changes": [
+        "Verified macOS Read & Speak settings and controller",
+        "Added link import with PDF fallback and compatibility-mode statement",
+        "Separated Premium extras from offline synthesis"
+      ],
+      "sources": [
+        "https://support.apple.com/guide/mac-help/mh27448/mac",
+        "https://support.apple.com/guide/mac-help/mchlp1531/mac",
+        "release_v1.12:LoudReader/AddContentSheet.swift; LinkImportSheet.swift — Paste a Link",
+        "release_v1.12:LoudReader/ArticleImportPipeline.swift — extraction errors",
+        "release_v1.12:LoudReader/Subscription/PaywallReason.swift — paid controls",
+        "release_v1.12:LoudReader/Analytics.swift; LoudReaderApp.swift — telemetry",
+        "release_v1.12:LoudReader.xcodeproj/project.pbxproj — iOS target"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-wikipedia-articles",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Denied actual URL importer",
+        "Claimed every citation bracket spoken despite filtering",
+        "Guaranteed table reading and PDF layout",
+        "Unsupported memory and completion benefits; stale article counts"
+      ],
+      "changes": [
+        "Updated URL/PDF options",
+        "Separated structured HTML from PDF table behaviour",
+        "Added revision/source checking and practical research steps without learning guarantees"
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Help:Download_as_PDF",
+        "release_v1.12:LoudReader/AddContentSheet.swift; ArticleImportPipeline.swift — article import",
+        "release_v1.12:LoudReader/ContentFilter.swift — preserveReadingTables and speechNormalized",
+        "release_v1.12:LoudReader/PDFImportPipeline.swift — text extraction",
+        "release_v1.12:LoudReader/Analytics.swift; LoudReaderApp.swift — telemetry"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "listen-to-word-document",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Word comparison dismissed it as only useful for a few minutes.",
+        "Unqualified free/version/platform/connection claims.",
+        "Local narration conflated with no network/cloud/telemetry.",
+        "Export described as lossless without markup, sync or layout checks."
+      ],
+      "changes": [
+        "Replaced dismissive comparison with choice based on live editing versus separate listening copy.",
+        "Linked Microsoft primary instructions and added plain developer disclosure.",
+        "Added markup/export inspection, source-file preservation and manual device-transfer limits.",
+        "Corrected Mac compatibility and diagnostic/analytics disclosure."
+      ],
+      "sources": [
+        "release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: BookImportService.swift, PDFImportPipeline.swift, DocumentScanImport.swift, LoudReaderApp.swift, Analytics.swift; canonical audit docs/product-facts-2026-09-28.md",
+        "https://support.microsoft.com/en-us/office/listen-to-your-word-documents-5a2de7f3-1ef4-4795-b24e-64fc2731b001",
+        "https://support.microsoft.com/en-gb/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "little-women-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unverified voice warmth and universal literary-quality judgments",
+        "Contradictory nothing-to-download promise",
+        "Privacy absolutism",
+        "Needed useful two-part edition check"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/37106",
+        "https://www.gutenberg.org/cache/epub/37106/pg37106-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "loudkit-voice-notes-for-agents",
+      "readFull": true,
+      "changed": false,
+      "issues": [],
+      "changes": [
+        "Retained freshly reviewed announcement: product-specific scope, explicit integration limits, sources, appropriate docs/source CTA and scheduled publication date remain accurate"
+      ],
+      "sources": [
+        "Local Loudkit site/src/content/docs/supported.md",
+        "Local Loudkit site/src/content/docs/guides/01-getting-started.md",
+        "Local Loudkit site/src/pages/agents.astro",
+        "Existing pinned companion verification provenance c984e6394596430a754340d481d686d1c4e95384"
+      ]
+    },
+    {
+      "slug": "macos-spoken-content-vs-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "macOS falsely said no highlighting, no playback rate controls, works in every app",
+        "Unverified arbitrary length threshold and system stops on window change",
+        "False per-book settings retention and native Mac/Neural Engine generalisations",
+        "Notes sold as paid and blanket privacy asserted"
+      ],
+      "changes": [
+        "Added correct version-aware Read & Speak instructions",
+        "Explained source-app text limitations and built-in capabilities",
+        "Reframed selection around library/resumption workflow with practical trial",
+        "Corrected app platform/feature gates and diagnostics; updated FAQ and disclosure"
+      ],
+      "sources": [
+        "https://support.apple.com/en-gb/guide/mac-help/mh27448/26/mac/26",
+        "https://support.apple.com/en-gb/guide/mac-help/mh27448/15.0/mac/15.0",
+        "https://support.apple.com/en-gb/guide/mac-help/spch638/26/mac/26"
+      ]
+    },
+    {
+      "slug": "make-iphone-read-books-aloud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Dismissed all system voices as robotic",
+        "Blanket Kindle DRM claims",
+        "Any-PDF and privacy absolutes",
+        "Incomplete free voice allowance"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "https://support.apple.com/guide/iphone/iph96b214f0/ios — checked2026-09-28: current Read & Speak menu, Speak Screen gesture, voice and rate controls; older releases call it Spoken Content.",
+        "Shipping1.12 PDFImportPipeline.swift: on-device OCR; Info.plist and PlayerService.swift: background audio; SubscriptionManager.swift: entitlements."
+      ]
+    },
+    {
+      "slug": "male-or-female-narrator-audiobook",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported blanket statement that no reliable research exists",
+        "Gender inferred from names as evidence of quality choices",
+        "Repeated dismissive preference and sales copy",
+        "Device availability omitted"
+      ],
+      "changes": [
+        "Added useful voice-comparison method without gender ranking",
+        "Separated character matching from multi-voice narration",
+        "Kept roster limitations with current access and device caveats"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "Editorial preference guide only; no gender-comprehension study, preference survey or universal ranking claimed",
+        "data/voices.ts and app/voices/page.tsx: samples and language roster, not evidence of listener preferences"
+      ]
+    },
+    {
+      "slug": "meditations-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Incorrect George Long translator provenance",
+        "Unsupported claims drifting attention loses nothing and even delivery matches author intent",
+        "Universal rights/no-download claims",
+        "Runtime hides front matter/reference material"
+      ],
+      "changes": [
+        "Corrected edition to Casaubon using ebook notes",
+        "Added practical section-based attentive listening and translation checks",
+        "Explained introduction/main-text/reference sections",
+        "Removed passive-learning claims and fixed download/free-tier requirements"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/2680",
+        "https://www.gutenberg.org/cache/epub/2680/pg2680-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "moby-dick-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Ignored official better text-edition recommendation and real free human audio",
+        "Artificial longest in this batch comparison",
+        "Untested quality claims and privacy absolutes",
+        "No initial-download qualification"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/2701",
+        "https://www.gutenberg.org/ebooks/15",
+        "https://www.gutenberg.org/ebooks/28794",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "multilingual-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Several sections repeated voice-count comparisons instead of explaining multilingual reading.",
+        "Picker described as library-only.",
+        "Implied universal hardware availability and absolute privacy.",
+        "Wrong no-OCR restriction and notes/highlights gate; incomplete post-trial voice choice."
+      ],
+      "changes": [
+        "Reframed around a multilingual library, language setup, checking narrator when switching books and comparing sample passages.",
+        "Distinguished language support from translation and unverified seamless bilingual/code-switch behaviour.",
+        "Added Settings language selection, hardware caveat and scanned-PDF recognition checks.",
+        "Used FREE_TIER.full; clarified paid non-English narration versus free notes, and local processing versus whole-app telemetry.",
+        "Rewrote FAQs/description and preserved Oct7 dates."
+      ],
+      "sources": [
+        "Shipping release_v1.12, commit5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Engines/ChatterboxVoice.swift, ReadingLanguages.swift, SettingsSheet.swift, VoiceRegistry.swift.",
+        "Shipping PDFImportPipeline.swift:88-96,155-218 — local Vision OCR and partial results.",
+        "Canonical product audit docs/product-facts-2026-09-28.md — entitlement, device availability, platform and offline claims from release1.12; no runtime test.",
+        "https://loudreader.io/voices checked2026-09-28: sample destination/roster only; stale privacy ignored.",
+        "Shipping LoudReaderApp.swift:62,244 — Sentry and analytics; no opt-out Settings claim."
+      ]
+    },
+    {
+      "slug": "natural-sounding-text-to-speech-apps",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Fabricated blind-test claim",
+        "Cloud superiority and all-cloud-online assertions",
+        "Universal neural reliability and implied sample inference",
+        "Free roster and notes paywall"
+      ],
+      "changes": [
+        "What should you listen for?",
+        "How do you make a fair comparison?",
+        "Does cloud processing automatically sound better?",
+        "How can you try LoudReader?",
+        "When is paying for a voice worthwhile?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "naturalreader-alternative",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Described all NaturalReader products as subscription-only and dismissed offline use",
+        "Unsupported no-analytics, no-data-collection and zero-network LoudReader promises",
+        "False library/position sync and dated no-web-article import claims",
+        "Unsupported voice-quality and latency comparison"
+      ],
+      "changes": [
+        "Separated NaturalReader online personal service from perpetual desktop software",
+        "Explained downloaded audio versus local narration and added current official links",
+        "Reframed selection around formats, devices, source documents and exact plan",
+        "Corrected LoudReader OCR/article imports, no-sync, Mac compatibility and telemetry; added Disclosure",
+        "Rewrote matching FAQs and metadata; preserved publishedAt; set material-edit date2026-09-28"
+      ],
+      "sources": [
+        "https://help.naturalreaders.com/en/articles/8584530-what-is-naturalreader-ai-text-to-speech-personal-version",
+        "https://www.naturalreaders.com/software.html",
+        "https://help.naturalreaders.com/en/articles/11543218-working-with-text-and-audio-personal-version",
+        "https://help.naturalreaders.com/en/articles/8854700-plans-pricing-personal-version",
+        "LoudReader release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; root source audit and corrected hidden-analytics-control finding,2026-09-28"
+      ]
+    },
+    {
+      "slug": "on-device-text-to-speech-explained",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimed runtime cannotdownload and fullbundling",
+        "Overstated alloperationsANE/hardwarecausality",
+        "Missing current diagnostics context",
+        "Hardware floor conflated withalllocalTTS"
+      ],
+      "changes": [
+        "Retained explanatory structure and WaveNet source",
+        "Narrowed model/runtime claims and added current data-handling caveat",
+        "Clarified iPad build and device-gated voices"
+      ],
+      "sources": [
+        "Shipping1.12 audit",
+        "https://arxiv.org/abs/1609.03499",
+        "https://developer.apple.com/documentation/coreml/mlcomputeunits",
+        "Local Loudkit support matrix and agents landing"
+      ]
+    },
+    {
+      "slug": "peter-pan-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unqualified worldwide public-domain/free claim despite UK special rights",
+        "5.5-hour figure presented as fixed runtime",
+        "Incorrect no-download, blanket privacy and cross-device continuity claims",
+        "Provenance claimed future 2027 verification"
+      ],
+      "changes": [
+        "Identified Peter and Wendy and distinguished novel/play/adaptations",
+        "Added official GOSH rights guidance and territory-specific copy selection",
+        "Added family preview guidance and honest synthetic-voice/sample limits",
+        "Corrected setup downloads, Mac compatibility and free tier; removed fixed runtime",
+        "Added shared developer disclosure at the first app recommendation; removed references to abandoned marketing copy"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/16",
+        "https://www.gosh.nhs.uk/about-us/our-history/peter-pan-at-great-ormond-street-hospital/",
+        "https://neverlandofficial.com/discover/peter-pan-copyright/"
+      ]
+    },
+    {
+      "slug": "pocket-read-aloud-alternative",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Presented Pocket as a live service in 2026 and gave unusable export/listen instructions",
+        "Misrepresented historical Pocket voices and playback as a current comparison",
+        "Claimed mandatory PDF conversion and no network/telemetry for LoudReader",
+        "Omitted direct article saving and its free allowance"
+      ],
+      "changes": [
+        "Rebuilt around post-shutdown recovery from already-kept links/files, no recovery promise",
+        "Used current Mozilla November12 2025 export/API closure rather than older October deadline",
+        "Added balanced read-later alternative and practical rebuild/PDF fallback process",
+        "Clarified direct article saving, free30 allowance, book listening and telemetry; added Disclosure",
+        "Rewrote matching FAQs and metadata; preserved publishedAt; set material-edit date2026-09-28"
+      ],
+      "sources": [
+        "https://support.mozilla.org/en-US/kb/future-of-pocket",
+        "https://www.instapaper.com/docs/premium/overview",
+        "https://support.apple.com/guide/iphone/annotate-and-save-a-webpage-as-a-pdf-iphfd5b616b5/ios",
+        "LoudReader release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; root source audit and corrected hidden-analytics-control finding,2026-09-28"
+      ]
+    },
+    {
+      "slug": "polish-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Repeated promotional filler instead of a language-specific workflow",
+        "Language picker incorrectly limited to imported books",
+        "Wrong no-OCR claim",
+        "Free trial and hardware limitations obscured",
+        "Absolute privacy wording and uncertain all-Mac voice promises"
+      ],
+      "changes": [
+        "Added practical language-specific import and pronunciation checks",
+        "Explained Settings language selection and device-dependent studio availability",
+        "Corrected OCR and the continuing cost of non-English studio narration",
+        "Kept future publication date and replaced stale provenance",
+        "Added Polish diacritic and proofreading checks without promising grammar correction"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), Engines/ChatterboxVoice.swift — named studio roster and language mapping; canonical source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, VoiceRegistry.swift:105–119 and ReadingLanguagesSheet.swift — library languages plus Settings selection; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, SubscriptionAccess.swift and SubscriptionManager.swift — 8 cumulative listening hours, English free selection afterwards; source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, DeviceCapability.swift, PDFImportPipeline.swift and PaywallReason.swift — device-dependent studio access, fallible OCR and Premium speed; source audit 2026-09-28.",
+        "data/voices.ts and public/voices — narrator names and browser sample references checked 2026-09-28."
+      ]
+    },
+    {
+      "slug": "portuguese-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Near-duplicate French article substituted narrator names and repeated roster warnings.",
+        "No practical accent audition or language-study workflow.",
+        "Incorrect scan rejection and Premium-only notes.",
+        "Unqualified privacy, Mac and offline readiness; old free-tier detail."
+      ],
+      "changes": [
+        "Centred article on Brazilian/European accent fit without assigning an unverified regional label to Rafael.",
+        "Added task-specific sample checklist and listen-read-listen study routine with no promised learning outcome.",
+        "Added Settings language setup, extraction/OCR checks, DRM limitation and offline readiness instructions.",
+        "Qualified device availability and iPad Mac compatibility; used canonical free-tier constants and diagnostics distinction.",
+        "Rewrote FAQs/description and preserved Oct2 dates."
+      ],
+      "sources": [
+        "Shipping release_v1.12, commit5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Engines/ChatterboxVoice.swift, ReadingLanguages.swift, SettingsSheet.swift, VoiceRegistry.swift.",
+        "Shipping PDFImportPipeline.swift:88-96,155-218 — local Vision OCR and partial results.",
+        "Canonical product audit docs/product-facts-2026-09-28.md — entitlement, device availability, platform and offline claims from release1.12; no runtime test.",
+        "https://loudreader.io/voices checked2026-09-28: sample destination/roster only; stale privacy ignored.",
+        "Shipping LoudReaderApp.swift:62,244 — Sentry and analytics; no opt-out Settings claim."
+      ]
+    },
+    {
+      "slug": "pride-and-prejudice-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Worldwide and instant-access implication",
+        "Repeated untested voice judgments",
+        "False human audio must be distinct-character performance framing",
+        "No practical help matching classroom editions"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/1342",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "project-gutenberg-audiobooks",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Entire catalogue availability and all-languages coverage guarantees",
+        "Worldwide public-domain assertion",
+        "Stale title counts and secondary sources",
+        "Unfair claim MP3 players cannot save position",
+        "Only-Gutenberg-network privacy claim"
+      ],
+      "changes": [
+        "Compared record-versus-reader choice without superiority claims",
+        "Used official project/LibriVox/licence sources",
+        "Added edition/translation checks and download distinction",
+        "Narrowed export claim to no promised capability"
+      ],
+      "sources": [
+        "https://librivox.org/pages/about-librivox/",
+        "https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/index.html",
+        "https://www.gutenberg.org/policy/license",
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "proofread-by-listening",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "TTS always reads verbatim and catches all errors",
+        "Implied live draft edits",
+        "Fake privacy audit via airplane mode",
+        "Hard-coded prices and notes feature errors"
+      ],
+      "changes": [
+        "What should you listen for?",
+        "How do you prepare a reliable listening copy?",
+        "What does the pause-and-fix loop look like?",
+        "What pace and voice should you choose?",
+        "How should you handle an unpublished draft?",
+        "What should the final pass cover?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "read-aloud-for-visual-fatigue",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported ciliary-muscle story and claim fatigue is never a medical condition",
+        "Guaranteed recovery, prevention and voice-quality relief",
+        "Duplicated eye-strain article and pressured productivity framing",
+        "Future provenance and absolute privacy"
+      ],
+      "changes": [
+        "Focused article on an evening screen-off routine",
+        "Removed medical mechanism and guaranteed benefits",
+        "Explained timer and attention limits",
+        "Added sourced eye-break context and distinct crosslink to eye-strain guide"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), SubscriptionAccess.swift, SubscriptionManager.swift and PaywallReason.swift — free voice allowance, unrestricted book listening, speed/timer gates and free notes; checked via canonical 2026-09-28 source audit and PaywallReason source inspection.",
+        "LoudReader_mac release_v1.12, PDFImportPipeline.swift:150–218 — OCR fallback, 300-page OCR cap and reported partial results; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, Info.plist, PlayerService.swift and app target — background audio and iPad-app compatibility on Apple Silicon, not a native Mac build; canonical source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local narration plus Sentry diagnostics/TelemetryDeck analytics; no exposed analytics opt-out is promised. Source audit 2026-09-28; no independent network audit.",
+        "https://www.nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work/keep-your-eyes-healthy — regular computer-viewing breaks, checked 2026-09-28.",
+        "https://www.nhs.uk/symptoms/dry-eyes/ — recurrent/persistent discomfort warrants eye-care advice; checked 2026-09-28."
+      ]
+    },
+    {
+      "slug": "read-aloud-on-macbook",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Contradicted own Mac provenance with native performance/menu claims",
+        "Asserted window focus always stops system speech",
+        "False library sync in FAQ",
+        "Battery and closed-lid absolutes"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "https://support.apple.com/guide/mac-help/mh27448/mac — checked2026-09-28: Read & Speak, Speak selection, Option-Esc default, controller and highlighting.",
+        "https://support.apple.com/guide/app-store/fird2c7092da/mac — checked2026-09-28: compatible iPad apps on Apple Silicon, Designed for iPad label.",
+        "Shipping Xcode project and no-sync audit; Book.swift and PlayerService.swift: local progress."
+      ]
+    },
+    {
+      "slug": "read-aloud-screen-off-iphone",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimed remote scrubber despite no position-command handler",
+        "Promised every accessory next-track button triggers 15-second skips although next/previous track disabled",
+        "Speak Screen incorrectly described as single voice, no controls and universally unreliable",
+        "App stopping once treated as conclusive lack of background capability",
+        "Unmeasured battery-hours promises and universal Neural Engine efficiency narrative"
+      ],
+      "changes": [
+        "Added concrete screen-lock, accessory and offline-readiness setup tests",
+        "Accurately separated play/pause, 15-second skip and unsupported next-track/remote position seeking",
+        "Added interruption troubleshooting and useful support-report details",
+        "Linked official Apple background-audio and Speak Screen documentation without guessing universal behaviour",
+        "Preserved publishedAt 2026-08-03 and updated lastModified 2026-09-28"
+      ],
+      "sources": [
+        "release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0): Info.plist; LoudReaderApp.swift:820; PlayerService.swift:1733–1787,1826–1910; Subscription/PaywallReason.swift:125–148",
+        "https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/ConfiguringAudioSettings/ConfiguringAudioSettings.html",
+        "https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios",
+        "docs/product-facts-2026-09-28.md"
+      ]
+    },
+    {
+      "slug": "read-and-listen-at-the-same-time",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Outdated Whispersync-only Kindle description",
+        "Assumed every book sold in both formats supports synchronisation",
+        "Universal attention and comprehension benefits",
+        "Any-book/no conversion and broad privacy claims"
+      ],
+      "changes": [
+        "Added three distinct read-along routes and setup troubleshooting",
+        "Updated Read & Listen with eligible-edition caveat",
+        "Bounded actual research result and removed unsupported learning promises",
+        "Current OCR, device and language facts"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "https://www.audible.com/ep/read-listen (opened 2026-09-28: naming, matching editions, Audible/Kindle flow, marketplace eligibility)",
+        "https://journals.sagepub.com/doi/10.1177/2158244016669550 (opened 2026-09-28: adult nonfiction comprehension/retention; no universal modality benefit)"
+      ]
+    },
+    {
+      "slug": "read-books-aloud-on-ipad",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unsupported iPad learning superiority and eye-strain claim",
+        "Unverified Split View/StageManager/external-display guarantees",
+        "Fullstudio/all-iPad assumptions",
+        "Privacy and anyfile absolutes"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "Shipping1.12 DeviceCapability.swift and VoiceRegistry.swift: hardware-gated studio voices.",
+        "Shipping PDFImportPipeline.swift: OCR threshold, limit300 and degraded/partial result path."
+      ]
+    },
+    {
+      "slug": "read-more-books-by-listening",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Invented typical schedule and book-completion promises",
+        "Driving/chores called time requiring no brain",
+        "Position behaviour implied universal syncing",
+        "Paid notes and no-time-limit voice ambiguity"
+      ],
+      "changes": [
+        "Made time arithmetic an explicit illustrative example",
+        "Added small queue and same-device mode transition",
+        "Separated optional pace from completion goals"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "read-my-essay-out-loud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unfair built-in/web-reader claims",
+        "False hear-edits-without-reimport workflow",
+        "No-analytics guarantee",
+        "Unsourced cognitive guarantees"
+      ],
+      "changes": [
+        "What can you use without a new app?",
+        "What should the first listening pass ask?",
+        "How do you make a separate copy in LoudReader?",
+        "What should the sentence-level pass cover?",
+        "What about private or sensitive essays?",
+        "What should you check before submitting?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts",
+        "https://support.apple.com/en-gb/guide/mac-help/mh27448/mac",
+        "https://support.microsoft.com/en-us/word/listen-to-your-word-documents"
+      ]
+    },
+    {
+      "slug": "reading-english-books-non-native",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "98% familiar vocabulary was presented as universal, with arbitrary six/ten-word cutoffs.",
+        "Claims that the next book by an author is always easier and that finishing is the whole strategy overreached.",
+        "Synthetic pronunciation and highlighting were portrayed as infallible.",
+        "Classic availability, privacy and free-tier claims were too broad."
+      ],
+      "changes": [
+        "Added comprehension sampling and qualified the original finding using the registered replication.",
+        "Made dictionary strategy flexible and distinguished pleasure reading from precision tasks.",
+        "Replaced motivational absolutes with practical stopping points and reader choice.",
+        "Clarified app scope, pronunciation limits and current free features."
+      ],
+      "sources": [
+        "https://nflrc.hawaii.edu/rfl/item/43",
+        "https://onlinelibrary.wiley.com/doi/full/10.1111/lang.12622",
+        "Shipping release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Subscription/SubscriptionAccess.swift; SubscriptionManager.swift; Subscription/PaywallReason.swift; PDFImportPipeline.swift; product audit dated 2026-09-28."
+      ]
+    },
+    {
+      "slug": "reduce-screen-time-with-audiobooks",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Guaranteed zero-screen claim",
+        "Unsupported eye-relief and sleep implications",
+        "Always-dark locked display assertion",
+        "Guaranteed indirect reduction from listening habit"
+      ],
+      "changes": [
+        "Separated phone time, display time and interruptions",
+        "Added honest session accounting and other-device caveat",
+        "Kept evening setup optional without health promise"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "sherlock-holmes-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Global public-domain assertion and absolute privacy claim",
+        "11.5 hours and 40–50 minutes per case unverified as performed duration",
+        "Fastest-route and consistent-quality superiority claims",
+        "Catalog confused with preloaded content"
+      ],
+      "changes": [
+        "Distinguished Adventures from the complete canon and other collections",
+        "Linked verified PG edition and cautioned recording-specific rights",
+        "Added clue/pronunciation and story-boundary listening advice",
+        "Corrected downloading, Mac and tier descriptions; removed timing promises",
+        "Added shared developer disclosure at the first app recommendation; removed references to abandoned marketing copy"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/1661",
+        "https://www.gutenberg.org/ebooks/9551",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "slow-down-audiobook-speed",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unverified competitor speed floors and superiority framing",
+        "Universal language-learning benefits",
+        "Pitch preservation conflated with artefact-free playback",
+        "Hard-coded prices and broad privacy claims"
+      ],
+      "changes": [
+        "Replaced comparison with practical slowdown troubleshooting",
+        "Documented Premium gate and rate/pitch distinction",
+        "Linked current Apple controls guide without stale range claims"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "LoudReader/TTSPreferences.swift and LoudReader/Engines/BaseTTSEngine.swift at release_v1.12, inspected 2026-09-28: 0.3–3 rate, AVAudioUnitTimePitch.pitch=0 and per-item rate",
+        "https://support.apple.com/guide/books/listen-to-audiobooks-ibks9a460640/mac (opened 2026-09-28; playback control, no claimed competitor limits)"
+      ]
+    },
+    {
+      "slug": "spanish-text-to-speech-app",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Four-voice roster repeated without helping readers compare it",
+        "Language discovery and device restrictions incomplete",
+        "Overbroad privacy and offline claims",
+        "Voice allowance could be mistaken for free permanent Spanish access"
+      ],
+      "changes": [
+        "Added practical language-specific import and pronunciation checks",
+        "Explained Settings language selection and device-dependent studio availability",
+        "Corrected OCR and the continuing cost of non-English studio narration",
+        "Kept future publication date and replaced stale provenance",
+        "Added same-passage comparison and explicit accent, translation and speaking-assessment limits"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), Engines/ChatterboxVoice.swift — named studio roster and language mapping; canonical source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, VoiceRegistry.swift:105–119 and ReadingLanguagesSheet.swift — library languages plus Settings selection; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, SubscriptionAccess.swift and SubscriptionManager.swift — 8 cumulative listening hours, English free selection afterwards; source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, DeviceCapability.swift, PDFImportPipeline.swift and PaywallReason.swift — device-dependent studio access, fallible OCR and Premium speed; source audit 2026-09-28.",
+        "data/voices.ts and public/voices — narrator names and browser sample references checked 2026-09-28."
+      ]
+    },
+    {
+      "slug": "speech-central-alternative",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Falsely said Speech Central has no Mac app",
+        "Mischaracterised all voices as local/system-only and free access as absent",
+        "Claimed objectively better LoudReader voices and a native synced Mac build",
+        "Stale web/article handling and app privacy claims"
+      ],
+      "changes": [
+        "Corrected platform/voice/licensing facts with current official source links",
+        "Removed voice-quality ranking; offered same-passage language/format checks",
+        "Distinguished SpeechCentral desktop app from LoudReader iPad compatibility and no sync",
+        "Added practical web extraction trial, purchase questions and accurate telemetry; added Disclosure",
+        "Rewrote matching FAQs and metadata; preserved publishedAt; set material-edit date2026-09-28"
+      ],
+      "sources": [
+        "https://speechcentral.net/",
+        "https://apps.apple.com/us/app/speech-central-text-to-speech/id1223093645?mt=12",
+        "https://speechcentral.net/2023/09/02/elevate-your-voice-reading-experience-with-speech-central-beyond-the-ordinary/",
+        "LoudReader release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; root source audit and corrected hidden-analytics-control finding,2026-09-28"
+      ]
+    },
+    {
+      "slug": "speechify-vs-naturalreader",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimed NaturalReader is subscription-only and all free tiers stop; guessed subjective voice winner and PDF extraction superiority.",
+        "Said no LoudReader OCR/web import, no telemetry and no account implies no data collection."
+      ],
+      "changes": [
+        "Distinguished personal web/mobile plans, separate desktop perpetual software and creator products.",
+        "Added document test procedure, separate offline/export questions, fair free-tier explanation, current OCR/privacy facts and disclosure."
+      ],
+      "sources": [
+        "https://speechify.com/pricing/",
+        "https://speechify.com/usage-limits/",
+        "https://help.naturalreaders.com/en/articles/8854700-plans-pricing-personal-version",
+        "https://help.naturalreaders.com/en/articles/8823770-voices-languages-and-tts-limits-personal-version",
+        "https://www.naturalreaders.com/software.html",
+        "https://help.naturalreaders.com/en/articles/11543218-working-with-text-and-audio-personal-version",
+        "LoudReader release_v1.12 / docs/product-facts-2026-09-28.md; SubscriptionAccess.swift directly checked for first-book bonus"
+      ]
+    },
+    {
+      "slug": "text-to-speech-adhd",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Pseudo-neurology: single-channel bottleneck, idle bandwidth and ADHD mechanics presented as facts",
+        "Unsupported claims narration prevents drifting and one chapter proves suitability",
+        "Reading-disability evidence used as ADHD proxy",
+        "Absolute privacy and free-tier claims"
+      ],
+      "changes": [
+        "Replaced clinical-sounding claims with a repeatable usability trial",
+        "Added primary NHS context without using it as TTS efficacy evidence",
+        "Explained real controls, individual limits and free/Premium boundaries"
+      ],
+      "sources": [
+        "https://www.nhs.uk/conditions/adhd-adults/",
+        "Shipping release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Subscription/SubscriptionAccess.swift; SubscriptionManager.swift; Subscription/PaywallReason.swift; PDFImportPipeline.swift; product audit dated 2026-09-28."
+      ]
+    },
+    {
+      "slug": "text-to-speech-airplane-mode",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "False cloudapps-always-fail claim",
+        "Unsupported longhaul battery guarantee",
+        "Airplane mode falsely equated with privacy",
+        "All-modelsbundled guarantee"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "Shipping1.12 local TTS, ProjectGutenbergService, StoreKit and instrumentation audit.",
+        "https://support.apple.com/en-us/108785 — Apple airplane mode guidance: Wi-Fi/Bluetooth can be used while enabled."
+      ]
+    },
+    {
+      "slug": "text-to-speech-app-without-a-subscription",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Repeatedsamefreelines",
+        "Unfoundedmostcompetitors claims and misleading AppStore link",
+        "Lifetimeownership and breakpoint overstatement",
+        "Paidnotesclaim and incomplete trial"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "https://itunes.apple.com/lookup?id=6758149478&country=us — root audit2026-09-28 current official1.12 price description.",
+        "Shipping1.12 SubscriptionManager.swift, SubscriptionAccess.swift and PaywallReason.swift; no unverified competitor prices."
+      ]
+    },
+    {
+      "slug": "text-to-speech-app-without-an-account",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "No login equated with no data, identity or server record",
+        "No-sync claimed necessary consequence of no account",
+        "Free tier and purchase restoration too vague; system backups omitted"
+      ],
+      "changes": [
+        "Separated LoudReader login from telemetry, Apple Account and purchases",
+        "Explained current lack of automatic library/position sync without claiming universal architecture rule",
+        "Clarified8-hour cumulative voice allowance and Stella/Rio plus Bella on supported devices",
+        "Explained restoration of entitlement does not restore books; preserved Oct10 publication date"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (corrected privacy row, shipping 1.12)",
+        "release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0): LoudReaderApp.swift, Analytics.swift, ErrorReporting.swift, SettingsSheet.swift:65,483",
+        "release_v1.12: SubscriptionAccess.swift:4–11; SubscriptionManager.swift:280–297,955–967",
+        "https://support.apple.com/en-gb/108096 (verified 2026-09-28)"
+      ]
+    },
+    {
+      "slug": "text-to-speech-apple-silicon",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "AppleSiliconexclusivequality myth",
+        "Allvoices100percentANE claim",
+        "Instantspeech/nolatency/nobatteryimpact guarantees",
+        "Noanalyticsfalsehood",
+        "Unverifiedcompetitorqualitycomparisons"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "https://developer.apple.com/documentation/coreml/mlcomputeunits — checked2026-09-28 compute-unit selection.",
+        "Local loudkit site/src/content/docs/supported.md and guides/01-getting-started.md checked2026-09-28: five SDKs and distinct runtimes.",
+        "Shipping1.12 Xcode target,DeviceCapability,VoiceRegistry and instrumentation audit."
+      ]
+    },
+    {
+      "slug": "text-to-speech-dyslexia",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Translated effect size into a promised chapter-level outcome",
+        "Presented dyslexia mainly as tracking failure and highlighting as mandatory cure",
+        "Stale unsupported competitor pricing/superiority",
+        "Wrong OCR, telemetry and free-voice facts"
+      ],
+      "changes": [
+        "Bounded the meta-analysis to its actual population and finding",
+        "Added learner-led trial workflow and independent comprehension checks",
+        "Retained verified alternative tools with publisher disclosure",
+        "Corrected OCR, device and Premium distinctions"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), SubscriptionAccess.swift, SubscriptionManager.swift and PaywallReason.swift — free voice allowance, unrestricted book listening, speed/timer gates and free notes; checked via canonical 2026-09-28 source audit and PaywallReason source inspection.",
+        "LoudReader_mac release_v1.12, PDFImportPipeline.swift:150–218 — OCR fallback, 300-page OCR cap and reported partial results; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, Info.plist, PlayerService.swift and app target — background audio and iPad-app compatibility on Apple Silicon, not a native Mac build; canonical source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local narration plus Sentry diagnostics/TelemetryDeck analytics; no exposed analytics opt-out is promised. Source audit 2026-09-28; no independent network audit.",
+        "https://pubmed.ncbi.nlm.nih.gov/28112580/ — Wood et al. (2018) meta-analysis, effect 0.35 and limitations; checked 2026-09-28.",
+        "https://support.microsoft.com/en-US/edge/use-immersive-reader-in-microsoft-edge — Read aloud and pace controls; checked 2026-09-28.",
+        "https://www.everway.com/products/read-and-write-education/ — product scope and text-to-speech; checked 2026-09-28."
+      ]
+    },
+    {
+      "slug": "text-to-speech-for-esl-learners",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Guaranteed pronunciation, automatic spelling mapping and retention claims lacked evidence.",
+        "Exam-score and learning-efficiency claims were unsupported.",
+        "Pause-and-repeat was incorrectly equated with strict shadowing.",
+        "The article repeated the other English-learning guides without a distinct purpose."
+      ],
+      "changes": [
+        "Gave this article a distinct purpose: four concrete exercises with checks and limits.",
+        "Distinguished shadowing from paused repetition and acknowledged pronunciation uncertainty.",
+        "Removed test-score and time-exposure promises.",
+        "Corrected free notes, device availability and local-processing scope."
+      ],
+      "sources": [
+        "Shipping release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Subscription/SubscriptionAccess.swift; SubscriptionManager.swift; Subscription/PaywallReason.swift; PDFImportPipeline.swift; product audit dated 2026-09-28."
+      ]
+    },
+    {
+      "slug": "text-to-speech-for-eye-strain",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Uncited eye-muscle mechanism and guaranteed fresher eyes",
+        "Dismissed 20-20-20 breaks and promised longer-listening superiority",
+        "Conflated local speech with corporate approval",
+        "Duplicated evening-fatigue article"
+      ],
+      "changes": [
+        "Focused on workday task selection and genuine screen breaks",
+        "Cited NEI/AAO without promising medical outcomes",
+        "Kept visual verification for precision-sensitive material",
+        "Corrected platform, free tier and telemetry scope"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), SubscriptionAccess.swift, SubscriptionManager.swift and PaywallReason.swift — free voice allowance, unrestricted book listening, speed/timer gates and free notes; checked via canonical 2026-09-28 source audit and PaywallReason source inspection.",
+        "LoudReader_mac release_v1.12, PDFImportPipeline.swift:150–218 — OCR fallback, 300-page OCR cap and reported partial results; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, Info.plist, PlayerService.swift and app target — background audio and iPad-app compatibility on Apple Silicon, not a native Mac build; canonical source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local narration plus Sentry diagnostics/TelemetryDeck analytics; no exposed analytics opt-out is promised. Source audit 2026-09-28; no independent network audit.",
+        "https://www.nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work/keep-your-eyes-healthy — 20-20-20 guidance; checked 2026-09-28.",
+        "https://aao.org/eye-health/tips-prevention/blue-light-digital-eye-strain — prolonged device discomfort and screen adjustments; checked 2026-09-28.",
+        "https://www.nhs.uk/symptoms/dry-eyes/ — seek care for persistent symptoms; checked 2026-09-28."
+      ]
+    },
+    {
+      "slug": "text-to-speech-for-lawyers",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "No-third-party and confidentiality/compliance guarantees",
+        "Unsourced only-local-acceptable legal rule",
+        "Guarantees catching contract/witness issues",
+        "False no-copies workflow and speed preferences"
+      ],
+      "changes": [
+        "What needs approval before client material is imported?",
+        "What does on-device narration establish?",
+        "Which documents can benefit from an audio pass?",
+        "How should you check a PDF before listening?",
+        "How do you manage the listening copy?",
+        "What remains a visual and professional review?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts",
+        "https://www.sra.org.uk/solicitors/guidance/confidentiality-client-information/"
+      ]
+    },
+    {
+      "slug": "text-to-speech-for-low-vision",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unverified complete VoiceOver compatibility and accessible import assurances",
+        "False claim screen readers unsuitable for novels",
+        "Implied a synced library and native Mac app",
+        "Stale privacy/OCR/freevoice assertions"
+      ],
+      "changes": [
+        "Added concrete whole-workflow accessibility evaluation",
+        "Explicitly separated verified playback from untested VoiceOver flow",
+        "Linked official Apple docs; acknowledged screen readers can read books",
+        "Updated local OCR, no automatic sync and hardware-limited voice facts"
+      ],
+      "sources": [
+        "https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios",
+        "https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios",
+        "Shipping release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Subscription/SubscriptionAccess.swift; SubscriptionManager.swift; Subscription/PaywallReason.swift; PDFImportPipeline.swift; product audit dated 2026-09-28."
+      ]
+    },
+    {
+      "slug": "text-to-speech-for-researchers",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Invented backlog reduction and papers-per-commute results",
+        "No-OCR and Premium-notes errors",
+        "False automatic device library sync",
+        "Native Mac implication",
+        "Unsafe scientific advice to skip methods when familiar"
+      ],
+      "changes": [
+        "Created research queue and evidence-note workflow distinct from import article",
+        "Required method/figure/source checks before reliance",
+        "Corrected OCR, notes, sync and Mac capabilities",
+        "Removed comprehension-safe speed numbers",
+        "Applied final 1.12 analytics correction: default enabled, no visible opt-out switch; removed stale Settings→Privacy promise"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "text-to-speech-for-seniors",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Promised no eye strain and universal simplicity",
+        "Unverified automatic library/position sync",
+        "Unqualified any-book and Gutenberg availability claims",
+        "Wrong free voice, trial controls and future provenance"
+      ],
+      "changes": [
+        "Reframed around reader-led setup and independence",
+        "Corrected no automatic sync and iPad-app Mac compatibility",
+        "Clarified trial versus Premium controls",
+        "Added scoped near-focus reference and removed health guarantees"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), SubscriptionAccess.swift, SubscriptionManager.swift and PaywallReason.swift — free voice allowance, unrestricted book listening, speed/timer gates and free notes; checked via canonical 2026-09-28 source audit and PaywallReason source inspection.",
+        "LoudReader_mac release_v1.12, PDFImportPipeline.swift:150–218 — OCR fallback, 300-page OCR cap and reported partial results; inspected 2026-09-28.",
+        "LoudReader_mac release_v1.12, Info.plist, PlayerService.swift and app target — background audio and iPad-app compatibility on Apple Silicon, not a native Mac build; canonical source audit 2026-09-28.",
+        "LoudReader_mac release_v1.12, LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift — local narration plus Sentry diagnostics/TelemetryDeck analytics; no exposed analytics opt-out is promised. Source audit 2026-09-28; no independent network audit.",
+        "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/presbyopia — near-focus changes and need for appropriate vision care; checked 2026-09-28.",
+        "https://www.gutenberg.org/policy/permission.html — public-domain territorial limitation; checked 2026-09-28.",
+        "LoudReader_mac release_v1.12 app entitlements and AddContentSheet.swift — no automatic library sync; Files/iCloud import is separate, canonical source audit 2026-09-28."
+      ]
+    },
+    {
+      "slug": "text-to-speech-for-students",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Generalised reading-disability meta-analysis to all students",
+        "Unsupported dual-channel retention and focus claims",
+        "Stale no-scanned-PDF guidance",
+        "Misleading automatic accommodation and privacy implication"
+      ],
+      "changes": [
+        "Reframed around assignment triage, PDF checks and note-making",
+        "Separated permitted coursework use from exam approval",
+        "Added OCR caveats and clear app/free-feature limits"
+      ],
+      "sources": [
+        "Shipping release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: LoudReader/Subscription/SubscriptionAccess.swift; SubscriptionManager.swift; Subscription/PaywallReason.swift; PDFImportPipeline.swift; product audit dated 2026-09-28."
+      ]
+    },
+    {
+      "slug": "text-to-speech-for-writers",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Fabricated 1.15–1.3× writer preferences and 45-minute fatigue",
+        "False Word native EPUB export",
+        "Claims replacing two editing passes",
+        "Incorrect notes paywall, no-telemetry privacy"
+      ],
+      "changes": [
+        "What should the first pass focus on?",
+        "How can you use another pass for dialogue?",
+        "How should you prepare a full manuscript?",
+        "What voice, pace and session length should you use?",
+        "How should you handle unpublished work?",
+        "What does a human or visual edit still contribute?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "text-to-speech-on-mac-and-iphone",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "ExplicitnativeMac/twobuildfalsehood",
+        "Noaccount incorrectlytreatedascauseofnosync",
+        "Samevoicesonallhardwarepromise",
+        "Cloneandlibraryneverleaveabsolute"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "https://support.apple.com/guide/app-store/fird2c7092da/mac — checked2026-09-28: compatible iPad apps on Apple Silicon, Designed for iPad label.",
+        "Shipping1.12 Xcode project; SubscriptionManager.swift restore flow; Book.swift local progress; ClonedVoiceStore.swift backup exclusion."
+      ]
+    },
+    {
+      "slug": "text-to-speech-that-remembers-your-place",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Exactsentencealways/neverloseguarantee",
+        "Continuousscroll equatedwithexactspokenposition",
+        "Manualbookmark absenceoverclaim",
+        "Noaccount/private absolutes"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "Shipping1.12 PlayerService.swift headlessResumePlayback, resolve saved sentence anchor and stopAndClose; Book.swift lastLocation,lastSentenceId,lastSentenceSegmentationVersion."
+      ]
+    },
+    {
+      "slug": "text-to-speech-without-internet-iphone",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimednoextra downloads ever",
+        "Insulted allsystemvoices and unverified competitor reliability",
+        "Offline equated with guaranteed privacy",
+        "Everythingoffline and batteryequivalence claims"
+      ],
+      "changes": [
+        "Revised body and FAQ together with practical steps and explicit limits",
+        "Replaced unsupported claims and updated metadata; preserved publication date"
+      ],
+      "sources": [
+        "https://support.apple.com/guide/iphone/iph96b214f0/ios — checked2026-09-28: current Read & Speak menu, Speak Screen gesture, voice and rate controls; older releases call it Spoken Content.",
+        "Shipping1.12 PDFImportPipeline, BookImportService, local speech paths and app instrumentation."
+      ]
+    },
+    {
+      "slug": "the-brothers-karamazov-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Wrong copyright reasoning based only on original author death",
+        "Unsupported most widely read translation claim",
+        "False automatic device handoff",
+        "Invented future fact-check date",
+        "Overconfident duration and pronunciation framing"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/28054",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "the-count-of-monte-cristo-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unidentified English translation described as Dumas’s actual words",
+        "51.5-hour duration and universal free/right-to-listen claims",
+        "Unsupported synthetic advantage/no-narrator-fatigue claim",
+        "No-download and privacy overclaims"
+      ],
+      "changes": [
+        "Made PG1184 language and unnamed-translator limit explicit",
+        "Explained translation, abridgement and recording distinctions",
+        "Added practical long-book schedule and spoiler-free alias advice",
+        "Removed fixed runtime and superiority; corrected app setup/free tier",
+        "Added shared developer disclosure at the first app recommendation; removed references to abandoned marketing copy"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/1184",
+        "https://www.gutenberg.org/cache/epub/1184/pg1184-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "the-great-gatsby-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unqualified 2021 worldwide implication",
+        "Pseudo-comparison shortest in whole roundup",
+        "Voice interpretation claims without testing",
+        "Privacy absolutism and first-open offline guarantee"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/64317",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "the-odyssey-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Missing translator identity despite prose-specific claims",
+        "Unsupported oral-history dating and original-experience assertion",
+        "13.5-hour and one-week timing promises",
+        "No-download and absolute privacy claims"
+      ],
+      "changes": [
+        "Named Samuel Butler and distinguished prose from verse/course editions",
+        "Replaced ancient-performance claim with explicit modern-format limit",
+        "Added names/dialogue sample checks and opening-structure orientation",
+        "Corrected tier/platform/downloads and removed fixed duration",
+        "Added shared developer disclosure at the first app recommendation; removed references to abandoned marketing copy"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/1727",
+        "https://www.gutenberg.org/cache/epub/1727/pg1727-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "the-phantom-of-the-opera-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "English translation falsely called original1910text and complete unabridged original",
+        "Universal synthetic/human narrative limitations",
+        "Unverified cross-device sync",
+        "Invented2027provenance date"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/175",
+        "https://www.gutenberg.org/cache/epub/175/pg175-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "the-picture-of-dorian-gray-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Public domain everywhere/without caveats/no licensing question assertions",
+        "Synthetic-quality guarantees and piracy insinuation",
+        "Instant access/no downloads and generic Mac claims",
+        "FAQ suggested sample represents every app voice"
+      ],
+      "changes": [
+        "Identified preface/twenty-chapter edition and class-version matching",
+        "Separated original text, annotations and recording rights",
+        "Added dialogue-based voice assessment without superiority claims",
+        "Corrected downloads, sample limits, compatibility and free tier",
+        "Added shared developer disclosure at the first app recommendation; removed references to abandoned marketing copy"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/174",
+        "https://www.gutenberg.org/cache/epub/174/pg174-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "too-tired-to-read",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Unverified causal diagnosis that tiredness is usually eyes",
+        "Medical blink-rate detail extrapolated to sleepiness",
+        "Guaranteed channel-switch fix",
+        "Timer fade and retained comprehension implication"
+      ],
+      "changes": [
+        "Removed medical causal claims instead of implying diagnosis",
+        "Made stop-versus-switch choice explicit",
+        "Kept practical same-file and timer instructions with limits"
+      ],
+      "sources": [
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "treasure-island-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "False instant offline import and no-download claims",
+        "Speculated LibriVox likely exists despite concrete recording",
+        "Incorrectly implied whole text narrated by Jim",
+        "Unsubstantiated playback control superiority"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/120",
+        "https://librivox.org/treasure-island-dramatic-reading-by-robert-louis-stevenson/",
+        "https://www.gutenberg.org/policy/permission.html",
+        "https://www.gutenberg.org/cache/epub/120/pg120-images.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "voice-aloud-reader-alternative",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Falsely said @Voice voices cannot be upgraded",
+        "Made unsupported universal voice superiority and privacy statements",
+        "Promised LoudReader library/position sync and implied native Mac build",
+        "No-Android future roadmap assertion without evidence; article-import and free-feature limitations omitted"
+      ],
+      "changes": [
+        "Focused article on Android-to-iPhone migration and choosing a different @Voice engine first",
+        "Explained files transfer but bookmarks/pronunciation/positions do not automatically migrate",
+        "Added non-destructive sample-library migration steps and original-file preservation",
+        "Corrected local speech, article saves, Premium gates and Mac support; added Disclosure",
+        "Rewrote matching FAQs and metadata; preserved publishedAt; set material-edit date2026-09-28"
+      ],
+      "sources": [
+        "https://hyperionics.com/atvoice/index.asp",
+        "https://hyperionics.com/atVoice/features/cloud-tts-voices-android.asp",
+        "https://www.hyperionics.com/atvoice/AppFeatures.html",
+        "LoudReader release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; root source audit and corrected hidden-analytics-control finding,2026-09-28"
+      ]
+    },
+    {
+      "slug": "war-and-peace-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Translator omitted while English called Tolstoy’s actual words",
+        "62 hours presented as exact and promised no narrator fatigue",
+        "Unsupported comprehension and synthetic superiority claims",
+        "No-download and absolute privacy promises"
+      ],
+      "changes": [
+        "Named Louise and Aylmer Maude and explained translation matching",
+        "Replaced fixed duration with practical chapter-based planning",
+        "Added cautious names/aliases guidance without comprehension guarantee",
+        "Corrected setup, Mac/free-tier facts and recording distinction",
+        "Added shared developer disclosure at the first app recommendation; removed references to abandoned marketing copy"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/2600",
+        "https://www.gutenberg.org/cache/epub/2600/pg2600-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    },
+    {
+      "slug": "what-app-reads-pdfs-aloud-without-uploading",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Claimed no upload meant no server, no diagnostics and no other storage anywhere.",
+        "Airplane mode presented as privacy proof.",
+        "Shipping local OCR denied.",
+        "Broad cloud-provider retention claims unsupported."
+      ],
+      "changes": [
+        "Rebuilt around specific local PDF/OCR/speech guarantee, not blanket privacy.",
+        "Explicit Sentry and default-on TelemetryDeck disclosure without promising a visible opt-out.",
+        "Added storage/backup/workflow distinctions and rejected airplane-mode privacy proof.",
+        "Updated scanned-PDF handling and retained practical import links."
+      ],
+      "sources": [
+        "release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: BookImportService.swift, PDFImportPipeline.swift, DocumentScanImport.swift, LoudReaderApp.swift, Analytics.swift; canonical audit docs/product-facts-2026-09-28.md"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "what-does-offline-text-to-speech-sound-like",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Browser audio falsely described as engine inference",
+        "Guaranteed same quality across languages/devices",
+        "Universal offline/human sound and quality claims",
+        "Cloning trial omitted"
+      ],
+      "changes": [
+        "Where can you hear an example?",
+        "What should you test with your own book?",
+        "Does offline processing lower or improve quality?",
+        "How is it different from a performed audiobook?",
+        "What if none of the samples suits you?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts"
+      ]
+    },
+    {
+      "slug": "what-file-formats-can-be-read-aloud",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Denied OCR in body, FAQ, metadata and provenance.",
+        "Claimed all Kindle purchases DRM-locked.",
+        "Catalog access described as70000+ books bundled.",
+        "Conversion described as instant or two-minute universal solution.",
+        "Provenance claimed future2027 verification date."
+      ],
+      "changes": [
+        "Added an explicit import/conversion matrix.",
+        "Separated file imports from article-link and camera workflows.",
+        "Updated local OCR and DRM-free conversion limits.",
+        "Removed bundled-catalog assertion and fake future verification."
+      ],
+      "sources": [
+        "release_v1.12 @ 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0: BookImportService.swift, PDFImportPipeline.swift, DocumentScanImport.swift, LoudReaderApp.swift, Analytics.swift; canonical audit docs/product-facts-2026-09-28.md",
+        "https://manual.calibre-ebook.com/faq.html#what-formats-does-calibre-support-conversion-to-from"
+      ],
+      "verification": {
+        "date": "2026-09-28",
+        "syntax": "34/34 TS and TSX files transpile without diagnostics",
+        "metadata": "JSON valid, description <=160 chars, publishedAt preserved and lastModified=max(publishedAt,2026-09-28)",
+        "internalArticleLinks": "All targets published by current review date or held article publication date",
+        "renderedWhitespace": "17 pages rendered with stubbed layout to check inline prose boundaries; four regression examples pass",
+        "buildOrRuntimeTest": false
+      }
+    },
+    {
+      "slug": "what-happens-to-your-data-with-text-to-speech",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Asserted exactly3network categories and no other activity",
+        "Promised immediate user-facing telemetry toggle though shipping UI hides it",
+        "Claimed content could never enter reports and architecture proved complete privacy",
+        "Verbose Firebase anecdote distracted from reader choices"
+      ],
+      "changes": [
+        "Rebuilt as transparent versioned data disclosure with local processing, usage telemetry, crash/performance and other service categories",
+        "Explicitly disclosed analytics default ON and no available1.12Settings switch",
+        "Kept concrete release safeguards while distinguishing source review from independent traffic audit",
+        "Explained source/backups, purchases, domain-report limits; preserved Oct24 publication date"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (corrected privacy row, shipping 1.12)",
+        "release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0): LoudReaderApp.swift, Analytics.swift, ErrorReporting.swift, SettingsSheet.swift:65,483",
+        "release_v1.12: Analytics.swift playbackSessionEnded, app/device SDK context; ErrorReporting.swift pattern scrubber",
+        "https://support.apple.com/en-gb/102188 (verified 2026-09-28)"
+      ]
+    },
+    {
+      "slug": "what-is-the-best-way-to-listen-to-ebooks",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "False Apple system-speech lacks highlighting claim",
+        "Dismissive unverified competitor voice-quality claims",
+        "Human audiobook and any-book TTS universality",
+        "Future provenance and paid notes",
+        "Native Mac/Neural Engine/zero-network overclaims"
+      ],
+      "changes": [
+        "Added task-based comparison and upfront developer disclosure",
+        "Verified official Apple highlighting and Libby source",
+        "Corrected modern free/Premium and device/network boundaries",
+        "Removed hardcoded pricing and unsupported quality ranking",
+        "Applied final 1.12 analytics correction: default enabled, no visible opt-out switch; removed stale Settings→Privacy promise"
+      ],
+      "sources": [
+        "https://support.apple.com/guide/iphone/hear-whats-on-the-screen-or-typed-iph96b214f0/ios",
+        "https://www.overdrive.com/apps/libby",
+        "LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); product audit 2026-09-28"
+      ],
+      "checks": [
+        "Full original page.tsx/content.ts/meta.json read",
+        "TypeScript parse check passed for page.tsx and content.ts",
+        "Internal blog links checked against target publication dates; no premature links",
+        "Publication date preserved; modified date is 2026-09-28 or later held publication date"
+      ]
+    },
+    {
+      "slug": "what-to-listen-to-next",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Worldwide recommendations and Christie rights trap",
+        "False book/genre descriptions and exact durations",
+        "Largest-catalogue and all-free claims",
+        "Translation identification absent"
+      ],
+      "changes": [
+        "What fits a short listening session?",
+        "What if you want a short continuous story?",
+        "What suits listening in separate pieces?",
+        "What if you want a book to return to for weeks?",
+        "How should you choose without overthinking it?",
+        "Replaced body, FAQ answers, title and description; preserved original publication date and future publication boundary."
+      ],
+      "sources": [
+        "Shipping LoudReader release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0), app release 2026-09-22; fact audit 2026-09-28; exact source files recorded in content.ts",
+        "https://www.gutenberg.org/policy/permission.html",
+        "https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term",
+        "https://www.gutenberg.org/ebooks/2002",
+        "https://www.gutenberg.org/ebooks/11",
+        "https://www.gutenberg.org/ebooks/43",
+        "https://www.gutenberg.org/ebooks/1661",
+        "https://www.gutenberg.org/ebooks/155",
+        "https://www.gutenberg.org/ebooks/1184",
+        "https://www.gutenberg.org/ebooks/2600"
+      ]
+    },
+    {
+      "slug": "why-does-text-to-speech-sound-robotic",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "False claim older systems had no prosody model",
+        "Universal neural-versus-human gap and blind-test claims",
+        "Invented future verification date",
+        "Blanket privacy and cloud/local ranking"
+      ],
+      "changes": [
+        "Refocused as diagnostic guide with symptom-specific steps",
+        "Linked primary speech research without assigning architecture to the app",
+        "Removed historical overclaims and unsupported quality rankings"
+      ],
+      "sources": [
+        "docs/product-facts-2026-09-28.md (release_v1.12 / 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0; source audit, not a runtime test)",
+        "https://research.google/pubs/transformer-based-models-of-text-normalization-for-speech-applications/ (opened 2026-09-28; context-dependent written-number normalisation)",
+        "https://research.google/pubs/tacotron-towards-end-to-end-speech-synthesis/ (opened 2026-09-28; example neural generative TTS research, not claimed LoudReader architecture)",
+        "LoudReader/TTSPreferences.swift and BaseTTSEngine.swift release_v1.12: playback rate controls; no listening benchmark performed"
+      ]
+    },
+    {
+      "slug": "wizard-of-oz-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Guaranteed no-download offline access",
+        "Unverified film-comparison judgments and child suitability",
+        "Ignored improved illustrated edition",
+        "Speculated human recording existence"
+      ],
+      "changes": [
+        "Revised body around edition-specific practical decisions with exact primary-source links",
+        "Updated FAQs, metadata and dated provenance; retained slug and publication date",
+        "Corrected free-tier, initial downloads and iPad-on-Mac wording; removed absolute privacy and quality promises"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/55",
+        "https://www.gutenberg.org/ebooks/43936",
+        "https://librivox.org/wonderful-wizard-of-oz-version-9-by-l-frank-baum/",
+        "https://www.gutenberg.org/policy/permission.html"
+      ],
+      "checks": [
+        "TypeScript transpileModule: no syntax diagnostics",
+        "All metadata titles <=55 characters and descriptions <=160 characters",
+        "All 12 sample slugs present in data/audio-samples.ts",
+        "No build, audio playback or deployment performed in this batch"
+      ]
+    },
+    {
+      "slug": "wuthering-heights-audiobook-free",
+      "readFull": true,
+      "changed": true,
+      "issues": [
+        "Public domain everywhere/no licensing question claims",
+        "Unverified absolute quality/speaker-tracking claims",
+        "Catalog confused with no-download access",
+        "Instant timing and blanket privacy promises"
+      ],
+      "changes": [
+        "Scoped PG768 edition and territory, recording-specific terms",
+        "Added nested-narrator, family-name and dialect guidance",
+        "Replaced synthetic-quality guarantee with practical sample evaluation",
+        "Corrected app downloads, free tier and Mac compatibility",
+        "Added shared developer disclosure at the first app recommendation; removed references to abandoned marketing copy"
+      ],
+      "sources": [
+        "https://www.gutenberg.org/ebooks/768",
+        "https://www.gutenberg.org/cache/epub/768/pg768-images.html",
+        "https://www.gutenberg.org/policy/permission.html"
+      ]
+    }
+  ]
+}

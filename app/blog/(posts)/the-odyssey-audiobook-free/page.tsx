@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -17,159 +18,20 @@ export const metadata = articleMetadata(meta);
 export default function TheOdysseyAudiobookFreeArticle() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          The Odyssey is public domain, so a free audiobook of it is a search
-          away.{" "}
-          <Link
-            href="/listen/the-odyssey"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader&apos;s catalog page for the poem
-          </Link>{" "}
-          plays a real sample of the opening before you install anything,
-          and the full text plays free in the app with unlimited listening.
-          One honest note first: this is a synthetic voice reading the
-          Gutenberg translation on your device, not a performed audiobook.
-          It runs about 13.5 hours, short enough for a normal week of
-          commuting, and it is{" "}
-          <strong>
-            fully on-device and private, your library never leaves your
-            device
-          </strong>
-          , so once downloaded it needs no connection. Homer&apos;s epic was
-          composed to be heard aloud long before it was written down, so
-          listening to it is, in a real sense, closer to the original
-          experience than reading it silently. Get <strong>LoudReader</strong>{" "}
-          (iPhone, iPad, and Mac) free from the App Store, search The
-          Odyssey in the built-in catalog, and press play.
-        </p>
-      </Tldr>
+      <Tldr><p>The translation matters as much as the narrator when choosing a free <em>Odyssey</em> audiobook. <a href="https://www.gutenberg.org/ebooks/1727" className="text-loudBlue hover:underline">Project Gutenberg ebook #1727</a> is Samuel Butler’s English prose translation, marked public domain in the US. It is not the Greek text, a modern verse translation or a reconstruction of an ancient performance. LoudReader can generate a synthetic reading of that ebook. Hear the <Link href="/listen/the-odyssey" className="text-loudBlue hover:underline">Odyssey sample</Link> first, and choose a different edition if you want verse or a translation specified by your course. Outside the US, check your local terms before downloading. This guide helps you choose the text and get it ready for listening.</p><Disclosure /></Tldr>
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="An epic composed to be heard, read aloud by a natural offline voice."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Samuel Butler’s English prose translation is one way to approach Homer’s epic." />
 
-      <QuestionSection question="Where can you listen to The Odyssey free right now?">
-        <p>
-          Start with the sample.{" "}
-          <Link
-            href="/listen/the-odyssey"
-            className="text-loudBlue hover:underline"
-          >
-            The poem&apos;s catalog page
-          </Link>{" "}
-          plays a rendered clip of the opening, so you can hear the voice
-          before committing to the full listen. The rest happens inside the
-          LoudReader app: the Gutenberg edition of <em>The Odyssey</em> is
-          already built into the catalog, so nothing needs downloading
-          separately. Search the title, tap it, press play.
-        </p>
-        <p>
-          Worth saying plainly: what you hear is a computer voice reading a
-          written translation of Homer&apos;s Greek, generated on your
-          device. It is not a recording of a professional narrator, and
-          nothing about the Cyclops, the Sirens, or Penelope&apos;s suitors
-          is performed differently from any other passage. Performed
-          recordings of The Odyssey exist through audiobook stores and
-          library apps like Libby, and if that kind of narration is
-          specifically what you want, it&apos;s worth checking. If you want
-          the poem playing today, free, this is the faster route.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Which Odyssey translation does the catalog use?"><p>The <a href="https://www.gutenberg.org/ebooks/1727" className="text-loudBlue hover:underline">Gutenberg catalog identifies Samuel Butler as translator</a> and describes the edition as English prose. This is a useful distinction for listening: sentences in a prose translation do not reproduce the line breaks and verse choices of a different edition.</p><p>For study, use the translator your teacher specifies. For a first personal reading, compare the opening in a few editions you can lawfully access and pick the language you want to spend time with. Do not assume that a free text and a recording with the same title use the same translation. A recent translation may have separate rights even though the ancient work is old.</p></QuestionSection>
 
-      <QuestionSection question="What does a synthetic Odyssey audiobook actually sound like?">
-        <p>
-          Clear and even, reading the prose translation the way it reads on
-          the page rather than as verse performance. LoudReader&apos;s voices
-          are <strong>natural offline voices</strong> built for continuous
-          narration, with normal sentence pacing and no added drama for the
-          poem&apos;s big set pieces. What they don&apos;t do is act: no
-          separate register for Odysseus&apos;s boasts, the gods&apos;
-          arguments, or Penelope&apos;s patience. For a story built from
-          episodic adventures strung together, that plainness is a
-          reasonable trade, closer to a well-read reference text than a
-          staged performance.
-        </p>
-        <p>
-          {FREE_TIER.full}{" "}
-          <Link href="/voices" className="text-loudBlue hover:underline">
-            LoudReader Premium
-          </Link>{" "}
-          opens all 23 narrators, including 11 English voices, if you want to
-          try a few and see which one suits an ancient epic best. Premium
-          also unlocks playback speed from 0.3x to 3.0x, useful for slowing
-          down the more genealogical passages (there are quite a few names)
-          or moving faster through the parts you already know from
-          adaptations.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="Where does the story begin?"><p>The opening focuses on the household in Ithaca and Telemachus, rather than immediately starting with the Cyclops. Let that opening establish the problem at home before expecting the better-known adventures. A chapter list helps you keep your place without reading summaries that reveal the outcome.</p><p>Butler’s prose lets you follow the action in continuous English sentences. If poetic rhythm is what interests you most, compare it with a verse translation before choosing your listening edition.</p></QuestionSection>
 
-      <QuestionSection question="How do you start listening in the next five minutes?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Download{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on iPhone or Mac. Free, no account required.
-          </li>
-          <li>
-            Open the built-in Project Gutenberg catalog inside the app and
-            search &ldquo;The Odyssey.&rdquo; It&apos;s one of the 70,000+
-            titles already there.
-          </li>
-          <li>
-            Tap the book, then press play. The text loads once and plays
-            fully offline afterward, with each word highlighted as it is
-            read.
-          </li>
-          <li>
-            At 13.5 hours, a chapter or two on a commute clears the whole
-            poem inside a couple of weeks.
-          </li>
-        </ol>
-      </QuestionSection>
+      <QuestionSection question="What should you listen for in a sample?"><p>Try a passage containing names and speech, not only a descriptive opening. Check whether you can distinguish the narration from quoted dialogue and whether unfamiliar names are understandable. Speech synthesis can mispronounce names; keep the text available when something sounds unclear.</p><p>LoudReader’s <Link href="/listen/the-odyssey" className="text-loudBlue hover:underline">catalog sample</Link> demonstrates a synthetic reading, while a performed audiobook offers a narrator’s interpretation. If you want a verse performance, choose a recorded verse translation deliberately; changing the app’s voice cannot turn Butler’s prose into another translator’s poem.</p></QuestionSection>
 
-      <QuestionSection question="What is The Odyssey, and why does it still hold up?">
-        <p>
-          Homer composed The Odyssey somewhere between roughly 750 and 650
-          BC, and it was performed aloud for audiences for centuries before
-          anyone wrote it down. Odysseus, ten years into trying to get home
-          from the Trojan War, faces a man-eating Cyclops, a sorceress who
-          turns his crew into pigs, and the deadly song of the Sirens, while
-          back on Ithaca his wife Penelope holds off a house full of suitors
-          and his son Telemachus sets out to learn whether his father is
-          alive at all. It is one of the oldest surviving works of Western
-          literature, and it reads (and listens) less like homework than most
-          people expect.
-        </p>
-        <p>
-          If you want the broader case for listening to ancient and
-          public-domain classics this way, or other titles in the catalog,{" "}
-          <Link
-            href="/blog/project-gutenberg-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            Project Gutenberg audiobooks
-          </Link>{" "}
-          covers that ground. This article stays narrow on purpose: it&apos;s
-          about getting this one poem playing today.
-        </p>
-      </QuestionSection>
+      <QuestionSection question="How do you prepare it for listening?"><p>LoudReader is an iPhone and iPad app; its iPad build also runs on compatible Apple Silicon Macs.</p><ol className="list-decimal pl-6 space-y-2"><li>Install <a href="https://apps.apple.com/app/loudreader/id6758149478" className="text-loudBlue hover:underline">LoudReader</a> and search for <em>The Odyssey</em> in its Gutenberg catalog.</li><li>Confirm that the ebook is the Butler translation, or import a permitted DRM-free EPUB of the edition you prefer.</li><li>Download the book and required voice resources. For travel, check downloaded playback before leaving a connection.</li><li>Start with one section. Runtime varies with the translation, voice and speed; use the selected edition’s estimate as a starting point for planning sessions.</li></ol><p>{FREE_TIER.full}</p><p>Premium adds playback speed control. See <Link href="/voices" className="text-loudBlue hover:underline">the available voices</Link> and the <Link href="/blog/project-gutenberg-audiobooks" className="text-loudBlue hover:underline">guide to Gutenberg listening</Link> for the app and file options. <a href="https://www.gutenberg.org/policy/permission.html" className="text-loudBlue hover:underline">Project Gutenberg’s permissions guidance</a> explains its US copyright scope.</p></QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Hear The Odyssey free, today"
-        subline="The full poem is built into LoudReader's Gutenberg catalog. Free, on-device, no account."
-      />
+      <StoreCta headline="Hear a sample of Butler’s Odyssey" subline="Try the voice, then choose the edition you want to read." />
     </ArticleLayout>
   );
 }

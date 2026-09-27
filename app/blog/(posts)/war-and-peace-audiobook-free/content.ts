@@ -1,46 +1,44 @@
-// FACT PROVENANCE. Every claim verified on 2026-08-25 against:
-//   - Book facts (author, listening-hours estimate, word count):
-//     data/gutenberg-catalog.json, entry slug "war-and-peace" (Project
-//     Gutenberg ebook #2600, Leo Tolstoy, "War and Peace", ~559,900 words,
-//     62-hour listening estimate). Publication year 1869 is the novel's
-//     well-documented publishing history and is not in the JSON, so nothing
-//     more specific is claimed. Translator is not stated anywhere in this
-//     article because it is not recorded in the JSON and was not otherwise
-//     verified.
-//   - Catalog page /listen/war-and-peace: confirmed present in
-//     data/catalog-slugs.json and as a real route under
-//     app/listen/[slug]/page.tsx before linking to it.
-//   - LoudReader claims: components/money/site.ts (DIFFERENTIATORS, VOICES,
-//     PRICING) and app FAQ, same source as every other article on this site.
-//     Free tier = unlimited listening, one voice; Premium unlocks all 23
-//     narrators and speed 0.3x to 3.0x.
-//   - Honesty note: the /listen page and this article both state plainly
-//     that the reading is a synthetic voice, not a performed narration, per
-//     the cluster's hard requirement.
-// Claims you may NOT make until verified: translator/edition identity,
-// LibriVox-specific detail, CarPlay.
+// FACT PROVENANCE — reviewed 2026-09-28.
+//   - https://www.gutenberg.org/ebooks/2600
+//   - https://www.gutenberg.org/cache/epub/2600/pg2600-images.html
+//   - https://www.gutenberg.org/policy/permission.html
+//   - Edition/translator claims use the linked primary catalog record and text,
+//     not its automatically generated synopsis. US status is not global clearance.
+//   - data/catalog-slugs.json and data/audio-samples.ts: catalog route and sample.
+//   - components/money/site.ts: FREE_TIER and Premium playback features.
+//   - Product claims cross-checked against the 2026-09-28 shipping-source audit:
+//     LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+//     SubscriptionAccess.swift, SubscriptionManager.swift, KittenVoice.swift,
+//     VoiceRegistry.swift, PaywallReason.swift, ProjectGutenbergService.swift
+//     and the Xcode iOS target. Compatible Macs run the iPad app; catalog
+//     discovery, ebook download and required voice setup are distinct.
+//     No runtime/network test was performed for this article revision.
+// Do not claim: worldwide copyright clearance, a fixed measured runtime,
+// identical modern translations, human/cast performance, no network or telemetry,
+// no downloads, automatic cross-device reading sync, or every feature free.
+// Practical listening suggestions are editorial advice, not measured outcomes.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is War and Peace free as an audiobook?",
-    a: "Yes. The novel is public domain and free on Project Gutenberg as text. LoudReader has that edition built in and reads it aloud with a natural offline voice, free, with unlimited listening. It's a synthetic voice reading the real text, not a purchased or borrowed recording.",
+    "q": "Which translation does this guide use?",
+    "a": "The English translation by Louise and Aylmer Maude in Project Gutenberg ebook #2600. Other translations can use different wording, names and editorial choices."
   },
   {
-    q: "How long is War and Peace as an audiobook?",
-    a: "About 62 hours at a typical narration pace, based on the novel's roughly 559,900 words. That makes it one of the longest books most people will ever listen to, which is exactly why audio suits it: spread across a commute, sixty-plus hours turns from an intimidating page count into a season of listening.",
+    "q": "How long does War and Peace take to listen to?",
+    "a": "Duration depends on the edition, voice, speed and pauses. A catalog estimate based on text is not the measured length of a finished recording."
   },
   {
-    q: "Is the reading performed by a real narrator?",
-    a: "No, and this article says so upfront. LoudReader generates the reading on your device from the actual Gutenberg text using a natural offline voice. It is not a performed audiobook, and it doesn't give the many Russian characters distinct voices. Given the length, that also means no narrator fatigue across the full novel, since the voice is generated fresh throughout.",
+    "q": "Will a synthetic voice distinguish all the characters?",
+    "a": "Do not expect an actor for each character. Keep the text nearby for names and dialogue tags, and sample a human narration if distinctive character voices matter to you."
   },
   {
-    q: "Do I need to manage a giant audio file to listen?",
-    a: "No. You need the LoudReader app, free on the App Store for iPhone and Mac. The Gutenberg catalog is built in, so you search for the book and press play. There's no file to download or store, and your place is saved automatically between sessions.",
+    "q": "Do I have to download a complete audio recording?",
+    "a": "No finished recording is needed for text-to-speech, but the app, ebook and required voice resources still need downloading and storage."
   },
   {
-    q: "Does listening actually make War and Peace easier to follow?",
-    a: "Many readers find it does, mostly because of the sprawling cast of Russian names. Hearing them said consistently helps them sort themselves out over the first several hours in a way that skimming a printed character list often doesn't. Nothing about the app changes the book's structure; this is a general observation about audio and long Russian novels, not a claim specific to LoudReader.",
-  },
+    "q": "Can the entire English novel be heard on the free tier?",
+    "a": "Unlimited listening continues after the first 8 hours of listening with a limited free English voice selection. Extra features such as speed control require Premium."
+  }
 ];

@@ -1,40 +1,28 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Screen-off listening: Info.plist UIBackgroundModes = ["audio"];
-//     lock-screen controls via MPRemoteCommandCenter in PlayerService.swift.
-//   - On-device voices, no cloud: speech synthesis runs locally.
-//   - Free tier unlimited listening: SubscriptionAccess.swift.
-//   - Night mode is free: ReaderControlsSheet.swift, no paywall gate.
-//   - Reading Style (fonts, sizes, spacing) is Premium:
-//     PaywallReason.readingStyle.
-//   - Word-by-word highlighting free: ReaderStylesheet.swift
-//     (.tts-word-highlight).
-//   - Pricing: components/money/site.ts PRICING.
-// Claims you may NOT make: specific screen-time reduction statistics,
-// eye health benefits beyond screen-off listening (the article frames
-// this as shifting reading off screens, not medical advice).
+// FACT PROVENANCE — editorial verification 2026-09-28.
+// App-source audit on 2026-09-28: LoudReader release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0, released 2026-09-22 (Apple lookup id6758149478). Sources: LoudReader/PlayerService.swift (saved position, background audio, remote controls); ContentView.swift and BookImportService.swift (EPUB/PDF imports); Subscription/SubscriptionAccess.swift, SubscriptionManager.swift and Subscription/PaywallReason.swift (8-hour eligible-voice allowance, limited free English selection thereafter, paid speed/timer, free notes); LoudReaderApp.swift and Analytics.swift (diagnostics and usage analytics); PDFImportPipeline.swift (local OCR with limits). Source review, not new runtime testing.
+// Practical workflows are editorial suggestions, not measured outcomes or medical promises.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "How much screen time can I cut by listening instead?",
-    a: "If you currently read on a phone or tablet for 30 minutes a day, switching that session to audio eliminates those 30 minutes of screen time entirely. If you read physical books already and are worried about total screen hours from other activities, this swap affects reading specifically. The cumulative relief on your eyes adds up over weeks.",
+    "q": "Does playing an audiobook automatically reduce screen time?",
+    "a": "No. It reduces display use only when it replaces time looking at a screen. Browsing another app or device while listening may leave total display use unchanged."
   },
   {
-    q: "Does listening with the screen off actually work?",
-    a: "Yes. Press play in LoudReader, lock the screen, and put the phone down. The narration keeps going. The lock screen shows play, pause, and 15-second skip, and playback continues even if the phone auto-locks. The display stays off the entire time your book is playing.",
+    "q": "Will the phone display always be dark when locked?",
+    "a": "That depends on device settings such as notifications and an always-on display. LoudReader can continue playback while locked, but does not guarantee the display stays dark."
   },
   {
-    q: "Is listening to a book better for my eyes than reading on a screen?",
-    a: "It removes screen exposure during the reading session itself. You are not staring at a backlit display for the length of the chapter. Your eyes can rest, close, or look at something across the room. It is not a medical claim about eye health. It is a practical way to shift one daily chunk of screen time off the screen.",
+    "q": "Should I avoid looking at the text entirely?",
+    "a": "No. Look when the material calls for a diagram, spelling check or note. Decide which parts of your routine you actually want to move off screen."
   },
   {
-    q: "Can I switch between reading on screen and listening in the same book?",
-    a: "Yes, and this is the practical way to reduce screen time without giving up the page entirely. Read with your eyes when the screen budget allows. When you hit your limit, press play and listen with the screen locked. The position is saved either way, so you lose no progress.",
+    "q": "Does this guide promise better sleep or eye health?",
+    "a": "No. It describes a practical change in display use, not a medical outcome."
   },
   {
-    q: "Does LoudReader have a dark mode?",
-    a: "Yes. Night mode is free: one tap switches the reader to a dark color scheme. It is kinder in low light. Custom fonts, text sizes, and spacing (the Reading Style options) are part of LoudReader Premium.",
-  },
+    "q": "Can I alternate reading and listening in LoudReader?",
+    "a": "Yes, within the same imported text. Check the current passage when switching and remember that positions do not automatically sync between devices."
+  }
 ];

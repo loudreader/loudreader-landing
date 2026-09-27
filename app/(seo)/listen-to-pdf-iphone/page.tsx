@@ -8,7 +8,7 @@ import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, PRICING, PRIVACY } from "@/components/money/site";
 
 import {
   COMPARISON_COLUMNS,
@@ -46,9 +46,8 @@ export default function ListenToPdfIphonePage() {
           the PDF to LoudReader from the Files app, Mail, or Safari, and press
           play. Natural offline voices read the PDF aloud with word-by-word
           highlighting, the app remembers your place, and playback keeps going
-          with the screen locked. It&apos;s fully on-device and private, your
-          library never leaves your device, and the free tier has no word
-          quota, so a 400-page PDF costs nothing to hear cover to cover.
+          with the screen locked. Speech is generated locally, and the free tier has no word
+          quota, so book listening stays free after the voice trial; scanned documents have OCR limits explained below.
           iPhones also have a built-in option: Settings → Accessibility →
           Spoken Content → Speak Screen, then swipe down from the top of the
           screen with two fingers. It&apos;s free and works in any app, but it
@@ -58,7 +57,7 @@ export default function ListenToPdfIphonePage() {
 
       <QuestionSection question="What's the fastest way to listen to a PDF on iPhone?">
         <p>
-          Four steps, about a minute total:
+          Four steps; import time depends on the document:
         </p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
@@ -79,7 +78,7 @@ export default function ListenToPdfIphonePage() {
           </li>
           <li>
             Choose <strong>LoudReader</strong> from the share sheet. The PDF
-            lands in your library instantly.
+            appears in your library after import and any text recognition finish.
           </li>
           <li>
             Open it and press <strong>play</strong>. A natural offline voice
@@ -90,9 +89,7 @@ export default function ListenToPdfIphonePage() {
           From then on the PDF stays in your library. LoudReader remembers
           exactly where you stopped, and you can keep listening with the
           screen locked, with full playback controls on the lock screen, like
-          a podcast app for your own documents. And because LoudReader ships
-          on iPhone, iPad, and Apple Silicon Macs, the same share-and-play workflow
-          works on your Mac too.
+          a podcast app for your own documents. LoudReader runs on iPhone and iPad; compatible Apple Silicon Macs can also run its iPad build.
         </p>
       </QuestionSection>
 
@@ -130,65 +127,25 @@ export default function ListenToPdfIphonePage() {
       </QuestionSection>
 
       <QuestionSection question="Will it work with scanned PDFs?">
-        <p>
-          Only if the PDF contains actual text. LoudReader reads the text
-          layer embedded in the PDF, the same text you can select and copy.
-          A scanned PDF that&apos;s just photographs of pages has no text
-          layer, so there&apos;s nothing to read aloud. If your scan came from
-          an OCR app or scanner software that adds a text layer, it&apos;ll
-          work. If not, run it through an OCR tool first and import the result.
-        </p>
+        <p>LoudReader 1.12 includes on-device text recognition for image-based PDFs. It attempts OCR when much of the document lacks text and processes up to 300 OCR pages in one import.</p>
+        <p>Scan quality and page layout affect the result. Check the imported text and any partial-import message, especially for handwriting, equations or tables. A dedicated OCR tool can still help with difficult scans.</p>
       </QuestionSection>
 
       <QuestionSection question="Is it private to listen to my PDFs this way?">
-        <p>
-          With LoudReader, completely. The app is fully on-device and private,
-          your library never leaves your device. Every word of speech is
-          generated locally on your iPhone, so the app works in airplane mode,
-          and a confidential PDF (a contract, a medical report, an unpublished
-          manuscript) is read aloud without ever being uploaded anywhere.
-          There&apos;s no account and nothing to sign up for, and the{" "}
-          <Link href="/privacy" className="text-loudBlue hover:underline">
-            privacy policy
-          </Link>{" "}
-          is short because there&apos;s almost nothing to disclose. If privacy
-          is your main concern, see our closer look at{" "}
-          <Link
-            href="/private-text-to-speech-no-cloud"
-            className="text-loudBlue hover:underline"
-          >
-            private text to speech with no cloud
-          </Link>
-          .
-        </p>
+        <p>The document is not uploaded to a speech service for narration. {PRIVACY.summary}</p>
+        <p>Read the <Link href="/privacy" className="text-loudBlue hover:underline">privacy policy</Link> and check your organisation&apos;s requirements before importing confidential work files.</p>
       </QuestionSection>
 
       <QuestionSection question="What does it cost to listen to PDFs on iPhone?">
-        <p>
-          Nothing, for the core experience. LoudReader&apos;s free tier
-          includes unlimited listening on every PDF and book cover to cover,
-          an unlimited library, word-by-word highlighting, and the built-in
-          Project Gutenberg catalog of 70,000+ free classics. Every voice is
-          free for your first 8 hours; after that, free users keep the
-          default voice.
-        </p>
-        <p>
-          Premium adds all 23 studio narrators plus playback speed (0.3x to 3.0x), a
-          sleep timer, ambient soundscapes, and notes &amp; highlights, for
-          $7.99/month, $49.99/year, or $199.99 once (lifetime). All billing
-          goes through Apple. Full breakdown in the{" "}
-          <Link href="/faq" className="text-loudBlue hover:underline">
-            FAQ
-          </Link>
-          .
-        </p>
+        <p>{FREE_TIER.full} Individual book imports, notes, highlights and word-following highlighting are free.</p>
+        <p>Premium adds {PRICING.premiumFeatures}. US prices are {PRICING.premiumMonthly}, {PRICING.premiumYearly} or {PRICING.premiumLifetime}; prices vary by storefront. See the <Link href="/faq" className="text-loudBlue hover:underline">FAQ</Link>.</p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
 
       <StoreCta
-        headline="Listen to your first PDF in the next minute"
-        subline="Share any PDF to LoudReader and press play. Free, offline, no account, no word quota."
+        headline="Listen to your first PDF"
+        subline="Import a supported PDF, wait for processing and press play. Free, offline, no account, no word quota."
       />
     </MoneyPageLayout>
   );

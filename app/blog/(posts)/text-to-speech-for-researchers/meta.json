@@ -1,9 +1,10 @@
 {
   "slug": "text-to-speech-for-researchers",
-  "title": "Text to Speech for Researchers: Get Through the Paper Stack",
-  "description": "How researchers use text-to-speech to tackle PDF papers, journals, and dense academic text without spending every waking hour staring at a screen.",
+  "title": "Text to Speech for Researchers: A Reading Workflow",
+  "description": "Use a research listening queue for orientation, questions and follow-up. Keep source versions, verify claims at the desk and avoid treating playback as review.",
   "publishedAt": "2026-08-21",
-  "lastModified": "2026-08-21",
+  "lastModified": "2026-09-28",
   "avatar": "Neurodivergent Student",
-  "query": "text to speech for researchers"
+  "query": "text to speech for researchers",
+  "topic": "formats"
 }

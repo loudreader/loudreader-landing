@@ -1,49 +1,46 @@
-// FACT PROVENANCE. Every claim verified on 2027-01-01 against:
-//   - The Brothers Karamazov is public domain and on Project Gutenberg
-//     (Constance Garnett translation, Gutenberg ebook #28054):
-//     https://www.gutenberg.org/ebooks/28054
-//   - Author dates, catalog entry, and the listening-time estimate (about
-//     38 hours) come from data/gutenberg-catalog.json, the same dataset
-//     that renders the /listen/the-brothers-karamazov catalog page on this
-//     site. Listening hours are computed from word count, not measured
-//     from a recording, so this article calls it an estimate.
-//   - LoudReader app-behavior claims come from components/money/site.ts
-//     (single source of truth): 70,000+ Gutenberg books browsable in the
-//     app, free tier = one natural offline voice with unlimited listening,
-//     Premium adds all 23 studio narrators, playback speed 0.3x to 3.0x,
-//     sleep timer, soundscapes, and notes. Word-by-word highlighting is a
-//     real, non-gated feature per the reference article in this repo
-//     (app/blog/(posts)/app-that-highlights-words-while-reading/content.ts,
-//     itself verified against LoudReader_mac's ReaderStylesheet.swift and
-//     Engines/HighlightSchedule.swift).
-//   - /listen/the-brothers-karamazov exists in data/catalog-slugs.json and
-//     ships a rendered audio sample (components/listen/catalog + the page
-//     itself), which is why this article can honestly say "hear a sample
-//     before you commit."
-// Claims you may NOT make until verified: CarPlay, Android, a human
-// narrator, or any claim that the app exports audio files to keep.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Read the previous page.tsx, content.ts and meta.json in full before revision.
+// Primary edition/catalog sources checked 2026-09-28:
+//   - https://www.gutenberg.org/ebooks/28054
+//   - https://www.gutenberg.org/policy/permission.html
+//   - data/gutenberg-catalog.json: current catalogue entry the-brothers-karamazov,
+//     ebook 28054. Listening hours, where used, are catalogue estimates,
+//     not measured audio runtimes. No comparative voice test was performed.
+//   - data/audio-samples.ts confirms the shipped opening sample lookup.
+//   - /listen/the-brothers-karamazov: catalogue/sample route, not a full audiobook.
+// Product facts: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0)
+// in the LoudReader app source, reviewed by the shared 2026-09-28
+// source audit (docs/product-facts-2026-09-28.md): SubscriptionAccess.swift,
+// SubscriptionManager.swift, VoiceRegistry.swift, PaywallReason.swift,
+// ProjectGutenbergService, ContentView.swift file importer, Xcode target configuration.
+// FREE_TIER imports the updated shared wording: eight cumulative listening hours,
+// then a free English voice selection (not any studio narrator), unlimited listening.
+// iPad compatibility on Apple Silicon is not a native Mac app; no device sync promise.
+// Local speech is not a claim of zero diagnostics, analytics or network use.
+// Edition and voice-selection advice is editorial guidance, not a tested superiority claim.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is The Brothers Karamazov free to listen to?",
-    a: "Yes. Dostoyevsky died in 1881, and the novel has been public domain for a long time, so every route to it costs nothing. LoudReader reads the full Project Gutenberg text aloud with a natural offline voice, and the free tier is unlimited listening, not a sample or a trial.",
+    q: "Which English translation is in the catalogue?",
+    a: "The entry links Gutenberg ebook 28054, translated by Constance Garnett. Check the translator’s name when comparing another ebook or recording.",
   },
   {
-    q: "Is this a professionally narrated audiobook?",
-    a: "No, and it's worth saying plainly. LoudReader generates the narration with a synthetic voice reading the public-domain text on your device, live, as you listen. It is not a human actor's performance, so if you specifically want a studio recording with different voices for each brother, look for a commercial audiobook edition instead. What you get here is a real, complete reading of the whole novel, free, with your choice of when to press play.",
+    q: "Is every translation free because the original is old?",
+    a: "No. The linked Gutenberg record describes that particular English edition. A different translation or recording has its own publication and rights information.",
   },
   {
-    q: "How long is The Brothers Karamazov as an audiobook?",
-    a: "Around 38 hours, based on the book's roughly 340,000 words. That's a big listen by any measure, closer to a long TV season than a weekend read, so most people work through it over several weeks rather than in one sitting.",
+    q: "How long does it take to listen?",
+    a: "The catalogue estimates about 38 hours from text length. The voice and playback speed change the actual duration; use chapter boundaries for your listening plan.",
   },
   {
-    q: "Which translation does LoudReader use?",
-    a: "The Constance Garnett translation, which is the one Project Gutenberg carries as ebook #28054. It's the most widely read English translation of the novel and the one nearly every free digital edition uses.",
+    q: "Can I listen without a subscription?",
+    a: FREE_TIER.full,
   },
   {
-    q: "Can I listen on my phone and my Mac?",
-    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, and both read the same imported book, so you can start The Brothers Karamazov on your commute and pick it back up at your desk. It remembers your place either way.",
+    q: "Does the app automatically carry my place from iPhone to Mac?",
+    a: "No. LoudReader has no automatic library or reading-position sync between devices. It runs on iPhone and iPad, and as the iPad app on compatible Apple Silicon Macs; manage each device’s copy separately.",
   },
 ];

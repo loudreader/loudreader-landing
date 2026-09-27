@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-long-emails-aloud",
   "title": "How to Listen to Long Emails Aloud",
-  "description": "Save a long email as a PDF and import it into LoudReader to hear it with natural offline voices. No mailbox integration needed. Works for newsletters, threads, and detailed messages.",
+  "description": "Save a readable copy of a long email for listening. Handle reply chains, attachments and confidential content without connecting an inbox to LoudReader.",
   "publishedAt": "2026-08-19",
-  "lastModified": "2026-08-19",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "listen to long emails"
+  "query": "listen to long emails",
+  "topic": "formats"
 }

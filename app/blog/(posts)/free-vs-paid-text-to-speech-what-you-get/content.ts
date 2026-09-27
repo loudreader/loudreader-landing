@@ -1,56 +1,24 @@
-// FACT PROVENANCE. Verified 2026-08-25 against the LoudReader app source
-// (LoudReader_mac repo, main branch) and components/money/site.ts:
-//   - Free listening is unlimited on every book: LoudReader/Subscription/
-//     SubscriptionAccess.swift, baseFreeFraction = 1.0 and boostedFreeFraction
-//     = 1.0, with the code comment "Free listening is UNLIMITED, the whole
-//     book plays for everyone." Matches PRICING.free in site.ts.
-//   - The all-voices trial is a one-time 8 hour allowance:
-//     SubscriptionAccess.voiceTrialLimitSeconds = 8 * 3600. The code comment
-//     specifies it is cumulative listening time, lifetime, and survives a
-//     reinstall. After it runs out, the app falls back to a single free
-//     voice. Matches VOICES.free in site.ts ("one natural offline voice,
-//     with unlimited listening").
-//   - Finishing your first book grants a one-time 3 hour bonus of all-voices
-//     listening on top of the trial: SubscriptionAccess.voiceGiftSeconds =
-//     3 * 3600, with an explicit code comment that it is never coupled to
-//     leaving a review (App Store Guideline 5.6.1).
-//   - Book imports are unlimited for both free and Premium:
-//     SubscriptionAccess.canImportBook always returns true, with a comment
-//     tying this to the "always unlimited" free-tier promise.
-//   - Premium feature list and pricing are read verbatim from PRICING in
-//     site.ts (premiumFeatures, premiumMonthly, premiumYearly,
-//     premiumLifetime): all 23 studio narrators across 10 languages,
-//     on-device voice cloning, playback speed 0.3x to 3.0x, sleep timer,
-//     ambient soundscapes, and notes and highlights.
-//   - Generating a book's audio ahead of time (offline prep) is Premium
-//     only: SubscriptionAccess.canPrepareForOffline returns isPremium, with
-//     a code comment explaining it costs real on-device compute and battery,
-//     unlike the content-access gates that stay dormant.
-// Claims NOT made: no word-count cap, no chapter cap, no time-boxed free
-// trial that expires by the calendar (the 8 hour allowance is cumulative
-// listening time, not days).
+// FACT PROVENANCE — editorial review 2026-09-28.
+// - Release source: SubscriptionAccess.swift voiceTrialLimitSeconds, voiceGiftSeconds, canImportBook, free article and bulk-action limits; SubscriptionManager.swift free voice and clone gates.
+// - PaywallReason.swift explicitly leaves notes, highlights and normal cache/background features ungated.
+// - Live Apple lookup on 2026-09-28 confirmed release1.12 and US pricing; do not interpret introductory subscription trial as voice allowance.
+// LoudReader: release_v1.12 (5dc3c0d) source audit, recorded in
+// docs/product-facts-2026-09-28.md: SubscriptionAccess.swift,
+// SubscriptionManager.swift, PaywallReason.swift, VoiceRegistry.swift,
+// PDFImportPipeline.swift, LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift.
+// SettingsSheet hides the usage-analytics control in 1.12; no visible opt-out claimed.
+// Platform: iPad app compatibility on Apple Silicon; no library-position sync.
+// Local narration does not imply no diagnostics/analytics. US pricing uses
+// shared site constants; the storefront purchase sheet controls actual billing.
+// No comparative listening test or network audit was performed for this article.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER, PRICING } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
-  {
-    q: "Is the free tier really unlimited, or is there a catch?",
-    a: "Listening time has no catch. The free tier plays every book you import from cover to cover, with no word count and no chapter limit. The catch, if you want to call it that, is voice variety after your one-time trial runs out, not listening time itself.",
-  },
-  {
-    q: "How long is the free trial, exactly?",
-    a: "Eight hours of cumulative listening across all 23 studio narrators, one time, and it survives a reinstall since it is tied to your device rather than a session. It is not eight hours per day or per book. Once you have listened for eight hours total, you choose one eligible free voice to keep with unlimited listening.",
-  },
-  {
-    q: "What happens after the trial ends?",
-    a: "You keep unlimited listening on every book, permanently, with one eligible natural offline voice of your choice. You lose access to the other 22 narrators unless you upgrade. Finishing your first book adds a one-time 3 hour bonus of all-voice listening on top of the trial, as a thank-you, with no review or rating required.",
-  },
-  {
-    q: "What does LoudReader Premium actually add?",
-    a: "All 23 studio narrators across 10 languages, on-device voice cloning, playback speed from 0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes and highlights. It also lets you generate a book's audio ahead of time for offline listening, which costs real processing on your device and is the one feature that is genuinely metered rather than simply included.",
-  },
-  {
-    q: "How much does Premium cost?",
-    a: "$7.99 a month, $49.99 a year, or $199.99 once for lifetime access. There is no cheaper tier with fewer voices; it is one plan with everything.",
-  },
+  { q: "Does free listening stop after eight hours?", a: `No. ${FREE_TIER.full} The allowance concerns voice access, not whether the rest of a book can be read.` },
+  { q: "Which voices remain free?", a: "Choose Stella or Rio; supported devices also keep Bella. This is an English selection, not a choice of any studio narrator. Available voices depend on the device." },
+  { q: "Are notes and highlights Premium-only?", a: "No. Notes, highlights and ordinary word-following highlighting do not require Premium. Adjustable playback speed, the sleep timer and the full available narrator selection are paid features." },
+  { q: "Can I try voice cloning for free?", a: "The all-voices allowance permits up to three clones from your own or permissioned speech. Premium removes that creation quota. Existing clones remain stored but lock when the allowance ends without Premium." },
+  { q: "How much does Premium cost?", a: `The current US prices are ${PRICING.premiumMonthly}, ${PRICING.premiumYearly}, or ${PRICING.premiumLifetime}. Prices and offers can vary by storefront; check the purchase sheet before confirming.` },
 ];

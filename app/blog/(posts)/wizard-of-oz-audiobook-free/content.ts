@@ -1,50 +1,50 @@
-// FACT PROVENANCE. Every claim verified on 2026-08-24 against:
-//   - Book facts (author, public domain status, Gutenberg availability):
-//     data/gutenberg-catalog.json, entry slug "the-wonderful-wizard-of-oz"
-//     (gutenberg_id 55, author L. Frank Baum, author_years 1856 to 1919).
-//     Same source that powers the /listen/the-wonderful-wizard-of-oz page,
-//     so the facts here match that page exactly. Note the book's original
-//     title is "The Wonderful Wizard of Oz"; "Wizard of Oz" is how most
-//     people search for it and is used as the plain-language name here.
-//   - The "about 4.5 hours" listening estimate is LoudReader's own
-//     word-count-derived estimate for this title (listening_hours: 4.5 in
-//     the same catalog entry), stated as an estimate, not a measured
-//     duration of any other edition.
-//   - Rendered opening sample on /listen/the-wonderful-wizard-of-oz:
-//     confirmed present via components/listen/catalog.ts bookSample()
-//     lookup for this slug.
-//   - LoudReader app claims: components/money/site.ts (single source of
-//     truth), every voice free for the first 8 hours, then one chosen voice
-//     with unlimited listening. Premium keeps all 23 studio narrators across 10 languages, playback speed 0.3x to
-//     3.0x, on-device processing (DIFFERENTIATORS.private), iPhone, iPad and Apple Silicon Macs, no account, imports EPUB/PDF, 70,000+ Gutenberg catalog
-//     built in.
-//   - No audio export: LoudReader generates narration live on-device and
-//     does not produce a downloadable MP3 file.
-// Claims you may NOT make until verified: any claim about how the 1939 film
-// or any other recorded audiobook of Oz sounds or compares in quality.
+// FACT PROVENANCE — editorial review 2026-09-28.
+// Read the previous page.tsx, content.ts and meta.json in full before revision.
+// Primary edition/catalog sources checked 2026-09-28:
+//   - https://www.gutenberg.org/ebooks/55
+//   - https://www.gutenberg.org/ebooks/43936
+//   - https://librivox.org/wonderful-wizard-of-oz-version-9-by-l-frank-baum/
+//   - https://www.gutenberg.org/policy/permission.html
+//   - data/gutenberg-catalog.json: current catalogue entry the-wonderful-wizard-of-oz,
+//     ebook 55. Listening hours, where used, are catalogue estimates,
+//     not measured audio runtimes. No comparative voice test was performed.
+//   - data/audio-samples.ts confirms the shipped opening sample lookup.
+//   - /listen/the-wonderful-wizard-of-oz: catalogue/sample route, not a full audiobook.
+// LibriVox version 9 metadata/download listing confirmed in official indexed page;
+// direct fetch was blocked. No audio was played or quality ranked.
+// Product facts: release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0)
+// in the LoudReader app source, reviewed by the shared 2026-09-28
+// source audit (docs/product-facts-2026-09-28.md): SubscriptionAccess.swift,
+// SubscriptionManager.swift, VoiceRegistry.swift, PaywallReason.swift,
+// ProjectGutenbergService, ContentView.swift file importer, Xcode target configuration.
+// FREE_TIER imports the updated shared wording: eight cumulative listening hours,
+// then a free English voice selection (not any studio narrator), unlimited listening.
+// iPad compatibility on Apple Silicon is not a native Mac app; no device sync promise.
+// Local speech is not a claim of zero diagnostics, analytics or network use.
+// Edition and voice-selection advice is editorial guidance, not a tested superiority claim.
 
 import type { Faq } from "@/components/money/FaqSection";
 import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is there a free audiobook of The Wonderful Wizard of Oz?",
-    a: "Yes. L. Frank Baum's 1900 novel is in the public domain, so a free audiobook of the actual text is available with no purchase and no subscription. LoudReader has the full book in its built-in catalog and reads it aloud with a natural offline voice on the free tier, and you can hear the opening read aloud on the book's LoudReader page before you install anything.",
+    q: "Which book does the catalogue use?",
+    a: "The current entry links Gutenberg ebook 55, The Wonderful Wizard of Oz by L. Frank Baum. Gutenberg also points to ebook 43936 as an improved edition.",
   },
   {
-    q: "Is this the book or the 1939 movie script?",
-    a: "It's the book. The Wonderful Wizard of Oz is Baum's original 1900 novel, which is brisker and stranger than the film, with more of Oz's odd little kingdoms and a different ending for the Wizard. This audiobook reads Baum's actual text, not a movie tie-in adaptation.",
+    q: "Is the improved edition available for read-along use?",
+    a: "Gutenberg ebook 43936 credits W. W. Denslow as illustrator and offers EPUB downloads. Inspect the file, then import it if you want that edition rather than the current catalogue entry.",
   },
   {
-    q: "Is the narration a real person or a synthetic voice?",
-    a: "It is a synthetic voice, not a professional narrator. LoudReader converts Baum's public-domain text into audio using an on-device text-to-speech voice. It's clear and easy to follow, but it's not a performed audiobook with an actor voicing Dorothy, the Scarecrow, and the Wizard differently. If a human performance is what you want, LibriVox may have a volunteer-read version to check.",
+    q: "Is there a free human audiobook?",
+    a: "Yes. LibriVox’s version 9 is a volunteer recording with downloadable sections. Preview the voice on its catalogue page before choosing it.",
   },
   {
-    q: "Do I need to sign up for anything to listen?",
-    a: `No. ${FREE_TIER.full} The Wonderful Wizard of Oz is already in the app's built-in Project Gutenberg catalog of 70,000+ books, so there's no file to find or convert before you press play.`,
+    q: "Does this include the film songs?",
+    a: "No. A reading of Baum’s novel is not a film soundtrack or musical recording.",
   },
   {
-    q: "How long is the audiobook?",
-    a: "LoudReader's own estimate, based on the book's word count, is about 4.5 hours at normal speed, short enough for a weekend or a couple of commutes. That's an estimate for this synthetic reading, not a measured runtime of any other version, and Premium's speed control (0.3x to 3.0x) shortens or stretches it.",
+    q: "Can I listen to the ebook without subscribing?",
+    a: FREE_TIER.full,
   },
 ];

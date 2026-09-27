@@ -1,39 +1,41 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - On-device voice synthesis, no internet: voice engines run locally,
-//     no cloud API calls, works in airplane mode.
-//   - Lock-screen controls via MPRemoteCommandCenter in PlayerService.swift:
-//     play, pause, toggle, skip forward/backward (15-second intervals).
-//   - Background audio: Info.plist UIBackgroundModes = ["audio"].
-//   - Playback speed 0.3x to 3.0x is Premium: PaywallReason.playbackSpeed.
-//   - Free tier unlimited listening: SubscriptionAccess.swift
-//     baseFreeFraction = 1.0.
-//   - Pricing: components/money/site.ts PRICING.
-// Claims you may NOT make: any running performance benefit, calorie burn
-// statistics, or that listening while running improves workout quality
-// (no verified citation at write time). No CarPlay claims.
+// FACT PROVENANCE — reviewed 2026-09-28; no runtime test claimed.
+// Product facts checked against shipping release_v1.12 (released 2026-09-22),
+// commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 in LoudReader_mac:
+// - LoudReader/Subscription/SubscriptionAccess.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift:
+//   eight cumulative listening hours, device-dependent free English choices.
+// - LoudReader/Subscription/PaywallReason.swift: speed/timer gates; notes free.
+// - LoudReader/PDFImportPipeline.swift: local OCR and layout/recognition limits.
+// - LoudReader/Engines/ChatterboxVoice.swift and DeviceCapability.swift:
+//   studio roster and hardware availability; iPad app on compatible Mac.
+// - LoudReader/LoudReaderApp.swift, Analytics.swift and SettingsSheet.swift:
+//   Sentry diagnostics and default TelemetryDeck analytics; no visible off switch.
+// - LoudReader/Engines/VoiceEnrollment.swift, ClonedVoiceStore.swift and
+//   LoudReader/Subscription/SubscriptionManager.swift: permissioned cloning and trial/paid access.
+// - LoudReader/PlayerService.swift: MPRemoteCommandCenter play/pause/skip,
+//   inspected at release_v1.12 on 2026-09-28; Info.plist background audio.
+// Local narration does not imply no telemetry or no system backups.
+// Free-tier copy comes from components/money/site.ts; app listing checked via
+// https://itunes.apple.com/lookup?id=6758149478&country=us on 2026-09-28.
+// Practical workflow advice is editorial, not a measured or clinical outcome.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Will I actually absorb the book while running?",
-    a: "Your brain can follow a story while your legs do their own thing, especially if the book is narrative-driven. Dense non-fiction or anything requiring heavy mental work is tougher at speed. The honest rule: if you can follow a podcast on the same run, you can follow a book.",
+    "q": "Do I need my phone with LoudReader?",
+    "a": "Yes for the iPhone workflow described here. We are not claiming a standalone watch player."
   },
   {
-    q: "What playback speed works best while running?",
-    a: "Start at 1.0x and see how it feels. Some runners nudge it up slightly because the physical rhythm makes slower narration feel draggy, but the key is picking a speed you can follow without effort. Speed control from 0.3x to 3.0x is a LoudReader Premium feature; the free tier plays at normal speed.",
+    "q": "Do I need mobile data during prepared narration?",
+    "a": "No. Existing books can be narrated locally once the required resources are ready. Downloads and other network features are separate."
   },
   {
-    q: "Do I need to bring my phone on the run?",
-    a: "LoudReader runs on your iPhone, so you need your phone with you. An armband or a zippered pocket keeps it secure. The lock-screen and Bluetooth headphone controls let you pause and resume without touching the screen.",
+    "q": "Should I adjust the app while running?",
+    "a": "Set it up beforehand. Stop somewhere suitable before searching, changing settings or finding a lost passage."
   },
   {
-    q: "What happens if I lose signal on my route?",
-    a: "Nothing, because LoudReader does not need one. The voices run entirely on your device. The app is fully on-device and private, your library never leaves your device, and playback continues through dead zones, parks, and anywhere your route takes you.",
-  },
-  {
-    q: "Can I pause mid-run and pick up exactly where I was?",
-    a: "Yes. Tap your headphone button or the lock-screen pause control, and LoudReader saves your position. When you resume, the narration picks up at the exact word where you stopped. No re-finding your place.",
-  },
+    "q": "Will listening help my running performance?",
+    "a": "No performance benefit is claimed. It is simply an optional listening activity."
+  }
 ];

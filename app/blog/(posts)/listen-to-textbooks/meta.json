@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-textbooks",
   "title": "How to Listen to Your Textbooks",
-  "description": "Turn course PDFs and EPUBs into audio you can study anywhere. What works, what needs OCR first, and how to re-listen to chapters offline before an exam.",
+  "description": "Check a course PDF, listen to its prose and keep diagrams beside you. A practical textbook workflow with OCR, file access and revision limits explained.",
   "publishedAt": "2026-07-24",
-  "lastModified": "2026-07-24",
+  "lastModified": "2026-09-28",
   "avatar": "Neurodivergent Student",
-  "query": "app to read textbooks aloud"
+  "query": "app to read textbooks aloud",
+  "topic": "learning"
 }

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,162 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
-export default function TextToSpeechAdhdArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Reading with ADHD usually fails the same way: your eyes keep moving
-          after your attention has left, and you surface a page later having
-          kept none of it. Text to speech attacks that mechanic directly by
-          making reading <strong>dual-channel</strong>. A voice reads while
-          the text highlights word by word, so the pace is set externally and
-          a drift costs one glance instead of a page.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) does this
-          on any EPUB or PDF with natural offline voices: highlighting is
-          free on every book with no word quota, playback continues with the
-          screen locked so you can pace or do dishes, and it is fully
-          on-device and private, your library never leaves your device. The
-          honest note up front: ADHD-specific research on TTS is thin, so
-          this is mechanics, and it either works for you in one chapter or it
-          doesn&apos;t.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="A voice that keeps moving is a pace your attention can borrow."
-      />
-
-      <QuestionSection question="Why is reading with ADHD so exhausting?">
-        <p>
-          Silent reading is a single-channel activity that quietly demands
-          everything from that channel: hold the line, decode the words,
-          assemble the meaning, and suppress the forty-seven other things your
-          brain would rather consider. For an ADHD reader the fragile part is
-          the <em>holding</em>. Attention dips for two seconds, and the page
-          does nothing about it. Your eyes keep sliding along the lines,
-          unaccompanied. You come back, realize nothing landed, scan backwards
-          for the last sentence you actually read, and pay the re-reading tax.
-          Again.
-        </p>
-        <p>
-          Books punish this loop harder than feeds and group chats do, because
-          a chapter is a long dependency chain: miss one paragraph of setup
-          and the next three confuse you. The exhaustion is not the reading.
-          It is the constant re-entry.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Why does listening while following the text help?">
-        <p>Dual-channel reading changes two mechanics at once:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">The pace is external.</strong>{" "}
-            A voice does not stall the way eyes do. You cannot silently reread
-            the same sentence four times, because the narration has already
-            moved, and your attention tends to move with it.
-          </li>
-          <li>
-            <strong className="text-gray-900">Re-entry becomes free.</strong>{" "}
-            With word-by-word highlighting, the current word is always lit.
-            When you drift and come back, there is no backwards scan. Your
-            eyes land on the highlight and you are in the book again.
-          </li>
-        </ul>
-        <p>
-          Filling both channels also leaves less idle bandwidth for the brain
-          to wander off with, the same reason many people with ADHD doodle
-          through meetings they actually want to follow.
-        </p>
-        <p>
-          The honest part: the solid research on read-aloud tools was done on
-          reading disabilities broadly, not ADHD, and{" "}
-          <a
-            href="https://journals.sagepub.com/doi/10.1177/0022219416688170"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            a 2018 meta-analysis in the Journal of Learning Disabilities
-          </a>{" "}
-          found moderate comprehension gains from text-to-speech for students
-          with reading disabilities. ADHD-specific evidence is thinner than
-          TTS marketing tends to admit, and we would rather say so than invent
-          a statistic. The cheap experiment beats the literature here: run one
-          real chapter dual-channel and see whether you finish it. (If your
-          challenge is dyslexia rather than attention, the mechanics differ,
-          and that case is covered in{" "}
-          <Link
-            href="/blog/text-to-speech-dyslexia"
-            className="text-loudBlue hover:underline"
-          >
-            text to speech for dyslexia
-          </Link>
-          .)
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What playback speed keeps an ADHD brain engaged?">
-        <p>
-          Speed is the most personal dial in TTS, and for many ADHD listeners
-          it is the difference-maker: at 1x some narration is slow enough that
-          spare attention wanders off between sentences, while a slightly
-          brisker pace keeps the channel full. Others need the opposite,
-          slower speeds for dense textbooks. There is no correct number. There
-          is only having the dial and moving it until the drifting stops.
-        </p>
-        <p>
-          Stated plainly: in{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>
-          , speed control from 0.3x to 3.0x is part of Premium, and the free
-          tier plays at normal speed. Everything else this article describes
-          is free: word-by-word highlighting, whole books with no word quota,
-          and screen-off listening.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Can you listen while moving?">
-        <p>
-          Yes, and for restless readers this may matter more than any feature
-          inside the app. A book that lives in your ears works while you pace,
-          fold laundry, walk the long way home, or sit on a gym bike.
-          Occupying your hands and body with something mindless is often
-          exactly what lets the book keep the rest. Press play, lock the
-          screen, and playback continues, with play, pause, and 15-second
-          skips on the lock screen. The voices run entirely on your device, so
-          none of this needs a connection.
-        </p>
-        <p>
-          Start with something you already want to read:{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            download LoudReader free
-          </a>
-          , import an EPUB or PDF (or grab a built-in Project Gutenberg
-          classic), and give one chapter the dual-channel treatment.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>If you have ADHD and keep losing your place in a book, narration is one reading format worth trying. A moving highlight shows where the voice is speaking, and pausing or replaying a sentence gives you a way back into the passage. Those are useful controls, not evidence that an app treats ADHD or guarantees concentration. Sound can also become another distraction. Start with a manageable passage, compare it with your usual reading method and judge whether you can follow the meaning. This guide explains what to change, what to notice and where <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> fits.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Use the highlight as a location cue, and pause when you need to return to the meaning." />
+<QuestionSection question="What difficulty are you trying to solve?"><p>Losing your place, avoiding a long chapter and understanding a dense argument are different problems. Before changing tools, describe the one that happens most often. For example: “I can read each sentence but forget how it connects to the last,” or “I keep searching for the line after an interruption.” That gives you something concrete to assess.</p><p>The <a href="https://www.nhs.uk/conditions/adhd-adults/" target="_blank" rel="noopener noreferrer" className="text-loudBlue hover:underline">NHS overview of adult ADHD</a> describes attention and organisation difficulties and the importance of individual support. It does not establish a TTS treatment effect. This article offers a reading experiment, not a medical explanation for every difficulty with text.</p></QuestionSection>
+<QuestionSection question="What can narration and highlighting change?"><ul className="list-disc pl-6 space-y-2"><li><strong>A visible location.</strong> Word highlighting indicates the current narration position. You can return to that location after pausing; if you missed the meaning, replay the passage too.</li><li><strong>An adjustable pace.</strong> Audio advances through the text until you pause it. This may feel useful or rushed. There is no need to keep up when you need time to think.</li><li><strong>A different way to read.</strong> You can listen without holding the book open when the material does not require figures or close annotation.</li><li><strong>More input.</strong> Hearing and seeing words together can also feel busy. You can switch back to text alone, or try audio alone with a familiar passage.</li></ul><p>None of these controls guarantees comprehension. A highlight tells you where the reader is speaking, not whether you understood the preceding paragraph.</p></QuestionSection>
+<QuestionSection question="How can you try it without turning setup into another task?"><ol className="list-decimal pl-6 space-y-2"><li>Choose a short passage you actually need or want to read. Keep your usual reading option available.</li><li>Use the default voice and normal speed first. Avoid changing several settings at once.</li><li>Read with narration for a manageable stretch, then pause. Say or write the main point without looking.</li><li>Notice the practical friction: did you lose your place, miss the content, dislike the voice or feel hurried?</li><li>Change one thing for the next section: a quieter setting, a different voice, a smaller passage or reading without audio.</li><li>Try again on another day or another kind of text before deciding the format is useful or useless.</li></ol><p>This is a personal usability check, not a clinical test. One good or frustrating chapter is information about that session, not a verdict about your attention.</p></QuestionSection>
+<QuestionSection question="Which playback speed should you use?"><p>Start where the words are comfortable to follow. If the narration seems hurried, pause or use a slower pace. If it feels unnecessarily slow on familiar material, try a small increase and check your understanding. There is no verified “ADHD speed” recommended here, and faster is not inherently better.</p><p>LoudReader Premium offers 0.3x to 3.0x speed control. Normal-speed playback, word highlighting, sentence replay, notes and highlights are available without making speed adjustment essential to the workflow. {FREE_TIER.full}</p></QuestionSection>
+<QuestionSection question="Can you listen while moving?"><p>LoudReader supports background playback and lock-screen media controls. After the book and needed voice assets are available, narration can continue without a connection. This makes audio an option while folding laundry or taking a familiar walk, if you can still attend to the activity safely.</p><p>Try familiar or lighter material first. If the task and the book compete for your attention, save the passage for a seated session. For dense study, keep figures and the source text accessible rather than trying to understand everything while doing something else.</p></QuestionSection>
+<QuestionSection question="What should you know before using LoudReader?"><p>It is an iPhone and iPad reading app; the iPad build can run on compatible Apple Silicon Macs. It reads supported DRM-free EPUBs and PDFs, with local speech generation. Import quality still matters: OCR or a complicated page layout can introduce errors that have nothing to do with your attention.</p><p>For coursework, <Link href="/blog/text-to-speech-for-students" className="text-loudBlue hover:underline">the student workflow</Link> covers file checks and note-taking. If reading difficulties are affecting studies or everyday life, the NHS guide above describes routes to support; a reading app can be one tool alongside that support.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Give your attention two channels"
-        subline="Narration plus word-by-word highlighting on any book. Free, on-device, no account. Test it on one real chapter."
-      />
+      <StoreCta headline="Try a manageable passage" subline="Word highlighting, sentence replay and local narration. Choose the format that helps you follow the text." />
     </ArticleLayout>
   );
 }

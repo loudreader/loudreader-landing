@@ -1,9 +1,10 @@
 {
   "slug": "how-long-does-it-take-to-listen-to-a-book",
   "title": "How Long Does It Take to Listen to a Book?",
-  "description": "The arithmetic behind audiobook length: word count, narration speed, and playback speed, so you can estimate any book's listening time yourself.",
+  "description": "Estimate book listening time from duration, word count or a timed voice sample, with worked calculations and room for pauses and replays.",
   "publishedAt": "2026-10-19",
   "lastModified": "2026-10-19",
   "avatar": "Time-Starved Book Lover",
-  "query": "how long does it take to listen to a book"
+  "query": "how long does it take to listen to a book",
+  "topic": "voices"
 }

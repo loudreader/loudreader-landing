@@ -1,9 +1,10 @@
 {
   "slug": "macos-spoken-content-vs-app",
-  "title": "macOS Spoken Content vs a Dedicated Read-Aloud App",
-  "description": "macOS Spoken Content (Option+Esc) reads selected text for free, but a dedicated app adds natural voices, bookmarking, and offline playback. Honest comparison for Mac users.",
+  "title": "Mac Spoken Content vs a Read-Aloud App",
+  "description": "Apple’s built-in speech includes highlighting and playback controls. See when that is enough and when a book library, saved place or sleep timer helps.",
   "publishedAt": "2026-08-24",
-  "lastModified": "2026-08-24",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "macos spoken content vs app"
+  "query": "macos spoken content vs app",
+  "topic": "comparisons"
 }

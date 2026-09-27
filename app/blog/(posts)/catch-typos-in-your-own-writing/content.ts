@@ -1,48 +1,29 @@
-// FACT PROVENANCE. Verified on 2026-07-14:
-// External citation (the article's ONE study/commentary citation):
-//   - WIRED, "What's Up With That: Why It's So Hard to Catch Your Own Typos"
-//     (Nick Stockton, August 2014), quoting psychologist Tom Stafford of the
-//     University of Sheffield: https://www.wired.com/2014/08/wuwt-typos/
-//     Verified via web search 2026-07-14. Claims taken from it, paraphrased:
-//     writing is a high-level task; the brain generalizes component parts;
-//     when proofreading your own work the version in your head competes with
-//     the version on the screen; Stafford's advice is to make the text as
-//     unfamiliar as possible (change font, print it out). No other studies
-//     are cited; no statistics are invented.
-// App-behavior claims verified against the LoudReader app source
-// (LoudReader_mac repo, main branch):
-//   - Word-by-word highlighting: ContinuousReaderView.swift:4383-4388
-//     (per-word `tts-word-highlight`), driven by TTSEngine word callbacks.
-//   - Import formats EPUB + PDF only: ContentView.swift:827 fileImporter
-//     allowedContentTypes [.epub, .pdf]; article says "export to PDF".
-//   - On-device / offline / no account: local TTS engines, no CloudKit or
-//     upload code anywhere in the app source.
-// Spellchecker limitations are described generically (real-word errors and
-// missing words pass; no named product or accuracy number is claimed).
-// Claims you may NOT make: any percentage of typos caught by listening,
-// any named spellchecker's behavior, any second study without verifying it.
+// FACT PROVENANCE — editorial verification 2026-09-28.
+// App-source audit on 2026-09-28: LoudReader release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0, released 2026-09-22 (Apple lookup id6758149478). Sources: LoudReader/PlayerService.swift (saved position, background audio, remote controls); ContentView.swift and BookImportService.swift (EPUB/PDF imports); Subscription/SubscriptionAccess.swift, SubscriptionManager.swift and Subscription/PaywallReason.swift (8-hour eligible-voice allowance, limited free English selection thereafter, paid speed/timer, free notes); LoudReaderApp.swift and Analytics.swift (diagnostics and usage analytics); PDFImportPipeline.swift (local OCR with limits). Source review, not new runtime testing.
+// Primary source checked 2026-09-28: https://writingcenter.unc.edu/tips-and-tools/editing-and-proofreading/
+// Practical workflows are editorial suggestions, not measured outcomes or medical promises.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Why can I spot typos in other people's writing but not mine?",
-    a: "Because you only have a mental draft of your own text. When you read someone else's writing, everything on the page is new information and gets your full attention. When you read your own, your brain already knows the intended meaning and fills in gaps, so you see the sentence you meant to write, not the one you wrote. The errors are not invisible; they are being autocorrected by the author's own memory.",
+    "q": "Will listening catch every typo?",
+    "a": "No. It can flag missing words, repetition and awkward joins, but homophones, formatting and many punctuation errors need a visual check."
   },
   {
-    q: "Does reading backwards actually work?",
-    a: "Partially. Reading your text backwards, sentence by sentence, strips away meaning so each word gets inspected on its own, which is good for catching misspellings. But because it destroys meaning, it cannot catch meaning-level errors: a missing 'not', a 'from' that should be 'form', or a sentence that stops making sense halfway. It is also slow and unpleasant enough that most people quit after a page.",
+    "q": "Does a strange pronunciation mean my spelling is wrong?",
+    "a": "Not necessarily. Check the written word and its source; a speech engine may mispronounce a correct name or abbreviation."
   },
   {
-    q: "Why does hearing text expose errors seeing it hides?",
-    a: "A text-to-speech voice has no idea what you meant to write, so it reads exactly what is on the page. Your typo-blindness lives in the visual reading loop (skimming, predicting, filling in), and listening bypasses that loop entirely. A missing word becomes an audible hole, a doubled word gets spoken twice, and a garbled sentence sounds garbled, even though your eyes would have glided over all three.",
+    "q": "Should I read backwards?",
+    "a": "It is an optional way to isolate spelling or individual sentences. It does not replace reading the passage in context for meaning."
   },
   {
-    q: "Do spellcheckers catch missing words?",
-    a: "Usually not. A spellchecker flags strings that are not words, so 'teh' gets caught. But a missing word leaves a perfectly spelled sentence behind, and real-word errors like 'form' for 'from' or 'it' for 'is' pass too. Grammar checkers catch some of these and miss others. That is why a listening pass complements them: the voice reads the sentence you actually wrote, and your ear notices when it is not the sentence you meant.",
+    "q": "Should I wait before proofreading?",
+    "a": "If your deadline allows, take a break before the final pass. There is no required number of hours or days; a careful short pass is more useful than a timing promise."
   },
   {
-    q: "How long should I wait before proofreading my own draft?",
-    a: "As long as your deadline allows. The enemy is familiarity, and familiarity fades with time. Overnight is a common rule of thumb; a week is better for anything important. If you have no time at all, change the modality instead of waiting: listening to the draft makes it unfamiliar immediately, which is the same effect a delay is trying to achieve.",
-  },
+    "q": "Where should I make corrections?",
+    "a": "In the master writing document. Export a fresh listening copy if needed, and recheck the changed sentence in context."
+  }
 ];

@@ -1,9 +1,10 @@
 {
   "slug": "listen-to-books-instead-of-scrolling",
   "title": "Listen to Books Instead of Scrolling",
-  "description": "Replace 15 minutes of phone scrolling with a chapter of audio. LoudReader reads books aloud with natural offline voices, a habit swap that actually sticks.",
+  "description": "Try replacing one scrolling slot with a book: prepare the next passage, put the phone down, and judge whether you actually want to repeat it.",
   "publishedAt": "2026-08-18",
-  "lastModified": "2026-08-18",
+  "lastModified": "2026-09-28",
   "avatar": "Neurodivergent Student",
-  "query": "listen instead of scrolling"
+  "query": "listen instead of scrolling",
+  "topic": "reading"
 }

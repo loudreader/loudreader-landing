@@ -28,6 +28,8 @@ export type CatalogBook = {
   estimated: boolean;
   synopsis: string;
   hook: string;
+  /** Optional date of a real correction to this particular catalog entry. */
+  lastModified?: string;
 };
 
 const CATALOG = rawCatalog as CatalogBook[];
@@ -36,7 +38,7 @@ const CATALOG = rawCatalog as CatalogBook[];
  * Sitemap lastmod for every /listen page. Bump ONLY when catalog content
  * actually changes (new tier, rewritten synopses) — never per build.
  */
-export const CATALOG_LAST_MODIFIED = "2026-07-14";
+export const CATALOG_LAST_MODIFIED = "2026-09-28";
 
 export function getAllBooks(): CatalogBook[] {
   return CATALOG;

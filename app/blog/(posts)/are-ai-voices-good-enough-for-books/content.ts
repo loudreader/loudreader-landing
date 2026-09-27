@@ -1,4 +1,8 @@
-// FACT PROVENANCE — editorial refresh 2026-09-27:
+// FACT PROVENANCE — editorial refresh 2026-09-27; availability alignment 2026-09-28:
+//   - Canonical shipping release_v1.12 audit: 23 studio narrators are device-dependent;
+//     FREE_TIER uses current limited English selection after the eight-hour allowance.
+//     Shipping source: VoiceRegistry.swift, DeviceCapability.swift, SubscriptionManager.swift
+//     at release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0); source audit, not runtime testing.
 //   - components/money/site.ts: current LoudReader roster (23 studio voices,
 //     10 languages), local processing, free-tier wording, platforms, and
 //     documented app-source provenance. No new app runtime audit claimed.
@@ -36,6 +40,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How many voices can I try in LoudReader?",
-    a: `LoudReader has 23 studio narrators across 10 languages, with natural offline voices generated on your device. You can hear the roster at /voices. ${FREE_TIER.full} Premium keeps all 23 voices available after the trial.`,
+    a: `LoudReader’s studio roster has 23 narrators across 10 languages, with availability depending on your device. Speech is generated locally. You can hear the roster at /voices. ${FREE_TIER.full} Premium keeps the full selection supported by your device available after the trial.`,
   },
 ];

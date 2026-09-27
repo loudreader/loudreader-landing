@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,155 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function ListenToBooksWhileRunningArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Running with an audiobook is different from running with music. Music
-          sets a beat and disappears. A book pulls you forward through
-          something: a chapter, an argument, a world.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) reads any
-          DRM-free EPUB or PDF aloud with natural offline voices. It is fully
-          on-device and private, your library never leaves your device, so no
-          data plan is needed mid-run. The voices work in airplane mode, in
-          rural stretches, and anywhere your route goes. Lock-screen controls
-          and your headphone button handle pause and resume. Start the book
-          before you lace up, press play, and your weekly mileage doubles as
-          reading time.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Your stride is your reading pace. No data, no stream, no signal needed."
-      />
-
-      <QuestionSection question="Why listen to books instead of music on a run?">
-        <p>
-          Music and books serve different runs. Music works for intervals,
-          sprints, and high-effort sessions where you need a beat to push
-          against. Books work for steady runs, long runs, and recovery runs
-          where your body is on autopilot and your mind has room.
-        </p>
-        <p>
-          The practical difference: a one-hour run with music is an hour of
-          running. A one-hour run with a book is an hour of running plus a
-          chapter you did not have to schedule any other time for. If you are
-          already logging miles and struggling to log pages, combining them
-          solves a calendar problem without adding minutes to your day.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What kind of books actually work while running?">
-        <p>
-          Plot-driven fiction is the strongest candidate. Thrillers, mysteries,
-          fast-moving fantasy and sci-fi, narrative history, and memoirs. The
-          story pulls you forward the same way the road does. If the book has a
-          momentum of its own, it pairs with the momentum of the run instead of
-          fighting it.
-        </p>
-        <p>
-          What tends to not work: dense philosophy, technical manuals, anything
-          that requires you to stop and think or flip back to a previous
-          passage. Your brain at a 9-minute-mile pace processes differently than
-          your brain in a chair. Choose books that reward continuous forward
-          attention.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Why does offline matter on a run?">
-        <p>
-          Three reasons, all of them practical:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">No data burn.</strong> Streaming
-            audiobooks eat mobile data for the length of your run. An on-device
-            reader uses zero.
-          </li>
-          <li>
-            <strong className="text-gray-900">No dead-zone dropouts.</strong>{" "}
-            Parks, trails, and rural routes can have patchy coverage. A streamed
-            audiobook stutters or stops. An on-device voice does not care.
-          </li>
-          <li>
-            <strong className="text-gray-900">Airplane mode.</strong> Running in
-            airplane mode saves battery, silences notifications, and keeps you
-            in the book. LoudReader works because the voices are local. It is
-            fully on-device and private, your library never leaves your device.
-          </li>
-        </ul>
-      </QuestionSection>
-
-      <QuestionSection question="How do you set it up before a run?">
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Get{" "}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-loudBlue hover:underline"
-            >
-              LoudReader from the App Store
-            </a>{" "}
-            on your iPhone. Free, no account.
-          </li>
-          <li>
-            Import any DRM-free EPUB or PDF. If you do not have a file ready,
-            pick one of the 70,000+ free Project Gutenberg classics built right
-            in.
-          </li>
-          <li>
-            Connect your earbuds or headphones before you start running. Test
-            the volume at a level that lets you hear your surroundings.
-          </li>
-          <li>
-            Press <strong>play</strong>, lock the screen, and tuck the phone
-            into an armband or zippered pocket. Run.
-          </li>
-        </ol>
-      </QuestionSection>
-
-      <QuestionSection question="How do you control playback mid-stride?">
-        <p>
-          The less you touch the phone, the smoother the run. Two options, both
-          hands-free:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Headphone button.</strong> A
-            single tap on most earbud or headphone controls pauses the book. Tap
-            again to resume. That is it. You never break stride for playback.
-          </li>
-          <li>
-            <strong className="text-gray-900">Lock screen.</strong> If you need
-            to skip back 15 seconds because you missed something, pull the phone
-            out long enough to tap the skip-back button on the lock screen. It
-            does not require unlocking the phone.
-          </li>
-        </ul>
-        <p>
-          A good practical tip: set everything before the run. Voice, volume,
-          speed, book. Then the only controls you need mid-run are play and
-          pause.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>If you want to try a book on a run, set it up before moving and start with a short, familiar route where listening is appropriate. Keep the controls simple and pause for crossings, navigation, other people or any stretch that needs your full attention. A book is optional company, not a training aid. If you cannot follow the story comfortably or stay aware of the route, save it for another time.</p></Tldr>
+      <ArticleIllustration variant="waveform" caption="Prepare the audio before moving and pause when the route needs attention." />
+      <QuestionSection question="What is a useful first experiment?"><p>Choose one short chapter or familiar story rather than a long technical passage. Decide on the starting point while stationary. On your first attempt, notice whether you are following the book or frequently needing to rewind.</p><p>You do not have to keep the same audio for every kind of run. A session requiring instructions, pace changes or unfamiliar navigation may be better without a book. We make no claim that listening improves endurance, speed or workout quality.</p></QuestionSection>
+      <QuestionSection question="How do you prepare offline playback?"><ol className="list-decimal pl-6 space-y-2"><li>Download an audiobook, or import your ebook into a local TTS reader.</li><li>Open the selected book and make sure its voice resources are ready.</li><li>Try playback briefly without a connection, then restore your normal phone settings.</li><li>Check battery, volume and the headphone pause control before setting off.</li></ol><p>Downloaded recordings also support offline use. Local TTS is another route when you want your own compatible text spoken. It does not mean the whole app has no network features or analytics.</p></QuestionSection>
+      <QuestionSection question="How does LoudReader work on a run?"><p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> reads supported DRM-free EPUBs and PDFs on your iPhone. Background playback lets you lock the screen and put the phone in a secure pocket or holder. You still need the phone; this guide does not promise a standalone watch version.</p><p>Once the book and required voice resources are available on the device, narration works offline. Downloads and web imports still need a connection.</p><p>Its playback speed control is Premium. Start at a pace you can follow rather than treating a faster setting as a target. If you are repeatedly missing passages, change the circumstances before increasing the speed.</p><p>{FREE_TIER.full}</p></QuestionSection>
+      <QuestionSection question="What should you do at crossings or interruptions?"><p>Pause when the route needs your attention. Headphone transparency modes or an open ear do not remove distraction, and no equipment setup makes every route appropriate for listening. Follow local conditions and any event rules.</p><p>If you want to search, change a chapter or repair your position, stop somewhere suitable first. The lock screen reduces the steps needed to control audio; it is not a reason to inspect the phone while moving.</p></QuestionSection>
+      <QuestionSection question="How do you keep your place between runs?"><p>Stop at a natural break if convenient and note the chapter heading. When you return, replay a short section if you need context. There is no benefit in counting unheard minutes as reading.</p><p>If exercise does not suit the book, try a passenger journey or a quiet walk instead. Our <Link href="/blog/listen-to-books-on-your-commute" className="text-loudBlue hover:underline">commute setup guide</Link> covers preparing a title for unreliable signal. Keep the listening option that feels useful, and leave the rest.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Turn your run into reading time"
-        subline="Import any EPUB or PDF, press play, and go. Free, offline, no account needed."
-      />
+      <StoreCta headline="Try a short chapter on your own terms" subline="Prepare the file and controls before you set off." />
     </ArticleLayout>
   );
 }

@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-gray-600">
-            Last updated: July 2026
+            Last updated: 28 September 2026
           </p>
         </div>
       </motion.section>
@@ -55,96 +55,75 @@ export default function PrivacyPage() {
           <div className="space-y-8 text-gray-700 leading-relaxed">
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Commitment to Privacy</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">What this policy covers</h2>
               <p>
-                LoudReader is designed with privacy at its core. We believe your reading habits are personal, and we've built our app to respect that. <strong>We do not collect, store, or transmit any of your personal data.</strong>
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Data We Do NOT Collect</h2>
-              <p>Unlike many apps, LoudReader does not collect:</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Personal information (name, email, phone number)</li>
-                <li>Device identifiers or advertising IDs</li>
-                <li>Location data</li>
-                <li>Usage analytics or behavioral data</li>
-                <li>The content of books you import</li>
-                <li>Your reading history or preferences</li>
-                <li>Notes, highlights, or bookmarks you create</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How the App Works</h2>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">On-Device Processing</h3>
-              <p>
-                All text-to-speech processing happens entirely on your device using an on-device AI voice model. Your books are never sent to any server. The voice synthesis runs locally on your iPhone or iPad - no internet connection required.
-              </p>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Local Storage</h3>
-              <p>
-                All your data - including imported books, notes, highlights, reading progress, and cached audio - is stored locally on your device. This data is not accessible to us or any third party.
-              </p>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Project Gutenberg</h3>
-              <p>
-                When you browse or download free books from Project Gutenberg, your device connects directly to Project Gutenberg's servers. We do not intermediate or log these requests. Please refer to Project Gutenberg's privacy policy for information about their practices.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Subscription and Payments</h2>
-              <p>
-                Subscription purchases are handled entirely by Apple through the App Store. We do not have access to your payment information, Apple ID, or billing details. Apple's privacy policy governs how they handle this information.
+                This policy describes the LoudReader app and the loudreader.io website. <strong>LoudReader generates speech on your device.</strong> Your reading library and voice processing are separate from the app&apos;s usage analytics and technical diagnostics, which send information to the services described below.
               </p>
               <p className="mt-4">
-                We receive only anonymized transaction confirmations from Apple to verify your subscription status. These do not contain any personally identifiable information.
+                You do not need a LoudReader account to read or listen. That does not mean the app collects no data: the current app uses TelemetryDeck for product analytics and Sentry for reliability and performance diagnostics. Website analytics have a separate consent choice.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Required Reason APIs</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Your library and voice processing</h2>
               <p>
-                LoudReader uses certain iOS APIs that Apple requires us to disclose. These are used solely for the app's core functionality:
+                Imported books, notes, highlights, reading progress and cached audio are stored on your device. Text-to-speech and voice cloning run locally; they do not require uploading your book text or voice recording to a speech service. Downloaded content and installed voices can be used without an internet connection.
               </p>
-              <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li><strong>UserDefaults:</strong> To save your app preferences (font size, voice selection, night mode, etc.) locally on your device.</li>
-                <li><strong>File Timestamps:</strong> To manage your book library and audio cache efficiently.</li>
-                <li><strong>Disk Space:</strong> To ensure there's enough storage for audio caching and to manage cache size limits.</li>
-              </ul>
               <p className="mt-4">
-                None of this information leaves your device or is shared with us or any third party.
+                If you choose to share or export content, the destination you select handles that copy. Files you import from a cloud-storage provider are also subject to that provider&apos;s practices. Local speech processing does not change the behaviour of those separate services.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">No Third-Party Services</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Product analytics in the app</h2>
               <p>
-                The LoudReader app does not integrate with any third-party analytics, advertising, or tracking services. The app does not use:
+                We use TelemetryDeck to understand feature use and identify problems. Signals include app launches, imports, playback starts and completions, approximate listening-duration ranges, playback speed, voice or engine selection, feature interactions, purchase-flow events and error categories. Custom cloned voices are reported as a shared category, not by their individual name or identifier. These product events do not include book titles, book text, notes or voice recordings.
               </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Google Analytics or Firebase</li>
-                <li>Facebook SDK</li>
-                <li>Advertising networks</li>
-                <li>Crash reporting services that collect user data</li>
-                <li>Any other third-party SDKs that collect personal information</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Website Analytics (loudreader.io only)</h2>
-              <p>
-                This website — not the app — can use Google Analytics to count page visits and App Store link clicks, and only if you explicitly allow it in the consent banner. If you decline (or never answer), the Google Analytics script is not loaded at all: no cookies, no requests to Google.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li>Applies to the loudreader.io website only. The app has no analytics of any kind.</li>
-                <li>Nothing is collected without your consent — declining loads nothing.</li>
-                <li>We never see who you are: no accounts, no ad features, no cross-site tracking, and nothing is linked to anything you do in the app.</li>
-              </ul>
               <p className="mt-4">
-                You can change your choice at any time:
+                The SDK also includes technical information such as device model, operating-system and app versions, language and locale, display and accessibility settings, session information and a hashed identifier used to count usage. Hashing an identifier is different from collecting no information. See <a href="https://telemetrydeck.com/docs/guides/privacy-faq/" className="underline">TelemetryDeck&apos;s privacy information</a> for its processing practices.
+              </p>
+              <p className="mt-4">
+                <strong>Product analytics are enabled by default. Version 1.12 does not expose an in-app switch to turn them off.</strong> A previously stored opt-out preference is still honoured. When such a preference applies, it suppresses new usage signals; events already queued or in transit can still be delivered. The website consent banner does not control app analytics.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Crash and performance diagnostics</h2>
+              <p>
+                We use Sentry to investigate crashes, errors, app hangs, memory problems and performance. Diagnostics can include stack traces, app-session information, device and operating-system details, app version, memory measurements, technical breadcrumbs and sampled performance traces and profiles. They are enabled in the app and have no separate in-app off switch in version 1.12.
+              </p>
+              <p className="mt-4">
+                The release app disables Sentry&apos;s default personally identifying data option, screenshots, session replay, file-operation tracing and network-request tracing. It also applies filters to diagnostic messages and breadcrumbs to remove file paths and book filenames and to reduce URLs to their host. These measures limit diagnostic content; they are not a claim that no data is sent. See <a href="https://docs.sentry.io/platforms/apple/data-management/data-collected/" className="underline">Sentry&apos;s data-collection documentation</a> and <a href="https://sentry.io/privacy/" className="underline">privacy policy</a>.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Downloads and external websites</h2>
+              <p>
+                Browsing the public-book catalogue connects to Gutendex. Downloading a book or opening an article connects to the relevant content host, such as Project Gutenberg or the article&apos;s publisher. These requests reveal your network address and the resource requested to the service receiving them. Downloading voice models also requires a network connection.
+              </p>
+              <p className="mt-4">
+                Those providers handle their own requests under their own policies. Local narration does not make browsing, purchases or downloads offline.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Purchases</h2>
+              <p>
+                Apple handles App Store purchases and subscriptions. The app uses Apple&apos;s StoreKit transaction and entitlement information to determine access, including product, transaction and subscription-status information. We do not collect your payment-card details through the app. Apple describes its processing in <a href="https://www.apple.com/legal/privacy/data/en/app-store/" className="underline">App Store &amp; Privacy</a>.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Website analytics and browser storage</h2>
+              <p>
+                On loudreader.io, Google Analytics loads only after you choose Allow in the website banner. It measures page visits, App Store link clicks and other website interactions. Google Analytics uses cookies and processes information such as page URLs, referral information, browser and device details, approximate location and a browser identifier. Google Signals and advertising-personalisation signals are disabled in our website configuration. See <a href="https://support.google.com/analytics/answer/11593727?hl=en" className="underline">Google&apos;s description of Analytics data collection</a>.
+              </p>
+              <p className="mt-4">
+                If you decline or have not made a choice, our analytics component does not load the Google Analytics script or send analytics requests to Google. Your choice is stored in your browser. This controls website analytics only; it does not change TelemetryDeck or Sentry in the app, or prevent the requests needed to serve the website itself.
+              </p>
+              <p className="mt-4">
+                The button below clears your saved website choice and reloads the page so you can choose again. Choosing Decline prevents Google Analytics from loading on that visit and subsequent visits using the saved choice. It does not delete reports already sent or existing analytics cookies; you can remove stored cookies through your browser settings.
               </p>
               <button
                 onClick={resetAnalyticsConsent}
@@ -155,68 +134,29 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Security</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Support messages</h2>
               <p>
-                Since all your data stays on your device, it is protected by your device's built-in security features, including:
+                If you email us or send a bug report, we receive your email address and the information you send, which may include diagnostic details or screenshots. Review your message and attachments before sending, especially if they show reading material or other personal information. We use this information to respond and investigate the issue.
               </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Device passcode/Face ID/Touch ID</li>
-                <li>iOS data encryption</li>
-                <li>App sandboxing</li>
-              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing your data</h2>
+              <p>
+                You can delete books and notes within the app and clear cached audio in Settings. Removing local content does not retract diagnostic events or support messages already sent. Copies you have exported, backed up or shared must be managed separately through the service or device holding them.
+              </p>
               <p className="mt-4">
-                We recommend keeping your device's software up to date and using a strong passcode to protect your data.
+                Analytics, diagnostics, purchases and support involve services outside your device. Their processing and storage can take place in other countries. The provider links above explain their practices; local narration is not a guarantee that every app or website interaction stays on your device or within your country.
+              </p>
+              <p className="mt-4">
+                For privacy questions or requests concerning access, correction or deletion, contact us below. The options available depend on the data involved and applicable law. Please do not send book files or voice recordings to make a privacy request unless they are necessary to explain it.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Children's Privacy</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Policy updates and contact</h2>
               <p>
-                LoudReader does not knowingly collect any information from children under 13 (or the applicable age in your jurisdiction). Since we don't collect any personal information from anyone, children can safely use the app.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
-              <p>
-                Since we don't collect any personal data, there is no personal data to access, correct, or delete. All your data is stored locally on your device and can be removed by:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Deleting individual books or notes within the app</li>
-                <li>Clearing the audio cache in Settings</li>
-                <li>Uninstalling the app (which removes all app data)</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">International Users</h2>
-              <p>
-                LoudReader is available worldwide. Since no data is collected or transferred, there are no cross-border data transfer concerns. Your data remains on your device regardless of your location.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to This Policy</h2>
-              <p>
-                We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last updated" date at the top of this page. We encourage you to review this policy periodically.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
-              <p>
-                If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
-              </p>
-              <p className="mt-2">
-                <strong>Email:</strong> jeremi@loudreader.io
-              </p>
-            </section>
-
-            {/* Summary Box */}
-            <section className="mt-12 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-gray-100">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Summary</h2>
-              <p className="text-gray-700">
-                <strong>LoudReader respects your privacy.</strong> Your books, notes, and reading habits stay on your device. We don't collect data, we don't track you, and we don't sell anything to anyone. It's that simple.
+                We update this page when the practices described here change and show the revision date at the top. For questions about this policy, contact <a href="mailto:jeremi@loudreader.io" className="underline">jeremi@loudreader.io</a>.
               </p>
             </section>
 

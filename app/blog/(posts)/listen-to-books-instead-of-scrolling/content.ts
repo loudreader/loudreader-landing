@@ -1,39 +1,28 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - Lock-screen controls: PlayerService.swift, MPRemoteCommandCenter
-//     with play, pause, toggle, skip (15 sec).
-//   - Background audio: Info.plist UIBackgroundModes = ["audio"].
-//   - On-device voices, no internet: speech synthesis runs locally.
-//   - 70,000+ Gutenberg books built in.
-//   - Free tier unlimited listening: SubscriptionAccess.swift.
-//   - Word-by-word highlighting free: ReaderStylesheet.swift.
-//   - Pricing: components/money/site.ts PRICING.
-// Claims you may NOT make: any social media usage statistics, addiction
-// or habit-formation research (no verified citations at write time).
-// The article frames the habit swap as personal practical advice, not
-// clinical or psychological claims.
+// FACT PROVENANCE — editorial verification 2026-09-28.
+// App-source audit on 2026-09-28: LoudReader release_v1.12, commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0, released 2026-09-22 (Apple lookup id6758149478). Sources: LoudReader/PlayerService.swift (saved position, background audio, remote controls); ContentView.swift and BookImportService.swift (EPUB/PDF imports); Subscription/SubscriptionAccess.swift, SubscriptionManager.swift and Subscription/PaywallReason.swift (8-hour eligible-voice allowance, limited free English selection thereafter, paid speed/timer, free notes); LoudReaderApp.swift and Analytics.swift (diagnostics and usage analytics); PDFImportPipeline.swift (local OCR with limits). Source review, not new runtime testing.
+// Practical workflows are editorial suggestions, not measured outcomes or medical promises.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Why is scrolling so hard to stop and books so hard to start?",
-    a: "Scrolling is engineered for frictionless, endless consumption. Books ask you to sit still and focus. The trick is not willpower. The trick is making the book at least as convenient as the feed. If you can press play and get a chapter with the same effort as opening an app, the habit math shifts in your favor.",
+    "q": "Do I need to stop using social media completely?",
+    "a": "No. Pick one slot you want to change and leave useful or enjoyable uses alone. The experiment can stay small."
   },
   {
-    q: "What is the easiest way to swap scrolling for listening?",
-    a: "Pick one trigger moment. The ten minutes after dinner on the couch. The five minutes waiting for coffee to brew. The moment you sit down on public transit. When that moment arrives, open LoudReader instead of your feed app and press play. One press. That is the whole swap. Do not try to replace all scrolling at once. Replace one slot.",
+    "q": "What if the book feels less interesting than the feed?",
+    "a": "Choose another book, shorten the session or decide this is not the right slot. The aim is a choice you want to repeat, not a punishment."
   },
   {
-    q: "Does listening feel as satisfying as the quick-hit scroll?",
-    a: "Honestly, no, in the first two minutes. Scrolling delivers instant tiny rewards. A book chapter takes a few minutes to sink into. But after those first minutes, a book leaves you with something. A scroll session leaves you with the same thing it always leaves you with. That contrast becomes its own motivator once you notice it.",
+    "q": "Can I scroll while listening?",
+    "a": "You can, but it defeats a screen-off goal and makes it harder to judge whether you followed the book. Try giving the activities separate time."
   },
   {
-    q: "Can I listen while doing something else to resist the urge to pick up my phone?",
-    a: "Yes, and this is one of the strongest versions of the swap. Put a book on while you fold laundry, do dishes, or tidy up. Your hands are busy, your ears are occupied, and the phone is across the room playing audio with the screen locked. You cannot scroll if the phone is not in your hand.",
+    "q": "Are notes and highlights paid features in LoudReader?",
+    "a": "No. Notes and highlights do not require Premium. Adjustable playback speed, the sleep timer and soundscapes are paid features."
   },
   {
-    q: "What if I want to highlight something while listening?",
-    a: "In LoudReader, notes and highlights are a Premium feature. The free tier gives you unlimited listening and word-by-word highlighting so you can follow along, but marking passages requires Premium. The full set of Premium features includes all 23 studio narrators, speed control (0.3x to 3.0x), sleep timer, soundscapes, and notes.",
-  },
+    "q": "Will this cure compulsive scrolling?",
+    "a": "This article makes no treatment claim. It describes a small optional change to one routine."
+  }
 ];

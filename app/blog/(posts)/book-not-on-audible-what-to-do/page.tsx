@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,152 +6,24 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function BookNotOnAudibleArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          A book missing from Audible almost always means nobody has recorded
-          and licensed an audio edition of it, not that anything is wrong with
-          the book. Audible's catalog runs on licensing deals with publishers,
-          and most backlist titles, self-published books, academic texts, and
-          public-domain classics never get one. Two honest workarounds exist.
-          Check a library app like Libby for a recording somebody else already
-          made, or turn the book you already have into an audiobook yourself.{" "}
-          <strong>LoudReader</strong> reads any DRM-free EPUB or PDF aloud with{" "}
-          natural offline voices, fully on-device and private, your library
-          never leaves your device. It also has 70,000+ Project Gutenberg
-          classics built in for free, browsable at{" "}
-          <Link href="/listen" className="text-loudBlue hover:underline">
-            /listen
-          </Link>
-          . If your missing title is a public-domain classic, there's a good
-          chance it's already there.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="No audiobook edition yet? Your ebook can become one."
-      />
-
-      <QuestionSection question="Why isn't the book you want on Audible?">
-        <p>
-          Audible is a commercial catalog, and every title on it exists
-          because a publisher paid to record it and license the recording.
-          That is a real cost and a real bet, so publishers make it selectively.
-          Bestsellers and backlist classics with proven demand get recorded.
-          Most other books, the long tail of self-published novels, academic
-          and technical books, niche non-fiction, out-of-print titles, and
-          older public-domain works, don't clear that bar. The book existing
-          and the book being commercially worth narrating are two different
-          things, and the gap between them is enormous.
-        </p>
-        <p>
-          There is no reader-facing way to request a title on Audible. Whether
-          a book gets recorded depends on a publisher's decision, not on how
-          many people want to listen to it.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What should you actually do when a book isn't there?">
-        <p>Three real options, roughly in the order worth trying:</p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Check a library app.</strong>{" "}
-            Libby and Hoopla borrow audiobooks free with a library card, and
-            their catalogs overlap with Audible's less than you'd expect. A
-            title Audible skipped sometimes has a library recording anyway.
-          </li>
-          <li>
-            <strong className="text-gray-900">Check LibriVox, for public domain.</strong>{" "}
-            If the book is old enough to be public domain, LibriVox has
-            volunteer-narrated recordings of thousands of classics, free.
-            Quality varies by volunteer, but it's a real audiobook made by a
-            person.
-          </li>
-          <li>
-            <strong className="text-gray-900">Read the ebook aloud yourself.</strong>{" "}
-            If you already own the book as a DRM-free EPUB or PDF, or it's
-            public domain, a text-to-speech reader turns the file itself into
-            listenable audio. This is the option that works for{" "}
-            <em>any</em> book, because it doesn't depend on someone else
-            having recorded it first.
-          </li>
-        </ol>
-      </QuestionSection>
-
-      <QuestionSection question="How does turning an ebook into an audiobook actually work?">
-        <p>
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          reads any DRM-free EPUB or PDF aloud with natural offline voices.
-          There's no conversion step and no separate audio file to download:
-          you import the book, press play, and it starts narrating right
-          there. It highlights each word as it reads and remembers your exact
-          spot, so the file behaves like an audiobook from the first page.
-          The full walkthrough, including how imports work, is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
-        <p>
-          The catch is DRM. A book still locked to a specific reader app, like
-          a DRM-protected Kindle title, can't be opened by any outside tool,
-          LoudReader included. This works for files you already have as plain
-          EPUB or PDF: self-published books, manuscripts, review copies, and
-          any ebook store that ships DRM-free files.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What if the missing book is a classic?">
-        <p>
-          This is the easy case. LoudReader has 70,000+ Project Gutenberg
-          books built in, browsable by title at{" "}
-          <Link href="/listen" className="text-loudBlue hover:underline">
-            /listen
-          </Link>
-          . These are public-domain classics that never needed a licensing
-          deal in the first place, and Audible's gaps in this category are
-          often just books nobody bothered to record commercially. Search the
-          catalog before assuming a classic isn't available anywhere.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Is a synthetic narration as good as a real audiobook narrator?">
-        <p>
-          Honestly, not always. A skilled human narrator doing distinct
-          character voices and pacing a thriller for tension is doing
-          something a text-to-speech voice isn't trying to replicate. For a
-          book you're excited about and willing to wait or pay for, a
-          performed audiobook can be worth it.
-        </p>
-        <p>
-          But that comparison only matters for the small slice of books that
-          get performed at all. For the much larger pile that will never be
-          recorded, natural offline voices reading the real text is the
-          difference between listening to the book this week and never
-          listening to it.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>A missing Audible listing does not prove that no audiobook exists. Start by checking the author, alternate title, edition and your regional store, then look at the publisher’s page and your library catalogue. If there is no recording you can access, text to speech may be useful with a supported ebook you are entitled to use. It will not unlock a protected Kindle file or produce the same performance as a recorded edition. Work through the searches below before buying another copy.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Search for the edition before assuming the recording is missing." />
+      <QuestionSection question="Could the recording exist under another listing?"><p>Search the author’s name as well as the title. Look for a subtitle, a renamed regional edition, a collection containing the work, and abridged versus unabridged versions. For translated books, search the translator too. A collection may contain the story you want without using its title on the cover.</p><p>Audible documents regional availability errors in its <a href="https://help.audible.co.uk/s/article/understand-error-codes?language=en_GB" className="text-loudBlue hover:underline">official troubleshooting guide</a>. Check that you are using the right marketplace for your account. Contact support if a purchase has disappeared; do not assume that buying it again is the answer.</p></QuestionSection>
+      <QuestionSection question="Where should you look next?"><ol className="list-decimal pl-6 space-y-2"><li>Check the author’s or publisher’s official site for an audio edition and its credited narrator.</li><li>Search your own library’s digital catalogue. Ask a librarian about availability or purchase suggestions; a service’s general catalogue is not your library’s holdings.</li><li>For older works, search LibriVox and compare the exact edition. Its US-based rights policy does not clear every title worldwide.</li><li>If nothing turns up, ask the publisher whether audio is planned. A request is useful information, not a promise of a release.</li></ol><p>This sequence distinguishes a search problem, an access problem and a genuinely missing recording.</p></QuestionSection>
+      <QuestionSection question="Can you listen to the ebook instead?"><p>If you have a compatible DRM-free EPUB or PDF, <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> can generate narration from its text. LoudReader runs on iPhone and iPad; its iPad build also runs on compatible Apple Silicon Macs. Import a short section first, especially for textbooks or unusual layouts. PDFs may need OCR; tables, equations and footnotes still deserve a visual check.</p><p>This is a reading workflow, not an audiobook purchase or a downloadable recording. The <Link href="/turn-any-book-into-an-audiobook" className="text-loudBlue hover:underline">import walkthrough</Link> explains the setup. A licence, subscription or purchase does not necessarily give you an unrestricted file to import.</p></QuestionSection>
+      <QuestionSection question="What if the title is a classic?"><p>Search the title in Gutenberg or our <Link href="/listen" className="text-loudBlue hover:underline">classics shelf</Link>, then inspect the ebook’s source and translator. Gutenberg’s <a href="https://www.gutenberg.org/policy/permission.html" className="text-loudBlue hover:underline">permissions page</a> makes clear that its availability is based on US rules; confirm the relevant rights where you are. A modern introduction or translation may have separate restrictions.</p></QuestionSection>
+      <QuestionSection question="What should you expect from synthetic narration?"><p>Listen to dialogue, unfamiliar names and punctuation before deciding. You may like the voice for a whole book, or you may prefer the particular interpretation of a human narrator. TTS also exposes extraction problems: a badly ordered PDF will not become clearer simply because it is spoken.</p><p>Once the book and required voice resources are available on the device, narration works offline. Downloads and web imports still need a connection.</p><p>{FREE_TIER.full}</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Stop waiting for the audiobook that might never come"
-        subline="Import any DRM-free EPUB or PDF, or browse 70,000+ free classics. No account."
-      />
+      <StoreCta headline="Listen to a compatible ebook" subline="Import your own supported file and check a sample before a long session." />
     </ArticleLayout>
   );
 }

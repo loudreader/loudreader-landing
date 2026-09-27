@@ -7,7 +7,6 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,109 +18,93 @@ export default function NoAccountArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          <strong>LoudReader</strong> has no sign-up screen, no login, and no
-          account of any kind. You install it (iPhone, iPad, and Mac),
-          import a book, and press play, with nothing that asks for an email
-          or password first. It's fully on-device and private, your library
-          never leaves your device, and with no account, there's no server
-          record of who you are or what you've read. That design has a real
-          cost worth naming up front: without an account, there's nothing to
-          hang a synced library on, so a book you import on your iPhone
-          doesn't automatically show up on your Mac. Each device keeps its
-          own local library. If cross-device sync matters more to you than
-          skipping sign-up, that's a genuine tradeoff to weigh, not a hidden
-          catch.
+          You can import and listen in <strong>LoudReader without creating a
+          LoudReader account</strong>: there is no email-and-password sign-up
+          for the reader. That is useful if you want to open a book without
+          managing another login. It does not mean every service is
+          anonymous, that the app collects no diagnostics, or that App Store
+          purchases are account-free. Books and reading positions do not
+          automatically sync between devices. This guide separates those
+          questions so you know what to expect before moving a library onto
+          your phone, iPad or compatible Apple Silicon Mac.
         </p>
       </Tldr>
 
-      <ArticleIllustration
-        variant="offline"
-        caption="No login screen. Import a book and it starts reading."
-      />
+      <ArticleIllustration variant="book-to-audio" caption="Import and listen without creating a separate LoudReader login." />
 
-      <QuestionSection question="What does 'no sign up' actually mean here?">
+      <QuestionSection question="What can you do without signing up?">
         <p>
-          It means what it sounds like: there is no screen anywhere in
-          LoudReader that asks for an email, a password, or any personal
-          detail before you can use it. You download the app, open it, and
-          the first thing you can do is import a book. There's no account to
-          create, verify, or eventually forget the password to.
+          Install <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>,
+          {" "}import a supported DRM-free EPUB or PDF and start listening.
+          There is no LoudReader profile to create or email address to verify.
+          The iPhone and iPad app can also run on Apple Silicon Macs through
+          Apple&apos;s iPad compatibility mode.
         </p>
         <p>
-          A lot of apps use "no credit card required" to mean something
-          similar while still requiring an account. Those are different
-          claims. LoudReader skips the account step entirely, not just the
-          payment step.
+          Account requirements and payment limits are separate. The first
+          eight hours of listening let you try every available voice. After
+          that, unlimited book listening remains available with a free English
+          voice selection: Stella or Rio, plus Bella on supported devices.
+          Premium unlocks additional features and voices; skipping a sign-up
+          does not mean all features are permanently free.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Why would an app deliberately skip accounts?">
+      <QuestionSection question="Does no login mean no data collection?">
         <p>
-          Because it doesn't need one. LoudReader reads books aloud with{" "}
-          <Link href="/blog/on-device-text-to-speech-explained" className="text-loudBlue hover:underline">
-            speech generated entirely on your device
-          </Link>
-          , not on a server somewhere. An account exists, in most apps, to
-          let a server know who you are so it can store your data, your
-          preferences, or your usage. If the processing never touches a
-          server in the first place, there's nothing for an account to
-          attach to. Skipping accounts here is a consequence of the
-          on-device design, not a separate feature bolted on for marketing.
+          No. An app can send usage events and diagnostic information without
+          collecting an email address or running its own account service.
+          In LoudReader 1.12, TelemetryDeck usage analytics is on by default and
+          Sentry collects crash/performance diagnostics. The Settings screen
+          does not currently expose the usage-statistics switch. These
+          systems are designed to exclude the text you read; they are still
+          separate services involved in using the app.
+        </p>
+        <p>
+          <Link href="/blog/on-device-text-to-speech-explained" className="text-loudBlue hover:underline">On-device narration</Link>
+          {" "}means your book is not uploaded to a speech server to create the
+          voice. It does not describe all network activity. Consult the{" "}
+          <Link href="/privacy" className="text-loudBlue hover:underline">privacy policy</Link>
+          {" "}if data collection is the reason you want to avoid accounts.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What does no account cost you?">
+      <QuestionSection question="Will my book and reading position follow me to another device?">
         <p>
-          Be honest about this, because it's the real question behind "no
-          sign up" apps: what are you giving up. The answer for LoudReader is
-          sync. With no account to attach a library to, each device keeps its
-          own local library. Import a novel on your iPhone during your
-          commute, and it won't be waiting on your Mac when you sit down at
-          your desk; you'd import it separately there too. If you regularly
-          switch between devices mid-book and expect your place to follow
-          you, that's a real limitation, not a footnote.
+          No automatic library or reading-position sync is currently offered.
+          Import the book separately on each device and keep track of your
+          place when switching. Opening a source file from iCloud Drive is
+          different from syncing the app&apos;s library: having the EPUB in
+          Files on two devices does not transfer LoudReader&apos;s reading
+          position between them.
         </p>
         <p>
-          What you get in exchange is that there's no server anywhere holding
-          a list of what you've read, no password to lose, and no account to
-          get breached in someone else's incident. For a lot of reading, on
-          one device at a time, that trade is an easy one. For a workflow
-          split evenly across a phone and a laptop, it's worth knowing before
-          you start relying on it. The full picture of what stays local and
-          what doesn't, beyond just the account question, is in{" "}
-          <Link href="/private-text-to-speech-no-cloud" className="text-loudBlue hover:underline">
-            this breakdown of on-device text to speech
-          </Link>
-          .
+          This is the app&apos;s current feature set, not a technical rule
+          that every app without a separate login must lack sync. Likewise,
+          no library-sync feature does not mean your device has no backup.
+          Check device backup settings and retain your original books before
+          changing or replacing a device.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Does 'no account' also mean no purchases?">
+      <QuestionSection question="How do purchases work without a LoudReader account?">
         <p>
-          No, Premium is still available. Buying it goes through the App
-          Store's own purchase system tied to your Apple ID, which is a
-          platform-level mechanism, not an account inside LoudReader itself.
-          You can{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            get LoudReader on the App Store
-          </a>{" "}
-          the same way you'd get any other app, and restoring a purchase on
-          a new device works the normal App Store way. That's separate from
-          the in-app account question this article is about.
+          Premium uses Apple&apos;s in-app purchase system. Your Apple Account
+          used for the App Store is separate from a LoudReader login. To
+          recover an eligible purchase, use the app&apos;s restore option and
+          the same Apple Account that made the purchase. Apple explains the
+          process in its <a href="https://support.apple.com/en-gb/108096" className="text-loudBlue hover:underline">purchase restoration guide</a>.
+        </p>
+        <p>
+          Restoring Premium restores the entitlement, not your books or your
+          place in them. If you are moving to another device, plan the library
+          transfer separately. That distinction avoids the surprise of a
+          successfully restored purchase alongside an empty reading library.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Start listening with no sign-up"
-        subline="Free, on-device, no account. Import a book and press play."
-      />
+      <StoreCta headline="Start listening without another login" subline="No LoudReader account required. Try the voices, then keep free English listening after the eight-hour voice allowance." />
     </ArticleLayout>
   );
 }

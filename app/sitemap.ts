@@ -22,13 +22,13 @@ const routes: Array<{
   changeFrequency: "weekly" | "monthly" | "yearly";
   priority: number;
 }> = [
-  { path: "/", lastModified: "2026-07-14", changeFrequency: "weekly", priority: 1 },
-  { path: "/faq", lastModified: "2026-07-14", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/voices", lastModified: "2026-08-20", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/", lastModified: "2026-09-28", changeFrequency: "weekly", priority: 1 },
+  { path: "/faq", lastModified: "2026-09-28", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/voices", lastModified: "2026-09-28", changeFrequency: "monthly", priority: 0.8 },
   { path: "/releases", lastModified: "2026-07-06", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/support", lastModified: "2026-07-06", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/support", lastModified: "2026-09-28", changeFrequency: "monthly", priority: 0.5 },
   { path: "/terms", lastModified: "2026-07-06", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/privacy", lastModified: "2026-02-25", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/privacy", lastModified: "2026-09-28", changeFrequency: "yearly", priority: 0.3 },
 ];
 
 /*
@@ -105,23 +105,28 @@ function blogRoutes(): typeof routes {
  * /listen catalog pages come straight from data/gutenberg-catalog.json — the
  * same file generateStaticParams builds the pages from, so the sitemap can
  * never list a page that doesn't exist (or miss one that does).
- * lastModified is CATALOG_LAST_MODIFIED (bumped only on real catalog edits).
+ * Each book can record its own real edit date; older entries retain the
+ * shared CATALOG_LAST_MODIFIED baseline.
  * Size note: tier 1 is ~100 URLs, far under the 50,000-URL sitemap limit —
  * one sitemap.xml is fine. If the catalog ever grows past a few thousand
  * books, split via Next's generateSitemaps into a sitemap index
  * (see docs/catalog-rollout.md).
  */
 function listenRoutes(): typeof routes {
+  const books = getAllBooks();
+  const catalogUpdated = books.reduce((latest, book) =>
+    book.lastModified && book.lastModified > latest ? book.lastModified : latest,
+    CATALOG_LAST_MODIFIED);
   return [
     {
       path: "/listen",
-      lastModified: CATALOG_LAST_MODIFIED,
+      lastModified: catalogUpdated,
       changeFrequency: "monthly",
       priority: 0.6,
     },
-    ...getAllBooks().map((book) => ({
+    ...books.map((book) => ({
       path: `/listen/${book.slug}`,
-      lastModified: CATALOG_LAST_MODIFIED,
+      lastModified: book.lastModified ?? CATALOG_LAST_MODIFIED,
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),

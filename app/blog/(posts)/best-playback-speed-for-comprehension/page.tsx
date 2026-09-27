@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,145 +6,42 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function BestPlaybackSpeedForComprehensionArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          The best playback speed for comprehension depends on content type,
-          but the research-backed ranges are clear: 1.0x to 1.5x is safe for
-          most material, and above 2x comprehension drops notably. Content
-          complexity is the real moderator. A novel at 1.5x is fine; dense
-          technical writing at 1.2x might not be. Text-to-speech voices can be
-          less forgiving at high speeds than human narrators because algorithmically
-          generated prosody compresses differently.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) gives you
-          fine-grained speed control from 0.3x to 3.0x with natural offline
-          voices, so you can dial in the exact speed that preserves comprehension
-          for each book. Speed control is part of {PRICING.premiumMonthly} Premium.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="Speed vs comprehension: the sweet spot lives between 1x and 1.5x for most content."
-      />
-
-      <QuestionSection question="What speed keeps comprehension intact?">
-        <p>
-          Research in cognitive psychology has mapped out the rough contours.
-          1.0x is, by definition, the speed human speech evolved for. 1.25x to
-          1.5x introduces minimal comprehension loss for narrative and
-          informational content: most listeners adjust within minutes and
-          retain just as much as at 1x. Past 2x, comprehension begins to drop
-          measurably. By 3x, you are trading understanding for speed and
-          getting the gist at best.
-        </p>
-        <p>
-          These are averages, not individual prescriptions. Your personal
-          comprehension curve depends on your listening experience, your
-          familiarity with the subject, and how dense the language is. A
-          seasoned audiobook listener with a familiar novel might handle 2x
-          without loss. Someone new to audio learning with a technical text
-          might struggle at 1.3x. The research gives ranges, not rules.
-        </p>
+      <Tldr><p>
+        There is no playback multiplier that guarantees comprehension. A useful speed lets you explain what you heard, including the details you need later. Start with a comfortable baseline, listen to a short unfamiliar section, and check your understanding before increasing the pace. For study, include a second check later: following a sentence now and remembering its argument tomorrow are different tasks. A 1.5x setting can suit one voice and feel rushed on another because their original speaking rates differ. This guide focuses on checking understanding; it does not prescribe a speed by diagnosis, genre, or age.
+      </p></Tldr>
+      <ArticleIllustration variant="waveform" caption="Choose a speed by what you can explain afterwards, not by the number on the player." />
+      <QuestionSection question="What does speed research actually tell us?">
+        <p>One relevant study is <a href="https://castel.psych.ucla.edu/wp-content/uploads/sites/111/2021/11/ACP-Lecture-Speed-Murphy-2021-in-press.pdf" className="text-loudBlue hover:underline">Murphy and colleagues’ study of lecture-video speed</a>. In its first experiment, comprehension scores did not differ significantly between 1x, 1.5x and 2x, while performance was lower at 2.5x than at 1x. These were particular lecture videos, participants and comprehension tests, including a delayed test.</p>
+        <p>That finding does not establish a universal audiobook limit. It does not test every language, voice, listening environment or learning need, and a lecture with visuals is not the same task as following a novel or studying an equation by ear. Treat a study result as context for experimentation, not permission to stop checking your own understanding.</p>
       </QuestionSection>
-
-      <QuestionSection question="How does content type change the best speed?">
-        <p>
-          More than any other single factor. Here is a rough guide based on
-          what research suggests about information density and comprehension:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Light fiction (1.5x to 2.0x):</strong>{" "}
-            Simple language, linear plots, familiar vocabulary. Your brain
-            can process this fast because the patterns are predictable.
-          </li>
-          <li>
-            <strong className="text-gray-900">Narrative non-fiction (1.25x to 1.5x):</strong>{" "}
-            History, biography, popular science. Slightly denser language but
-            still story-driven enough to handle moderate speed.
-          </li>
-          <li>
-            <strong className="text-gray-900">Dense non-fiction (1.0x to 1.25x):</strong>{" "}
-            Technical books, philosophy, academic papers. New concepts,
-            complex arguments, and unfamiliar vocabulary need processing time.
-            Speed costs you here.
-          </li>
-          <li>
-            <strong className="text-gray-900">Learning a new subject (1.0x):</strong>{" "}
-            When everything is new, extra speed is extra cognitive load you
-            cannot afford. Stay at normal speed until the material feels
-            familiar.
-          </li>
-        </ul>
-      </QuestionSection>
-
-      <QuestionSection question="Why is TTS harder to understand at speed than human narration?">
-        <p>
-          A human narrator is not just reading words. They are performing them
-          with tuned pauses, emphasis, and phrasing that carry meaning. When
-          you speed up a human recording, those cues stretch but survive.
-          Neural TTS voices sound natural at normal speed, but their prosody
-          is generated by an algorithm rather than performed by a person. At
-          high speeds, the algorithmic prosody can compress in ways that make
-          sentence boundaries harder for your brain to detect, which increases
-          the cognitive effort of comprehension.
-        </p>
-        <p>
-          The practical difference: a human-narrated audiobook at 2x might
-          still feel comfortable because the pacing cues are baked into the
-          performance. A TTS voice at 2x might feel like a wall of words. This
-          is not a reason to avoid TTS, just a reason to be more conservative
-          with TTS speed settings than with human-narrated recordings.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do you find your personal comprehension sweet spot?">
-        <p>
-          The only reliable method is self-testing. Try this with a book you
-          have not read before:
-        </p>
+      <QuestionSection question="How can I check understanding without turning reading into an exam?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            Set speed to 1x. Listen to a chapter, then pause and summarize it
-            to yourself. Can you name the key events or arguments?
-          </li>
-          <li>
-            Bump to 1.25x for the next chapter. Summarize again. If it feels
-            effortless, go to 1.5x.
-          </li>
-          <li>
-            Keep going until you finish a chapter and realize you cannot
-            summarize it cleanly. Back off to the last speed where you could.
-          </li>
-          <li>
-            Repeat this for different types of books. Your fiction speed and
-            your non-fiction speed will not be the same number.
-          </li>
+          <li><strong>Choose a short, unfamiliar section.</strong> Use material similar to the reading you want to do. A passage you already know can hide what you missed.</li>
+          <li><strong>Listen at a comfortable speed.</strong> Starting at 1x is convenient, but it is a reference setting rather than a biological optimum.</li>
+          <li><strong>Pause and explain it.</strong> For a story, say who did what and why. For an argument, state the claim, its support and any exception.</li>
+          <li><strong>Check against the text.</strong> Look for missing connections, not just familiar words. If you heard the terms but cannot explain the reasoning, reduce the speed or read the passage.</li>
+          <li><strong>Try a small change on another comparable section.</strong> Avoid repeatedly accelerating a passage you are memorising. Repeat across several sessions before adopting a default.</li>
         </ol>
-        <p>
-          With LoudReader Premium, you get speed control from 0.3x to 3.0x,
-          adjustable in fine increments, so you can land exactly on your
-          personal sweet spot. The free tier plays at normal speed with
-          unlimited listening.
-        </p>
+        <p>This is an informal self-check, not a controlled experiment or a diagnosis. For assessed work, practice the task you will actually need to perform, such as explaining a concept or solving a problem.</p>
       </QuestionSection>
-
+      <QuestionSection question="What are useful signs to slow down or pause?">
+        <p>Frequent rewinds, losing track of a pronoun, or recognising technical terms without understanding their relationship are reasons to adjust. Slowing down is only one option: pause for a diagram, look up a term, or read a difficult paragraph on screen. More time between words cannot supply missing background knowledge.</p>
+        <p>Also separate sound quality from pace. An unfamiliar pronunciation or poorly extracted PDF may remain confusing at every speed. Try a clearer source or a different narrator before assuming you need to train yourself to listen faster.</p>
+      </QuestionSection>
+      <QuestionSection question="Should I use a different rule for text to speech?">
+        <p>Compare the actual voice. We have not established that synthetic narration becomes harder to understand at a particular multiplier than human narration. Pauses, pronunciation and the original pace vary within both groups. Recheck your speed when changing voice or book.</p>
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> Premium has adjustable playback from 0.3x to 3.0x. The available range is a control, not a recommendation to use its extremes. For everyday listening choices, see <Link href="/blog/how-fast-should-you-listen-to-audiobooks" className="text-loudBlue hover:underline">how to choose an audiobook pace</Link>; for replaying difficult passages, see <Link href="/blog/slow-down-audiobook-speed" className="text-loudBlue hover:underline">slowing down playback</Link>.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Find your perfect speed on every book"
-        subline="Natural offline voices, speed control from 0.3x to 3.0x, and unlimited free listening."
-      />
+      <StoreCta headline="Try LoudReader on your own book" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

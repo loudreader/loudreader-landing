@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { PRICING } from "@/components/money/site";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,144 +20,120 @@ export default function VoiceAloudReaderAlternativeArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          @Voice Aloud Reader is one of the best TTS apps on Android. It
-          reads EPUBs and PDFs offline, has deep customization, and does
-          not require an account. If you are looking for an alternative
-          because you moved from Android to iPhone, or because you want a
-          Mac app too, <strong>LoudReader</strong> (iPhone, iPad, and Mac) is the closest match. It is fully on-device and private,
-          your library never leaves your device, with natural offline
-          voices and a free tier that provides {PRICING.free} The honest
-          caveat: if you are on Android and just want a different app,
-          LoudReader is not the answer. It does not exist on Android and
-          will not.
+          If you are leaving Android for an iPhone, you need a reader for the
+          new platform: @Voice Aloud Reader is an Android app. LoudReader can
+          read your DRM-free EPUBs and PDFs on iPhone or iPad, and its iPad app
+          can also run on compatible Apple Silicon Macs. Your files can move;
+          your @Voice pronunciation rules, bookmarks and reading position do
+          not transfer automatically into LoudReader. If you are staying on
+          Android and only dislike the voice, first try a different supported
+          TTS engine in @Voice. Changing the voice may solve the problem without
+          replacing the reader you already know.
         </p>
+        <Disclosure />
       </Tldr>
 
-      <ArticleIllustration
-        variant="devices"
-        caption="If Mac and iPhone are your devices, LoudReader fits."
-      />
+      <ArticleIllustration variant="devices" caption="Moving a book file is different from moving an app’s settings and reading history." />
 
-      <QuestionSection question="What is @Voice Aloud Reader, and why do people love it?">
+      <QuestionSection question="What can you change without leaving @Voice?">
         <p>
-          @Voice Aloud Reader has been around on Android for years. It is
-          one of the few apps that does text-to-speech right: offline
-          processing, no account, deep customization of voice and speed,
-          support for EPUB and PDF files, and a free version that is
-          actually usable. It has a loyal user base for good reason.
+          @Voice is not restricted to the voice that came with your phone.
+          Hyperionics&apos; <a href="https://hyperionics.com/atVoice/features/cloud-tts-voices-android.asp" className="text-loudBlue hover:underline">voice guide</a>
+          {" "}describes installed Android TTS engines and optional supported
+          cloud voices. Voice availability, downloads and any provider charges
+          depend on that configuration. Trying another installed engine is a
+          sensible first step when the reading controls already suit you.
         </p>
         <p>
-          The app also reads web pages, clipboard content, and plain text
-          files. It has granular controls over pronunciation, pauses, and
-          voice settings. For Android users who want a powerful,
-          privacy-respecting TTS reader, @Voice is often the top
-          recommendation on forums like Reddit.
+          Its <a href="https://www.hyperionics.com/atvoice/AppFeatures.html" className="text-loudBlue hover:underline">feature guide</a>
+          {" "}also documents pronunciation replacements, adjustable pauses,
+          reading lists and bookmarks. Before blaming the voice for awkward
+          narration, check whether the extracted text contains headers or
+          unwanted symbols. A replacement rule can help a recurring name; it
+          will not repair missing paragraphs in the source document.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Why would an @Voice user look for an alternative?">
+      <QuestionSection question="When does switching to an Apple reader make sense?">
         <p>
-          The main reason is switching platforms. If you move from an
-          Android phone to an iPhone, @Voice stops being available to you.
-          There is no iOS version. Your EPUB library follows you, but the
-          app that read them aloud does not.
+          Switching phones is the clear case. <a href="https://hyperionics.com/atvoice/index.asp" className="text-loudBlue hover:underline">@Voice&apos;s official app</a>
+          {" "}is for Android phones and tablets. LoudReader is for iPhone and
+          iPad; its Apple Silicon Mac availability uses Apple&apos;s iPad
+          compatibility mode. It is not an Android alternative you can install
+          on your existing phone, and its Mac version should not be described
+          as a separate native desktop app.
         </p>
         <p>
-          Some Android users also look for an alternative because they want
-          a desktop companion app. @Voice is mobile-only. If you read at
-          your computer and want the same app with the same voices and the
-          same place in your book, you need something that spans both
-          device types.
-        </p>
-        <p>
-          A third reason is voice quality. @Voice relies on the system TTS
-          engine on your Android device. The voices available depend on
-          what your phone manufacturer includes. On some phones the voices
-          are perfectly fine; on others they sound robotic. You cannot
-          upgrade the voices within @Voice itself.
+          Choose based on the work you want to retain. If your daily routine
+          depends on elaborate pronunciation rules, compare that capability
+          before moving. If it is mostly opening a novel and resuming tomorrow,
+          trial a chapter of that novel first. Do not infer that an app with
+          fewer visible settings will necessarily be easier for your own use.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How does LoudReader compare to @Voice?">
+      <QuestionSection question="How do you move a library without losing the originals?">
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Locate your original DRM-free EPUB or PDF files. Keep a separate copy before reorganising anything on the old phone.</li>
+          <li>Move a small sample to the Files app on your iPhone using a computer or a file-transfer service you already trust.</li>
+          <li>Import that sample into LoudReader. Verify the chapter order, text, images you need to reference and any scanned pages.</li>
+          <li>Note your current chapter or a short passage manually. Do not expect an @Voice bookmark file or its playback position to import.</li>
+          <li>Move the rest only after you have checked the new workflow. Keep the source files independent of either app.</li>
+        </ol>
         <p>
-          The two apps share a lot of DNA. Both are offline-first with no
-          account requirement. Both focus on EPUB and PDF reading. Both
-          give you a free tier that is not a crippled demo. Both respect
-          your privacy by keeping everything on your device.
-        </p>
-        <p>
-          LoudReader adds a few things @Voice does not have. A curated set
-          of natural offline voices that sound better than most system TTS
-          engines, and you can upgrade them through Premium. It runs on Mac
-          as well as iPhone and iPad, so your library and place carry across
-          desktop and phone. A
-          built-in catalog of 70,000+ free Project Gutenberg classics: open
-          the app, pick a book, start listening, no import step needed.
-        </p>
-        <p>
-          LoudReader also supports{" "}
-          <Link href="/read-epub-aloud-mac" className="text-loudBlue hover:underline">
-            reading EPUBs aloud on Mac
-          </Link>{" "}
-          and{" "}
-          <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">
-            listening to PDFs on iPhone
-          </Link>
-          , which @Voice does not cover since it has no desktop or iOS
-          version.
+          Protected ebook licences are not interchangeable with ordinary EPUB
+          files; a book opening in one app does not establish that it can be
+          imported in another. LoudReader requires DRM-free EPUBs or readable
+          PDFs. For the basic import paths, see
+          <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline"> PDFs on iPhone</Link>
+          {" "}and <Link href="/read-epub-aloud-mac" className="text-loudBlue hover:underline">EPUBs on Mac</Link>.
+          {" "}There is no automatic LoudReader library or reading-position sync
+          between those devices.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What does @Voice do better?">
+      <QuestionSection question="What about articles, free use and offline listening?">
         <p>
-          @Voice has deeper customization. The pronunciation dictionary,
-          regex-based text replacements, and per-document voice settings
-          are more granular than what LoudReader offers. If you are the
-          kind of person who likes to fine-tune everything, @Voice gives
-          you more knobs.
+          @Voice accepts shared web pages and several kinds of files. Its free
+          version has ads, and Hyperionics offers a permanent Premium licence
+          to remove them. See the <a href="https://hyperionics.com/atvoice/index.asp" className="text-loudBlue hover:underline">current product details</a>
+          {" "}for the purchase options rather than assuming every voice engine
+          or connected service is included in that purchase.
         </p>
         <p>
-          @Voice reads more formats directly: plain text, HTML files, and
-          clipboard content alongside EPUB and PDF. LoudReader is focused
-          on books (EPUB and PDF). For web articles, you save as PDF first.
+          LoudReader can save web articles from links or its share extension,
+          as well as import EPUB and PDF files. The free article allowance is
+          30 saves; Premium makes article saving unlimited. {FREE_TIER.full}
+          {" "}Speed control, sleep timer and the full available narrator
+          selection are Premium features. Notes and highlights are not
+          restricted to Premium.
         </p>
         <p>
-          @Voice is on Android. If that is your platform, there is no
-          contest; LoudReader simply is not available to you. The honest
-          advice is to stick with @Voice or try other Android-native TTS
-          readers.
+          For offline use, test a saved document and the exact voice you intend
+          to use. In @Voice, offline capability depends on the selected engine;
+          cloud voice configuration changes that requirement. LoudReader
+          generates narration locally, but initial setup and fetching articles
+          still need preparation. Neither an offline test nor an account-free
+          listening flow proves that an app has no telemetry: LoudReader sends
+          crash/performance diagnostics and usage analytics separately from
+          speech generation.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="What if you are moving from Android to iPhone?">
+      <QuestionSection question="What is the sensible next step?">
         <p>
-          If you are switching from Android to iPhone and want an app that
-          feels like home, LoudReader is the closest spiritual equivalent
-          to @Voice on the Apple side. Same philosophy: offline, private,
-          no account, free tier that works. Better voices. Mac app included.
-        </p>
-        <p>
-          Moving your EPUB and PDF files is straightforward. They are
-          standard file formats. Transfer them through any method that gets
-          files onto your iPhone: AirDrop from a Mac, iCloud Drive, email
-          them to yourself, or use a cloud storage app. Once the files are
-          on your device, share them to LoudReader and they appear in your
-          library.
-        </p>
-        <p>
-          LoudReader is fully on-device and private, your library never
-          leaves your device. The natural offline voices sound great, and
-          the app remembers your place in every book. It is a clean start
-          on a new platform with an app built natively for it.
+          On Android, first test a different @Voice engine and keep a backup of
+          the settings that work for you. On a new iPhone, try LoudReader with
+          one book and one article before importing a large library. Compare
+          the steps you repeat every day—opening a file, finding your place,
+          correcting a misread passage and resuming after a break. Those small
+          actions are more useful evidence than an unsupported claim that one
+          product has universally better voices.
         </p>
       </QuestionSection>
 
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your EPUBs, your iPhone, your privacy"
-        subline="Move your library to LoudReader. Natural voices, no account, free tier with no limits."
-      />
+      <StoreCta headline="Bring a book to your new iPhone" subline="Try a DRM-free EPUB or PDF in LoudReader before moving the rest of your library." />
     </ArticleLayout>
   );
 }

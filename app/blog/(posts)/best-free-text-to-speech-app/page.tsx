@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,7 +6,8 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
+import Disclosure from "@/components/blog/Disclosure";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,157 +19,121 @@ export default function BestFreeTextToSpeechAppArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          The two genuinely free, no-catch text-to-speech options are{" "}
-          <strong>Apple Spoken Content</strong> (built into every iPhone
-          and Mac) and <strong>LoudReader</strong> (iPhone, iPad, and Mac). Apple Spoken Content is always free and reads anything on
-          screen, but it is not built for books. LoudReader&apos;s free
-          tier provides unlimited listening with no word cap. {FREE_TIER.full} Most other apps
-          like Speechify and NaturalReader give you a free sample and then
-          ask for a subscription. LoudReader is fully on-device and
-          private, your library never leaves your device, so there is no
-          per-word cost for the developer and no reason to cap your
-          listening.
+          Start with the reader already on your device, then choose an app if
+          you need a book library or a different voice. Apple&apos;s built-in
+          reading tools, NaturalReader&apos;s system voices, and LoudReader&apos;s
+          free English voices are useful options for ongoing listening.
+          A free voice allowance and a free app download are different things:
+          check which voice remains available after the trial, whether your
+          language is included, and whether the features you need cost extra.
+          There is no single best free reader for every platform or document.
         </p>
+        <Disclosure />
       </Tldr>
 
-      <ArticleIllustration
-        variant="devices"
-        caption="Free TTS options: built-in or dedicated, both work offline."
-      />
+      <ArticleIllustration variant="devices" caption="Compare the free voice you can keep, not just the trial voice you hear first." />
 
-      <QuestionSection question="What makes a free TTS app actually free?">
+      <QuestionSection question="What makes a free TTS app useful beyond a demo?">
         <p>
-          There is a big difference between &quot;free tier&quot; and
-          &quot;free.&quot; Most TTS apps use cloud processing. Every word
-          spoken costs the developer money for server time. Those apps give
-          you free words as a sample, up to a limit, and then require a
-          subscription. That is fair: the service costs money to run and
-          the developer has to recoup it somehow.
+          A free plan should be judged against your normal reading week.
+          If you listen to one article each morning, a monthly audio allowance
+          might be enough. For a long novel, you may prefer an ongoing free
+          voice even if the initial trial offers voices you like more.
+          Neither arrangement is automatically better; the limit needs to be
+          clear before you import your reading list.
         </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Check the voice and language available after any allowance expires.</li>
+          <li>Try a complete chapter, including pause, resume and screen locking.</li>
+          <li>Check whether speed, downloads or document scanning require payment.</li>
+          <li>Distinguish a free plan from an automatically renewing paid trial.</li>
+        </ul>
         <p>
-          On-device TTS does not have that cost. The speech synthesis
-          happens on your phone or computer using the device&apos;s own
-          processor. There is no server bill for the developer, so there is
-          no reason to cap your listening. Apple Spoken Content and
-          LoudReader both work this way. That is why their free offerings
-          are genuinely unlimited.
+          Local speech processing can avoid a cloud narration request, but it
+          does not dictate a company&apos;s prices. An offline app can charge;
+          a cloud service can offer a useful free tier.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Apple Spoken Content: free, built in, surprisingly good">
+      <QuestionSection question="When are Apple's built-in reading tools enough?">
         <p>
-          Every iPhone, iPad, and Mac has a feature called Spoken Content.
-          It lives in Accessibility settings. Turn it on, and a
-          two-finger-swipe-down gesture on iPhone (or a keyboard shortcut
-          on Mac) reads whatever is on screen aloud. It works in Safari,
-          Books, Mail, Notes, and most third-party apps.
+          On current iPhone software, look under Settings → Accessibility →
+          Read &amp; Speak; older versions call this Spoken Content. Apple&apos;s
+          <a href="https://support.apple.com/en-gb/guide/iphone/iph96b214f0/ios" className="text-loudBlue hover:underline"> reading guide</a>
+          covers Speak Screen and Speak Selection, including highlighting and
+          speed controls. On Mac, enable Speak selection in Accessibility;
+          the default shortcut is Option–Esc.
         </p>
         <p>
-          The built-in voices have improved dramatically. Recent versions
-          of iOS and macOS include high-quality voices that sound natural
-          and handle pacing well. They work offline. They cost nothing. For
-          reading short articles, emails, or web pages, Spoken Content is
-          often all you need. It is the best free TTS option that requires
-          zero downloads and zero setup beyond a settings toggle.
-        </p>
-        <p>
-          The limitation is that Spoken Content is not a book reader. It
-          does not import EPUB files. It does not save your place. It does
-          not highlight words as it reads. It does not have a library view
-          or a playback speed control beyond a basic setting. It is a
-          system utility, not a reading app. For full books, a dedicated
-          reader is better.
+          These are sensible first choices for text already open in another
+          app. Their usefulness depends on whether that app exposes readable
+          text. Test your actual book or page rather than assuming a screenshot,
+          locked file or complicated PDF will work. A dedicated reader is
+          useful when you want imports and a saved reading position in one place.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="LoudReader: free unlimited book listening">
+      <QuestionSection question="What do NaturalReader and other free plans offer?">
         <p>
-          LoudReader&apos;s free tier is designed for actual book reading.
-          {FREE_TIER.full} There is no word quota. You can import any DRM-free
-          EPUB or PDF and listen to the entire thing, cover to cover,
-          without ever hitting a paywall. No account required. No credit
-          card asked.
+          <a href="https://help.naturalreaders.com/en/articles/8823770-voices-languages-and-tts-limits-personal-version" className="text-loudBlue hover:underline">NaturalReader&apos;s free plan</a>
+          includes unlimited use of its system-based Free Voices, with
+          availability depending on your device and browser. Its AI voice
+          samples have daily limits. It is inaccurate to treat the whole
+          service as a short trial that stops reading altogether.
         </p>
         <p>
-          The free tier includes core book-reading features: your place is
-          saved across sessions, playback continues with the screen locked,
-          lock screen and Bluetooth controls work on iPhone, and the Mac
-          app gives you the same experience on desktop. It ships with
-          70,000+ free Project Gutenberg classics built in: open the app,
-          pick a book, press play.{" "}
-          <Link
-            href="/blog/project-gutenberg-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            Project Gutenberg through TTS
-          </Link>{" "}
-          is a genuinely free library that never expires.
-        </p>
-        <p>
-          What changes with Premium? {PRICING.premiumFeatures}. That is
-          it. The free tier is not a crippled demo. It is a fully
-          functional book reader that you can use forever without paying.{" "}
-          <Link
-            href="/blog/free-audible-alternative"
-            className="text-loudBlue hover:underline"
-          >
-            It works as a free alternative to audiobook subscriptions
-          </Link>{" "}
-          for anyone who reads EPUBs and PDFs.
-        </p>
-        <p>
-          LoudReader is fully on-device and private, your library never
-          leaves your device. No word quota, because there is no server
-          cost to offset. That is the structural reason the free tier can
-          be unlimited.
+          Speechify and ElevenReader also offer free plans. Compare their
+          current voice and usage allowances on their
+          <a href="https://speechify.com/pricing/" className="text-loudBlue hover:underline"> pricing pages</a>
+          {" and "}
+          <a href="https://elevenreader.io/pricing" className="text-loudBlue hover:underline">plan details</a>
+          . A headline voice count does not tell you what remains free or how
+          long your own documents can be narrated.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How do other free tiers compare?">
+      <QuestionSection question="What can you keep using free in LoudReader?">
         <p>
-          Most competing apps give you a sample of their paid service. They
-          let you listen for a limited number of words, minutes, or
-          characters per day or per month. After that, you subscribe. The
-          quality of the free sample is often high, with good cloud voices,
-          but it runs out quickly for book reading. A single novel can be
-          80,000 to 120,000 words, which exhausts most free quotas in a
-          chapter or two.
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>
+          {" "}is a book-reading option for iPhone and iPad, also available on
+          compatible Apple Silicon Macs as an iPad app. {FREE_TIER.full}
+          Book imports and whole-book listening remain unrestricted. The
+          permanent free voice selection is English, so check the paid voice
+          options if your books are in another language.
         </p>
         <p>
-          These free tiers are honest about what they are: trials. They
-          let you test the app before committing. They are not designed for
-          ongoing free use with full books. If your goal is to listen to
-          complete books without paying, a cloud-based TTS free tier will
-          not get you there.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="Which free option should you pick?">
-        <p>
-          If you read mostly web articles, emails, and short-form content,
-          Apple Spoken Content is already on your device and costs nothing.
-          Turn it on and start listening. It is the simplest, most
-          accessible free TTS option available.
+          You can import DRM-free EPUBs and PDFs, keep your reading position
+          on that device, and follow the spoken words. Premium adds voice
+          choice and controls such as adjustable speed and a sleep timer;
+          those are not all part of the permanent free tier.
         </p>
         <p>
-          If you want to listen to full books, EPUBs, and PDFs, LoudReader
-          gives you a dedicated reading experience with no limits. Natural
-          voices, saved positions, word highlighting, and a built-in
-          catalog of classics. All free, forever.
-        </p>
-        <p>
-          If you want to keep all voices after the trial, or add speed control
-          and extras, Premium is {PRICING.premiumMonthly} or{" "}
-          {PRICING.premiumYearly}. But you never have to.
+          Narration happens locally and books are not uploaded to a speech
+          server. The app also sends crash/performance diagnostics and has
+          usage analytics. Release 1.12 has no visible in-app switch for
+          these diagnostics and analytics. Local narration is a narrower claim than
+          &quot;no data collection.&quot;
         </p>
       </QuestionSection>
 
+      <QuestionSection question="Which option should you try first?">
+        <p>
+          For occasional on-screen reading, try the system controls first.
+          For browser-based documents, test NaturalReader&apos;s free voices
+          with a representative file. For a library of books on an Apple
+          device, try LoudReader and listen to its permanent free voices
+          before judging the plan by the studio-voice trial.
+        </p>
+        <p>
+          If your goal is books rather than a specific app, our
+          <Link href="/blog/free-audible-alternative" className="text-loudBlue hover:underline"> guide to free audiobook alternatives</Link>
+          {" "}also separates generated narration from recorded audiobooks.
+          Keep the app that handles your material comfortably; there is no
+          need to subscribe just because a trial ends.
+        </p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Start listening free, no strings attached"
-        subline={`${FREE_TIER.full} No account needed.`}
-      />
+      <StoreCta headline="Try LoudReader's free book listening" subline={FREE_TIER.full} />
     </ArticleLayout>
   );
 }

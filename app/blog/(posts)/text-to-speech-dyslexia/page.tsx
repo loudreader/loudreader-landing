@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,190 +6,60 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
+import { FREE_TIER } from "@/components/money/site";
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function TextToSpeechDyslexiaArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
       <Tldr>
-        <p>
-          Text to speech genuinely helps dyslexic readers. A 2018
-          meta-analysis found read-aloud tools improved reading comprehension
-          for students with reading disabilities, with a moderate average
-          effect. But the tool only helps if three features are there:{" "}
-          <strong>word-by-word highlighting</strong> that keeps eyes and ears
-          locked together, control over the voice and pace, and{" "}
-          <strong>no word quota</strong>, because dyslexic readers listen to
-          whole books, not paragraphs. <strong>LoudReader</strong> (iPhone, iPad, and Mac) highlights every word as it speaks, free and
-          unlimited on every EPUB and PDF, with natural offline voices, and it
-          is fully on-device and private, your library never leaves your
-          device. Honest alternatives exist too: Microsoft&apos;s Immersive
-          Reader is free for documents, and Read&amp;Write is the classroom
-          standard.
-        </p>
+        <p>Text-to-speech can be an access tool for some people with dyslexia: it offers spoken access to a text that would otherwise require visual decoding throughout. It is not a cure or a replacement for reading instruction. Research on read-aloud support suggests a comprehension benefit on average, but does not establish that every reader needs the same voice, highlighting or app. Try a short piece of your actual reading, compare audio alone with reading along, and check both understanding and effort. For school use, include the learner and the relevant support team in that choice. This guide is published by LoudReader&apos;s developer and includes our app alongside other options.</p>
       </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Read-aloud pairs every printed word with its sound."
-      />
-
-      <QuestionSection question="Does text to speech actually help with dyslexia?">
-        <p>
-          This question has a real answer, which is rarer than it should be in
-          assistive-tech marketing. Wood, Moxley, Tighe and Wagner published a
-          meta-analysis in the <em>Journal of Learning Disabilities</em>,{" "}
-          <a
-            href="https://journals.sagepub.com/doi/10.1177/0022219416688170"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            &quot;Does Use of Text-to-Speech and Related Read-Aloud Tools
-            Improve Reading Comprehension for Students With Reading
-            Disabilities?&quot; (2018)
-          </a>
-          , pooling studies of TTS and read-aloud tools. The answer was yes,
-          with a moderate average effect size of .35 on reading comprehension.
-        </p>
-        <p>
-          Two honest framings of that number. First, moderate is meaningful:
-          it is the difference between a chapter that lands and a chapter that
-          has to be reread. Second, TTS is <em>assistive, not remedial</em>.
-          It does not teach decoding, and it is not a substitute for
-          structured literacy instruction. What it does is decouple access to
-          books from decoding speed, so a student can read at the level they
-          think, not the level they decode.
-        </p>
+      <ArticleIllustration variant="book-to-audio" caption="Try support with the text and task you need to use, rather than a generic demo." />
+      <QuestionSection question="What does the research show?">
+        <p>A <a href="https://pubmed.ncbi.nlm.nih.gov/28112580/" className="text-loudBlue hover:underline">meta-analysis by Wood, Moxley, Tighe and Wagner, published in 2018</a>, examined text-to-speech and related read-aloud tools for students with reading difficulties. It reported an average standardised effect of 0.35 on reading comprehension, with results varying across studies.</p>
+        <p>That number is not a percentage improvement or a promise about one student. The analysis covered different read-aloud approaches, not a test of LoudReader. The authors called for stronger research on who benefits and under which conditions. It does not establish that word highlighting by itself improves decoding skill.</p>
       </QuestionSection>
-
-      <QuestionSection question="Why does word-by-word highlighting matter so much?">
-        <p>
-          If you take one feature requirement from this page, take this one.
-          Reading with dyslexia often fails at <em>tracking</em>: losing the
-          line, losing the word, spending effort re-finding your place that
-          should have gone to meaning. Audio alone does not fix that. It
-          just moves the text somewhere invisible.
-        </p>
-        <p>
-          Synced highlighting fixes it mechanically. When each word lights up
-          the instant it is spoken, your eyes never have to find anything: the
-          text finds you. Eyes and ears stay locked to the same word, every
-          printed word arrives paired with its pronunciation, and a glance
-          away costs nothing because the highlight marks the way back.
-          LoudReader highlights the current sentence and the current word
-          within it, on every book, with no setup.
-        </p>
+      <QuestionSection question="How can you try it without assuming what a reader needs?">
+        <p>Choose a short, representative passage at the level the learner needs to access. Explain the controls, then let them try audio alone and audio with the text visible. Ask what helps and what gets in the way; some people welcome highlighting, while others may prefer fewer visual changes.</p>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>Check the imported text against the original so layout errors are not confused with a reading difficulty.</li>
+          <li>Choose a voice and pace the reader can follow, and show how to pause or replay.</li>
+          <li>After a section, ask the learner to explain the idea or answer the same kind of question their task requires.</li>
+          <li>Notice effort as well as correctness. Ask whether the process feels manageable enough to use again.</li>
+          <li>Try a second real document before choosing a long-term tool.</li>
+        </ol>
+        <p>This is a practical comparison, not a diagnostic test. For formal teaching, support plans or assessment accommodations, work with the appropriate school or professional team.</p>
       </QuestionSection>
-
-      <QuestionSection question="What features actually matter in a TTS app for dyslexia?">
+      <QuestionSection question="Which features are useful to compare?">
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Word-level highlighting</strong>
-            , not just sentence-level. The lock between eyes and ears happens
-            at the word.
-          </li>
-          <li>
-            <strong className="text-gray-900">No word quota.</strong> A novel
-            is 80,000 to 120,000 words. Metered plans are priced for snippets,
-            not for how dyslexic readers actually use TTS, cover to cover.
-          </li>
-          <li>
-            <strong className="text-gray-900">A voice you can live with.</strong>{" "}
-            Robotic voices add listening effort exactly where you are trying
-            to remove reading effort. Natural offline voices matter for hours
-            of daily use.
-          </li>
-          <li>
-            <strong className="text-gray-900">Speed control</strong>, slower
-            for dense material, faster once a voice is familiar.
-          </li>
-          <li>
-            <strong className="text-gray-900">Your real reading</strong>,
-            school PDFs, EPUB novels, not just pasted text boxes.
-          </li>
+          <li><strong>Control:</strong> can the reader pause, return to a passage and change the pace without losing the task?</li>
+          <li><strong>Presentation:</strong> try highlighting and text settings rather than assuming a single layout suits everyone.</li>
+          <li><strong>Real files:</strong> check a school PDF or book, including its columns, footnotes and any scanned pages.</li>
+          <li><strong>Access and cost:</strong> make sure the required voice, language and controls remain available after a trial.</li>
+          <li><strong>Device and privacy requirements:</strong> check the equipment the learner actually uses and the institution&apos;s policies.</li>
         </ul>
+        <p>Word highlighting can show where narration is happening. That is a navigation feature, not proof that it resolves dyslexia or that losing a line explains every reader&apos;s difficulty.</p>
       </QuestionSection>
-
-      <QuestionSection question="What are the honest options?">
-        <p>
-          The dyslexia-TTS space is crowded, and the truthful comparison is
-          more useful than a rigged one:
-        </p>
+      <QuestionSection question="Which existing tools are worth checking first?">
+        <p>If a school or workplace already provides a tool, start by finding out what it can do. Access, training and compatibility with everyday documents may matter more than a long list of advertised voices.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Microsoft Immersive Reader</strong>{" "}
-            is free and already inside Word, OneNote, Teams, and the Edge
-            browser. Its Read Aloud highlights each word, and Line Focus and
-            text spacing are genuinely good. If your reading lives in
-            documents and web pages, start there, since it costs nothing. It
-            is not, however, a home for a book library.
-          </li>
-          <li>
-            <strong className="text-gray-900">Read&amp;Write (Texthelp)</strong>{" "}
-            owns classrooms: schools deploy it centrally, it integrates with
-            learning platforms, and its TTS reads with dual-color
-            highlighting. If your school provides it, use what you have.
-          </li>
-          <li>
-            <strong className="text-gray-900">Speechify</strong> is the most
-            heavily marketed option and its highlighting is word-for-word,
-            but its free tier is 10 standard voices at up to 1.5x speed, and
-            Premium is $29/month with a metered word allowance. For book-length
-            listening, the meter is the wrong shape. The full comparison is in{" "}
-            <Link
-              href="/speechify-alternative-for-mac"
-              className="text-loudBlue hover:underline"
-            >
-              our Speechify alternative page
-            </Link>
-            .
-          </li>
+          <li><a href="https://support.microsoft.com/en-US/edge/use-immersive-reader-in-microsoft-edge" className="text-loudBlue hover:underline">Microsoft Edge Reading mode</a> includes Read aloud for supported web pages, with voice and pace controls. Check it with the pages you need.</li>
+          <li><a href="https://www.everway.com/products/read-and-write-education/" className="text-loudBlue hover:underline">Read&amp;Write from Everway</a> combines text-to-speech with broader reading and writing tools. If your institution supplies it, ask about setup and training.</li>
+          <li><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> is an option for supported DRM-free EPUB and PDF book listening on iPhone and iPad, with the iPad build available on compatible Apple Silicon Macs.</li>
         </ul>
+        <p>These are different workflows, not a ranking of clinical effectiveness. Check the current offering and the learner&apos;s files before buying anything.</p>
       </QuestionSection>
-
-      <QuestionSection question="Where does LoudReader fit?">
-        <p>
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          is built for exactly one of these jobs: whole books, read aloud,
-          followed with your eyes. Word-by-word highlighting is free on every
-          book, and free listening is unlimited: no word quota, no metered
-          months, cover to cover. Voices are natural offline voices, and the
-          app is fully on-device and private, your library never leaves your
-          device, which also means a student&apos;s reading data isn&apos;t
-          anyone&apos;s telemetry.
-        </p>
-        <p>
-          The honest limits: ten languages today, not thirty; playback-speed control
-          (0.3x to 3.0x) is a Premium feature, as are the extra voices after
-          the 8-hour all-voices trial; and scanned PDFs without a text layer
-          can&apos;t be read. If those are dealbreakers, the alternatives
-          above are real options. If not,{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            it is a free download
-          </a>
-          , with no account and nothing to configure.
-        </p>
+      <QuestionSection question="What are LoudReader’s practical limits?">
+        <p>Read-along highlighting and book listening are available without Premium. {FREE_TIER.full} Adjustable speed from 0.3x to 3.0x and continuing access to the full available narrator roster require Premium. Studio voices also depend on device support.</p>
+        <p>PDF import includes on-device OCR for scans, but recognised text and reading order can be wrong. Keep the original for figures, notation and checking errors. The <Link href="/blog/listen-to-textbooks" className="text-loudBlue hover:underline">textbook workflow</Link> shows what to inspect. Protected course books cannot be unlocked by the app.</p>
+        <p>Speech is generated locally without uploading a book for narration. The app also has diagnostics and analytics. No claim here establishes suitability for every school policy, learner or accessibility requirement; try the actual controls with the person who will use them.</p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Every word highlighted, every book, free"
-        subline="Import an EPUB or PDF and read along as it speaks. No word quota, no account, fully on-device."
-      />
+      <StoreCta headline="Try read-aloud support with a real passage" subline="Check the text, controls and available voice. Let the reader decide whether the workflow helps." />
     </ArticleLayout>
   );
 }

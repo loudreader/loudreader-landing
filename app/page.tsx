@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
+import { APP_STORE_URL, FREE_TIER, VOICES } from "@/components/money/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: { url: "/" },
 };
 
-const appStoreUrl = "https://apps.apple.com/app/loudreader/id6758149478";
+const appStoreUrl = APP_STORE_URL;
 
 /*
  * SoftwareApplication structured data.
- * Every value below is verifiable against the App Store listing
- * (apps.apple.com/app/loudreader/id6758149478) or this site's pricing section.
+ * Product capabilities follow the shipping app; prices follow the US App Store
+ * listing. Keep these values aligned with components/money/site.ts.
  * Do NOT add aggregateRating until there are real, verifiable ratings to cite.
  */
 const softwareApplicationJsonLd = {
@@ -20,12 +21,12 @@ const softwareApplicationJsonLd = {
   name: "LoudReader",
   alternateName: "LoudReader: Text to Speech",
   description:
-    "LoudReader turns any EPUB, PDF, or Project Gutenberg classic into an audiobook with natural offline voices. Fully on-device and private, your library never leaves your device. Runs on iPhone, iPad, and Apple Silicon Macs.",
+    "LoudReader reads DRM-free EPUBs, PDFs and saved web articles aloud with on-device voices. It includes local text recognition for scanned PDFs. Runs on iPhone and iPad, and on Apple Silicon Macs as an iPad app.",
   url: "https://loudreader.io",
   installUrl: appStoreUrl,
   // applicationCategory matches Apple's own structured data for this listing.
   applicationCategory: "Books",
-  operatingSystem: "iOS 18.0 or later, iPadOS 18.0 or later, macOS 15.0 or later (Apple Silicon)",
+  operatingSystem: "iOS 18.0 or later, iPadOS 18.0 or later, macOS 15.0 or later (Apple Silicon, iPad compatibility mode)",
   offers: [
     {
       "@type": "Offer",
@@ -33,7 +34,7 @@ const softwareApplicationJsonLd = {
       price: "0",
       priceCurrency: "USD",
       description:
-        "Unlimited listening cover to cover, unlimited library, word-by-word highlighting, Project Gutenberg catalog. Every voice free for the first 8 hours, then one natural offline voice. No account needed.",
+        `Unlimited book listening, individual book imports, notes and word-by-word highlighting. ${FREE_TIER.full}`,
     },
     {
       "@type": "Offer",
@@ -55,21 +56,19 @@ const softwareApplicationJsonLd = {
     },
   ],
   featureList: [
-    "23 studio narrators across 10 languages, all text-to-speech runs on-device",
-    "Native narrators for English, Spanish, German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish",
-    "On-device voice cloning: read a few sentences aloud, about ten seconds, and the app builds a narrator from it (Premium)",
+    `${VOICES.headline}; availability depends on device and all speech is generated locally`,
+    `Studio narrator languages: ${VOICES.languageList}`,
+    "On-device voice cloning from about ten seconds of speech; up to three creations during the all-voices allowance, with Premium removing that creation limit",
     "Word-by-word highlighting synced to narration",
-    "Import any EPUB or PDF",
-    "70,000+ free Project Gutenberg classics built in",
-    "Works 100% offline, no account, no cloud",
+    "Import DRM-free EPUBs and PDFs, recognise text in scanned PDFs on device, and save web articles",
+    "Browse and download 70,000+ Project Gutenberg classics, subject to local copyright",
+    "Offline narration of books already on the device; no LoudReader account required",
     "Adjustable playback speed (0.3x to 3.0x), sleep timer, soundscapes (Premium)",
   ],
   author: {
     "@type": "Person",
     name: "Jeremi Podlasek",
   },
-  // TODO(user): add the Wikidata entity URL here once created,
-  // e.g. "https://www.wikidata.org/wiki/Q...".
   sameAs: [appStoreUrl, "https://www.linkedin.com/company/135327066/", "https://www.wikidata.org/wiki/Q140563771"],
 };
 

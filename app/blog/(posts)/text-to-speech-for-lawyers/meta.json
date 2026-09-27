@@ -1,9 +1,10 @@
 {
   "slug": "text-to-speech-for-lawyers",
-  "title": "Text to Speech for Lawyers: Review Documents by Ear",
-  "description": "How lawyers use on-device text-to-speech to review briefs, contracts, and filings while protecting client confidentiality. No cloud, no uploads.",
+  "title": "Text to Speech for Legal Document Review",
+  "description": "Use audio as a supplementary document pass after your firm approves the workflow. Check extraction, citations, copies, diagnostics and device handling.",
   "publishedAt": "2026-08-08",
-  "lastModified": "2026-08-08",
+  "lastModified": "2026-09-28",
   "avatar": "Privacy-Conscious Professional",
-  "query": "text to speech for lawyers"
+  "query": "text to speech for lawyers",
+  "topic": "formats"
 }

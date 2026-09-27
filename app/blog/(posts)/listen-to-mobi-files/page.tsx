@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,163 +6,88 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
-
-export default function ListenToMobiFilesArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          MOBI is an older Kindle ebook format, and it comes with a hard split.
-          If your MOBI file has DRM (the digital lock Amazon puts on almost all
-          its books), no text-to-speech app can open it, including{" "}
-          <strong>LoudReader</strong>. If your MOBI file is DRM-free (public
-          domain books, some self-published titles, ebooks from DRM-free
-          publishers like Tor), the path is straightforward: convert the MOBI
-          to EPUB with free software like Calibre, then import the EPUB into
-          LoudReader on your iPhone or Mac. LoudReader reads the EPUB aloud
-          with natural offline voices and remembers your place. It is fully
-          on-device and private, your library never leaves your device, so you
-          can listen offline without an account.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="MOBI to EPUB to audio. The conversion step is the only extra work."
-      />
-
-      <QuestionSection question="What is a MOBI file and where does it come from?">
-        <p>
-          MOBI was the native ebook format for early Amazon Kindle devices and
-          apps. Amazon replaced MOBI with newer formats (AZW3, KFX) over the
-          last decade, but you still encounter MOBI files if you have an old
-          ebook collection, bought books from smaller ebook stores that used
-          the format, or downloaded public domain books years ago. The format
-          itself is a container for text and metadata, and on its own it is
-          fine.
-        </p>
-        <p>
-          The real issue is DRM. Most MOBI files from commercial sources are
-          encrypted with Amazon&apos;s DRM, which ties the file to a specific
-          Kindle device or account. No third-party app can open a DRM-locked
-          MOBI file, and LoudReader is no exception.
-        </p>
+      <Tldr><p>
+        LoudReader does not import MOBI files directly. If you have an
+        older DRM-free MOBI ebook, convert a copy to EPUB, inspect the
+        result, then import it into LoudReader. calibre is one tool that
+        supports that conversion. If your store already offers an EPUB,
+        use it instead. A conversion does not remove DRM, and the MOBI
+        extension alone does not tell you whether a file is protected.
+        This guide is for an existing ebook collection, not for extracting
+        arbitrary titles from a Kindle account.
+      </p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Keep the original MOBI and check a converted EPUB before listening." />
+      <QuestionSection question="What should I check before converting?">
+        <p>First, return to the original download source. You may already
+        have an EPUB alongside the MOBI, or the publisher may offer one now.
+        That avoids another conversion and gives you a cleaner starting point
+        if the old file has damaged formatting.</p>
+        <p>Keep your original file unchanged. Work with a copy and make sure
+        you know which book and edition it contains. A filename like
+        <code> book-final.mobi</code> is not enough to identify a revised
+        translation, an abridgement or a sample.</p>
+        <p>If the file is protected or cannot be opened, do not assume
+        conversion will solve it. LoudReader has no DRM-removal feature.</p>
       </QuestionSection>
-
-      <QuestionSection question="Which MOBI files can I actually listen to?">
-        <p>
-          DRM-free MOBI files. These come from a few specific places:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Project Gutenberg and other public domain collections.</strong>{" "}
-            Many older Gutenberg downloads include a MOBI option alongside EPUB
-            and plain text. These are DRM-free by definition.
-          </li>
-          <li>
-            <strong className="text-gray-900">DRM-free publishers.</strong>{" "}
-            Tor Books, Baen, and a growing number of smaller presses sell
-            ebooks without DRM. If you bought a MOBI file from one of them, it
-            converts cleanly.
-          </li>
-          <li>
-            <strong className="text-gray-900">Self-published books.</strong>{" "}
-            Authors who distribute their own ebooks often provide DRM-free
-            MOBI files directly to readers.
-          </li>
-          <li>
-            <strong className="text-gray-900">Calibre conversions you did yourself.</strong>{" "}
-            If you previously converted a DRM-free ebook into MOBI for an old
-            Kindle, you can convert it right back to EPUB.
-          </li>
-        </ul>
-        <p>
-          If you are not sure whether a file has DRM, try opening it in
-          Calibre. If Calibre can load and display the text, the file is
-          DRM-free and you can convert it.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="How do I convert DRM-free MOBI to EPUB?">
-        <p>
-          The tool for this is Calibre, a free and open-source ebook manager
-          that runs on Mac, Windows, and Linux. The workflow is quick:
-        </p>
+      <QuestionSection question="How do I convert the file with calibre?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>Install Calibre and add your DRM-free MOBI file to its library.</li>
-          <li>Select the book, then click <strong>Convert Books</strong>.</li>
-          <li>
-            In the output format dropdown, pick <strong>EPUB</strong>. The
-            default conversion settings are fine for most books.
-          </li>
-          <li>Click OK. Calibre converts the file.</li>
-          <li>
-            Save the resulting EPUB to your iCloud Drive, Files app, or email
-            it to yourself so you can open it on your iPhone or Mac.
-          </li>
+          <li>Add the DRM-free MOBI to calibre.</li>
+          <li>Select it and choose <strong>Convert books</strong>.</li>
+          <li>Set the output format to EPUB and run the conversion.</li>
+          <li>Open the generated EPUB and inspect its chapter list and text.</li>
+          <li>Save the EPUB where your listening device can access it, then import it into LoudReader.</li>
         </ol>
-        <p>
-          Once you have the EPUB, open it in{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          on your iPhone or Mac. The app imports it with one tap, and from
-          that point the workflow is the same as any other book. Press play and
-          it reads aloud with natural offline voices. If you want the full
-          walkthrough from import to listening, see{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
-        </p>
+        <p>calibre lists MOBI as an input format and EPUB as an output in
+        its <a href="https://manual.calibre-ebook.com/faq.html#what-formats-does-calibre-support-conversion-to-from" className="text-loudBlue hover:underline">format documentation</a>.
+        Keep the first attempt simple; only change conversion settings in
+        response to a problem you can actually see.</p>
+        <p><Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>{" "}
+        runs on iPhone and iPad, and as an iPad app on compatible Apple
+        Silicon Macs. Once the EPUB is imported, choose a voice and compare
+        a spoken paragraph with the displayed text.</p>
       </QuestionSection>
-
-      <QuestionSection question="What about the Kindle books I already bought?">
-        <p>
-          This is the honest answer that most how-to guides skip: if you bought
-          a book from the Kindle Store, it has DRM, and you cannot listen to it
-          in LoudReader or any other text-to-speech app. Amazon encrypts Kindle
-          books so they only open inside a Kindle app or on a Kindle device.
-          LoudReader does not and will not break DRM.
-        </p>
-        <p>
-          There is a narrow exception worth mentioning. Some Kindle books have
-          the publisher&apos;s text-to-speech permission flag enabled, which
-          lets the Kindle app itself read the book aloud through Accessibility
-          features or Alexa. That is a feature of the Kindle ecosystem, not
-          something a third-party app can do with the file. If listening to
-          your Kindle library matters to you, check individual book pages on
-          Amazon: they sometimes list whether text-to-speech is enabled for
-          that title.
-        </p>
-        <p>
-          If you own the book as a DRM-free EPUB from a different store, or if
-          it is a public domain title, the conversion path above works and{" "}
-          <Link
-            href="/read-epub-aloud-mac"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader reads EPUB aloud
-          </Link>{" "}
-          with no extra steps.
-        </p>
+      <QuestionSection question="What can go wrong in an older ebook conversion?">
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Repeated contents pages:</strong> check where the actual first chapter begins.</li>
+          <li><strong>Missing breaks:</strong> a heading joined to a paragraph can produce an odd spoken transition.</li>
+          <li><strong>Broken characters:</strong> unexpected symbols in the text will not be repaired merely by choosing another voice.</li>
+          <li><strong>Complex material:</strong> tables, equations and footnotes need separate checks.</li>
+        </ul>
+        <p>Sample the beginning, a middle chapter and the end. If a defect
+        appears in the converted EPUB before LoudReader sees it, fix the
+        conversion or obtain a better source. If the EPUB looks correct
+        but an imported passage differs, keep that example when reporting
+        the problem.</p>
       </QuestionSection>
-
+      <QuestionSection question="What about books in my Kindle account?">
+        <p>Some purchased titles now offer publisher-enabled DRM-free EPUB
+        or PDF downloads; others do not. Check the available options for
+        the specific title. The separate <Link href="/blog/convert-kindle-books-to-audio" className="text-loudBlue hover:underline">Kindle listening guide</Link>{" "}
+        explains the current download route and its limits.</p>
+        <p>A file cached by the Kindle app is not automatically a portable
+        ebook. Renaming it to EPUB does not convert it, and purchasing the
+        title does not create an MP3 recording. Keep file access, conversion
+        and narration as three separate questions.</p>
+      </QuestionSection>
+      <QuestionSection question="What should I expect from the listening result?">
+        <p>This is generated speech from the imported text. A converted
+        file will not acquire a performed cast of characters or editorial
+        corrections. Preview the voice on your own material and decide
+        whether it suits the book.</p>
+        <p>LoudReader generates speech locally. Prepare the book and
+        selected voice, then try playback without a connection before
+        travelling. The <Link href="/read-epub-aloud-mac" className="text-loudBlue hover:underline">EPUB listening guide</Link>{" "}
+        covers the supported Mac workflow. Keep the original ebook until
+        you are satisfied with the conversion and import.</p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Import your DRM-free books and press play"
-        subline="LoudReader reads EPUB and PDF aloud with natural offline voices. Free, on-device, no account."
-      />
+      <StoreCta headline="Try your own document in LoudReader" subline="Import a supported file and check a short passage before a longer listening session." />
     </ArticleLayout>
   );
 }

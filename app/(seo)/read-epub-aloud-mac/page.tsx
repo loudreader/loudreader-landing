@@ -8,7 +8,7 @@ import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, MAC, PRIVACY, VOICES } from "@/components/money/site";
 
 import {
   COMPARISON_COLUMNS,
@@ -44,8 +44,7 @@ export default function ReadEpubAloudMacPage() {
           There are three ways to read an EPUB aloud on a Mac. The quickest is
           a dedicated reader app. <strong>LoudReader</strong> opens any
           DRM-free EPUB and reads it with natural offline voices and
-          word-by-word highlighting. It&apos;s fully on-device and private,
-          your library never leaves your device, and listening is free and
+          word-by-word highlighting. Narration is generated locally, and book listening is free and
           unlimited with no account. Second, macOS has a free built-in option:
           turn on Speak selection in System Settings → Accessibility, select
           some text, and press Option-Esc. That&apos;s fine for a paragraph
@@ -58,7 +57,7 @@ export default function ReadEpubAloudMacPage() {
 
       <QuestionSection question="What's the fastest way to read an EPUB aloud on a Mac?">
         <p>
-          Use an app built for it. LoudReader runs on iPhone, iPad, and Apple Silicon Macs and turns any EPUB or PDF into an audiobook in three steps:
+          Use an app built for it. LoudReader runs on iPhone, iPad, and Apple Silicon Macs and reads supported DRM-free EPUBs and PDFs in three steps:
         </p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
@@ -76,7 +75,7 @@ export default function ReadEpubAloudMacPage() {
           </li>
           <li>
             Import your EPUB. Open it with LoudReader or use the import button,
-            and it lands in your library instantly.
+            and wait for import to finish.
           </li>
           <li>
             Press play. A natural offline voice reads the book while each
@@ -85,8 +84,7 @@ export default function ReadEpubAloudMacPage() {
           </li>
         </ol>
         <p>
-          Everything happens on your Mac. LoudReader is fully on-device and
-          private, your library never leaves your device, and listening is
+          Narration happens on your Mac without a book upload. Book listening is
           unlimited on the free tier with no word quota. The details are in
           the{" "}
           <Link href="/faq" className="text-loudBlue hover:underline">FAQ</Link>.
@@ -168,22 +166,18 @@ export default function ReadEpubAloudMacPage() {
         <p>
           No, and being honest here saves you a frustrating afternoon. Books
           bought from stores that apply DRM (like Apple Books or Kindle
-          purchases) are locked to the store&apos;s own apps, and no
-          third-party reader can open them, LoudReader included. What works
+          purchases) require a compatible authorised reader. LoudReader cannot import them; check the store app’s own reading and accessibility options. What works
           everywhere are DRM-free EPUBs: Project Gutenberg titles, purchases
           from DRM-free stores, and files you own outright.
         </p>
         <p>
-          LoudReader leans into this: it ships with the entire Project
-          Gutenberg catalog built in, 70,000+ public-domain classics you can
-          download and listen to for free, no account needed.
+          LoudReader’s catalog lets you browse and download 70,000+ Project Gutenberg titles, subject to local copyright. The catalog is available in the app; books download when you select them.
         </p>
       </QuestionSection>
 
       <QuestionSection question="Can I listen on my iPhone too?">
         <p>
-          Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs (iPad too, with
-          iOS 18+), so the same EPUB-to-audiobook workflow travels with you.
+          Yes. LoudReader runs on iPhone and iPad, and its iPad build also runs on compatible Apple Silicon Macs. Each device keeps its own library and reading position.
           And because all speech is generated on-device, it keeps working on a
           plane or in the subway with zero connectivity. Learn more about the
           app on the{" "}
@@ -193,6 +187,10 @@ export default function ReadEpubAloudMacPage() {
           .
         </p>
       </QuestionSection>
+
+      <p>{MAC.precise} {VOICES.availability}</p>
+      <p>{FREE_TIER.full}</p>
+      <p>{PRIVACY.summary}</p>
 
       <FaqSection faqs={FAQS} />
 

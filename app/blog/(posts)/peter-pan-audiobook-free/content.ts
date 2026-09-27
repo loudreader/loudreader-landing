@@ -1,44 +1,44 @@
-// FACT PROVENANCE. Every claim verified on 2027-01-01 against:
-//   - Peter Pan (Peter and Wendy) is public domain and on Project Gutenberg
-//     (J. M. Barrie, Gutenberg ebook #16): https://www.gutenberg.org/ebooks/16
-//   - Author dates, catalog entry, and the listening-time estimate (about
-//     5.5 hours) come from data/gutenberg-catalog.json, the same dataset
-//     that renders the /listen/peter-pan catalog page on this site.
-//     Listening hours are computed from word count, not measured from a
-//     recording, so this article calls it an estimate.
-//   - LoudReader app-behavior claims come from components/money/site.ts
-//     (single source of truth): 70,000+ Gutenberg books browsable in the
-//     app, free tier = one natural offline voice with unlimited listening,
-//     Premium adds all 23 studio narrators, playback speed 0.3x to 3.0x,
-//     sleep timer, soundscapes, and notes. Word-by-word highlighting is a
-//     real, non-gated feature per the reference article in this repo
-//     (app/blog/(posts)/app-that-highlights-words-while-reading/content.ts).
-//   - /listen/peter-pan exists in data/catalog-slugs.json and ships a
-//     rendered audio sample.
-// Claims you may NOT make until verified: CarPlay, Android, a human
-// narrator, or any claim that the app exports audio files to keep.
+// FACT PROVENANCE — reviewed 2026-09-28.
+//   - https://www.gutenberg.org/ebooks/16
+//   - https://www.gosh.nhs.uk/about-us/our-history/peter-pan-at-great-ormond-street-hospital/
+//   - https://neverlandofficial.com/discover/peter-pan-copyright/
+//   - Edition/translator claims use the linked primary catalog record and text,
+//     not its automatically generated synopsis. US status is not global clearance.
+//   - data/catalog-slugs.json and data/audio-samples.ts: catalog route and sample.
+//   - components/money/site.ts: FREE_TIER and Premium playback features.
+//   - Product claims cross-checked against the 2026-09-28 shipping-source audit:
+//     LoudReader_mac release_v1.12 (5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0),
+//     SubscriptionAccess.swift, SubscriptionManager.swift, KittenVoice.swift,
+//     VoiceRegistry.swift, PaywallReason.swift, ProjectGutenbergService.swift
+//     and the Xcode iOS target. Compatible Macs run the iPad app; catalog
+//     discovery, ebook download and required voice setup are distinct.
+//     No runtime/network test was performed for this article revision.
+// Do not claim: worldwide copyright clearance, a fixed measured runtime,
+// identical modern translations, human/cast performance, no network or telemetry,
+// no downloads, automatic cross-device reading sync, or every feature free.
+// Practical listening suggestions are editorial advice, not measured outcomes.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Is Peter Pan free to listen to?",
-    a: "Yes. J. M. Barrie's novel Peter and Wendy is public domain, free on Project Gutenberg, and LoudReader reads the full text aloud with a natural offline voice at no cost. The free tier is unlimited listening, not a preview.",
+    "q": "Which novel does this guide cover?",
+    "a": "J. M. Barrie’s Peter and Wendy, listed by Project Gutenberg as Peter Pan, ebook #16. It is not the play, a film adaptation or Peter Pan in Kensington Gardens."
   },
   {
-    q: "Is this a professional audiobook narration?",
-    a: "No, and this article says so upfront. LoudReader's voice is synthetic, generated on your device as the book plays, not a recording of a human narrator. It reads the whole story straight through, which is different from a performed audiobook where a narrator acts out Peter, Hook, and Tinker Bell in different voices.",
+    "q": "Is Peter Pan public domain everywhere?",
+    "a": "Do not treat the US Gutenberg listing as a worldwide permission. GOSH Charity describes special continuing UK royalty rights, including for ebooks and audiobooks. Check the edition and your territory."
   },
   {
-    q: "Is this the original novel or a children's picture-book version?",
-    a: "The original novel, Barrie's full 1911 text, Peter and Wendy, exactly as Project Gutenberg carries it (ebook #16). It's a real listen for adults too, not just a bedtime abridgment, and Barrie's narration is sharper and funnier than the shortened versions most people know.",
+    "q": "Is LoudReader’s reading a human performance?",
+    "a": "No. LoudReader generates speech from the text with a synthetic voice. A cast recording or an actor’s interpretation is a different listening option."
   },
   {
-    q: "How long is Peter Pan as an audiobook?",
-    a: "About 5.5 hours, based on the novel's roughly 48,000 words. That's short enough to finish in a couple of evenings or one long drive, which makes it a good place to start if you've never listened to a full book read aloud before.",
+    "q": "Is it suitable for every child?",
+    "a": "Preview it first. The original text contains violence and dated portrayals that may be altered or omitted in modern adaptations. Suitability depends on the child and edition."
   },
   {
-    q: "Can I listen to Peter Pan on my iPhone and Mac?",
-    a: "Yes. LoudReader runs on iPhone, iPad, and Apple Silicon Macs, both reading the same book with your place saved, so you can start on one device and finish on the other.",
-  },
+    "q": "Is a particular running time guaranteed?",
+    "a": "No. Runtime changes with the text, voice and playback speed. A catalog estimate is not the measured duration of a finished recording."
+  }
 ];

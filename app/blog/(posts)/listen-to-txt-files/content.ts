@@ -1,35 +1,48 @@
-// FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
-// the LoudReader app source (LoudReader_mac repo, main branch):
-//   - LoudReader imports EPUB and PDF files. Plain .txt is not in the
-//     UTImportedTypeDeclarations in Info.plist and is not handled by
-//     DocumentPicker.swift.
-//   - The honest workflow described here (save .txt as PDF, then import)
-//     is the actual route: any text editor on Mac (TextEdit) and iPhone
-//     (Notes, Pages) can export as PDF. No feature is invented.
-//   - Pricing, free-tier, and voice facts come from components/money/site.ts.
-// Claims you may NOT make: direct .txt import into LoudReader.
+// FACT PROVENANCE — revised 2026-09-28, not a runtime test.
+// Shipping app: the LoudReader app source, release_v1.12,
+// peeled commit 5dc3c0d24c12a81d08de55177c6b4d26e1afdaa0 (git show, not dirty HEAD).
+// BookImportService.swift:319–334,972–979 accepts EPUB/PDF file imports;
+// remote article links have a separate download/import path.
+// PDFImportPipeline.swift:88–96,153–218 uses on-device Apple Vision OCR
+// when at least half the pages lack text or total extracted text is very small;
+// at most 300 OCR pages/import, with partial/unreadable-result notices.
+// LoudReaderApp.swift and Analytics.swift initialise Sentry diagnostics and
+// TelemetryDeck usage analytics; the latter defaults ON. Release SettingsSheet.swift
+// hides the usage-statistics switch; do not promise a visible opt-out.
+// Local narration is not a claim of zero network traffic.
+// Platform/account/free-tier facts: docs/product-facts-2026-09-28.md,
+// audited against this shipping tag and official Apple lookup on 2026-09-28.
+// Official instructions checked 2026-09-28:
+// https://support.apple.com/guide/textedit/create-open-and-convert-documents-txtee6663a0e/mac
+// https://support.apple.com/en-ca/guide/pages-iphone/tan78c0ddfdb/ios
+// TextEdit PDF export and Pages export are verified; no claim of native TXT import,
+// automatic Notes TXT opening, perfect layout preservation, or unlimited practical file size.
 
 import type { Faq } from "@/components/money/FaqSection";
 
 export const FAQS: Faq[] = [
   {
-    q: "Does LoudReader open .txt files directly?",
-    a: "No, LoudReader imports EPUB and PDF files. A plain text file needs a quick conversion step first: open it in any text editor (TextEdit on Mac, Notes or Pages on iPhone), export it as a PDF, then import the PDF into LoudReader. The text reads exactly as written, with all line breaks preserved.",
+    "q": "Does LoudReader open .txt files directly?",
+    "a": "No. Its file importer accepts EPUB and PDF. Make a PDF copy in a text editor or word processor, then import that copy into LoudReader."
   },
   {
-    q: "Will I lose formatting when I convert a .txt to PDF?",
-    a: "A .txt file has no formatting to lose. That is the format's strength for this use case. Plain text has no fonts, no bold, no italics, no margins. When you export it to PDF, the words appear in whatever default font your text editor uses, and LoudReader reads them in the order they appear on the page. If the .txt file uses a fixed-width layout, line breaks are preserved.",
+    "q": "Will converting a text file to PDF change the words?",
+    "a": "The export should retain your text, but it introduces page layout and wrapping. Check accented characters, long lines and a few paragraphs in the PDF rather than assuming every file converts perfectly."
   },
   {
-    q: "Can I use this to proofread my writing?",
-    a: "Yes, and it is one of the best use cases for plain-text read-aloud. Save a draft of a blog post, essay, or chapter as .txt, export it to PDF, and let LoudReader read it back to you. Hearing your own words catches awkward sentences, repeated words, and rhythm problems that your eyes skip over. Many writers find it more effective than reading silently on screen.",
+    "q": "Can I make the PDF entirely on my iPhone?",
+    "a": "Yes. Copy the text into a blank Pages word-processing document, then export a PDF using the sharing/export controls. Save the PDF to Files or share it to LoudReader."
   },
   {
-    q: "Does this work with very long .txt files like logs or data dumps?",
-    a: "Yes, as long as the resulting PDF stays within workable page dimensions. LoudReader reads PDFs cover to cover with no word limit. For extremely long files, you might want to split the text into smaller chunks and create a separate PDF for each one, so you can jump between sections.",
+    "q": "Can this help me proofread?",
+    "a": "A listening pass can draw attention to repeated words and awkward phrasing. Keep the editable source open, record corrections there and export a new copy when needed. Continue checking spelling, references and layout visually."
   },
   {
-    q: "Is the conversion to PDF private?",
-    a: "Yes, and in two layers. First, the conversion happens entirely on your own device using a built-in text editor. Second, once the PDF is in LoudReader, it stays there. LoudReader is fully on-device and private, your library never leaves your device, and no account is needed.",
+    "q": "What about a very large log or transcript?",
+    "a": "Start with a relevant section. Repeated timestamps and machine-generated identifiers are often difficult to follow aloud. Split long documents at useful boundaries if navigation or conversion becomes cumbersome."
   },
+  {
+    "q": "Is this a private conversion workflow?",
+    "a": "A local editor can make a PDF without an online converter, but its save location and sync settings still matter. LoudReader generates speech locally; it also uses diagnostics and usage analytics, with usage analytics enabled by default."
+  }
 ];

@@ -7,7 +7,6 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -19,169 +18,108 @@ export default function ListenToWordDocumentArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          There are two good ways to listen to a Word document. For a quick
-          pass while you edit, use Word&apos;s built-in feature: select{" "}
-          <strong>Review &rarr; Read Aloud</strong> and it reads from your
-          cursor. It&apos;s free, already installed, and perfectly adequate for
-          a paragraph or two. For real listening, like a report on a walk or a
-          manuscript over a weekend, export the document to PDF (File &rarr;
-          Save As &rarr; PDF, about ten seconds) and open it in{" "}
-          <strong>LoudReader</strong>, which reads it with natural offline
-          voices on iPhone, iPad, and Apple Silicon Macs, highlights each word as it
-          speaks, and is fully on-device and private, your library never
-          leaves your device. One honest note. LoudReader doesn&apos;t import
-          .docx directly, so the PDF export <em>is</em> the workaround, and
-          this article walks through it.
+          Start with Word&apos;s own Read Aloud if you want to hear a document
+          while editing it. On supported desktop versions, look under Review;
+          Word for the web uses Immersive Reader. You can also export a PDF copy
+          and import it into LoudReader for a separate listening library on
+          iPhone, iPad or a compatible Apple Silicon Mac. LoudReader does not open
+          .docx files directly, and the PDF will not stay in sync with later Word
+          edits. Choose the workflow around that trade-off: live editing in Word,
+          or a portable listening copy with on-device narration.
         </p>
+        <p className="text-sm">Disclosure: this guide is written by LoudReader&apos;s developer. Word may already meet your needs.</p>
       </Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Use the original for editing and a clearly named PDF copy for a separate listening pass." />
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="One quick export turns a .docx into something you can genuinely listen to."
-      />
-
-      <QuestionSection question="Does Word have a built-in read-aloud feature?">
+      <QuestionSection question="How do I use Word's own reading tools?">
         <p>
-          Yes, and credit where due: it is good at what it is for. On the{" "}
-          <strong className="text-gray-900">Review tab</strong>, the{" "}
-          <strong className="text-gray-900">Read Aloud</strong> command reads
-          the document from wherever your cursor sits, with play, pause, and
-          skip-a-paragraph controls and a reading-speed slider.{" "}
-          <a
-            href="https://support.microsoft.com/en-us/office/listen-to-your-word-documents-5a2de7f3-1ef4-4795-b24e-64fc2731b001"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            Microsoft&apos;s documentation
-          </a>{" "}
-          lists it as available in Office 2019, Office 2021, and Microsoft
-          365, across Windows, Mac, the web, and the mobile apps. If you are
-          mid-edit and want to hear the paragraph you just rewrote, nothing
-          beats a button that is already in the ribbon.
+          On supported desktop versions, select Review → Read Aloud. The controls
+          let you pause, move between paragraphs and adjust speed. On the web, use
+          View → Immersive Reader, then play. Mobile menus differ; follow{" "}{" "}
+          <a href="https://support.microsoft.com/en-us/office/listen-to-your-word-documents-5a2de7f3-1ef4-4795-b24e-64fc2731b001" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">Microsoft&apos;s platform-specific instructions</a>{" "}
+          if your ribbon looks different.
+        </p>
+        <p>
+          This keeps listening beside the editable document. If you hear a phrase
+          you want to change, stop and fix it without making another file. There
+          is no general reason a long manuscript cannot be reviewed this way;
+          whether you prefer it to a dedicated reader depends on your device,
+          voice preference and listening routine.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Where does Word's Read Aloud fall short?">
+      <QuestionSection question="What should I check about voices and connectivity?">
         <p>
-          The limits show up the moment listening stops being a proofing step
-          and starts being <em>reading</em>:
+          Microsoft says available voices depend on the platform and may come
+          from the device or a Microsoft service. Its neural-voice troubleshooting
+          calls for internet access and a Microsoft 365 sign-in. Check the voice
+          you intend to use before relying on it offline. Microsoft also states
+          that Read Aloud does not store the content or audio it processes for
+          this feature; consult the same support page for its privacy details.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">Voices.</strong> Per
-            Microsoft&apos;s docs, Read Aloud uses device-built or Microsoft
-            service voices. The natural-sounding ones generally depend on a
-            connection, and what you get offline varies by platform.
-          </li>
-          <li>
-            <strong className="text-gray-900">It lives inside Word.</strong>{" "}
-            The document has to be open in Word, on a device with your Office
-            license. It is a proofing tool bolted to a word processor, not a
-            listening app: no library of documents queued up, no
-            audiobook-style experience for a 200-page manuscript.
-          </li>
-          <li>
-            <strong className="text-gray-900">Subscription coupling.</strong>{" "}
-            Read Aloud comes with Office 2019/2021 or Microsoft 365. If your
-            documents outlive your subscription, so should your way of
-            listening to them.
-          </li>
-        </ul>
         <p>
-          None of this makes Read Aloud bad. It makes it a five-minute tool,
-          and long documents deserve a dedicated reader.
+          LoudReader generates narration on-device. Install and open the app,
+          import your document and test your chosen voice offline before a trip.
+          The app separately uses crash/performance diagnostics and usage
+          analytics; the latter is on by default. Local speech generation describes how the words become
+          audio, not every network interaction of the app.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How do you convert a Word document to PDF?">
-        <p>
-          LoudReader reads EPUB and PDF files and doesn&apos;t import .docx
-          directly, so the bridge between Word and better listening is one
-          export:
-        </p>
+      <QuestionSection question="How do I create a PDF that is pleasant to listen to?">
         <ol className="list-decimal pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">In Word:</strong> File &rarr;
-            Save As, choose <strong>PDF</strong> as the format (on Windows,
-            File &rarr; Export works too).
-          </li>
-          <li>
-            <strong className="text-gray-900">In Google Docs:</strong> File
-            &rarr; Download &rarr; PDF Document.
-          </li>
-          <li>
-            <strong className="text-gray-900">Optional but worth it:</strong>{" "}
-            turn off running headers, footers, and page numbers first. In a
-            PDF they become ordinary text, and skipping them keeps the
-            narration clean.
-          </li>
+          <li><strong className="text-gray-900">Save the editable original.</strong> Make any cleanup in a separate copy if you need to preserve review markup.</li>
+          <li><strong className="text-gray-900">Decide what belongs in the listening version.</strong> Check tracked changes, comments, running headers and footnotes. A review copy and a clean reading copy serve different purposes.</li>
+          <li><strong className="text-gray-900">Export PDF.</strong> In desktop Word, use File → Save As or Save a Copy and select PDF; some versions also offer File → Export.</li>
+          <li><strong className="text-gray-900">Inspect the output.</strong> Check a heading, a page boundary and any table or text box. Those are the places where visual layout can become an awkward spoken sequence.</li>
         </ol>
         <p>
-          The export is lossless where it matters: your words. Nothing gets
-          rewritten, summarized, or sent anywhere.
+          Microsoft&apos;s <a href="https://support.microsoft.com/en-gb/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps" className="text-loudBlue hover:underline" target="_blank" rel="noopener noreferrer">PDF export guide</a>{" "}
+          explains platform options, including whether markup is included. If the
+          source is confidential, check whether you are saving locally or into a
+          synced folder, and avoid choosing an online conversion service by
+          accident. Exporting a PDF is not itself a promise that the document
+          has never been stored in the cloud.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How do you listen to it in LoudReader?">
+      <QuestionSection question="How do I listen to the exported copy in LoudReader?">
         <p>
-          Download{" "}
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader from the App Store
-          </a>{" "}
-          (free, no account), then import the PDF: on the Mac via the import
-          button or by opening the file, on iPhone via the Files app or the
-          share sheet. Press play. From there it behaves like an audiobook of
-          your own document: natural offline voices, word-by-word
-          highlighting so your eyes can follow along, and your place is kept
-          between sessions.
+          Save the PDF where your listening device can access it, then choose it
+          through LoudReader&apos;s import control or share it from Files. Wait
+          for conversion, open the imported document and play a short sample.
+          The app offers word-following highlighting and keeps your place; check
+          the imported text against the original before relying on a full report
+          or manuscript. Our <Link href="/listen-to-pdf-iphone" className="text-loudBlue hover:underline">PDF-on-iPhone walkthrough</Link>{" "}
+          covers the import stage in more detail.
         </p>
         <p>
-          Two properties matter especially for work documents. First, it is
-          fully on-device and private, your library never leaves your device.
-          A contract draft, a performance review, an unpublished chapter:
-          none of it touches a cloud server, because there is no cloud.
-          Second, it works offline entirely, the same on a plane as at your
-          desk. That combination is the whole pitch of{" "}
-          <Link
-            href="/offline-text-to-speech-mac"
-            className="text-loudBlue hover:underline"
-          >
-            offline text to speech on the Mac
-          </Link>
-          , and it extends to the iPhone app unchanged. One honest limit:
-          there is no sync between your devices (no cloud, remember), so
-          AirDrop the PDF to whichever device you want to listen on.
+          LoudReader runs on iPhone and iPad; on compatible Apple Silicon Macs
+          it runs as an iPad app. It does not automatically sync the library or
+          reading position between devices. Transfer and import the PDF on the
+          device you plan to use. Give successive exports a date or version in
+          their filenames so you do not accidentally review yesterday&apos;s draft.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="Which option should you use when?">
+      <QuestionSection question="When is a separate listening copy worthwhile?">
         <p>
-          Use both, since they are different tools. Mid-edit, cursor in the
-          paragraph, quick sanity check: Word&apos;s Read Aloud, no contest.
-          For anything longer, like a report you would rather hear on a walk, a
-          manuscript listening pass, or a document you want on your iPhone with
-          the screen locked, export to PDF and let{" "}
-          <Link href="/" className="text-loudBlue hover:underline">
-            LoudReader
-          </Link>{" "}
-          treat it like a book. The free tier is unlimited listening with no
-          word quota, so trying the workflow costs nothing but the ten-second
-          export.
+          Stay in Word when you are revising frequently and want the spoken text
+          to reflect your latest edit. Try a PDF in a reader when you want a
+          document alongside your other books, or prefer that app&apos;s narration
+          and playback controls. Try one chapter or a few pages before exporting
+          a whole project. Voice preference is personal, and the quality of the
+          PDF extraction matters as much as the voice.
+        </p>
+        <p>
+          For a structured review pass, see{" "}{" "}
+          <Link href="/blog/proofread-by-listening" className="text-loudBlue hover:underline">proofreading by listening</Link>.
+          Listening can help you notice phrasing, but keep checking references,
+          numerical details and layout in the original document.
         </p>
       </QuestionSection>
-
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Your documents, read like audiobooks"
-        subline="Export to PDF, import, press play. Natural offline voices on Mac and iPhone."
-      />
+      <StoreCta headline="Try a listening copy of your document" subline="Export a PDF, import a few pages and compare the result with your Word original." />
     </ArticleLayout>
   );
 }

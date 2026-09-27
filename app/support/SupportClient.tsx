@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { CLONING, FREE_TIER, VOICES } from "@/components/money/site";
 
 export default function SupportPage() {
   return (
@@ -66,28 +67,28 @@ export default function SupportPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">How do I import my own books?</h3>
                   <p>
-                    You can import EPUB files directly from the Files app, Safari downloads, or any app that supports sharing. Just tap the share button and select LoudReader, or use the import button within the app.
+                    Import DRM-free EPUBs and PDFs through the in-app file picker, or share supported files and article links to LoudReader. Scanned PDFs can use on-device text recognition; check the extracted reading order before listening.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Which voices are available?</h3>
                   <p>
-                    LoudReader offers 23 studio narrators across 10 languages — 11 in English, 4 in Spanish, and one each in German, French, Italian, Dutch, Polish, Portuguese, Swedish and Danish. Narrators for a language appear once you have a book in that language, which keeps the picker short. Every voice is free to try for your first 8 hours of listening — after that, free users keep one natural offline voice, while Premium keeps all 23 unlocked plus adjustable playback speed from 0.3x to 3.0x.
+                    LoudReader offers {VOICES.headline}. {VOICES.availability} In the picker, {VOICES.lazyLanguages}. {FREE_TIER.full} {FREE_TIER.choice} Premium keeps the full available selection and adds adjustable playback speed from 0.3x to 3.0x.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Can I make a narrator out of my own voice?</h3>
                   <p>
-                    Yes. Voice Studio asks you to read a short passage aloud — about ten seconds is enough — and builds a narrator from that recording. The audio, the model and the finished voice stay on your device; deleting the voice deletes the files. Voice cloning is part of Premium.
+                    {CLONING.long} {CLONING.trial}
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Does the app work offline?</h3>
                   <p>
-                    Yes! LoudReader works entirely offline. All text-to-speech processing happens on your device in real time - no internet connection is needed to read or listen to your books.
+                    Speech is generated locally, so books and voices already available on the device can be used offline. Check your chosen book and narrator before travelling. Downloads, web articles, purchases and app diagnostics or analytics can use the network; see our <Link href="/privacy" className="text-blue-600 underline">privacy policy</Link> for details.
                   </p>
                 </div>
 

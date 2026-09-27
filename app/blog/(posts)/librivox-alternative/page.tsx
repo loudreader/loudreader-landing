@@ -1,23 +1,16 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
+import Disclosure from "@/components/blog/Disclosure";
 import { articleMetadata } from "@/components/blog/articles";
-import ComparisonTable from "@/components/money/ComparisonTable";
 import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
-
-import {
-  COMPARISON_CAPTION,
-  COMPARISON_COLUMNS,
-  COMPARISON_ROWS,
-  FAQS,
-} from "./content";
+import { FREE_TIER } from "@/components/money/site";
+import ComparisonTable from "@/components/money/ComparisonTable";
+import { FAQS, COMPARISON_COLUMNS, COMPARISON_ROWS } from "./content";
 import meta from "./meta.json";
-
 export const metadata = articleMetadata(meta);
 
 export default function LibrivoxAlternativeArticle() {
@@ -25,140 +18,104 @@ export default function LibrivoxAlternativeArticle() {
     <ArticleLayout meta={meta}>
       <Tldr>
         <p>
-          LibriVox is one of the internet&apos;s good places: 20,000+
-          volunteer-read recordings of public-domain books, free to download
-          and keep forever. Its honest trade-off is baked into the volunteer
-          model. Narration quality varies recording to recording, and one
-          novel can change narrators chapter to chapter. If that
-          inconsistency is what sends you looking for an alternative,{" "}
-          <strong>LoudReader</strong> reads the same public-domain catalog
-          (all 70,000+ Project Gutenberg titles, built in) with natural
-          offline voices. You get one consistent voice from cover to cover,
-          word-by-word highlighting so you can read along, and a saved place
-          in every book. It is free, with unlimited listening, no account,
-          and fully on-device and private, your library never leaves your
-          device.
+          If a LibriVox recording does not suit you, first look for another
+          edition of the same book. A solo recording keeps one reader; a
+          collaborative recording may change readers between chapters. If you
+          would rather choose a synthetic voice, a TTS reader can narrate a
+          supported ebook instead. LoudReader offers that workflow on Apple
+          devices. The key choice is whether you want a downloadable recording
+          or a reading app that speaks the text. Neither guarantees the voice
+          you will prefer, and a public-domain listing in the US does not settle
+          a book&apos;s status everywhere else.
         </p>
+        <Disclosure />
       </Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Try a different edition before deciding you need a different way to listen." />
 
-      <ArticleIllustration
-        variant="book-to-audio"
-        caption="Same public-domain classics, one consistent voice from the first chapter to the last."
-      />
-
-      <QuestionSection question="What makes LibriVox great, and where does it fall short?">
+      <QuestionSection question="Can I find a different reader without leaving LibriVox?">
         <p>
-          Credit first, because LibriVox has earned it. Since 2005,
-          volunteers have recorded more than 20,000 public-domain works,
-          mostly in English but with recordings in many other languages, and
-          released every one of them free, as files you can download, keep,
-          and play on anything. No account, no ads, no catch. The best
-          LibriVox narrators are genuinely wonderful, and the project&apos;s
-          open, communal spirit is the reason so many classics have any
-          audio edition at all.
+          Search by author and title, then inspect the reader credits and sample
+          chapters. The <a href="https://wiki.librivox.org/index.php/Recording_%26_Text_Policies" className="text-loudBlue hover:underline">LibriVox project policies</a>{" "}
+          allow multiple versions of a work, including solo and collaborative
+          projects. A voice change is a possibility, not a feature of every
+          recording. Check an early and a later chapter if a consistent reader
+          matters to you.
         </p>
         <p>
-          The trade-offs come from the same volunteer model that makes it
-          possible:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong className="text-gray-900">
-              Narration quality varies.
-            </strong>{" "}
-            Different volunteers, microphones, rooms, and reading styles
-            mean every recording is a roll of the dice.
-          </li>
-          <li>
-            <strong className="text-gray-900">
-              Narrators can change mid-book.
-            </strong>{" "}
-            Chapters are claimed individually, so a novel can switch voices
-            (and audio character) between chapters.
-          </li>
-          <li>
-            <strong className="text-gray-900">It is audio only.</strong> No
-            synced text, no highlighting, no reading app around it. And with
-            20,000 recordings against Project Gutenberg&apos;s 70,000+
-            books, most of the catalog is still waiting for a narrator.
-          </li>
-        </ul>
-      </QuestionSection>
-
-      <QuestionSection question="Why do LibriVox narrators change mid-book?">
-        <p>
-          Because a LibriVox audiobook is a community project, not a studio
-          production. Volunteers pick individual chapters from an open list,
-          record them at home, and the community proof-listens the results.
-          Solo projects (one narrator, whole book) exist and are often
-          excellent, but collaborative projects are how big books get done,
-          and those arrive with several voices. It is a feature of the model,
-          not a bug. It is also, for many listeners, the single reason to
-          look for an alternative.
+          Also compare the underlying edition. Two recordings with similar
+          titles may use different translations or include different material.
+          Match the author, translator and language before judging pronunciation
+          or pacing. Read a short passage alongside the audio to check that it
+          is the text you expected. You may find that another volunteer edition
+          already solves the problem, with no new app or subscription.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How is LoudReader different from LibriVox?">
+      <QuestionSection question="When does text to speech make more sense?">
         <p>
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-loudBlue hover:underline"
-          >
-            LoudReader
-          </a>{" "}
-          flips the approach. Instead of finding a recording of the book, it
-          reads the book itself. The entire Project Gutenberg catalog is
-          built in, every title, not the subset volunteers have recorded,
-          and natural offline voices narrate in real time with one
-          consistent voice from the first chapter to the last. Each word is
-          highlighted as it is read, every book keeps your place, and it all
-          runs in{" "}
-          <Link href="/" className="text-loudBlue hover:underline">iPhone, iPad, and Mac apps</Link>{" "}
-          that work in airplane mode. You can also import your own DRM-free
-          EPUBs and PDFs. The walkthrough is in{" "}
-          <Link
-            href="/turn-any-book-into-an-audiobook"
-            className="text-loudBlue hover:underline"
-          >
-            how to turn any book into an audiobook
-          </Link>
-          .
+          TTS is useful when you have an ebook but cannot find a suitable
+          recording, or when choosing the voice matters more to you than hearing
+          a particular performance. The same chosen voice can read successive
+          chapters. That does not guarantee uniform delivery: difficult names,
+          dialogue and unusual punctuation can still sound different or need
+          checking against the text.
         </p>
         <p>
-          The concession in the other direction: LoudReader has no files to
-          download. Narration is generated live on your device, so if your
-          workflow needs MP3s (a dumb MP3 player, burning discs, archiving),
-          LibriVox remains the right tool for that job.
+          <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link>{" "}
+          imports supported DRM-free EPUBs and PDFs, and generates narration on
+          the device with word-following highlighting. It also lets you browse
+          and download Project Gutenberg books. That catalogue overlaps with
+          LibriVox, but the two are not identical collections and every listed
+          edition is not guaranteed to be available in the app.
+        </p>
+        <p>
+          Try a difficult passage with <Link href="/voices" className="text-loudBlue hover:underline">a voice you like</Link>{" "}
+          before committing to a long book. {FREE_TIER.full} Premium expands
+          continuing voice access and adds controls such as adjustable speed.
+          The Mac option runs the iPad app on compatible Apple Silicon hardware;
+          it is not a separate native Mac player.
         </p>
       </QuestionSection>
 
-      <QuestionSection question="How do LibriVox, LoudReader, and the Gutenberg audiobooks compare?">
+      <QuestionSection question="What if I specifically want downloadable audio?">
         <p>
-          There is a third free option worth knowing:{" "}
-          <Link
-            href="/blog/project-gutenberg-audiobooks"
-            className="text-loudBlue hover:underline"
-          >
-            the Project Gutenberg Open Audiobook Collection
-          </Link>
-          , about 5,000 titles generated with synthetic voices in 2023 and
-          published as free audio files. Side by side:
+          Choose a service that provides the recording in the format your player
+          accepts. LibriVox offers downloadable recordings, which can be useful
+          for a separate music player or a listening app of your choice. A text
+          reader&apos;s in-app narration is a different workflow; do not assume
+          importing an ebook gives you a portable audiobook file.
         </p>
-        <ComparisonTable
-          caption={COMPARISON_CAPTION}
-          columns={COMPARISON_COLUMNS}
-          rows={COMPARISON_ROWS}
-        />
+        <p>
+          Another collection is the <a href="https://marhamilresearch4.blob.core.windows.net/gutenberg-public/Website/index.html" className="text-loudBlue hover:underline">Project Gutenberg Open Audiobook Collection</a>.
+          Project Gutenberg, Microsoft and MIT created it using synthetic speech.
+          Its downloadable recordings are worth sampling when you want finished
+          audio rather than generating speech as you read. Check the actual
+          chapter files and download options for your chosen title, and keep the
+          source information with any files you save.
+        </p>
+        <ComparisonTable caption="Choose by the listening workflow you need" columns={COMPARISON_COLUMNS} rows={COMPARISON_ROWS} />
       </QuestionSection>
 
+      <QuestionSection question="Are these books free to use in my country?">
+        <p>
+          Both <a href="https://librivox.org/pages/public-domain/" className="text-loudBlue hover:underline">LibriVox</a>{" "}
+          and <a href="https://www.gutenberg.org/help/copyright.html" className="text-loudBlue hover:underline">Project Gutenberg</a>{" "}
+          explain that their US copyright basis does not resolve every other
+          country&apos;s rules. Check the exact work and translation where you
+          live. A later translation can have a different status from the original.
+          A freely accessible download button is not proof of worldwide permission.
+        </p>
+        <p>
+          For an uncomplicated first comparison, choose an edition you already
+          know you can use. Listen to the same chapter as a volunteer recording
+          and as TTS, at a comfortable volume. Notice whether you prefer the
+          interpretation, whether names are intelligible and whether you can
+          resume easily. Those observations are more useful than a blanket
+          ranking of human and synthetic voices.
+        </p>
+      </QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Every classic, one consistent voice"
-        subline="All 70,000+ Project Gutenberg titles built in, read with natural offline voices. Free, unlimited, no account."
-      />
+      <StoreCta headline="Choose a voice for a classic you want to read" subline="Try on-device narration with a supported ebook. Check the edition and local availability before downloading." />
     </ArticleLayout>
   );
 }

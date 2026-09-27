@@ -8,7 +8,7 @@ import MoneyPageLayout from "@/components/money/MoneyPageLayout";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, CLONING, DIFFERENTIATORS, FREE_TIER, MAC, PRICING, PRIVACY, VOICES } from "@/components/money/site";
 
 import {
   COMPARISON_COLUMNS,
@@ -46,12 +46,11 @@ export default function LoudReaderVsSpeechifyPage() {
           languages, AI summaries and podcasts, apps on nearly every platform,
           for $29/month, with premium-voice listening metered by a monthly word
           allowance. LoudReader is a focused reader for books and documents.
-          It's fully on-device and private, your library never leaves your
-          device, with natural offline voices, no account, and no word quota.
-          Its free tier includes unlimited listening on every book, cover to
-          cover; Premium is $7.99/month, $49.99/year, or $199.99 once. Pick
-          Speechify for breadth and languages; pick LoudReader for private,
-          unlimited, long-form listening on iPhone, iPad, and Apple Silicon Macs. Full
+          Speech is generated on your device; books are not uploaded for
+          narration. {FREE_TIER.full} Premium is {PRICING.premiumMonthly},{" "}
+          {PRICING.premiumYearly}, or {PRICING.premiumLifetime} on the US App
+          Store. Pick Speechify for breadth and languages; pick LoudReader
+          for local, unlimited book listening. {MAC.precise} Full
           disclosure: this page is written by LoudReader&apos;s developer, so
           the table below sticks to facts you can verify.
         </p>
@@ -66,7 +65,7 @@ export default function LoudReaderVsSpeechifyPage() {
           thing: turn the books and documents you already own into
           audiobooks, entirely on your device. Every word of speech is
           generated locally with natural offline voices, each word highlights
-          as it is read, and the app works with the network switched off.
+          as it is read, and books already on the device can be narrated offline.
         </p>
         <p>
           That single design decision, on-device instead of cloud, drives
@@ -83,9 +82,9 @@ export default function LoudReaderVsSpeechifyPage() {
           rows={COMPARISON_ROWS}
         />
         <p>
-          The short version: LoudReader wins on privacy, price, offline use,
-          and unlimited long-form listening. Speechify wins on breadth:
-          languages, voice variety, platforms, and AI features.
+          LoudReader offers on-device narration, unlimited book listening
+          and a lower listed subscription price. Speechify offers more
+          languages, voice variety, platforms and AI features.
         </p>
       </QuestionSection>
 
@@ -99,17 +98,15 @@ export default function LoudReaderVsSpeechifyPage() {
           words per month through the end of 2026, with a contractual
           baseline of 150,000 words per month after that. A long novel can
           run past 150,000 words, so heavy book listeners can feel that
-          ceiling. There's no one-time purchase.
+          ceiling. There&apos;s no one-time purchase.
         </p>
         <p>
-          <strong>LoudReader:</strong> the free tier includes unlimited
-          listening on every book cover to cover, an unlimited library,
-          word-by-word highlighting, the full Project Gutenberg catalog, and
-          every voice free for your first 8 hours (after that you keep the
-          default voice). Premium adds all 23 studio narrators plus playback speed
-          (0.3x to 3.0x), a sleep timer, ambient soundscapes, and notes &amp;
-          highlights. That's $7.99/month, $49.99/year, or $199.99 once, yours
-          for life. All billing goes through Apple. The full breakdown is in
+          <strong>LoudReader:</strong> {FREE_TIER.full} {FREE_TIER.choice}{" "}
+          Notes, highlights and word-by-word read-along are available free.
+          Premium adds {PRICING.premiumFeatures}. {CLONING.trial}{" "}
+          Prices on the US App Store are {PRICING.premiumMonthly},{" "}
+          {PRICING.premiumYearly}, or {PRICING.premiumLifetime}; other
+          storefronts may differ. Billing goes through Apple. The full breakdown is in
           the{" "}
           <Link href="/faq" className="text-loudBlue hover:underline">FAQ</Link>.
         </p>
@@ -117,24 +114,18 @@ export default function LoudReaderVsSpeechifyPage() {
 
       <QuestionSection question="Which app is more private?">
         <p>
-          LoudReader, and the difference is structural rather than a policy
-          promise. Because the text-to-speech engine runs entirely on your
-          device, the app functions with the network switched off; there is
-          nothing to upload and no account to attach data to. Your books,
-          notes, highlights, and reading progress stay on your Mac or iPhone.
-          The only network requests are downloads you ask for from the free
-          Project Gutenberg catalog. The{" "}
+          LoudReader generates speech locally and does not upload books to a
+          speech server for narration. No LoudReader account is required to
+          import and listen. That does not mean the app has no telemetry.
+        </p>
+        <p>
+          {PRIVACY.summary} Usage analytics is enabled by default. Downloads
+          and purchases also use the network. Read the{" "}
           <Link href="/privacy" className="text-loudBlue hover:underline">
             privacy policy
           </Link>{" "}
-          is two minutes long because there is almost nothing to disclose.
-          Speechify is cloud-based by design: sign-in, cloud voices, and
-          cloud storage integrations are part of how it works.
-        </p>
-        <p>
-          For a confidential contract, a medical document, or an unpublished
-          manuscript, &quot;read aloud without being uploaded anywhere&quot;
-          is the whole ballgame.
+          for details. Speechify is cloud-based by design: sign-in, cloud
+          voices and cloud storage integrations are part of how it works.
         </p>
       </QuestionSection>
 
@@ -143,15 +134,14 @@ export default function LoudReaderVsSpeechifyPage() {
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong>You need a language we don&apos;t cover.</strong> Speechify
-            offers 60+ languages. LoudReader has 10 — English, Spanish, German,
-            French, Italian, Dutch, Polish, Portuguese, Swedish and Danish —
-            each with a narrator recorded in that language. If yours is not on
-            that list, Speechify wins outright.
+            offers 60+ languages. LoudReader&apos;s studio roster covers
+            {" "}{VOICES.languageList}. {VOICES.availability} If yours is not
+            on that list, Speechify has broader language coverage.
           </li>
           <li>
             <strong>You want voice variety.</strong> 1000+ voices including
-            celebrity voices, versus LoudReader&apos;s 23 natural offline
-            narrators (plus any voice you clone from your own).
+            celebrity voices, versus LoudReader&apos;s {VOICES.headline}.
+            {" "}{VOICES.availability} {CLONING.trial}
           </li>
           <li>
             <strong>You&apos;re not all-in on Apple.</strong> Speechify runs on
@@ -159,9 +149,10 @@ export default function LoudReaderVsSpeechifyPage() {
             requires macOS 15+ on Apple Silicon or iOS 18+.
           </li>
           <li>
-            <strong>You want the AI suite.</strong> Scanning physical books,
-            AI summaries and chats, voice typing, AI podcasts. LoudReader
-            has none of that, by design.
+            <strong>You want the AI suite.</strong> Speechify offers scanning
+            physical books, AI summaries and chats, voice typing and AI podcasts.
+            LoudReader also supports on-device camera and scanned-PDF text
+            recognition, but does not offer that broader AI suite.
           </li>
         </ul>
         <p>
@@ -178,20 +169,21 @@ export default function LoudReaderVsSpeechifyPage() {
             listening.
           </li>
           <li>
-            <strong>You care where your files go.</strong> Fully on-device,
-            no account, no upload.
+            <strong>You want local narration.</strong> Your books are not
+            uploaded to a speech server to be read aloud.
           </li>
           <li>
             <strong>You listen offline.</strong> Planes, subways, dead zones.
-            Speech is generated locally, so connectivity never matters.
+            Books already on the device can be narrated offline. Test your
+            desired voice and book before travel.
           </li>
           <li>
             <strong>You dislike subscriptions.</strong> $199.99 once, yours
             for life, or a free tier you can genuinely live on.
           </li>
           <li>
-            <strong>You live on Mac and iPhone.</strong> Runs on iPhone, iPad, and Apple Silicon Macs, built for long-form reading with word-by-word
-            highlighting.
+            <strong>You use Apple devices.</strong> {MAC.precise} Narration
+            includes word-by-word highlighting.
           </li>
         </ul>
         <p>
@@ -218,7 +210,7 @@ export default function LoudReaderVsSpeechifyPage() {
             LoudReader from the App Store
           </a>{" "}
           (macOS 15+ on Apple Silicon, or iOS 18+ on iPhone and iPad), open
-          any EPUB or PDF, or grab a free classic from the built-in catalog,
+          a DRM-free EPUB or PDF, or grab a free classic from the built-in catalog,
           and press play. No account, no trial countdown on listening, no
           card required.
         </p>
@@ -228,7 +220,7 @@ export default function LoudReaderVsSpeechifyPage() {
 
       <StoreCta
         headline="Try LoudReader free"
-        subline="Unlimited listening, no account, no word quota. Runs on iPhone, iPad, and Apple Silicon Macs."
+        subline={`${FREE_TIER.full} LoudReader ${DIFFERENTIATORS.native}.`}
       />
     </MoneyPageLayout>
   );

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import ArticleIllustration from "@/components/blog/ArticleIllustration";
 import ArticleLayout from "@/components/blog/ArticleLayout";
 import { articleMetadata } from "@/components/blog/articles";
@@ -7,199 +6,23 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-
 import { FAQS } from "./content";
 import meta from "./meta.json";
 
 export const metadata = articleMetadata(meta);
 
-export default function WhatToListenToNextArticle() {
+export default function Article() {
   return (
     <ArticleLayout meta={meta}>
-      <Tldr>
-        <p>
-          Pick by how much time you actually have, not by genre first. For
-          under two hours, Elizabeth Barrett Browning&apos;s{" "}
-          <strong>Sonnets from the Portuguese</strong> (about 1 hour) or
-          Shakespeare&apos;s <strong>A Midsummer Night&apos;s Dream</strong>{" "}
-          (about 2 hours) finish in one sitting. For a plot that pulls you
-          along, Arthur Conan Doyle&apos;s{" "}
-          <strong>The Adventures of Sherlock Holmes</strong> or Agatha
-          Christie&apos;s <strong>The Murder of Roger Ackroyd</strong> both
-          move fast. For a long book worth living inside, Alexandre
-          Dumas&apos; <strong>The Count of Monte Cristo</strong> (about 51.5
-          hours) or Tolstoy&apos;s <strong>War and Peace</strong> (about 62
-          hours) are the biggest commitments in the catalog and both earn it.
-          All of these, and 70,000+ more public domain books, are free to
-          browse and listen to in <strong>LoudReader</strong> (iPhone, iPad, and Mac) with natural offline voices, no account needed. Times
-          below are estimates at normal 1x speed.
-        </p>
-      </Tldr>
-
-      <ArticleIllustration
-        variant="waveform"
-        caption="70,000+ books, sorted by how much time you actually have."
-      />
-
-      <QuestionSection question="What should I listen to if I only have an hour?">
-        <p>
-          Elizabeth Barrett Browning&apos;s{" "}
-          <Link
-            href="/listen/sonnets-from-the-portuguese"
-            className="text-loudBlue hover:underline"
-          >
-            Sonnets from the Portuguese
-          </Link>{" "}
-          is a complete work, not an excerpt, at an estimated 1 hour. If you
-          want a short story with an ending rather than poetry, Shakespeare&apos;s{" "}
-          <Link
-            href="/listen/a-midsummer-nights-dream"
-            className="text-loudBlue hover:underline"
-          >
-            A Midsummer Night&apos;s Dream
-          </Link>{" "}
-          and Oscar Wilde&apos;s{" "}
-          <Link
-            href="/listen/de-profundis"
-            className="text-loudBlue hover:underline"
-          >
-            De Profundis
-          </Link>{" "}
-          both run around 2 hours, short enough for a single commute or a
-          lunch break, long enough to actually finish something.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What if I want an evening-length book, not a whole project?">
-        <p>
-          A few hours is enough for a full, satisfying story. Lewis
-          Carroll&apos;s{" "}
-          <Link
-            href="/listen/alices-adventures-in-wonderland"
-            className="text-loudBlue hover:underline"
-          >
-            Alice&apos;s Adventures in Wonderland
-          </Link>{" "}
-          and Robert Louis Stevenson&apos;s{" "}
-          <Link
-            href="/listen/the-strange-case-of-dr-jekyll-and-mr-hyde"
-            className="text-loudBlue hover:underline"
-          >
-            The Strange Case of Dr. Jekyll and Mr. Hyde
-          </Link>{" "}
-          both land around 3 hours. Stevenson&apos;s{" "}
-          <Link
-            href="/listen/treasure-island"
-            className="text-loudBlue hover:underline"
-          >
-            Treasure Island
-          </Link>{" "}
-          and F. Scott Fitzgerald&apos;s{" "}
-          <Link
-            href="/listen/the-great-gatsby"
-            className="text-loudBlue hover:underline"
-          >
-            The Great Gatsby
-          </Link>{" "}
-          run about 7.5 and 5.5 hours. Any of these fit into two or three
-          listening sessions.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What should I listen to if I want a plot that keeps moving?">
-        <p>
-          Arthur Conan Doyle&apos;s{" "}
-          <Link
-            href="/listen/the-adventures-of-sherlock-holmes"
-            className="text-loudBlue hover:underline"
-          >
-            The Adventures of Sherlock Holmes
-          </Link>{" "}
-          is built as short, self-contained cases, so it&apos;s easy to pick
-          up for ten minutes or an hour without losing a longer thread. For
-          one continuous mystery, Agatha Christie&apos;s{" "}
-          <Link
-            href="/listen/the-murder-of-roger-ackroyd"
-            className="text-loudBlue hover:underline"
-          >
-            The Murder of Roger Ackroyd
-          </Link>{" "}
-          and Wilkie Collins&apos;{" "}
-          <Link
-            href="/listen/the-moonstone"
-            className="text-loudBlue hover:underline"
-          >
-            The Moonstone
-          </Link>{" "}
-          hold their pace from the first page. If you want something gothic
-          and unsettling instead of a puzzle, Bram Stoker&apos;s{" "}
-          <Link href="/listen/dracula" className="text-loudBlue hover:underline">
-            Dracula
-          </Link>{" "}
-          and Mary Shelley&apos;s{" "}
-          <Link
-            href="/listen/frankenstein"
-            className="text-loudBlue hover:underline"
-          >
-            Frankenstein
-          </Link>{" "}
-          both deliver.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What's a good long book to really live inside for a while?">
-        <p>
-          Alexandre Dumas&apos;{" "}
-          <Link
-            href="/listen/the-count-of-monte-cristo"
-            className="text-loudBlue hover:underline"
-          >
-            The Count of Monte Cristo
-          </Link>{" "}
-          runs an estimated 51.5 hours, a book you return to over weeks
-          rather than days, with enough plot to justify every hour. Leo
-          Tolstoy&apos;s{" "}
-          <Link
-            href="/listen/war-and-peace"
-            className="text-loudBlue hover:underline"
-          >
-            War and Peace
-          </Link>{" "}
-          is the single biggest commitment in the catalog at roughly 62
-          hours. Fyodor Dostoyevsky&apos;s{" "}
-          <Link
-            href="/listen/the-brothers-karamazov"
-            className="text-loudBlue hover:underline"
-          >
-            The Brothers Karamazov
-          </Link>{" "}
-          sits in between at about 38 hours. None of these need to be
-          finished in a week. That&apos;s the point of a book this size: it
-          becomes something you come back to.
-        </p>
-      </QuestionSection>
-
-      <QuestionSection question="What if I don't know what mood I'm in?">
-        <p>
-          Don&apos;t start from a search box. Start from{" "}
-          <Link href="/listen" className="text-loudBlue hover:underline">
-            LoudReader&apos;s free classics catalog
-          </Link>
-          , which groups 100 curated titles by genre, with real estimated
-          listening times next to each one. Skimming a shelf you can
-          actually see the size of beats scrolling a search results page for
-          a book you don&apos;t have a name for yet. The full library behind
-          it runs to 70,000+ public domain books, all free, all built into
-          the app.
-        </p>
-      </QuestionSection>
-
+      <Tldr><p>Choose your next listen by the kind of session you want: a few poems, a short complete story, separate detective cases or a novel to return to over weeks. The shortlist below points to specific Gutenberg editions and our corresponding reading pages. Durations are catalogue estimates at normal speed, not measured recordings; voice, pace, edition and pauses change them. Gutenberg’s US public-domain designation does not settle the status of an edition in every country. Check the source notice and your local position before downloading.</p></Tldr>
+      <ArticleIllustration variant="book-to-audio" caption="Choose a session length, then sample the specific edition." />
+      <QuestionSection question="What fits a short listening session?"><p>Elizabeth Barrett Browning’s <Link href="/listen/sonnets-from-the-portuguese" className="text-loudBlue hover:underline">Sonnets from the Portuguese</Link> is a collection you can approach a poem at a time. Our catalogue estimates roughly an hour for the whole work, but there is no need to hear it in one sitting. <a href="https://www.gutenberg.org/ebooks/2002" className="text-loudBlue hover:underline">Gutenberg edition 2002</a> identifies the source edition.</p><p>Poetry is a useful reminder that shorter does not mean less demanding. Try one poem with the text visible, then decide whether you want to continue with that voice. TTS may not pause where you would when reading verse yourself.</p></QuestionSection>
+      <QuestionSection question="What if you want a short continuous story?"><p>Lewis Carroll’s <Link href="/listen/alices-adventures-in-wonderland" className="text-loudBlue hover:underline">Alice’s Adventures in Wonderland</Link> and Robert Louis Stevenson’s <Link href="/listen/the-strange-case-of-dr-jekyll-and-mr-hyde" className="text-loudBlue hover:underline">The Strange Case of Dr Jekyll and Mr Hyde</Link> each have catalogue estimates of about three hours. The first offers wordplay and strange encounters; the second offers a compact mystery with a darker atmosphere.</p><p>Check the source pages for <a href="https://www.gutenberg.org/ebooks/11" className="text-loudBlue hover:underline">Alice, edition 11</a> and <a href="https://www.gutenberg.org/ebooks/43" className="text-loudBlue hover:underline">Jekyll and Hyde, edition 43</a>. Sample dialogue and unfamiliar words before making either your first long TTS session.</p></QuestionSection>
+      <QuestionSection question="What suits listening in separate pieces?"><p>Arthur Conan Doyle’s <Link href="/listen/the-adventures-of-sherlock-holmes" className="text-loudBlue hover:underline">The Adventures of Sherlock Holmes</Link> is organised as separate cases, so you can choose a story rather than commit to the whole collection. The <a href="https://www.gutenberg.org/ebooks/1661" className="text-loudBlue hover:underline">Gutenberg contents list</a> lets you see those divisions before downloading.</p><p>For a longer continuous mystery, consider Wilkie Collins’s <Link href="/listen/the-moonstone" className="text-loudBlue hover:underline">The Moonstone</Link>. Its catalogue estimate is around twenty-one hours. <a href="https://www.gutenberg.org/ebooks/155" className="text-loudBlue hover:underline">Edition 155</a> is the linked source. Treat this as a different commitment from a single Holmes story, even though both sit on a mystery shelf.</p></QuestionSection>
+      <QuestionSection question="What if you want a book to return to for weeks?"><p>Alexandre Dumas and Auguste Maquet’s <Link href="/listen/the-count-of-monte-cristo" className="text-loudBlue hover:underline">The Count of Monte Cristo</Link> has a catalogue estimate of about fifty-two hours. <a href="https://www.gutenberg.org/ebooks/1184" className="text-loudBlue hover:underline">Gutenberg edition 1184</a> identifies the English text used by this listing. Check which translation you want before starting another version.</p><p>Leo Tolstoy’s <Link href="/listen/war-and-peace" className="text-loudBlue hover:underline">War and Peace</Link> is estimated at around sixty-two hours in our catalogue. <a href="https://www.gutenberg.org/ebooks/2600" className="text-loudBlue hover:underline">Edition 2600</a> credits Aylmer and Louise Maude as translators. Keep names and chapter headings handy if you are returning after gaps; a modern translation may read differently and have different rights.</p></QuestionSection>
+      <QuestionSection question="How should you choose without overthinking it?"><ol className="list-decimal pl-6 space-y-2"><li>Pick the length and kind of session you want this week.</li><li>Read or hear a small sample of the actual edition.</li><li>Check the source notice and local rights; do not infer them from the author’s age alone.</li><li>Prepare the ebook and voice or download a recording before travelling.</li><li>Continue only if you want more of that book.</li></ol><p>Browse more options on the <Link href="/listen" className="text-loudBlue hover:underline">curated classics shelf</Link>. For the territorial boundary, see <a href="https://www.gutenberg.org/policy/permission.html" className="text-loudBlue hover:underline">Gutenberg’s permissions guidance</a>; the <a href="https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term" className="text-loudBlue hover:underline">UK IPO duration notice</a> explains why translations need attention too. <Link href="/" className="text-loudBlue hover:underline">LoudReader</Link> is one way to hear a supported ebook, alongside recorded editions you may prefer.</p></QuestionSection>
       <FaqSection faqs={FAQS} />
-
-      <StoreCta
-        headline="Find your next listen"
-        subline="Browse 70,000+ free classics by genre and estimated listening time. No account needed."
-      />
+      <StoreCta headline="Find a title on the classics shelf" subline="Compare the edition and a voice sample before beginning." />
     </ArticleLayout>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { DEVELOPER } from "@/components/money/site";
 
 /**
  * Author byline (server component).
@@ -16,7 +17,7 @@ export default function Byline() {
         height={18}
         className="opacity-80"
       />
-      Built by the developer of LoudReader
+      By {DEVELOPER}, developer of LoudReader
     </span>
   );
 }
