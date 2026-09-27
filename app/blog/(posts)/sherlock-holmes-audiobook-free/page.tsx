@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -89,7 +89,7 @@ export default function SherlockHolmesAudiobookFreeArticle() {
           before you start the first story.
         </p>
         <p>
-          The free tier gives you one voice with unlimited listening.{" "}
+          {FREE_TIER.full}{" "}
           <Link href="/voices" className="text-loudBlue hover:underline">
             LoudReader Premium
           </Link>{" "}

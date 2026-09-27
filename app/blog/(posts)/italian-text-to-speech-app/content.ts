@@ -8,12 +8,9 @@
 //   - components/money/site.ts PRICING, DIFFERENTIATORS, VOICES: pricing,
 //     the free tier, on-device/private phrasing, and the 10-language count
 //     come from here verbatim, not retyped from memory.
-//   - the app's free-tier voice engine (checked in-app, not named here per
-//     policy): its language code is fixed to English, and its selectable
-//     voices are English-only. The free tier's one chosen voice is always
-//     English. It can never be Marco, so Premium is required
-//     unconditionally to hear the Italian narrator, not "if" the free
-//     voice happens to be someone else.
+//   - components/money/site.ts FREE_TIER: all 23 narrators are free for
+//     the first 8 hours. After that, the one keepable free voice is chosen
+//     from the eligible English lineup; this language narrator needs Premium.
 // App-behavior claims used: on-device, no account, imports EPUB/PDF,
 // 70,000+ Project Gutenberg books, free tier = unlimited listening, Premium
 // adds all voices + speed (0.3x to 3.0x) + sleep timer + soundscapes + notes.
@@ -22,6 +19,7 @@
 // not expose one; not claimed).
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -42,7 +40,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is the Italian voice free to use?",
-    a: "LoudReader's free tier is unlimited listening on every book, cover to cover, with no account and no word quota, but the free tier's one chosen voice comes from the English lineup, not Marco. Hearing the Italian narrator needs Premium, which adds all 23 studio narrators across 10 languages, playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and notes and highlights.",
+    a: `Try ${FREE_TIER.trial}. After that, continuing with Marco, the Italian narrator, requires Premium. Free users choose one keepable voice from the eligible English lineup and retain unlimited listening on every book, with no account or word quota. Premium includes all 23 studio narrators across 10 languages, playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and notes and highlights.`,
   },
   {
     q: "Can LoudReader read an Italian PDF that's a scan of a printed page?",

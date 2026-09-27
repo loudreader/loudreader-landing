@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, DIFFERENTIATORS } from "@/components/money/site";
+import { APP_STORE_URL, DIFFERENTIATORS, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -31,10 +31,9 @@ export default function HowToChooseANarratorVoiceArticle() {
             23 studio narrators across 10 languages
           </Link>
           , every one playable on that page before you download anything. It
-          is {DIFFERENTIATORS.private}, and the free tier gives you one voice
-          with unlimited listening. Premium opens up the full roster so you can
-          match the narrator to the book instead of settling for whichever
-          voice you started with.
+          is {DIFFERENTIATORS.private}. {FREE_TIER.full} Premium keeps the
+          full roster available after the trial so you can match the narrator
+          to each book.
         </p>
       </Tldr>
 
@@ -103,10 +102,8 @@ export default function HowToChooseANarratorVoiceArticle() {
           voice you&apos;ll be spending your reading time with.
         </p>
         <p>
-          The free tier includes one voice with unlimited listening on every
-          book. Premium opens up the rest of the roster, so trying a different
-          narrator for a different book doesn&apos;t cost you anything beyond
-          the subscription itself.
+          {FREE_TIER.full} Try different narrators on your books during those
+          first eight hours. Premium keeps the full roster available afterward.
         </p>
       </QuestionSection>
 
@@ -176,7 +173,7 @@ export default function HowToChooseANarratorVoiceArticle() {
 
       <StoreCta
         headline="Hear the roster before you pick"
-        subline="23 narrators across 10 languages, every one playable at /voices. Free tier includes one, no account needed to listen."
+        subline={`${FREE_TIER.full} Hear every narrator at /voices, no account needed.`}
       />
     </ArticleLayout>
   );

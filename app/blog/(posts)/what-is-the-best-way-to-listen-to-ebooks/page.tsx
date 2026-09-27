@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -110,8 +110,8 @@ export default function WhatIsTheBestWayToListenToEbooksArticle() {
           is built for this use case. Import any EPUB or PDF, or pick from
           70,000+ free Project Gutenberg classics, and press play. Natural
           offline voices run fully on-device and private, your library never
-          leaves your device. The free tier gives you unlimited listening with
-          one voice. Speed control from 0.3x to 3.0x, all 23 studio narrators, sleep
+          leaves your device. {FREE_TIER.full} Keeping all 23 studio narrators
+          after the trial, speed control from 0.3x to 3.0x, sleep
           timer, soundscapes, and notes are part of {PRICING.premiumMonthly}{" "}
           Premium.
         </p>

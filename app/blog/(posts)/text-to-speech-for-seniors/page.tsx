@@ -162,7 +162,7 @@ export default function TextToSpeechForSeniorsArticle() {
         </p>
         <p>
           You can try all 23 studio narrators free for the first 8 hours of listening.
-          After that, one voice remains free, and Premium includes all 8. This
+          After that, one chosen voice remains free, and Premium includes all 23. This
           trial period lets you find the voice that sounds best to you at the
           speed you prefer. Some voices are brighter, some are warmer, and
           personal preference matters a lot for comfort during long sessions.

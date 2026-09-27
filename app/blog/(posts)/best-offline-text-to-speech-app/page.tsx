@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { PRICING } from "@/components/money/site";
+import { PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -104,8 +104,7 @@ export default function BestOfflineTextToSpeechAppArticle() {
         <p>
           LoudReader&apos;s natural offline voices sound excellent out of
           the box. You do not need to shop for voices or configure
-          anything. Pick a voice, press play. The free tier gives you one
-          natural voice and unlimited listening on every book with no word
+          anything. Pick a voice, press play. {FREE_TIER.full} There is no word
           quota. Premium adds all 23 studio narrators, playback speed (0.3x to
           3.0x), sleep timer, ambient soundscapes, and notes and highlights
           for {PRICING.premiumMonthly} or {PRICING.premiumYearly}. A{" "}

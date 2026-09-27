@@ -8,7 +8,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -55,8 +55,7 @@ export default function HowMuchDoTextToSpeechAppsCostArticle() {
           Purpose-built reading apps then split into two camps. Some give a
           real free tier for actual book listening, and some give a limited
           trial meant to convert you to a subscription. LoudReader{" "}
-          {PRICING.free.toLowerCase()} You get one natural offline voice for
-          free, forever, with no meter on how much you listen.
+          {PRICING.free.toLowerCase()}
         </p>
       </QuestionSection>
 
@@ -74,7 +73,7 @@ export default function HowMuchDoTextToSpeechAppsCostArticle() {
               cells: [
                 PRICING.premiumMonthly,
                 PRICING.premiumYearly,
-                "Unlimited listening, one voice, no word quota",
+                "All voices for 8 hours; then one chosen voice, unlimited listening",
               ],
             },
             {
@@ -171,7 +170,7 @@ export default function HowMuchDoTextToSpeechAppsCostArticle() {
 
       <StoreCta
         headline="Unlimited listening, no meter"
-        subline={`Free tier, one voice, no word quota. Premium is ${PRICING.premiumMonthly} or a one-time ${PRICING.premiumLifetime}.`}
+        subline={`${FREE_TIER.full} Premium is ${PRICING.premiumMonthly} or ${PRICING.premiumLifetime}.`}
       />
 
       <p className="text-sm text-gray-500">

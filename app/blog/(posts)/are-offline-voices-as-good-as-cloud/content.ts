@@ -14,6 +14,7 @@
 // MOS scores, named model comparisons unless verified.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -38,6 +39,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I try offline voices without paying?",
-    a: "Yes. LoudReader's free tier gives you one voice with unlimited listening, fully on-device and private, your library never leaves your device. You can test how natural an offline voice sounds on your own books with no time limit and no word quota. If you want all 23 studio narrators, speed control, sleep timer, and soundscapes, those are part of LoudReader Premium.",
+    a: `Yes. ${FREE_TIER.full} LoudReader is fully on-device and private, your library never leaves your device. You can compare offline voices on your own books during the trial, then continue with your chosen free voice with no word quota. Premium keeps all 23 studio narrators available after the trial and adds speed control, sleep timer, and soundscapes.`,
   },
 ];

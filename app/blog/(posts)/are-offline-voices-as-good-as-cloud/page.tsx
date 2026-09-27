@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { FREE_TIER, PRICING } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -26,11 +26,11 @@ export default function AreOfflineVoicesAsGoodAsCloudArticle() {
           reliability (no internet needed), and latency (instant play and
           pause). For book-length listening, the quality gap is small enough
           that most people would not notice without a side-by-side comparison.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) runs 8
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) runs 23
           natural offline voices on Apple Silicon's Neural Engine, fully
-          on-device and private, your library never leaves your device. One
-          voice is free with unlimited listening; all 8 are part of{" "}
-          {PRICING.premiumMonthly} Premium.
+          on-device and private, your library never leaves your device.{" "}
+          {FREE_TIER.full} To keep all 23 voices after the trial, Premium
+          costs {PRICING.premiumMonthly} on the monthly plan.
         </p>
       </Tldr>
 
@@ -159,8 +159,8 @@ export default function AreOfflineVoicesAsGoodAsCloudArticle() {
             coverage, on-device TTS is the clear winner.
           </li>
           <li>
-            If you want to try both and decide with your own ears, LoudReader's
-            free tier gives you one offline voice with unlimited listening.
+            If you want to try both and decide with your own ears, LoudReader
+            lets you start for free. {FREE_TIER.full}{" "}
             Import a book, turn off Wi-Fi, and listen. You will know within a
             chapter whether on-device quality meets your standard.
           </li>
@@ -177,7 +177,7 @@ export default function AreOfflineVoicesAsGoodAsCloudArticle() {
 
       <StoreCta
         headline="Hear on-device voices for yourself"
-        subline="Natural offline voices, one free with unlimited listening. Turn off Wi-Fi, import a book, and decide."
+        subline={`${FREE_TIER.full} Turn off Wi-Fi, import a book, and decide.`}
       />
     </ArticleLayout>
   );

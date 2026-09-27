@@ -10,11 +10,12 @@
 // counts, or unlisted features.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER, VOICES } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
     q: "What is the best free read-aloud app for Mac?",
-    a: "macOS Spoken Content (Option+Esc) is built in, free, and works in every app. For a dedicated app with bookmarking and natural voices, LoudReader has a genuinely unlimited free tier: listen to every book cover to cover with a standard voice, no word quota. Most other Mac read-aloud apps have time-limited trials or heavily restricted free tiers.",
+    a: `macOS Spoken Content (Option+Esc) is built in, free, and works in every app. For a dedicated app with bookmarking and natural voices, LoudReader has no word quota. ${FREE_TIER.full}`,
   },
   {
     q: "Which Mac read-aloud app is most private?",
@@ -22,7 +23,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Which Mac app has the best voices?",
-    a: "Speechify offers the widest voice selection, including celebrity voices, but the best voices stream from the cloud. LoudReader includes eight neural voices that run natively on Apple Silicon with no internet needed. Voice quality is subjective. Download a few apps and listen to the same passage. The voice you prefer is the right one for you.",
+    a: `Speechify offers a wide voice selection, including celebrity voices, but its best voices stream from the cloud. LoudReader includes ${VOICES.headline} that run natively on Apple Silicon with no internet needed. ${FREE_TIER.full} Voice quality is subjective. Download a few apps and listen to the same passage. The voice you prefer is the right one for you.`,
   },
   {
     q: "Can I use an iPhone read-aloud app on my Mac?",

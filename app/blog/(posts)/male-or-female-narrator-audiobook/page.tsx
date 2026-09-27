@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, DIFFERENTIATORS } from "@/components/money/site";
+import { APP_STORE_URL, DIFFERENTIATORS, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -30,9 +30,9 @@ export default function MaleOrFemaleNarratorArticle() {
             23 studio narrators across 10 languages
           </Link>{" "}
           in total, every one playable right on that page. It is{" "}
-          {DIFFERENTIATORS.private}. The free tier includes one voice with
-          unlimited listening, and Premium opens up the rest of the roster so
-          switching sides costs you nothing but a tap.
+          {DIFFERENTIATORS.private}. {FREE_TIER.full} You can compare
+          narrators in the app during those first eight hours. Premium keeps
+          the full roster available afterward.
         </p>
       </Tldr>
 
@@ -160,7 +160,7 @@ export default function MaleOrFemaleNarratorArticle() {
 
       <StoreCta
         headline="Skip the debate and just listen"
-        subline="11 English narrators, both sides represented, playable at /voices. Free tier includes one, no account needed to listen."
+        subline={`${FREE_TIER.full} Hear all 11 English narrators at /voices.`}
       />
     </ArticleLayout>
   );

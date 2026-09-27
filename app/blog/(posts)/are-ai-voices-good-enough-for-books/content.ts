@@ -13,6 +13,7 @@
 // specific MOS scores, named model comparisons unless verified.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -33,6 +34,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How many AI voices does LoudReader offer?",
-    a: "LoudReader Premium includes 23 natural offline voices across 10 languages. They run entirely on your device using Apple Silicon's Neural Engine, so they work with no internet connection. The free tier includes one voice with unlimited listening, which is plenty to decide if AI narration works for you before paying for variety.",
+    a: `LoudReader has 23 natural offline voices across 10 languages. They run entirely on your device using Apple Silicon's Neural Engine, so they work with no internet connection. ${FREE_TIER.full} Premium keeps all 23 voices available after the trial.`,
   },
 ];

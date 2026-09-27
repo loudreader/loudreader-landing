@@ -39,11 +39,11 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How long is the free trial, exactly?",
-    a: "Eight hours of cumulative listening across all 23 studio narrators, one time, and it survives a reinstall since it is tied to your device rather than a session. It is not eight hours per day or per book. Once you have listened for eight hours total, the app moves you to your one free voice.",
+    a: "Eight hours of cumulative listening across all 23 studio narrators, one time, and it survives a reinstall since it is tied to your device rather than a session. It is not eight hours per day or per book. Once you have listened for eight hours total, you choose one eligible free voice to keep with unlimited listening.",
   },
   {
     q: "What happens after the trial ends?",
-    a: "You keep unlimited listening on every book, permanently, on one natural offline voice. You lose access to the other 22 narrators unless you upgrade. Finishing your first book adds a one-time 3 hour bonus of all-voice listening on top of the trial, as a thank-you, with no review or rating required.",
+    a: "You keep unlimited listening on every book, permanently, with one eligible natural offline voice of your choice. You lose access to the other 22 narrators unless you upgrade. Finishing your first book adds a one-time 3 hour bonus of all-voice listening on top of the trial, as a thank-you, with no review or rating required.",
   },
   {
     q: "What does LoudReader Premium actually add?",

@@ -1,7 +1,8 @@
 // FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against:
 //   - components/money/site.ts (VOICES, DIFFERENTIATORS, PRICING, CLONING):
 //     23 studio narrators across 10 languages, 11 English voices, free tier
-//     is one voice with unlimited listening, Premium unlocks the full roster
+//     includes all voices for eight hours, then one chosen voice with unlimited
+//     listening; Premium keeps the full roster available after the trial
 //     plus speed control 0.3x to 3.0x.
 //   - data/voices.ts (VOICE_LANGUAGES): the English roster names and blurbs
 //     used below (James, Grace, Arthur, Ivy, Henry) are read directly from
@@ -16,6 +17,7 @@
 // the app, stated as such, not research.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -36,6 +38,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Are LoudReader's voices free to try?",
-    a: "The free tier includes one natural offline voice with unlimited listening on every book, no word quota, so you can hear how narration feels on real chapters before paying anything. Premium unlocks all 23 studio narrators across 10 languages plus speed control from 0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes.",
+    a: `Yes. ${FREE_TIER.full} Compare narrators on real chapters during the trial. Premium keeps all 23 studio narrators across 10 languages available afterward and adds speed control from 0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes.`,
   },
 ];

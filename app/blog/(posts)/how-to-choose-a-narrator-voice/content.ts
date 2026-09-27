@@ -4,7 +4,8 @@
 //     languages (11 English, 4 Spanish, 1 each for German, French, Italian,
 //     Dutch, Polish, Portuguese, Swedish, Danish), audited 2026-08-20.
 //   - components/money/site.ts (VOICES, CLONING): headline roster count,
-//     lazy-by-language picker behavior, free tier = one voice, Premium
+//     lazy-by-language picker behavior, all voices free for eight hours,
+//     then one chosen voice with unlimited listening; Premium
 //     opens up the full roster, on-device voice cloning from about ten
 //     seconds of speech.
 //   - components/money/site.ts (PRICING): speed range 0.3x to 3.0x is a
@@ -23,6 +24,7 @@
 // points to /voices for the actual sound instead of describing it.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -31,7 +33,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I try a voice before committing to it?",
-    a: "Yes. The /voices page plays every narrator right in the browser, no app download or account needed. Inside the app, the free tier gives you one voice with unlimited listening, and Premium opens up the full roster so you can switch to a different narrator any time you like.",
+    a: `Yes. The /voices page plays every narrator right in the browser, no app download or account needed. You can also compare them in the app. ${FREE_TIER.full} Premium keeps the full roster available after the trial.`,
   },
   {
     q: "Does the same voice work for fiction and nonfiction?",

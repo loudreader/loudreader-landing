@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. Every pricing figure below is imported directly from
 // components/money/site.ts (PRICING), never retyped, so a price change in
 // App Store Connect only needs updating in that one file. Checked against
@@ -25,7 +27,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What does LoudReader Premium add over the free tier?",
-    a: "All 23 studio narrators across 10 languages, on-device voice cloning, playback speed from 0.3x to 3.0x, sleep timer, ambient soundscapes, and notes and highlights. The free tier plays at normal speed with one natural offline voice.",
+    a: `All 23 studio narrators across 10 languages, on-device voice cloning, playback speed from 0.3x to 3.0x, sleep timer, ambient soundscapes, and notes and highlights. ${FREE_TIER.full} Playback speed control is a Premium feature.`,
   },
   {
     q: "Are there hidden costs or a word limit on the free tier?",

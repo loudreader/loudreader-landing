@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -152,10 +152,10 @@ export default function FallAsleepToAudiobooksArticle() {
         </ul>
         <p>
           Honest pricing note: both features are part of Premium
-          ($7.99/month, $49.99/year, or $199.99 once), along with all 8 AI
-          voices, playback speed, and notes &amp; highlights. The core
+          ($7.99/month, $49.99/year, or $199.99 once), along with all 23 studio
+          narrators, playback speed, and notes &amp; highlights. The core
           experience is free, with no account and no quota: unlimited
-          listening on every book, cover to cover. The full breakdown is on
+          listening on every book, cover to cover. {FREE_TIER.full} The full breakdown is on
           the{" "}
           <Link href="/faq" className="text-loudBlue hover:underline">
             FAQ page

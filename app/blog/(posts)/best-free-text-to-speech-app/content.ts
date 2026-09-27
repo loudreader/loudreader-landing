@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. All app-behavior claims verified against the LoudReader app
 // source (LoudReader_mac repo, main branch). Pricing and features from
 // components/money/site.ts (single source of truth).
@@ -10,7 +12,7 @@ import type { Faq } from "@/components/money/FaqSection";
 export const FAQS: Faq[] = [
   {
     q: "Is there a truly free text-to-speech app with no catches?",
-    a: "Yes, two kinds. Apple Spoken Content is built into every iPhone and Mac, completely free forever, and reads anything on screen. LoudReader's free tier gives you unlimited book listening with no word quota, no time limit, and no account required. You get one natural voice free, covering entire books.",
+    a: `Yes, two kinds. Apple Spoken Content is built into every iPhone and Mac, completely free forever, and reads anything on screen. LoudReader's free tier gives you unlimited book listening with no word quota, no time limit, and no account required. ${FREE_TIER.full}`,
   },
   {
     q: "Why do most TTS apps limit their free tiers?",
@@ -18,7 +20,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What is the catch with LoudReader's free tier?",
-    a: "The free tier gives you one natural voice. Premium adds all 23 studio narrators, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, and notes and highlights. The free tier covers full books, cover to cover, with no word cap, forever.",
+    a: `${FREE_TIER.full} Premium adds all 23 studio narrators, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, and notes and highlights. The free tier covers full books, cover to cover, with no word cap, forever.`,
   },
   {
     q: "Can I use Apple Spoken Content for full books?",

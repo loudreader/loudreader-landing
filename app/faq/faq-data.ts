@@ -1,3 +1,5 @@
+import { CLONING, FREE_TIER } from "@/components/money/site";
+
 // Single source of truth for FAQ content.
 // Rendered server-side on /faq AND emitted as FAQPage JSON-LD. Keep both in sync by editing only this file.
 export const faqs = [
@@ -39,7 +41,7 @@ export const faqs = [
       },
       {
         q: "Can I use my own voice?",
-        a: "Yes, and it never leaves your phone. Voice Studio asks you to read a short passage aloud - about ten seconds is enough - and builds a narrator from that recording. The audio, the model, and the finished voice all stay on the device. Delete the voice and the files go with it. Voice cloning is part of Premium.",
+        a: `Yes. ${CLONING.long} Voice cloning is part of Premium.`,
       },
       {
         q: "Does it work without internet?",
@@ -52,7 +54,7 @@ export const faqs = [
     questions: [
       {
         q: "What do I get for free?",
-        a: "A lot. Unlimited listening on every book cover to cover, an unlimited library, word-by-word highlighting, the full Project Gutenberg catalog, 100+ curated classics, and every voice free for your first 8 hours. No account, no time limit. Free, forever.",
+        a: `Unlimited listening on every book cover to cover, an unlimited library, word-by-word highlighting, the full Project Gutenberg catalog, and 100+ curated classics. ${FREE_TIER.full}`,
       },
       {
         q: "What does Premium add?",

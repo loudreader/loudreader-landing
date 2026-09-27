@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. All app-behavior claims verified against the LoudReader app
 // source (LoudReader_mac repo, main branch). Pricing and features from
 // components/money/site.ts (single source of truth).
@@ -17,7 +19,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does Speech Central have a free tier?",
-    a: "Speech Central is a paid app with a free trial. LoudReader's free tier provides unlimited listening on every book, cover to cover, with no word quota and no account required. You get one natural voice free, forever.",
+    a: `Speech Central is a paid app with a free trial. LoudReader's free tier provides unlimited listening on every book, cover to cover, with no word quota and no account required. ${FREE_TIER.full}`,
   },
   {
     q: "Which app handles more file formats?",

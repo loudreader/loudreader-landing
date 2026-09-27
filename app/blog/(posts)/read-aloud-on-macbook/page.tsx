@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, PRICING, VOICES } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -31,10 +31,7 @@ export default function ReadAloudOnMacbookArticle() {
           in a fixed-size window rather than a resizable Mac one. The speech
           engine is the real thing and runs on your Mac&apos;s own silicon. It
           is fully on-device and private, your library never leaves your
-          device. The app costs nothing to try, and the free tier includes
-          unlimited listening with a standard voice. Premium adds all eight
-          neural voices, speed control from 0.3x to 3.0x, a sleep timer,
-          ambient soundscapes, and notes and highlights.
+          device. {FREE_TIER.full} Premium adds {PRICING.premiumFeatures}.
         </p>
       </Tldr>
 
@@ -96,8 +93,8 @@ export default function ReadAloudOnMacbookArticle() {
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <strong className="text-gray-900">Natural offline voices.</strong>{" "}
-            Eight neural voices designed for long-form reading, not a generic
-            system voice. You can switch voices per book without touching
+            {VOICES.headline}, designed for long-form reading. You can switch
+            voices per book during the trial or with Premium without touching
             system settings.
           </li>
           <li>

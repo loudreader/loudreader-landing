@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, PRICING } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -26,11 +26,11 @@ export default function AreAiVoicesGoodEnoughForBooksArticle() {
           is part of the art still benefit from human narration. The honest
           assessment: AI voices have closed most of the gap, but they have not
           eliminated it.{" "}
-          <strong>LoudReader</strong> (iPhone, iPad, and Mac) gives you 8
+          <strong>LoudReader</strong> (iPhone, iPad, and Mac) gives you 23
           natural offline voices powered by Apple Silicon's Neural Engine,
           fully on-device and private, your library never leaves your device.
-          The free tier includes one voice with unlimited listening; all 8
-          voices are part of {PRICING.premiumMonthly} Premium.
+          {" "}{FREE_TIER.full} To keep all 23 voices after the trial,
+          Premium costs {PRICING.premiumMonthly} on the monthly plan.
         </p>
       </Tldr>
 
@@ -138,9 +138,8 @@ export default function AreAiVoicesGoodEnoughForBooksArticle() {
 
       <QuestionSection question="How do you try AI voices before committing?">
         <p>
-          The honest way is to listen. LoudReader's free tier gives you one
-          natural offline voice with unlimited listening, no time limit, no
-          word quota. Import a book and listen to a few chapters. If the voice
+          The honest way is to listen. {FREE_TIER.full} Import a book and
+          try different narrators over a few chapters. If the voice
           disappears into the background and you absorb the content, AI
           narration works for you. If you find yourself distracted by the voice
           or missing the human touch, you have your answer. It costs nothing to
@@ -166,7 +165,7 @@ export default function AreAiVoicesGoodEnoughForBooksArticle() {
 
       <StoreCta
         headline="Hear what modern AI narration sounds like"
-        subline="23 natural offline voices across 10 languages, one free with unlimited listening. Import a book and decide for yourself."
+        subline={`${FREE_TIER.full} Import a book and decide for yourself.`}
       />
     </ArticleLayout>
   );

@@ -1,3 +1,5 @@
+import { FREE_TIER, CLONING } from "@/components/money/site";
+
 // FACT PROVENANCE. All app-behavior claims verified against the LoudReader app
 // source (LoudReader_mac repo, main branch). Pricing and features from
 // components/money/site.ts (single source of truth).
@@ -18,7 +20,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I use my own voices with LoudReader?",
-    a: "No. LoudReader includes a curated set of natural offline voices and does not support importing third-party voices. Voice Dream Reader allows purchasing and installing additional voices from various providers, giving you more voice flexibility.",
+    a: `Yes, through on-device voice cloning in LoudReader Premium. ${CLONING.long} This is separate from importing third-party voice engines, which LoudReader does not support. Voice Dream Reader allows purchasing and installing additional voices from various providers, giving you more voice flexibility.`,
   },
   {
     q: "Which app is better for accessibility needs?",
@@ -26,6 +28,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How do the free tiers compare?",
-    a: "Voice Dream Reader is a paid app with no permanent free tier. LoudReader's free tier includes one natural voice and unlimited listening on every book with no word cap. If you want to try offline TTS for free before committing, LoudReader gives you that path.",
+    a: `Voice Dream Reader is a paid app with no permanent free tier. LoudReader offers unlimited listening on every book with no word cap. ${FREE_TIER.full} If you want to try offline TTS for free before committing, LoudReader gives you that path.`,
   },
 ];

@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, DIFFERENTIATORS } from "@/components/money/site";
+import { APP_STORE_URL, DIFFERENTIATORS, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -99,20 +99,16 @@ export default function SpanishTextToSpeechAppArticle() {
 
       <QuestionSection question="Is a Spanish voice available on the free tier?">
         <p>
-          Not directly. LoudReader&apos;s free tier gives you one natural
-          offline voice with unlimited listening on every book, no word
-          quota, but that one keepable voice is chosen from a small set of
-          English voices, not from the Spanish roster. You can still import
-          and listen to a Spanish-language book on the free tier; what
-          changes with Premium is access to the four Spanish narrators
-          themselves, alongside the rest of the app&apos;s full voice roster,
-          playback speed from 0.3x to 3.0x, a sleep timer, ambient
-          soundscapes, and notes.
+          Try {FREE_TIER.trial}. That includes Sofía, Hector, Diego, and
+          Valentina, so you can try every Spanish narrator with your own
+          books before choosing a plan.
         </p>
         <p>
-          This is the honest tradeoff: free gets you unlimited listening on
-          any Spanish text with no cost and no time limit, and Premium is
-          what buys you a voice that actually sounds native in Spanish.
+          After the trial, continuing with the Spanish narrators requires
+          Premium. Free users choose one keepable voice from the eligible
+          English lineup and retain unlimited listening, with no word quota.
+          Premium keeps all 23 narrators available and adds playback speed
+          from 0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes.
         </p>
       </QuestionSection>
 
@@ -143,7 +139,7 @@ export default function SpanishTextToSpeechAppArticle() {
 
       <StoreCta
         headline="Hear four Spanish narrators before you pick one"
-        subline="Sofía, Hector, Diego and Valentina, playable on the voices page. Free listening on every book, on-device, no account."
+        subline="Hear Sofía, Hector, Diego and Valentina on the voices page, then try all 23 narrators free for your first 8 hours in the app."
       />
     </ArticleLayout>
   );

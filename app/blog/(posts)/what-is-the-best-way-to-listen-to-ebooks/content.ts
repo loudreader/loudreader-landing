@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. Every claim verified on 2026-11-01 against:
 //   - Three routes to ebook listening (official audiobooks, TTS apps, built-in
 //     options) are generic categories with honest trade-offs. No specific pricing
@@ -29,7 +31,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What does LoudReader do that the built-in options do not?",
-    a: "LoudReader is purpose-built for book listening. It imports EPUBs and PDFs directly, remembers your place, highlights each word as it speaks, and uses natural offline voices powered by Apple Silicon's Neural Engine. It comes with 70,000+ free Project Gutenberg classics. It runs fully on-device and private, your library never leaves your device, so there is no internet dependency and no account to create. The free tier gives you unlimited listening with one voice.",
+    a: `LoudReader is purpose-built for book listening. It imports EPUBs and PDFs directly, remembers your place, highlights each word as it speaks, and uses natural offline voices powered by Apple Silicon's Neural Engine. It comes with 70,000+ free Project Gutenberg classics. It runs fully on-device and private, your library never leaves your device, so there is no internet dependency and no account to create. ${FREE_TIER.full}`,
   },
   {
     q: "Do I need to convert my EPUBs to audio files?",

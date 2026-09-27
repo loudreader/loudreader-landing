@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, PRICING, VOICES } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -25,10 +25,9 @@ export default function BestReadAloudAppMacArticle() {
           documents, a dedicated app adds natural voices, bookmarking, and
           reading features. <strong>LoudReader</strong> (iPhone, iPad, and Mac) is the strongest pick for privacy and offline use: it is fully
           on-device and private, your library never leaves your device,
-          requires no account, and has a free tier with no word quota. Premium
-          ({PRICING.premiumMonthly} or {PRICING.premiumLifetime}) adds all
-          eight neural voices, speed from 0.3x to 3.0x, sleep timer, ambient
-          soundscapes, and notes. Speechify leads on voice variety.
+          requires no account, and has no word quota. {FREE_TIER.full} Premium
+          ({PRICING.premiumMonthly} or {PRICING.premiumLifetime}) adds{" "}
+          {PRICING.premiumFeatures}. Speechify leads on voice variety.
           NaturalReader has a clean reading interface. Voice Dream Reader is
           the power-user option. No single app wins every category.
         </p>
@@ -95,13 +94,10 @@ export default function BestReadAloudAppMacArticle() {
           build, so it runs in Apple&apos;s compatibility mode: a fixed-size
           window, no menu bar. It is not an Electron wrapper and not a web app
           in a window &mdash; the speech engine is real and runs on your
-          hardware. It reads EPUBs and PDFs aloud with eight
-          neural voices that run on the Mac's Neural Engine. The free tier
-          includes unlimited listening with a standard voice. Premium
+          hardware. It reads EPUBs and PDFs aloud with {VOICES.headline}
+          {" "}that run on the Mac's Neural Engine. {FREE_TIER.full} Premium
           ({PRICING.premiumMonthly}, {PRICING.premiumYearly}, or{" "}
-          {PRICING.premiumLifetime}) adds all 23 studio narrators, speed control from
-          0.3x to 3.0x, a sleep timer, ambient soundscapes, and notes and
-          highlights.
+          {PRICING.premiumLifetime}) adds {PRICING.premiumFeatures}.
         </p>
         <p>
           The privacy model is simple: LoudReader is fully on-device and

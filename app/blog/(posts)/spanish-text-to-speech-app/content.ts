@@ -17,9 +17,9 @@
 //   - LoudReader_mac/LoudReader/Subscription/SubscriptionManager.swift
 //     (freeVoiceCandidates, freeVoiceIdentifiers): the free tier's one
 //     keepable voice is chosen from a small fixed set of English voices,
-//     never from the Spanish roster. This article does NOT claim a Spanish
-//     voice is available on the free tier; it says plainly that the four
-//     Spanish narrators require Premium.
+//     never from the Spanish roster after the trial. FREE_TIER in
+//     components/money/site.ts defines the first 8 hours with all 23
+//     narrators free, including Spanish; Premium is required afterward.
 // NOT claimed: any localization of the app's own interface into Spanish.
 // Nothing in components/money/site.ts, data/voices.ts, or the app source
 // reviewed for this article states the UI itself is translated; this
@@ -27,6 +27,7 @@
 // and says so.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -51,6 +52,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is a Spanish voice free, or does it need Premium?",
-    a: "The four Spanish narrators require Premium. The free tier's one keepable voice is chosen from a small set of English voices, not from the Spanish roster. Premium unlocks Sofía, Hector, Diego, and Valentina, along with the rest of the 23-voice roster.",
+    a: `Try ${FREE_TIER.trial}. After that, continuing with Sofía, Hector, Diego, or Valentina requires Premium. Free users choose one keepable voice from the eligible English lineup and retain unlimited listening. Premium keeps the full 23-voice roster available.`,
   },
 ];

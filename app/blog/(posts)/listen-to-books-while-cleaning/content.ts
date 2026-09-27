@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. Every app-behavior claim verified on 2026-07-14 against
 // the LoudReader app source (LoudReader_mac repo, main branch):
 //   - Lock-screen / Bluetooth controls: PlayerService.swift,
@@ -34,6 +36,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is the free voice good enough for cleaning background listening?",
-    a: "The free voice in LoudReader is a natural offline voice, not a robotic old-style TTS. It sounds good enough to follow a story while you vacuum, fold laundry, or scrub dishes. If you want more vocal variety, Premium unlocks all 23 studio narrators.",
+    a: `The free voice in LoudReader is a natural offline voice, not a robotic old-style TTS. It sounds good enough to follow a story while you vacuum, fold laundry, or scrub dishes. ${FREE_TIER.full} Premium keeps all 23 studio narrators available after the trial.`,
   },
 ];

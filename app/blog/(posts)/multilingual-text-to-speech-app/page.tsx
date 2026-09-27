@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, VOICES } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, VOICES } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -107,12 +107,12 @@ export default function MultilingualTextToSpeechAppArticle() {
 
       <QuestionSection question="What does the multilingual roster cost?">
         <p>
-          The app itself is free with unlimited listening, cover to cover,
-          no account and no word quota. The free tier's one chosen voice
-          comes from the English lineup, not the other nine languages.
-          Hearing the other 22 narrators across all 10 languages requires
-          Premium, which also adds playback speed from 0.3x to 3.0x, a sleep
-          timer, soundscapes, and notes and highlights. Every narrator, free
+          Try {FREE_TIER.trial}. After that, free users choose one keepable
+          voice from the eligible English lineup and retain unlimited
+          listening, with no account or word quota. Continuing with other
+          narrators, including every non-English voice, requires Premium.
+          Premium also adds playback speed from 0.3x to 3.0x, a sleep timer,
+          soundscapes, and notes and highlights. Every narrator, free
           or Premium, runs on your phone or Mac rather than a server, so
           nothing you listen to leaves the device.
         </p>

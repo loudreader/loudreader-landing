@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. Every app-behavior claim verified on 2026-08-24 against
 // the LoudReader app source (LoudReader_mac repo, main branch):
 //   - Voice models ship bundled inside the app itself. There is no download
@@ -57,6 +59,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Do you get more voices with LoudReader Premium?",
-    a: "Yes. The free tier includes one natural offline voice with unlimited listening on every book. Premium adds all 23 studio narrators across 10 languages, on-device voice cloning, and playback speed control, on top of the same fully on-device and private, your library never leaves your device model.",
+    a: `Yes, after the introductory voice trial. ${FREE_TIER.full} Premium adds all 23 studio narrators across 10 languages, on-device voice cloning, and playback speed control, on top of the same fully on-device and private, your library never leaves your device model.`,
   },
 ];

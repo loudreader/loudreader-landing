@@ -67,6 +67,9 @@ export default function MoneyPageLayout({
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
             <Link href="/" className="hover:text-gray-900 transition-colors">Home</Link>
             <Link href="/listen" className="hover:text-gray-900 transition-colors">Free Classics</Link>
+            <Link href="/blog" className="hover:text-gray-900 transition-colors">Guides</Link>
+            <a href="https://loudkit.loudreader.io/" className="hover:text-gray-900 transition-colors">Loudkit</a>
+            <a href="https://loudkit.loudreader.io/agents/" className="hover:text-gray-900 transition-colors">Agent voice notes</a>
             <Link href="/faq" className="hover:text-gray-900 transition-colors">FAQ</Link>
             <Link href="/releases" className="hover:text-gray-900 transition-colors">Release Notes</Link>
             <Link href="/support" className="hover:text-gray-900 transition-colors">Support</Link>

@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. Every app-behavior claim verified on 2026-11-01 against
 // the LoudReader app source (LoudReader_mac repo, main branch):
 //   - LoudReader is NOT a screen reader: it does not read UI elements, menus,
@@ -35,6 +37,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How do I pick the clearest voice?",
-    a: "LoudReader offers 23 studio narrators across 10 languages. All of them are free to try for the first 8 listening hours; after that, one voice remains free and Premium keeps all 23. Try them at the speed you read and pick the one that fatigues you least. Clarity matters more than personality for extended listening sessions.",
+    a: `LoudReader offers 23 studio narrators across 10 languages. ${FREE_TIER.full} Premium keeps all 23 available after the trial. Try them at the speed you read and pick the one that fatigues you least. Clarity matters more than personality for extended listening sessions.`,
   },
 ];

@@ -73,9 +73,7 @@ export default function NaturalReaderAlternativeArticle() {
         </p>
         <p>
           LoudReader&apos;s free tier is genuinely generous:{" "}
-          {PRICING.free} You get one natural offline voice, and you can
-          listen to an entire novel front to back without hitting a word
-          cap. Premium adds{" "}
+          {PRICING.free} Premium adds{" "}
           {PRICING.premiumFeatures}. Premium costs{" "}
           {PRICING.premiumMonthly} or {PRICING.premiumYearly}. And there is
           a {PRICING.premiumLifetime} purchase. Pay once, and Premium is

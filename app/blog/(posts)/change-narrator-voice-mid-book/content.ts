@@ -18,13 +18,15 @@
 //     voice tapped on the free tier calls
 //     subscriptionManager.presentPaywall(.voiceSelection) instead of
 //     switching, so locked voices are visible but gated, not hidden.
-//   - components/money/site.ts (VOICES, PRICING): free tier is one voice
-//     with unlimited listening; Premium unlocks all 23 studio narrators
+//   - components/money/site.ts (VOICES, FREE_TIER, PRICING): all voices are
+//     available for eight hours, then one chosen voice with unlimited listening;
+//     Premium keeps all 23 studio narrators available afterward
 //     across 10 languages.
 // Claim NOT made: whether switching mid-sentence is possible (it is not -
 // the app finishes the current sentence in the old voice by design).
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -41,7 +43,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Do I need Premium to switch narrators mid-book?",
-    a: "The free tier includes one natural offline voice with unlimited listening, and you can cycle back to it at any time at no cost. Switching to any of the other studio narrators requires Premium; tapping a locked voice in the picker opens the paywall rather than switching. Premium unlocks all 23 studio narrators across 10 languages.",
+    a: `Not during your first eight hours: you can switch among all 23 studio narrators for free; ${FREE_TIER.afterTrial}. Switching to another studio narrator after the trial requires Premium; tapping a locked voice in the picker opens the paywall rather than switching.`,
   },
   {
     q: "Will switching voices lose my place in the book?",

@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, PRICING } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -25,9 +25,8 @@ export default function BestTextToSpeechAppIphoneArticle() {
           want fully offline, private reading with no account,{" "}
           <strong>LoudReader</strong> (iPhone, iPad, and Mac) is the
           strongest pick: it is fully on-device and private, your library never
-          leaves your device, the free tier has no word quota, and Premium
-          ({PRICING.premiumMonthly}) adds eight neural voices, speed from 0.3x
-          to 3.0x, a sleep timer, ambient soundscapes, and notes. Voice Dream
+          leaves your device, and the free tier has no word quota. {FREE_TIER.full}
+          {" "}Premium ({PRICING.premiumMonthly}) adds {PRICING.premiumFeatures}. Voice Dream
           Reader is the closest peer with offline voices. Apple's built-in
           Spoken Content is free and works everywhere, but its voice and
           feature set are basic. The right app is the one whose tradeoffs match
@@ -96,11 +95,9 @@ export default function BestTextToSpeechAppIphoneArticle() {
           LoudReader is a native iPhone and Mac app that reads EPUBs and PDFs
           aloud. It is fully on-device and private, your library never leaves
           your device. There is no account, no cloud processing, and no
-          analytics. The free tier is genuinely unlimited: listen to every
-          book cover to cover with a standard voice, no word quota. Premium
-          ({PRICING.premiumMonthly} or {PRICING.premiumLifetime}) adds all
-          eight neural voices, speed control from 0.3x to 3.0x, sleep timer,
-          ambient soundscapes, and notes and highlights.
+          analytics. {FREE_TIER.full} There is no word quota. Premium
+          ({PRICING.premiumMonthly} or {PRICING.premiumLifetime}) adds{" "}
+          {PRICING.premiumFeatures}.
         </p>
         <p>
           The app imports EPUBs and PDFs from the Files app, Safari, Mail, and
@@ -182,7 +179,7 @@ export default function BestTextToSpeechAppIphoneArticle() {
 
       <StoreCta
         headline="Try the private, offline TTS reader for iPhone"
-        subline="Unlimited free listening, natural Premium voices, no account. Your library never leaves your device."
+        subline="Try all 23 studio narrators for your first 8 hours, then keep one eligible voice with unlimited listening. No account."
       />
     </ArticleLayout>
   );

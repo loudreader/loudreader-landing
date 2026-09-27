@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, PRICING } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -26,10 +26,8 @@ export default function TextToSpeechAirplaneModeArticle() {
           happens on the Neural Engine, and the library lives on your phone. It
           is fully on-device and private, your library never leaves your
           device. Import your books before the flight, enable airplane mode,
-          and listen for the entire trip. No WiFi, no cellular, no account. The
-          free tier includes unlimited listening with a standard voice. Premium
-          adds all eight neural voices, speed control from 0.3x to 3.0x, a
-          sleep timer, ambient soundscapes, and notes.
+          and listen for the entire trip. No WiFi, no cellular, no account.
+          {" "}{FREE_TIER.full} Premium adds {PRICING.premiumFeatures}.
         </p>
       </Tldr>
 

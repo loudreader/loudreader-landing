@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -23,8 +23,7 @@ export default function BestFreeTextToSpeechAppArticle() {
           <strong>Apple Spoken Content</strong> (built into every iPhone
           and Mac) and <strong>LoudReader</strong> (iPhone, iPad, and Mac). Apple Spoken Content is always free and reads anything on
           screen, but it is not built for books. LoudReader&apos;s free
-          tier provides {PRICING.free} You get one natural offline voice
-          and can listen to entire books with no word cap. Most other apps
+          tier provides unlimited listening with no word cap. {FREE_TIER.full} Most other apps
           like Speechify and NaturalReader give you a free sample and then
           ask for a subscription. LoudReader is fully on-device and
           private, your library never leaves your device, so there is no
@@ -86,8 +85,7 @@ export default function BestFreeTextToSpeechAppArticle() {
       <QuestionSection question="LoudReader: free unlimited book listening">
         <p>
           LoudReader&apos;s free tier is designed for actual book reading.
-          You get one natural offline voice that sounds good enough for
-          long sessions. There is no word quota. You can import any DRM-free
+          {FREE_TIER.full} There is no word quota. You can import any DRM-free
           EPUB or PDF and listen to the entire thing, cover to cover,
           without ever hitting a paywall. No account required. No credit
           card asked.
@@ -160,8 +158,8 @@ export default function BestFreeTextToSpeechAppArticle() {
           catalog of classics. All free, forever.
         </p>
         <p>
-          If you try the free tier and want more voices, speed control, and
-          extras, Premium is {PRICING.premiumMonthly} or{" "}
+          If you want to keep all voices after the trial, or add speed control
+          and extras, Premium is {PRICING.premiumMonthly} or{" "}
           {PRICING.premiumYearly}. But you never have to.
         </p>
       </QuestionSection>
@@ -170,7 +168,7 @@ export default function BestFreeTextToSpeechAppArticle() {
 
       <StoreCta
         headline="Start listening free, no strings attached"
-        subline="One natural voice, every book, unlimited listening. No account needed."
+        subline={`${FREE_TIER.full} No account needed.`}
       />
     </ArticleLayout>
   );

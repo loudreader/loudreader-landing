@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -157,8 +157,7 @@ export default function FreeAudibleAlternativeArticle() {
             <strong className="text-gray-900">
               Some LoudReader features are Premium.
             </strong>{" "}
-            The free tier is unlimited listening with the default voice
-            (every voice is free for your first 8 hours). All 23 studio narrators,
+            {FREE_TIER.full} Keeping all 23 studio narrators after the trial,
             playback speed control, the sleep timer, ambient soundscapes, and
             notes &amp; highlights are Premium. Details are on the{" "}
             <Link href="/faq" className="text-loudBlue hover:underline">

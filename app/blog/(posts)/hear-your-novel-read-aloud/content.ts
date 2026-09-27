@@ -3,8 +3,9 @@
 //   - Voice switching: PlayerService.swift `switchVoice(to:)` switches the
 //     active voice, including mid-book. Premium status gives access to all
 //     voices (VoiceRegistry.isVoiceUnlocked(allVoicesUnlocked:freeVoiceIdentifier:),
-//     SubscriptionManager). The free tier includes ONE voice. "All 8 AI
-//     voices" is Premium (components/money/site.ts PRICING.premiumFeatures).
+//     SubscriptionManager). All 23 voices are free for the first eight hours,
+//     then one chosen voice stays free with unlimited listening. Premium keeps
+//     the full roster available afterward (components/money/site.ts).
 //     The voices FAQ states both halves honestly.
 //   - Import formats: .fileImporter(allowedContentTypes: [.epub, .pdf]) in
 //     ContentView.swift / HomeView.swift. Manuscripts must be exported to
@@ -26,6 +27,7 @@
 // claims without verifying a named service's current terms.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -42,7 +44,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I switch voices between listening passes?",
-    a: "Yes, with Premium. LoudReader Premium gives you all 23 studio narrators and you can switch at any time, mid-book included. A fresh voice on the second pass makes familiar prose sound new again, which is the point. The free tier includes one voice with unlimited listening.",
+    a: `Yes. ${FREE_TIER.full} You can switch among all 23 studio narrators during the trial, mid-book included. Premium keeps that choice available afterward. A fresh voice on the second pass makes familiar prose sound new again, which is the point.`,
   },
   {
     q: "Does the voice handle dialogue and punctuation well?",

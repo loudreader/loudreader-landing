@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. All app-behavior claims verified against the LoudReader app
 // source (LoudReader_mac repo, main branch). Pricing and features from
 // components/money/site.ts (single source of truth).
@@ -22,7 +24,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is there a LoudReader free tier like @Voice's free version?",
-    a: "Yes. LoudReader's free tier provides unlimited listening on every book, cover to cover, with no word quota, no time limit, and no account. You get one natural offline voice free. Premium adds all 23 studio narrators, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, and notes and highlights.",
+    a: `Yes. LoudReader's free tier provides unlimited listening on every book, cover to cover, with no word quota, no time limit, and no account. ${FREE_TIER.full} Premium adds all 23 studio narrators, playback speed (0.3x to 3.0x), sleep timer, ambient soundscapes, and notes and highlights.`,
   },
   {
     q: "Does LoudReader read web pages like @Voice does?",

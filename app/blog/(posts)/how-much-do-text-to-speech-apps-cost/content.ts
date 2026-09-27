@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE.
 // LoudReader pricing and features: components/money/site.ts (PRICING, VOICES),
 // the single source of truth, synced with the App Store listing.
@@ -33,7 +35,7 @@ import type { Faq } from "@/components/money/FaqSection";
 export const FAQS: Faq[] = [
   {
     q: "Is there a completely free way to get text read aloud?",
-    a: "Yes, two ways. Every iPhone and Mac has a built-in screen reader (Spoken Content on iOS, VoiceOver and Speak Selection on macOS) that reads any text aloud for free, with no app to install. Separately, LoudReader's free tier gives unlimited listening on every book, cover to cover, with one natural offline voice and no word quota, no account, and no time limit.",
+    a: `Yes, two ways. Every iPhone and Mac has a built-in screen reader (Spoken Content on iOS, VoiceOver and Speak Selection on macOS) that reads any text aloud for free, with no app to install. Separately, LoudReader offers unlimited listening on every book, cover to cover, with no word quota and no account. ${FREE_TIER.full}`,
   },
   {
     q: "What does Speechify cost?",

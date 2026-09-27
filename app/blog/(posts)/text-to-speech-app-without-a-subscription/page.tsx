@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -60,8 +60,7 @@ export default function NoSubscriptionArticle() {
           <Link href="/blog/best-free-text-to-speech-app" className="text-loudBlue hover:underline">
             no subscription and no meter running out
           </Link>
-          . The free tier plays with one natural offline voice at normal
-          speed, which is enough for a lot of reading. It's fully on-device
+          . {FREE_TIER.full} Free playback runs at normal speed. It's fully on-device
           and private, your library never leaves your device, on the free
           tier exactly as much as on Premium.
         </p>

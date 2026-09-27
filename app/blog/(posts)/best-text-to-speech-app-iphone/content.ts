@@ -11,15 +11,16 @@
 // or features not listed on their public pages.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER, VOICES } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
     q: "What is the best free text-to-speech app for iPhone?",
-    a: "It depends on what you need. Apple's built-in Spoken Content (Speak Screen, two-finger swipe down) is free and works in any app, but uses the system accessibility voice with no bookmarking. LoudReader's free tier gives you unlimited listening on every book with a standard voice, no word quota, and full offline support. If you need high-quality voices for free, the built-in option is the only one with no limits. If you want bookmarking, per-book speed control, and natural voices, paid tiers on any of the dedicated apps are where those features live.",
+    a: `It depends on what you need. Apple's built-in Spoken Content (Speak Screen, two-finger swipe down) is free and works in any app, but uses the system accessibility voice with no bookmarking. LoudReader offers offline listening on every book with no word quota. ${FREE_TIER.full} Premium adds features such as per-book speed control, a sleep timer, and notes.`,
   },
   {
     q: "Which iPhone TTS app has the best voice quality?",
-    a: "Voice quality is subjective, but the top apps all use neural TTS models that sound natural and clear. Speechify offers celebrity voices (Snoop Dogg, Gwyneth Paltrow) as a differentiator. NaturalReader and Voice Dream Reader use high-quality standard voices. LoudReader includes eight neural voices that run on-device with no cloud dependency. The best way to pick is to download a few apps and listen to the same passage with each one. Voice preference is personal.",
+    a: `Voice quality is subjective, but the top apps all use neural TTS models that sound natural and clear. Speechify offers celebrity voices (Snoop Dogg, Gwyneth Paltrow) as a differentiator. NaturalReader and Voice Dream Reader use high-quality standard voices. LoudReader includes ${VOICES.headline} that run on-device with no cloud dependency. ${FREE_TIER.full} The best way to pick is to download a few apps and listen to the same passage with each one. Voice preference is personal.`,
   },
   {
     q: "Which TTS app works fully offline on iPhone?",

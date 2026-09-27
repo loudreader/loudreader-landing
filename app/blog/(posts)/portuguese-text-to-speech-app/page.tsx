@@ -7,6 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -100,12 +101,12 @@ export default function PortugueseTextToSpeechAppArticle() {
 
       <QuestionSection question="What does the Portuguese voice cost?">
         <p>
-          The app itself is free with unlimited listening, cover to cover, no
-          account and no word quota. The free tier's one chosen voice comes
-          from the English lineup, so hearing Rafael means Premium, which
-          adds all 23 studio narrators across 10 languages along with
-          playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and
-          notes and highlights. Either way, the
+          Try {FREE_TIER.trial}. After that, continuing with Rafael requires
+          Premium. Free users choose one keepable voice from the eligible
+          English lineup and retain unlimited listening, with no account or
+          word quota. Premium includes all 23 studio narrators across 10
+          languages, playback speed from 0.3x to 3.0x, a sleep timer,
+          soundscapes, and notes and highlights. Either way, the
           Portuguese narrator itself never streams anything to a server. It
           runs on your phone or Mac, so listening stays fully on-device and
           private, your library never leaves your device. If you're learning

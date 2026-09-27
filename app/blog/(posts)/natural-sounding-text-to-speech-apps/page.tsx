@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { PRICING } from "@/components/money/site";
+import { PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -154,9 +154,8 @@ export default function NaturalSoundingTextToSpeechAppsArticle() {
         <p>
           LoudReader&apos;s Premium at {PRICING.premiumMonthly} or{" "}
           {PRICING.premiumYearly} adds{" "}
-          {PRICING.premiumFeatures}. You can try the free voice for as long
-          as you want, with entire books, and upgrade only if you want
-          more. For heavy listeners, the premium voices are worth it for
+          {PRICING.premiumFeatures}. {FREE_TIER.full} You can upgrade if
+          you want to keep the full narrator roster after the trial. For heavy listeners, the premium voices are worth it for
           the variety and quality alone.
         </p>
         <p>

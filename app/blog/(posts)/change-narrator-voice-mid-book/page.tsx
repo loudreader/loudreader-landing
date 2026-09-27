@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, VOICES } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, VOICES } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -27,9 +27,8 @@ export default function ChangeNarratorVoiceMidBookArticle() {
           language. The switch takes effect on the next sentence, so the line
           currently playing finishes in the old voice and the very next one
           starts in the new one. Your place in the book, your notes, and your
-          progress are untouched. The free tier includes one voice with
-          unlimited listening; switching between the rest of the roster of{" "}
-          {VOICES.headline} needs Premium. See every narrator, and hear each
+          progress are untouched. {FREE_TIER.full} Switching among the full
+          roster after the trial needs Premium. See every narrator, and hear each
           one read a real sample, on the{" "}
           <Link href="/voices" className="text-loudBlue hover:underline">
             voices page
@@ -104,13 +103,11 @@ export default function ChangeNarratorVoiceMidBookArticle() {
 
       <QuestionSection question="Do you need Premium to switch narrators mid-book?">
         <p>
-          To switch back to your free voice, no. The free tier includes one
-          natural offline voice with unlimited listening on every book, and
-          you can cycle back to it from the player at any time at no cost.
-          Switching to any of the other studio narrators is a Premium
-          feature. If you tap a locked voice in the full picker, LoudReader
-          opens the paywall instead of switching, so you can see the whole
-          roster is there without it silently working around your plan.
+          Not during your first eight hours: every studio narrator is available
+          to try, including mid-book switches; {FREE_TIER.afterTrial}. Switching
+          to another studio narrator after the trial requires Premium. If you
+          tap a locked voice in the full picker, LoudReader opens the paywall
+          instead of switching.
         </p>
         <p>
           Premium unlocks {VOICES.premium}, along with playback speed from
@@ -141,7 +138,7 @@ export default function ChangeNarratorVoiceMidBookArticle() {
 
       <StoreCta
         headline="Switch narrators without losing your place"
-        subline="One tap in the player changes the voice mid-book. Free tier included, no account needed."
+        subline={`One tap in the player changes the voice mid-book. ${FREE_TIER.full}`}
       />
     </ArticleLayout>
   );

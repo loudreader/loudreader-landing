@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -137,9 +137,8 @@ export default function TextToSpeechForLowVisionArticle() {
           </li>
           <li>
             <strong className="text-gray-900">Voice selection.</strong>{" "}
-            Pick the clearest voice for extended listening. All 23 studio narrators
-            are free to try for the first 8 hours. After that, one voice
-            stays free and Premium includes the rest.
+            Pick the clearest voice for extended listening. {FREE_TIER.full}
+            Premium keeps the full roster available after the trial.
           </li>
         </ul>
       </QuestionSection>

@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. Every claim verified on 2026-07-14 against:
 //   - iOS Speak Screen / Spoken Content: Apple iPhone User Guide
 //     https://support.apple.com/guide/iphone/iph96b214f0/ios
@@ -43,6 +45,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does the free version of LoudReader limit how much it reads?",
-    a: "No. The free tier is unlimited listening on every book, cover to cover, with no word quota, no monthly cap, and no account. Every voice is free for your first 8 hours of listening. After that, free users keep the default voice, and Premium keeps all 23 studio narrators plus speed control, a sleep timer, soundscapes, and notes & highlights.",
+    a: `No. The free tier is unlimited listening on every book, cover to cover, with no word quota, no monthly cap, and no account. ${FREE_TIER.full} Premium keeps all 23 studio narrators plus speed control, a sleep timer, soundscapes, and notes & highlights.`,
   },
 ];

@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -174,10 +174,10 @@ export default function MacosSpokenContentVsAppArticle() {
             between a tool and a player.
           </li>
           <li>
-            <strong className="text-gray-900">Eight neural voices.</strong>{" "}
+            <strong className="text-gray-900">23 studio narrators.</strong>{" "}
             Pick a different voice for each book. Switch on the fly without
             opening System Settings. The voices run on the Mac's Neural Engine
-            and are optimized for long reading sessions.
+            and are optimized for long reading sessions. {FREE_TIER.full}
           </li>
           <li>
             <strong className="text-gray-900">Per-book speed control.</strong>{" "}

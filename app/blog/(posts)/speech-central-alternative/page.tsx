@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { PRICING } from "@/components/money/site";
+import { PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -113,8 +113,7 @@ export default function SpeechCentralAlternativeArticle() {
           pricing model that respects the user.
         </p>
         <p>
-          LoudReader takes a different approach. The free tier provides
-          unlimited listening on every book with one voice, no account
+          LoudReader takes a different approach. {FREE_TIER.full} No account
           needed. Premium adds{" "}
           {PRICING.premiumFeatures} for{" "}
           {PRICING.premiumMonthly} or {PRICING.premiumYearly}. There is

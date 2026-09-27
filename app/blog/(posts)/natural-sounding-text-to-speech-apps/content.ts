@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE. All app-behavior claims verified against the LoudReader app
 // source (LoudReader_mac repo, main branch). Pricing and features from
 // components/money/site.ts (single source of truth).
@@ -18,7 +20,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Do free apps have natural-sounding voices?",
-    a: "It depends. Apple's built-in Spoken Content voices have improved dramatically and sound natural for short-form listening. LoudReader's free tier includes one natural offline voice good enough for full books. Cloud-based apps like Speechify and NaturalReader offer higher-quality natural voices in their paid tiers.",
+    a: `It depends. Apple's built-in Spoken Content voices have improved dramatically and sound natural for short-form listening. LoudReader offers unlimited book listening. ${FREE_TIER.full} Cloud-based apps like Speechify and NaturalReader offer higher-quality natural voices in their paid tiers.`,
   },
   {
     q: "Why do cloud-based voices sometimes sound better?",
@@ -26,6 +28,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Do I need premium voices for book-length listening?",
-    a: "Not necessarily. LoudReader's free voice is a neural voice optimized for reading. Many users listen to full novels with it comfortably. Premium add more voices and let you pick the one that fits your taste best, but the free voice is not a robotic placeholder. It is a real, natural-sounding voice.",
+    a: `Not necessarily. LoudReader's free voice is a neural voice optimized for reading. Many users listen to full novels with it comfortably. ${FREE_TIER.full} Premium keeps the complete narrator roster available after the trial, but the free voice is not a robotic placeholder. It is a real, natural-sounding voice.`,
   },
 ];

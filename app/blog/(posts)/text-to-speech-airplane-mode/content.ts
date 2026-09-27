@@ -9,6 +9,7 @@
 // Claims you may NOT make: that all TTS apps work offline (many don't).
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -17,7 +18,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Do I need to download voices before going offline?",
-    a: "No. The voices are built into the app. There is no separate voice download step and no voice packs to manage. When you install LoudReader from the App Store, the voices are included. The free tier includes a standard voice. Premium unlocks all eight neural voices, which are also built in and ready offline from the moment you upgrade.",
+    a: `No. The voices are built into the app. There is no separate voice download step and no voice packs to manage. When you install LoudReader from the App Store, the voices are included. ${FREE_TIER.full} The included narrators work offline during the trial and with Premium, and your chosen free voice also remains available offline.`,
   },
   {
     q: "What about cloud-based TTS apps on a plane?",

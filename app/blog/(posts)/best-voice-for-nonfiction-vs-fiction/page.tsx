@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, VOICES } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, VOICES } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -163,10 +163,8 @@ export default function BestVoiceForNonfictionVsFictionArticle() {
 
       <QuestionSection question="Do you need Premium to try different voices?">
         <p>
-          No, not to start. The free tier gives you one natural offline voice
-          with unlimited listening on every book, which is enough to test
-          whether the narration style itself works for you, before spending
-          anything on choice. Premium is what unlocks the rest of the roster:{" "}
+          No. {FREE_TIER.full} Use the first eight hours to compare narrators
+          on your own chapters. After the trial, Premium keeps access to{" "}
           {VOICES.premium}, plus speed control from 0.3x to 3.0x, a sleep
           timer, ambient soundscapes, and notes. If your reading is mostly
           nonfiction and mostly one voice, the free tier may be all you ever
@@ -179,7 +177,7 @@ export default function BestVoiceForNonfictionVsFictionArticle() {
 
       <StoreCta
         headline="Hear every voice before you pick one"
-        subline="23 studio narrators, playable on the voices page. Free listening on every book, no account."
+        subline={`${FREE_TIER.full} Hear all 23 studio narrators on the voices page.`}
       />
     </ArticleLayout>
   );

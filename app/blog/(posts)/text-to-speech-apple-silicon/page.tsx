@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING, REQUIREMENTS } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER, PRICING, REQUIREMENTS } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -27,10 +27,8 @@ export default function TextToSpeechAppleSiliconArticle() {
           your library never leaves your device. No internet connection is
           needed, no text is sent to a server, and no account is required.
           Intel Macs lack the Neural Engine and are not supported
-          ({REQUIREMENTS}). The free tier includes unlimited listening with a
-          standard voice. Premium ({PRICING.premiumMonthly}) unlocks all eight
-          neural voices, speed from 0.3x to 3.0x, a sleep timer, ambient
-          soundscapes, and notes.
+          ({REQUIREMENTS}). {FREE_TIER.full} Premium ({PRICING.premiumMonthly})
+          adds {PRICING.premiumFeatures}.
         </p>
       </Tldr>
 
@@ -74,11 +72,10 @@ export default function TextToSpeechAppleSiliconArticle() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong className="text-gray-900">Eight neural voices, all local.</strong>{" "}
+            <strong className="text-gray-900">23 studio narrators, all local.</strong>{" "}
             The voices are included in the app download and run on the Neural
             Engine. You do not download voice packs separately, and you do not
-            need WiFi for the voices to work. Premium unlocks all eight. The
-            free tier includes a standard voice that also runs on-device.
+            need WiFi for the voices to work. {FREE_TIER.full}
           </li>
           <li>
             <strong className="text-gray-900">Instant playback.</strong>{" "}

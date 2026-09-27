@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL, PRICING } from "@/components/money/site";
+import { APP_STORE_URL, PRICING, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -110,8 +110,8 @@ export default function IsElevenReaderFreeArticle() {
           Yes. LoudReader (iPhone, iPad, and Mac) turns any DRM-free
           EPUB or PDF into an audiobook, and its free tier is unlimited
           listening on every book, cover to cover, with no hour or word quota
-          and no account required. You get one natural offline voice for
-          free, forever, and it works entirely offline since it is fully
+          and no account required. {FREE_TIER.full} It works entirely offline
+          since it is fully
           on-device and private, your library never leaves your device.
         </p>
         <p>

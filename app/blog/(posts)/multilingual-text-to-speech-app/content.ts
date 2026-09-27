@@ -10,11 +10,9 @@
 //     and languageList, quoted verbatim rather than retyped from memory.
 //   - components/money/site.ts PRICING, DIFFERENTIATORS: pricing, the free
 //     tier, and on-device/private phrasing come from here verbatim.
-//   - the app's free-tier voice engine (checked in-app, not named here per
-//     policy): its language code is fixed to English, and its selectable
-//     voices are English-only. The free tier's one chosen voice is always
-//     English, never one of the other nine languages, so Premium is
-//     required unconditionally to hear any non-English narrator.
+//   - components/money/site.ts FREE_TIER: all 23 narrators are free for
+//     the first 8 hours. After that, the one keepable free voice is chosen
+//     from the eligible English lineup; other narrators need Premium.
 // App-behavior claims used: on-device, no account, imports EPUB/PDF,
 // 70,000+ Project Gutenberg books, free tier = unlimited listening, Premium
 // adds all voices + speed (0.3x to 3.0x) + sleep timer + soundscapes + notes.
@@ -23,6 +21,7 @@
 // language outside English and Spanish (none exists; not claimed).
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -43,7 +42,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Are all 23 voices free to use?",
-    a: "No. The free tier is unlimited listening on every book, cover to cover, but its one chosen voice comes from the English lineup, not the other nine languages, and no account is required. Hearing the other 22 narrators, across all 10 languages, requires Premium, which also adds playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and notes and highlights.",
+    a: `Try ${FREE_TIER.trial}. After that, free users choose one keepable voice from the eligible English lineup and retain unlimited listening on every book, with no account or word quota. Continuing with the other narrators, including all non-English voices, requires Premium, which also adds playback speed from 0.3x to 3.0x, a sleep timer, soundscapes, and notes and highlights.`,
   },
   {
     q: "Can LoudReader translate a book into another language?",

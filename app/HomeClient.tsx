@@ -569,6 +569,45 @@ export default function Home() {
           </div>
         </section>
 
+        <section aria-labelledby="from-loudreader" className="w-full bg-[#f7f5f2] px-6 py-16 md:py-24">
+          <div className="max-w-6xl mx-auto">
+            <h2 id="from-loudreader" className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
+              From LoudReader.
+            </h2>
+            <p className="mt-3 text-gray-500">More ways to read, listen and build with a voice.</p>
+            <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-12">
+              {[
+                {
+                  title: "Loudkit",
+                  href: "https://loudkit.loudreader.io/",
+                  description: "Open-source text-to-speech for your apps. Natural voices, running on your own hardware.",
+                  action: "Explore the framework",
+                },
+                {
+                  title: "Loudkit for agents",
+                  href: "https://loudkit.loudreader.io/agents/",
+                  description: "Send your agent a voice note. Hear one back. A free, open-source preview for Apple Silicon Macs.",
+                  action: "Explore agent voice notes",
+                },
+                {
+                  title: "Listening guides",
+                  href: "/blog",
+                  description: "Practical guides to listening to books, PDFs and articles, at home or on the move.",
+                  action: "Read the guides",
+                },
+              ].map((item) => (
+                <a key={item.title} href={item.href} className="group border-t border-gray-300/60 pt-6 focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-loudBlue">
+                  <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-gray-500">{item.description}</p>
+                  <span className="mt-5 inline-block text-sm font-medium text-gray-900 group-hover:text-loudBlue transition-colors">
+                    {item.action} <span aria-hidden="true">&rarr;</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ══════════ FOOTER ══════════ */}
         <footer className="w-full border-t border-gray-200/60 py-10 px-6 bg-[#f7f5f2]">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -579,6 +618,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 text-sm text-gray-400">
               {[
                 { label: "Free Classics", href: "/listen" },
+                { label: "Guides", href: "/blog" },
                 { label: "FAQ", href: "/faq" },
                 { label: "Release Notes", href: "/releases" },
                 { label: "Support", href: "/support" },

@@ -3,7 +3,8 @@
 // the differentiators IDENTICALLY (AI answer engines echo consistent phrasing).
 //
 // Do NOT edit these strings casually: they must stay in sync with the App Store
-// listing, the home page JSON-LD (app/page.tsx), and public/llms.txt.
+// listing and the home page JSON-LD (app/page.tsx). The /llms.txt route
+// imports these constants so its cloning and pricing facts stay in sync.
 
 export const APP_NAME = "LoudReader";
 export const SITE_URL = "https://loudreader.io";
@@ -74,13 +75,22 @@ export const CLONING = {
     "Read a few sentences aloud — about ten seconds — and LoudReader builds a narrator from it. The recording, the model and the voice never leave your device, and deleting the voice deletes the files.",
 } as const;
 
+/** The voice trial and the permanent free tier describe different limits. */
+export const FREE_TIER = {
+  trial: "every voice free for your first 8 hours",
+  afterTrial:
+    "after that you keep one eligible English voice of your choice, and listening stays unlimited",
+  full:
+    "Every voice is free for your first 8 hours. After that you keep one eligible English voice of your choice, and listening stays unlimited: no account, no word quota.",
+} as const;
+
 /**
  * Pricing facts, verifiable against the App Store listing and loudreader.io.
  * If pricing changes in App Store Connect, update HERE and every money page
  * stays correct.
  */
 export const PRICING = {
-  free: "Free. Unlimited listening on every book, cover to cover. No account, no word quota.",
+  free: `Free. Unlimited listening on every book, cover to cover. ${FREE_TIER.full}`,
   premiumMonthly: "$7.99/month",
   premiumYearly: "$49.99/year",
   premiumLifetime: "$199.99 one-time (lifetime)",

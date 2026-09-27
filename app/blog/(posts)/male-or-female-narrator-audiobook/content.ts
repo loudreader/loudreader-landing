@@ -4,8 +4,9 @@
 //     voices, a mix of male- and female-presenting names and blurbs (James,
 //     Oliver, Henry, Arthur, Hugo are male-presenting; Nora, Clara, Emma,
 //     Alice, Grace, Ivy are female-presenting), audited 2026-08-20.
-//   - components/money/site.ts (VOICES): free tier = one voice with
-//     unlimited listening; Premium opens up the full roster.
+//   - components/money/site.ts (VOICES, FREE_TIER): all voices free for eight
+//     hours, then one chosen voice with unlimited listening; Premium keeps
+//     the full roster available afterward.
 //   - components/money/site.ts (CLONING): on-device voice cloning from about
 //     ten seconds of speech, Premium feature.
 // No engine or model names appear anywhere in this file, per

@@ -14,8 +14,8 @@
 //     confirmed present via components/listen/catalog.ts bookSample()
 //     lookup for this slug.
 //   - LoudReader app claims: components/money/site.ts (single source of
-//     truth), free tier = unlimited listening with one voice, Premium adds
-//     all 23 studio narrators across 10 languages, playback speed 0.3x to
+//     truth), every voice free for the first 8 hours, then one chosen voice
+//     with unlimited listening. Premium keeps all 23 studio narrators across 10 languages, playback speed 0.3x to
 //     3.0x, on-device processing (DIFFERENTIATORS.private), iPhone, iPad and Apple Silicon Macs, no account, imports EPUB/PDF, 70,000+ Gutenberg catalog
 //     built in.
 //   - No audio export: LoudReader generates narration live on-device and
@@ -24,6 +24,7 @@
 // or any other recorded audiobook of Oz sounds or compares in quality.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -40,7 +41,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Do I need to sign up for anything to listen?",
-    a: "No. LoudReader's free tier is unlimited listening with one built-in voice and no account required. The Wonderful Wizard of Oz is already in the app's built-in Project Gutenberg catalog of 70,000+ books, so there's no file to find or convert before you press play.",
+    a: `No. ${FREE_TIER.full} The Wonderful Wizard of Oz is already in the app's built-in Project Gutenberg catalog of 70,000+ books, so there's no file to find or convert before you press play.`,
   },
   {
     q: "How long is the audiobook?",

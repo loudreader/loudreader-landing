@@ -7,6 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
+import { FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -144,7 +145,7 @@ export default function WhyDoesTextToSpeechSoundRoboticArticle() {
 
       <StoreCta
         headline="Hear a modern voice for yourself"
-        subline="One natural offline voice, free, with unlimited listening. No account needed."
+        subline={FREE_TIER.full}
       />
     </ArticleLayout>
   );

@@ -7,7 +7,7 @@ import FaqSection from "@/components/money/FaqSection";
 import QuestionSection from "@/components/money/QuestionSection";
 import StoreCta from "@/components/money/StoreCta";
 import Tldr from "@/components/money/Tldr";
-import { APP_STORE_URL } from "@/components/money/site";
+import { APP_STORE_URL, FREE_TIER } from "@/components/money/site";
 
 import { FAQS } from "./content";
 import meta from "./meta.json";
@@ -101,9 +101,7 @@ export default function TaleOfTwoCitiesAudiobookFreeArticle() {
             convert.
           </li>
           <li>
-            Press play. The free tier is unlimited listening on the whole
-            book with LoudReader&apos;s one built-in voice, no word limit and
-            no trial cutoff before the guillotine.
+            Press play. {FREE_TIER.full}
           </li>
         </ol>
       </QuestionSection>

@@ -1,3 +1,5 @@
+import { FREE_TIER } from "@/components/money/site";
+
 // FACT PROVENANCE.
 // ElevenReader claims are reused, not re-verified here, from
 // app/(seo)/elevenreader-alternative/content.ts, which checked them directly
@@ -45,7 +47,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Is there a free text-to-speech app with no monthly hour cap?",
-    a: "Yes. LoudReader's free tier is unlimited listening on every book, cover to cover, with no word or hour quota and no account required. You get one natural offline voice for free. The trade is fewer voices and languages than ElevenReader offers on Ultra; the full comparison is at /elevenreader-alternative.",
+    a: `Yes. LoudReader's free tier is unlimited listening on every book, cover to cover, with no word or hour quota and no account required. ${FREE_TIER.full} The trade is fewer voices and languages than ElevenReader offers on Ultra; the full comparison is at /elevenreader-alternative.`,
   },
   {
     q: "Does ElevenReader upload your files to listen to them?",

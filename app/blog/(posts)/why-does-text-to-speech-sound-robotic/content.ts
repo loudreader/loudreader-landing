@@ -23,7 +23,7 @@
 //     running fully on-device (components/money/site.ts VOICES, PRICING).
 //     No claim of specific model architecture, engine name, or benchmark
 //     score for LoudReader's own voices; only the general, verified facts
-//     (natural, offline, free tier includes one voice).
+//     (natural, offline, all voices free for eight hours, then one chosen voice).
 // Claims you may NOT make: named engines or models (LoudReader's or anyone
 // else's), specific MOS/naturalness scores, fabricated research citations,
 // or a claim that any voice is indistinguishable from human speech.
@@ -32,6 +32,7 @@
 // that question is answered in are-ai-voices-good-enough-for-books.
 
 import type { Faq } from "@/components/money/FaqSection";
+import { FREE_TIER } from "@/components/money/site";
 
 export const FAQS: Faq[] = [
   {
@@ -52,6 +53,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Does LoudReader use robotic-sounding voices?",
-    a: "LoudReader's voices are neural, natural offline voices, not the old rule-based or spliced kind. The free tier includes one voice with unlimited listening, so you can hear it for yourself before deciding whether it works for you, rather than taking a claim about naturalness on faith.",
+    a: `LoudReader's voices are neural, natural offline voices, not the old rule-based or spliced kind. ${FREE_TIER.full} You can compare how the voices sound on your own books before deciding whether they work for you.`,
   },
 ];
