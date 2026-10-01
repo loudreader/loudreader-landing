@@ -29,6 +29,8 @@ const routes: Array<{
   { path: "/support", lastModified: "2026-09-28", changeFrequency: "monthly", priority: 0.5 },
   { path: "/terms", lastModified: "2026-07-06", changeFrequency: "yearly", priority: 0.3 },
   { path: "/privacy", lastModified: "2026-09-28", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/loudkit", lastModified: "2026-10-01", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/loudkit/privacy", lastModified: "2026-10-01", changeFrequency: "yearly", priority: 0.3 },
 ];
 
 /*
