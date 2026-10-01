@@ -44,8 +44,8 @@ export default function LoudkitPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Plugin for ChatGPT and Codex</h2>
             <p>
               The loudkit plugin helps you add offline speech to an app and pick a voice. In a
-              coding agent on your own computer, it also makes audio files from text and clones a
-              voice. The plugin has no server: your text and recordings stay on your computer.
+              coding agent with a shell, it also makes audio files from text and clones a voice.
+              The plugin has no server: your text and recordings are never sent to us.
             </p>
             <p className="mt-4">
               To install it in Codex:{" "}

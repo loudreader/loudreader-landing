@@ -86,8 +86,9 @@ export default function LoudkitPrivacyPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2 mt-4">
               <li>
-                In a coding agent that runs on your computer, the plugin runs loudkit there, as
-                described above.
+                In a coding agent with a shell, the plugin runs loudkit where that shell runs: on
+                your computer, or in a cloud environment you chose, such as a Codex cloud task.
+                Either way, nothing is sent to us.
               </li>
               <li>In ChatGPT, the plugin gives you code and commands to run locally.</li>
             </ul>
